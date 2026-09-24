@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "experiment_id": "desi_dr2_bao_profile_selection_null_extension_20260924",
+  "status": "complete_independently_audited_finite_search_calibration",
+  "started_utc": "2026-09-24T17:04:58.407457+00:00",
+  "finished_utc": "2026-09-24T17:16:50+00:00",
+  "runtime_seconds": 711.5716000488028,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python scripts/run_bounded.py --seconds 3600 -- .venv/bin/python scripts/run_bao_robustness.py --n-mocks 1000 --seed 20260925 --workers 20 --output experiments/bao_robustness/null_extension_1000_seed20260925.json",
+  "result_files": {
+    "extension": {
+      "path": "experiments/bao_robustness/null_extension_1000_seed20260925.json",
+      "sha256": "5063ae50f267477b41febd30eabe00c3167b0ccb2d826cd94f3fc966dc025693"
+    },
+    "optimizer_recheck": {
+      "path": "experiments/bao_robustness/null_extension_1000_optimizer_recheck.json",
+      "sha256": "69829e76be7139edceb7ee7e9699bcc058fa2f8b8ed75bf056c7bc15fd305c5b"
+    },
+    "independent_review": {
+      "json": {
+        "path": "work/compute2/null_extension_review.json",
+        "sha256": "176ea6af4f402fbc161ca0121ecb2945d9a07bc7af4a534a83f4bace3935f5e0"
+      },
+      "report": {
+        "path": "work/compute2/null_extension_review.md",
+        "sha256": "30e816d2c00eb538c29aa55da4b3b604bb0db99516a95ba8a6d9f8eaf26bda3f"
+      }
+    },
+    "plot": {
+      "png": {
+        "path": "experiments/bao_robustness/null_extension_pooled.png",
+        "sha256": "3004b2ee5c97b18fcbcd1742ac0d2c8901b4367afaab588514c992642455a934"
+      },
+      "svg": {
+        "path": "experiments/bao_robustness/null_extension_pooled.svg",
+        "sha256": "9dc2b6e1c374f56f8b95804a75bf7131ba11594cdc0a0206da81dc9165aa30e4"
+      }
+    }
+  },
+  "code_sha256": {
+    "scripts/run_bao_robustness.py": "54cb6d78b45f0b9a495bdf8733459ccef6b6a9b2cfc6cc5e8c835a602a09ebcb",
+    "scripts/background_bao.py": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2",
+    "scripts/recheck_bao_optimizer.py": "dbc51ed4b8603b27ee9642335c7bdcd2b4805ea582f8e1a6e6ae697a919833d2",
+    "scripts/plot_null_extension.py": "e4bb4a60e0cc4d49db6b98dd2533abc0fd66a45e07ae0702c7c3162e2a5d00ef"
+  },
+  "input_sha256": {
+    "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+    "experiments/bao_robustness/result.json": "0f477285029024fa359740e726b46f2abf8c87ea8704f488d8ad6658c3fc2a3e"
+  },
+  "null_and_likelihood": {
+    "null_model": "flat late-time LCDM profile fit to the released 13-row DESI DR2 compressed BAO mean vector",
+    "likelihood": "correlated Gaussian using the unchanged released full 13x13 covariance and row order",
+    "observable_scope": "dimensionless BAO distances divided by rd; alpha=c/(H0 rd) free",
+    "fit_search": {
+      "candidates": ["LCDM", "constant-w", "CPL with w0 upper bounds -0.3, -0.1, 0.0, 0.1"],
+      "other_shape_bounds": {
+        "Omega_m": [0.05, 0.6],
+        "w0_lower": -2.0,
+        "wa": [-3.0, 3.0]
+      },
+      "profiled_alpha_bounds": [0.000001, 10000.0],
+      "primary_starts_per_fit": 16,
+      "expanded_starts_per_fit": 64,
+      "optimizer_seed_per_fit": 20260923,
+      "observed_selected_candidate": "cpl_w0_upper_0.1",
+      "observed_delta_chi2": {
+        "16_starts": 4.652440971036443,
+        "64_starts": 4.65244097108304
+      }
+    },
+    "mock_generator": "NumPy default_rng PCG64; full-covariance Cholesky Gaussian fluctuations around the fitted LCDM mean",
+    "disjoint_seed_runs": [
+      {"seed": 20260924, "n": 200, "tail_count": 17},
+      {"seed": 20260925, "n": 1000, "tail_count": 66}
+    ]
+  },
+  "extension_result": {
+    "n": 1000,
+    "workers": 20,
+    "candidate_fits": {"16_starts": 6000, "64_starts": 6000},
+    "exceedances": {"16_starts": 66, "64_starts": 66},
+    "fraction": 0.066,
+    "exact_clopper_pearson_95pct": [0.05140856601891847, 0.08320605046140275],
+    "q95_linear": {"16_starts": 4.994039714281136, "64_starts": 4.994039714292631},
+    "max_statistic": {"16_starts": 13.243834741872764, "64_starts": 13.243834741874647},
+    "initial_optimizer_nonconverged_fits": {"16_starts": 145, "64_starts": 137},
+    "all_282_nonconverged_candidate_fits_rechecked": {
+      "successful_retries_each": 3,
+      "alternative_runs": 846,
+      "max_direct_objective_reconstruction_error": 2.3447910280083306e-13,
+      "best_retry_delta_chi2_min": -4.1794656624460913e-10,
+      "improvements_below_minus_1e-7": 0
+    }
+  },
+  "pooled_disjoint_seed_result": {
+    "n": 1200,
+    "tail_count": 83,
+    "fraction": 0.06916666666666667,
+    "exact_clopper_pearson_95pct": [0.05546403511569528, 0.08502360230691912],
+    "q95_linear": {"16_starts": 5.169980759924629, "64_starts": 5.169980759958949},
+    "median": {"16_starts": 1.281490207250478, "64_starts": 1.2814902072635137}
+  },
+  "independent_review_scope": {
+    "reviewer": "Luna Max /root/orchestrator2_radiation/compute2",
+    "independently_recomputed": ["counts", "exact intervals", "pooled quantiles", "observed statistics", "seed stream distinction", "stored-code/data hashes", "optimizer retry summary"],
+    "not_repeated": "The independent audit regenerated deterministic PCG64 normal draws but did not refit all 1200 search results or archive the 1200 mock data vectors."
+  },
+  "environment_and_resources": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "visible_cpus": 20,
+    "workers": 20,
+    "gpu": "not used; low-dimensional optimizer loop has no measured GPU advantage",
+    "observed_cpu_use": "20 worker processes each sustained approximately 96-99% CPU; GPU remained at 0%",
+    "classification": "reproduced finite-search parametric-bootstrap calibration; independently audited from saved realization arrays"
+  },
+  "interpretation_and_limits": [
+    "This is a coarse finite parametric-bootstrap audit of exactly the specified profile-model set, parameter bounds, optimizer-seed contract, covariance and fitted LCDM null.",
+    "The 95% Clopper-Pearson intervals quantify binomial Monte Carlo count uncertainty only; they are not posterior p-values, discovery significances, or Bayesian model evidence.",
+    "The bootstrap is conditional on a flat LCDM late-time background with radiation and curvature omitted, and on the compressed DR2 BAO likelihood; it does not calibrate physical dark-energy models.",
+    "The BAO amplitude alpha does not identify H0 and rd separately; no early-universe sound-horizon model, CMB perturbations, supernova likelihood or growth constraint is included.",
+    "DESI DR2 Ly-alpha full-shape results use overlapping Ly-alpha observations; they are not appended as an independent factor without a joint replacement vector/covariance."
+  ]
+}

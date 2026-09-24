@@ -1,0 +1,489 @@
+{
+  "status": "independent_check; exploratory profile screen",
+  "scope": "Curved late-time LCDM background only; radiation omitted; free alpha=c/(H0 rd); released DESI DR2 13-row mean vector and full covariance; no posterior or evidence.",
+  "source": {
+    "paper": "DESI DR2 Results II, Phys. Rev. D 112, 083515 (2025), DOI 10.1103/tr6y-kpc6",
+    "equations_checked": "PDF page 4, Eqs. (3)-(6): curved DM S_k, flat limit, DH=c/H, and Friedmann curvature term +Omega_k(1+z)^2.",
+    "curvature_sign": "Omega_k>0 open and sinh branch; Omega_k<0 closed and sin branch, matching the DESI Eq. (3),(6) convention."
+  },
+  "conventions": {
+    "E2": "Omega_m*(1+z)^3 + Omega_k*(1+z)^2 + Omega_Lambda",
+    "flat_closure": "Omega_Lambda=1-Omega_m-Omega_k",
+    "dimensionless_radial_coordinate": "chi=int_0^z dz'/E(z')",
+    "transverse_kernel": "S_k=sinh(sqrt(Omega_k)*chi)/sqrt(Omega_k) for Omega_k>0; chi at 0; sin(sqrt(|Omega_k|)*chi)/sqrt(|Omega_k|) for Omega_k<0",
+    "near_flat_series": "S_k=chi*(1+y/6+y^2/120+y^3/5040+y^4/362880), y=Omega_k*chi^2, used for |y|<1e-4",
+    "BAO_predictions": "DM/rd=alpha*S_k; DH/rd=alpha/E; DV/rd=[z*(DM/rd)^2*(DH/rd)]^(1/3)",
+    "amplitude": "alpha=c/(H0 rd), dimensionless and free; BAO-only screen does not identify H0 and rd separately.",
+    "likelihood": "chi2=(y-p)^T C^-1 (y-p), using all 13 rows and the unchanged full covariance.",
+    "analytic_profile_alpha": "For p=alpha*q, alpha_GLS=(q^T C^-1 y)/(q^T C^-1 q), chi2_min=y^T C^-1 y-(q^T C^-1 y)^2/(q^T C^-1 q), then alpha is clipped only if outside the inherited [1e-6,1e4] box."
+  },
+  "domain": {
+    "Omega_m": [
+      0.05,
+      0.6
+    ],
+    "Omega_k_limits_profiled": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "Omega_k_full_interval": [
+      -0.2,
+      0.2
+    ],
+    "alpha": [
+      1e-06,
+      10000.0
+    ],
+    "redshift_max": 2.33,
+    "bounds_are_profile_screen_not_priors": true,
+    "positivity_audit": {
+      "grid_shape_Omega_m_Omega_k_z": [
+        12,
+        17,
+        1002
+      ],
+      "minimum_E2_grid": 0.6759259259259258,
+      "minimum_location": {
+        "Omega_m": 0.05,
+        "Omega_k": -0.2,
+        "z": 1.6666666666666667
+      },
+      "analytic_continuous_minimum_E2": 0.6759259259259259,
+      "analytic_minimum_x": 2.6666666666666665,
+      "minimum_Omega_Lambda": 0.2,
+      "closed_branch_argument_upper_bound": 1.2674223652969023,
+      "closed_branch_argument_below_pi": true
+    }
+  },
+  "data": {
+    "n_data": 13,
+    "mean_row_order": [
+      {
+        "z": 0.295,
+        "observable": "DV_over_rs"
+      },
+      {
+        "z": 0.51,
+        "observable": "DM_over_rs"
+      },
+      {
+        "z": 0.51,
+        "observable": "DH_over_rs"
+      },
+      {
+        "z": 0.706,
+        "observable": "DM_over_rs"
+      },
+      {
+        "z": 0.706,
+        "observable": "DH_over_rs"
+      },
+      {
+        "z": 0.934,
+        "observable": "DM_over_rs"
+      },
+      {
+        "z": 0.934,
+        "observable": "DH_over_rs"
+      },
+      {
+        "z": 1.321,
+        "observable": "DM_over_rs"
+      },
+      {
+        "z": 1.321,
+        "observable": "DH_over_rs"
+      },
+      {
+        "z": 1.484,
+        "observable": "DM_over_rs"
+      },
+      {
+        "z": 1.484,
+        "observable": "DH_over_rs"
+      },
+      {
+        "z": 2.33,
+        "observable": "DH_over_rs"
+      },
+      {
+        "z": 2.33,
+        "observable": "DM_over_rs"
+      }
+    ],
+    "covariance_shape": [
+      13,
+      13
+    ],
+    "covariance_cholesky_success": true,
+    "sha256": {
+      "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "context/papers/desi_dr2_bao.pdf": "1e82f26e4cc3901b16168cd147f252bfa804f9c3caad3f4f7e3532640d237841",
+      "scripts/background_bao.py": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2"
+    }
+  },
+  "fits": [
+    {
+      "model": "flat_LCDM",
+      "profile_domain": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ],
+        "Omega_k": [
+          0.0
+        ]
+      },
+      "parameters": {
+        "alpha": 29.524633418223136,
+        "Omega_m": 0.2974618197282739,
+        "Omega_k": 0.0
+      },
+      "Omega_Lambda": 0.7025381802717261,
+      "chi2": 10.271041002564933,
+      "n_data": 13,
+      "bound_hits": [],
+      "optimizer": {
+        "method": "bounded scalar minimization on Omega_m",
+        "success": true,
+        "message": "Solution found.",
+        "nfev": 12
+      },
+      "gls_alpha": {
+        "alpha_gls_unbounded": 29.524633418223136,
+        "alpha_profiled": 29.524633418223136,
+        "alpha_is_box_clipped": false,
+        "chi2": 10.271041002564933,
+        "quadratic_denominator": 149.51507606113287,
+        "gls_closed_form_chi2_unbounded": 10.271041002633865
+      },
+      "direct_optimizer_check": {
+        "method": "direct bounded 2-parameter fit",
+        "parameters": {
+          "alpha": 29.524633418223125,
+          "Omega_m": 0.29746181970319924
+        },
+        "chi2": 10.271041002564917,
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 1,
+        "function_evaluations": 30
+      },
+      "quadrature_diagnostics": {
+        "max_reported_abs_error_estimate": 6.349059132001519e-14,
+        "mean_vector_chi2_recomputed": 10.271041002564933
+      }
+    },
+    {
+      "model": "curved_LCDM",
+      "profile_domain": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ],
+        "Omega_k": [
+          -0.05,
+          0.05
+        ]
+      },
+      "parameters": {
+        "alpha": 29.607489710234947,
+        "Omega_m": 0.29314448223777984,
+        "Omega_k": 0.02251697490742858
+      },
+      "Omega_Lambda": 0.6843385428547917,
+      "chi2": 9.95367789913304,
+      "n_data": 13,
+      "bound_hits": [],
+      "optimizer": {
+        "method": "6 best cells from 7x9 coarse shape grid, each refined with bounded L-BFGS-B",
+        "coarse_shape_grid": [
+          7,
+          9
+        ],
+        "local_refinement_starts": 7,
+        "successful_refinements": 7,
+        "best_success": true,
+        "best_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "best_nit": 10,
+        "best_nfev": 96
+      },
+      "gls_alpha": {
+        "alpha_gls_unbounded": 29.607489710234947,
+        "alpha_profiled": 29.607489710234947,
+        "alpha_is_box_clipped": false,
+        "chi2": 9.95367789913304,
+        "quadratic_denominator": 148.67977585887144,
+        "gls_closed_form_chi2_unbounded": 9.95367789917509
+      },
+      "direct_optimizer_check": {
+        "method": "direct bounded 3-parameter chi2 fit",
+        "parameters": {
+          "alpha": 29.607489710234947,
+          "Omega_m": 0.29314448223767425,
+          "Omega_k": 0.02251697490741442
+        },
+        "chi2": 9.953677899133025,
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 1,
+        "function_evaluations": 68
+      },
+      "quadrature_diagnostics": {
+        "max_reported_abs_error_estimate": 2.8366211992377124e-14,
+        "max_reported_abs_error_estimate_tight": 2.8366211992377124e-14,
+        "max_abs_prediction_difference_standard_vs_tight": 0.0,
+        "chi2_recomputed": 9.95367789913304,
+        "chi2_tight": 9.95367789913304
+      }
+    },
+    {
+      "model": "curved_LCDM",
+      "profile_domain": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ],
+        "Omega_k": [
+          -0.1,
+          0.1
+        ]
+      },
+      "parameters": {
+        "alpha": 29.607489626640547,
+        "Omega_m": 0.2931444783390751,
+        "Omega_k": 0.022516975579502576
+      },
+      "Omega_Lambda": 0.6843385460814223,
+      "chi2": 9.953677899133295,
+      "n_data": 13,
+      "bound_hits": [],
+      "optimizer": {
+        "method": "6 best cells from 7x9 coarse shape grid, each refined with bounded L-BFGS-B",
+        "coarse_shape_grid": [
+          7,
+          9
+        ],
+        "local_refinement_starts": 7,
+        "successful_refinements": 7,
+        "best_success": true,
+        "best_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "best_nit": 9,
+        "best_nfev": 111
+      },
+      "gls_alpha": {
+        "alpha_gls_unbounded": 29.607489626640547,
+        "alpha_profiled": 29.607489626640547,
+        "alpha_is_box_clipped": false,
+        "chi2": 9.953677899133295,
+        "quadratic_denominator": 148.67977669844254,
+        "gls_closed_form_chi2_unbounded": 9.95367789917509
+      },
+      "direct_optimizer_check": {
+        "method": "direct bounded 3-parameter chi2 fit",
+        "parameters": {
+          "alpha": 29.607489626640547,
+          "Omega_m": 0.2931444783390751,
+          "Omega_k": 0.022516975579502576
+        },
+        "chi2": 9.953677899133295,
+        "success": false,
+        "message": "ABNORMAL: ",
+        "iterations": 0,
+        "function_evaluations": 112
+      },
+      "quadrature_diagnostics": {
+        "max_reported_abs_error_estimate": 2.8366212005837726e-14,
+        "max_reported_abs_error_estimate_tight": 2.8366212005837726e-14,
+        "max_abs_prediction_difference_standard_vs_tight": 0.0,
+        "chi2_recomputed": 9.953677899133295,
+        "chi2_tight": 9.953677899133295
+      }
+    },
+    {
+      "model": "curved_LCDM",
+      "profile_domain": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ],
+        "Omega_k": [
+          -0.2,
+          0.2
+        ]
+      },
+      "parameters": {
+        "alpha": 29.60748961770332,
+        "Omega_m": 0.2931444814948814,
+        "Omega_k": 0.022516965513061007
+      },
+      "Omega_Lambda": 0.6843385529920576,
+      "chi2": 9.953677899133252,
+      "n_data": 13,
+      "bound_hits": [],
+      "optimizer": {
+        "method": "6 best cells from 7x9 coarse shape grid, each refined with bounded L-BFGS-B",
+        "coarse_shape_grid": [
+          7,
+          9
+        ],
+        "local_refinement_starts": 7,
+        "successful_refinements": 7,
+        "best_success": true,
+        "best_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "best_nit": 9,
+        "best_nfev": 63
+      },
+      "gls_alpha": {
+        "alpha_gls_unbounded": 29.60748961770332,
+        "alpha_profiled": 29.60748961770332,
+        "alpha_is_box_clipped": false,
+        "chi2": 9.953677899133252,
+        "quadratic_denominator": 148.67977678820264,
+        "gls_closed_form_chi2_unbounded": 9.953677899116883
+      },
+      "direct_optimizer_check": {
+        "method": "direct bounded 3-parameter chi2 fit",
+        "parameters": {
+          "alpha": 29.60748961770325,
+          "Omega_m": 0.2931444813903158,
+          "Omega_k": 0.02251696550115195
+        },
+        "chi2": 9.953677899133229,
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 1,
+        "function_evaluations": 36
+      },
+      "quadrature_diagnostics": {
+        "max_reported_abs_error_estimate": 2.836621197807876e-14,
+        "max_reported_abs_error_estimate_tight": 2.836621197807876e-14,
+        "max_abs_prediction_difference_standard_vs_tight": 0.0,
+        "chi2_recomputed": 9.953677899133252,
+        "chi2_tight": 9.953677899133252
+      }
+    }
+  ],
+  "comparison_to_existing_screen": {
+    "reference": "experiments/curvature_screen/result.json observed_fits; read-only",
+    "sha256": "5457e02073b51a1c3905007f8263698a403c910e983e54ce632437a03d99350c",
+    "comparisons": [
+      {
+        "domain": "flat",
+        "delta_independent_minus_screen": {
+          "alpha": 5.671092750958451e-08,
+          "Omega_m": 2.4718656566058428e-09,
+          "Omega_k": 0.0,
+          "chi2": 8.881784197001252e-15
+        },
+        "screen_bound_hits": [],
+        "independent_bound_hits": []
+      },
+      {
+        "domain": "Omega_k_abs_le_0.05",
+        "delta_independent_minus_screen": {
+          "alpha": 1.8574166205098663e-08,
+          "Omega_m": 1.1921525988611847e-09,
+          "Omega_k": -1.0741152238480378e-09,
+          "chi2": -3.019806626980426e-14
+        },
+        "screen_bound_hits": [],
+        "independent_bound_hits": []
+      },
+      {
+        "domain": "Omega_k_abs_le_0.1",
+        "delta_independent_minus_screen": {
+          "alpha": -3.848390051075512e-08,
+          "Omega_m": -4.208873194411211e-09,
+          "Omega_k": 7.1599180404002816e-09,
+          "chi2": 3.055333763768431e-13
+        },
+        "screen_bound_hits": [],
+        "independent_bound_hits": []
+      },
+      {
+        "domain": "Omega_k_abs_le_0.2",
+        "delta_independent_minus_screen": {
+          "alpha": -2.8223567483109946e-08,
+          "Omega_m": -1.9614030399850435e-09,
+          "Omega_k": 2.0575635466257847e-09,
+          "chi2": 2.220446049250313e-13
+        },
+        "screen_bound_hits": [],
+        "independent_bound_hits": []
+      }
+    ],
+    "interpretation": "Agreement within small optimizer/float64 differences; this is an independent confirmation, not a refit of the screen artifacts."
+  },
+  "checks": {
+    "profile_alpha_vs_direct_optimizer": [
+      {
+        "model": "flat_LCDM",
+        "profile_chi2": 10.271041002564933,
+        "direct_chi2": 10.271041002564917,
+        "delta_chi2_direct_minus_profile": -1.5987211554602254e-14,
+        "alpha_profiled": 29.524633418223136,
+        "alpha_direct": 29.524633418223125
+      },
+      {
+        "model": "curved_LCDM",
+        "profile_chi2": 9.95367789913304,
+        "direct_chi2": 9.953677899133025,
+        "delta_chi2_direct_minus_profile": -1.5987211554602254e-14,
+        "alpha_profiled": 29.607489710234947,
+        "alpha_direct": 29.607489710234947
+      },
+      {
+        "model": "curved_LCDM",
+        "profile_chi2": 9.953677899133295,
+        "direct_chi2": 9.953677899133295,
+        "delta_chi2_direct_minus_profile": 0.0,
+        "alpha_profiled": 29.607489626640547,
+        "alpha_direct": 29.607489626640547
+      },
+      {
+        "model": "curved_LCDM",
+        "profile_chi2": 9.953677899133252,
+        "direct_chi2": 9.953677899133229,
+        "delta_chi2_direct_minus_profile": -2.3092638912203256e-14,
+        "alpha_profiled": 29.60748961770332,
+        "alpha_direct": 29.60748961770325
+      }
+    ],
+    "flat_limit_at_same_Omega_m": {
+      "max_abs_q_difference_curvature_zero_vs_flat": 0.0,
+      "max_abs_q_delta_at_Omega_k_plus_1e-12": 2.9687363678476686e-13,
+      "max_abs_q_delta_at_Omega_k_minus_1e-12": 2.9687363678476686e-13
+    },
+    "nested_domain_chi2_nonincreasing": true,
+    "quadrature": {
+      "fit_epsabs": 1e-12,
+      "fit_epsrel": 1e-12,
+      "tight_epsabs": 1e-13,
+      "tight_epsrel": 1e-13,
+      "method": "scalar scipy.integrate.quad (QUADPACK), independent per non-radial BAO row"
+    }
+  },
+  "limitations": [
+    "The curvature screens are finite profile domains, not posterior priors or Bayesian evidence.",
+    "The free alpha leaves H0 and rd separately unidentified.",
+    "Radiation is omitted and rd is not predicted, so this is not a precision early-universe or sound-horizon calculation.",
+    "This is a background-only geometry check with no perturbations, growth, or external probes."
+  ],
+  "execution": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_only": true,
+    "blas_thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "script_sha256": "897a7ce63d7ff1deb96b9635f7c595cfec1767906954234b8fc6a4102efc6fe0"
+  }
+}

@@ -1,7 +1,14 @@
 {
   "status": "started",
   "start_utc": "2026-09-24T15:12:19.075004+00:00",
-  "deadline_utc": "2026-09-24T23:12:19.075004+00:00",
+  "deadline_utc": null,
+  "original_planned_deadline_utc": "2026-09-24T23:12:19.075004+00:00",
+  "deadline_override": {
+    "utc": "2026-09-24T17:54:29Z",
+    "requested_by_user": true,
+    "instruction": "No need for a deadline; work as much as you want.",
+    "scope": "Waives only the eight-hour wall-clock stop and 7.5-hour synthesis clock. Keep task-specific compute bounds, the 200 MiB bootstrap download cap unless separately justified/authorized, CPU/GPU ownership, and other BRIEF.md safeguards."
+  },
   "preflight": "runs/preflight.json",
   "requested_orchestrator": {
     "model": "gpt-6-astra",
@@ -44,7 +51,9 @@
     "compute": "Use local workstation resources aggressively and parallelize for speed, subject to the campaign limits and resources already occupied by unrelated processes.",
     "checkpointing": "User explicitly authorizes periodic commits and pushes with concise progress reports.",
     "push_target": "current tracking branch after staged-file review",
-    "resource_contract": "Use visible CPU affinity and currently free GPU memory; one GPU owner; no cloud/purchases/publication or unrelated process termination."
+    "resource_contract": "Use visible CPU affinity and currently free GPU memory; one GPU owner; no cloud/purchases/publication or unrelated process termination.",
+    "physicalness_and_literature": "Review whether departures correspond to physically specified models, including conservation, perturbation/stability and data-overlap assumptions; check current primary papers and obtain exact public PDFs when possible.",
+    "native_goal_tracker": "At 2026-09-24T18:12:54Z the native goal still pointed only to the one-time attachment-read prerequisite and was marked paused, without a recorded reason; the user said this is no longer relevant and will set a broader goal. Continue this campaign under the user's prior explicit continue instruction; do not change native goal status from this session."
   },
   "parallel_team_policy": {
     "user_authorizes_additional_distinct_orchestration_compute_and_theory_lanes": true,
@@ -60,7 +69,20 @@
     "must_not_pause_or_delay_active_work": true,
     "owned_path": "work/warden/",
     "reports_git_ignored": true,
-    "runs": []
+    "runs": [
+      {
+        "event": "commit",
+        "commit": "28858bebef036b9f0ea29694386d75aeca385720",
+        "report": "work/warden/commit-28858be.md",
+        "recommendation": "Continue the fresh 1,000-mock extension unchanged, retaining the declared search and optimizer statuses."
+      },
+      {
+        "event": "push",
+        "commit": "28858bebef036b9f0ea29694386d75aeca385720",
+        "report": "work/warden/push-28858be.md",
+        "recommendation": "Continue unchanged with the fresh extension and independently review the aggregate interval."
+      }
+    ]
   },
   "completed_checkpoints": [
     {
@@ -78,11 +100,23 @@
       "id": "cpu_gpu_screen",
       "status": "complete",
       "evidence": "3000x13 float64 CPU predictions in 0.165 s; optional torch CUDA path unavailable; initial GPU 27,107 MiB used / 5,003 MiB free"
+    },
+    {
+      "id": "curvature_profile_and_physical_literature",
+      "status": "complete",
+      "utc": "2026-09-24T18:12:54+00:00",
+      "evidence": "experiments/curvature_screen/record.json; full-covariance curved-LCDM delta-chi2=0.31736, matched/exceeded by 692/1200 fitted-flat-null searches (exact CP95 0.5481-0.6048); independent scalar-quadrature profile agrees within 3.1e-13. Four full local current-model papers and exact Results I/validation PDFs equation-audited in work/literature/physical_model_update.md; Ly-alpha overlap and growth-exclusion caveats integrated in source cards/claim map."
+    },
+    {
+      "id": "desi_lya_release_audit",
+      "status": "complete",
+      "utc": "2026-09-24T18:59:10+00:00",
+      "evidence": "work/literature/desi_lya_release_probe.md audits the official DR2 page, public directory, Results IV paper, Zenodo and linked Vega repository. No official machine-readable Results IV replacement/joint likelihood or cross-covariance found. Eq. (26) permits only a rounded 2D Gaussian approximation; the 2026-08-28 unified galaxy/quasar supplement is unrelated. No files downloaded."
     }
   ],
   "active_local_job": null,
   "latest_scientific_checkpoint": {
-    "utc": "2026-09-24T16:53:36+00:00",
+    "utc": "2026-09-24T18:59:10+00:00",
     "evidence": [
       "experiments/bao_robustness/result.json: 200 full-covariance null mocks; 16/64-start tail estimate agrees at 17/200 with exact 95% interval [0.0503,0.1326]. scripts/recheck_bao_optimizer.py independently retried all 52 nonconverged candidates: original χ² recomputation max error 8.0e-14, no alternative improved any fit by >1e-7, and reported selected tail statistic remains stable.",
       "work/inference/REPORT.md and experiments/dovekie_screen/: independently checked exploratory 1820-row DES-Dovekie full-precision profile fit; wider CPL bound moves from wa=-3 edge to wa≈-6.78 interior, not a posterior/significance result.",
@@ -90,7 +124,14 @@
       "work/compute/GPU_BAO_SURFACE.md and experiments/gpu_bao_surface/: reproducible 2^20 full-covariance profile-surface benchmark measured RTX 5090 29.21x CPU speed end-to-end including CUDA startup/transfer; FP64 CPU/GPU Δχ² max 1.10e-11; adaptive scalar cross-check max Δχ² 4.55e-12.",
       "experiments/radiation_sensitivity/: Astra Max orchestrator with Luna Max theory/compute workers completed independent full-covariance radiation checks; at tested optima max fixed shift 0.075 marginal sigma, post-refit max 0.0112, max |delta chi2| 0.0238. The reference treats all neutrinos as massless and does not bound the entire fit domain.",
       "experiments/ledger.jsonl and context/claim_map.json: all seven current experiments have durable records/ledger entries; literature provenance and overlap caveats are integrated in context/SOURCE_INDEX.md and reading cards.",
-      "Radiation scan hash b825ee41df8296c16bb332535acb2ae0b33eadf15b51227328d067292f109e21; saved-fit review hash cee983a7c3206eee6798678ca1976b5388b293d6019b39919c579c0aeed12b204; measured CPU runtime 6.835 seconds."
+      "Radiation scan hash b825ee41df8296c16bb332535acb2ae0b33eadf15b51227328d067292f109e21; saved-fit review hash cee983a7c3206eee6798678ca1976b5388b293d6019b39919c579c0aeed12b204; measured CPU runtime 6.835 seconds.",
+      "Fresh 1,000-mock extension completed in 711.572 s with all 20 CPUs observed near saturation. The fixed selected-search statistic is exceeded 66/1000; pooling the disjoint 200+1000 seeds gives 83/1200, exact 95% interval [0.05546,0.08502], and linear q95≈5.170; the 16/64-start summaries agree. This is only a finite-search, flat-LCDM-null bootstrap. See experiments/bao_robustness/null_extension_record.json and the independently audited work/compute2/null_extension_review.json.",
+      "All 282 initially abnormal extension candidate fits were retried three ways (846 runs); direct objective reconstruction error is at most 2.35e-13 and no retry improves chi2 by >1e-7. Independent review recomputed counts, intervals, quantiles, seed distinction and source hashes, but did not refit every mock.",
+      "The original 8-hour schedule remains preserved as original_planned_deadline_utc=2026-09-24T23:12:19.075004Z, but the user waived both the wall-clock stop and synthesis clock at 2026-09-24T17:54:29Z. Six exact arXiv PDFs were acquired with searchable text under the 200 MiB bootstrap cap: model papers 2609.10567, 2609.05660, 2608.01844, 2609.25090, plus DESI DR2 Ly-alpha BAO Results I and the full-shape validation companion (2503.14739, 2607.27411). Equation/physical-assumption review is complete in work/literature/physical_model_update.md.",
+      "Curved-LCDM screen: delta-chi2=0.317363 at Omega_k=+0.022517; full covariance and 1200 flat-null mock refits give an empirical finite-search exceedance frequency 692/1200=0.5767 (CP95 0.5481-0.6048), pooled mock q95=3.822. It is not posterior significance/evidence. Main script/result/mock-stream hashes and independent review are in experiments/curvature_screen/record.json.",
+      "The independent curved-FRW scalar quadrature/profile check agrees with the main chi-square minima within 3.1e-13 and verifies units, curvature sign, flat limit, analytic alpha profiling and positivity. One direct 3-parameter diagnostic at the Omega_k +/-0.10 box reports ABNORMAL at iteration 0 while its objective matches the independently profiled value; it is not counted as a successful direct optimizer run.",
+      "Results IV AP/BAO replaces or conditions the older Ly-alpha BAO sample block. A dated official release audit found no machine-readable replacement/joint likelihood or cross-covariance; Eq. (26) is only a rounded 2D Gaussian approximation, and the nearby unified-tracer supplement is unrelated. Do not append it to the existing vector. Validation paper excludes f-sigma8 after mock bias, so the current product is geometry-only for our purposes. See work/literature/desi_lya_release_probe.md.",
+      "With deadline_utc=null, all future local jobs must carry an explicit task-specific --seconds bound."
     ]
   },
   "tasks": [
@@ -159,12 +200,84 @@
       "status": "complete",
       "output": "experiments/radiation_sensitivity/result.json, experiments/radiation_sensitivity/radiation_scan.py, work/compute2/REPORT.md",
       "finding": "Ten H0 values each refit LCDM/wCDM/CPL with full covariance; separate 41-point fixed-parameter H0 scan; all optimizer statuses preserved."
+    },
+    {
+      "id": "null_mock_extension_1000",
+      "owner": "root CPU multiprocessing job",
+      "status": "complete",
+      "budget_seconds": 3600,
+      "output": "experiments/bao_robustness/null_extension_1000_seed20260925.json",
+      "finding": "Fresh PCG64 seed 20260925; 1,000 full-covariance LCDM null realizations, each repeating the same 16- and 64-start model/bound search; 20 CPU workers, no GPU. 66 exceedances / 1000."
+    },
+    {
+      "id": "null_extension_independent_audit",
+      "owner": "Luna Max /root/orchestrator2_radiation/compute2",
+      "status": "complete",
+      "output": "work/compute2/null_extension_review.md and .json",
+      "finding": "Recomputed 83/1200 pooled exceedances, exact interval [0.05546,0.08502], q95 and search bounds from stored arrays; verified distinct PCG64 streams and all 282 optimizer retry records; no full refit of all mocks."
+    },
+    {
+      "id": "curved_lcdm_contract",
+      "owner": "Luna Max /root/orchestrator2_radiation/theory2",
+      "status": "complete",
+      "output": "work/theory2/curvature_contract.md and curvature_limit_check.json",
+      "finding": "Specified standard FRW curvature convention and bounded distance profile; analytic E^2 positivity and flat-limit derivative checks pass across the proposed domain. No data fit yet."
+    },
+    {
+      "id": "curvature_profile_screen",
+      "owner": "Luna Max /root/orchestrator2_radiation/compute2",
+      "status": "complete",
+      "budget_minutes": 25,
+      "output": "experiments/curvature_screen/ and work/compute2/curvature_profile_report.md",
+      "finding": "CPU-only full-covariance curved-LCDM profile improves chi2 by 0.31736 at Omega_k=+0.022517; 692/1200 matched fitted-flat-null searches exceed it (CP95 0.5481-0.6048). All optimizer statuses and six selected-failure Powell rechecks retained."
+    },
+    {
+      "id": "curvature_independent_crosscheck",
+      "owner": "Luna Max /root/orchestrator2_radiation/theory2",
+      "status": "complete",
+      "budget_minutes": 15,
+      "output": "work/theory2/curvature_independent_review.py, .json and .md",
+      "finding": "Independent scalar-quadrature/grid implementation agrees with main profile scores within 3.1e-13; verifies curvature sign, units, flat limit, GLS alpha and E2 positivity. One direct 3-parameter diagnostic at abs(Omega_k)<=0.10 ended ABNORMAL at iteration 0 and is explicitly not counted as converged."
+    },
+    {
+      "id": "physical_model_literature_update",
+      "owner": "Luna Max /root/literature",
+      "status": "complete",
+      "budget_minutes": 20,
+      "output": "work/literature/physical_model_update.md",
+      "finding": "Four exact current 2026 model PDFs read and equation/assumption reviewed; exact Results I and validation PDFs/text checked; interaction papers have opposite positive-Gamma transfer signs, Results IV overlap means replacement not addition, f-sigma8 excluded after mock bias, and MaVaN figures label pairwise correlations synthetic."
+    },
+    {
+      "id": "interacting_vacuum_background_contract",
+      "owner": "Luna Max /root/orchestrator2_radiation/theory2",
+      "status": "running",
+      "budget_minutes": 20,
+      "output": "work/theory3/interacting_vacuum_contract.md and optional independent check",
+      "finding": "Derive Q=Gamma rho_x, w_x=-1 with baryons separately conserved, sign/domain, Gamma=0 limit, and BAO-only identifiability; no fit."
+    },
+    {
+      "id": "interacting_vacuum_bao_profile",
+      "owner": "Luna Max /root/orchestrator2_radiation/compute2",
+      "status": "running",
+      "budget_minutes": 25,
+      "budget_seconds": 1500,
+      "output": "experiments/interacting_vacuum_screen/ and work/compute3/interacting_vacuum_screen_report.md",
+      "finding": "Independent bounded CPU implementation/observed profile if defensible; exact paper sign, conserved baryons, free BAO alpha, full covariance, optimizer and synthetic/Gamma=0 checks; no null ensemble in this first pass."
+    },
+    {
+      "id": "desi_lya_official_release_probe",
+      "owner": "Luna Max /root/literature",
+      "status": "complete",
+      "budget_minutes": 20,
+      "output": "work/literature/desi_lya_release_probe.md",
+      "finding": "Official page/directory, Results IV paper, Zenodo and linked Vega audit found no machine-readable replacement/joint likelihood or cross-covariance. Eq. (26) supports only a rounded approximate 2D Gaussian; nearby 2026 unified-tracer supplement is unrelated. No download."
     }
   ],
   "next_commands": [
-    "Run a fresh 1000-mock CPU extension of the already optimizer-rechecked fixed model/bound search, with a distinct seed/output so the original 200 remain immutable; then independently review the aggregate exact binomial interval.",
-    "Validate every experiment record and ledger row, source/claim-map references, all code/data hashes, and repeat the full test suite plus current plots.",
+    "Select one physically specified one-rate background departure with explicit conservation equations, identifiability and stable domain; derive it independently before coding and add matched null-selection calibration if informative.",
+    "Treat the Results IV replacement likelihood as blocked pending an official machine-readable file/cross-covariance; do not substitute the approximate Eq. (26) pair or unrelated unified-tracer supplement.",
+    "Validate every experiment record and ledger row, source/claim-map references, all code/data/PDF hashes, and repeat the full test suite plus current plots.",
     "Checkpoint only reviewed campaign files to the current branch; invoke an Astra Max warden immediately after the commit and again after the push, then keep researching.",
-    "Write MORNING_REPORT.md and NEXT.md at least 30 minutes before the fixed deadline; include negative findings, plots, reproducible commands, source provenance, and a ranked next experiment."
+    "Maintain a reproducible morning report and NEXT.md at a scientifically useful checkpoint; include negative findings, plots, provenance, commands, and a ranked next experiment. Continue only while a bounded high-value test remains."
   ]
 }

@@ -54,10 +54,18 @@ def main():
         budgets.append(args.seconds)
     state = Path(args.state)
     if state.exists():
-        deadline = dt.datetime.fromisoformat(json.loads(state.read_text())["deadline_utc"])
-        if deadline.tzinfo is None:
-            parser.error("deadline_utc must include a timezone")
-        budgets.append((deadline - dt.datetime.now(dt.timezone.utc)).total_seconds())
+        run_state = json.loads(state.read_text())
+        deadline_text = run_state.get("deadline_utc")
+        if deadline_text is None:
+            if args.seconds is None:
+                parser.error("deadline_utc is unset; provide a task-specific --seconds limit")
+        else:
+            if not isinstance(deadline_text, str):
+                parser.error("deadline_utc must be an ISO-8601 string or null")
+            deadline = dt.datetime.fromisoformat(deadline_text)
+            if deadline.tzinfo is None:
+                parser.error("deadline_utc must include a timezone")
+            budgets.append((deadline - dt.datetime.now(dt.timezone.utc)).total_seconds())
     if not budgets:
         parser.error("create RUN_STATE.json with preflight --start-run-hours, or specify --seconds")
     timeout = min(budgets)

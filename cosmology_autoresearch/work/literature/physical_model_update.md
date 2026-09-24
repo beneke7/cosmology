@@ -1,0 +1,85 @@
+# Physical-model and current DESI DR2 literature update
+
+**Scope and status.** Current-source check as of 2026-09-24; literature-only, no fit or reproduction. The four theory papers below were read in full from the exact PDFs/text already present in `context/papers/` (no files downloaded for this update). The official DR2 Lyα Results I/IV papers were read from local full PDFs/text; Results IV also has a local card. The validation companion was read as full arXiv HTML and extracted text; its local PDF has a parser warning noted below, so PDF page-level visual verification was not claimed. Page references below are PDF page numbers unless marked otherwise.
+
+## Source/version and access ledger
+
+| Source | Current version/date | Read depth and local evidence |
+|---|---|---|
+| [Wang et al., “Study of dynamical dark energy…”](https://arxiv.org/abs/2609.10567) | v1, submitted 2026-09-01 | Full PDF/text, `context/papers/dynamical_de_desi_dr2_2026.pdf`; SHA-256 `4c37cbcdb500b85998b76d54798fb33a36bd53ce252a07d1c85d2186ac7ff511`. |
+| [Yang et al., “Do DESI-DR2 BAO data imply a coupling…”](https://arxiv.org/abs/2609.05660) | v1, submitted 2026-09-04; accepted PRD, DOI [10.1103/6kdf-vzq4](https://doi.org/10.1103/6kdf-vzq4) | Full PDF/text, `context/papers/interacting_de_desi_dr2_2026.pdf`; SHA-256 `0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c`. |
+| [Mukherjee et al., “Revisiting Metastable Dark Energy…”](https://arxiv.org/abs/2608.01844) | v1, submitted 2026-08-03 | Full PDF/text, `context/papers/metastable_de_desi_dr2_2026.pdf`; SHA-256 `0e7d227fa114ee3d51dc00d1675f74a227e3c2a4c00212990ba03738d4e276ce`. |
+| [Bundeliya et al., “Comparing Mass-Varying Neutrino…”](https://arxiv.org/abs/2609.25090) | v1, submitted 2026-09-19 | Full PDF/text, `context/papers/mass_varying_neutrino_de_desi_dr2_2026.pdf`; SHA-256 `7a5e2999bf4bf0a38a728092251d2d6d6ffd302915e5321c814cd028f14390a7`. |
+| [DESI DR2 Results I: Lyα BAO](https://arxiv.org/abs/2503.14739) | v3, revised 2025-06-30 | Full local PDF/text, `context/papers/desi_lya_bao_results_i.pdf`; SHA-256 `c6d4688027e9e83bebba85bfb05d68a6cdd3603f30b222ed8e2d26ca66a237a8`. |
+| [DESI DR2 Results IV: Lyα AP](https://arxiv.org/abs/2607.27410) | v3, revised 2026-08-04 | Full local PDF/text/card, `context/papers/desi_lya_ap.pdf`; SHA-256 `6fcc44addcd8843a46fc6016753955a5f16c7a3b2593c5c8e74250dc1c632674`; card: `context/reading_cards/desi_lya_ap.md`. |
+| [DESI DR2 Lyα full-shape validation](https://arxiv.org/abs/2607.27411) | v2, revised 2026-08-04 | Full arXiv HTML and readable extracted text, not abstract-only; local PDF/text present. PDF SHA-256 `61762ef65cb8da02950b602b66505a63f7472d145bc3b49ba9e753f1d1719dde`. |
+
+The Results IV companion validation PDF is also now present at `context/papers/desi_lya_ap_validation.pdf` (SHA-256 `61762ef65cb8da02950b602b66505a63f7472d145bc3b49ba9e753f1d1719dde`), with extracted text at `context/papers/desi_lya_ap_validation.txt`. The local PDF parses its 27-page metadata but `pdftotext` reports syntax errors at an internal object; I therefore rely on the full v2 arXiv HTML/text for the validation conclusions, not a claim of clean visual PDF inspection.
+
+The papers do not link a shared modified-theory likelihood/reproduction package. In Results I/IV the authors identify [Vega](https://github.com/andreicuceu/vega) for Lyα correlation modeling/inference and state that data accompany the [DESI DR2 release](https://data.desi.lbl.gov/doc/releases/); Results I links its BAO results to [Zenodo record 15690869](https://zenodo.org/records/15690869). The DR2 compressed BAO vector used in the campaign is separately documented in `context/reading_cards/desi_dr2_bao.md` and is available through [CobayaSampler/bao_data](https://github.com/CobayaSampler/bao_data). No analysis-code URL was found in the three model papers or the MaVaN paper during this pass.
+
+## Four current theory analyses
+
+### Phenomenological evolving (w(z)): arXiv:2609.10567
+
+**Model/closure.** Flat-FLRW Friedmann model, Eq. (1), energy-density integral Eq. (5), and CPL/BA/EXP/LOG/JBP forms and associated ρDE(z) in Eqs. (6)–(15), PDF pp. 2–3. Flatness, Σmν=0.06 eV and N_eff=3.044 are fixed (Eqs. (2)–(4)); Table I, PDF p. 4, gives broad flat priors, including w0∈[−3,1] and wa∈[−6,6]. These are kinematic background parameterizations, not an action-based theory. Although full Planck spectra are run through CAMB, the paper does not state a dark-energy perturbation prescription or a phantom-crossing/stability treatment in the accessible text. Thus crossing fits should not be promoted to physically closed/stable models.
+
+**Data/result.** The paper uses the 13-point DESI DR2 BAO likelihood, Planck `simall`/Commander/CamSpec spectra and Planck+ACT DR6 CMB lensing (not ACT primary spectra), with Pantheon+, Union3, or DES-Dovekie as separate SN branches; absolute magnitude is marginalized. It reports parametrization/SN-dependent (2.1)–(3.7\sigma)-level evolving-DE preferences, around (3\sigma) for Dovekie (abstract; details in Sec. III and result tables). Those are not independent replications: every branch shares DESI DR2 BAO, and the SN compilations overlap (Union3/Pantheon+ share 1363 SNe; Dovekie shares some of its 197 historical low-z SNe with the other compilations).
+
+**Use/limit.** Useful as a warning that a BAO residual can be absorbed differently by several flexible (w(z)) bases; poor as the physical candidate itself. A BAO-only fit can compare these distance histories, but cannot establish a stable crossing or identify a scalar-field mechanism.
+
+### Interacting dark sector (Q=\Gamma\rho_x): arXiv:2609.05660
+
+**Exact source and sign.** Sec. II.A, Eqs. (4)–(11), PDF p. 3, uses
+\[
+\dot\rho_x+3H(1+w_x)\rho_x=Q,\qquad
+\dot\rho_c+3H\rho_c=-Q,\qquad Q=\Gamma\rho_x.
+\]
+Therefore **positive Γ transfers energy from CDM to DE** in this paper’s convention. The authors explicitly note that the interaction ansatz is not uniquely fixed by a fundamental framework. It is not the same signed rate as in the metastable-decay paper below.
+
+**Perturbation closure/stability.** Sec. II.B, Eqs. (14)–(23), PDF pp. 4–5: synchronous gauge; no momentum transfer in the DM rest frame; DE rest-frame sound speed (c_{s,x}^2>0), commonly set to 1; early/large-scale stability conditions are treated separately for vacuum, phantom, and quintessence branches. For the stated phantom branch (w_x<-1), the allowed sign is Γ/H0<0; for quintessence (w_x>-1), Γ/H0>0. For the vacuum branch (w_x=-1), DE perturbations vanish and a separate CDM system is used. These choices make the linear-fluid calculation more explicit than a free (w(z)) history, but do not supply a unique microphysical interaction.
+
+**Data/result.** Planck 2018 TT/TE/EE plus low-ℓ/lowE, DESI DR2 BAO, and Pantheon+, Union3, or DES-Dovekie as separate SN branches (Sec. III) are evaluated with modified CAMB/Cobaya. Note a paper-internal label drift: the abstract names DESY5, while Methods/results tables use DES-Dovekie. Some posterior combinations move Γ away from zero, but the paper’s own evidence summary favors ΛCDM over the interacting models overall. SN dependence and evidence sensitivity to model branch/prior remain substantial.
+
+**Use/limit.** This is the most directly specified one-parameter interaction among these anchors. A BAO-only likelihood can test the background consequence of this exact (Q), but cannot test its perturbative prescription, growth, or distinguish it from an effective (w_\mathrm{eff}(z)). Preserve the sign convention above in any implementation.
+
+### Metastable/decaying DE: arXiv:2608.01844
+
+**Model/closure.** Sec. II.A, Eqs. (4)–(10), PDF p. 2, defines Model 1 by a constant-rate radioactive law, ρDE proportional to (e^{-\Gamma(t-t_0)}), and derives (w_\mathrm{DE}(z)=-1+\Gamma/[3H(z)]). Here Γ>0 means declining DE density. Model 1 is an effective background fluid; it does not specify a microscopic decay channel. Model 2 makes the transfer explicit, ẋρDE=−ΓρDE and ẋρDM+3HρDM=ΓρDE (Eq. 11, p. 3), with baryons separately conserved. At linear order the paper uses synchronous gauge, (Q^\mu\parallel u^\mu_\mathrm{DM}), and unclustered vacuum-like DE (Eqs. (13)–(14), p. 3). Model 3 transfers into dark radiation, (w_\mathrm{DR}=1/3), with a relativistic perturbation hierarchy (Sec. II.C, p. 4). Model priors are in Table I, p. 5.
+
+In Models 2/3, positive Γ denotes DE decay into the daughter species; this is the **opposite transfer direction** to positive Γ in the (Q=\Gamma\rho_x) convention just above. Do not share a sign or posterior interpretation for Γ between these models.
+
+**Data/result.** Combines DESI DR2 BAO with SNe and either Planck PR4 or P-ACT CMB information; its full-shape component is **DESI DR1**, not DR2. The paper explicitly motivates later DR2 FS as future work. CMB inclusion pulls all three rates toward zero; its abstract reports no decisive nonzero-decay evidence. DR1 FS modifies growth response most for Model 2, weakly for Model 3, and mildly for Model 1.
+
+**Use/limit.** A single-rate Model 1 is a tractable background-only BAO screen, not evidence for literal decay. Models 2/3 add perturbation physics but require corresponding clustering/growth data for discrimination. Any composite DR1 BAO+FS likelihood requires its survey covariance/conditioning to be respected; this is not a source of independent DR2 evidence.
+
+### Mass-varying neutrinos (MaVaN): arXiv:2609.25090
+
+**Physical setup vs fitted model.** Sec. II, action Eq. (2.1), PDF p. 3, couples a scalar conformally to species; Eqs. (2.7), (2.12)–(2.14), PDF pp. 3–4, give the trace-sourced energy transfer proportional to ρν−3pν and scalar-dependent neutrino mass. The paper then tests three background realizations: constant (w_\phi)+constant coupling (Case I); (m_\nu=m_{\nu0}e^{\beta\phi}), (V=V_0e^{-\lambda\phi}) at an adiabatic minimum (Case II; Sec. III.B, PDF pp. 7–8; requires (m_\mathrm{eff}^2\gg H^2)); and constant coupling with CPL (w(z)) (Case III). The underlying action is physical motivation, but the observational analysis does **not** evolve the interacting perturbations.
+
+**Data/result.** Sec. IV, PDF p. 9 onward: DESI DR2 BAO; a compressed Planck 3×3 Gaussian in {θ*s⁻¹, ωb, ωc} rather than the full CMB spectra; and Pantheon+, DES-Dovekie, or Union3 one at a time (plus a no-SN branch). Methods/results use DES-Dovekie, while the abstract/conclusion also call that branch DES-SN5YR; confirm the actual calibrated input before quoting that branch. It uses SimpleMC/PLK18 and emcee. Reported coupling/evidence depends on case and SN sample; the paper concludes no model is consistently preferred. For Case II, β/λ prior ranges change among dataset combinations, directly weakening cross-branch Bayes-factor comparisons.
+
+**Strong limitations.** Authors explicitly flag that Case II’s adiabatic tracking must be checked over posterior support; the analysis omits neutrino/scalar perturbations, neutrino clustering, and possible small-scale instabilities, and its compressed CMB likelihood loses full anisotropy information (Conclusion, PDF p. 17). A further reproducibility caveat is explicit in the plots: Figures 1 and 2 label the off-diagonal “synthetic correlation structure” (PDF pp. 11 and 13; their captions otherwise describe marginalized posterior/credible regions). The script referenced by the in-figure disclaimer was not supplied/located. Those pairwise contours cannot be read as measured sampler correlations or used to infer empirical degeneracy directions. This does not by itself invalidate separately tabulated 1D constraints or evidence, but those remain unverified without chains/code, so the paper’s joint-posterior visual claims need particular caution. BAO-only can constrain its background distance curve, not the neutrino coupling as a mechanism.
+
+## Earlier DR2 Lyα BAO point: Results I
+
+[DESI DR2 Results I, arXiv:2503.14739 v3](https://arxiv.org/abs/2503.14739), revised 2025-06-30, is the exact original compressed Lyα measurement represented in the 13-row DR2 BAO vector. Full local PDF/text read; hash is in the source ledger above. The paper fits the Lyα auto- and Lyα–QSO cross-correlation with Vega, BAO dilation parameters α∥ and α⊥, and nuisance parameters (Sec. IV, Eqs. (6)–(7), PDF pp. 11–12). At (z_\mathrm{eff}=2.33), its final systematic-inclusive measurement is (D_H/r_d=8.632\pm0.101), (D_M/r_d=38.99\pm0.53), correlation −0.431 (Sec. VI.B, Eq. (14), PDF p. 18). It adds Δα∥=Δα⊥=0.3% to the covariance rather than applying a shift correction (Eqs. (9)–(12), Sec. VI.A, PDF pp. 17–18), because contemporary Lyα BAO-shift calculations disagreed on sign/magnitude and were only moderately significant. Data/figure products are linked to Zenodo 15690869; Vega code is public.
+
+**Why it matters here.** Results IV (2607.27410) is a later AP/full-shape analysis of the same DR2 Lyα sample family, and its joint AP+BAO product supersedes the previous Lyα-only compressed representation for that sample. Results I is therefore evidence for the provenance and original systematic budget of the z=2.33 BAO point, not an additional likelihood block to combine with Results IV.
+
+## Official DESI DR2 Lyα full-shape/AP evidence
+
+The Results IV paper [2607.27410 v3](https://arxiv.org/abs/2607.27410), revised 2026-08-04 and read from the local full PDF/card, jointly analyzes Lyα auto-correlation and Lyα–QSO cross-correlation. Its Gaussian fit uses the Vega package and broad-shape/AP information. Eqs. (24)–(26), printed pp. 18–20, report (D_M/D_H=4.578\pm0.052) from broadband AP, (4.572\pm0.046) from the combined full-shape AP fit, and the combined full-shape AP+BAO distance constraints (D_M/r_d=39.32\pm0.33), (D_H/r_d=8.600\pm0.066), correlation (0.225). The systematic prescription is in Eqs. (20)–(23), printed pp. 18–19. This is a high-precision **geometric AP/BAO** measurement, not a validated growth test.
+
+That boundary is confirmed by the companion [validation paper 2607.27411 v2](https://arxiv.org/html/2607.27411v2), revised 2026-08-04: its Abstract and conclusion report successful BAO/AP validation across CoLoRe 2LPT and AbacusSummit mocks, but a significant mock bias in (f\sigma_8), which was therefore excluded from the final analysis. It also describes analytic marginalization of small scales (<10\,h^{-1}\mathrm{Mpc}), UV-background tests, hundreds of mocks and catalog/data splits. Thus, do not use the DR2 Lyα paper to claim a direct test of the growth/stability signatures of the models above.
+
+**Overlap rule.** The DR2 13-point BAO vector already contains the earlier Lyα BAO measurement at (z_\mathrm{eff}=2.33). Results IV uses that same Lyα sample family and presents an updated joint AP+BAO product. It must replace/condition the earlier Lyα representation, not be multiplied as an independent datum on top of the existing 13-vector. A directly usable replacement likelihood/covariance URL was not identified in this pass; treat such a joint use as blocked pending the exact release and covariance audit.
+
+## Implications for the campaign’s simple BAO-only test
+
+1. Keep the transparent DR2 13-row, full-covariance comparison of ΛCDM, constant-(w), and at most one physically named one-rate background extension as a **distance screen**. BAO measures (D_M/r_d), (D_H/r_d), or (D_V/r_d); without a calibrated sound horizon it does not identify (H_0), and it does not identify a dark-sector mechanism.
+2. If a physical one-parameter extension is selected, the interacting-vacuum (Q=\Gamma\rho_x), (w_x=-1) model has the clearest stated perturbation closure among this set. Keep its sign, transfer four-vector, gauge and vacuum perturbation treatment explicit, but label the BAO-only run background-constraining only. The metastable Model 1 is an equally simple phenomenological decay-history screen; it should not be interpreted as a microscopic decay measurement.
+3. Do not elevate multi-parameter free-(w(z)) fits, MaVaN evidence, or a best-fit Γ from BAO alone to a physical detection. For a perturbation claim, first implement the exact closure and then use a suitable growth/full-shape product. DESI DR2 Lyα AP alone is not that growth product; DR2 Lyα (f\sigma_8) was excluded. Check DR1 FS likelihood overlap before reusing the metastable paper’s growth constraints.
+4. Treat SN and CMB combinations as separate likelihood contracts. Pantheon+, Union3, and Dovekie are alternatives with overlap; Planck spectra, CMB lensing and ACT-derived combinations must not be double-counted. All four theory papers share the DESI DR2 BAO data, so their differing claims are model/prior comparisons, not independent survey confirmations.
+
+**Bottom line:** the available DR2 Lyα result strengthens high-redshift geometry, while the current physical-model papers do not supply a robust, common perturbation-level detection. A simple BAO-only campaign can rank background histories under the same vector and priors; it cannot decide whether dark energy is dynamical, coupled, metastable, or neutrino-driven.

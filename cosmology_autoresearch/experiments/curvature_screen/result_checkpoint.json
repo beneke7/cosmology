@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "updated_utc": "2026-09-24T17:56:09.520990+00:00",
+  "elapsed_seconds": 6.493420350365341,
+  "completed_records": 1200,
+  "completed_by_seed": {
+    "20260924": 200,
+    "20260925": 1000
+  },
+  "jsonl_path": "experiments/curvature_screen/mock_realizations.jsonl"
+}

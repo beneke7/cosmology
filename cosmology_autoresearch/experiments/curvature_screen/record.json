@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "experiment_id": "desi_dr2_curved_lcdm_profile_null_calibration_20260924",
+  "status": "exploratory_full_covariance_profile_screen_independently_checked",
+  "started_utc": "2026-09-24T17:56:03.022+00:00",
+  "finished_utc": "2026-09-24T17:56:09.386264+00:00",
+  "runtime_seconds": 6.3639099495485425,
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python scripts/run_bounded.py --seconds 1450 -- .venv/bin/python experiments/curvature_screen/curvature_profile.py --workers 20",
+  "source_ids": ["desi_dr2_mean", "desi_dr2_cov", "desi_dr2_bao", "desi_lya_ap"],
+  "input_sha256": {
+    "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+    "experiments/campaign_seed_bao/result.json": "92662f3ee42500d2be34d9f87b485fe56c82e9550fa674e42f4dec2bf2cab1f0",
+    "experiments/bao_robustness/result.json": "0f477285029024fa359740e726b46f2abf8c87ea8704f488d8ad6658c3fc2a3e",
+    "experiments/bao_robustness/null_extension_1000_seed20260925.json": "5063ae50f267477b41febd30eabe00c3167b0ccb2d826cd94f3fc966dc025693",
+    "context/papers/desi_dr2_bao.pdf": "1e82f26e4cc3901b16168cd147f252bfa804f9c3caad3f4f7e3532640d237841"
+  },
+  "code_and_output_sha256": {
+    "experiments/curvature_screen/curvature_profile.py": "191d933c6c263a767e9d87c2aee294066e3e3c023c64e6de54886acc59491108",
+    "experiments/curvature_screen/result.json": "5457e02073b51a1c3905007f8263698a403c910e983e54ce632437a03d99350c",
+    "experiments/curvature_screen/mock_realizations.jsonl": "812167e6b5f9dbc8d164e20180f421a980e1c793ef5afa35662da89b15c3752f",
+    "work/compute2/curvature_profile_report.md": "dca2d1e706270536bcf3afea8c1e6965b3870fb4494ddfd0f7ad0573c09a03ca",
+    "work/theory2/curvature_independent_review.py": "897a7ce63d7ff1deb96b9635f7c595cfec1767906954234b8fc6a4102efc6fe0",
+    "work/theory2/curvature_independent_review.json": "8e5100ac46ac09841c192377055673a6de4b01b2e709eb441db1db258f163049",
+    "work/theory2/curvature_independent_review.md": "fc8a55ae4289edaf158b168f5269b8e7e1c738273e6d91220c80b01c606257d4"
+  },
+  "plot_sha256": {
+    "experiments/curvature_screen/curvature_null_calibration.png": "fe0711d42bee977fe4f285f24a6a5c31e125c5df59896d8a5c46cc3cf02c6afb",
+    "experiments/curvature_screen/curvature_null_calibration.svg": "681f09c126e8918b54e5aed39bd42e58fc7e051074ab181877251f2da4345f63"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "hardware": "20 CPU affinity workers; CPU only; NVIDIA RTX 5090 not used because this low-dimensional fit completed in 6.36 s",
+    "numerical_library_threads": 1
+  },
+  "likelihood_and_model": {
+    "data": "Released DESI DR2 13-row Gaussian BAO mean vector and full 13x13 covariance in unchanged published order; covariance Cholesky-positive",
+    "observables": "DM/rd, DH/rd, and DV/rd; includes older Ly-alpha BAO rows at z=2.33",
+    "model": "Late-time curved LCDM; E^2=Omega_m(1+z)^3+Omega_k(1+z)^2+Omega_Lambda; Omega_Lambda=1-Omega_m-Omega_k; S_k uses sinh for Omega_k>0, sin for Omega_k<0, flat limit at zero",
+    "amplitude": "alpha=c/(H0 rd), independently profiled and dimensionless; neither H0 nor rd separately identified",
+    "bounds_are_search_domains_not_priors": true,
+    "bounds": {"Omega_m": [0.05, 0.6], "Omega_k_primary": [-0.2, 0.2], "Omega_k_nested": [[-0.1, 0.1], [-0.05, 0.05]], "alpha": [0.000001, 10000.0]},
+    "radiation": "Omitted, as in the campaign's low-z background screen; not a full early-universe-calibrated fit",
+    "optimizer": "16 deterministic L-BFGS-B starts, a 61x61 grid/refinement and a 64-start observed optimum stability check; mocks repeated the fixed 16-start flat/curved search. Failed statuses and bounded Powell rechecks are retained.",
+    "null": "Fitted flat-LCDM Gaussian parametric null: recreate and fit 200+1000 disjoint-seed full-covariance mocks (PCG64 seeds 20260924 and 20260925); compare Delta-chi2=chi2_flat-chi2_curved with the observed value using the same finite search. This is a search-specific bootstrap frequency, not a posterior p-value or discovery significance."
+  },
+  "results": {
+    "flat_chi2": 10.271041002564925,
+    "curved_chi2": 9.95367789913303,
+    "delta_chi2_flat_minus_curved": 0.31736310343189444,
+    "best_fit": {"Omega_m": 0.29314448345628447, "Omega_k": 0.02251696345549746, "Omega_Lambda": 0.6843385530882181, "alpha": 29.607489645926886},
+    "all_nested_curvature_bound_profiles_agree_to_1e-13": true,
+    "mock_exceedances": 692,
+    "mock_count": 1200,
+    "mock_frequency": 0.5766666666666667,
+    "exact_clopper_pearson_95pct_interval": [0.5481353989549191, 0.6048213047131545],
+    "pooled_mock_delta_chi2_q95": 3.8219855356835124,
+    "per_seed": {"20260924": {"n": 200, "exceedances": 113, "frequency": 0.565, "q95": 3.8752}, "20260925": {"n": 1000, "exceedances": 579, "frequency": 0.579, "q95": 3.7519}},
+    "optimizer_statuses": {"flat_failed_starts_of_19200": 52, "curved_failed_starts_of_19200": 8, "best_candidate_failures_rechecked": 6, "successful_powell_rechecks": 6, "largest_recheck_improvement_abs_chi2": 2e-13}
+  },
+  "independent_review": "Separate scalar adaptive-quadrature implementation checked curved-FRW signs, dimensions, GLS alpha profiling, flat limit, nested bounds, data order, E^2 positivity and fit scores. Chi-square differences to primary screen are below 3.1e-13. The independent 3-parameter direct L-BFGS-B diagnostic for the [-0.10,0.10] case returned ABNORMAL at iteration 0 despite objective equality to the GLS-profiled optimum; rely on the independent successful profile/grid path for that fit and retain its status as a diagnostic failure.",
+  "limitations": ["Exploratory late-time background-only profile screen, not posterior or Bayesian evidence.", "No radiation, early-universe ruler calibration, massive neutrinos, perturbations, growth, CMB, SNe or lensing.", "Parameter limits are numerical search bounds, not priors; multi-start/grid checks do not prove globality.", "The 13-row vector contains the old DESI DR2 Ly-alpha BAO representation; latest Results IV uses the same sample family and cannot be appended independently without a replacement joint covariance/likelihood."],
+  "next_test": "Obtain and audit the official DR2 Ly-alpha Results IV replacement/joint likelihood and covariance; until then, an exact one-rate physically motivated background model (with matched mock-selection calibration and explicit perturbation limitations) is the strongest executable BAO-only follow-up."
+}

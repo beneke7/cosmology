@@ -125,6 +125,32 @@
       "local_evidence": ["experiments/radiation_sensitivity/result.json", "work/orchestrator2_radiation/REVIEW.md", "work/orchestrator2_radiation/saved_fit_review.json", "work/theory2/report.md"],
       "counterevidence_or_limit": "The reference treats neutrinos as massless radiation, unlike the DESI massive-neutrino background; H0 values form a declared sensitivity grid, not posterior support; the whole shape box and higher redshift are not exhaustively bounded.",
       "experiment_implication": "Use a consistent physical massive-neutrino model for any precision inference or for claims outside the tested best-fit points and H0 grid."
+    },
+    {
+      "claim_id": "curved_lcdm_bao_profile_gain_is_common_under_fitted_flat_null",
+      "statement": "On the released 13-row DESI DR2 BAO vector and full covariance, a finite-domain curved-LCDM profile improves the flat-LCDM minimum by Delta-chi-square=0.3174; the same or larger gain occurs in 692/1200 full-covariance parametric mocks refit with the same finite search.",
+      "status": "exploratory profile result; independently checked equations and optimum, null calibration reproduced",
+      "confidence": "high for this numerical screen and fitted-null frequency; not a posterior significance or model-evidence statement",
+      "primary_evidence": [
+        {"source_id": "desi_dr2_bao", "locator": "Results II, printed pp. 4-5, Eqs. (3)-(6): curved transverse-distance kernel and curvature term in E(z)^2."}
+      ],
+      "local_evidence": ["experiments/curvature_screen/record.json", "experiments/curvature_screen/result.json", "experiments/curvature_screen/mock_realizations.jsonl", "work/compute2/curvature_profile_report.md", "work/theory2/curvature_independent_review.md"],
+      "counterevidence_or_limit": "The model includes one extra searched shape parameter; null frequency is conditional on the fitted flat-LCDM null, fixed domains, optimizer and existing compressed vector. Radiation, early-time sound-horizon calibration, perturbations, growth and posterior volume are omitted.",
+      "experiment_implication": "Do not infer nonzero spatial curvature from the best-fit Omega_k alone; obtain the current Ly-alpha replacement likelihood and/or extend to a physically specified background model with the same selection calibration."
+    },
+    {
+      "claim_id": "dr2_lya_fullshape_validates_geometry_not_growth",
+      "statement": "DESI DR2 Ly-alpha Results IV supplies high-precision AP/BAO geometry from the same sample family as the previous Ly-alpha BAO row; its validation companion reports a mock bias in f-sigma8 and excluded the growth result from final inference.",
+      "status": "full-text-supported by exact local Results IV PDF and full validation HTML/text; local validation-PDF parser caveat retained",
+      "confidence": "high for the published geometry values, sample overlap and stated growth exclusion",
+      "primary_evidence": [
+        {"source_id": "desi_lya_ap", "locator": "Results IV v3, Eqs. (24)-(26), printed pp. 18-20; full-shape AP/BAO at z_eff=2.33."},
+        {"source_id": "desi_lya_ap_validation", "locator": "Validation v2, abstract/conclusion; BAO/AP mock checks pass, f-sigma8 mock bias causes exclusion."},
+        {"source_id": "desi_lya_bao_results_i", "locator": "Results I v3, Sec. VI.B Eq. (14); earlier compressed Ly-alpha BAO constraint from same DR2 sample family."}
+      ],
+      "local_evidence": ["context/papers/desi_lya_ap.pdf", "context/papers/desi_lya_bao_results_i.pdf", "context/papers/desi_lya_ap_validation.pdf", "work/literature/physical_model_update.md", "context/reading_cards/desi_lya_ap.md"],
+      "counterevidence_or_limit": "An exact public replacement/joint likelihood covariance was not identified; the current 13-row vector still includes the earlier Ly-alpha BAO block.",
+      "experiment_implication": "Do not combine the Results IV product independently with the old Ly-alpha rows; require an audited joint/replacement likelihood. Do not use this release as a growth or perturbation-stability constraint."
     }
   ]
 }

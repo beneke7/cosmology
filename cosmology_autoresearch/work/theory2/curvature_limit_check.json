@@ -1,0 +1,81 @@
+{
+  "status": "independent contract audit; no fit",
+  "dtype": "float64",
+  "cpu_only": true,
+  "domain": {
+    "Omega_m": [
+      0.05,
+      0.6
+    ],
+    "Omega_k": [
+      -0.2,
+      0.2
+    ],
+    "z": [
+      0.0,
+      2.33
+    ],
+    "grid_shape_Omega_m_Omega_k_z": [
+      12,
+      17,
+      1002
+    ],
+    "minimum_E2_on_grid": 0.6759259259259258,
+    "minimum_location": {
+      "Omega_m": 0.05,
+      "Omega_k": -0.2,
+      "z": 1.6666666666666667
+    },
+    "analytic_continuous_minimum_E2": 0.6759259259259259,
+    "analytic_minimum_x": 2.6666666666666665,
+    "minimum_Omega_Lambda_on_parameter_rectangle": 0.2,
+    "closed_branch_argument_upper_bound": 1.2674223652969023,
+    "closed_branch_argument_is_below_pi": true
+  },
+  "flat_limit": {
+    "S_k_chi_1p2_at_Omega_k_zero": 1.2,
+    "analytic_dS_dOmega_k_at_zero": 0.288,
+    "central_finite_difference_h": 1e-06,
+    "central_finite_difference_derivative": 0.2880000000704541,
+    "absolute_derivative_error": 7.045414252004889e-11,
+    "near_zero_examples": [
+      {
+        "Omega_k": -1e-12,
+        "S_k_at_chi_1p2": 1.199999999999712,
+        "flat_limit_chi": 1.2,
+        "fractional_difference_from_flat": -2.399932104898047e-13
+      },
+      {
+        "Omega_k": -1e-08,
+        "S_k_at_chi_1p2": 1.19999999712,
+        "flat_limit_chi": 1.2,
+        "fractional_difference_from_flat": -2.40000001353972e-09
+      },
+      {
+        "Omega_k": 0.0,
+        "S_k_at_chi_1p2": 1.2,
+        "flat_limit_chi": 1.2,
+        "fractional_difference_from_flat": 0.0
+      },
+      {
+        "Omega_k": 1e-08,
+        "S_k_at_chi_1p2": 1.20000000288,
+        "flat_limit_chi": 1.2,
+        "fractional_difference_from_flat": 2.40000001353972e-09
+      },
+      {
+        "Omega_k": 1e-12,
+        "S_k_at_chi_1p2": 1.200000000000288,
+        "flat_limit_chi": 1.2,
+        "fractional_difference_from_flat": 2.399932104898047e-13
+      }
+    ],
+    "series": "chi * (1 + y/6 + y^2/120 + y^3/5040 + y^4/362880), y=Omega_k*chi^2, used for |y|<1e-4"
+  },
+  "script_sha256": "bc168ef44eb78e135e8cfd27c4028670a2068d56a1c383acf2870cc0d250ac73",
+  "runtime": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "machine": "x86_64"
+  }
+}

@@ -1,0 +1,1496 @@
+                                                  Revisiting Metastable Dark Energy in Light of DESI DR2 BAO and DESI DR1
+                                                                            Full-Shape Measurements
+                                                                           Purba Mukherjee,1, ∗ Arman Shafieloo,1, 2, † and Varun Sahni3, ‡
+                                                   1
+                                                       Korea Astronomy and Space Science Institute, 776 Daedeok-daero, Yuseong-gu, Daejeon 34055, Republic of Korea
+                                                                                2
+                                                                                  University of Science and Technology, Daejeon 34113, Korea
+                                                          3
+                                                            Inter-University Centre for Astronomy and Astrophysics, Post Bag 4, Ganeshkhind, Pune 411007, India
+                                                                                                    (Dated: August 4, 2026)
+                                                                We revisit metastable dark energy (DE) models described by a radioactive-like decay law. We
+                                                             consider three scenarios: an effective, exponentially decaying DE component; decay of DE into non-
+                                                             baryonic dark matter (DM); and decay of DE into dark radiation (DR). We constrain the metastable
+                                                             DE models using DESI DR2 baryon acoustic oscillation (BAO) data, Type Ia supernovae (SNIa),
+                                                             cosmic microwave background (CMB) observations, and, for the first time, the current available
+                                                             DESI DR1 full-shape (FS) clustering measurements. The BAO+SNIa combinations show a mild
+                                                             preference for positive Γ/H0 , with a deviation from the ΛCDM limit at the ≳ 2σ level. This
+                                                             corresponds to a decaying DE density and an effective quintessence-like behaviour at low redshift.
+                                                             Once CMB information from either Planck or P-ACT is included, however, the constraints become
+                                                             statistically consistent with Γ/H0 = 0. The FS measurements probe the growth sector and help
+                                                             distinguish the interacting DM-DE behaviour of Model 2 from the effective decaying-DE response
+                                                             of Model 1 and the weaker DR-induced response of Model 3. For CMB+FS+DES-Dovekie, Model
+arXiv:2608.01844v1 [astro-ph.CO] 3 Aug 2026
+
+
+
+
+                                                             1 shows a slight deviation from Γ/H0 = 0 at the ≳ 2σ level, while Models 2 and 3 remain consistent
+                                                             with the ΛCDM limit within 2σ. Overall, metastable DE remains phenomenologically viable: current
+                                                             data allow late-time dynamics but do not provide decisive evidence for a nonzero decay rate. These
+                                                             results motivate extending our analysis to the upcoming DESI DR2 FS data to obtain tighter
+                                                             constraints on metastable dynamics.
+                                                             Keywords: cosmology, dark energy, growth rate of structure, Hubble tension
+
+
+                                                                   I.   INTRODUCTION                               higher redshifts, JWST observations of massive and lumi-
+                                                                                                                   nous galaxy candidates have raised questions about early
+                                                 The standard ΛCDM model has long served as the                    structure formation and the efficiency of galaxy assem-
+                                              baseline framework for interpreting cosmological obser-              bly within the standard cosmological framework [18, 19].
+                                              vations, including the cosmic microwave background                   While uncertainties remain, these results further moti-
+                                              (CMB) [1–3], Type Ia supernovae (SN-Ia) [4, 5], baryon               vate testing extensions to the baseline ΛCDM model.
+                                              acoustic oscillation (BAO) and large-scale structure                    Recent DESI BAO measurements provide tantalizing
+                                              (LSS) surveys [6–8]. In this picture, the matter sector              hints for dynamical dark energy [7], with CMB+SN-
+                                              is dominated by cold, pressureless dark matter, while                Ia combinations showing ≳ 3σ deviations from w =
+                                              cosmic acceleration is attributed to a cosmological con-             −1 within the Chevallier-Polarski-Linder [20, 21] (CPL)
+                                              stant, Λ, or equivalently to a dark energy (DE) compo-               parametrization, depending on the data set employed.
+                                              nent with equation of state w = −1 [9, 10]. However,                 Similar indications have also been found in model-
+                                              the nature of DE remains elusive, and the cosmologi-                 independent reconstructions, where the effective DE
+                                              cal constant problem remains a fundamental theoretical               equation of state (EoS) or pressure can show deviations
+                                              challenge [11, 12]. At the same time, increasingly precise           from ΛCDM [22–26]. Interestingly, these reconstructions
+                                              cosmological data have revealed persistent tensions be-              often point to a phantom-crossing behaviour [27], where
+                                              tween different probes [13]. These tensions suggest that             the DE EoS crosses w = −1. Such a crossing is diffi-
+                                              the dark sector may be more complex than in the minimal              cult to realize in simple single-field DE models [28, 29]
+                                              ΛCDM scenario [14]. One of the most widely discussed                 and may require more exotic dark-sector physics, modi-
+                                              discrepancies is the H0 tension [15]. Local measurements             fied gravity, or a different microscopic description of DE.
+                                              from the H0 Distance Network (H0DN) report a con-                    This motivates testing alternative scenarios in which the
+                                              sensus value of H0 that is in ∼ 7σ tension with early-               apparent evolution of the DE sector arises from different
+                                              Universe ΛCDM constraints based on SPT-3G, Planck,                   physical mechanisms (see Refs. [30–43]). One such possi-
+                                              and ACT [16]. Growth-sector constraints, commonly                    bility is metastable dark energy, in which the DE density
+                                              summarized by S8 , also show mild but persistent devi-               evolves through a radioactive-like decay law [44].
+                                              ations between CMB and LSS measurements [17]. At                        In this framework, the DE density is not strictly con-
+                                                                                                                   stant, but evolves according to a radioactive-like decay
+                                                                                                                   law [44]. The decay rate is treated as an intrinsic prop-
+                                              ∗ purba@kasi.re.kr                                                   erty of the DE sector, rather than being fixed by the
+                                              † shafieloo@kasi.re.kr
+                                                                                                                   Hubble expansion rate or curvature. Previous studies
+                                              ‡ varun@iucaa.in
+                                                                                                                   have shown that Metastable models can provide a vi-
+                                                                                                                       2
+
+able description of an evolving DE sector that can be         where a(t) is the scale factor and c is the speed of light.
+tested against observations [45, 46]. Current DESI ob-        The Hubble expansion rate is given by
+servations therefore provide a timely opportunity to re-
+visit metastable models using BAO and full-shape clus-               H 2 (z)
+                                                                             = Ωm (1 + z)3 + Ωr (1 + z)4 + ΩDE ,     (2)
+tering measurements, together with SNIa and CMB data.                 H02
+Here, we consider three metastable DE scenarios. In
+Model 1, the DE density decays effectively as a back-         where H0 is the present-day Hubble parameter, z is the
+ground component, leading to a redshift-dependent ef-         redshift, and Ωm , Ωr , and ΩDE denote the current values
+fective equation of state. In Model 2, DE decays into         of the matter, radiation, and dark energy density param-
+non-baryonic dark matter (DM), behaving as an interact-       eters, respectively. The matter sector consists of baryons
+ing DM-DE scenario that affects both the matter abun-         and cold dark matter (CDM), i.e. Ωm = Ωb + Ωc where
+dance and perturbations. In Model 3, DE decays into           Ωb and Ωc denote the present-day baryon and CDM den-
+dark radiation (DR), producing an additional relativis-       sity parameters. The transverse comoving distance to an
+tic component at late times. These three scenarios help       object at redshift z is
+distinguish modifications confined to DE only from those                                   Z z
+that affect the matter or radiation sectors.We constrain                                        dz ′
+                                                                                DM (z) = c          ′
+                                                                                                      .              (3)
+Metastable models using DESI DR2 BAO [22] measure-                                           0 H(z )
+ments, SN-Ia compilations (DES-Dovekie [26], Union3
+                                                                 We study three phenomenological metastable dark-
+[47], PantheonPlus [48]), a BBN prior for physical baryon
+                                                              energy scenarios: an exponentially decaying DE density
+density [49], and CMB observations from Planck [50, 51]
+                                                              (Model 1), DE decay into dark matter (Model 2), and DE
+and Planck+ACT, denoted P-ACT [2]. We extend earlier
+                                                              decay into dark radiation (Model 3). These cases respec-
+background-level studies by consistently evolving linear
+                                                              tively produce an effective redshift-dependent DE EoS,
+perturbations. Energy transfer from DE to DM modifies
+                                                              modify the matter-sector evolution, and add an extra-
+the DM density perturbations, while the DR model re-
+                                                              relativistic component to the energy budget. We assume
+quires the evolution of the relativistic perturbation hier-
+                                                              that the DE EoS approaches w = −1 at high redshift,
+archy. This framework connects dark sector microphysics
+                                                              and that its decay arises from intrinsic properties of the
+not only to cosmic distances but also to structure forma-
+                                                              DE sector rather than from the expansion history of the
+tion through the power spectrum.
+                                                              Universe. Together, these scenarios allow us to assess the
+   A key novelty of our work is the first application of
+                                                              cosmological consequences of a metastable dark sector.
+DESI DR1 full-shape measurements [8] to metastable DE
+models, extending the analysis beyond BAO distances
+to include growth and clustering information. Since the             A.   Model 1: Exponentially decaying DE
+three decay channels affect the matter sector and radi-
+ation sector differently, full-shape data help test their
+distinct signatures and their consistency with structure        The DE sector is modeled as a single effective fluid
+growth. Our work therefore demonstrates the unique            with a radioactive-decay-like density evolution,
+discriminatory power of full-shape measurements. This
+                                                                         ρDE (t) = ρDE (t0 ) exp[−Γ(t − t0 )] ,      (4)
+joint treatment of expansion, perturbations, and scale-
+dependent clustering represents the future of redshift-       which follows from
+survey cosmology.
+   The paper is organized as follows. In Sec. II, we de-                           ρ̇DE = −ΓρDE .                    (5)
+scribe the three metastable DE models and their back-
+ground and perturbation equations. In Sec. III, we sum-       Here Γ is a constant decay rate with dimensions of inverse
+marize the data sets, priors, and analysis methodology.       time. For Γ > 0, the DE density decreases with time,
+In Sec. IV, we present the parameter constraints from         with half-life t1/2 = ln 2/Γ, whereas Γ < 0 corresponds to
+diverse data combinations. In Sec. V, we discuss recon-       a growing DE density and hence phantom-like behaviour.
+structed background and growth observables. In Sec. VI,       The DE density parameter evolves as
+we study the impact of DESI DR1 full-shape measure-                                      Z z                   
+ments. In Sec. VII, we compare the relative goodness of                                             Γ         ′
+                                                                  ΩDE (z) = ΩDE,0 exp                       dz .     (6)
+fit of the metastable DE models with respect to ΛCDM.                                             ′       ′
+                                                                                            0 H(z )(1 + z )
+Finally, we summarize our conclusions in Sec. VIII.
+                                                              The corresponding Hubble expansion rate is
+
+                  II.   FORMALISM                                 H 2 (z)
+                                                                          = ΩDE (z) + Ωm (1 + z)3 + Ωr (1 + z)4 .    (7)
+                                                                   H02
+  We consider a spatially flat Friedmann-Lemaı̂tre-
+Robertson-Walker (FLRW) Universe,                             The effective DE pressure follows from the continuity Eq.,
+
+ ds2 = c2 dt2 − a2 (t) dr2 + r2 dθ2 + r2 sin2 θdϕ2 , (1)
+                                                 
+                                                                            ρ̇DE + 3H (ρDE + pDE ) = 0 ,             (8)
+                                                                                                                                                                                                                       3
+
+                                                           Model 1                                                     Model 2                                                      Model 3
+                       1.0
+
+
+
+                       0.8
+Density parameters
+
+
+
+
+                                         Ωr                                                          Ωr                                                          Ωr
+                                         Ωm                                                          Ωm                                                          Ωm
+                       0.6                                    Γ/H0 = 0                                                    Γ/H0 = 0                                                       Γ/H0 = 0
+                                         Ων                                                          Ων                                                          Ων
+                                                              Γ/H0 = 0.3                                                  Γ/H0 = 0.3                                                     Γ/H0 = 0.3
+                                         ΩDE                                                         ΩDE                                                         ΩDE
+                                                              Γ/H0 = 0.5                                                  Γ/H0 = 0.5                                                     Γ/H0 = 0.5
+                                         ΩDR                                                         ΩDR                                                         ΩDR
+                       0.4
+                                         Ωtot                                                        Ωtot                                                        Ωtot
+
+
+                       0.2
+
+
+
+                       0.0
+                         10−5              10−4        10−3          10−2         10−1    100 10−5     10−4        10−3          10−2         10−1    100 10−5     10−4           10−3         10−2         10−1     100
+                                                               a                                                           a                                                              a
+
+                                                           Model 1                                                     Model 2                                                      Model 3
+                              85          ΛCDM                                                        ΛCDM                                                       ΛCDM
+H(z)/(1 + z) [km s−1 Mpc−1]
+
+
+
+
+                                          Γ/H0 = 0.5                                                  Γ/H0 = 0.5                                                 Γ/H0 = 0.5
+                              80          Γ/H0 = 0.3                                                  Γ/H0 = 0.3                                                 Γ/H0 = 0.3
+                                          Γ/H0 = 0                                                    Γ/H0 = 0                                                   Γ/H0 = 0
+                              75          Γ/H0 = −0.3                                                 Γ/H0 = −0.3
+                                          Γ/H0 = −0.5                                                 Γ/H0 = −0.5
+                              70
+
+                              65
+
+                              60
+
+                              55
+                                   0.0     0.5       1.0       1.5          2.0     2.5   3.0 0.0     0.5        1.0       1.5          2.0     2.5   3.0 0.0     0.5       1.0          1.5          2.0     2.5    3.0
+                                                                z                                                           z                                                             z
+
+
+FIG. 1. Evolution of the fractional density parameters Ωi (a) and the Hubble parameter H(z)
+                                                                                        1+z
+                                                                                            for the metastable DE models,
+different values of Γ/H0 . The nonzero ΩDR contribution in Model 3 highlights the DR component produced by DE decay.
+
+
+which gives                                                                                                                  independently as ρb ∝ (1 + z)3 . The Hubble expansion
+                                                                                                                           rate is therefore
+                                                                   Γ
+                                                   pDE = −ρDE 1 −      .                                         (9)
+                                                                  3H
+                                                                                                                              H 2 (z)
+Therefore, the effective DE EoS is                                                                                                    = ΩDE (z) + ΩDM (z) + Ωb (1 + z)3 + Ωr (1 + z)4 .
+                                                                                                                                H02
+                                                                    pDE          Γ                                                                                                 (12)
+                                                 wDE (z) ≡              = −1 +       .                        (10)           At the perturbative level, we assume that the DE com-
+                                                                    ρDE        3H(z)
+                                                                                                                             ponent remains vacuum-like and does not cluster. The
+Thus, the model is governed by the dimensionless param-                                                                      decay affects the growth of structure through the modi-
+eter Γ/H0 , which sets the DE decay timescale relative to                                                                    fied DM perturbation equations. In synchronous gauge,
+the Hubble time.                                                                                                             with the energy-transfer four-vector parallel to the DM
+                                                                                                                             four-velocity, the linear perturbations obey
+
+                                           B.      Model 2: DE decay into DM
+                                                                                                                                                  ′                     h′      ρDE
+                                                                                                                                                 δDM = −θDM −              − aΓ     δDM ,
+                                                                                                                                                                        2       ρDM
+  We consider a scenario in which DE decays into non-                                                                                             ′
+baryonic DM, while the baryonic sector remains sepa-                                                                                             θDM = −HθDM .                                                      (13)
+rately conserved. The background evolution is set by
+                                                            ρ̇DE = −ΓρDE ,                                                   Here primes denote derivatives with respect to conformal
+                                                                                                                             time, H = aH, h is the trace metric perturbation in
+                                                   ρ̇DM + 3HρDM = ΓρDE ,                                      (11)
+                                                                                                                             synchronous gauge, and δDM ≡ δρDM /ρDM . In the DM-
+where Γ is a constant decay rate. Prior to its decay, the                                                                    comoving synchronous gauge, setting θDM = 0 gives
+DE component is assumed to behave as a cosmological
+constant, i.e., w = −1. For Γ ̸= 0, this is effectively                                                                                                          h′      ρDE
+                                                                                                                                                       ′
+an interacting DM-DE model, since energy is exchanged                                                                                                 δDM =−        − aΓ     δDM .                                  (14)
+                                                                                                                                                                 2       ρDM
+between DM and DE. For Γ > 0, energy is transferred
+from DE to DM, while Γ < 0 corresponds to energy flow
+in the opposite direction.                                                                                                   Thus, Γ modifies structure formation through both the
+   Since only the non-baryonic dark matter component                                                                         background DM abundance and evolution of DM density
+participates in the interaction, the baryon density evolves                                                                  perturbations.
+                                                                                                                                                                                                                      4
+
+                      ×10−9                     Model 1                                                         Model 2                                                          Model 3
+               1.0            ΛCDM                                                            ΛCDM                                                             ΛCDM
+                              Γ/H0 = 0.5                                                      Γ/H0 = 0.5                                                       Γ/H0 = 0.5
+                              Γ/H0 = 0.3                                                      Γ/H0 = 0.3                                                       Γ/H0 = 0.3
+               0.8
+                              Γ/H0 = 0                                                        Γ/H0 = 0                                                         Γ/H0 = 0
+                              Γ/H0 = −0.3                                                     Γ/H0 = −0.3
+               0.6            Γ/H0 = −0.5                                                     Γ/H0 = −0.5
+D`T T
+
+
+
+
+               0.4
+
+
+               0.2
+
+
+               0.0
+                                 101                    102                  103                 101                    102                   103                 101                     102                 103
+                                                    `                                                               `                                                                `
+                                               Model 1                                                         Model 2                                                           Model 3
+               105
+
+
+
+               104
+P (k) [Mpc3]
+
+
+
+
+               103
+                              ΛCDM                                                            ΛCDM
+                              Γ/H0 = 0.5                                                      Γ/H0 = 0.5
+                              Γ/H0 = 0.3                                                      Γ/H0 = 0.3                                                       ΛCDM
+               102
+                              Γ/H0 = 0                                                        Γ/H0 = 0                                                         Γ/H0 = 0.5
+                              Γ/H0 = −0.3                                                     Γ/H0 = −0.3                                                      Γ/H0 = 0.3
+                              Γ/H0 = −0.5                                                     Γ/H0 = −0.5                                                      Γ/H0 = 0
+               101
+                 10−3                  10−2                   10−1                 100 10−3             10−2                  10−1                  100 10−3              10−2                  10−1                100
+                                               k [Mpc−1 ]                                                      k [Mpc−1 ]                                                        k [Mpc−1 ]
+
+                                                Model 1                                                         Model 2                                                          Model 3
+               0.50                                                  ΛCDM                                                            ΛCDM                                                              ΛCDM
+                                                                     Γ/H0 = 0.5                                                      Γ/H0 = 0.05                                                       Γ/H0 = 0.5
+                                                                     Γ/H0 = 0.3                                                      Γ/H0 = 0.03                                                       Γ/H0 = 0.3
+               0.45
+                                                                     Γ/H0 = 0                                                        Γ/H0 = 0                                                          Γ/H0 = 0
+                                                                     Γ/H0 = −0.3                                                     Γ/H0 = −0.03
+               0.40                                                  Γ/H0 = −0.5                                                     Γ/H0 = −0.05
+fσ8(z)
+
+
+
+
+               0.35
+
+
+               0.30
+
+
+               0.25
+
+
+                      0.0      0.5       1.0       1.5         2.0     2.5          3.0 0.0   0.5        1.0       1.5         2.0      2.5         3.0 0.0    0.5        1.0       1.5         2.0     2.5         3.0
+                                                    z                                                              z                                                                 z
+
+
+FIG. 2. Theoretical evolution of angular power spectrum DℓT T , matter power spectrum P (k), and growth rate of structure
+f σ8 (z) for the metastable DE models with different values of Γ/H0 . The panels illustrate the impact of DE decay on the CMB
+anisotropies and structure growth.
+
+
+                              C.       Model 3: DE decay into DR                                                    where Ωm = Ωb + Ωc , and Ωr denotes the standard radi-
+                                                                                                                    ation density parameter.
+  We also consider a scenario in which DE decays into                                                                  At the perturbative level, the metastable decay sources
+dark radiation (DR). Here, the DR component has no                                                                  perturbations in the DR sector. In synchronous gauge,
+primordial abundance and is produced solely through the                                                             the perturbation equations for the normalized DR den-
+decay of DE. Therefore, we restrict this scenario to Γ > 0.                                                         sity contrast, velocity divergence, and anisotropic stress
+The background evolution is governed by                                                                             are
+
+                                                ρ̇DE = −ΓρDE ,                                                       ′       4        2     ρDE
+                                                                                                                    δDR = − θDR − h′ − aΓ        δDR ,
+                                       ρ̇DR + 4HρDR = ΓρDE ,                                           (15)                  3        3     ρ
+                                                                                                                                           DR
+                                                                                                                     ′          1                 ρDE
+where the produced DR behaves as an ultra-relativistic                                                              θDR = k2      δDR − σDR − aΓ      θDR ,      (17)
+                                                                                                                                4                 ρDR
+component with wDR = 1/3. The non-relativistic matter
+sector, including baryons and cold dark matter, remains                                                              ′     4          3         2      4    ρDE
+                                                                                                                    σDR =     θDR − kFDR,3 − h′ − η ′ − aΓ      σDR .
+separately conserved, with ρm ∝ (1 + z)3 . The Hubble                                                                     15         10        15      5    ρDR
+expansion rate is therefore
+                                                                                                                    Here primes denote conformal-time derivatives, h and η
+H 2 (z)                                                                                                             are synchronous-gauge metric perturbations, θDR is the
+        = ΩDE (z) + ΩDR (z) + Ωm (1 + z)3 + Ωr (1 + z)4 ,
+ H02                                                                                                                DR velocity divergence, σDR is the DR anisotropic stress,
+                                                    (16)                                                            and FDR,3 is the octupole moment of DR hierarchy. For
+                                                                                                                                5
+
+higher multipoles, the hierarchy reads
+                                                                        TABLE I. Priors adopted for model parameters.
+    ′           k                                                        Parameter                     Prior
+   FDR,ℓ =          [ℓFDR,ℓ−1 − (ℓ + 1)FDR,ℓ+1 ] +
+             2ℓ + 1                                       (18)               ωb                    U(0.005, 0.04)
+                        ρDE
+                   −aΓ      FDR,ℓ          ℓ ≥ 3,                            ωc                    U(0.001, 0.99)
+                        ρDR
+                                                                             H0                     U(20, 100)
+with the usual closure relation imposed at ℓmax . Thus,                     τreio                   U(0.01, 0.8)
+in Model 3, DE decay modifies cosmological evolution                         ns                     U(0.8, 1.2)
+through both the background production of DR and the                     ln(1010 As )              U(1.61, 3.91)
+perturbations of the relativistic daughter component.                       Γ/H0             U(−1, 2) Models 1 and 2
+                                                                            Γ/H0                U(0, 2) Model 3
+             III.    DATA AND ANALYSIS
+
+   To constrain the three metastable DE models, we use            structure f σ8 (z) through the modified expansion his-
+several combinations of cosmological data sets. These in-         tory. Model 2 produces the largest deviations, especially
+clude the DESI DR2 baryon acoustic oscillation (BAO)              in P (k) and f σ8 (z), because the decay directly changes
+measurements [7], Type Ia supernovae (SN-Ia) compila-             the non-relativistic DM abundance and its perturbations.
+tions [4, 26, 47], cosmic microwave background (CMB)              Model 3 behaves similarly to Model 1 over the shown pa-
+[1, 2] data, and a Big Bang nucleosynthesis (BBN) [49]            rameter range, as the produced DR component redshifts
+prior on the physical baryon density ωb ≡ Ωb h2 . For             rapidly and remains subdominant. Its distinctive signa-
+the SNe Ia data, we consider three independent com-               ture is therefore better captured by the evolution of ΩDR
+pilations1 , namely DES-Dovekie [26], Union3 [47], and            in Fig. 1. However, the DR component can still induce
+PantheonPlus [48]. For the CMB sector, we use ei-                 mild changes in H(z) and f σ8 (z).
+ther the Planck PR4 CamSpec NPIPE TTTEEE spectra                     For the BBN+DESI and BBN+DESI+SN-Ia combina-
+[50], supplemented by the PR3 low-l TT and EE likeli-             tions, we vary {ωb , ωc , H0 , Γ/H0 } , where ωb ≡ Ωb h2 and
+hoods [51]; or the Planck+ACT DR6 likelihood [2], here-           ωc ≡ Ωc h2 are the physical baryon and cold dark matter
+after denoted as P-ACT. The BBN prior is taken from               densities. For analyses involving the CMB likelihoods, we
+the physical baryon density estimate obtained with the            adopt the six-parameter Planck baseline framework ex-
+PRyMordial [52] code, including marginalisation over un-          tended by the metastable DE decay parameter and vary
+certainties in nuclear reaction rates [53, 54], which gives       
+                                                                    ωb , ωc , H0 , τreio , ns , ln(1010 As ), Γ/H0 . Here τreio is
+                    ωb = 0.02218 ± 0.00055 .              (19)    the optical depth to reionization, ns is the scalar spectral
+                                                                  index, and As is the amplitude of the primordial scalar
+We analyse the following data combinations: 1. BBN                power spectrum. The priors adopted for these parame-
++ DESI, 2. BBN + DESI + SN-Ia, 3. CMB + DESI,                     ters are summarized in Table I.
+4. CMB + DESI + SN-Ia. This allows us to test avail-                 Parameter estimation is performed with Cobaya3 [57]
+able CMB and SN-Ia data combinations.                             using Markov Chain Monte Carlo sampling. We re-
+   The theoretical predictions are computed using a               quire the Gelman-Rubin convergence criterion to satisfy
+modified version of CLASS2 [55, 56], which implements             R − 1 < 0.03. For comparison, we also analyze the base-
+the background and perturbation equations for the                 line ΛCDM model using the same data combinations.
+metastable DE models. Figure 1 shows the evolution                Best-fit points and the corresponding χ2 values are ob-
+of the fractional density parameters and H(z)/(1 + z),            tained with iminuit4 [58, 59], initialized at the MAP
+illustrating how Γ/H0 modifies the cosmic energy bud-             points from the MCMC chains. Model comparisons are
+get and background expansion history. The effect on the           quantified using both the relative goodness of fit and the
+CMB temperature power spectrum DℓT T , the linear mat-            deviance information criterion (DIC) [60–62]. The rel-
+ter power spectrum P (k), and the growth rate of struc-           ative goodness of fit with respect to the ΛCDM model
+ture f σ8 (z) are shown in Figure 2.                              is defined as ∆χ2MAP = χ2MAP, model − χ2MAP, ΛCDM ≡
+   Model 1 modifies the late-time background evolution            −2∆ ln L, where the χ2MAP values are evaluated at the
+through the effective DE EoS, while leaving the CMB               MAP points of the corresponding models. We also com-
+temperature power spectrum DℓT T and the linear mat-              pute ∆DIC = DICmodel − DICΛCDM to account for the
+ter power spectrum P (k) close to the ΛCDM predic-                model complexity.
+tion, with only a mild impact on the growth rate of
+
+
+1 We report the DES-Dovekie results in the main text, while the
+
+  Union3 and PantheonPlus results are given in Appendix A.        3 https://github.com/CobayaSampler/cobaya
+2 https://github.com/lesgourg/class_public.git                    4 https://github.com/scikit-hep/iminuit.git
+                                                                                                                                                                                              6
+
+
+       72                                                                 72                                                             70
+
+
+       70                                                                 70
+
+                                                                                                                                         65
+       68                                                                 68
+ H0
+
+
+
+
+                                                                    H0
+
+
+
+
+                                                                                                                                   H0
+       66                                                                 66
+                                                                                                                                         60
+       64                                                                 64
+
+                M1 : BBN + DESI2                                                 M2 : BBN + DESI2                                                  M3 : BBN + DESI2
+       62       M1 : BBN + DESI2 + DESDovekie                             62     M2 : BBN + DESI2 + DESDovekie                                     M3 : BBN + DESI2 + DESDovekie
+                M1 : P−ACT + DESI2                                               M2 : P−ACT + DESI2                                      55        M3 : P−ACT + DESI2
+                M1 : P−ACT + DESI2 + DESDovekie                                  M2 : P−ACT + DESI2 + DESDovekie                                   M3 : P−ACT + DESI2 + DESDovekie
+       60                                                                 60
+              0.26       0.28         0.30         0.32     0.34                0.2        0.3            0.4          0.5                      0.26      0.28    0.30      0.32     0.34
+                                      Ωm                                                          Ωm                                                              Ωm
+                                                                                                                                         0.20
+                                                                                                                                                          M3 : BBN + DESI2
+       0.73                                                                                                                                               M3 : BBN + DESI2 + DESDovekie
+                                                                          0.8                                                                             M3 : P−ACT + DESI2
+                                                                                                                                                          M3 : P−ACT + DESI2 + DESDovekie
+       0.72
+                                                                                                                                         0.15
+       0.71
+                                                                          0.7
+ ΩDE
+
+
+
+
+                                                                    ΩDE
+
+
+
+
+                                                                                                                                   ΩDR
+       0.70
+                                                                                                                                         0.10
+
+       0.69                                                               0.6
+
+       0.68                                                                                                                              0.05
+                     M1 : BBN + DESI2                                             M2 : BBN + DESI2
+                     M1 : BBN + DESI2 + DESDovekie                                M2 : BBN + DESI2 + DESDovekie
+       0.67                                                               0.5
+                     M1 : P−ACT + DESI2                                           M2 : P−ACT + DESI2
+                     M1 : P−ACT + DESI2 + DESDovekie                              M2 : P−ACT + DESI2 + DESDovekie
+                                                                                                                                         0.00
+                 −0.5           0.0          0.5          1.0                   −0.5      0.0       0.5         1.0          1.5             0.0            0.5           1.0           1.5
+                                      Γ/H0                                                       Γ/H0                                                             Γ/H0
+
+
+FIG. 3. Marginalized Constraints on Metastable DE Models. The upper row shows the H0 − Ωm constraints, while the lower
+row shows the corresponding decay-parameter planes: Γ/H0 − ΩDE for Model 1 (left panel), Model 2 (middle panel), and
+Γ/H0 − ΩDR for Model 3 (right panel). The vertical dashed line marks the ΛCDM limit, Γ/H0 = 0.
+
+
+TABLE II. Marginalized constraints at 68% CL for the baseline ΛCDM and metastable DE models with BBN+DESI (+DES-
+Dovekie) data combinations.
+
+                     Parameter                            ΛCDM                         Model 1                         Model 2                             Model 3
+                                                                                       BBN+DESI
+                     H0                               68.57 ± 0.60                     66.3+2.0
+                                                                                           −2.2                        66.6 ± 2.0                          63.0+2.7
+                                                                                                                                                               −2.4
+                     Ωb h   2
+                                                   0.02222+0.00051
+                                                          −0.00057              0.02221 ± 0.00055               0.02218 ± 0.00054                      0.02225 ± 0.00054
+                     Ωc h2                         0.1169 ± 0.0048               0.1099 ± 0.0081                      0.139+0.026
+                                                                                                                           −0.016                       0.1075 ± 0.0077
+                     Γ/H0                                       –                     0.31 ± 0.28                      0.38 ± 0.37                          < 0.701
+                     Ωm                            0.2972 ± 0.0083               0.3015 ± 0.0096                      0.369+0.075
+                                                                                                                           −0.063                       0.3032 ± 0.0095
+                     ΩDR                                        –                         –                                   –                             < 0.103
+                                                                            BBN+DESI+DES-Dovekie
+                     H0                               68.63 ± 0.60                    66.4 ± 1.1                       66.4 ± 1.1                         64.5 ± 1.5
+                     Ωb h2                     0.02217 ± 0.00056                0.02219 ± 0.00055               0.02218 ± 0.00057                      0.02219 ± 0.00056
+                     Ωc h2                         0.1214 ± 0.0044                0.1098+0.0059
+                                                                                        −0.0066                    0.1404+0.0088
+                                                                                                                         −0.0080                        0.1097 ± 0.0065
+                     Γ/H0                                       –                     0.29 ± 0.12                      0.38 ± 0.16                         0.39+0.16
+                                                                                                                                                               −0.20
+                     Ωm                            0.3062 ± 0.0075               0.3007 ± 0.0078                      0.371 ± 0.027                     0.3011 ± 0.0085
+                     ΩDR                                        –                         –                                   –                           0.058+0.024
+                                                                                                                                                               −0.030
+
+
+
+
+              IV.       RESULTS AND DISCUSSIONS                                                    panels show the corresponding decay-parameter planes:
+                                                                                                   Γ/H0 − ΩDE for Models 1 and 2, and Γ/H0 − ΩDR for
+                                                                                                   Model 3. The marginalized constraints on Γ/H0 and
+   We present the parameter constraints for the three                                              Ωm h2 are shown in Fig. 4. The numerical constraints
+metastable DE scenarios in Fig. 3. The upper pan-                                                  are summarized in Tables II, III, and IV, where the base-
+els show the Ωm − H0 constraints, while the lower
+                                                                                                            7
+
+
+
+TABLE III. Marginalized constraints at 68% CL for the baseline ΛCDM and metastable DE models with Planck+DESI
+(+DESDovekie) data combinations.
+
+          Parameter           ΛCDM                  Model 1             Model 2             Model 3
+                                                   Planck+DESI
+          log(1010 As )      3.048+0.013
+                                  −0.015          3.046 ± 0.014        3.046+0.013
+                                                                            −0.015        3.049 ± 0.014
+          ns               0.9683 ± 0.0033       0.9675 ± 0.0035      0.9677+0.0036
+                                                                            −0.0032      0.9687 ± 0.0036
+          H0                68.20 ± 0.29           69.0 ± 1.1          68.9 ± 1.1           66.7+1.1
+                                                                                                −0.80
+                 2
+          Ωb h            0.02233 ± 0.00012     0.02230 ± 0.00013   0.02231 ± 0.00012   0.02234 ± 0.00012
+          Ωc h2           0.11755 ± 0.00063     0.11787 ± 0.00079     0.105 ± 0.018     0.11730 ± 0.00066
+          τreio            0.0594 ± 0.0072        0.0582+0.0066
+                                                        −0.0077       0.0582+0.0065
+                                                                            −0.0074      0.0603 ± 0.0072
+          Γ/H0                    –               −0.11 ± 0.15         −0.13+0.17
+                                                                            −0.20           < 0.146
+          Ωm               0.3021 ± 0.0037       0.2964 ± 0.0088      0.272 ± 0.046       0.3077+0.0051
+                                                                                                −0.0066
+          ΩDR                     –                     –                   –               < 0.0216
+                                             Planck+DESI+DES-Dovekie
+          log(1010 As )     3.047 ± 0.014         3.050 ± 0.014       3.049 ± 0.014       3.050 ± 0.014
+          ns               0.9676 ± 0.0033       0.9691 ± 0.0034     0.9686 ± 0.0035     0.9689 ± 0.0034
+          H0                68.08 ± 0.28          67.43 ± 0.55        67.47 ± 0.53         66.45+0.86
+                                                                                                −0.72
+          Ωb h2           0.02230 ± 0.00012      0.02235+0.00013
+                                                        −0.00011    0.02233 ± 0.00013   0.02235 ± 0.00012
+                 2
+          Ωc h            0.11782 ± 0.00062     0.11728 ± 0.00071    0.1285 ± 0.0081    0.11727 ± 0.00070
+          τreio            0.0586 ± 0.0069        0.0606+0.0064
+                                                        −0.0076       0.0604+0.0068
+                                                                            −0.0076      0.0606 ± 0.0072
+          Γ/H0                    –               0.111 ± 0.079        0.14 ± 0.11         0.158+0.061
+                                                                                                −0.13
+          Ωm               0.3037 ± 0.0036       0.3086 ± 0.0051      0.333 ± 0.023      0.3095 ± 0.0047
+          ΩDR                     –                     –                   –             0.0233+0.0094
+                                                                                                −0.019
+
+
+
+
+TABLE IV. Marginalized constraints at 68% CL for the baseline ΛCDM and metastable DE models with P-ACT+DESI
+(+DESDovekie) data combinations.
+
+          Parameter           ΛCDM                  Model 1             Model 2             Model 3
+                                                  P-ACT+DESI
+          log(1010 As )     3.063 ± 0.011         3.063 ± 0.011       3.063 ± 0.011       3.065 ± 0.011
+          ns               0.9752 ± 0.0030       0.9751 ± 0.0032     0.9752 ± 0.0031     0.9760 ± 0.0031
+          H0                68.49 ± 0.28           68.7 ± 1.1          68.7 ± 1.0           66.6+1.2
+                                                                                                −1.0
+          Ωb h2           0.02255 ± 0.00010     0.02256 ± 0.00011   0.02256 ± 0.00010   0.02257 ± 0.00010
+                 2
+          Ωc h            0.11721 ± 0.00068     0.11724 ± 0.00085     0.114 ± 0.017     0.11674 ± 0.00075
+          τreio             0.0612+0.0058
+                                  −0.0066         0.0613+0.0056
+                                                        −0.0066      0.0612 ± 0.0064     0.0617 ± 0.0064
+          Γ/H0                    –               −0.02 ± 0.15        −0.02 ± 0.19          < 0.198
+          Ωm               0.2994 ± 0.0037       0.2981 ± 0.0087      0.292 ± 0.044       0.3059+0.0061
+                                                                                                −0.0075
+          ΩDR                     –                     –                   –               < 0.0294
+                                            P-ACT+DESI+DES-Dovekie
+          log(1010 As )     3.0623+0.0098
+                                  −0.011          3.066 ± 0.011       3.064 ± 0.011       3.066 ± 0.011
+          ns               0.9745 ± 0.0031       0.9764 ± 0.0031     0.9756 ± 0.0031     0.9763 ± 0.0032
+          H0                68.37 ± 0.27          67.47 ± 0.55        67.53 ± 0.55         66.30+0.97
+                                                                                                −0.86
+                 2
+          Ωb h            0.02254 ± 0.00010     0.02258 ± 0.00011   0.02257 ± 0.00011   0.02258 ± 0.00011
+          Ωc h2           0.11750 ± 0.00065     0.11671 ± 0.00077    0.1321 ± 0.0082    0.11670 ± 0.00077
+          τreio             0.0612+0.0055
+                                  −0.0065         0.0619+0.0058
+                                                        −0.0068      0.0615 ± 0.0063     0.0621 ± 0.0064
+          Γ/H0                    –               0.151 ± 0.082        0.19 ± 0.11         0.204+0.093
+                                                                                                −0.14
+          Ωm               0.3010 ± 0.0036       0.3074 ± 0.0050      0.341 ± 0.023      0.3081 ± 0.0051
+          ΩDR                     –                     –                   –              0.030+0.014
+                                                                                                −0.019
+                                                                                                                                                   8
+                                                                                   Model 1
+                          BBN + DESI2
+                          BBN + DESI2 + DESDovekie
+                          P−ACT + DESI2
+         0.16             P−ACT + DESI2 + DESDovekie
+ Ωm h2
+
+
+
+         0.14
+
+
+
+         0.12
+
+
+
+         0.10
+                −0.5       0.0      0.5             1.0          −0.5        0.0           0.5           1.0          0.12       0.14       0.16
+                                 Γ/H0                                               Γ/H0                                     Ωm h2
+                                                                                   Model 2
+
+
+         0.20
+ Ωm h2
+
+
+
+
+         0.15
+
+
+
+         0.10
+                         BBN + DESI2
+                         BBN + DESI2 + DESDovekie
+                         P−ACT + DESI2
+         0.05            P−ACT + DESI2 + DESDovekie
+
+                  −0.5    0.0     0.5         1.0         1.5         −0.5   0.0      0.5          1.0         1.5   0.10       0.15       0.20
+                                Γ/H0                                                Γ/H0                                     Ωm h2
+                                                                                   Model 3
+         0.16
+
+
+         0.14
+ Ωm h2
+
+
+
+
+         0.12
+
+
+         0.10
+                         BBN + DESI2
+                         BBN + DESI2 + DESDovekie
+         0.08            P−ACT + DESI2
+                         P−ACT + DESI2 + DESDovekie
+
+            0.0           0.5           1.0               1.5   0.0          0.5             1.0               1.5   0.10      0.12      0.14
+                                Γ/H0                                                Γ/H0                                     Ωm h2
+
+
+FIG. 4. Marginalized Γ/H0 − Ωm h2 constraints on Models 1–3. The center column shows the 1D posterior of Γ/H0 , and the
+right column shows the 1D posterior of Ωm h2 .
+
+
+line ΛCDM results are included for comparison. In the                                      2. For Model 1, where the DE density decays exponen-
+main text, we focus on the DES-Dovekie SN-Ia combina-                                         tially, Γ/H0 modifies the late-time background expan-
+tion, while the corresponding Union3 and PantheonPlus                                         sion through the effective DE EoS. Γ/H0 > 0 values
+results are given in Appendix A.                                                              correspond to faster DE decay, implying a larger DE
+                                                                                              density in the past for fixed ΩDE today. This produces
+1. The BBN+DESI constraints are generally broad in                                            the correlation seen in the Γ/H0 − ΩDE plane. Al-
+   the Ωm − H0 plane. Adding SN-Ia data tightens                                              though the BBN+DESI+SN-Ia combinations mildly
+   the contours and tends to shift the posterior toward                                       favour positive decay rates, the Γ/H0 = 0 limit re-
+   Γ/H0 > 0, indicating that late-time distance data can                                      mains within the 3σ CL. However, the CMB-informed
+   accommodate a decaying DE density. By contrast,                                            constraints shift the posterior closer to zero, with
+   CMB-based combinations give tighter constraints and                                        Γ/H0 = 0 lying within the 2σ region.
+   pull the decay parameter closer to the ΛCDM limit,
+   Γ/H0 = 0, because of the precise early-universe con-                                    3. For Model 2, where DE decays into non-baryonic DM,
+   straints on the matter density and radiation sector.                                       the decay affects both the background matter abun-
+                                                                                                                        9
+
+  dance and the evolution of DM perturbations. As a re-       models. When CMB information is included, the re-
+  sult, the Ωm − H0 contours are broader and shifted to-      constructed bands become significantly narrower, reflect-
+  ward larger Ωm , especially for the BBN+DESI-based          ing the stronger constraints on Ωm h2 and the expansion
+  combinations. Positive Γ/H0 transfers energy from           history. The remaining deviation is model dependent:
+  DE to DM, increasing the effective matter abundance         Model 1 lies close to the 2σ boundary, Model 2 remains
+  and shifting Ωm h2 relative to ΛCDM. The Γ/H0 −ΩDE          broadly consistent with ΛCDM within the 2σ region,
+  plane shows a strong anti-correlation, since a larger de-   while Model 3 still shows a noticeable residual departure
+  cay rate can be compensated by a lower present-day          from the ΛCDM best-fit.
+  ΩDE to preserve the expansion history.                         Figure 6 shows the deceleration parameter [64],
+4. For Model 3, where DE decays into DR, the pro-                                           1 + z dH(z)
+   duced DR component has no primordial abundance                            q(z) = −1 +                .            (21)
+                                                                                            H(z) dz
+   and is sourced only by DE decay, so the model is re-
+   stricted to Γ > 0. The BBN+DESI-based combina-             Positive values, q(z) > 0, correspond to decelerated ex-
+   tions allow positive Γ/H0 values and hence a nonzero       pansion, while negative values, q(z) < 0, indicate accel-
+   ΩDR . Adding SN-Ia data tightens the contours while        erated expansion. All three metastable DE models show
+   still permitting a nonzero DR abundance at 2σ. The         the expected transition from deceleration at higher red-
+   Γ/H0 − ΩDR plane shows a positive correlation, since       shift to acceleration at late times. The present-day best-
+   larger decay rates produce larger DR abundances.           fit values of q0 are slightly less negative than in ΛCDM,
+   Once CMB information is included, the allowed re-          indicating a mild slowing down of the present cosmic ac-
+   gion becomes significantly narrower, with both Γ/H0        celeration. This trend is qualitatively similar to trends
+   and ΩDR restricted to smaller values. This reflects        seen in DESI results [22]. The transition redshift zt ,
+   the strong CMB sensitivity to additional relativistic      defined by q(zt ) = 0, remains broadly consistent with
+   components through their impact on the early-time          ΛCDM expectation within 2σ. The BBN+DESI+DES-
+   radiation sector and acoustic scale.                       Dovekie combination allows a broader range of late-time
+                                                              behaviour, while P-ACT information pulls the inferred
+Overall, the marginalized constraints show that positive      q(z) closer to the ΛCDM curve.
+values of Γ/H0 are allowed and mildly preferred in some          For the metastable DE models, the effective DE EoS
+late-time data combinations, although this trend remains      is given by Eq. (10). Positive values of Γ/H0 corre-
+dataset-dependent. The three decay channels lead to dis-      spond to quintessence-like DE behaviour, wDE      eff
+                                                                                                                    > −1,
+tinct signatures: background-level changes in Model 1,        while negative values correspond to phantom-like DE be-
+matter-sector shifts in Model 2, and a DR contribution in     haviour, wDE eff
+                                                                               < −1. Figure 7 shows the reconstructed
+Model 3, with the latter strongly constrained once CMB        evolution of wDE (z). For the BBN+DESI+DES-Dovekie
+data are included.                                            combination, Models 1 and 2 favour quintessence-like
+                                                              behaviour at low redshift at more than 2σ level. The
+                                                              P-ACT+DESI+DES-Dovekie constraints are tighter and
+ V.   RECONSTRUCTED BACKGROUND AND                            remain closer to the ΛCDM limit. The agreement with
+          GROWTH OBSERVABLES
+                                                              wDE = −1 is model dependent: Model 2 remains con-
+                                                              sistent with ΛCDM within 2σ, Model 1 lies close to the
+  We reconstruct several derived background and growth        2σ boundary, and Model 3 is marginally outside the 2σ
+observables from the MCMC posterior samples to exam-          region, although the deviation is small. Thus, while the
+ine how the metastable DE scenarios modify the late-          parent DE sector follows the same decay law in all three
+time expansion and structure-growth histories. We first       scenarios, the physical distinction between the models
+consider the Om(z) diagnostic [63],                           comes from the daughter component: DM in Model 2
+                                                              and DR in Model 3.
+                          H 2 (z)/H02 − 1                        Finally, we consider the growth of structure [65]
+               Om(z) =                    .           (20)
+                           (1 + z)3 − 1                       through f σ8 (z), which combines the logarithmic growth
+                                                              rate of matter perturbations with the fluctuation am-
+For a spatially flat ΛCDM model, Om(z) is constant and        plitude on scales of 8 h−1 Mpc, defined as f σ8 (z) =
+equal to Ωm0 . Therefore, any redshift dependence in          f (z)σ8 (z), where f (z) = dd ln
+                                                                                            ln δ
+                                                                                               a is the linear growth rate
+Om(z) indicates a departure from the ΛCDM scenario.           and δ(z) is normalized to δ(0) = 1. Since σ8 (z) =
+Figure 5 shows the reconstructed Om(z) diagnostic.            δ(z)σ8,0 , this gives
+   For the BBN+DESI+DES-Dovekie combination, the
+reconstructed Om(z) bands show a clear low-redshift de-                                                 dδ(z)
+parture from the constant ΛCDM prediction. Over part                        f σ8 (z) = − σ8,0 (1 + z)         .      (22)
+                                                                                                         dz
+of the low-z range, the best-fit ΛCDM curve lies out-
+side the ∼ 2σ region for all three metastable DE mod-         Figure 8 shows the inferred evolution of f σ8 (z) for the
+els. This suggests that late-time BAO and SN-Ia dis-          three metastable DE models, together with the corre-
+tance data favour an evolving DE sector within these          sponding ΛCDM prediction and the DESI DR1 full-shape
+                                                                                                                                                                                                             10
+
+           0.450                                                                0.450                                                                0.450
+                             Model 1: BBN+DESI+DESDovekie                                         Model 2: BBN+DESI+DESDovekie                                         Model 3: BBN+DESI+DESDovekie
+           0.425             Model 1: P-ACT+DESI+DESDovekie                     0.425             Model 2: P-ACT+DESI+DESDovekie                     0.425             Model 3: P-ACT+DESI+DESDovekie
+                             ΛCDM                                                                 ΛCDM                                                                 ΛCDM
+           0.400                                                                0.400                                                                0.400
+ Om(z)
+
+
+
+
+                                                                      Om(z)
+
+
+
+
+                                                                                                                                           Om(z)
+           0.375                                                                0.375                                                                0.375
+
+           0.350                                                                0.350                                                                0.350
+
+           0.325                                                                0.325                                                                0.325
+
+           0.300                                                                0.300                                                                0.300
+
+           0.275                                                                0.275                                                                0.275
+                     0.5    1.0        1.5         2.0    2.5   3.0                       0.5    1.0        1.5         2.0    2.5   3.0                       0.5    1.0        1.5         2.0    2.5   3.0
+                                        z                                                                    z                                                                    z
+
+
+FIG. 5. Reconstructed Om(z) diagnostic for the metastable DE models using representative BBN+DESI+DES-Dovekie and
+P-ACT+DESI+DES-Dovekie combinations. The best-fit ΛCDM prediction is shown for comparison.
+
+
+            0.4                                                                  0.4                                                                  0.4
+
+
+            0.2                                                                  0.2                                                                  0.2
+
+
+            0.0                                                                  0.0                                                                  0.0
+ q(z)
+
+
+
+
+                                                                      q(z)
+
+
+
+
+                                                                                                                                           q(z)
+           −0.2                                                                 −0.2                                                                 −0.2
+
+
+           −0.4              Model 1: BBN+DESI+DESDovekie                       −0.4              Model 2: BBN+DESI+DESDovekie                       −0.4              Model 3: BBN+DESI+DESDovekie
+                             Model 1: P-ACT+DESI+DESDovekie                                       Model 2: P-ACT+DESI+DESDovekie                                       Model 3: P-ACT+DESI+DESDovekie
+                             ΛCDM                                                                 ΛCDM                                                                 ΛCDM
+           −0.6                                                                 −0.6                                                                 −0.6
+              0.0    0.5    1.0       1.5          2.0    2.5   3.0                0.0    0.5    1.0       1.5          2.0    2.5   3.0                0.0    0.5    1.0       1.5          2.0    2.5   3.0
+                                       z                                                                    z                                                                    z
+
+
+                       FIG. 6. Reconstructed evolution of the deceleration parameter q(z) for the metastable DE models.
+
+
+           −0.75                                                                −0.75                                                                −0.75
+
+           −0.80                                                                −0.80                                                                −0.80
+
+           −0.85                                                                −0.85                                                                −0.85
+ wDE(z)
+
+
+
+
+                                                                      wDE(z)
+
+
+
+
+                                                                                                                                           wDE(z)
+
+
+
+           −0.90                                                                −0.90                                                                −0.90
+
+           −0.95                                                                −0.95                                                                −0.95
+
+           −1.00                                                                −1.00                                                                −1.00
+                             Model 1: BBN+DESI+DESDovekie                                         Model 2: BBN+DESI+DESDovekie                                         Model 3: BBN+DESI+DESDovekie
+           −1.05             Model 1: P-ACT+DESI+DESDovekie                     −1.05             Model 2: P-ACT+DESI+DESDovekie                     −1.05             Model 3: P-ACT+DESI+DESDovekie
+                             ΛCDM                                                                 ΛCDM                                                                 ΛCDM
+           −1.10                                                                −1.10                                                                −1.10
+               0.0   0.5    1.0        1.5         2.0    2.5   3.0                 0.0   0.5    1.0        1.5         2.0    2.5   3.0                 0.0   0.5    1.0        1.5         2.0    2.5   3.0
+                                        z                                                                    z                                                                    z
+
+
+FIG. 7. Reconstructed effective DE equation of state wDE (z) for the three metastable DE models. The ΛCDM model,
+wDE = −1, is shown for comparison.
+
+
+           0.60                   Model 1: P-ACT+DESI                           0.60                   Model 2: P-ACT+DESI                           0.60                   Model 3: P-ACT+DESI
+                                  Model 1: P-ACT+DESI+DESDovekie                                       Model 2: P-ACT+DESI+DESDovekie                                       Model 3: P-ACT+DESI+DESDovekie
+           0.55                   ΛCDM: P-ACT+DESI+DESDovekie                   0.55                   ΛCDM: P-ACT+DESI+DESDovekie                   0.55                   ΛCDM: P-ACT+DESI+DESDovekie
+                                  DESI-1 FS+BAO                                                        DESI-1 FS+BAO                                                        DESI-1 FS+BAO
+
+           0.50                                                                 0.50                                                                 0.50
+ f σ8(z)
+
+
+
+
+                                                                      f σ8(z)
+
+
+
+
+                                                                                                                                           f σ8(z)
+
+
+
+
+           0.45                                                                 0.45                                                                 0.45
+
+           0.40                                                                 0.40                                                                 0.40
+
+           0.35                                                                 0.35                                                                 0.35
+
+           0.30                                                                 0.30                                                                 0.30
+              0.0     0.5     1.0            1.5         2.0    2.5                0.0     0.5     1.0            1.5         2.0    2.5                0.0     0.5     1.0            1.5         2.0    2.5
+                                       z                                                                    z                                                                    z
+
+
+FIG. 8. Reconstructed growth rate of structure f σ8 (z) for the metastable DE models compared with DESI full-shape plus
+BAO measurements. Model 2 shows the largest growth-sector response because DE decay directly modifies the DM abundance
+and perturbations.
+                                                                                                                        11
+
+
+
+
+FIG. 9. DESI DR1 full-shape power-spectrum multipoles for Model 1. The predictions show the response to different values of
+Γ/H0 across the DESI tracer redshift bins. Since Model 1 mainly modifies the DE background, the changes in the multipoles
+remain mild.
+
+
+                                                                   VI.   IMPACT OF DESI DR1 FULL SHAPE
+TABLE V. Cosmological priors adopted for the DESI DR1                         MEASUREMENTS
+FS analysis without CMB. For CMB+FS combinations, we
+use the CMB priors given in Table I.
+                                                                  The reconstructed growth history discussed above mo-
+         Parameter                    Prior
+                                                               tivates a closer look at galaxy clustering beyond geomet-
+             ωc                  U (0.01, 0.99)
+             ωb              N (0.02218, 0.000552 )
+                                                               ric distance probes. While BAO and SN-Ia mainly con-
+             H0                    U (20, 100)                 strain the background expansion, the broadband shape of
+         ln(1010 As )            U (1.61, 3.91)                the galaxy power spectrum is sensitive to the amplitude
+             ns               N (0.9649, 0.0422 )              and scale dependence of structure growth. Full-shape
+            Γ/H0          U (−1, 2)    Models 1 and 2          measurements can therefore help distinguish the three
+            Γ/H0              U (0, 2)   Model 3               metastable DE scenarios, since the decay affects pertur-
+                                                               bations differently in each model.
+                                                                  In this section, we illustrate the impact of the de-
+                                                               cay parameter on the DESI DR1 full-shape power-
+                                                               spectrum multipoles. We compare the theoretical pre-
+                                                               dictions of the three models with the DESI DR1 full-
+                                                               shape measurements combined with post-reconstruction
+                                                               BAO constraints, hereafter denoted as FS. The predic-
+plus post-reconstruction BAO measurements [8], denoted
+                                                               tions are computed using our modified CLASS implemen-
+as FS and extracted using the ShapeFit compression [66].
+                                                               tation for the linear background and growth evolution.
+                                                               We interface this with CosmoPrimo5 through a modi-
+                                                               fied pyclass6 engine, and pass the resulting linear power
+   The observable f σ8 (z) is sensitive to both the back-      spectra, growth quantities, and background distances to
+ground expansion and the evolution of matter pertur-           velocileptors7 [67], following the DESI DR1 FS anal-
+bations. It therefore provides information complemen-          ysis [8] framework.
+tary to geometric distance probes such as SN-Ia and               The FS multipoles are evaluated for the DESI DR1
+BAO. While background quantities such as Om(z), q(z),          tracers, namely BGS, LRG, ELG, and QSO, at effective
+and wDE (z) mainly probe the homogeneous expansion
+history, growth information helps distinguish the three
+metastable DE scenarios. This is because the evolution
+of structure is sensitive to whether the decay products         5 https://github.com/cosmodesi/cosmoprimo.git
+                                                                6 https://github.com/adematti/pyclass.git
+cluster, as in the DM channel, or free-stream, as in the
+                                                                7 https://github.com/sfschen/velocileptors.git
+DR channel.
+                                                                                                                     12
+
+
+
+
+FIG. 10. DESI DR1 full-shape power-spectrum multipoles for Model 2. The decay of DE into DM directly modifies the matter
+abundance and perturbations, leading to the strongest response in the clustering amplitude and scale dependence.
+
+
+
+
+FIG. 11. DESI DR1 full-shape power-spectrum multipoles for Model 3. The DR component produces a weaker clustering
+response than in Model 2.
+
+
+redshifts. Figures 9, 10, and 11 show the monopole and        clustering signal only through the expansion history and
+quadrupole predictions for Models 1-3. To isolate the         growth factor. In contrast, Fig. 10 shows a much stronger
+effect of Γ/H0 , we fix all other cosmological and nuisance   response for Model 2, where DE decays into non-baryonic
+parameters to the best-fit Planck ΛCDM values. The            DM. The variation with Γ/H0 is visible in both the am-
+colour variation therefore shows how the FS clustering        plitude and scale dependence of the clustering signal, re-
+signal responds to metastable DE dynamics.                    flecting the direct modification of the DM abundance and
+   Figure 9 shows that Model 1 produces only a mild           matter perturbations. This makes DESI DR1 FS mea-
+response in the FS multipoles, since the decay mainly         surements particularly constraining for Model 2. Finally,
+affects the DE background evolution and changes the           Fig. 11 shows that Model 3 gives a weaker response, closer
+                                                                                                                                                                                                      13
+
+
+TABLE VI. Marginalized constraints at 68% CL for the baseline ΛCDM and metastable DE models with BBN+FS+ns,10
+(+DES-Dovekie) data combinations.
+
+                     Parameter                       ΛCDM                            Model 1                          Model 2                               Model 3
+                                                                                    BBN+FS+ns,10
+                     H0                            68.69 ± 0.77                     71.8 ± 2.2                       68.5 ± 1.7                             66.3+1.8
+                                                                                                                                                                −1.5
+                            2
+                     Ωb h                    0.02213 ± 0.00054                0.02217 ± 0.00053                 0.02215 ± 0.00052                    0.02215 ± 0.00055
+                     Ωc h2                       0.1171 ± 0.0051               0.1208 ± 0.0057                      0.120+0.029
+                                                                                                                         −0.023                       0.1162 ± 0.0052
+                     Γ/H0                                 –                         −0.43+0.26
+                                                                                         −0.31                       0.06 ± 0.31                             < 0.237
+                     Ωm                          0.2966 ± 0.0094                    0.279+0.012
+                                                                                         −0.016                     0.308 ± 0.068                      0.304 ± 0.011
+                     ΩDR                                  –                              –                                   –                              < 0.0354
+                                                                    BBN+FS+ns,10 +DES-Dovekie
+                     H0                            68.63 ± 0.76                     67.6 ± 1.0                      67.34 ± 0.98                            66.2 ± 1.3
+                     Ωb h2                   0.02216 ± 0.00056                0.02214 ± 0.00054                 0.02215 ± 0.00055                    0.02215 ± 0.00054
+                     Ωc h2                       0.1217 ± 0.0047                0.1174+0.0051
+                                                                                      −0.0057                      0.1389 ± 0.0093                    0.1167 ± 0.0050
+                     Γ/H0                                 –                         0.16 ± 0.11                      0.28 ± 0.14                            0.23+0.10
+                                                                                                                                                                −0.16
+                     Ωm                          0.3067 ± 0.0083               0.3064 ± 0.0085                      0.357 ± 0.026                     0.3061 ± 0.0081
+                     ΩDR                                  –                              –                                   –                          0.034+0.015
+                                                                                                                                                             −0.024
+
+
+
+                                                                                             M2 : BBN + FS
+                                                                                             M2 : BBN + FS + DESDovekie                70
+       72                                                               72
+                                                                                             M2 : Planck + FS
+                                                                                             M2 : Planck + FS + DESDovekie
+
+
+                                                                                                                                       68
+       70                                                               70
+
+
+                                                                                                                                       66
+ H0
+
+
+
+
+                                                                  H0
+
+
+
+
+                                                                                                                                 H0
+       68                                                               68
+
+
+                                                                                                                                       64
+       66                                                               66
+
+                   M1 : BBN + FS                                                                                                       62        M3 : BBN + FS
+                   M1 : BBN + FS + DESDovekie                                                                                                    M3 : BBN + FS + DESDovekie
+       64          M1 : Planck + FS                                     64                                                                       M3 : Planck + FS
+                   M1 : Planck + FS + DESDovekie                                                                                                 M3 : Planck + FS + DESDovekie
+                                                                                                                                       60
+              0.26       0.28       0.30      0.32       0.34                 0.2         0.3          0.4           0.5                      0.26      0.28         0.30         0.32         0.34
+                                    Ωm                                                           Ωm                                                                  Ωm
+
+                                  M1 : BBN + FS
+                                                                                                                                       0.12
+       0.76                       M1 : BBN + FS + DESDovekie
+                                  M1 : Planck + FS                      0.8
+                                  M1 : Planck + FS + DESDovekie                                                                        0.10
+       0.74
+
+                                                                                                                                       0.08
+                                                                        0.7
+       0.72
+ ΩDE
+
+
+
+
+                                                                  ΩDE
+
+
+
+
+                                                                                                                                 ΩDR
+
+
+
+
+                                                                                                                                       0.06
+
+       0.70                                                             0.6
+                                                                                                                                       0.04
+
+       0.68                                                                     M2 : BBN + FS                                                                  M3 : BBN + FS
+                                                                                                                                       0.02
+                                                                                M2 : BBN + FS + DESDovekie                                                     M3 : BBN + FS + DESDovekie
+                                                                        0.5
+                                                                                M2 : Planck + FS                                                               M3 : Planck + FS
+                                                                                M2 : Planck + FS + DESDovekie                                                  M3 : Planck + FS + DESDovekie
+       0.66
+                                                                                                                                       0.00
+            −1.0           −0.5            0.0            0.5                  −0.5          0.0             0.5           1.0             0.0        0.2      0.4          0.6          0.8      1.0
+                                    Γ/H0                                                        Γ/H0                                                             Γ/H0
+
+
+FIG. 12. Impact of DESI DR1 FS measurements on the metastable DE 1,2 & 3. The upper panels show the Ωm −H0 constraints,
+and lower panels show the Γ/H0 − ΩDE or Γ/H0 − ΩDR constraints.
+
+
+to Model 1, because the produced DR component re-                                                  density is constrained by the BBN prior in Eq. (19) and
+mains subdominant at late times and affects the galaxy                                             ns is assigned the weak Gaussian prior ns,10 . The prior
+power spectrum mainly through the expansion history.                                               on Γ/H0 is kept the same as in Table I. For the non-
+                                                                                                   cosmological FS parameters, including bias, counterterm,
+   For the FS analysis, we vary the model parame-                                                 stochastic, and nuisance parameters, we adopt the base-
+ters ωc , ωb , H0 , ln(1010 As ), ns , Γ/H0 , following the                                        line DESI choices. The FS cosmological priors are sum-
+methodology of the DESI DR1 full-shape analysis. We                                                marized in Table V. However, for the CMB+FS combi-
+fix τreio to its Planck ΛCDM fiducial value. The baryon
+                                                                                                                                                                                         14
+
+                          BBN+FS                    BBN+FS+DES-Dovekie                                Planck+FS                        Planck+FS+DES-Dovekie
+                                    Model 1                                                       Model 2                                                        Model 3
+
+
+
+
+     −0.5               0.0             0.5           1.0               −0.5            0.0              0.5             1.0   0.0            0.2      0.4      0.6           0.8    1.0
+                          Γ/H0                                                           Γ/H0                                                             Γ/H0
+
+
+FIG. 13. Marginalized 1D posterior distributions of Γ/H0 for metastable dark energy Models 1–3 using the FS combinations.
+The vertical dashed line marks Γ/H0 = 0.
+
+
+
+TABLE VII. Marginalized constraints at 68% CL for the baseline ΛCDM and metastable DE models with Planck+FS (+DES-
+Dovekie) data combinations.
+
+                   Parameter                        ΛCDM                          Model 1                             Model 2                           Model 3
+                                                                                   Planck+FS
+                   H0                         67.79 ± 0.37                       69.7 ± 1.6                           66.2 ± 1.2                        66.0+1.4
+                                                                                                                                                            −1.1
+                          2
+                   Ωb h                    0.02225 ± 0.00013                  0.02222 ± 0.00013                 0.02228 ± 0.00013                   0.02227 ± 0.00013
+                   Ωc h2                   0.11844 ± 0.00081                  0.11894 ± 0.00090                      0.142+0.019
+                                                                                                                          −0.017                    0.11818 ± 0.00083
+                   Γ/H0                              –                          −0.26 ± 0.21                          0.33 ± 0.24                       < 0.202
+                   Ωm                       0.3076 ± 0.0049                     0.292 ± 0.013                        0.378 ± 0.051                    0.3158+0.0074
+                                                                                                                                                            −0.0086
+                   ΩDR                               –                                   –                                 –                            < 0.0294
+                                                                         Planck+FS+DES-Dovekie
+                   H0                         67.63 ± 0.35                      66.65 ± 0.49                         66.73 ± 0.55                     66.49 ± 0.66
+                   Ωb h2                   0.02222 ± 0.00013                  0.02226 ± 0.00015                 0.02228 ± 0.00013                   0.02226 ± 0.00013
+                   Ωc h2                   0.11878 ± 0.00077                  0.11807 ± 0.00075                  0.1346 ± 0.0075                    0.11837 ± 0.00085
+                   Γ/H0                              –                          0.163 ± 0.055                         0.21 ± 0.10                      0.121+0.054
+                                                                                                                                                            −0.086
+                   Ωm                       0.3098 ± 0.0047                    0.3174 ± 0.0056                       0.354 ± 0.022                   0.3142 ± 0.0052
+                   ΩDR                               –                                   –                                 –                          0.0176+0.0079
+                                                                                                                                                            −0.013
+
+
+
+
+         0.20                                                          0.25                                                            0.18
+                   M1 :   BBN + DESI1                                            M2 :   BBN + DESI1                                                              M3 :   BBN + DESI1
+                   M1 :   BBN + FS                                               M2 :   BBN + FS                                                                 M3 :   BBN + FS
+                   M1 :   Planck + DESI1                                         M2 :   Planck + DESI1                                                           M3 :   Planck + DESI1
+         0.18      M1 :   Planck + FS                                  0.20      M2 :   Planck + FS                                    0.16                      M3 :   Planck + FS
+
+
+
+
+         0.16                                                          0.15                                                            0.14
+                                                                                                                               Ωm h2
+ Ωm h2
+
+
+
+
+                                                               Ωm h2
+
+
+
+
+         0.14                                                                                                                          0.12
+                                                                       0.10
+
+
+         0.12                                                                                                                          0.10
+                                                                       0.05
+
+
+         0.10                                                                                                                          0.08
+            −1.0    −0.5          0.0         0.5        1.0             −1.0     −0.5          0.0            0.5       1.0               0.0           0.5            1.0          1.5
+                                Γ/H0                                                          Γ/H0                                                             Γ/H0
+
+
+FIG. 14. Comparison between DESI DR1 BAO and DESI DR1 FS+BAO constraints in the Ωm h2 − Γ/H0 plane for metastable
+DE Models 1, 2 and 3.
+                                                                                                                    15
+
+nations, we instead adopt the priors listed in Table I and              VII.   MODEL COMPARISON
+apply the same treatment for the nuisance parameters in
+the DESI DR1 FS likelihood.                                     We compare the metastable DE models with ΛCDM
+   Note that marginalized FS constraints can be sensitive    using ∆χ2 = χ2model − χ2ΛCDM , evaluated separately for
+to projection effects from nuisance-parameter marginal-      each fixed data combination. Negative values indicate
+isation, as discussed in the DESI DR1 FS analysis [8].       an improved fit, while small |∆χ2 | values should be in-
+These effects are particularly relevant for extended mod-    terpreted as statistically comparable fits rather than as
+els (e.g., w0 wa CDM) that are not tightly constrained by    decisive evidence for either model. As shown in Ta-
+FS or CMB+FS data alone. In our analysis, this caveat        ble VIII, all three metastable DE scenarios improve the
+mainly concerns the BBN+FS, and, to a lesser extent,         best-fit quality relative to ΛCDM for both the DESI DR2
+CMB+FS combinations. Nonetheless, once SN-Ia data            BAO and DESI DR1 FS+BAO data-based combinations
+are included, the qualitative conclusions are less sensi-    considered here. The improvements appear more pro-
+tive to these effects.                                       nounced for the BBN- and P-ACT-data combinations,
+   Figure 12 shows the impact of DESI DR1 FS mea-            while the Planck and FS data combinations show rela-
+surements on the three metastable DE models. The             tively modest gains.
+upper panels show the Ωm –H0 constraints, while the             The DIC comparison provides a complementary assess-
+lower panels show the corresponding Γ/H0 –ΩDE planes         ment by incorporating the posterior-averaged fit qual-
+for Models 1 and 2, and the Γ/H0 –ΩDR plane for Model        ity and effective model complexity. We define ∆DIC =
+3. The marginalized one-dimensional posteriors of Γ/H0       DICmodel − DICΛCDM , with ∆DIC < 0 favouring the
+are shown in Fig. 13. For Model 1, the FS combinations       metastable DE models. All combinations listed in Ta-
+constrain the Γ/H0 − ΩDE degeneracy. The BBN+FS              ble VIII yield negative ∆DIC values, with a noticeable
+contours are broad, while adding DES-Dovekie tightens        preference for the BBN+DESI+DES-Dovekie combina-
+the constraints and shifts the posterior toward positive     tion. The remaining DESI- and FS-based combinations
+Γ/H0 . Also, Planck+FS extends toward negative Γ/H0 ,        indicate weaker to moderate improvements over ΛCDM.
+but Planck+FS+DES-Dovekie again favours positive val-
+ues and gives the tightest posterior. For Model 2, the im-
+pact is stronger: both the BBN+FS and Planck+FS con-                           VIII.   SUMMARY
+straints show a strong Γ/H0 − ΩDE anti-correlation, re-
+flecting the direct effect of DE decay into DM on the mat-      In this work, we revisited metastable dark energy mod-
+ter abundance and perturbations. Adding DES-Dovekie          els governed by a radioactive-like decay law. We con-
+shifts the posterior toward positive Γ/H0 , although the     sidered three scenarios: Model 1, where the DE sector
+Γ/H0 = 0 limit remains within the allowed 2σ region. For     decays effectively as a background component; Model 2,
+Model 3, the Γ/H0 − ΩDR plane shows the expected pos-        where DE decays into non-baryonic DM and behaves as
+itive correlation, since larger decay rates produce larger   an interacting DM-DE scenario; and Model 3, where DE
+DR abundances. The BBN+FS constraint is broad, while         decays into DR. These models allow us to test whether
+DES-Dovekie and Planck information restrict the allowed      current cosmological observations favour departures from
+decay rate, with the strongest constraint obtained for       the ΛCDM limit, Γ/H0 = 0, and to identify whether
+Planck+FS+DES-Dovekie.                                       any such departures arise predominantly from the back-
+   The marginalized constraints are summarized in Ta-        ground evolution of dark energy, the matter sector, or
+bles VI and VII. For the final Planck+FS+DES-Dovekie         the radiation sector.
+combination, Model 1 shows the strongest deviation, with        A key novelty of this work is the inclusion of the cur-
+Γ/H0 = 0 outside the 2σ region (although within 3σ           rently available DESI DR1 full-shape measurements in
+CL), whereas Models 2 and 3 remain consistent with the       the analysis of metastable DE models. This extends the
+ΛCDM limit within 2σ. Overall, FS information provides       investigation beyond background probes and enables a
+a useful consistency test of whether the parameter shifts    direct test of the growth and clustering signatures asso-
+allowed by distance probes are compatible with growth        ciated with the different decay channels. Model 1 primar-
+and clustering measurements.                                 ily modifies the background expansion and induces only
+   To make the impact of FS information more explicit,       mild changes in f σ8 (z). Model 2 produces the strongest
+Fig. 14 compares DESI DR1 BAO-only [68] vs FS con-           growth signature, since the decay directly alters both
+straints in the Γ/H0 − Ωm h2 plane. Adding FS infor-         the DM abundance and its perturbations, while Model
+mation reduces the allowed region in all three models.       3 generates a distinct but tightly constrained DR contri-
+The tightening is moderate for Model 1, but stronger for     bution. Full-shape information, therefore, helps discrim-
+Model 2, where the contours are substantially compressed     inate among the metastable models.
+along the Γ/H0 − Ωm h2 degeneracy direction. Model 3            The preference for a nonzero decay rate remains mild
+also shows a reduction in the allowed decay rate. This       and dataset-dependent. BAO data alone are consistent
+demonstrates the added constraining power of full-shape      with Γ/H0 = 0, while adding SN-Ia data shifts the con-
+clustering and motivates extending the analysis to up-       straints toward positive Γ/H0 , corresponding to a decay-
+coming DESI DR2 FS measurements.                             ing DE density and quintessence-like effective behaviour
+                                                                                                                            16
+
+
+TABLE VIII. Relative goodness of fit and DIC comparison for the metastable DE models with respect to ΛCDM. We define
+∆χ2 = χ2model − χ2ΛCDM and ∆DIC = DICmodel − DICΛCDM within each fixed data combination. Negative values indicate
+preference for the corresponding metastable DE model over ΛCDM.
+    Data combination                              M1                           M2                            M3
+                                          ∆χ2           ∆DIC           ∆χ2           ∆DIC            ∆χ2           ∆DIC
+
+    BBN+DESI+DESDovekie                  −12.38         −8.13         −12.55         −8.42          −12.48          −6.85
+    Planck+DESI+DESDovekie               −4.25          −0.44         −4.36          −0.33          −3.15           −0.68
+    P-ACT+DESI+DESDovekie                −8.89          −3.76         −10.09         −3.65          −9.32           −3.89
+
+    BBN+FS+ns,10 +DESDovekie              −6.29         −1.55         −8.09          −4.14          −5.27           −1.93
+    Planck+FS+DESDovekie                  −3.68         −1.44         −4.96          −0.98          −4.22           −1.78
+
+
+
+at low redshift. This shift reaches the 2σ level in some        the mild preference for positive Γ/H0 persists with im-
+combinations, but does not provide decisive evidence for        proved control of growth, clustering, calibration, and sys-
+metastable dynamics. In CMB-informed combinations,              tematics.
+the constraints tighten significantly, and the ΛCDM limit
+remains within, or close to, the allowed 2σ region for
+these models. The DESI DR1 full-shape information pro-                          ACKNOWLEDGMENTS
+vides complementary constraints through the growth and
+clustering sector, particularly for Model 2. For the com-
+                                                                  VS thanks the Anusandhan National Research Foun-
+bined analysis, the ΛCDM limit lies within the 2σ CL for
+                                                                dation (ANRF), India, for the National Science Chair
+Models 2 and 3, and within 3σ for Model 1.
+                                                                Professorship, which provided partial funding for this
+   Overall, metastable DE remains a viable phenomeno-
+                                                                work. The authors acknowledge the use of computational
+logical model. The current formulation does not natu-
+                                                                resources of the high-performance computing cluster
+rally realize phantom crossing for DE EoS, which may
+                                                                Jindeok at the Korea Astronomy and Space Science
+require a more general composite dark-sector framework,
+                                                                Institute.
+such as metastable DE embedded in braneworld cos-
+mology [37, 69] or coupled with a negative cosmological
+constant/AdS-like vacuum [34, 70] contribution. Future
+full-shape measurements, such as DESI DR2, can help
+improve the constraints on metastable models through                Appendix A: Impact of SN-Ia Compilations
+more precise measurements of growth and clustering. To-
+gether with Euclid [71], Rubin/LSST [72], and improved            We summarize the corresponding constraints obtained
+low-redshift SN-Ia samples such as Zwicky Transient Fa-         with Union3 and PantheonPlus, in order to show how the
+cility (ZTF) [73], these will be crucial for testing whether    results depend on the choice of the SN-Ia data set.
+
+
+
+
+ [1] N. Aghanim et al. (Planck), Astron. Astrophys. 641, A6     [10] Y. B. Zel’dovich, A. Krasinski, and Y. B. Zeldovich, Sov.
+     (2020), [Erratum: Astron.Astrophys. 652, C4 (2021)],            Phys. Usp. 11, 381 (1968).
+     arXiv:1807.06209 [astro-ph.CO].                            [11] S. Weinberg, Rev. Mod. Phys. 61, 1 (1989).
+ [2] T. Louis et al. (Atacama Cosmology Telescope), JCAP        [12] T. Padmanabhan, Phys. Rept. 380, 235 (2003),
+     11, 062, arXiv:2503.14452 [astro-ph.CO].                        arXiv:hep-th/0212290.
+ [3] E. Camphuis et al. (SPT-3G), Phys. Rev. D 113, 083504      [13] E. Di Valentino, J. Levi Said, and E. N. Saridakis, Nature
+     (2026), arXiv:2506.20707 [astro-ph.CO].                         Astron. 10, 180 (2026), arXiv:2509.25288 [astro-ph.CO].
+ [4] D. Scolnic et al., Astrophys. J. 938, 113 (2022),          [14] E. Di Valentino et al. (CosmoVerse Network), Phys.
+     arXiv:2112.03863 [astro-ph.CO].                                 Dark Univ. 49, 101965 (2025), arXiv:2504.01669 [astro-
+ [5] T. M. C. Abbott et al. (DES), Astrophys. J. Lett. 973,          ph.CO].
+     L14 (2024), arXiv:2401.02929 [astro-ph.CO].                [15] L. Verde, T. Treu, and A. G. Riess, Nature Astron. 3,
+ [6] S. Alam et al. (eBOSS), Phys. Rev. D 103, 083533                891 (2019), arXiv:1907.10625 [astro-ph.CO].
+     (2021), arXiv:2007.08991 [astro-ph.CO].                    [16] S. Casertano et al. (H0DN), Astron. Astrophys. 708,
+ [7] M. Abdul Karim et al. (DESI), Phys. Rev. D 112, 083515          A166 (2026), arXiv:2510.23823 [astro-ph.CO].
+     (2025), arXiv:2503.14738 [astro-ph.CO].                    [17] T. M. C. Abbott et al. (DES), Dark Energy Survey Year 6
+ [8] A. G. Adame et al. (DESI), JCAP 09, 008, [Erratum:              Results: Cosmological Constraints from Galaxy Cluster-
+     JCAP 02, E02 (2026)], arXiv:2411.12021 [astro-ph.CO].           ing and Weak Lensing (2026), arXiv:2601.14559 [astro-
+ [9] A. Einstein, Sitzungsber. Preuss. Akad. Wiss. Berlin            ph.CO].
+     (Math. Phys. ) 1917, 142 (1917).
+                                                                                                                                      17
+
+
+TABLE IX. Marginalized constraints at 68% CL for the baseline ΛCDM and metastable DE models with BBN+DESI+Union3
+and BBN+DESI+PantheonPlus data combinations. The last row reports ∆χ2 for each fixed data combination.
+               Parameter                ΛCDM                  Model 1                Model 2               Model 3
+                                                          BBN+DESI+Union3
+               H0                     68.64 ± 0.61           65.2 ± 1.4              65.3 ± 1.4            62.4 ± 2.0
+               Ωb h2                0.02220 ± 0.00056     0.02218 ± 0.00055      0.02219 ± 0.00056     0.02223 ± 0.00054
+               Ωc h2                 0.1206 ± 0.0049       0.1063 ± 0.0066          0.153+0.013
+                                                                                         −0.010         0.1066 ± 0.0071
+               Γ/H0                        –                 0.46 ± 0.17             0.62 ± 0.24           0.62+0.27
+                                                                                                               −0.31
+               Ωm                    0.3043 ± 0.0084       0.3040 ± 0.0084         0.413 ± 0.041        0.3049 ± 0.0087
+               ΩDR                         –                      –                      –                0.092+0.038
+                                                                                                               −0.044
+                                                        BBN+DESI+PantheonPlus
+               H0                     68.65 ± 0.58           66.6 ± 1.1              66.6 ± 1.1            64.8 ± 1.4
+               Ωb h2                0.02221 ± 0.00053     0.02218 ± 0.00053      0.02218 ± 0.00055     0.02217 ± 0.00055
+               Ωc h2                 0.1206 ± 0.0045        0.1109+0.0058
+                                                                  −0.0065         0.1388 ± 0.0093       0.1110 ± 0.0063
+               Γ/H0                        –                 0.27 ± 0.12             0.35 ± 0.17           0.35+0.16
+                                                                                                               −0.21
+               Ωm                    0.3043 ± 0.0078       0.3015 ± 0.0080         0.365 ± 0.030        0.3019 ± 0.0081
+               ΩDR                         –                      –                      –                0.052+0.024
+                                                                                                               −0.031
+
+
+
+
+TABLE X. Marginalized constraints at 68% CL for the baseline ΛCDM and metastable DE models with Planck+DESI+Union3
+and Planck+DESI+PantheonPlus data combinations.
+               Parameter                ΛCDM                  Model 1                Model 2               Model 3
+                                                         Planck+DESI+Union3
+               ln(1010 As )           3.047 ± 0.014          3.050+0.014
+                                                                  −0.015           3.050 ± 0.014         3.051 ± 0.015
+               ns                    0.9676 ± 0.0033       0.9688 ± 0.0036        0.9687 ± 0.0034       0.9693 ± 0.0035
+               H0                     68.11 ± 0.28          67.35 ± 0.77            67.39 ± 0.74           66.0+1.1
+                                                                                                               −0.91
+               Ωb h2                0.02231 ± 0.00013      0.02234+0.00013
+                                                                  −0.00012       0.02233 ± 0.00013     0.02235 ± 0.00012
+               Ωc h2                0.11775 ± 0.00062     0.11733 ± 0.00074        0.130 ± 0.011       0.11717 ± 0.00071
+               τreio                 0.0591 ± 0.0069       0.0606 ± 0.0074        0.0606 ± 0.0074        0.0614+0.0071
+                                                                                                               −0.0079
+               Γ/H0                         –                0.12 ± 0.11             0.15 ± 0.15            < 0.259
+               Ωm                    0.3034 ± 0.0036       0.3095 ± 0.0068         0.337 ± 0.032        0.3115 ± 0.0062
+               ΩDR                          –                     –                       –              0.0298+0.0093
+                                                                                                               −0.028
+                                                       Planck+DESI+PantheonPlus
+               ln(10    10
+                             As )     3.047 ± 0.014         3.049 ± 0.014           3.049+0.013
+                                                                                         −0.015          3.050 ± 0.014
+               ns                    0.9679 ± 0.0035       0.9686 ± 0.0036        0.9685 ± 0.0034       0.9688 ± 0.0034
+               H0                     68.11 ± 0.29          67.57 ± 0.59            67.61 ± 0.57           66.57+0.89
+                                                                                                                −0.73
+                    2
+               Ωb h                 0.02231 ± 0.00012     0.02233 ± 0.00012      0.02233 ± 0.00013     0.02234 ± 0.00012
+               Ωc h2                0.11777 ± 0.00062     0.11738 ± 0.00071        0.1262+0.0092
+                                                                                         −0.0077       0.11725 ± 0.00067
+               τreio                 0.0589 ± 0.0071        0.0604+0.0067
+                                                                  −0.0076          0.0601+0.0063
+                                                                                         −0.0076        0.0607 ± 0.0073
+               Γ/H0                         –               0.088 ± 0.086            0.11 ± 0.11            < 0.184
+               Ωm                    0.3034 ± 0.0037       0.3075 ± 0.0054         0.327 ± 0.024         0.3088+0.0048
+                                                                                                               −0.0054
+               ΩDR                          –                     –                       –                < 0.0273
+
+
+
+[18] I. Labbe et al., Nature 616, 266 (2023), arXiv:2207.12446            [24] M. Berti, E. Bellini, C. Bonvin, M. Kunz, M. Viel, and
+     [astro-ph.GA].                                                            M. Zumalacarregui, Phys. Rev. D 112, 023518 (2025),
+[19] M. Boylan-Kolchin, Nature Astron. 7, 731 (2023),                          arXiv:2503.13198 [astro-ph.CO].
+     arXiv:2208.01611 [astro-ph.CO].                                      [25] A. N. Ormondroyd, W. J. Handley, M. P. Hobson, and
+[20] M. Chevallier and D. Polarski, Int. J. Mod. Phys. D 10,                   A. N. Lasenby, Mon. Not. Roy. Astron. Soc. 541, 3388
+     213 (2001), arXiv:gr-qc/0009008.                                          (2025), arXiv:2503.08658 [astro-ph.CO].
+[21] E. V. Linder, Phys. Rev. Lett. 90, 091301 (2003),                    [26] B. Popovic et al. (DES), Mon. Not. Roy. Astron. Soc.
+     arXiv:astro-ph/0208512.                                                   548, stag632 (2026), arXiv:2511.07517 [astro-ph.CO].
+[22] K. Lodha et al. (DESI), Phys. Rev. D 112, 083511 (2025),             [27] R. R. Caldwell, Phys. Lett. B 545, 23 (2002), arXiv:astro-
+     arXiv:2503.14743 [astro-ph.CO].                                           ph/9908168.
+[23] P. Mukherjee and A. A. Sen, Rept. Prog. Phys. 88,                    [28] B. Ratra and P. J. E. Peebles, Phys. Rev. D 37, 3406
+     098401 (2025), arXiv:2505.19083 [astro-ph.CO].                            (1988).
+                                                                                                                                 18
+
+
+TABLE XI. Marginalized constraints at 68% CL for the baseline ΛCDM and metastable DE models with P-ACT+DESI+Union3
+and P-ACT+DESI+PantheonPlus data combinations.
+               Parameter               ΛCDM                 Model 1              Model 2               Model 3
+                                                       P-ACT+DESI+Union3
+               ln(1010 As )          3.062 ± 0.011         3.066+0.011
+                                                                −0.012         3.066 ± 0.012         3.067 ± 0.011
+               ns                   0.9747 ± 0.0030      0.9764 ± 0.0032      0.9757 ± 0.0031       0.9763 ± 0.0032
+               H0                    68.40 ± 0.27         67.24 ± 0.75          67.48 ± 0.63           65.7+1.2
+                                                                                                           −1.1
+               Ωb h2               0.02255 ± 0.00010    0.02258 ± 0.00010    0.02257 ± 0.00010    0.02259 ± 0.00010
+               Ωc h2               0.11741 ± 0.00065    0.11665 ± 0.00082       0.133+0.011
+                                                                                     −0.0092      0.11657 ± 0.00076
+               τreio                 0.0611+0.0056
+                                           −0.0067        0.0620+0.0055
+                                                                −0.0071       0.0622 ± 0.0070       0.0623 ± 0.0064
+               Γ/H0                        –               0.18 ± 0.11          0.20 ± 0.12            0.27+0.12
+                                                                                                           −0.19
+               Ωm                   0.3005 ± 0.0036      0.3095 ± 0.0066        0.343+0.030
+                                                                                     −0.027         0.3107 ± 0.0067
+               ΩDR                         –                    –                    –                0.039+0.018
+                                                                                                           −0.027
+                                                     P-ACT+DESI+PantheonPlus
+               ln(10   10
+                            As )     3.063 ± 0.011         3.065+0.010
+                                                                −0.012         3.065 ± 0.011         3.066 ± 0.011
+               ns                   0.9748 ± 0.0030      0.9762 ± 0.0031      0.9757 ± 0.0030       0.9762 ± 0.0031
+               H0                    68.41 ± 0.28         67.60 ± 0.59          67.67 ± 0.55         66.45 ± 0.84
+               Ωb h2               0.02255 ± 0.00010    0.02257 ± 0.00011    0.02256 ± 0.00011    0.02258 ± 0.00011
+               Ωc h2               0.11738 ± 0.00067    0.11680 ± 0.00078     0.1299 ± 0.0082     0.11672 ± 0.00077
+               τreio                 0.0616+0.0057
+                                           −0.0069        0.0616+0.0056
+                                                                −0.0069        0.0622+0.0063
+                                                                                     −0.0071         0.0619+0.0064
+                                                                                                           −0.0072
+               Γ/H0                        –              0.131 ± 0.087         0.16 ± 0.11           0.188+0.071
+                                                                                                           −0.16
+               Ωm                   0.3004 ± 0.0037      0.3065 ± 0.0054       0.335 ± 0.023        0.3073 ± 0.0052
+               ΩDR                         –                    –                    –                0.028+0.011
+                                                                                                           −0.023
+
+
+
+
+[29] R. R. Caldwell, R. Dave, and P. J. Steinhardt, Phys. Rev.        [43] J.-Q. Jiang, M. A. Amin, and A. Shafieloo, Late-
+     Lett. 80, 1582 (1998), arXiv:astro-ph/9708069.                        Time Oscillating Quintessence in Light of DESI (2026),
+[30] J. Khoury, M.-X. Lin, and M. Trodden, Phys. Rev. Lett.                arXiv:2606.24221 [astro-ph.CO].
+     135, 181001 (2025), arXiv:2503.16415 [astro-ph.CO].              [44] A. Shafieloo, D. K. Hazra, V. Sahni, and A. A. Starobin-
+[31] W. Giarè, M. A. Sabogal, R. C. Nunes, and                            sky, Mon. Not. Roy. Astron. Soc. 473, 2760 (2018),
+     E. Di Valentino, Phys. Rev. Lett. 133, 251003 (2024),                 arXiv:1610.05192 [astro-ph.CO].
+     arXiv:2404.15232 [astro-ph.CO].                                  [45] X. Li, A. Shafieloo, V. Sahni, and A. A. Starobinsky,
+[32] R. Shah, P. Mukherjee, and S. Pal, Mon. Not. Roy. As-                 Astrophys. J. 887, 153 (2019), arXiv:1904.03790 [astro-
+     tron. Soc. 542, 2936 (2025), arXiv:2503.21652 [astro-                 ph.CO].
+     ph.CO].                                                          [46] W. Yang, E. Di Valentino, S. Pan, S. Basilakos, and
+[33] A. Chakraborty, P. K. Chanda, S. Das, and K. Dutta,                   A. Paliathanasis, Phys. Rev. D 102, 063503 (2020),
+     JCAP 11, 047, arXiv:2503.10806 [astro-ph.CO].                         arXiv:2001.04307 [astro-ph.CO].
+[34] P. Mukherjee, D. Kumar, and A. A. Sen, Phys. Rev. D              [47] D. Rubin et al., Astrophys. J. 986, 231 (2025),
+     113, 063523 (2026), arXiv:2501.18335 [astro-ph.CO].                   arXiv:2311.12098 [astro-ph.CO].
+[35] W. J. Wolf, P. G. Ferreira, and C. Garcı́a-Garcı́a, Phys.        [48] D. Brout et al., Astrophys. J. 938, 110 (2022),
+     Rev. D 113, 023551 (2026), arXiv:2509.17586 [astro-                   arXiv:2202.04077 [astro-ph.CO].
+     ph.CO].                                                          [49] N. Schöneberg, JCAP 06, 006, arXiv:2401.15054 [astro-
+[36] K. Naidoo, J. Hallam, T. Baker, and S. Sirera, Con-                   ph.CO].
+     straints on Horndeski Gravity with Phantom Crossing              [50] E. Rosenberg, S. Gratton, and G. Efstathiou, Mon. Not.
+     (2026), arXiv:2606.20794 [astro-ph.CO].                               Roy. Astron. Soc. 517, 4620 (2022), arXiv:2205.10869
+[37] S. S. Mishra, W. L. Matthewson, V. Sahni, A. Shafieloo,               [astro-ph.CO].
+     and Y. Shtanov, JCAP 11, 018, arXiv:2507.07193 [astro-           [51] N. Aghanim et al. (Planck), Astron. Astrophys. 641, A5
+     ph.CO].                                                               (2020), arXiv:1907.12875 [astro-ph.CO].
+[38] S. L. Guedezounme, B. R. Dinda, and R. Maartens,                 [52] A.-K. Burns, T. M. P. Tait, and M. Valli, Eur. Phys. J.
+     JCAP 01, 062, arXiv:2507.18274 [astro-ph.CO].                         C 84, 86 (2024), arXiv:2307.07061 [hep-ph].
+[39] X. Li, T. Liu, T.-N. Li, G.-H. Du, A. Shafieloo, and             [53] R. J. Cooke, M. Pettini, and C. C. Steidel, Astrophys. J.
+     M. Biesiada, Astrophys. J. Lett. 1001, L21 (2026),                    855, 102 (2018), arXiv:1710.11129 [astro-ph.CO].
+     arXiv:2606.05723 [astro-ph.CO].                                  [54] E. Aver, D. A. Berg, A. S. Hirschauer, K. A. Olive, R. W.
+[40] A. Gómez-Valent, Z. Zheng, and L. Amendola, Con-                     Pogge, N. S. J. Rogers, J. J. Salzer, and E. D. Skillman,
+     straints on Coupled Dark Energy in the DESI Era (2026),               Monthly Notices of the Royal Astronomical Society 510,
+     arXiv:2604.12032 [astro-ph.CO].                                       373–382 (2021).
+[41] L. Parker, Phys. Rev. Lett. 21, 562 (1968).                      [55] J. Lesgourgues, The Cosmic Linear Anisotropy Solving
+[42] R. G. Landim and E. Abdalla, Phys. Lett. B 764, 271                   System (CLASS) I: Overview (2011), arXiv:1104.2932
+     (2017), arXiv:1611.00428 [hep-ph].                                    [astro-ph.IM].
+                                                                                                                             19
+
+[56] D. Blas, J. Lesgourgues, and T. Tram, JCAP 07, 034,          [65] D. Huterer, Astron. Astrophys. Rev. 31, 2 (2023),
+     arXiv:1104.2933 [astro-ph.CO].                                    arXiv:2212.05003 [astro-ph.CO].
+[57] J. Torrado and A. Lewis, JCAP 05, 057,                       [66] S. Brieden, H. Gil-Marı́n, and L. Verde, JCAP 12 (12),
+     arXiv:2005.05290 [astro-ph.IM].                                   054, arXiv:2106.07641 [astro-ph.CO].
+[58] F. James and M. Roos, Comput. Phys. Commun. 10, 343          [67] M. Maus et al., JCAP 01, 138, arXiv:2404.07312 [astro-
+     (1975).                                                           ph.CO].
+[59] H. Dembinski and P. O. et al., scikit-hep/iminuit (2020).    [68] A. G. Adame et al. (DESI), JCAP 02, 021,
+[60] D. J. Spiegelhalter, N. G. Best, B. P. Carlin, and A. Van         arXiv:2404.03002 [astro-ph.CO].
+     Der Linde, Journal of the Royal Statistical Society Series   [69] V. Sahni and Y. Shtanov, JCAP 11, 014, arXiv:astro-
+     B 64, 583 (2002).                                                 ph/0202346.
+[61] A. R. Liddle, Mon. Not. Roy. Astron. Soc. 377, L74           [70] A. A. Sen, S. A. Adil, and S. Sen, Mon. Not. Roy. Astron.
+     (2007), arXiv:astro-ph/0701113.                                   Soc. 518, 1098 (2022), arXiv:2112.10641 [astro-ph.CO].
+[62] S. Grandis, D. Rapetti, A. Saro, J. J. Mohr, and J. P.       [71] G. Cañas-Herrera et al. (Euclid), Euclid prepara-
+     Dietrich, Mon. Not. Roy. Astron. Soc. 463, 1416 (2016),           tion. XCVI. Cosmology Likelihood for Observables in
+     arXiv:1604.06463 [astro-ph.CO].                                   Euclid (CLOE). 3. Inference and Forecasts (2025),
+[63] V. Sahni, A. Shafieloo, and A. A. Starobinsky, Phys. Rev.         arXiv:2510.09153 [astro-ph.CO].
+     D 78, 103502 (2008), arXiv:0807.3548 [astro-ph].             [72] A. Abate et al. (LSST Dark Energy Science), Large Syn-
+[64] A. R. Sandage, Phys. Today 23: No. 2, 34-41(Feb 1970).            optic Survey Telescope: Dark Energy Science Collabora-
+     10.1063/1.3021960 (1970).                                         tion (2012), arXiv:1211.0310 [astro-ph.CO].
+                                                                  [73] M. J. Graham et al., Publ. Astron. Soc. Pac. 131, 078001
+                                                                       (2019), arXiv:1902.01945 [astro-ph.IM].
+

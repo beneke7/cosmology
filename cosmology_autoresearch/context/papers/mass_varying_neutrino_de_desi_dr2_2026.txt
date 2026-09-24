@@ -1,0 +1,1259 @@
+                                                           Comparing Mass-Varying Neutrino Dark Energy Models with DESI DR2:
+                                                                     Cosmological Constraints and Bayesian Evidence
+                                                                           Hemanshi Bundeliya,1, ∗ Gaurav Bhandari,1, † Mohammad Yarahmadi,2, ‡
+                                                                             Mahdi Sepahvand,2, § V. K. Sharma,1, 3, 4, ¶ and S. D. Pathak5, ∗∗
+                                                                   1
+                                                                       Department of Physics, Lovely Professional University, Phagwara, Punjab, 144411, India
+                                                                                         2
+                                                                                           Department of Physics, Lorestan University, Iran
+                                                                                 3
+                                                                                   International Center for High Energy Physics and Applications,
+                                                                                 Lovely Professional University, Phagwara, Punjab, 144411, India
+                                                                                         4
+                                                                                           Research Center of Astrophysics and Cosmology,
+                                                                                 Khazar University, Baku, AZ1096, 41 Mehseti Street, Azerbaijan
+                                                                                                 5
+                                                                                                   Amity School of Applied Sciences,
+arXiv:2609.25090v1 [physics.gen-ph] 19 Sep 2026
+
+
+
+
+                                                                            Amity University Uttar Pradesh, Lucknow Campus, Lucknow, 226028, India
+                                                                   We investigate late-time cosmic acceleration in mass-varying neutrino (MaVaN) dark energy sce-
+                                                                narios, where the neutrino mass is coupled to a dynamical quintessence field through a conformal
+                                                                interaction. Starting from the coupled conservation equations, we derive the corresponding back-
+                                                                ground evolution equations for three related scenarios: a constant dark-energy equation of state with
+                                                                a constant coupling (Case-I), an exponential neutrino mass linked to an exponential potential under
+                                                                an adiabatic minimum-tracking approximation (Case-II), and a CPL-type time-varying equation
+                                                                of state with constant coupling (Case-III). For each case we obtain the neutrino and dark energy
+                                                                density evolution and the corresponding Hubble parameter, and use an MCMC analysis (emcee) to
+                                                                test the models against DESI DR2 BAO data, the compressed Planck CMB likelihood, and three
+                                                                supernova compilations (Pantheon+, DES-SN5YR, Union3), taken one at a time. Across the three
+                                                                cases, H0 and Ωm0 move together in a way set mainly by which supernova sample is used, following
+                                                                the pattern already seen in other DESI DR2 analyses. A nonzero coupling stays consistent with the
+                                                                data in most fits, though its size, and sometimes its sign, depend on how it enters the model and on
+                                                                the priors chosen for the underlying parameters. The resulting neutrino mass bounds range from
+                                                                about 0.06 to 0.3 eV, depending on the case and dataset combination. Comparing the Bayesian
+                                                                evidence of each case with flat ΛCDM gives a mixed picture, with no case preferred throughout,
+                                                                so we regard these results as suggestive rather than firm evidence for a coupling between neutrinos
+                                                                and dark energy.
+
+
+                                                     Keywords: Mass-Varying Neutrinos; Dark Energy; Cosmic Acceleration; DESI DR2
+
+
+                                                                                                     I.   INTRODUCTION
+
+                                                      Over the last few decades,our understanding of the universe has evolved dramatically. What was once based
+                                                  mainly on theoretical ideas and limited observations has now become a precise and data driven science [1]. Advanced
+                                                  observations from the Cosmic Microwave Background (CMB), large-scale galaxy surveys, gravitational lensing, Type-
+                                                  la supernovae, and baryon acoustic oscillations (BAO) have helped shape a detailed picture of the cosmos [2–5]. These
+                                                  combined results support what is known as the ΛCDM model, suggesting that the universe is nearly flat and mostly
+                                                  made up of components that we cannot see directly. According to this model, only about 5% of the universe consists
+                                                  of ordinary matter like stars and planets. Roughly 25% is dark matter,which interacts through gravity but does not
+                                                  emit light. The remaining ∼ 70% is dark energy-a mysterious form of energy believed to be driving the accelerated
+                                                  expansion of the universe [6–10].
+                                                      Although the ΛCDM model matches observations remarkably well, it leaves important questions [11, 12]. The
+                                                  simplest explanation for dark energy is the cosmological constant Λ, interpreted as a constant vacuum energy that
+                                                  fills space. However, this idea raises deep theoretical issues [13–15]. One of them, the fine-tuning problem, highlights
+                                                  the enormous gap between the observed value of Λ and the predictions from quantum field theory. Another, the
+                                                  coincidence problem, asks why dark energy became dominant only in the relatively recent cosmic past [16]. These
+                                                  challenges have encouraged us to explore more dynamic explanations of dark energy — especially models in which
+                                                  dark energy interacts with other fields or particles [17–22].
+
+                                                  ∗ hemanshibundeliya07@gmail.com
+                                                   † bhandarigaurav1408@gmail.com
+                                                   ‡ yarahmadi.mhd@u.ac.ir
+                                                   § mahdisepahvand7098@gmail.com
+                                                   ¶ vipin.33912@lpu.co.in
+                                                  ∗∗ sdpathak@lko.amity.edu
+                                                                                                                          2
+
+   Among these possibilities, scenarios where dark energy interacts with neutrinos have gained considerable attention
+[23, 24]. Neutrinos were produced in abundance in the early universe, interact extremely weakly, and transition from
+relativistic to non-relativistic states as the universe expands [25–27]. Importantly, experiments have confirmed that
+neutrinos have a non-zero mass through oscillation measurements [28, 29], although these masses are extremely small
+and their fundamental origin remains unknown [30–32]. In Mass Varying Neutrino (MaVaN) models, Neutrino mass
+is neither fixed but evolves over time through its coupling with a scalar field, Which also plays the role of dark
+energy. When neutrinos slow down and become non-relativistic, their changing mass begins to influence the scalar
+field, shaping its evolution [33].
+   This coupling can cause the scalar field to settle into a stable configuration at late times,effectively acting like dark
+energy. Interestingly, this mechanism naturally ties the Onset of cosmic accelerations to the moment when neutrino
+becomes non-relativistic, Potentially offering a solution to the coincidence problem. In this way, MaVaN models
+create a bridge between particle physics and cosmology, suggesting that the key to understanding dark energy may
+be hidden in the physics of neutrinos [34].
+   Recent observational advances provide a powerful opportunity to test such scenarios. The Dark Energy Spectro-
+scopic Instrument (DESI) is mapping the three-dimensional distribution of galaxies and quasars with unprecedented
+precision over a wide redshift range. Its measurements of BAO and large-scale structure place stringent constraints on
+the cosmic expansion history and the growth of structure [20, 21, 35]. Since MaVaN models predict deviations from
+ΛCDM in both the background expansion and potentially in perturbations, the latest DESI Data Release 2 (DR2)
+results offer a timely dataset for confronting these models with observations.
+   Several theoretical realizations of the Mass-Varying Neutrino (MaVaN) scenario have been proposed in the literature.
+In the original formulation, it was shown that a scalar field coupled to neutrinos can dynamically generate an effective
+potential whose minimum evolves with the neutrino energy density, thereby linking the onset of cosmic acceleration to
+neutrino physics [36]. As the Universe expands and neutrinos transition from relativistic to non-relativistic behavior,
+the coupling between the scalar field and the neutrino sector becomes dynamically relevant, which can naturally
+trigger late-time acceleration. Subsequent studies investigated the cosmological implications of such couplings in
+greater detail, including the effects on background evolution and perturbations [37, 38]. However, it has also been
+pointed out that certain realizations of MaVaN models may suffer from dynamical instabilities, such as the formation
+of neutrino density perturbations or “neutrino lumps,” depending on the strength of the coupling and the form of the
+scalar potential [39].
+   From the observational perspective, the viability of MaVaN scenarios must be tested against increasingly precise
+measurements of the cosmic expansion history. Over the past two decades, large galaxy surveys and distance mea-
+surements have significantly improved our ability to constrain cosmological models. In particular, Baryon Acoustic
+Oscillation (BAO) measurements provide one of the most robust probes of the late-time expansion history because
+they offer a standard ruler that is relatively insensitive to astrophysical systematics.
+   The Dark Energy Spectroscopic Instrument (DESI) represents a major step forward in this direction. By mapping
+the large-scale distribution of millions of galaxies and quasars across a wide redshift range, DESI provides high-
+precision measurements of BAO and large-scale structure, enabling stringent tests of dark energy models. The recent
+Data Release 2 (DR2) extends these measurements using multiple tracers, including luminous red galaxies, emission
+line galaxies, quasars, and the Lyman-α forest, thereby offering a powerful dataset to constrain models that modify
+the late-time expansion history [40].
+   Complementary constraints are provided by Type Ia supernova observations, which serve as standardizable candles
+for measuring cosmic distances. Modern compilations such as the Pantheon+ sample [41], the five-year Dark Energy
+Survey supernova dataset [42], and the Union compilation [43] contain thousands of supernova observations spanning
+a broad redshift range. When combined with Cosmic Microwave Background constraints on the early Universe, these
+datasets provide a powerful framework for testing dynamical dark energy models and probing possible deviations from
+the standard ΛCDM scenario.
+   In this work, we investigate late-time cosmic acceleration within the framework of mass-varying neutrino (MaVaN)
+cosmologies, where the neutrino sector interacts with a dynamical dark-energy scalar field. Starting from the coupled
+conservation equations, we derive the cosmological evolution for constant and time-dependent dark energy equation
+of state (EoS) as well as for an exponential neutrino-mass model coupled to an exponential potential. For the latter
+scenario, we employ the adiabatic minimum-tracking approximation to obtain analytical expressions for the neutrino
+and dark-energy densities and the corresponding expansion history. To place observational constraints on the model,
+we perform a Markov Chain Monte Carlo (MCMC) analysis using DESI DR2 BAO measurements.
+   The paper is organized as follows. In Sec. II, we present the theoretical framework of mass-varying neutrino cosmolo-
+gies and the coupling between the neutrino and scalar-field sectors. In Sec. III, we derive the cosmological evolution
+equations and investigate three representative scenarios: constant dark-energy equation of state with constant inter-
+action strength, exponential mass-varying neutrinos coupled to an exponential potential, and a time-dependent dark
+energy EoS described by the CPL parametrization. For each case, we obtain the corresponding analytical expressions
+                                                                                                                       3
+
+for the neutrino and dark energy densities, the dark energy evolution function, and the normalized Hubble parame-
+ter. In Sec. IV, we describe the observational datasets, statistical methodology, and parameter estimation procedure
+employed in our analysis. Finally, we summarize our main results and conclusions in Sec. VI.
+  We prefer to work with (- + + +) metric signature, and the natural units c = ℏ = 1.
+
+
+                       II.   THEORETICAL FRAMEWORK AND FIELD EQUATIONS
+
+  We consider a conformally coupled scalar field interacting with matter through the action in Einstein frame
+                               √
+                        Z                                            X
+                                      1          1
+                    S = d4 x −g MP2 R − g µν ∂µ ϕ ∂ν ϕ − V (ϕ) +             Sj Bj2 (ϕ)gµν , ψj ,
+                                                                                              
+                                                                                                              (2.1)
+                                      2          2                        j
+
+
+where R is the usual Ricci scalar, and MP = (8πG)−1/2 = 2.4 × 1018 GeV is the reduced Planck mass. The scalar
+field ϕ(t) represents a homogeneous quintessence field with potential V (ϕ), while ψj denotes the various matter field
+species. The interaction between the scalar field and the matter sector is introduced through a conformal rescaling
+                                        (j)
+of the metric in each matter action, g̃µν = Bj2 (ϕ) gµν , where Bj (ϕ) > 0 is the conformal coupling function. In
+this framework, the gravitational sector remains minimally coupled, whereas matter fields experience a ϕ-dependent
+metric.
+   For the maximally symmetric flat background spacetime, the Friedmann–Lemaı̂tre–Robertson–Walker (FLRW)
+metric is represented as,
+
+                                                  ds2 = −dt2 + a2 (t) δij dxi dxj ,                                 (2.2)
+
+where a(t) is time dependent scale factor and the speed of light c = 1.
+  Using the variation of action (2.1) with respect to the metric gµν and the scalar field ϕ provide the evolution
+equations, namely Friedmann, Raychaudhari and Klein-Gordon equation, respectively
+                                                                         
+                                               1 1 2           X
+                                      H2 =            ϕ̇ + V +       ρ(j)  ,                               (2.3)
+                                            3MP2 2                j
+                                                                              
+                                                1  2     X                 
+                                      Ḣ = −         ϕ̇ +       ρ(j) + P (j)  ,                            (2.4)
+                                             2MP2           j
+
+                                                                    B,ϕ  (i)      
+                                             ϕ̈ + 3H ϕ̇ + V,ϕ = −        ρ − 3P (i) .                               (2.5)
+                                                                    B
+where overdots represent the derivative w.r.t time and ρ(i) and P (i) are the energy density and pressure of the
+interacting component, respectively, and V,ϕ = dV /dϕ.
+   The energy conservation equation for the combined fluid of dark energy and other species is given as
+
+                                                 ρ̇total + 3H (ρtotal + Ptotal ) = 0,                               (2.6)
+
+and for the individual component the continuty equation is written as
+                                                              B                   
+                                                                  ,ϕ
+                                       ρ̇(i) + 3H ρ(i) + P (i) =     ϕ̇ ρ(i) − 3P (i) .                             (2.7)
+                                                                 B
+It is interesting to consider scalar field-neutrino interaction from the given action in Eq.(2.1) as coupled scalar field
+model studied in [44–46].
+   Considering the neutrino sector, the neutrino mass is assumed to be field-dependent, mν = mν (ϕ). In a cosmological
+setting, neutrinos are described within a kinetic framework by a phase-space distribution function f (xi , pi , t), which
+satisfies the collisionless Boltzmann (Liouville) equation [47, 48]. For a homogeneous and isotropic background, the
+distribution function depends only on the magnitude of the comoving momentum, q = ap. Under these assumptions,
+the Boltzmann equation yields the neutrino energy density and pressure as [49, 50]
+
+
+                                                                                                       q2
+                                   Z                                           Z
+                               1         2                                1
+                          ρν = 4        q dq dΩ E(q) f0 (q),         pν = 4        q 2 dq dΩ f0 (q)        ,        (2.8)
+                              a                                          3a                           E(q)
+                                                                                                                      4
+
+where f0 (q) denotes the background Fermi–Dirac distribution and the single-particle energy satisfies, E 2 = q 2 +
+a2 m2ν (ϕ). These expressions provide the general kinetic definitions of ρν and pν , explicitly incorporating the mass
+variation of neutrino through
+                         R    mν (ϕ).
+   Considering isotropy ( dΩ = 4π) and introducing the dimensionless variables
+
+                                                      E                  mν (ϕ)
+                                                 x=      ,        ζ=            ,                                  (2.9)
+                                                      Tν                  Tν
+with Tν (a) = Tν,0 /a, the neutrino energy density and pressure can be written compactly as
+                                           2 4                                2 4
+                                ρν (a) =     T (a) Iε (ζ),        pν (a) =       T (a) I3/2 (ζ).                 (2.10)
+                                           π2 ν                              3π 2 ν
+The dimensionless Fermi–Dirac integrals are defined as
+                                 Z ∞ 2p 2                                       Z ∞
+                                     x x − ζ2                                           (x2 − ζ 2 )3/2
+                        Iε (x) =                   dx,             I3/2 (ζ) =                          dx.       (2.11)
+                                  ζ      ex + 1                                     ζ      ex + 1
+
+Although these integrals do not admit closed-form expressions for arbitrary ζ, their limiting behaviours can be obtained
+analytically in the relativistic (ζ ≪ 1) and non-relativistic (ζ ≳ 1) regimes. In our recent research, we have discussed
+the relativistic regime during inflationary era [51].
+  From the equations (2.8), the continuity equation gives,
+                                                                d ln mν (ϕ)
+                                     ρ̇ν + 3H (ρν + Pν ) =                  ϕ̇ (ρν − 3Pν ) .                     (2.12)
+                                                                     dϕ
+   Thus (2.7) is the same as the mass varying neutrino continuity equation provided that B(ϕ) = mν (ϕ)/M , where M
+is a scaling factor of mass. Under this identification, the scalar field couples directly to the neutrino sector through
+the field dependence of the neutrino mass. As a consequence, the Klein–Gordon equation (2.5) is modified and can
+be written in terms of an effective potential as,
+
+                                                  ϕ̈ + 3H ϕ̇ + Veff,ϕ = 0,                                       (2.13)
+
+where the scalar dynamics are governed not only by the bare potential V (ϕ) but also by the neutrino contribution.
+Therefore, the effective potential of (2.13) will become,
+                                                              mν,ϕ (ϕ)
+                                            Veff,ϕ = V,ϕ +             (ρν − 3Pν ) .                             (2.14)
+                                                              mν (ϕ)
+Here, the quantity ρν − 3pν corresponds to the trace of the neutrino energy-momentum tensor, which controls the
+strength of the coupling between the scalar field and neutrinos based on non-relativistic scenarios. We will discuss
+this next.
+
+
+   III.   EXCHANGES OF ENERGY BETWEEN SCALAR FIELD AND MASS VARYING NEUTRINO
+
+  In the early Universe, neutrinos can be treated as relativistic particles, satisfying mν ≪ Tν . In this regime, their
+equation of state approaches, Pν = ρν /3. Consequently, the trace of the neutrino energy-momentum tensor vanishes,
+
+                                                       ρν − 3Pν ≈ 0,                                               (3.1)
+
+which implies that the coupling between the neutrino sector and the scalar field becomes negligible. As a result, the
+Klein–Gordon equation reduces to its standard uncoupled form,
+
+                                                   ϕ̈ + 3H ϕ̇ + V,ϕ = 0,                                           (3.2)
+
+while the neutrino energy density evolves according to the standard radiation continuity equation,
+
+                                                      ρ̇ν + 4Hρν = 0.                                              (3.3)
+
+In this regime, the effective potential (2.14) reduces to
+
+                                                             Veff = V,                                             (3.4)
+                                                                                                                      5
+
+showing that relativistic neutrinos do not influence the scalar-field evolution.
+  At late times, neutrinos become non-relativistic, satisfying mν ≫ Tν . In this regime, their pressure becomes
+negligible, Pν ≈ 0, and the trace of the energy-momentum tensor is dominated by the energy density, ρν − 3Pν ≈ ρν .
+Consequently, the scalar–neutrino coupling becomes dynamically important. The Klein–Gordon equation (2.14) and
+the continuity equation (2.12) then take the form
+                                                                          mν,ϕ
+                                                ϕ̈ + 3H ϕ̇ + V,ϕ = −           ρν ,                                (3.5)
+                                                                          mν
+and
+                                                                   mν,ϕ
+                                                   ρ̇ν + 3Hρν =         ϕ̇ρν ,                                     (3.6)
+                                                                   mν
+respectively. Eq.(3.6) shows that the neutrino energy density is no longer independently conserved, but exchanges
+energy with the scalar field due to the time dependence of mν (ϕ). It is convenient to introduce a rescaled neutrino
+energy density ρ̂ν through
+
+                                                          ρν = mν ρ̂ν .                                            (3.7)
+
+In terms of ρ̂ν , Eqs. (3.5) and (3.6) become
+
+                                                ϕ̈ + 3H ϕ̇ + V,ϕ + mν,ϕ ρ̂ν = 0,
+                                                                                                                   (3.8)
+                                                               ρ̂˙ ν + 3H ρ̂ν = 0.
+
+In the non-relativistic limit one may write ρν = mν nν , where nν is the neutrino number density, which can be
+identified with ρ̂ν . On solving the second equation in (3.8) gives
+
+                                                         ρ̂ν = ρ̂ν0 a−3 ,                                          (3.9)
+
+where the subscript ”0” denoted the present epoch and a0 = 1. Accordingly, in the non-relativistic regime the effective
+potential (3.8) is written as,
+
+                                                    Veff,ϕ = V,ϕ + mν,ϕ nν .                                     (3.10)
+
+This explicitly shows that once neutrinos become non relativistic, they contribute an additional ϕ-dependent term
+to the effective potential, which may induce a minimum in Veff and significantly modify the late-time cosmological
+dynamics.
+  In the non-relativistic neutrino regime, the background dynamics of a spatially flat Friedmann-Lemaı̂tre-Robertson-
+Walker (FLRW) Universe, comprising dark energy, non-relativistic neutrinos, and pressureless matter (baryons), are
+governed by
+                                             8πG
+                                       H2 =       (ρϕ + ρν + ρm ) ,                                              (3.11)
+                                               3
+                                                    4πG
+                                       Ḣ + H 2 = −     (ρϕ + ρν + ρm + 3pϕ ) ,                                  (3.12)
+                                                     3
+where ρϕ , ρν , and ρm denote the energy densities of the scalar field (dark energy), neutrinos, and pressureless matter
+(including baryons and cold dark matter), respectively. The energy density and pressure for the dark energy that is
+described by the scalar field ϕ are given as
+                                                1 2                         1 2
+                                       ρϕ =       ϕ̇ + V (ϕ),       pϕ =      ϕ̇ − V (ϕ).                        (3.13)
+                                                2                           2
+where V (ϕ) denotes the scalar field potential. The continuity equation for neutrino species can be written in the form
+
+                                                   ρ̇ν + 3Hρν = δ(a)Hρν ,                                        (3.14)
+
+where, δ(a) represents the coupling function. In comparison with Eq.(2.12), we define the coupling function as
+
+                                                                 d ln mν
+                                                        δ(a) =                                                   (3.15)
+                                                                  d ln a
+                                                                                                                     6
+
+Also, the energy density of pressurless matter and dark energy should obey
+                                                     ρ̇m + 3Hρm = 0                                              (3.16)
+                                              ρ̇ϕ + 3Hρϕ (1 + ωϕ ) = −δ(a)Hρν .                                  (3.17)
+To evaluate the energy densities of different components, we work with the different variable defined, α = ln a =
+− ln (1 + z). Using the different variable α, we obtain the solution for the continuity given in Eq.(3.14) in terms of
+redshift z as
+                                                               Z z
+                                                                      δ(z ′ )
+                                                                                    
+                                                 0        3                       ′
+                                       ρν (z) = ρν (1 + z) exp −             ′
+                                                                               dz                                (3.18)
+                                                                  0 1+z
+
+To evaluate the energy density of the dark energy component, we write the continuity equation in the variable α as
+                                            ρ′ϕ (α) + 3ρϕ (1 + ωϕ (α)) = −δ(α)ρν ,                               (3.19)
+            dρ
+where ρ′ϕ ≡ dαϕ . The above equation can be written in the form of an effective fluid equation
+
+                                                 ρ′ϕ (α) + 3ρϕ (1 + ωϕef f (α)) = 0                              (3.20)
+and now comparing it with the ideal dark energy continuity equation yields the effective equation of state
+                                                                       δ(α)ρν
+                                                      ωϕef f = ωϕ +                                              (3.21)
+                                                                         3ρϕ
+Now, to evaluate the solution energy density of dark energy, we solve the differential equation Eq.(3.19) will provide
+a general solution
+                                                    Z R                                 
+                                          1
+                           ρϕ (α) = R 3(1+ω (α))dα − e 3(1+ωϕ (α))dα (δ(α)ρν )dα + C ,                          (3.22)
+                                   e       ϕ
+
+
+In terms of redshift,
+                                                         Z       Z                              
+                                       1                             3(1 + ωϕ (z))            dz
+                 ρϕ (z) =      h R                i           exp −                dz δ(z)ρν     +C .            (3.23)
+                            exp −
+                                   3(1+ωϕ (z))
+                                               dz                        1+z                 1+z
+                                      1+z
+
+where C is the integration constant evaluated when ρϕ (α = 0) = ρ0ϕ , with ρ0ϕ being the dark energy density today.
+Using the Friedmann equation and from different energy density equations, we write the normalized Hubble equation
+as
+                                                               Z z
+                         H 2 (z)                                      δ(z ′ )
+                                                                                   
+                                             3            3                      ′
+                                 = Ωm (1 + z) + Ων (1 + z) exp −               dz + Ωϕ f (z)                 (3.24)
+                          H02                                     0 1+z
+                                                                             ′
+
+
+where f (z) encodes the evolution of the dark energy component and is determined by solving Eq. (3.23) numerically.
+The evolution equation of the scalar field is obtained as
+                               2                                                    
+                                dϕ              1               d ln H   3
+                                       =                (1 + z)        −   (Ω ν + Ω m )  .                  (3.25)
+                                dz        4πG(1 + z)2             dz     2
+The dynamical evolution of the system is governed by the equation-of-state parameter ω and the coupling function
+δ. Therefore, in the following subsections, we perform a case-by-case analysis of the evolution equations for different
+choices of ω and δ.
+
+
+                                            A.     Case I: Constant ωϕ and δ(z)
+
+  For the special case, where ωϕ = ω = constant and δ = constant, the energy density of neutrino and dark energy
+are calculated as
+                             ρν (z) = ρ0ν (1 + z)3−δ ,                                                           (3.26)
+                                                                δρ0ν   h                            i
+                             ρϕ (z) = ρ0ϕ (1 + z)3(1+ω) +                  (1 + z)3(1+ω) − (1 + z)3−δ .          (3.27)
+                                                              3ω + δ
+                                                                                                                       7
+
+For constant δ and constant equation-of-state parameter ω, the normalized Hubble parameter in terms of redshift is
+given by
+                                     H 2 (z)
+                                             = Ωm (1 + z)3 + Ων (1 + z)3−δ + Ωϕ f (z),                            (3.28)
+                                      H02
+where the dark energy evolution function f (z) takes the form
+                                                     δ Ων    h                           i
+                         f (z) = (1 + z)3(1+ω) +               (1 + z)3(1+ω) − (1 + z)3−δ .                       (3.29)
+                                                 Ωϕ (3ω + δ)
+
+
+                                     B.    Case II: Constant ωϕ and variable δ(z)
+
+  For the case of a variable coupling function δ(z), we consider two representative forms of mass-varying neutrino
+models. The first corresponds to a purely exponential dependence on the scalar field, given by mν (ϕ) = mν0 eβϕ
+with the exponential potential V (ϕ) = V0 e−λϕ . For a constant equation of state ωϕ = ω0 , the energy density of the
+neutrino for an exponential mass term is given as
+                                                  ρν = ρ0ν e−3α eβ(ϕ(α)−ϕ0 )                                      (3.30)
+  For the exponential mass-varying neutrino model, we consider the neutrino mass to depend on the scalar field as
+
+
+                                                     mν (ϕ) = mν0 eβϕ ,                                           (3.31)
+  In general, the coupled continuity equations and the energy density Eq.(3.23) do not admit a closed-form analytical
+solution for the scalar-field energy density. Consequently, a direct evaluation of ρϕ requires solving the full dynamical
+system numerically.
+  To obtain an analytical description suitable for observational analyses, we adopt the adiabatic approximation
+commonly employed in mass-varying neutrino cosmologies[37, 52]. In this regime, the scalar field rapidly relaxes to
+the instantaneous minimum of the effective potential
+                                            Veff (ϕ) = V (ϕ) + ρν0 a−3 eβ(ϕ−ϕ0 ) ,                                (3.32)
+The validity of this approximation may be understood by expanding the scalar field about the minimum,
+
+
+                                                       ϕ = ϕmin + δϕ,                                             (3.33)
+which reduces the Klein-Gordon equation to
+                               δ ϕ̈ + 3Hδ ϕ̇ + m2eff δϕ = 0,   where,    m2eff ≡ Veff,ϕϕ (ϕmin )                  (3.34)
+“meff ” is the effective mass of the scalar field. For the condition,
+                                                         m2eff ≫ H 2 ,                                            (3.35)
+the oscillation timescale of the field is much shorter than the Hubble timescale, and Hubble friction efficiently damps
+the oscillations around the minimum. The scalar field therefore adiabatically tracks the instantaneous minimum of
+the effective potential, which satisfies
+                                                          ∂Veff
+                                                                = 0.                                              (3.36)
+                                                           ∂ϕ
+this gives
+                                                                3
+                                               ϕ(z) = ϕ∗ −         ln(1 + z),                                     (3.37)
+                                                               β+λ
+where
+                                                                   
+                                                   1      λV0
+                                             ϕ∗ =      ln        + βϕ0 .                                          (3.38)
+                                                  β+λ     βρ0ν
+                                                                                                                     8
+
+Consequently, the effective interaction parameter is given by
+                                                                       3β
+                                                           δeff =         .                                      (3.39)
+                                                                      β+λ
+The energy densities of neutrinos and dark energy are then obtained as
+
+                       ρν (z) = ρ0ν (1 + z)3−δeff ,                                                              (3.40)
+                                                            δeff ρ0ν    h                                 i
+                       ρϕ (z) = ρ0ϕ (1 + z)3(1+ω0 ) +                       (1 + z)3(1+ω0 ) − (1 + z)3−δeff .    (3.41)
+                                                          3ω0 + δeff
+We therefore obtained the same functional structure as the interacting dark-energy model discussed in Case I. The
+crucial difference is that the interaction parameter is no longer introduced phenomenologically but is instead deter-
+mined through Eq.(3.39) which depends on the parameters β and λ of potential mass of MaVaN. For an exponential
+mass-varying neutrino model and a constant ω0 , the normalized Hubble parameter in terms of redshift is given by
+
+                                   H 2 (z)
+                                           = Ωm (1 + z)3 + Ων (1 + z)3−δeff + Ωϕ f (z),                          (3.42)
+                                    H02
+where the dark-energy evolution function takes the form
+                                                          δeff Ων      h                                i
+                       f (z) = (1 + z)3(1+ω0 ) +                         (1 + z)3(1+ω0 ) − (1 + z)3−δeff .       (3.43)
+                                                      Ωϕ (3ω0 + δeff )
+
+
+                                    C.     Case III: Variable ωϕ and constant δ(z)
+
+  For the variable equation of state, we choose the CPL parametrization
+
+                                                      ωϕ = w0 + w1 (1 − a)                                       (3.44)
+
+and constant coupling δ, the scalar field energy density becomes
+                                                       Z                                         
+                                              3w1                                    3w1
+           ρϕ (z) = (1 + z)3(1+w0 +w1 ) exp          −δρ0ν (1 + z)−1−3w0 −3w1 exp −          dz ′
+                                                                                                  + C   .        (3.45)
+                                              1+z                                   1 + z′
+Imposing the boundary condition ρϕ (0) = ρϕ0 . The dark-energy evolution function becomes
+
+                                                       δΩν z
+                                                        Z                                   
+                                              3w1                   ′ −1−3w0 −3w1         3w1
+           f (z) = (1 + z) 3(1+w0 +w1 )
+                                        exp         1−        (1 + z )            exp −         dz ′ .           (3.46)
+                                              1+z      Ωϕ 0                             1 + z′
+
+                                                "
+                                          3w1
+                                      3
+                                                (1 + z)3(w0 +w1 ) ρϕ0 e−3w1 − δρν0 E1−3(w0 +w1 ) (3w1 )
+                                                                                                       
+                     ρϕ (z) = (1 + z) e   1+z
+
+
+
+                                                                             #                                 (3.47)
+                                                                        3w1
+                                          + δρν0 E1−3(w0 +w1 )                     .
+                                                                        1+z
+
+where (ρϕ0 ) and (ρν0 ) denote the present-day dark-energy and neutrino energy densities, respectively, and
+                                                  Z ∞ −xt
+                                                      e
+                                         En (x) =          dt,    Re(x) > 0,                                     (3.48)
+                                                   1    tn
+is the generalized exponential integral function. It is related to the upper incomplete gamma function through
+
+                                                    En (x) = x n−1 Γ(1 − n, x),                                  (3.49)
+
+where
+                                                                Z ∞
+                                                    Γ(s, x) =           ts−1 e−t dt                              (3.50)
+                                                                  x
+                                                                                                                     9
+
+denotes the upper incomplete gamma function.
+  The Normalized Hubble equation
+                                      H 2 (z)
+                                              = Ωm (1 + z)3 + Ων (1 + z)3−δ + Ωϕ f (z),                          (3.51)
+                                       H02
+  where
+                                              "                                                        !
+                              3w1 z
+                             − 1+z                                        δ Ων0
+                     f (z) = e        (1 + z)3 (1 + z)3(w0 +w1 ) 1 − e3w1       E1−3(w0 +w1 ) (3w1 )
+                                                                           Ωϕ0
+                                                                         #                                     (3.52)
+                                            3w1 δ Ων0                 3w1
+                                         +e           E1−3(w0 +w1 )          .
+                                                 Ωϕ0                  1+z
+
+
+                                       IV.   DATASET AND METHODOLOGY
+
+  To constrain the parameters of the model under investigation, we employ the emcee package [53], an affine-invariant
+ensemble sampler implementation of the Markov Chain Monte Carlo (MCMC) algorithm, to explore the posterior
+parameter space of the cosmological model. We perform four independent MCMC analyses, combining the DESI DR2
+BAO measurements and the compressed CMB likelihood with each of the following Type Ia supernova compilations
+in turn: Pantheon+ , DES-Dovekie, and Union3, in addition to a baseline analysis using only DESI DR2 BAO and
+the compressed CMB likelihood without any supernova sample. The convergence of the MCMC chains is assessed
+using the integrated autocorrelation time τ , estimated directly from the chains. We require the total chain length to
+exceed 50 τmax , where τmax is the largest autocorrelation time among all sampled parameters, following the standard
+convergence criterion recommended for emcee [53]. The first 3 τmax steps of each chain are discarded as burn-in, and
+the remaining samples are thinned by a factor of τmax /2 to reduce residual autocorrelation before further analysis.
+Once the final chains are obtained, we use the GetDist package [54] for post-processing and visualization. To constrain
+the parameters of the MaVaN cosmological model, we compare the model against Baryon Acoustic Oscillation (BAO)
+measurements from the Dark Energy Spectroscopic Instrument Data Release 2 (DESI DR2), Type Ia supernova
+observations, and the compressed CMB likelihood, which are detailed below.
+   • Baryon Acoustic Oscillation : First, we use recent Baryon Acoustic Oscillation (BAO) measurements from
+     the DESI Data Release 2 (DR2) [40]. These measurements are extracted using various tracers such as the
+     Bright Galaxy Sample (BGS), Luminous Red Galaxies (LRG1–3), Emission Line Galaxies (ELG1–2), Quasars
+                                                                                                                 c
+     (QSO), and Lyman-α forests. To use these measurements, we compute the Hubble distance DH (z) = H(z)           ,
+                                                              R z dz′
+     the comoving angular diameter distance DM (z) = c 0 H(z′ ) , and the volume-averaged distance DV (z) =
+         2
+                       1/3
+      z, DM (z), DH (z)     . It is necessary to derive the following ratios: DM /rd , DH /rd , DV /rd , and DM /DH
+     to constrain the parameters of each model, where rd is the sound horizon. In flat ΛCDM, rd = 147.09 ± 0.20
+     Mpc [2].
+   • Type Ia Supernova : Then, we use three different Type Ia supernova (SNe Ia) measurements. The first
+     is the Pantheon+ sample [41], which includes 1,701 light curves from 1,550 SNe Ia observations spanning the
+     redshift range 0.001 ≤ z ≤ 2.26. In our analysis, we exclude light curves at z < 0.01, as such low-redshift data
+     are affected by significant systematic uncertainties due to peculiar velocities. Second, we use 1,829 photometric
+     light curves spanning the redshift range 0.10 ≤ z ≤ 1.13, collected over five years by the Dark Energy Survey
+     Supernova Program (DES-SN5Y) [42]. This sample includes 1,635 DES discovered Type Ia supernovae and 194
+     externally sourced low-z supernovae from the CfA and CSP samples. Finally, we use the Union3 compilation,
+     which contains 2,087 cosmologically useful Type Ia supernovae from 24 datasets covering the redshift range
+     0.05 ≤ z ≤ 2.26 [43].
+   • Compressed CMB likelihood : Finally, we use the compressed CMB likelihood, characterized by the pa-
+     rameter vector v = θs−1 (z∗ ), ωb , ωc , which is modeled as a 3×3 Gaussian likelihood [55] and implemented as
+     the PLK18 likelihood within SimpleMC. We use this compressed likelihood because the Anton Schmidt model
+     mainly affects the late time expansion history of the Universe. The full CMB power spectrum shows small
+     non-geometric features, such as an enhanced lensing amplitude and a low-ℓ power deficit, which may be caused
+     by residual systematics and can bias dark energy constraints. For instance, Planck data alone show a ≳ 2σ
+     preference for phantom-like dark energy [56], largely due to the lack of large-scale power. To avoid such biases,
+     we adopt the compressed CMB likelihood in our analysis.
+                                                                                                                        10
+
+                                         V.    RESULTS AND DISCUSSION
+
+
+  This section presents the constraints obtained for the three neutrino–dark-energy coupling scenarios introduced in
+Sec. III: a constant coupling with a constant dark-energy equation of state (Case I), an exponential mass-varying
+neutrino coupled to a quintessence field (Case II), and a constant coupling combined with a CPL dark-energy back-
+ground (Case III). Each case is fit to DESI DR2 BAO and a compressed CMB likelihood, combined in turn with no
+supernova sample, Pantheon+ , DES-Dovekie, and Union3, so the same four dataset combinations can be compared
+across all three cases. This lets us separate what the data prefer from what follows only from the way the coupling is
+parametrized.
+
+
+
+
+                                              A.   Case I: Constant ωϕ and δ
+
+
+  Table I lists the posterior constraints on the five Case I parameters, {H0 , Ωm0 , Ων0 , ω, δ}, together with the derived
+                         mν = 93.14 Ων0 h2 eV, for the four dataset combinations described above.
+                      P
+total neutrino mass,
+
+
+
+                   Parameter           CMB+DESI DR2 +Pantheon+ +DES-Dovekie +Union3
+                           −1     −1
+                   H0 [km s Mpc ]          71.07+0.73
+                                                −0.73       69.18+0.49
+                                                                 −0.50      68.62+0.47
+                                                                                 −0.47      67.74+0.59
+                                                                                                 −0.60
+                   Ωm0                   0.2786+0.0067
+                                                −0.0066   0.2957 +0.0051
+                                                                 −0.0048  0.3011 +0.0049
+                                                                                 −0.0048  0.3087 +0.0059
+                                                                                                 −0.0058
+                   Ων0                  0.00023+0.00051
+                                                −0.00019 0.00032+0.00065         +0.0007
+                                                                 −0.00025 0.0004−0.0003         —
+                                                 +0.033
+                   ω                     −1.105−0.034     −1.016−0.022 −0.9894+0.0212
+                                                                  +0.022                          +0.027
+                                                                                  −0.0216 −0.958−0.027
+                                                 +0.147
+                   δP                    −0.201−0.280     −0.221−0.292 −0.2171−0.2988 −0.249+0.181
+                                                                  +0.163          +0.1591
+                                                                                                  −0.326
+                      mν [eV] (95% CL)       < 0.06           < 0.07          < 0.08          < 0.18
+
+TABLE I. Marginalized posterior constraints (median with 68% credible intervals) on the Case P I (ωϕ = const, δ = const)
+parameters, for the four dataset combinations analyzed in this work. The total neutrino mass  mν , a derived parameter, is
+quoted as a 95% CL upper limit.
+
+
+
+
+  Adding a supernova sample to CMB+DESI DR2 lowers H0 steadily, from 71.07+0.73                    +0.59
+                                                                                     −0.73 to 67.74−0.60 km s
+                                                                                                             −1
+                                                                                                                Mpc−1
+                                                         +0.0067          +0.0059
+once Union3 is included, while Ωm0 rises from 0.2786−0.0066 to 0.3087−0.0058 over the same sequence – the usual
+H0 –Ωm0 degeneracy of a flat, distance-based fit, since a lower H0 needs a larger Ωm0 to keep the same distances. The
+CMB+DESI DR2-only fit sits at one end of this trend, with the highest H0 , the lowest Ωm0 , and, as discussed next,
+the equation of state farthest from −1.
+
+   ω shows the largest change of any parameter in the table. With CMB+DESI DR2 alone, ω = −1.105+0.033              −0.034
+lies in phantom territory, more than 3σ from −1; adding a supernova sample moves it back: −1.016+0.022        −0.022 with
+Pantheon+ , −0.9894+0.0212                                      +0.027
+                     −0.0216 with DES-Dovekie, and −0.958−0.027 with Union3, about 1.5σ from −1. A similar pattern
+– BAO+CMB preferring ω < −1, with supernovae pulling the fit back across −1 – has been reported in other DESI-
+DR2-based dynamical dark-energy analyses [40, 56]. Here it can be traced to the coupling term in Eq. (3.19), which
+turns the bare ω into an effective ωϕeff , together with the fact that BAO and supernovae probe different redshift ranges.
+
+   The coupling δ changes little across the four combinations, staying within [−0.249, −0.201] with heavily overlapping
+intervals. Since ρν (z) ∝ (1 + z)3−δ , a negative δ dilutes the neutrino density faster than a standard species would –
+consistent with energy flowing from neutrinos into the scalar field at late times, the mechanism linked in Sec. III to the
+onset of acceleration. The posterior leans toward more negative values in every case, but δ = 0 stays inside the 68%
+interval throughout, so a coupling is favored Pwithout being required. The derived neutrino mass upper P limit moves
+together with Ωm0 and H0 , tightening to         mν < 0.06 eV (CMB+DESI DR2) and loosening to             mν < 0.18 eV
+(Union3); in every case a massless or nearly massless neutrino remains fully consistent with the data.
+                                                                                                                                             11
+                              Case I (w = const, = const)    synthetic correlation structure (see disclaimer in script)
+                                                                                                                CMB+DESI DR2
+                                                                                                                CMB+DESI DR2+Pantheon+
+                                                                                                                CMB+DESI DR2+DES-Dovekie
+                                                                                                                CMB+DESI DR2+Union3
+
+
+
+
+               0.32
+
+               0.30
+          m0
+
+
+
+
+               0.28
+
+               0.26
+
+                   0.2
+          m [eV]
+
+
+
+
+                   0.1
+
+                   0.0
+                   0.9
+
+                   1.0
+         w
+
+
+
+
+                   1.1
+
+                   1.2
+
+                   0.0
+
+                   0.5
+
+                   1.0
+
+                         66   68   70   72    0.26 0.28 0.30 0.32 0.0     0.1     0.2     1.2   1.1       1.0     0.9    1.0   0.5 0.0
+                                   H0                  m0                 m [eV]                      w
+
+FIG. 1. Marginalized one-dimensional posterior distributions (diagonal
+                                                                    P      panels) and two-dimensional 68% and 95% credible
+regions (off-diagonal panels) for the Case I parameters {H0 , Ωm0 ,   mν , ω, δ}, obtained from the joint analysis of DESI DR2
+BAO, DES-SN5YR, and the compressed CMB early-Universe prior.
+
+
+  Figure 1 shows a strong H0 –Ωm0 anticorrelation, a weaker Ωm0 –ω anticorrelation, and a moderate positive ω–δ
+correlation. The last of these follows from ω and δ appearing together in the denominator (3ω + δ) P
+                                                                                                   of the dark-energy
+evolution function derived in Sec. III, so the two are not fully separable with these data. The       mν posterior is
+non-Gaussian in every fit, rising near zero and trailing off in a long tail – the shape expected when an analysis is
+reporting an upper limit rather than a detection.
+
+
+                                             B.   Case II: Exponential Mass-Varying Neutrino
+
+  In Case II the neutrino mass tracks the scalar field exponentially, mν (ϕ) = mν0 eβϕ , with potential V (ϕ) = V0 e−λϕ .
+Under the adiabatic minimum-tracking approximation of Sec. III, this reduces to an effective, redshift-independent
+coupling
+
+                                                                           3β
+                                                                 δeff =       ,                                                            (5.1)
+                                                                          β+λ
+                                                                                                                                    12
+                                                                                   P
+so β and λ, rather than δeff itself, are the quantities sampled directly; δeff and   mν are derived and inherit whatever
+priors were placed on β and λ. Table II lists the resulting constraints for the same four dataset combinations as
+Case I.
+
+
+
+
+                     Parameter            CMB+DESI DR2 +Pantheon+ +DES-Dovekie +Union3
+                              −1     −1
+                     H0 [km s Mpc ]          68.29+0.73
+                                                  −0.73     68.14+0.49
+                                                                 −0.50    69.64+0.21
+                                                                                −0.21    67.81+0.58
+                                                                                              −0.59
+                                                  +0.0071
+                     Ωm0                   0.3036−0.0070  0.3051−0.0049 0.2893−0.0022 0.3083+0.0059
+                                                                 +0.0050        +0.0022
+                                                                                              −0.0058
+                     β                      0.050+0.107
+                                                  −0.148  −0.153+0.111
+                                                                  −0.186  0.064+0.126
+                                                                               −0.417    0.041+0.114
+                                                                                              −0.148
+                     λ                      2.990+0.685
+                                                  −0.682   2.546 +0.312
+                                                                 −0.357   2.838+0.772
+                                                                               −0.601    2.996+0.679
+                                                                                              −0.677
+                     δeff                   0.050+0.101
+                                                  −0.151  −0.196+0.144
+                                                                  −0.273  0.538+0.216
+                                                                               −0.324    0.040+0.108
+                                                                                              −0.151
+                     ω
+                     P                     −0.990+0.033
+                                                   −0.034 −0.966+0.022
+                                                                  −0.023 −0.960+0.015
+                                                                                 −0.015 −0.964+0.027
+                                                                                               −0.027
+                         mν [eV] (95% CL)      < 0.32         < 0.14        < 0.19         < 0.31
+                     MB                          —        −19.403+0.012
+                                                                  −0.012      —              —
+
+TABLE II. Marginalized posterior constraints (median with 68% credible  P intervals) on the Case II parameters, for the four
+dataset combinations analyzed in this work. δeff is a derived quantity;  mν is also derived and is quoted as a 95% CL upper
+limit; MB is an additional nuisance parameter fit only in the Pantheon+ analysis (see text).
+
+
+
+
+   H0 and Ωm0 again move in opposite directions, but the ordering across datasets differs from Case I: DES-Dovekie
+now gives the highest H0 , 69.64+0.21
+                                    −0.21 km s
+                                              −1
+                                                 Mpc−1 , above the CMB+DESI DR2-only value of 68.29+0.73       −0.73 , while
+Pantheon and Union3 pull it down to 68.14−0.50 and 67.81+0.58
+          +                                      +0.49
+                                                                −0.59 ; Ω m0 tracks   this inversely. The equation  of state
+also behaves differently: CMB+DESI DR2 alone now gives ω = −0.990+0.033      −0.034 ,  consistent with −1, while the   other
+three combinations stay close by, between −0.966 and −0.960. The phantom-like value found for BAO+CMB alone
+in Case I is therefore not a fixed feature of the data – it depends on how the coupling is parametrized, and here it is
+absorbed once β and λ are free to adjust.
+
+
+   δeff is less stable than δ was in Case I: consistent with zero for CMB+DESI DR2 (0.050+0.101           −0.151 ) and Union3
+(0.040+0.108
+        −0.151 ), positive for DES-Dovekie    (0.538+0.216
+                                                    −0.324 ), and negative for Pantheon+
+                                                                                         (−0.196  +0.144
+                                                                                                  −0.273 ). Part of this spread
+has a simple explanation: the four runs did not share the same priors on β and λ – CMB+DESI DR2 and Union3
+used β ∈ [−0.2, 0.2], λ ∈ [2, 4]; DES-Dovekie widened this to β ∈ [−1, 1]; Pantheon+ restricted β ∈ [−1, 0] and
+λ ∈ [2, 3]. Since δeff depends nonlinearly on β and λ, a difference in prior volume alone can shift or flip its sign,
+so the negative δeff from Pantheon+ should not be read as an independent confirmation of the coupling found in
+Case I: that run was never allowed to explore β > 0.1 A uniform, sufficiently wide       Pprior on β and λ across all four
+runs (e.g., β ∈ [−1, 1], λ ∈ [2, 4]) would put them on equal footing. The derived            mν 95% CL upper limits range
+                               +
+from < P  0.14 eV  (Pantheon     ) to < 0.32 eV  (CMB+DESI      DR2,  matched   by Union3), noticeably  looser than in Case I;
+since     mν is itself reconstructed nonlinearly from β and λ, part of this loosening may also reflect the differing prior
+volumes rather than the data, and would benefit from the same unification.
+
+
+
+
+1 The Pantheon+ run also fits the absolute magnitude M                 +0.012
+                                                           B = −19.403−0.012 directly rather than marginalizing over distance moduli as
+  in the other three runs – a separate methodological difference worth resolving for a fully consistent comparison.
+                                                                                                                                                                 13
+                              Case II (exponential MaVaN mass, adiabatic tracking) -- synthetic correlation structure (see disclaimer in script)
+                                                                                                                                     CMB+DESI DR2
+                                                                                                                                     CMB+DESI DR2+Pantheon+
+                                                                                                                                     CMB+DESI DR2+DES-Dovekie
+                                                                                                                                     CMB+DESI DR2+Union3
+
+
+
+
+               0.32
+          m0
+
+
+
+
+               0.30
+
+
+               0.28
+
+                   0.4
+                   0.3
+          m [eV]
+
+
+
+
+                   0.2
+                   0.1
+                   0.0
+
+
+                   0.0
+
+                   0.5
+
+                   1.0
+
+                    5
+                    4
+                    3
+                    2
+                    1
+
+                   0.9
+
+
+                   1.0
+         w
+
+
+
+
+                   1.1
+
+                    1
+            eff
+
+
+
+
+                    0
+
+
+                    1
+                         66   68    70        0.29 0.30 0.31 0.32   0.0 0.1 0.2 0.3 0.4   1   0      1   2   3   4   5         1.0      0.9   1    0         1
+                              H0                      m0                  m [eV]                                                w                      eff
+
+
+
+FIG. 2. Marginalized one-dimensional posterior distributions (diagonal panels) and two-dimensional 68% and 95% credible
+regions (off-diagonal panels) for the Case II parameters {H0 , Ωm0 , β, λ, ω}, for the four dataset combinations of Table II. Note
+the differing prior ranges adopted for β and λ across the four analyses, discussed in the text.
+
+
+
+
+  Figure 2 shows the β–λ degeneracy behind the δeff behavior described above, together with the same H0 –Ωm0
+anticorrelation already seen in Case I.
+
+
+
+
+                                         C.      Case III: CPL Dark Energy with a Constant Coupling
+
+
+   Case III keeps the constant coupling δ of Case I but replaces the constant ω with the CPL form w(a) = w0 +wa (1−a).
+As in Case I, and unlike Case II, δ is sampled directly, so its dataset-dependence can be read without separating it
+from a prior-volume effect. Table III lists the constraints on {H0 , Ωm0 , w0 , wa , δ, mν }; here mν is itself a sampled
+parameter rather than derived from Ων0 .
+                                                                                                                          14
+
+                     Parameter        CMB+DESI DR2 +Pantheon+ +DES-Dovekie +Union3
+                             −1    −1
+                     H0 [km s Mpc ]      68.36+0.68
+                                              −0.73     68.18+0.61
+                                                             −0.85    69.52+0.89
+                                                                           −0.84    67.61+0.68
+                                                                                         −0.71
+                                              +0.0073
+                     Ωm0               0.3021−0.0066  0.3075−0.0057 0.2904−0.0030 0.3098+0.0098
+                                                             +0.0061       +0.0048
+                                                                                         −0.0097
+                                               +0.042
+                     w0                −1.012−0.040   −0.980−0.068 −0.964−0.068 −0.987+0.041
+                                                              +0.039        +0.033
+                                                                                          −0.066
+                                               +0.412
+                     wa                −1.388−0.364   −0.419+0.25
+                                                              −0.335 −1.113+0.20
+                                                                            −0.213 −0.639+0.588
+                                                                                          −0.374
+                     δ                 −0.196+0.140
+                                               −0.275 −0.177+0.165
+                                                              −0.293 −0.292+0.091
+                                                                            −0.096 −0.108+0.242
+                                                                                          −0.188
+                     mν [eV] (95% CL)      < 0.3          < 0.27        < 0.25        < 0.29
+
+TABLE III. Marginalized posterior constraints (median with 68% credible intervals) on the Case III (CPL dark energy, constant
+δ) parameters, for the four dataset combinations analyzed in this work. The neutrino mass mν is quoted as a 95% CL upper
+limit.
+
+
+
+
+   Ordering the four combinations by coupling strength, δ = −0.292 (DES-Dovekie) → −0.196 (CMB+DESI DR2)
+→ −0.177 (Pantheon+ ) → −0.108 (Union3), H0 falls and Ωm0 rises to match – the same H0 –Ωm0 –δ pattern visible
+in Fig. 3. A stronger coupling favors a higher H0 and a lower Ωm0 , with DES-Dovekie and Union3 at opposite ends
+of the sequence.
+
+
+
+  The neutrino mass does not follow this ordering. Its four 95% CL upper limits, mν < 0.3 eV (CMB+DESI DR2),
+< 0.27 eV (Pantheon+ ), < 0.25 eV (DES-Dovekie), and < 0.29 eV (Union3), are close to one another, so mν is largely
+insensitive to the choice of supernova sample. These bounds are markedly looser than the corresponding limits in
+Case I and Case II, consistent with mν being sampled directly here rather than being derived from other parameters.
+
+
+
+  w0 stays close to −1 in all four combinations, [−1.012, −0.964], unlike the phantom value found for CMB+DESI DR2
+alone in Case I; with a time-evolution term available, the fit no longer needs to push w0 away from −1. That term, wa , is
+instead the least stable parameter in the table, from −1.388+0.412                                   +0.25
+                                                                 −0.364 (CMB+DESI DR2) to −0.419−0.335 (Pantheon ),
+                                                                                                                     +
+
+without following the ordering set by δ. This suggests wa absorbs supernova-specific systematics that are largely
+separate from the coupling degeneracy, much as mν does.
+
+
+
+   The total χ2 scales with the size of each supernova sample and shows no sign of tension once this is accounted
+for. One point is worth checking before quoting these numbers further: for CMB+DESI DR2 alone, χ2tot = 16.43
+exceeds χ2BAO = 11.08 by 5.35, the presumed CMB contribution; for the three combinations with a supernova sample,
+however, χ2tot equals χ2BAO + χ2SN exactly, with no separate CMB term. It would help to confirm how this term is
+counted before using χ2tot for model comparison. The posterior range for χ2tot is also noticeably wider on one side
+once a supernova sample is included – e.g. [1772.31, 30307.37] against a central value of 1761.19 for DES-Dovekie –
+which may reflect a small number of chain samples in poorly-constrained regions of (w0 , wa , δ, mν ) space rather than
+a second solution; checking the trace plots and the Gelman–Rubin statistic for these three runs would settle the point.
+
+
+
+  Across the four combinations, H0 in Case III ranges from 67.6 to 69.5 km s−1 Mpc−1 , showing the same dataset-
+dependence already seen in Case I. Here, though, this comes together with a neutrino mass upper limit around 0.3 eV
+that barely changes with the supernova sample, so the partial shift in H0 and the looser mass bound should be read
+as parts of the same fit rather than as separate results.
+                                                                                                                                                15
+
+                                                                                                                     CMB+DESI DR2
+                                                                                                                     CMB+DESI DR2+Pantheon +
+                                                                                                                     CMB+DESI DR2+DES-Dovekie
+                                                                                                                     CMB+DESI DR2+Union3
+
+
+
+
+               0.34
+
+               0.32
+          m0
+
+
+
+
+               0.30
+
+               0.28
+                0.6
+
+                0.4
+          m
+
+
+
+
+                0.2
+
+
+
+               0.9
+               1.0
+         w0
+
+
+
+
+               1.1
+                1.2
+                  1
+                 0
+          wa
+
+
+
+
+                 1
+                 2
+
+                0.5
+                0.0
+               0.5
+               1.0
+                      66   68        70   72 0.28 0.30 0.32 0.34    0.2       0.4   0.6   1.1 1.0 0.9   2   1    0   1    1.0 0.5 0.0 0.5
+                                H0                    m0                  m                 w0              wa
+
+FIG. 3. Marginalized one-dimensional posterior distributions (diagonal panels) and two-dimensional 68% and 95% credible
+regions (off-diagonal panels) for the Case III parameters {H0 , Ωm0 , mν , w0 , wa , δ}, for the four dataset combinations of
+Table III.
+
+
+                                                           D.      Comparison with ΛCDM
+
+   For reference, Table IV lists the flat ΛCDM constraints on H0 and Ωm0 , together with the Bayesian log-evidence
+ln Z for ΛCDM and for the three MaVaN cases discussed above, all obtained from the same four dataset combinations.
+
+                Model Quantity          CMB+DESI DR2 +Pantheon+ +DES-Dovekie                +Union3
+                ΛCDM H0 [km s−1 Mpc−1 ]    68.22 ± 0.30    68.31 ± 0.28    70.09 ± 0.14    68.42 ± 0.29
+                         Ωm0             0.2991 ± 0.0039 0.2982 ± 0.0038 0.2819 ± 0.0019 0.3011 ± 0.0039
+                         ln Z                 14.82           19.49           15.75           14.83
+                Case I ln Z                   18.15           17.03           18.12           18.61
+                Case II ln Z                  18.71           24.85           20.44           18.91
+                Case III ln Z                 20.63           20.46           24.01           18.81
+
+TABLE IV. Flat ΛCDM constraints on H0 and Ωm0 , and the Bayesian log-evidence ln Z for ΛCDM and for Cases I–III, for
+the four dataset combinations used throughout this work.
+                                                                                                                        16
+
+   The ΛCDM fit already shows part of the pattern seen throughout this section: H0 and Ωm0 move in opposite
+directions once a supernova sample is added, and DES-Dovekie again stands apart, with the highest H0 (70.09 ±
+0.14 km s−1 Mpc−1 ), the lowest Ωm0 (0.2819 ± 0.0019), and by far the tightest uncertainties of the four combina-
+tions. This suggests that some of the dataset-dependence seen for the coupled models is already present in the data
+themselves, rather than introduced by the coupling.
+   The log-evidence values let us compare the four models directly, through ∆ ln Z = ln Zmodel − ln ZΛCDM . Using
+the qualitative bins commonly adopted for this kind of comparison (|∆ ln Z| < 1: inconclusive; 1–2.5: weak; 2.5–5:
+moderate; above 5: strong), the picture is mixed rather than one-sided. Case III shows the most consistent preference
+over ΛCDM, moderate to strong in three of the four combinations and reaching ∆ ln Z ≈ 8.3 with DES-Dovekie,
+though this drops to essentially no preference (∆ ln Z ≈ 1.0) with Pantheon+ . Case II gives moderate to strong
+support in every combination, with its largest margin (∆ ln Z ≈ 5.4) also coming from Pantheon+ . Case I is the least
+consistent of the three: moderately preferred with CMB+DESI DR2 alone and with Union3, only weakly so with
+DES-Dovekie, and mildly disfavored relative to ΛCDM once Pantheon+ is used (∆ ln Z ≈ −2.5).
+   Taken together, these numbers suggest that a coupling between neutrinos and dark energy is generally favored by
+DESI DR2 BAO and the CMB prior, but the strength of that preference – and, for Case I, even its direction – depends
+on which supernova compilation is used alongside them. None of the three cases is preferred over ΛCDM in every
+combination, so at this stage the evidence for the coupling is best read as encouraging rather than conclusive.
+
+
+                                                VI.    CONCLUSIONS
+
+   We have investigated three related models of Mass-Varying Neutrino (MaVaN) cosmology, distinguished by the way
+the interaction between the neutrino and dark-energy sectors is parameterized: constant coupling with a constant dark-
+energy equation-of-state (Case I); exponential neutrino mass coupled with an exponential quintessence potential under
+the adiabatic minimum-tracking assumption (Case II); and constant coupling with a CPL dark-energy equation-of-
+state (Case III). We compared these models against DESI DR2 BAO measurements and compressed CMB likelihoods,
+while also utilizing Pantheon+ , DES-SN5YR, and Union3 supernova data. This combination allows us to examine
+both the dependence of inferred cosmological parameters on the supernova datasets and the sensitivity of coupling
+constraints to the model parameterization.
+   A common feature across all three cases is that combining different supernova samples with DESI DR2 and CMB
+priors results in correlated variations in H0 and Ωm0 . The results also demonstrate that the inferred dark-energy and
+coupling parameters differ among the various MaVaN models. Specifically, the phantom-like value of the constant
+equation-of-state parameter obtained from CMB+DESI DR2 in Case-I is not observed in Case-II or Case-III; this
+indicates that this feature depends on the assumed parameterization rather than being a model-independent result
+derived from the data. In Case-II, the effective coupling δeff = 3β/(β + λ) can vary significantly across different
+analyses, illustrating the sensitivity of the inferred interaction to the priors adopted for mass and potential parameters.
+Similarly, neutrino-mass constraints vary across cases and should therefore be interpreted as model-dependent limits
+rather than model-independent bounds on the absolute neutrino mass scale.
+   Bayesian evidence provides a complementary assessment of the models. Although some dataset combinations show
+positive evidence differences compared to flat ΛCDM, none of the MaVaN models considered here exhibit a consistent
+preference across all four observational combinations. Notably, the substantial evidence difference found for Case-
+III with DES-SN5YR is driven by a supernova combination that also induces a distinct shift in the corresponding
+ΛCDM parameters. Furthermore, the varying prior ranges adopted for β and λ in the Case-II analysis introduce
+an additional prior-volume dependence into the evidence calculations. Consequently, the current results should be
+viewed as evidence that MaVaN interactions are observationally viable, rather than as a statistically robust detection
+of neutrino-dark-energy coupling.
+   A key feature of this analysis is the direct comparison of multiple MaVaN models within a unified observational
+framework, alongside a systematic examination of their dependence on datasets and priors. However, certain lim-
+itations should be noted. Case-II relies on the adiabatic minimum-tracking approximation, the validity of which
+requires verification within the relevant posterior parameter space. This analysis is restricted to the background level
+and does not account for the perturbation dynamics of the interacting neutrino-scalar system, neutrino clustering, or
+potential small-scale instabilities. Furthermore, the compressed CMB likelihood does not capture the full information
+contained in the CMB power spectra. The use of varying prior choices in some analyses also limits the extent to
+which the associated Bayesian evidence can be interpreted as a purely model-based comparison. These limitations
+motivate several natural extensions of the current work, such as adopting a common and clearly defined prior volume
+for all model variants, considering full scalar-field dynamics without the adiabatic approximation, incorporating linear
+perturbations and neutrino clustering, and utilizing the full CMB likelihood instead of a compressed representation.
+Applying these extensions to upcoming DESI data releases and updated supernova compilations will help determine
+                                                                                                                              17
+
+whether evidence for neutrino-dark-energy coupling persists independently of model assumptions, prior choices, and
+the specific low-redshift distance datasets employed.
+
+
+
+                                                 ACKNOWLEDGMENTS
+
+
+  S. D. Pathak acknowledges the Inter-University Centre for Astronomy and Astrophysics (IUCAA), Pune, for the
+Associate Programme under which this work was carried out.
+
+
+
+
+ [1] S. Weinberg, Cosmology, Oxford University Press, 2008.
+ [2] N. Aghanim, et al., Planck 2018 results. vi. cosmological parameters, Astron. Astrophys 641 (2020) A6.
+ [3] D. N. Spergel, et al., First-year wilkinson microwave anisotropy probe ( wmap ) observations: Determination of cosmological
+     parameters, The Astrophysical Journal Supplement Series 148 (1) (2003) 175–194.
+ [4] S. Perlmutter, et al., Measurements of Ω and Λ from 42 high-redshift supernovae, The Astrophysical Journal 517 (2) (1999)
+     565–586.
+ [5] D. J. Eisenstein, et al., Detection of the baryon acoustic peak in the large-scale correlation function of sdss luminous red
+     galaxies, The Astrophysical Journal 633 (2) (2005) 560–574.
+ [6] W. J. Percival, other, Baryon acoustic oscillations in the sloan digital sky survey data release 7 galaxy sample, Monthly
+     Notices of the Royal Astronomical Society 401 (4) (2010) 2148–2168.
+ [7] T. Abbott, et al., Dark energy survey year 3 results: Cosmological constraints from galaxy clustering and weak lensing,
+     Physical Review D 105 (2) (2022).
+ [8] M. Tegmark, et al., Cosmological parameters from sdss and wmap, Physical Review D 69 (10) (2004).
+ [9] W. L. Freedman, M. S. Turner, Colloquium: Measuring and understanding the universe, Reviews of Modern Physics 75 (4)
+     (2003) 1433–1447.
+[10] D. H. Weinberg, et al., Observational probes of cosmic acceleration, Physics Reports 530 (2) (2013) 87–255.
+[11] L. Perivolaropoulos, F. Skara, Challenges for λcdm: An update, New Astronomy Reviews 95 (2022) 101659.
+[12] G. Efstathiou, Challenges to the lambda cdm cosmology (2024).
+[13] J. Martin, Everything You Always Wanted To Know About The Cosmological Constant Problem (But Were Afraid To
+     Ask), Comptes Rendus Physique 13 (2012) 566–665.
+[14] J. Sola Peracaula, The cosmological constant problem and running vacuum in the expanding universe, Phil. Trans. Roy.
+     Soc. Lond. A 380 (2022) 20210182.
+[15] H. Bernardo, et al., Modified Gravity Approaches to the Cosmological Constant Problem, Universe 9 (2) (2023) 63.
+[16] S. Weinberg, The Cosmological Constant Problem, Rev. Mod. Phys. 61 (1989) 1–23.
+[17] E. J. COPELAND, M. SAMI, S. TSUJIKAWA, Dynamics of dark energy, International Journal of Modern Physics D
+     15 (11) (2006) 1753–1935.
+[18] P. J. E. Peebles, B. Ratra, The cosmological constant and dark energy, Reviews of Modern Physics 75 (2) (2003) 559–606.
+[19] S. Capozziello, H. Chaudhary, T. Harko, G. Mustafa, Is dark energy dynamical in the DESI era? A critical review, Phys.
+     Dark Univ. 51 (2026) 102196. arXiv:2512.10585, doi:10.1016/j.dark.2025.102196.
+[20] H. Chaudhary, S. Capozziello, V. K. Sharma, G. Mustafa, Does DESI DR2 Challenge ΛCDM Paradigm?, Astrophys. J.
+     992 (2) (2025) 194.
+[21] H. Chaudhary, V. K. Sharma, S. Capozziello, G. Mustafa, Probing Departures from ΛCDM by Late-time Datasets,
+     Astrophys. J. Suppl. 283 (2) (2026) 73. arXiv:2510.08339, doi:10.3847/1538-4365/ae4b3f.
+[22] V. Kumar Sharma, R. Kumar, H. Chaudhary, F. Atamurotov, Does DESI DR2 hint at energy transfer from dark energy
+     to dark matter?, JHEAp 53 (2026) 100644. doi:10.1016/j.jheap.2026.100644.
+[23] R. Fardon, A. E. Nelson, N. Weiner, Dark energy from mass varying neutrinos, JCAP 10 (2004) 005.
+[24] A. W. Brookfield, C. van de Bruck, D. F. Mota, D. Tocchini-Valentini, Cosmology with massive neutrinos coupled to dark
+     energy, Phys. Rev. lett. 96 (6) (2006).
+[25] E. W. Kolb, M. S. Turner, The Early Universe, Addison-Wesley, Redwood City, USA, 1990.
+[26] S. Dodelson, Modern Cosmology, Academic Press, San Diego, USA, 2003.
+[27] J. Lesgourgues, S. Pastor, Massive neutrinos and cosmology, Physics Reports 429 (6) (2006) 307–379.
+[28] Y. Fukuda, et al., Evidence for oscillation of atmospheric neutrinos, Physical Review Letters 81 (1998) 1562–1567.
+[29] Q. R. Ahmad, et al., Direct evidence for neutrino flavor transformation from neutral-current interactions in the sudbury
+     neutrino observatory, Physical Review Letters 89 (2002) 011301.
+[30] P. D. Group, R. L. Workman, et al., Review of particle physics, Progress of Theoretical and Experimental Physics 2022 (8)
+     (2022) 083C01.
+[31] R. N. Mohapatra, P. B. Pal, Massive Neutrinos in Physics and Astrophysics, 3rd Edition, World Scientific, Singapore,
+     2004.
+[32] C. Giunti, C. W. Kim, Fundamentals of Neutrino Physics and Astrophysics, Oxford University Press, 2007.
+[33] R. D. Peccei, Neutrino models of dark energy, Physical Review D 71 (2005) 023527. doi:10.1103/PhysRevD.71.023527.
+                                                                                                                               18
+
+[34] B. Wang, E. Abdalla, F. Atrio-Barandela, D. Pavon, Dark matter and dark energy interactions: theoretical challenges,
+     cosmological implications and observational signatures, Reports on Progress in Physics 79 (9) (2016) 096901.
+[35] M. Abdul Karim, et al., DESI DR2 results. II. Measurements of baryon acoustic oscillations and cosmological constraints,
+     Phys. Rev. D 112 (8) (2025) 083515. arXiv:2503.14738, doi:10.1103/tr6y-kpc6.
+[36] R. Fardon, A. E. Nelson, N. Weiner, Dark energy from mass-varying neutrinos, Journal of Cosmology and Astroparticle
+     Physics 2004 (10) (2004) 005.
+[37] A. W. Brookfield, C. van de Bruck, D. F. Mota, D. Tocchini-Valentini, Cosmology with massive neutrinos coupled to dark
+     energy, Physical Review Letters 96 (2006) 061301. doi:10.1103/PhysRevLett.96.061301.
+[38] L. Amendola, M. Baldi, C. Wetterich, Growing neutrino quintessence, Physical Review D 78 (2008) 023015.
+[39] N. Afshordi, M. Zaldarriaga, K. Kohri, On the stability of dark energy with mass-varying neutrinos, Physical Review D
+     72 (2005) 065024.
+[40] M. A. Karim, J. Aguilar, S. Ahlen, S. Alam, L. Allen, C. Allende Prieto, O. Alves, A. Anand, U. Andrade, E. Armengaud,
+     et al., Desi dr2 results ii: Measurements of baryon acoustic oscillations and cosmological constraints, arXiv e-prints (2025)
+     arXiv–2503.
+[41] D. Brout, D. Scolnic, B. Popovic, A. G. Riess, A. Carr, J. Zuntz, R. Kessler, T. M. Davis, S. Hinton, D. Jones, et al., The
+     pantheon+ analysis: cosmological constraints, The Astrophysical Journal 938 (2) (2022) 110.
+[42] T. Abbott, M. Acevedo, M. Aguena, A. Alarcon, S. Allam, O. Alves, A. Amon, F. Andrade-Oliveira, J. Annis, P. Armstrong,
+     et al., The dark energy survey: Cosmology results with˜ 1500 new high-redshift type ia supernovae using the full 5-year
+     dataset, arXiv preprint arXiv:2401.02929 (2024).
+[43] D. Rubin, G. Aldering, M. Betoule, A. Fruchter, X. Huang, A. G. Kim, C. Lidman, E. Linder, S. Perlmutter, P. Ruiz-
+     Lapuente, et al., Union through unity: Cosmology with 2000 sne using a unified bayesian framework, The Astrophysical
+     Journal 986 (2) (2025) 231.
+[44] L. Amendola, Coupled quintessence, Phys. Rev. D 62 (2000) 043511.
+[45] G. R. Farrar, P. J. E. Peebles, Interacting dark matter and dark energy, The Astrophysical Journal 604 (1) (2004) 1–11.
+[46] C. Wetterich, The cosmon model for an asymptotically vanishing time-dependent cosmological “constant” (1994).
+[47] S. Dodelson, Modern Cosmology, Academic Press, 2003.
+[48] S. Weinberg, Cosmology, Oxford University Press, 2008.
+[49] V. Mukhanov, Physical Foundations of Cosmology, Cambridge University Press, 2005.
+[50] A. R. Liddle, D. H. Lyth, Cosmological Inflation and Large-Scale Structure, Cambridge University Press, 2000.
+[51] H.Bundeliya, et al., Inflation Driven by Scalar-Neutrino Coupling in a Mass-Varying Neutrino Framework, Chin. Phys. C
+     50 (2026) 055106. doi:10.1088/1674-1137/ae432b.
+[52] A. W. Brookfield, C. van de Bruck, L. M. Hall, D. F. Mota, Cosmology with massive neutrinos coupled to dark energy,
+     Physical Review D 73 (2006) 083515. doi:10.1103/PhysRevD.73.083515.
+[53] D. Foreman-Mackey, D. W. Hogg, D. Lang, J. Goodman, emcee: The MCMC Hammer, Publications of the Astronomical
+     Society of the Pacific 125 (925) (2013) 306. arXiv:1202.3665, doi:10.1086/670067.
+[54] A. Lewis, Getdist: a python package for analysing monte carlo samples, Journal of Cosmology and Astroparticle Physics
+     2025 (08) (2025) 025.
+[55] É. Aubourg, S. Bailey, J. E. Bautista, F. Beutler, V. Bhardwaj, D. Bizyaev, M. Blanton, M. Blomqvist, A. S. Bolton,
+     J. Bovy, et al., Cosmological implications of baryon acoustic oscillation measurements, Physical Review D 92 (12) (2015)
+     123516.
+[56] L. A. Escamilla, W. Giarè, E. Di Valentino, R. C. Nunes, S. Vagnozzi, The state of the dark energy equation of state circa
+     2023, Journal of Cosmology and Astroparticle Physics 2024 (05) (2024) 091.
+

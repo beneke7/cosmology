@@ -1,6 +1,6 @@
-# Seed source collection
+# Maintained source collection
 
-Prepared 2026-09-23. Downloaded is an access state, not a full-text reading claim. See reading_cards/ and the future campaign claim map for reading depth.
+Seeded 2026-09-23; updated 2026-09-24. Downloaded is an access state, not a full-text reading claim. See reading_cards/ and work/literature/reading_map.md for reading depth.
 
 | Source | Type | Access state | Local path |
 |---|---|---|---|
@@ -13,6 +13,12 @@ Prepared 2026-09-23. Downloaded is an access state, not a full-text reading clai
 | [DES-Dovekie updated Type Ia supernova calibration and cosmology](https://arxiv.org/abs/2511.07517) | paper | verified_existing | papers/des_dovekie.pdf |
 | [ACT DR6 power spectra, likelihoods and LCDM parameters](https://arxiv.org/abs/2503.14452) | paper | verified_existing | papers/act_dr6.pdf |
 | [DESI DR2 Lyman-alpha Alcock-Paczynski analysis](https://arxiv.org/abs/2607.27410) | paper | verified_existing | papers/desi_lya_ap.pdf |
+| [DESI DR2 Lyα BAO Results I](https://arxiv.org/abs/2503.14739) | paper | Full local v3 PDF/text read; SHA-256 c6d4688027e9e83bebba85bfb05d68a6cdd3603f30b222ed8e2d26ca66a237a8 | papers/desi_lya_bao_results_i.pdf |
+| [DESI DR2 Lyα full-shape validation companion](https://arxiv.org/abs/2607.27411) | paper | Full v2 arXiv HTML/text read; local PDF has internal parser warnings and was not visually page-audited; SHA-256 61762ef65cb8da02950b602b66505a63f7472d145bc3b49ba9e753f1d1719dde | papers/desi_lya_ap_validation.pdf |
+| [Wang et al., dynamical-DE parameterizations with DR2](https://arxiv.org/abs/2609.10567) | paper | Full local v1 PDF/text and physical-assumption review; see `work/literature/physical_model_update.md`; SHA-256 4c37cbcdb500b85998b76d54798fb33a36bd53ce252a07d1c85d2186ac7ff511 | papers/dynamical_de_desi_dr2_2026.pdf |
+| [Yang et al., interacting DM-DE with DR2](https://arxiv.org/abs/2609.05660) | paper | Full local v1 PDF/text and equation/perturbation review; accepted PRD per arXiv; see `work/literature/physical_model_update.md`; SHA-256 0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c | papers/interacting_de_desi_dr2_2026.pdf |
+| [Mukherjee et al., metastable DE with DR2 and DR1 full shape](https://arxiv.org/abs/2608.01844) | paper | Full local v1 PDF/text and transfer-sector review; see `work/literature/physical_model_update.md`; SHA-256 0e7d227fa114ee3d51dc00d1675f74a227e3c2a4c00212990ba03738d4e276ce | papers/metastable_de_desi_dr2_2026.pdf |
+| [Bundeliya et al., mass-varying-neutrino DE with DR2](https://arxiv.org/abs/2609.25090) | paper | Full local v1 PDF/text and coupling/approximation review; see `work/literature/physical_model_update.md`; SHA-256 7a5e2999bf4bf0a38a728092251d2d6d6ffd302915e5321c814cd028f14390a7 | papers/mass_varying_neutrino_de_desi_dr2_2026.pdf |
 | [Supernovae Unite](https://arxiv.org/abs/2609.05053) | paper | verified_existing | papers/sn_unite.pdf |
 | [Field equation of thermodynamic gravity and galactic rotational curves](https://arxiv.org/abs/2306.01825) | paper | verified_existing | papers/tg_preprint.pdf |
 | [SPARC mass models for 175 disk galaxies](https://arxiv.org/abs/1606.09251) | paper | verified_existing | papers/sparc_master.pdf |
@@ -43,8 +49,8 @@ Prepared 2026-09-23. Downloaded is an access state, not a full-text reading clai
 | [CosmoPower-JAX](https://github.com/dpiras/cosmopower-jax) | code | not_selected | cosmopower_jax_code.txt |
 | [Exhaustive symbolic regression](https://github.com/DeaglanBartlett/ESR) | code | not_selected | esr.txt |
 | [Roman launch and commissioning schedule](https://www.nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-space-telescope-launches/) | documentation | not_selected | documentation/roman_launch.html |
-| [DESI DR2 Lyα BAO Results I](https://arxiv.org/abs/2503.14739) | paper | full arXiv HTML read; no local artifact | external source; same DR2 Lyα sample family as Results IV |
-| [DESI DR2 Lyα full-shape validation companion](https://arxiv.org/abs/2607.27411) | paper | full arXiv HTML read; no local artifact | external source; validation, not independent data |
+| [DESI DR2 Lyα BAO Results I](https://arxiv.org/abs/2503.14739) | paper | duplicate discovery entry; see local full PDF/text above | same DR2 Lyα sample family as Results IV |
+| [DESI DR2 Lyα full-shape validation companion](https://arxiv.org/abs/2607.27411) | paper | duplicate discovery entry; see full HTML/text and local PDF caveat above | validation, not independent data |
 | [Chaudhary et al. DESI DR2/SN reanalysis](https://arxiv.org/abs/2508.10514) | paper | full arXiv HTML read; no local artifact | alternate inference on overlapping public data |
 | [Efstathiou, BAO from a Different Angle](https://arxiv.org/abs/2505.02658) | paper | full arXiv HTML read; no local artifact | alternative interpretation, not new survey data |
 | [Pszota–Ván 2024 thermodynamic gravity](https://doi.org/10.1016/j.dark.2024.101660) | user-provided paper | full local PDF read | user_provided/pszota_van_2024.pdf; SHA-256 in sources.json |

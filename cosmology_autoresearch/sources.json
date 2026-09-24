@@ -114,7 +114,8 @@
       "filename": "papers/desi_lya_ap.pdf",
       "download_url": "https://arxiv.org/pdf/2607.27410",
       "arxiv_id": "2607.27410",
-      "read_status": "not_read_by_overnight_run"
+      "read_status": "full_pdf_and_text_read_v3_2026-08-04",
+      "note": "Exact v3 PDF and searchable text are local; SHA-256 6fcc44addcd8843a46fc6016753955a5f16c7a3b2593c5c8e74250dc1c632674. Results IV supersedes rather than adds to the overlapping DR2 Ly-alpha BAO representation in the current 13-row vector; no joint replacement covariance is available locally."
     },
     {
       "id": "sn_unite",
@@ -450,8 +451,11 @@
       "title": "DESI DR2 Ly-alpha BAO Results I",
       "url": "https://arxiv.org/abs/2503.14739",
       "priority": "core",
-      "fetch": false,
-      "note": "Full arXiv HTML read in the literature pass (v3, 2025-06-30). Earlier compressed BAO result from the same DR2 Ly-alpha data family as Results IV; not an independent factor. No local full-text artifact was saved."
+      "fetch": true,
+      "filename": "papers/desi_lya_bao_results_i.pdf",
+      "download_url": "https://arxiv.org/pdf/2503.14739",
+      "arxiv_id": "2503.14739",
+      "note": "Exact v3 PDF is being added because Results I supplies the earlier compressed BAO representation from the same DR2 Ly-alpha sample family as Results IV. It is an overlapping data representation, not an independent factor."
     },
     {
       "id": "desi_lya_ap_validation",
@@ -459,8 +463,11 @@
       "title": "DESI DR2 Ly-alpha full-shape validation companion",
       "url": "https://arxiv.org/abs/2607.27411",
       "priority": "core",
-      "fetch": false,
-      "note": "Full arXiv HTML read in the literature pass (v2, 2026-08-04). Same collaboration and survey sample; a validation study, not independent data confirmation. No local full-text artifact was saved."
+      "fetch": true,
+      "filename": "papers/desi_lya_ap_validation.pdf",
+      "download_url": "https://arxiv.org/pdf/2607.27411",
+      "arxiv_id": "2607.27411",
+      "note": "Exact v2 PDF is being added to review mock validation and the scope of growth/perturbation diagnostics. It is a companion on the same DR2 survey/sample, not independent data confirmation."
     },
     {
       "id": "chaudhary_desi_dr2_evidence",
@@ -510,7 +517,7 @@
     },
     {
       "id": "codata_2022_constants",
-      "kind": "reference",
+      "kind": "documentation",
       "title": "CODATA 2022 recommended values of the fundamental physical constants",
       "url": "https://physics.nist.gov/cuu/pdf/JPCRD2022CODATA.pdf",
       "priority": "core",
@@ -528,7 +535,7 @@
     },
     {
       "id": "iau_2015_resolution_b2",
-      "kind": "reference",
+      "kind": "documentation",
       "title": "IAU 2015 Resolution B2: recommended nominal conversion constants",
       "url": "https://iauarchive.eso.org/static/resolutions/IAU2015_English.pdf",
       "priority": "core",
@@ -537,12 +544,60 @@
     },
     {
       "id": "pdg_2024_neutrinos_cosmology",
-      "kind": "reference",
+      "kind": "documentation",
       "title": "Review of Particle Physics 2024: Neutrinos in Cosmology",
       "url": "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-neutrinos-in-cosmology.pdf",
       "priority": "core",
       "fetch": false,
       "note": "Targeted Eq. (26.1) check for effective relativistic density normalization; the lane explicitly notes the massless-neutrino approximation and does not apply it as DESI's full massive-neutrino model."
+    },
+    {
+      "id": "dynamical_de_desi_dr2_2026",
+      "kind": "paper",
+      "title": "Study of dynamical dark energy using DESI DR2 BAO, CMB, and Type Ia Supernovae data",
+      "url": "https://arxiv.org/abs/2609.10567",
+      "priority": "core",
+      "fetch": true,
+      "filename": "papers/dynamical_de_desi_dr2_2026.pdf",
+      "download_url": "https://arxiv.org/pdf/2609.10567",
+      "arxiv_id": "2609.10567",
+      "note": "Current v1, submitted 2026-09-01; phenomenological CPL/BA/EXP/LOG/JBP comparison on overlapping public BAO/CMB/SN data. Retained to audit physical realization, parameter boundaries and dataset/sample sensitivity; parameterized w(a) preference alone is not a stable field-theory model."
+    },
+    {
+      "id": "interacting_de_desi_dr2_2026",
+      "kind": "paper",
+      "title": "Do DESI-DR2 BAO data imply a coupling of dark matter and dark energy?",
+      "url": "https://arxiv.org/abs/2609.05660",
+      "priority": "core",
+      "fetch": true,
+      "filename": "papers/interacting_de_desi_dr2_2026.pdf",
+      "download_url": "https://arxiv.org/pdf/2609.05660",
+      "arxiv_id": "2609.05660",
+      "note": "Current v1, submitted 2026-09-04; arXiv page reports acceptance by PRD. Explicit Q=Gamma rho_x interaction motivates checking conservation/sign convention and perturbation closure; uses overlapping Planck/DESI DR2/SN compilations and abstract reports Bayesian evidence still favors LambdaCDM."
+    },
+    {
+      "id": "metastable_de_desi_dr2_2026",
+      "kind": "paper",
+      "title": "Revisiting Metastable Dark Energy in Light of DESI DR2 BAO and DESI DR1 Full-Shape Measurements",
+      "url": "https://arxiv.org/abs/2608.01844",
+      "priority": "core",
+      "fetch": true,
+      "filename": "papers/metastable_de_desi_dr2_2026.pdf",
+      "download_url": "https://arxiv.org/pdf/2608.01844",
+      "arxiv_id": "2608.01844",
+      "note": "Current v1, submitted 2026-08-03; compares effective DE decay, transfer to dark matter, and transfer to dark radiation using overlapping BAO/SN/CMB and DESI DR1 full-shape. Retained to distinguish physical transfer sectors and inspect assumptions; abstract reports CMB combinations consistent with zero decay."
+    },
+    {
+      "id": "mass_varying_neutrino_de_desi_dr2_2026",
+      "kind": "paper",
+      "title": "Comparing Mass-Varying Neutrino Dark Energy Models with DESI DR2: Cosmological Constraints and Bayesian Evidence",
+      "url": "https://arxiv.org/abs/2609.25090",
+      "priority": "core",
+      "fetch": true,
+      "filename": "papers/mass_varying_neutrino_de_desi_dr2_2026.pdf",
+      "download_url": "https://arxiv.org/pdf/2609.25090",
+      "arxiv_id": "2609.25090",
+      "note": "Current v1, submitted 2026-09-19; conformal neutrino-mass coupling, including an adiabatic minimum-tracking case. Inspect whether perturbative stability and neutrino-sector assumptions are treated; evidence is reported as dataset/prior dependent and not uniformly favoring coupling."
     }
   ]
 }

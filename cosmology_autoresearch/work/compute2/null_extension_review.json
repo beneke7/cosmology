@@ -1,0 +1,140 @@
+{
+  "status": "independently_audited_from_saved_realization_arrays",
+  "interpretation": "Parametric-bootstrap calibration of a finite profile search under the fitted LCDM null. These tail fractions and intervals are not posterior p-values, model evidence, or discovery significance.",
+  "inputs": {
+    "extension": {
+      "path": "experiments/bao_robustness/null_extension_1000_seed20260925.json",
+      "sha256": "5063ae50f267477b41febd30eabe00c3167b0ccb2d826cd94f3fc966dc025693",
+      "n_mocks": 1000,
+      "random_seed": 20260925
+    },
+    "original": {
+      "path": "experiments/bao_robustness/result.json",
+      "sha256": "0f477285029024fa359740e726b46f2abf8c87ea8704f488d8ad6658c3fc2a3e",
+      "n_mocks": 200,
+      "random_seed": 20260924
+    },
+    "optimizer_recheck": {
+      "path": "experiments/bao_robustness/null_extension_1000_optimizer_recheck.json",
+      "sha256": "69829e76be7139edceb7ee7e9699bcc058fa2f8b8ed75bf056c7bc15fd305c5b",
+      "n_rechecked": 282
+    },
+    "data_hashes_match_current_files": true,
+    "shared_fit_code_hashes_match_current_files": true,
+    "sha256": {
+      "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "scripts/run_bao_robustness.py": "54cb6d78b45f0b9a495bdf8733459ccef6b6a9b2cfc6cc5e8c835a602a09ebcb",
+      "scripts/background_bao.py": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2"
+    }
+  },
+  "observed_search_reproduction": {
+    "model_set": ["lcdm", "constant_w", "CPL"],
+    "cpl_w0_upper_bounds_searched": [-0.3, -0.1, 0.0, 0.1],
+    "shape_bounds": {
+      "lcdm": {"Omega_m": [0.05, 0.6]},
+      "wcdm": {"Omega_m": [0.05, 0.6], "w0": [-2.0, -0.3]},
+      "cpl": {"Omega_m": [0.05, 0.6], "w0_lower": -2.0, "w0_upper_search_values": [-0.3, -0.1, 0.0, 0.1], "wa": [-3.0, 3.0]}
+    },
+    "profiled_alpha_bounds": [1e-6, 10000.0],
+    "optimizer_seed_each_fit": 20260923,
+    "search_contract_matches_original_and_extension": true,
+    "selected_candidate_original_and_extension": "cpl_w0_upper_0.1",
+    "observed_statistic_definition": "best_LCDM_chi2 minus minimum chi2 among searched wCDM/CPL candidates, per saved start budget",
+    "statistics": {
+      "16_starts": {
+        "original": 4.652440971036443,
+        "extension": 4.652440971036443,
+        "recomputed_from_saved_observed_candidate_fits": 4.652440971036443,
+        "absolute_mismatch": 0.0
+      },
+      "64_starts": {
+        "original": 4.65244097108304,
+        "extension": 4.65244097108304,
+        "recomputed_from_saved_observed_candidate_fits": 4.65244097108304,
+        "absolute_mismatch": 0.0
+      }
+    }
+  },
+  "raw_realization_array_audit": {
+    "count_rule": "count statistic >= original observed statistic",
+    "quantile_method": "NumPy linear sample quantile",
+    "results": {
+      "16_starts": {
+        "observed_delta_chi2": 4.652440971036443,
+        "extension": {
+          "n": 1000,
+          "exceedances": 66,
+          "fraction": 0.066,
+          "clopper_pearson_95pct": [0.05140856601891847, 0.08320605046140275],
+          "q95": 4.994039714281136
+        },
+        "original": {
+          "n": 200,
+          "exceedances": 17,
+          "fraction": 0.085,
+          "clopper_pearson_95pct": [0.05029591863025728, 0.13260516582955234],
+          "q95": 5.843864338930478
+        },
+        "pooled_disjoint_seeds": {
+          "n": 1200,
+          "exceedances": 83,
+          "fraction": 0.06916666666666667,
+          "clopper_pearson_95pct": [0.05546403511569528, 0.08502360230691912],
+          "q95": 5.169980759924629
+        }
+      },
+      "64_starts": {
+        "observed_delta_chi2": 4.65244097108304,
+        "extension": {
+          "n": 1000,
+          "exceedances": 66,
+          "fraction": 0.066,
+          "clopper_pearson_95pct": [0.05140856601891847, 0.08320605046140275],
+          "q95": 4.994039714292631
+        },
+        "original": {
+          "n": 200,
+          "exceedances": 17,
+          "fraction": 0.085,
+          "clopper_pearson_95pct": [0.05029591863025728, 0.13260516582955234],
+          "q95": 5.843864338931675
+        },
+        "pooled_disjoint_seeds": {
+          "n": 1200,
+          "exceedances": 83,
+          "fraction": 0.06916666666666667,
+          "clopper_pearson_95pct": [0.05546403511569528, 0.08502360230691912],
+          "q95": 5.169980759958949
+        }
+      }
+    }
+  },
+  "pcg64_seed_stream_audit": {
+    "generation_as_stored_in_source": "np.random.default_rng(seed).standard_normal((n_mocks, 13)); mock = fitted_LCDM_mean + normals @ covariance_cholesky.T",
+    "bit_generator": "PCG64",
+    "seeds_are_distinct": true,
+    "regenerated_streams_repeat_bitwise": true,
+    "first_13_draw_arrays_differ_between_seeds": true,
+    "normal_array_sha256_little_endian_float64": {
+      "20260924_200x13": "a5265eba65345219facd2ce66e1edf653f7a2a872f51a79905db228fe1f3de21",
+      "20260925_1000x13": "b9cf266dee55dd1f67366c030273a27ae1fb107691baf8bfc3eab07fa407c985"
+    },
+    "stream_scope_note": "The result records persist each realization's search statistics, not the mock data vectors. This audit verifies deterministic distinct PCG64 streams from the recorded seeds; it does not refit every mock or reproduce each stored statistic from an archived mock vector."
+  },
+  "optimizer_recheck_audit": {
+    "records": 282,
+    "all_original_candidates_marked_nonconverged_and_abnormal": true,
+    "direct_objective_recalculation_max_abs_error": 2.3447910280083306e-13,
+    "best_retry_minus_original_direct_chi2_range": [-4.1794656624460913e-10, 0.0],
+    "retry_candidates_improving_by_more_than_1e-7": 0,
+    "all_three_retries_successful_per_record": true,
+    "total_alternative_optimizer_runs": 846,
+    "stored_summary_matches_recalculation": true
+  },
+  "method_limits": [
+    "The pooled sample combines the two stored disjoint seed runs; it is a finite Monte Carlo estimate for the stated Gaussian LCDM null and fixed search contract.",
+    "Clopper-Pearson intervals quantify binomial Monte Carlo count uncertainty only.",
+    "No full 1,200-mock search, posterior sampling, evidence calculation, or discovery-significance calibration was run in this audit."
+  ]
+}
