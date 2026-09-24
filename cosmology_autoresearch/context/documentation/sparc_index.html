@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>SPARC</title>
+
+<style>
+body {
+  background-color:lightgrey;
+  width:80%;
+  padding:50px;
+}
+p {
+  font-family:"Arial";
+  line-height:150%;
+}
+.p1 {
+  font-size:15px;
+  text-align:center;
+}
+.p2 {
+  font-size:20px;
+  text-align:justify;
+  text-justify:inter-word;
+}
+</style>
+
+</head>
+
+<body TEXT="black" VLINK="darkblue" LINK="blue">
+
+<center><img src="SPARCcooltext1.png", align='center', width="800" /></center>
+
+<p class="p2">
+SPARC is a database of 175 late-type galaxies (spirals and irregulars) with Spitzer photometry at 3.6 mu (tracing the stellar mass distribution) and high-quality HI+Halpha rotation curves (tracing the gravitational potential out to large radii). SPARC spans a wide range in stellar masses (5 dex), surface brightnesses (>3 dex), and gas fractions. On this webpage you can download SPARC data and access our scientific publications.</p>
+<p class="p2"> 
+If you are using data from this website in your scientific publications, please cite the SPARC <a href="http://adsabs.harvard.edu/abs/2016arXiv160609251L" target=_new">master paper</a>. References to the original HI+Halpha rotation curves are given in <a href="SPARC_Lelli2016c.mrt" target="_new"> Table1.mrt</a>. Please consider citing the original rotation-curve sources if relevant to your publication.
+</p>
+
+<p class="p2">
+ <b>CORE TEAM</b><br>
+ <a href="http://www.lellifederico.com" target="_new"> Federico Lelli</a> |
+ <a href="http://astroweb.case.edu/ssm/" target="_new"> Stacy McGaugh</a> |
+ <a href="http://abyss.uoregon.edu/~js/" target="_new"> James Schombert</a>
+</p>
+
+<p class="p2">
+ <b>SPARC BUZZ</a></b><br>
+List of published papers: <a href="publications.html" target="_new">here</a>.<br>
+List of related papers: <a href="related.html" target="_new">here</a>.<br>
+List of popular articles: <a href="press.html" target="_new">here</a>.
+</p>
+
+<p class="p2">
+ <b>BASIC SPARC DATA</b> (from <a href="http://adsabs.harvard.edu/abs/2016arXiv160609251L" target="_new">Lelli+2016c</a>)<br>
+ Galaxy Sample: <a href="SPARC_Lelli2016c.mrt" target="_new"> Table1.mrt</a> (with references to the original rotation-curve data)<br>
+ Photometric Profiles: <a href="sfb_LTG.zip"> zip file</a> (on sky values in mag/arcsec^2 with no corrections for disk inclination or extinction)<br>
+ Bulge-Disk Decompositions: <a href="BulgeDiskDec_LTG.zip"> zip file</a> (uncorrected for inclination, some exponential profiles are extrapolated at large radii)<br>
+ Bulge Luminosities: <a href="Bulges.mrt"> Table</a> (WARNING: our decompositions are non-parametric and bulges are linearly extrapolated at large radii)<br>
+ Newtonian Mass Models: <a href="MassModels_Lelli2016c.mrt" target="_new"> Table2.mrt</a> |<a href="Rotmod_LTG.zip" target="_new"> zip file</a> (rotation curves, baryonic contributions, inclination-corrected stellar density profiles)<br>
+ WISE Stellar Masses: <a href="wise_ii.table1" target="_new">WISE II Table1</a> (stellar masses based on WISE luminosities and optical colors)<br>
+</p>
+
+<p class="p2"><b>SOFTWARE</b> </br>
+<a href="BayesLineFit.zip" target="_new"> BayesLineFit</a>: MCMC code in Python-3 to fit a line to data with errors in both coordinates and intrinsic scatter (see <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.3267L/abstract" target="_new">Lelli+2019</a>)<br>
+<a href="http://abyss.uoregon.edu/~js/archangel/" target="_new">Archangel</a>: Galaxy Photometry System for frame cleaning, ellipse fitting, surface brightness profiles, etc. (see <a href="https://ui.adsabs.harvard.edu/abs/2007astro.ph..3646S/abstract" target="_new">Schombert 2007)</a><br>
+ 
+<p class="p2">
+<b>SCALING RELATIONS</b><br>
+ Baryonic Tully-Fisher Relation: <a href="BTFR_Lelli2019.mrt" target="_new"> 2019 Data</a> (from <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.3267L/abstract" target="_new">Lelli+2019</a>) |
+<a href="BTFR_Lelli2016a.mrt" target="_new"> 2016 Data</a> (from <a href="http://adsabs.harvard.edu/abs/2016ApJ...816L..14L" target="_new">Lelli+2016a</a>)<br>
+ Central Surface Density Relation: <a href="CDR_Lelli2016b.mrt" target="_new"> 2016 Data</a> (from <a href="http://adsabs.harvard.edu/abs/2016ApJ...827L..19L" target="_new">Lelli+2016b</a>)<br>
+ Radial Acceleration Relation: <a href="RARbins.mrt" target="_new"> Binned Data</a> | <a href="RAR.mrt" target="_new"> All Data</a> (same as in <a href="http://adsabs.harvard.edu/abs/2016arXiv161008981L" target=_new">Lelli+2017</a>;
+<a href="http://adsabs.harvard.edu/abs/2016arXiv160905917M" target=_new">McGaugh+2016</a>)
+</p>
+
+<p class="p2">
+ <b>FIGURES & VIDEOS</b><br>
+ Mass Models for 175 SPARC LTGs: <a href="MassModels_LTG.zip" target="_new"> .pdf.zip</a> |
+ <a href="MassModels_LTG.png.zip" target="_new"> .png.zip</a> (from <a href="http://adsabs.harvard.edu/abs/2016arXiv160609251L" target=_new">Lelli+2016c</a>)<br>
+Mass Models for 16 Rotating ETGs: <a href="MassModels_ETG.zip" target="_new"> .pdf.zip</a> |
+ <a href="MassModels_ETG.png.zip" target="_new"> .png.zip</a> (from <a href="http://adsabs.harvard.edu/abs/2016arXiv161008981L" target=_new">Lelli+2017a</a>)<br>
+ Radial Acceleration Relation Video: <a href="Video.html" target="_new"> Video Player</a> | 
+ <a href="RARsnapshots.zip"> Individual Frames</a>
+(from <a href="http://adsabs.harvard.edu/abs/2016arXiv161008981L" target=_new">Lelli+2017a</a>)<br>
+ Individual RAR fits to 175 LTGs: <a href="MCMCfits.tar.gz" target="_new"> .pdf.tar.gz</a> (from <a href="http://adsabs.harvard.edu/abs/2018arXiv180300022L" target=_new">Li+2018</a>)<br>
+</p>
+
+<p class="p2"><b>DARK MATTER HALOS</b></br>
+ Compressed Halo Fits: <a href="PXL/Compress_Fit.tar.gz" target="_new">Fit plots</a> (from <a href="https://www.aanda.org/articles/aa/full_html/2022/09/aa43916-22/aa43916-22.html#top_full"> Li+2022</a>)<br>
+ Dark Matter Halo Fits: <a href="PXL/Fits.tar.gz" target="_new">Fit plots</a> | <a href="PXL/CornerPlot.tar.gz" target="_new">Triangle plots</a> | <a href="PXL/chain" target="_new">MCMC Chains</a> (from <a href="https://ui.adsabs.harvard.edu/abs/2020ApJS..247...31L/abstract" target=_new"> Li+2020</a>)<br>
+ HI linewidths vs Halo Mass: <a href="WP50_M200.mrt" target="_new">WP50_M200.mrt</a> (from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191100517L/abstract" target=_new"> Li+2019b</a>)<br>
+ Empirical Halo Mass Functions: <a href="HMF_NFW.mrt" target="_new">NFW</a> | <a href="HMF_Einasto.mrt" target="_new">Einasto</a> | <a href="HMF_DC14.mrt" target="_new">DC14</a> (from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191100517L/abstract" target=_new"> Li+2019b</a>)<br>
+</p>
+
+<p class="p2">
+ <b>EARLY-TYPE GALAXIES DATA</b> (from <a href="http://adsabs.harvard.edu/abs/2016arXiv161008981L" target=_new">Lelli+2017a</a>)<br>
+ Galaxy Sample: <a href="ETG_Lelli2017.mrt" target="_new"> ETG_Lelli2017.mrt</a> (drawn from <a href="http://www-astro.physics.ox.ac.uk/atlas3d/" target="_new">Atlas3D</a>)<br>
+ Photometric Profiles: <a href="sfb_ETG.zip"> zip file</a> (on sky values in mag/arcsec^2 with no corrections for disk inclination or extinction)<br>
+ Bulge-Disk Decompositions: <a href="BulgeDiskDec_ETG.zip"> zip file</a> (uncorrected for inclination, some exponential profiles are extrapolated at large radii)<br>
+ Mass Models: <a href="Rotmod_ETG.zip" target="_new"> zip file</a> (velocity data, baryonic contributions, inclination-corrected stellar density profiles)<br>
+</p>
+
+<p class="p2">
+ <b>MAXIMUM DISK DATA</b> (from <a href="https://arxiv.org/abs/1802.09967" target=_new">Starkman+2018</a>)<br>
+ Maximum-Disk Galaxy Data: <a href="MaximumDiskData.mrt" target="_new">MaximumDiskData.mrt</a><br>
+ Maximum-Disk Mass Models: <a href="MaximumDiskMassModels.mrt" target="_new">MaximumDiskMassModels.mrt</a><br>
+ Pyhton Code: <a href="MaximumDiskPhytonCode.zip"> zip file</a><br>
+</p>
+
+<i>Maintained by Federico Lelli (LelliF@cardiff.ac.uk)<br>
+<i>Last update: </i> 29 May 2020<br>
+</body>
+</html>

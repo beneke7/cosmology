@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dark Energy Survey Supernova Program 5YR &#8212; DES-SN-DR 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=3ee1c6c6" />
+    <link rel="stylesheet" type="text/css" href="_static/zerovm.css?v=bbc7d13e" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <script src="_static/documentation_options.js?v=2709fde1"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="_static/desfavicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="0 - DATA: Transient light curves from DES-SN" href="0_DATA.html" /> 
+  <script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="des-sn-dr" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/" /><meta name="readthedocs-http-status" content="200" /></head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="0_DATA.html" title="0 - DATA: Transient light curves from DES-SN"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">DES-SN-DR 0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Dark Energy Survey Supernova Program 5YR</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="dark-energy-survey-supernova-program-5yr">
+<h1>Dark Energy Survey Supernova Program 5YR<a class="headerlink" href="#dark-energy-survey-supernova-program-5yr" title="Link to this heading">¶</a></h1>
+<aside class="topic">
+<p class="topic-title">The DES Supernova Program 5-year Data release.</p>
+<p>The Dark Energy Survey Supernova Program (DES-SN) consisted on 5 years of observations using the Dark Energy Survey instrument, finding Type Ia Supernovae up to cosmological redshifts <span class="math notranslate nohighlight">\(z&gt;1.1\)</span>.</p>
+<p>This is the <strong>full public data release</strong> of DES-SN (DES-SN5YR) containing all data products used to compute the cosmological result from the full 5 years of photometrically classified supernovae (SNe) combined with a sample of low-redshift SNe.</p>
+<p><strong>Instructions to download the full data release and its accompanying python utility package can be found below.</strong></p>
+</aside>
+<section id="detailed-description-of-release-contents">
+<h2>Detailed description of release Contents<a class="headerlink" href="#detailed-description-of-release-contents" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="0_DATA.html">0 - DATA: Transient light curves from DES-SN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="0_DATA.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0_DATA.html#data-format">Data Format</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="1_SIMULATIONS.html">1 - SIMULATIONS: The DES-SN5YR mock simulations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_SIMULATIONS.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_SIMULATIONS.html#simulation-contents-released">Simulation contents released</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_SIMULATIONS.html#reproduce-the-simulations">Reproduce the simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2_LCFIT_MODEL.html">2 - LCFIT_MODEL: Light Curve Fitting SALT3 SED time-series</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_LCFIT_MODEL.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_LCFIT_MODEL.html#salt3-models">SALT3 models</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_CLASSIFICATION.html">3 - CLASSIFICATION: Classification probabilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_CLASSIFICATION.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_CLASSIFICATION.html#classifiers">Classifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_CLASSIFICATION.html#release-format">Release Format</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_DISTANCES_COVMAT.html">4 - DISTANCES_COVMAT: Distances and Covariance matrix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_DISTANCES_COVMAT.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_DISTANCES_COVMAT.html#hubble-diagram">Hubble Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_DISTANCES_COVMAT.html#global-parameters">Global Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_DISTANCES_COVMAT.html#covariance-matrices">Covariance matrices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_COSMOLOGY.html">5 - COSMOLOGY: SN likelihood and chains</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_COSMOLOGY.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_COSMOLOGY.html#likelihood">Likelihood</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_COSMOLOGY.html#chains">Chains</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6_DCR_CORRECTIONS.html">6 - DCR_CORRECTIONS: Wavelength-dependent Atmospheric Corrections</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_DCR_CORRECTIONS.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_DCR_CORRECTIONS.html#data-format">Data Format</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7_PIPPIN_FILES.html">7 - <code class="docutils literal notranslate"><span class="pre">Pippin</span></code> Framework Input Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_PIPPIN_FILES.html#overview">Overview</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="the-des-sn5yr-utility-package">
+<h2>The DES-SN5YR utility package<a class="headerlink" href="#the-des-sn5yr-utility-package" title="Link to this heading">¶</a></h2>
+<p>We release basic utilities for using this data. To install this package simply clone this github repo and install locally. This is also one way to obtain the full dataset.</p>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/BrunoSanchez/DES-SN-DR.git
+<span class="nb">cd</span><span class="w"> </span>DES-SN-DR
+python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</pre></div>
+</div>
+</section>
+<section id="acquiring-the-full-release-dataset">
+<h3>Acquiring the Full Release dataset<a class="headerlink" href="#acquiring-the-full-release-dataset" title="Link to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>downloaddessndr<span class="w"> </span>&lt;dest_dir&gt;
+</pre></div>
+</div>
+<p>After this, in order to find your dataset globally in your system you should set up the environment variables</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">DES5YRDR_DATA_ROOT</span><span class="o">=</span><span class="s1">&#39;&lt;dest_dir&gt;&#39;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">DES5YRDR_DATA</span><span class="o">=</span><span class="s1">&#39;&lt;dest_dir&gt;/DES-SN5YR&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="examples-of-use-of-this-data-release">
+<h2>Examples of use of this Data Release<a class="headerlink" href="#examples-of-use-of-this-data-release" title="Link to this heading">¶</a></h2>
+<p>We provide some Jupyter Notebooks with examples to load and read this data, and produce some example figures. These are in the <code class="docutils literal notranslate"><span class="pre">docs/tutorial</span></code> directory, or in the Tutorial section on [readthedocs](<a class="reference external" href="https://desdrtest.readthedocs.io">https://desdrtest.readthedocs.io</a>).</p>
+<p>This package provides some utilities that can be imported in a Python session as</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">dessndr</span><span class="w"> </span><span class="kn">import</span> <span class="n">utils</span><span class="p">,</span> <span class="n">data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">phot</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">PhotFITS</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">DES5YRDR_DATA</span><span class="p">,</span> <span class="s1">&#39;0_DATA/DES-SN5YR_DES&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lc</span> <span class="o">=</span> <span class="n">phot</span><span class="o">.</span><span class="n">get_lc</span><span class="p">(</span><span class="n">phot</span><span class="o">.</span><span class="n">cid_recs</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+<section id="des-5yr-tutorials">
+<h3>DES 5YR Tutorials<a class="headerlink" href="#des-5yr-tutorials" title="Link to this heading">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/01-load_data.html">DES SN 5YR Tutorial Part 1: Load DES Photometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/02-load_lcplot.html">DES SN 5YR Tutorial Part 3: Load LCPlot file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/03-Classification.html">DES SN 5YR Tutorial Part 3: Load DES SN Classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/04-HubbleDiagram.html">DES SN 5YR Tutorial Part 4: Hubble Diagram from DES 5YR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/05-LambdaDependentCorrections.html">DES SN 5YR Tutorial Part 5: Lambda Dependent corrections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/06-Cosmology-DESSN5YR_Flat_wCDM.html">DES SN 5YR Tutorial Part 6: Demonstrate cosmology analysis using Des SN 5 year</a></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="used-public-cosmology-codes">
+<h2>Used Public cosmology Codes<a class="headerlink" href="#used-public-cosmology-codes" title="Link to this heading">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://pippin.readthedocs.io/en/v1.0/">PIPPIN</a></p></li>
+<li><p><a class="reference external" href="https://cosmosis.readthedocs.io">CosmoSIS</a></p></li>
+<li><p><a class="reference external" href="https://baudren.github.io/montepython.html">MontePython</a></p></li>
+<li><p><a class="reference external" href="https://cobaya.readthedocs.io/">Cobaya</a></p></li>
+<li><p><a class="reference external" href="https://cosmologist.info/cosmomc/">CosmoMC</a></p></li>
+<li><p><a class="reference external" href="https://emcee.readthedocs.io">emcee</a></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="using-this-data">
+<h2>Using this Data<a class="headerlink" href="#using-this-data" title="Link to this heading">¶</a></h2>
+<p>Please always obtain the data from our official download links.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Version tags
+Always Check the tag versions to verify you are using the latest version of our data files.</p>
+</div>
+<section id="download-the-zip-from-zenodo">
+<h3>Download the .zip from Zenodo<a class="headerlink" href="#download-the-zip-from-zenodo" title="Link to this heading">¶</a></h3>
+<p>Download directly from our Zenodo release page (click in the badge):</p>
+<a class="reference external image-reference" href="https://doi.org/10.5281/zenodo.12720778"><img alt="https://zenodo.org/badge/DOI/10.5281/zenodo.12720778.svg" src="https://zenodo.org/badge/DOI/10.5281/zenodo.12720778.svg" /></a>
+<p>Or get it straight from a terminal with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://zenodo.org/records/12720778/files/DES-SN5YR-1.2.zip?download<span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+</section>
+<section id="clone-des-sn5yr-git-repository">
+<h3>Clone DES-SN5YR Git repository<a class="headerlink" href="#clone-des-sn5yr-git-repository" title="Link to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/des-science/DES-SN5YR
+</pre></div>
+</div>
+</section>
+</section>
+<section id="aknowledge-authorship-of-des-sn5yr">
+<h2>Aknowledge authorship of DES-SN5YR<a class="headerlink" href="#aknowledge-authorship-of-des-sn5yr" title="Link to this heading">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please cite these references in order to give credit to the rightful authors.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/link_gateway/2024arXiv240102929D/doi:10.48550/arXiv.2401.02929">DES Collaboration 2024</a> - The Dark Energy Survey: Cosmology Results With ~1500 New High-redshift Type Ia Supernovae Using The Full 5-year Dataset</p></li>
+<li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/link_gateway/2024arXiv240102945V/doi:10.48550/arXiv.2401.02945">Vincenzi et al. 2024</a> - The Dark Energy Survey Supernova Program: Cosmological Analysis and Systematic Uncertainties</p></li>
+<li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/link_gateway/2024ApJ...975....5S/doi:10.3847/1538-4357/ad739a">Sanchez et al. 2024</a> - Light curves and data release for the full Dark Energy Survey Supernova Program</p></li>
+<li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/link_gateway/2024arXiv240218690M/doi:10.48550/arXiv.2402.18690">Möller et al. 2024</a> - The Dark Energy Survey 5-year photometrically classified type Ia supernovae without host-galaxy redshifts</p></li>
+<li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/link_gateway/2023AJ....165..222L/doi:10.3847/1538-3881/acca15">Lee &amp; Acevedo et al. 2023</a> - The Dark Energy Survey Supernova Program: Corrections on Photometry Due to Wavelength-dependent Atmospheric Effects</p></li>
+<li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/link_gateway/2023MNRAS.519.3046K/doi:10.1093/mnras/stac3711">Kelsey et al. 2023</a> - Concerning colour: The effect of environment on type Ia supernova colour in the dark energy survey</p></li>
+<li><p><a class="reference external" href="https://ui.adsabs.harvard.edu/link_gateway/2020MNRAS.495.4040W/doi:10.1093/mnras/staa1302">Wiseman et al. 2020</a> - Supernova host galaxies in the dark energy survey: I. Deep coadds, photometry, and stellar masses</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="#">
+              <img class="logo" src="_static/desfavicon.png" alt="Logo of DES-SN-DR"/>
+            </a></p>
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Dark Energy Survey Supernova Program 5YR</a><ul>
+<li><a class="reference internal" href="#detailed-description-of-release-contents">Detailed description of release Contents</a></li>
+<li><a class="reference internal" href="#the-des-sn5yr-utility-package">The DES-SN5YR utility package</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#acquiring-the-full-release-dataset">Acquiring the Full Release dataset</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples-of-use-of-this-data-release">Examples of use of this Data Release</a><ul>
+<li><a class="reference internal" href="#des-5yr-tutorials">DES 5YR Tutorials</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#used-public-cosmology-codes">Used Public cosmology Codes</a></li>
+<li><a class="reference internal" href="#using-this-data">Using this Data</a><ul>
+<li><a class="reference internal" href="#download-the-zip-from-zenodo">Download the .zip from Zenodo</a></li>
+<li><a class="reference internal" href="#clone-des-sn5yr-git-repository">Clone DES-SN5YR Git repository</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#aknowledge-authorship-of-des-sn5yr">Aknowledge authorship of DES-SN5YR</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="0_DATA.html"
+                          title="next chapter">0 - DATA: Transient light curves from DES-SN</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="0_DATA.html" title="0 - DATA: Transient light curves from DES-SN"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">DES-SN-DR 0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Dark Energy Survey Supernova Program 5YR</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright .
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.7.
+    </div>
+  </body>
+</html>

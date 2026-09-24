@@ -1,0 +1,2041 @@
+                                                         Extended Dark Energy analysis using DESI DR2 BAO measurements
+
+                                                       K. Lodha ,1, 2, ∗ R. Calderon ,3 W. L. Matthewson ,1 A. Shafieloo ,1, 2 M. Ishak ,4 J. Pan ,5
+                                                    C. Garcia-Quintero ,6, 7 D. Huterer ,5, 8 G. Valogiannis ,9, 10 L. A. Ureña-López ,11 N. V. Kamble ,4
+                                              D. Parkinson ,1 A. G. Kim ,12 G. B. Zhao ,13, 14 J. L. Cervantes-Cota ,15 J. Rohlf ,16 F. Lozano-Rodrı́guez ,11
+                                                    J. O. Román-Herrera ,11 M. Abdul-Karim ,17 J. Aguilar,12 S. Ahlen ,16 O. Alves,5 U. Andrade ,5, 18
+                                               E. Armengaud ,17 A. Aviles ,19, 20 S. BenZvi ,21 D. Bianchi ,22, 23 A. Brodzeller ,12 D. Brooks,24 E. Burtin,17
+                                                 R. Canning,25 A. Carnero Rosell ,26, 27 L. Casas,28 F. J. Castander ,29, 30 M. Charles ,31 E. Chaussidon ,12
+                                                J. Chaves-Montero ,28 D. Chebat ,17 T. Claybaugh,12 S. Cole ,32 A. Cuceu ,12, 7 K. S. Dawson ,33 A. de la
+                                                 Macorra ,34 A. de Mattia ,17 N. Deiosso ,35 R. Demina,21 Arjun Dey ,36 Biprateep Dey ,37, 38 Z. Ding ,39
+                                                 P. Doel,24 D. J. Eisenstein,6 W. Elbers ,32 S. Ferraro ,12, 40 A. Font-Ribera ,28 J. E. Forero-Romero ,41, 42
+                                                     Lehman H. Garrison ,43, 44 E. Gaztañaga,29, 25, 30 H. Gil-Marı́n ,29, 45, 46 S. Gontcho A Gontcho ,12
+arXiv:2503.14743v2 [astro-ph.CO] 3 Apr 2025
+
+
+
+
+                                              A. X. Gonzalez-Morales ,11 G. Gutierrez,10 J. Guy ,12 C. Hahn ,47 M. Herbold ,31 H. K. Herrera-Alcantar ,17, 48
+                                                K. Honscheid ,31, 49, 50 C. Howlett ,51 S. Juneau ,36 R. Kehoe,52 D. Kirkby ,53 T. Kisner ,12 A. Kremin ,12
+                                                     O. Lahav,24 C. Lamman ,6 M. Landriau ,12 L. Le Guillou ,54 A. Leauthaud ,55, 56 M. E. Levi ,12
+                                                   Q. Li ,33 C. Magneville,17 M. Manera ,28, 57 P. Martini ,49, 31, 58 A. Meisner ,36 J. Mena-Fernández ,59
+                                                 R. Miquel,28, 60 J. Moustakas ,61 D. Muñoz Santos,62 A. Muñoz-Gutiérrez,34 A. D. Myers,63 S. Nadathur ,25
+                                                  G. Niz ,11, 19 H. E. Noriega ,20, 34 E. Paillas ,47 N. Palanque-Delabrouille ,17, 12 W. J. Percival ,64, 65, 66
+                                                      Matthew M. Pieri ,62 C. Poppett,12, 40, 67 F. Prada ,68 A. Pérez-Fernández ,69 I. Pérez-Ràfols ,70
+                                              C. Ramı́rez-Pérez,28 M. Rashkovetskyi ,6 C. Ravoux ,71 A. J. Ross ,49, 58, 31 G. Rossi,72 V. Ruhlmann-Kleider ,17
+                                                     L. Samushia ,73, 74, 75 E. Sanchez ,35 D. Schlegel,12 M. Schubnell,8, 5 H. Seo ,76 F. Sinigaglia ,26, 27
+                                                       D. Sprayberry,36 T. Tan ,17 G. Tarlé ,5 P. Taylor,31 W. Turner ,49, 58, 31 M. Vargas-Magaña ,34
+                                                  M. Walther ,77, 78 B. A. Weaver,36 M. Wolfson,31 C. Yèche ,17 P. Zarrouk ,54 R. Zhou ,12 and H. Zou 13
+                                                                                              (DESI Collaboration)
+                                                  1
+                                                      Korea Astronomy and Space Science Institute, 776, Daedeokdae-ro, Yuseong-gu, Daejeon 34055, Republic of Korea
+                                                             2
+                                                               University of Science and Technology, 217 Gajeong-ro, Yuseong-gu, Daejeon 34113, Republic of Korea
+                                                  3
+                                                    CEICO, Institute of Physics of the Czech Academy of Sciences, Na Slovance 1999/2, 182 21, Prague, Czech Republic.
+                                                       4
+                                                         Department of Physics, The University of Texas at Dallas, 800 W. Campbell Rd., Richardson, TX 75080, USA
+                                                                                  5
+                                                                                    University of Michigan, 500 S. State Street, Ann Arbor, MI 48109, USA
+                                                                6
+                                                                  Center for Astrophysics | Harvard & Smithsonian, 60 Garden Street, Cambridge, MA 02138, USA
+                                                                                                              7
+                                                                                                                NASA Einstein Fellow
+                                                                  8
+                                                                    Department of Physics, University of Michigan, 450 Church Street, Ann Arbor, MI 48109, USA
+                                                  9
+                                                    Department of Astronomy and Astrophysics, University of Chicago, 5640 South Ellis Avenue, Chicago, IL 60637, USA
+                                                                             10
+                                                                                Fermi National Accelerator Laboratory, PO Box 500, Batavia, IL 60510, USA
+                                                                                           11
+                                                                                              Departamento de Fı́sica, DCI-Campus León, Universidad de
+                                                                                Guanajuato, Loma del Bosque 103, León, Guanajuato C. P. 37150, México
+                                                                        12
+                                                                           Lawrence Berkeley National Laboratory, 1 Cyclotron Road, Berkeley, CA 94720, USA
+                                                                                     13
+                                                                                        National Astronomical Observatories, Chinese Academy of Sciences,
+                                                                                       A20 Datun Road, Chaoyang District, Beijing, 100101, P. R. China
+                                                     14
+                                                        School of Astronomy and Space Science, University of Chinese Academy of Sciences, Beijing, 100049, P.R.China
+                                                                         15
+                                                                            Departamento de Fı́sica, Instituto Nacional de Investigaciones Nucleares, Carreterra
+                                                                          México-Toluca S/N, La Marquesa, Ocoyoacac, Edo. de México C. P. 52750, México
+                                                                      16
+                                                                         Physics Dept., Boston University, 590 Commonwealth Avenue, Boston, MA 02215, USA
+                                                                                    17
+                                                                                       IRFU, CEA, Université Paris-Saclay, F-91191 Gif-sur-Yvette, France
+                                              18
+                                                 Leinweber Center for Theoretical Physics, University of Michigan, 450 Church Street, Ann Arbor, Michigan 48109-1040, USA
+                                                                                      19
+                                                                                         Instituto Avanzado de Cosmologı́a A. C., San Marcos 11 - Atenas
+                                                                                      202. Magdalena Contreras. Ciudad de México C. P. 10720, México
+                                                                                       20
+                                                                                          Instituto de Ciencias Fı́sicas, Universidad Nacional Autónoma de
+                                                                                  México, Av. Universidad s/n, Cuernavaca, Morelos, C. P. 62210, México
+                                                                                      21
+                                                                                         Department of Physics & Astronomy, University of Rochester, 206
+                                                                                Bausch and Lomb Hall, P.O. Box 270171, Rochester, NY 14627-0171, USA
+                                                    22
+                                                       Dipartimento di Fisica “Aldo Pontremoli”, Università degli Studi di Milano, Via Celoria 16, I-20133 Milano, Italy
+                                                                              23
+                                                                                 INAF-Osservatorio Astronomico di Brera, Via Brera 28, 20122 Milano, Italy
+                                                          24
+                                                             Department of Physics & Astronomy, University College London, Gower Street, London, WC1E 6BT, UK
+                                                25
+                                                   Institute of Cosmology and Gravitation, University of Portsmouth, Dennis Sciama Building, Portsmouth, PO1 3FX, UK
+                                                             26
+                                                                Departamento de Astrofı́sica, Universidad de La Laguna (ULL), E-38206, La Laguna, Tenerife, Spain
+                                                                  27
+                                                                     Instituto de Astrofı́sica de Canarias, C/ Vı́a Láctea, s/n, E-38205 La Laguna, Tenerife, Spain
+                                                                             28
+                                                                                Institut de Fı́sica d’Altes Energies (IFAE), The Barcelona Institute of Science
+                                                                            and Technology, Edifici Cn, Campus UAB, 08193, Bellaterra (Barcelona), Spain
+                                                                                                                             2
+
+                          29
+                                        Institut d’Estudis Espacials de Catalunya (IEEC), c/ Esteve Terradas
+                                          1, Edifici RDIT, Campus PMT-UPC, 08860 Castelldefels, Spain
+   30
+      Institute of Space Sciences, ICE-CSIC, Campus UAB, Carrer de Can Magrans s/n, 08913 Bellaterra, Barcelona, Spain
+                                               31
+                                                  The Ohio State University, Columbus, 43210 OH, USA
+ 32
+     Institute for Computational Cosmology, Department of Physics, Durham University, South Road, Durham DH1 3LE, UK
+   33
+       Department of Physics and Astronomy, The University of Utah, 115 South 1400 East, Salt Lake City, UT 84112, USA
+                                34
+                                   Instituto de Fı́sica, Universidad Nacional Autónoma de México, Circuito de la
+                             Investigación Cientı́fica, Ciudad Universitaria, Cd. de México C. P. 04510, México
+                                           35
+                                               CIEMAT, Avenida Complutense 40, E-28040 Madrid, Spain
+                                          36
+                                             NSF NOIRLab, 950 N. Cherry Ave., Tucson, AZ 85719, USA
+                  37
+                     Department of Astronomy & Astrophysics, University of Toronto, Toronto, ON M5S 3H4, Canada
+                  38
+                     Department of Physics & Astronomy and Pittsburgh Particle Physics, Astrophysics, and Cosmology
+                     Center (PITT PACC), University of Pittsburgh, 3941 O’Hara Street, Pittsburgh, PA 15260, USA
+                        39
+                           University of Chinese Academy of Sciences, Nanjing 211135, People’s Republic of China.
+                           40
+                              University of California, Berkeley, 110 Sproul Hall #5800 Berkeley, CA 94720, USA
+       41
+          Departamento de Fı́sica, Universidad de los Andes, Cra. 1 No. 18A-10, Edificio Ip, CP 111711, Bogotá, Colombia
+      42
+         Observatorio Astronómico, Universidad de los Andes, Cra. 1 No. 18A-10, Edificio H, CP 111711 Bogotá, Colombia
+               43
+                  Center for Computational Astrophysics, Flatiron Institute, 162 5th Avenue, New York, NY 10010, USA
+                       44
+                          Scientific Computing Core, Flatiron Institute, 162 5th Avenue, New York, NY 10010, USA
+    45
+       Departament de Fı́sica Quàntica i Astrofı́sica, Universitat de Barcelona, Martı́ i Franquès 1, E08028 Barcelona, Spain
+46
+   Institut de Ciències del Cosmos (ICCUB), Universitat de Barcelona (UB), c. Martı́ i Franquès, 1, 08028 Barcelona, Spain.
+                     47
+                        Steward Observatory, University of Arizona, 933 N. Cherry Avenue, Tucson, AZ 85721, USA
+                              48
+                                  Institut d’Astrophysique de Paris. 98 bis boulevard Arago. 75014 Paris, France
+                                        49
+                                           Center for Cosmology and AstroParticle Physics, The Ohio State
+                                       University, 191 West Woodruff Avenue, Columbus, OH 43210, USA
+           50
+              Department of Physics, The Ohio State University, 191 West Woodruff Avenue, Columbus, OH 43210, USA
+                     51
+                        School of Mathematics and Physics, University of Queensland, Brisbane, QLD 4072, Australia
+                52
+                   Department of Physics, Southern Methodist University, 3215 Daniel Avenue, Dallas, TX 75275, USA
+                           53
+                              Department of Physics and Astronomy, University of California, Irvine, 92697, USA
+                                           54
+                                              Sorbonne Université, CNRS/IN2P3, Laboratoire de Physique
+                                       Nucléaire et de Hautes Energies (LPNHE), FR-75005 Paris, France
+                                      55
+                                         Department of Astronomy and Astrophysics, UCO/Lick Observatory,
+                                     University of California, 1156 High Street, Santa Cruz, CA 95064, USA
+                                      56
+                                         Department of Astronomy and Astrophysics, University of California,
+                                             Santa Cruz, 1156 High Street, Santa Cruz, CA 95065, USA
+         57
+            Departament de Fı́sica, Serra Húnter, Universitat Autònoma de Barcelona, 08193 Bellaterra (Barcelona), Spain
+                                           58
+                                               Department of Astronomy, The Ohio State University, 4055
+                                     McPherson Laboratory, 140 W 18th Avenue, Columbus, OH 43210, USA
+              59
+                 Laboratoire de Physique Subatomique et de Cosmologie, 53 Avenue des Martyrs, 38000 Grenoble, France
+            60
+               Institució Catalana de Recerca i Estudis Avançats, Passeig de Lluı́s Companys, 23, 08010 Barcelona, Spain
+               61
+                  Department of Physics and Astronomy, Siena College, 515 Loudon Road, Loudonville, NY 12211, USA
+                                            62
+                                               Aix Marseille Univ, CNRS, CNES, LAM, Marseille, France
+ 63
+    Department of Physics & Astronomy, University of Wyoming, 1000 E. University, Dept. 3905, Laramie, WY 82071, USA
+ 64
+     Department of Physics and Astronomy, University of Waterloo, 200 University Ave W, Waterloo, ON N2L 3G1, Canada
+                65
+                   Perimeter Institute for Theoretical Physics, 31 Caroline St. North, Waterloo, ON N2L 2Y5, Canada
+      66
+         Waterloo Centre for Astrophysics, University of Waterloo, 200 University Ave W, Waterloo, ON N2L 3G1, Canada
+              67
+                 Space Sciences Laboratory, University of California, Berkeley, 7 Gauss Way, Berkeley, CA 94720, USA
+               68
+                  Instituto de Astrofı́sica de Andalucı́a (CSIC), Glorieta de la Astronomı́a, s/n, E-18008 Granada, Spain
+                   69
+                      Max Planck Institute for Extraterrestrial Physics, Gießenbachstraße 1, 85748 Garching, Germany
+    70
+       Departament de Fı́sica, EEBE, Universitat Politècnica de Catalunya, c/Eduard Maristany 10, 08930 Barcelona, Spain
+                               71
+                                  Université Clermont-Auvergne, CNRS, LPCA, 63000 Clermont-Ferrand, France
+72
+   Department of Physics and Astronomy, Sejong University, 209 Neungdong-ro, Gwangjin-gu, Seoul 05006, Republic of Korea
+                                        73
+                                           Abastumani Astrophysical Observatory, Tbilisi, GE-0179, Georgia
+                   74
+                      Department of Physics, Kansas State University, 116 Cardwell Hall, Manhattan, KS 66506, USA
+                          75
+                             Faculty of Natural Sciences and Medicine, Ilia State University, 0194 Tbilisi, Georgia
+             76
+                 Department of Physics & Astronomy, Ohio University, 139 University Terrace, Athens, OH 45701, USA
+                               77
+                                  Excellence Cluster ORIGINS, Boltzmannstrasse 2, D-85748 Garching, Germany
+   78
+      University Observatory, Faculty of Physics, Ludwig-Maximilians-Universität, Scheinerstr. 1, 81677 München, Germany
+                                                                                                                           3
+
+                We conduct an extended analysis of dark energy constraints, in support of the findings of the
+              DESI DR2 cosmology key paper, including DESI data, Planck CMB observations, and three different
+              supernova compilations. Using a broad range of parametric and non-parametric methods, we explore
+              the dark energy phenomenology and find consistent trends across all approaches, in good agreement
+              with the w0 wa CDM key paper results. Even with the additional flexibility introduced by non-
+              parametric approaches, such as binning and Gaussian Processes, we find that extending ΛCDM to
+              include a two parameter w(z) is sufficient to capture the trends present in the data. Finally, we
+              examine three dark energy classes with distinct dynamics, including quintessence scenarios satisfying
+              w ≥ −1, to explore what underlying physics can explain such deviations. The current data indicate
+              a clear preference for models that feature a phantom crossing; although alternatives lacking this
+              feature are disfavored, they cannot yet be ruled out. Our analysis confirms that the evidence for
+              dynamical dark energy, particularly at low redshift (z ≲ 0.3), is robust and stable under different
+              modeling choices.
+
+
+                       CONTENTS                                                     I.   INTRODUCTION
+
+   I. Introduction                                          3        The Λ Cold Dark Matter (ΛCDM) model has with-
+                                                                  stood the test of time as the standard framework of
+  II. Datasets and Methodology                              4
+                                                                  modern cosmology, and it provides a robust foundation
+ III. Overview of the w0 wa CDM results                     7     for understanding the Universe. It describes a spatially
+                                                                  flat universe that is homogeneous and isotropic on large
+ IV. Parameterizing Dark Energy                             8     scales, governed by Einstein’s general relativity [1]. The
+     A. Alternative w(z) parameterizations                  8     model incorporates two key components: about 70% is
+     B. Crossing Statistics                                 9     in dark energy that is described by the vacuum-energy
+                                                                  contribution (corresponding to the cosmological constant
+  V. Non-Parametric Methods                                10     Λ in the equations), while another 30% is in pressureless
+     A. Binning                                            10     matter that is made up of a combination of cold dark
+     B. Gaussian Process Regression                        12     matter (CDM) and baryons. Despite its elegant simplic-
+                                                                  ity, ΛCDM has successfully explained a broad range of
+ VI. Implications for Dark Energy                          12     cosmological observations [2–14]. On the whole, measure-
+     A. Thawing dark energy                                12     ments made over the past several decades have largely
+     B. Emergent dark energy                               15     confirmed this paradigm and, in particular, cemented
+     C. Mirage dark energy                                 15     dark energy [15–17] as the essential component of con-
+     D. Model Comparison                                   16     cordance model to explain the observed accelerated ex-
+     E. Is there evidence for phantom crossing?            17     pansion of the Universe [2, 3].
+                                                                     While the cosmological constant has been a corner-
+VII. Conclusions                                           17     stone of the standard model of cosmology, various dark
+                                                                  energy models with an evolving equation of state have
+VIII. Data Availability                                    18     been proposed as alternatives [18–26]. Specifically, we
+                                                                  are motivated to study these time-evolving alternatives
+      Acknowledgments                                      18
+                                                                  by the recent cosmological results from the Dark Energy
+      References                                           19     Spectroscopic Instrument (DESI) [27, 28]. DESI is able
+                                                                  to measure multiple spectra simultaneously by means of
+  A. Bayesian Model Comparison                             23     its 5,000 fibers [29] and a robotic plane assembly [30]
+                                                                  across the field of view given its 3.2◦ diameter prime
+  B. Details of Binning PCA                                24     focus corrector [31]. This is complemented by a high-
+                                                                  performance spectroscopic data processing pipeline [32]
+  C. Details on Gaussian Process Regression                25     and a streamlined operations plan [33]. DESI is designed
+                                                                  to help better understand the nature of dark energy [34]
+  D. Quintessence                                          25     and its successful survey validation [35] based on early
+                                                                  data [36] showed that it meets the expected requirements
+  E. Validation on Mocks                                   26     of a Stage-IV survey. In particular, its Data Release 1
+                                                                  (DR1 [37]) has already provided new insights into the be-
+  F. Comparison with DESI DR1                              27     havior of dark energy. DESI DR1 measured the baryon
+                                                                  acoustic oscillations (BAO) signature in the clustering
+                                                                  of galaxies and quasars [38], as well as the Lyman-α for-
+                                                                  est [39]. The combined constraints from DESI DR1 BAO
+∗ kushallodha@kasi.re.kr
+                                                                  and external data [40], followed up with a similar analysis
+                                                                                                                          4
+
+that combines the BAO with the full clustering informa-             II.    DATASETS AND METHODOLOGY
+tion from DESI galaxies and other tracers [41, 42], as well
+as the supporting DESI DR1 papers that considered al-            In this section, we provide a brief cosmological back-
+ternative descriptions of the dark energy sector [43, 44],    ground on distance measurements relevant to DESI, with
+all showed tantalizing hints of the departures from the       an emphasis on dark energy. We start by introducing
+cosmological constant dark energy model. Cosmological         the relevant cosmological functions, before proceeding to
+hints in the dark energy sector are currently a source of     describe the datasets used and the statistical tools em-
+debate, and it is of high priority to explore them with       ployed in our analysis.
+more data. In this work, we make use of the BAO mea-             As shown in [40], the evidence for spatial curvature in
+surements from the second data release (DR2 [45–47])          the Universe is not significant. Therefore, we assume a
+from DESI to explore the possibility of an evolving, dy-      flat universe for all the results presented in our analyses.
+namical dark energy, and evaluate whether existing ob-        The time-dependence of the dark energy density is en-
+servations support such a paradigm shift. This paper is       abled via the equation of state w(z); the expansion rate
+part of a set of supporting papers that aim to extend the     reads
+cosmological analysis presented in [47] (see [48] for the
+supporting paper focusing on neutrino constraints).
+                                                                  H(z) h                                ρν (z)
+   An essential ingredient, in a study confronting dark-              = Ωbc (1 + z)3 + Ωγ (1 + z)4 + Ων
+energy models with data, is the physical description of            H0                                    ρν,0
+                                                                                                                        (1)
+dark energy (DE). In the standard concordance model,                            ρDE (z) i1/2
+ΛCDM, it is described by its contribution to the stress-                 + ΩDE               ,
+                                                                                 ρDE,0
+energy tensor, Λ or, equivalently, by its energy density
+relative to critical, ΩDE . A dynamical dark energy is en-    where Ωbc = Ωc + Ωb , H0 is the Hubble parameter today,
+abled by allowing the equation of state, w = P/(ρc2 ),        and Ωb , Ωc , Ωγ , Ων and ΩDE are the present-time energy
+to differ from its ΛCDM value of −1. There are many           density parameters in baryons, cold dark matter, radi-
+possible ways to achieve this, a large number of which        ation, massive neutrinos and dark energy, respectively.
+have been introduced and tested in the literature [49–62].    The neutrino species contribute to the matter content
+We can classify them as parametric and non-parametric         of the Universe at the present day, since they behave
+approaches. Parametric approaches rely on predefined          as non-relativistic matter once they have passed through
+functional forms for quantities like w(z) (where z is red-    a transition redshift during the matter domination era
+shift), while non-parametric methods seek to reconstruct      (e.g., transitioning around a redshift ∼ 100 for a neutrino
+these quantities directly from data without assuming pre-     mass eigenstate with a mass of 0.06 eV) [63, 64]. This
+defined functional forms or specific cosmological models.     detail will be important when defining our cosmic mi-
+Both methods have advantages and disadvantages. On            crowave background (CMB) compression scheme, since
+the one hand, parametric models are mathematically sim-       relativistic neutrinos do not contribute significantly to
+ple and easy to interpret, but may lead to biased infer-      matter density at the time of recombination. We define
+ences if the assumed parametric form deviates substan-        Ωm = Ωbc + Ων to denote the matter content that scales
+tially from reality. On the other hand, non-parametric        (1 + z)3 when neutrinos are non-relativistic.
+methods offer greater flexibility and are less subject to        For a dark energy component with an equation-of-state
+model-dependent biases. However, these are harder to          parameter w(z) = PDE (z)/(ρDE (z)c2 ), the energy den-
+implement and require careful validation with simula-         sity ρDE normalized to its present value evolves as
+tions. For this reason, we perform initial tests using                                    Z z                       
+simulated (mock) datasets. While there is no substi-                        ρDE (z)                            dz ′
+                                                                fDE (z) ≡           = exp 3     [1 + w(z ′ )]          . (2)
+tute for comprehensive validation, these tests check the                     ρDE,0            0               1 + z′
+methodology’s implementation and mitigate potential bi-
+ases that could affect the results. We remind readers that    For a constant value of w(z), the dark energy density be-
+all the analyses in this paper rely on the assumption that    comes proportional to (1 + z)3(1+w) , while for a model
+the data used are reliable and free from unknown system-      based a cosmological constant (w = −1), the right-
+atics.                                                        hand side of Eq. (2) is unity. The conventional w0 wa
+                                                              parametrization for time-varying w(z) is [50, 51]
+   The paper is structured as follows. In Section II, we
+introduce the datasets and general methodology used in                                               z
+the analyses, followed by Section III, where we summa-                            w(z) = w0 + wa                        (3)
+                                                                                                    1+z
+rize the current status of the DESI results from the w0 wa
+parametrization [47]. Various alternative dark energy         with energy density following the expression:
+parametrizations are explored in Section IV, before the                                                        z
+implementation of non-parametric methods in Section V.                    fDE (z) = (1 + z)3(1+w0 +wa ) e−3wa 1+z .     (4)
+Section VI provides an interpretation of the possible
+physical mechanisms behind deviations from ΛCDM. Fi-
+nally, in Section VII, we present our conclusions.
+                                                                                                                          5
+
+                                                                as
+TABLE I. Parameters and priors used in the analysis. In
+addition to the flat priors on w0 and wa listed in the table,                                     c
+                                                                                      DH (z) =        .                 (7)
+we also impose the requirement w0 +wa < 0 in order to enforce                                    H(z)
+a period of high-redshift matter domination.
+                                                                However, as described in [47], some DESI BAO measure-
+parametrization           parameter default prior               ments are isotropic, as in the case of the BGS tracer.
+Baseline                  ωcdm        —        U[0.001, 0.99]   Hence, we also make use of the spherically-averaged dis-
+                          ωb          —        U[0.005, 0.1]
+                                                                tance DV (z) that quantifies the average of the distances
+                                                                measured along, and perpendicular to, the line-of-sight
+                          100θMC      —        U[0.5, 10]       to the observer [65], and is given by
+                          ln(1010 As ) —       U[1.61, 3.91]
+                                                                                                          1/3
+                          ns          —        U[0.8, 1.2]                    DV (z) = zDM (z)2 DH (z)           .      (8)
+                          τ           —        U[0.01, 0.8]
+                                                                Since these measurements are relative to the sound hori-
+in absence of θMC         H0          —        U[20, 100]       zon rd , which sets the BAO scale, the directly constrained
+Alt. Parametrization w0               −1       U[−3, 1]         quantities are the ratios DM /rd , DH /rd , and DV /rd .
+                                                                With this, we can now define the primary dataset used
+                          wa          0        U[−3, 2]
+                                                                for our searches of dynamical dark energy, based on the
+Crossing                  C0          1        N [1, 12 ]       latest DESI data:
+                          Ci          0        N [0, 12 ]
+                                                                     • Baryon acoustic oscillations (BAO): We use the
+Binning                   wi          −1       U[−3, 1]
+                                                                       BAO distance measurements from DESI DR2, as
+                          fDE,i       1        U[−5, 5]                detailed in Table III in [47]. In particular, for the
+Gaussian Processes        ℓf          —        Eq. (C3)                BGS tracer, we use measurements of DV /rd pro-
+                          w(zl )      −1       N [−1, 12 ]
+                                                                       viding compressed low redshift information from
+                                                                       the range 0.1 < z < 0.4. For the rest of DESI
+Dark Energy Classes                                                    tracers, we use the BAO distance measurements of
+Calib. Thawing            w0          —        U[−3, 1]                DM /rd and DH /rd . Explicitly, we use two LRG
+Algebraic Thawing         w0          —        U[−1, 1]                bins in the ranges 0.4 < z < 0.6 and 0.6 < z < 0.8,
+                                                                       a combined tracer measurement for LRG+ELG in
+                          p           —        U[0, 30]
+                                                                       the range 0.8 < z < 1.1, a measurement span-
+Emergent                  ∆           —        U[−3, 10]               ning 1.1 < z < 1.6 for the ELG tracer and the
+Mirage                    w0          —        U[−3, 1]                QSO in the range 0.8 < z < 2.1. The systemat-
+                                                                       ics tests associated with the BAO measurements
+                                                                       from galaxy and quasar clustering are presented in
+                                                                       [66]. We also include the Lyα measurements in
+   BAO measure the comoving distance at the effective
+                                                                       1.8 < z < 4.2, which provides our highest redshift
+redshift of a given galaxy sample, in units of the sound
+                                                                       data-point. This measurement is described in de-
+horizon (rs ) at the drag epoch, labeled as rd ≡ rs (zd ).
+                                                                       tail in [46] (see also [67] for validation tests and
+The drag epoch corresponds to the release of baryons
+                                                                       [68] for specific catalog details). We refer to this
+from the drag of CMB photons, occurring at a redshift
+                                                                       whole dataset, encompassing information from red-
+(zd ). The scale rd is thus the distance that sound waves
+                                                                       shift 0.1 to 4.2, split into seven main samples, as
+in the photon-baryon fluid were able to travel all the way
+                                                                       “DESI”.
+from the big bang, slightly after the time of recombina-
+tion, to the drag epoch, given by                                  We now proceed to define the cosmological datasets
+                         Z ∞                                    that we use, in combination with DESI, to obtain con-
+                              cs (z)
+                    rd =             dz ,               (5)     straints on cosmological parameters. The cosmological
+                          zd H(z)                               probes and specific external datasets used in our analy-
+where cs (z) is the speed of sound waves in the fluid, and      sis are:
+zd ≈ 1060 is the redshift at which photons and baryons
+                                                                     • Supernovae Ia (SNe Ia): We combine DESI
+decouple [7]. The BAO measurements are sensitive to the
+                                                                       data with either of the following three SNe Ia
+distance in the direction transverse to the line-of-sight,
+                                                                       datasets, namely PantheonPlus, Union3, and
+corresponding to the comoving angular diameter distance
+                                                                       DESY5. The PantheonPlus [69] dataset comprises
+                              Z z
+                           c            H0                             1550 spectroscopically-confirmed SNe Ia in the red-
+                DM (z) =          dz ′         .        (6)            shift range 0.001 < z < 2.26. The Union3 com-
+                          H0 0         H(z ′ )
+                                                                       pilation [70] has 2087 SNe Ia in the redshift range
+BAO also measure the comoving distance along the line-                 0.01 < z < 2.26, 1363 of which are common to Pan-
+of-sight, which is directly related to the expansion rate              theonPlus, though the analysis methodologies are
+                                                                                                                                             6
+
+      substantially different. Finally, the DESY5 dataset
+      [71] is a sample of 1635 photometrically-classified                    0
+                                                                                                           Calib. Thawing
+      SNe Ia with redshifts in the range 0.1 < z < 1.13,
+      complemented by 194 historical low-redshift SNe Ia
+      (which are also present in the PantheonPlus sam-
+      ple) spanning 0.025 < z < 0.1.
+                                                                            −1
+    • Cosmic microwave background (CMB): We include                                     Mirage
+
+
+
+
+                                                                       wa
+      temperature and polarization measurements of the
+      CMB from the Planck satellite [72]. In par-
+      ticular, we use the high-ℓ TTTEEE likelihood
+      (planck NPIPE highl CamSpec.TTTEEE), together
+      with low-ℓ TT (planck 2018 lowl.TT) and low-                          −2
+      ℓ EE (planck 2018 lowl.EE) [73, 74], as imple-                                       DESI DR1 BAO + CMB + Union3
+      mented in Cobaya [75]. Additionally, we combine                                      DESI DR2 BAO + CMB + Union3
+      temperature and polarization anisotropies with                             −1.0    −0.9    −0.8    −0.7    −0.6     −0.5        −0.4
+      CMB lensing measurements from the combination
+      of NPIPE PR4 from Planck [76, 77] and the Ata-                                                      w0
+      cama Cosmology Telescope (ACT) DR6 [78, 79].
+                                                                       FIG. 1.    Constraints on the parameters w0 wa from DESI
+    • Compressed CMB : We use the Gaussian correlated                  BAO DR2, CMB, and Union3 are illustrated in blue, while
+      prior over ωb ≡ Ωb h2 , ωbc ≡ Ωb h2 +Ωc h2 and θ∗ as             the corresponding combination with DESI BAO DR1 is shown
+      defined in [47]. Here, the angular acoustic scale θ∗             in orange. The green line indicates the degeneracy direction
+      adds extra geometrical information from the CMB,                 associated with calibrated thawing (see Section VI A), while
+      while ωb and ωbc 1 serve to set the sound horizon                the purple line denotes the “mirage” direction (discussed in
+      rd and calibrate our BAO measurements. These                     Section VI C) which closely follows the degeneracy direction
+                                                                       of the w0 wa contours.
+      CMB-based quantities capture most of the relevant
+      information from the early CMB by marginalizing
+      over contributions from late-time effects, such as
+      the integrated Sachs–Wolfe (ISW) effect and CMB                  models, we have a modified version of the class [89, 90]
+      lensing, resulting in a robust CMB compression for               integrated into our inference pipeline. We switched to
+      testing late-time physics [80]. In particular, we                the Recfast option for recombination as it does not as-
+      use these compressed measurements as a conser-                   sume anything about the equation of state. We assume
+      vative alternative for constraining dark energy at               one
+                                                                       P massive and two massless neutrino species a with
+      the background level, thereby allowing for negative                 mν = 0.06 eV and Neff = 3.044. For the SNe Ia likeli-
+      fDE (z), as in Sections IV B and V A. For brevity,               hoods (PantheonPlus, Union3, and DESY5), we analyt-
+      we refer to these as (θ∗ , ωb , ωbc )CMB .                       ically marginalize over the absolute magnitude MB . For
+                                                                       clarity of presentation, we utilize Union3 in the figures as
+   In our analysis, we utilize Markov Chain Monte Carlo                a conservative result, as it has larger uncertainties com-
+(MCMC) sampling to explore the parameter space us-                     pared to the PantheonPlus and DESY5 datasets. Nev-
+ing the Metropolis-Hastings algorithm [81, 82] as imple-               ertheless, we will also discuss constraints derived from
+mented in Cobaya [83, 84]. For the alternate parametriza-              other supernova datasets wherever they are relevant to
+tions, non-parametric methods, and DE classes, we adopt                our analysis. Finally, ∆χ2 is defined with respect to
+priors similar to [40], with exact specifications presented            the ΛCDM best fit. For the calculation of the best fit
+in Table I, and have modified the Boltzmann solver                     points themselves, we start with the maximum a posteri-
+camb [85, 86], incorporating a generalized equation of                 ori (MAP) points from the four chains produced during
+state for dark energy for the theoretical prediction of ob-            the MCMC sampling, and make use of the iminuit [91]
+servables. We employ the parametrized post-Friedmann                   minimizer. Thus, the quantity used in model compar-
+(PPF) framework [87, 88] to compute cosmological per-                  isons is more precisely2 ∆χ2MAP ≡ −2∆ ln L, which is
+turbations for the time-dependent equation of state w(a),              the difference in the log posterior values at the calcu-
+where a is the scale factor, which permits transitions                 lated maximum posterior points, scaled by −2. Since
+across the phantom divide at w = −1. Additionally,                     the posterior depends on the product of the likelihood
+we use custom theory code in Cobaya for the analysis of                and priors, we also take into account the ratios of dif-
+fDE (z) binning and crossing statistics. For quintessence              ferent model priors to ensure that there is no additional
+                                                                       penalty in the ∆χ2MAP from comparing two models.
+
+1 Note that, as pointed out in our discussion about neutrinos, they
+
+  do not contribute to the matter content of the Universe during
+  recombination, and therefore we use ωbc explicitly instead of ωm .   2 In the text χ2 is used in place of χ2
+                                                                                                             MAP , for convenience.
+                                                                                                                           7
+
+       −0.5                                                      tailed Bayesian model comparison, see Appendix A. In-
+                                         DESI + CMB + Union3
+                                                                 terestingly, with the increased precision, the combined
+                                                                 DESI+CMB data already suggest a ≃ 3σ deviation
+                                                                 from ΛCDM, independent of any SNe Ia compilation,
+w(z)
+
+
+       −1.0
+                                                                 with similar conclusions drawn from the DESI+DESY3
+                                                                 (3 × 2pt) combination, though exhibiting a lower tension;
+                                                                 see Fig. 14 in [47].
+       −1.5                                                         Physically, a phantom equation-of-state (w(z) < −1)
+                                                                 translates into an energy density that increases with the
+                                                                 expansion (dρDE /da > 0), before reaching its maximum
+          1.25                                                   (at zc ≃ 0.45, in our case), when the equation of state
+                                                                 crosses the phantom line (w(zc ) = −1), and ρDE starts di-
+          1.00
+                                                                 luting again as the universe expands. The mean redshift
+ fDE(z)
+
+
+
+
+          0.75                                                   at which this transition occurs in the w0 wa parameteri-
+                                                                 zation is indicated by a solid vertical line in Figure 2. We
+          0.50                                                   should note at this stage that the exact redshift at which
+                                                    w0 wa CDM
+                                                                 this crossing happens depends on the dataset combina-
+          0.25     zeq   zc                                      tion under consideration.
+             0.0         0.5   1.0           1.5       2.0          These results may naively suggest a “phantom cross-
+                                     z                           ing” [94] at high redshifts. From a theoretical perspec-
+                                                                 tive, this so-called phantom crossing is challenging to ac-
+FIG. 2. Equation of state parameter, w(z) = P/ρc2 , and          commodate within standard scalar-field models of dark
+corresponding normalized dark energy density, fDE (z) ≡          energy that are minimally coupled to gravity, as these are
+ρDE (z)/ρDE,0 , as a function of redshift using the w0 wa        constrained to satisfy −1 ≤ w ≤ 1. In particular, within
+parametrization. The solid and dashed-dotted vertical lines      general relativity, a single-field dark energy component
+indicate the phantom-crossing (zc ) and dark energy-matter       with w < −1 would necessarily violate the null energy
+equality (zeq ) redshifts, respectively. The horizontal dashed   condition (NEC), given by ρc2 + P ≥ 0 [95]. If con-
+line represents ΛCDM.                                            firmed, the phantom crossing would have profound im-
+                                                                 plications for fundamental physics, as it would indicate a
+                                                                 significantly more complex dark sector than traditionally
+ III.        OVERVIEW OF THE w0 wa CDM RESULTS                   assumed. However, it is important to emphasize at this
+                                                                 stage that the w0 -wa parametrization is particularly ef-
+   We begin by summarizing the dark energy main find-            fective at capturing the impact of various, possibly more
+ings of the DESI DR2 BAO key paper [47], assuming                fundamental, dark energy models on observables such as
+the w0 wa parametrization given in Eq. (3). As an ex-            distances and the expansion history within ∼ 0.1% ac-
+ample, the marginalized constraints in the w0 wa plane           curacy [54] and may fail to accurately approximate the
+are shown in Figure 1 for the DESI+CMB+Union3 data               true behavior of w(z) itself, potentially leading to a spu-
+combination, together with the constraints from DESI             rious indication of phantom crossing. Thus, restricting
+DR1 BAO with those obtained with DESI DR2 BAO,                   our analyses to models satisfying w > −1 might artifi-
+corresponding to one and three-years worth of data, re-          cially bias our inference. For more discussion on phantom
+spectively. The combined data favor the region w0 > −1           crossing, see Section VI E.
+and wa < 0, away from a cosmological constant, implying             Before extending our analysis beyond w0 wa CDM, we
+that the equation of state was phantom-like (w(z) < −1)          introduce two key quantities that will be useful through-
+in the distant past and has since evolved to w(z) > −1 at        out this work. Figure 3 presents the Om(z) diagnos-
+present, as shown in the top panel of Figure 2. This pref-       tic [96] and the deceleration parameter q(z) for the
+erence was observed in previous DESI analyses [40–44]            w0 wa CDM model, where
+and persists even when allowing for variations in the spa-                                    h2 (z) − 1
+tial curvature (ΩK ) [40], modified gravity [92], or modi-                        Om(z) ≡                 ,              (9)
+                                                                                             (1 + z)3 − 1
+fications to the pre-recombination physics [93].
+   DESI DR2 BAO data show that the mean posterior                and the deceleration parameter is given by
+distributions have shifted slightly toward the ΛCDM-                                  äa     d ln H
+expected values, while the reduced uncertainties have                         q(z) ≡ − 2 =             −1 .             (10)
+                                                                                      ȧ   d ln(1 + z)
+marginally increased the statistical significance of the de-
+viations from ΛCDM to 2.8 − 4.2σ (with improvements              These two functions constitute a sensitive probe of new
+in fit ranging from −21.0 ≤ ∆χ2 ≤ −10.7), compared               physics, as they are only sensitive to the ‘shape’ of the
+to 2.5 − 3.9σ from DR1 [40, 47]. Similar conclusions fol-        (normalized) expansion history h(z) = H(z)/H0 . Thus,
+low when using the weighted posterior average of log-            they are unaffected by the degeneracies that may ex-
+likelihood, the Bayesian counterpart of ∆χ2 . For a de-          ist between the dark energy and matter densities at the
+                                                                                                                                       8
+
+                                                                            −0.5
+                                        DESI + CMB + Union3                                                    DESI + CMB + Union3
+           0.6
+                                                                            −1.0
+   Om(z)
+
+           0.5
+                                                                            −1.5
+
+
+
+
+                                                                     w(z)
+           0.4                                                                         CPL: w0 + wa (1 − a)
+                                                                                                      (1−a)
+                                                                                       BA: w0 + wa a2 +(1−a) 2
+                                                                            −2.0
+         0.3                                                                           EXP: w0 − wa + wa exp (1 − a)
+        0.50                                                                           LOG: w0 − wa ln(a)
+                                                                            −2.5
+                                                                                       JBP: w0 + wa a(1 − a)
+        0.25
+                                                                               0.0     0.5      1.0       1.5       2.0    2.5       3.0
+q(z)
+
+
+
+
+        0.00                                                                                               z
+       −0.25
+                                                                     FIG. 4. The dark energy equation of state w(z) for alterna-
+                          zacc                     w0 wa CDM         tive w0 wa parameterizations —BA, EXP, JBP, and LOG —is
+       −0.50
+                                                                     illustrated alongside the standard CPL form (shown in blue).
+                    0.5     1.0   1.5       2.0     2.5        3.0   The constraints integrate data from DESI, Union3 SNe, and
+                                   z                                 CMB observations, with shaded regions representing 1σ un-
+                                                                     certainty bands. All parameterizations except JBP exhibit
+FIG. 3. Evolution of the Om(z) diagnostic and decel-                 consistent phantom crossing near z ∼ 0.5 and provide a sim-
+eration parameter, q(z), as a function of redshift in the            ilarly good fit to the data.
+w0 wa CDM model. The solid blue lines correspond to the
+median, 68%, and 95% confidence levels obtained from the
+DESI+CMB+Union3 combination. The black dashed line de-               in the inferred evolution of dark energy, it is crucial to
+picts the best-fit ΛCDM for the same data combination. The           explore multiple forms to assess the robustness of any
+gray vertical line shows the redshift (zacc ) corresponding to       detected deviation from a cosmological constant. We ex-
+the onset of cosmic acceleration (ä > 0).
+                                                                     amine various two-parameter functional forms as alterna-
+                                                                     tives to w0 wa CDM. In addition, we increase the degrees
+                                                                     of freedom available to w(z), to probe the trends present
+background level [97–99]. Indeed, one can readily see                in the data. While the parameterizations investigated
+from Eq. (9) that the quantity Om(z) is strictly con-                here are not necessarily tied to a specific physical model,
+stant and equal to present matter density (Om(z) ≡ Ωm )              they cover distinct functional spaces, helping to ensure
+if dark energy is in the form of a cosmological constant.            the results are not driven by the choice of parametriza-
+Thus, Om(z) serves as a null-test of ΛCDM, and any                   tion.
+significant deviation from a constant value would indi-
+cate dynamics in the dark energy density. The recon-
+structed Om(z) in Figure 3 shows a clear (> 2σ) devia-                         A.    Alternative w(z) parameterizations
+tion from constancy in the range 0 ≲ z ≲ 0.5, where the
+black dashed line represents the best-fit ΛCDM value of
+                                                                        In this section, we explore four alternative parameter-
+Ωm = 0.302. On the other hand, q(z) tracks the log-
+                                                                     izations from the literature (see [100, 101] for the equiv-
+arithmic derivative of h(z), rather than its shape, ap-
+                                                                     alent DR1 results) that, like w0 wa CDM, introduce two
+proaching a value of 0.5 during matter domination. The
+                                                                     additional parameters: the present-day equation of state
+reconstructed q(z) suggests that the Universe’s accelera-
+                                                                     w0 and an evolution parameter wa , but with different
+tion (q < 0) began earlier in cosmic history (zacc ≃ 0.8)
+                                                                     functional forms.
+than predicted by ΛCDM (zacc ≃ 0.65) with a slowing
+                                                                        Figure 4 presents constraints on these alternative
+down of cosmic acceleration at recent times. These trends
+                                                                     models as defined in Table II, i.e.: Barboza-Alcaniz
+in Om(z) and q(z) were previously observed with DESI
+                                                                     (BA) [102, 103], exponential (EXP3 ) [104, 105], logarith-
+DR1 data and persist with slightly more statistical sig-
+                                                                     mic (LOG) [103] and Jassal-Bagla-Padmanabhan (JBP)
+nificance in DESI DR2.
+                                                                     [106], alongside the Chevallier-Polarski-Linder (CPL) in
+                                                                     blue for comparison. The shaded bands, representing 1σ
+                                                                     uncertainties, are derived from a combination of DESI,
+       IV.       PARAMETERIZING DARK ENERGY                          CMB, and Union3. With the exception of JBP, all
+
+   To more closely explore the possible dynamical nature
+of dark energy, we now turn to parameterizations of ei-
+                                                                     3 In the numerical implementation we truncate at 3rd
+ther the equation of state w(z), or energy density ρDE (z).                                                                      order in
+Since different parameterizations can lead to differences              Taylor expansion.
+                                                                                                                                    9
+
+                                                                               0.0
+TABLE II. ∆χ2MAP values relative to ΛCDM for alternative                                      DESI + (θ∗ , ωb , ωbc )CMB + Union3
+w0 wa parametrization using DESI + CMB + Union3.                                              DESI + (θ∗ , ωb , ωbc )CMB
+                                                                           −0.5
+Param.                  Functional Form                   ∆χ2
+
+
+
+
+                                                                    w(z)
+BA                                 1−a
+                       w0 + wa a2 +(1−a)                  −17.3            −1.0
+                                        2
+
+EXP               (w0 − wa ) + wa exp(1 − a)              −17.5
+                                                                           −1.5
+LOG                       w0 − wa ln a                    −17.6
+JBP                     w0 + wa a(1 − a)                  −13.6            −2.0
+CPL                     w0 + wa (1 − a)                   −17.4                1.5
+
+
+
+
+                                                                      fDE(z)
+                                                                               1.0
+models exhibit similar low-redshift behavior, including
+a phantom crossing near z ∼ 0.5. In Table II, we present
+the alternative functional forms of w(a) and ∆χ2 values                        0.5
+relative to ΛCDM, showing that BA, CPL, LOG, and
+EXP provide statistically comparable fits to the data.
+The functional form of the JBP parametrization, which                          0.0
+                                                                                      0.5        1.0          1.5          2.0
+forces it to assume identical early- and late-time behav-                                              z
+ior, results in a slightly poorer fit. These findings con-
+firm that constraints from CPL are broadly represen-                FIG. 5. Reconstructions of w(z) and fDE (z) using Eqs. (11)
+tative of the alternative w0 wa models considered, with             and (12) with N = 3 for the DESI + (θ∗ , ωb , ωbc )CMB data
+no significant improvement observed for any alternative             combination, with and without the inclusion of Union3. The
+form. This suggests that current data lacks the sensi-              solid lines correspond to the median, 68%, and 95% confidence
+tivity to distinguish between these parameterizations at            levels around it. The main reconstructed behavior of DE is
+z > 2, a conclusion that remains unchanged across dif-              in excellent agreement with the different model-agnostic ap-
+ferent SNe Ia datasets.                                             proaches explored in this paper. This confirms that the trend
+                                                                    is not driven by the choice of parametrization, and adds to
+                                                                    the robustness of the w0 wa CDM results presented in the main
+                  B.   Crossing Statistics                          key paper [47]. The horizontal dashed line represents ΛCDM.
+
+
+  Rather than exploring different redshift evolutions for
+w(z), one can instead gauge the impact of introducing               Expanding in fDE (z) offers the advantage of allowing the
+additional degrees of freedom in the DE characteristics.            (effective) energy density ρDE (z) to change sign, thereby
+Following the methodology detailed in [43], we expand               encompassing a broader class of models [111–114], in-
+the equation of state of dark energy w(z) in terms of               cluding modified gravity scenarios [115–118] and com-
+Chebyshev polynomials (see also [107–110]),                         plex dark sector interactions that are difficult to capture
+                                                                    with a parametrized w(a). We note that the expansion
+                               N
+                               X                                    in Eq. (12) has one less degree of freedom relative to that
+                   w(z) = −          Ci Ti (x) ,            (11)    of Eq. (11), as all samples must satisfy fDE (z = 0) = 1.
+                               i=0
+                                                                       The top panel of Figure 5 shows the reconstructed
+where Ci are free coefficients, and Ti (x)4 are Chebyshev           w(z) for the DESI+(θ∗ , ωb , ωbc )CMB combination, with
+polynomials of the first kind, forming a complete basis for         (blue) and without (orange) SNe Ia data from the Union3
+continuous functions in the large-N limit, although N ≃             compilation. The bottom panels show the reconstructed
+3 is generally sufficient to capture smooth functions. We           fDE (z). It is noteworthy that not only do the expansions
+note that ΛCDM is recovered for C0 = 1 and Ci>0 = 0.                in w(z) and fDE (z) yield similar behaviors independently
+Alternatively, one may want to work with the normalized             of SNe Ia data, but they also agree with the main results
+dark energy density fDE (z) instead                                 obtained using the w0 wa CDM parametrization [47], as
+                                                                    shown in Figure 2. This consistency further strengthens
+                               N
+                               X                                    the robustness of the results.
+                   fDE (z) =         Ci Ti (x) .            (12)       While these results perfectly align with the w0 wa CDM
+                               i=0
+                                                                    results, the expansions in Eqs. (11) and (12) offer greater
+                                                                    flexibility, enabling it to capture features in the evolu-
+                                                                    tion of dark energy beyond the linear parametrization
+4 Note   that the redshift interval relevant for observations z ∈   given by Eq. (3). Despite this additional flexibility—and
+  [0, 3.5] is mapped to x ∈ [−1, 1], where the Chebyshev poly-      also confirmed by our independent analyses—the com-
+  nomials are defined.                                              bined data favor a smooth evolution, well described by
+                                                                                                                                 10
+
+        0                                                         and t0 denotes the current epoch [120, 121]. However,
+                                           w0 wa CDM
+                                                     P            we do not present those results here since they did not
+                                           w(z) = − Ci Ti         pass validation tests with the full DESI data and require
+                                                     P
+      −5                                   fDE (z) =   Ci T i     a redshift cut-off to make unbiased inference.
+∆χ2
+
+
+
+
+      −10                                                                                 A.    Binning
+
+                                                                     Binning is a technique widely used in cosmology that
+             0     1      2       3        4       5       6      allows for comparison of different redshift intervals, with-
+                        # of free parameters                      out the assumption of a specific functional form; see
+                                                                  [49, 54, 122–131] for some examples. Here we focus on
+FIG. 6. Improvement in fit with respect to ΛCDM, as quan-         binning the equation of state of dark energy, w(z) and the
+tified by ∆χ2 = χ2 − χ2ΛCDM , as a function of the number of      dark energy density, fDE (z), permitting localized analy-
+free parameters introduced in the expansion, for the DESI +       ses of the behavior motivated by the data. The additional
+(θ∗ , ωb , ωbc )CMB + Union3 combination.                         degrees of freedom introduced make it possible to probe
+                                                                  for potential variations or trends in w(z) across redshifts,
+                                                                  which may help to identify deviations from the standard
+w0 wa CDM within the probed low-redshift range. The               ΛCDM model.
+improvement in fit, quantified by ∆χ2 , is shown as a                In this section, we supplement the 3 uniform redshift
+function of the number of free parameters in Figure 6.            bin scheme for the dark energy equation of state param-
+A two-parameter expansion in fDE (z)/w(z) captures the            eter from [47] (see Figure 12 there) in order to assess the
+main trends in the data, as already noted in [119]. In-           impact of different choices for the implementation. The
+troducing additional degrees of freedom does not signif-          binned function takes the general form
+icantly improve the fit to the combined data and would
+be disfavored from a model comparison perspective, as                             XN                                 
+                                                                                      (wi − wi−1 )              z − zi
+the added complexity is not justified by the data. We              w(z) = w0 +                       1 + tanh              ,
+                                                                                           2                      s
+note that due to the complications that can arise in the                          i=1
+treatment of perturbations when allowing for ρDE < 0,                                                                    (13)
+this part of the analysis is restricted to the “compressed”       where wi are the bin amplitude parameters, N the num-
+CMB information, denoted as (θ∗ , ωb , ωbc )CMB , rather          ber of bins and s the smoothing scale5 , which controls the
+than the full Planck likelihood. We have verified that            sharpness of the transitions around the edges zi between
+(θ∗ , ωb , ωbc )CMB , as described in Section II, yields almost   bins. We assume no prior correlation between bins.
+identical constraints as those using the primary CMB                 Several different additional schemes for w(z) were
+anisotropies.                                                     tested, including logarithmic binning, binning aligned
+   While all the parametric models we tested above sug-           with the redshifts of the tracer types, and various un-
+gest a phantom crossing, the exact redshift at which this         even binning approaches across the constrained redshift
+happens depends on the chosen parametrization, as seen            interval. However, for clarity, we present results only for
+from Figure 5 which suggests a slightly higher value for          schemes with uniform redshift bins between z = 0 and
+zc ≃ 0.5 than w0 wa CDM. This variation—although not              z = 2.1, as results do not change qualitatively across the
+statistically significant—is expected due to the inherent         different binning schemes. We consider the combination
+limitations of parametric fitting, as each functional form        of DESI, Union3 SNe Ia, and CMB. In the case of fDE (z),
+has a restricted degree of flexibility.                           the compressed CMB is used to avoid the computational
+                                                                  complexity associated with correctly modifying the be-
+                                                                  havior of dark energy in a Boltzmann solver to account
+                                                                  for fDE < 0, while also constraining the parameters ex-
+            V.   NON-PARAMETRIC METHODS
+                                                                  clusively with early CMB information.
+                                                                     Figure 7 (upper panel) shows the median values of wi ,
+   In contrast to the techniques explored in Section IV,          with 1σ and 2σ error bars, positioned at the center of
+non-parametric techniques focus on determining the true           their respective bins’ redshift intervals. These intervals
+function of quantities such as h(z), fDE (z), and w(z) from       are shown in the same colors in between the panels. The
+observational data, rather than merely estimating the pa-         highest redshift interval effectively extends to high red-
+rameters of a pre-specified form for w(z). We are not             shifts, with the corresponding amplitude positioned at
+interested in model comparison here per se, but rather
+the robustness of the observed trends in the data under
+different non-parametric reconstruction techniques.
+   We explore two techniques: binning and Gaussian pro-           5 For this analysis s = 0.02 is chosen, corresponding to less than
+
+cess regression. We have also tested the cosmographic ex-           1% variation in the bin amplitude over the range ∆z = 0.01 on
+pansion up to O((t − t0 )5 ) where t is the lookback time,          either side of the redshift bin edge.
+                                                                                                                                                        11
+
+z = 2.8 merely for convenience. The constrained ampli-                                    −0.5
+tudes for overlapping bins between different schemes are
+all within ∼ 1σ of one another. Superimposing with the                                    −1.0
+median (dashed grey line) and 1σ, 2σ confidence levels
+
+
+
+
+                                                               w(z)
+of the corresponding w0 wa CDM result, we see that the                                    −1.5
+behavior recovered by each different scheme is in good
+general agreement, with median points on either side of                                   −2.0
+the line w(z) = −1. The data provide the tightest con-
+straints in the lowest redshift bin, where they prefer a
+w(z) that is more than 3σ away from ΛCDM value of
+                                                                                            1.5
+−1, whereas the higher redshift bin amplitudes remain,
+at most, within 2σ of ΛCDM. The question of an ac-
+                                                                                            1.0
+tual crossing is more subtle, since it would have to occur
+
+
+
+
+                                                                                fDE(z)
+at the edge between two adjacent bins, meaning that it                                                3 uniform
+would depend non-trivially on the number of bins and                                        0.5
+                                                                                                      4 uniform
+their chosen centers, and not make for a very robust ‘mea-                                            5 uniform
+surement’.                                                                                  0.0
+                                                                                                      w0 wa CDM
+   To allow explicit exploration of the region of parame-
+ter space with negative fDE (z), which is excluded when                                       0.0   0.5     1.0    1.5       2.0    2.5         3.0     3.5
+binning with the amplitude of w(z), we also test addi-                                                                   z
+tional binning schemes where the bin variables are in-
+stead associated with the amplitude of fDE (z). Figure 7      FIG. 7. Median bin amplitudes with 1σ and 2σ error bars for
+(lower panel) shows the same effective behavior between       w(z) (upper panel), using DESI+CMB+Union3, and fDE (z)
+individual binning schemes, with good agreement to the        (lower panel), using DESI+(θ∗ , ωb , ωbc )CMB +Union3. Re-
+w0 wa curves, indicating a turn-over somewhere in the re-     sults are shown for 3 schemes, with an increasing number
+                                                              of uniform bins in the range 0 < z < 2.1. The redshift inter-
+gion of 0.5 < z < 1.0 and fDE (z) > 0 at around 2σ for
+                                                              vals of the bins in these different schemes are shown in the
+most of the bins. The uncertainties increase with red-        corresponding colored bars between the two panels. For com-
+shift, becoming progressively less Gaussian, with longer      parison, the median, 1σ, and 2σ contours of the w0 wa CDM
+tails extending towards more negative w values. Lastly,       parametrization are plotted on the same axes, along with
+we note that the amplitudes in adjacent bins exhibit mild     ΛCDM expectation in dashed lines. The fDE = 0 line is
+correlations, weakening with increasing redshift.             plotted as a dotted line.
+   To decorrelate the bins and get additional insights
+into the contributions from different redshift intervals,
+we also perform a principal component analysis. Princi-
+pal component analysis (PCA) is effectively a transfor-                                    0.8
+mation that provides a new basis in which the new coeffi-                                                                           e00 , σ0 = 0.0048
+                                                              Principal Component Basis
+
+
+
+
+cients qi , corresponding to the bin amplitude parameters,                                 0.6                                      e01 , σ1 = 0.0164
+are decorrelated. There are, in general, infinitely many                                                                            e02 , σ2 = 0.0555
+such decorrelated bases, but only one that is orthogonal.                                  0.4                                      e03 , σ3 = 0.1033
+We may obtain it simply by finding the eigenvector basis
+that diagonalizes C −1 , the inverse covariance matrix of                                  0.2
+the bin amplitude parameters wi , calculated by MCMC
+                                                                                           0.0
+sampling [52]. See Appendix B for additional details.
+   We divide the equation of state parameter into 10                                      −0.2
+uniform bins of fixed amplitude between z = 0.1 and
+z = 2.1, with two additional free parameters, one each                                    −0.4
+for the amplitude on either side. The covariance matrix
+of the resulting bin parameters wi , i = 0, 1, ..., 11 with                                  0.0      0.5         1.0         1.5         2.0           2.5
+DESI+CMB+Union3 is used to determine the eigenvec-                                                                       z
+tor basis. The basis functions, or principal components,
+corresponding to the 4 largest eigenvalues are presented      FIG. 8. The four principal components with the largest eigen-
+in Figure 8, along with the corresponding errors (ob-         values, from a scheme comprising 10 uniform bins between
+tained as square roots of inverse eigenvalues)                z = 0.1 and z = 2.1, constrained using DESI+CMB+Union3.
+   The largest principal component is well localized in z,    The first component has an uncertainty (inverse eigenvalue),
+peaking in the range 0.1 < z ≤ 0.3, while the second-         σ0 , at least 20× smaller than any of the others, and the first
+                                                              two components are seen to be relatively well localized at low
+largest component is mostly positive and peaks in the
+                                                              redshift.
+interval 0.3 < z ≤ 0.5. The remaining components show
+increasingly more pronounced oscillatory behavior, with
+                                                                                                                        12
+
+at least 20× the uncertainty of the first bin, σ0 .             and hints of w(z) crossing into the phantom regime
+   Overall, the binning results from different schemes are      around z ≈ 0.5. The inclusion of CMB data (left and
+in good general agreement. The crossing of phantom di-          right panels) results in tighter constraints on Ωm , which
+vide line by w(z), and turn-over in fDE (z) followed by a       strengthen the significance of deviations from w = −1,
+decreasing trend towards higher redshifts, found in the         whereas the DESI + Union3 combination allows for lower
+other analyses [40, 43, 132, 133] are consistent with these     values of Ωm and a broader range of variations w(z).
+results. Even so, the approach has its limitations. While       The second row demonstrates a notable bump in the
+it is well-suited to testing deviation from a constant func-    evolution of the dark energy density, while constraints
+tion, capturing more complicated behaviors requires ad-         derived without CMB allow for a wider variety of w(z).
+ditional degrees of freedom, which increases the level of       The third row displays the normalized Hubble param-
+uncertainty [52, 54, 124, 125, 128]. In particular, though      eter h(z)/hΛCDM (z). The fourth row presents the Om
+the data seem to be consistent with a phantom crossing,         diagnostic, clearly showing the evolution as a function of
+it is difficult to draw strong conclusions about the specific   z, indicating a deviation from Λ. Lastly, the final row
+redshift where a phantom crossing of w(z), or turn-over         depicts the reconstructed deceleration parameter q(z),
+in fDE (z), might occur. The limitations present in this        which slightly exceeds the expectations of the ΛCDM
+approach make it important to understand what kind of           model, suggesting a slowdown in the acceleration rate.
+biases may be introduced by the implementation. In Ap-             In Figure 10, we present a comparison of results
+pendix E, we perform some tests on simulated data in an         obtained from GP reconstruction utilizing the w0 wa
+attempt to address this.                                        parametrization derived from DESI, CMB, and Union3
+                                                                data.    The GP reconstruction, illustrated in blue,
+                                                                aligns very well with the 1σ posterior predictions of the
+           B.   Gaussian Process Regression                     w0 wa CDM model. We would like to remind readers that
+                                                                the GP approach imposes a Gaussian prior distribution
+                                                                on w(z), centered at the mean function which we explic-
+   In this section, we discuss Gaussian processes, which
+                                                                itly choose to be w = −1, as represented by the black dot-
+can be thought of as a generalization of binning where the
+                                                                ted line. This effectively places more prior weight on Λ
+amplitudes at every redshift are sampled but are subject
+                                                                and any observed deviations from w(z) = −1 are largely
+to some constraints (prior assumptions) on the form of
+                                                                driven by data. Finally, we would like to emphasize that
+the resulting functions. This allows for a complementary
+                                                                although GP regression offers advantages over parametric
+analysis with the possibility of improving the trade-off
+                                                                methods, it is important to interpret the reconstructed
+between flexibility and constraining power.
+                                                                w(z) with caution. While flexible, the method may not
+   Gaussian Process (GP) regression [135] is a power-
+                                                                fully capture certain behaviors of w(z), as illustrated in
+ful, non-parametric statistical tool widely used in vari-
+                                                                Appendix E using simulated data. Nevertheless, GP re-
+ous fields, including cosmology [136–138], to reconstruct
+                                                                mains a valuable tool for assessing the dynamical nature
+smooth functions from noisy data without assuming a
+                                                                of dark energy in a non-parametric manner.
+specific functional form (see e.g., [62, 139–148] for a non-
+exhaustive list). For the purpose of this work, GP can
+be thought of as a way of sampling the space of contin-
+                                                                   VI.   IMPLICATIONS FOR DARK ENERGY
+uous functions in a non-parametric manner. This allows
+data-driven reconstructions of the quantities of interest
+for dark energy, namely w(z) or fDE (z) with minimal               The various methods explored in Sections IV and V
+assumptions [62, 136, 149, 150]. More specifically, at          provide a flexible way to test deviations from ΛCDM and
+each point in parameter space, we draw a sample (real-          ensure robust results without committing to a specific
+ization) of w from a multivariate Gaussian distribution,        dark energy model. However, interpreting the deviations
+e.g., w(z) ∼ GP(m(z) = −1, K) where K is a given co-            from a cosmological constant and understanding its im-
+variance function — known as kernel — encoding our              plications for fundamental physics necessitates a deeper
+prior assumptions about the smoothness of the recon-            exploration of physically-motivated dark energy models.
+structed function. We further impose w(z ≥ zmax ) = −1          Rather than constraining specific models, we focus on dif-
+to recover a standard (ΛCDM-like) expansion history at          ferent classes, characterized by their dynamics [151–153]
+early times. We have chosen zmax = 10, after checking           and inspired by theoretical considerations.
+that this choice does not significantly alter our conclu-
+sions. This is implemented in a modified version of the
+Boltzmann solver camb, with more details on GP given                          A.    Thawing dark energy
+in Appendix C.
+   Figure 9 illustrates the reconstructed dark energy             The first class of models we consider is known as
+properties using GP with various datasets: DESI + CMB           thawing dark energy [151]. This class characterizes
+(left), DESI + Union3 (middle), and DESI + Union3 +             quintessence models [154–157], in which a minimally cou-
+CMB (right). The top row presents the reconstructed             pled scalar field remains frozen at early times due to Hub-
+w(z), indicating deviations from ΛCDM at low redshift           ble friction, effectively behaving like a cosmological con-
+                                                                                                                                 13
+
+         −0.5
+
+         −1.0
+w(z)
+
+
+         −1.5
+
+         −2.0 DESI + CMB                               DESI + Union3                          DESI + CMB + Union3
+
+              1.5
+    fDE(z)
+
+
+
+
+              1.0
+
+              0.5
+
+             1.15
+h(z)/hΛCDM
+
+
+
+
+             1.10
+
+             1.05
+
+             1.00
+              0.6
+
+              0.5
+    Om(z)
+
+
+
+
+              0.4
+
+              0.3
+              0.5
+q(z)
+
+
+
+
+              0.0
+
+
+         −0.5
+                    0.5   1.0   1.5   2.0   2.5    3.0    0.5   1.0    1.5   2.0   2.5    3.0    0.5   1.0   1.5    2.0   2.5    3.0
+                                z                                      z                                     z
+
+                                1σ                2σ                   1σ                2σ                  1σ                 2σ
+
+FIG. 9. GP reconstructions of w(z) for the DESI + CMB (green), DESI + Union3 (orange), and DESI + CMB + Union3
+(blue) combinations. The rows depict the redshift evolution of cosmological quantities: equation of state w(z), normalized dark
+energy density fDE (z), h(z)/hΛCDM (z), Om(z) diagnostic, and deceleration parameter q(z). The shaded bands obtained using
+fgivenx [134] illustrate confidence intervals at various levels. The black dashed lines represent predictions from the ΛCDM
+model.
+
+
+stant with w = −1. Only when the scalar field’s mass                   Ref. [54] demonstrated that the phase-space dynamics of
+becomes comparable to the Hubble rate, mφ ∼ H, does                    these models can be well-approximated using the w0 wa
+the field begin to evolve dynamically, causing its equation            parametrization. Many thawing potentials map onto a
+of state to ‘thaw’ away from w = −1 into the quintessence              narrow region in the w0 wa plane, approximately follow-
+regime, w > −1. Note that there exists a second class                  ing the relation
+of DE dynamics, referred to as the ‘freezing’ class, where
+the field evolves towards a de Sitter state (w = −1) in                                   wa ≈ −1.58(1 + w0 ) .                 (14)
+the asymptotic future. Such dynamics are characterized
+by wa > 0 and are not favored by observations. For a                   This ‘calibrated thawing’ relation provides a form that
+review on quintessence models, see e.g., [158, 159]                    acts as a good approximation for the thawing dynam-
+                                                                       ics. However, it also allows the equation of state to
+  This behavior is typical of pseudo-Nambu-Goldstone-                  cross the phantom line (w = −1), which is unphysical
+Boson (PNGB) quintessence models [160] and simple po-                  for quintessence models [94, 161, 162]. This occurs be-
+tentials such as V ∝ m2 φ2 and V ∝ λφ4 , both of which                 cause Eq. (14) is designed to approximate the expansion
+are ubiquitous in high-energy physics [24]. Interestingly,             rate H(z) and distance measures D(z) at sub-percent
+                                                                                                                                 14
+
+                                                            2σ          −0.3
+       −0.6                               GP                                                             DESI + CMB + Union3
+                                                                        −0.4
+                                          w0 wa CDM
+       −0.8                                                             −0.5
+
+       −1.0                                                             −0.6
+
+
+
+
+                                                                 w(z)
+w(z)
+
+
+
+
+                                                            1σ
+       −1.2                                                             −0.7
+
+                                                                        −0.8
+       −1.4
+                                                                        −0.9
+       −1.6
+                                                                        −1.0
+          0.0   0.5   1.0    1.5    2.0     2.5       3.0                         0.1     0.2      0.3        0.4         0.5    0.6
+                             z                                                                      z
+                                                                         30
+FIG. 10. Comparison of GP reconstruction of dark energy
+equation of state w(z) with the w0 wa parametrization, uti-
+lizing data from DESI, CMB, and Union3. The GP recon-
+struction is shown in blue, accompanied by shaded 68% and                20
+95% confidence intervals. This is contrasted with the poste-
+
+
+
+
+                                                                   p
+rior predictions for the w0 wa CDM model, depicted in orange
+along with 1σ uncertainty. The black dashed line represents
+the standard ΛCDM prediction.                                            10
+                                                                                                    DESI + CMB + Union3
+                                                                                                    DESI + CMB + PantheonPlus
+                                                                                                    DESI + CMB + DESY5
+precision — precisely the quantities probed by cosmolog-
+                                                                          0
+ical observations — but does not necessarily approximate                  −1.0             −0.5                     0.0
+w(z) itself [54].                                                                                  w0
+   Nevertheless, it is possible to describe thawing dynam-
+ics while ensuring that w > −1 at all times. Following
+                                                                 FIG. 11. Constraints on the algebraic thawing functional
+[163, 164] (see also [165]), the evolution of the thawing
+                                                                 form, as described in Eq. (15), that restricts w(z) ≥ −1.
+equation of state can be parameterized by the algebraic          The top panel shows the reconstructed evolution of w(z) with
+expression                                                       shaded regions representing the confidence contours at 68%
+                                         1−p/3                 and 95%, demonstrating the deviation from ΛCDM at low
+                             p     1+b                           redshifts. The bottom panel illustrates the posterior distri-
+      1 + w(a) = (1 + w0 ) a                      ,    (15)
+                                 1 + ba−3                        butions of w0 and p for different SNe combinations.
+
+where p and w0 are free parameters, and b = 0.5 [164].
+Notably, this formulation, referred to as ‘algebraic thaw-       the fit with respect to the standard model (ΛCDM),
+ing’ is more general, where the case p = 1 and Eq. (14)          achieving a ∆χ2 = −2.9 for the DESI+CMB+Union3
+were found to yield nearly identical late-time constraints       data combination. Substituting the PantheonPlus data
+as shown in Appendix A of [44].                                  with Union3 or DESY5 yields a ∆χ2 = −6.9 and −13.2,
+   The reconstructed posterior distribution of w(z) for          respectively. However, this improvement in fit comes at
+the thawing class is shown in the top panel of Figure 11         the cost of including two additional degrees of freedom.
+for the DESI+CMB+Union3 data combination. This as-                  To illustrate that Eq. (15) correctly captures the phe-
+sumes the algebraic form, which enforces w ≥ −1, and             nomenology of thawing fields, and better quantify how
+where we have marginalized over the parameter p. How-            the constraints would translate into constraints on the
+ever, mild degeneracies with w0 leave the posteriors for p       physical parameters of the theory, we consider one phys-
+largely unconstrained. In particular, it is seen that large      ically motivated, axion-like potential [160, 166, 167]
+values of p are allowed by the data, resulting in our pos-
+terior hitting the prior bound p = 30, as shown in the                           V (φ) = m2a fa2 [1 + cos(φ/fa )] ,             (16)
+bottom panel of Figure 11. However, we do not extend
+our analysis to larger values of p, as numerical complica-       where ma denotes the mass of the boson particles re-
+tions can arise when dealing with DE models with very            lated to the scalar field, and fa is regarded as the effec-
+rapidly varying w(a), particularly in the treatment of           tive energy. Depending on the initial conditions, the ax-
+perturbations and CMB lensing.                                   ion cosine potential exhibits two distinct behaviors: the
+   The calibrated thawing relation Eq. (14) yields no sig-       standard quadratic regime, the effective mass is positive
+nificant improvement in fit, as seen from the ∆χ2 values         (m2eff > 0), and the potential can be approximated by
+in Table III and from the posteriors in Figure 13 being          a quadratic form near its minimum, where the effective
+                                                                                                2
+consistent with w0 = −1, except for DESY5. The alge-             mass is defined as m2eff = ddφV2 . Whereas, the hilltop
+braic thawing parametrization in Eq. (15) can improve            regime [168] is, characterized by a negative effective mass
+                                                                                                                            15
+
+                                                                    Despite hints of the sharp emergence of dark energy
+       −0.70                   DESI + CMB + Union3
+                                                                 in recent times from non-parametric reconstructions, the
+                               DESI + CMB + PantheonPlus
+       −0.75                                                     DESI+CMB+SNe constraints on ∆, as shown in the mid-
+                               DESI + CMB + DESY5
+                                                                 dle panel of Figure 13, indicate that such an emergent
+       −0.80                                                     behavior is not statistically favored over ΛCDM, given
+w(z)
+
+
+
+
+                                                                 the assumed w(z). Note that while Eq. (17) can mimic
+       −0.85
+                                                                 the emergence of dark energy, it is limited by its inabil-
+       −0.90                                                     ity to cross w = −1 or, equivalently, introduce a bump in
+                                                                 fDE (z); a feature that seems to be favored by the data.
+       −0.95                                                     In principle, one can formulate an emergent dark energy
+                                                                 model characterized by an effective equation of state that
+       −1.00
+                                                                 can cross w(z) = −1. Such behavior may be realized
+           0.0        0.5     1.0       1.5    2.0         2.5
+                                                                 through the coupling of emergent dark energy with the
+                                    z                            dark matter sector [174–176].
+FIG. 12. Marginalized constraints on the equation of state
+parameter, w(z) = P/ρ, for the axion-like potential given by
+Eq. (16)
+
+                                                                                 C.    Mirage dark energy
+(m2eff < 0), when the field begins its evolution near the
+maximum of the potential (i.e., at φ = 0) and rolls down
+toward the minimum at φ = πfa . We refer the reader                The last and more phenomenological class of models
+to Appendix D for more details on the model and its              which we consider is that of mirage dark energy [177].
+implementation in class.                                         This refers to models in the w0 wa plane (see Figure 1)
+   In Figure 12, we report the marginalized posterior            approximately living along the line
+distribution for the equation of state parameter as-
+sociated with the scalar field potential in Eq. (16),
+                                                                                    wa ≈ −3.66(1 + w0 ) .                 (18)
+obtained using DESI, CMB, and three SNe compila-
+tions and obtain the following constraints for the phys-
+ical mass: log10 (ma c2 /eV) = −32.67+0.23
+                                        −0.25 (Pantheon-         The mirage class is designed to describe a subset of dy-
+Plus), −32.50+0.28
+               −0.30 (Union3)  and  −32.63 +0.26
+                                           −0.30 (DESY5)         namical dark energy models that preserve the distance to
+and effective energy scale: log10 (fa /MPl ) = −0.13+0.33
+                                                      −0.29      the surface of the last scattering as predicted by ΛCDM,
+(PantheonPlus), −0.29+0.63
+                         −0.35 (Union3)   and   −0.09 +0.66
+                                                      −0.40
+                                                                 a parameter tightly constrained by the CMB [177]. The
+(DESY5). The constraints indicate that the field starts          name ‘mirage’ stems from the fact that these models
+in the hilltop regime, with initial conditions of φi /fa ∼       would mimic Λ, yielding ⟨w⟩ ∼ −1 when fitting a con-
+0.7 − 1.0, rolls down the potential, and reaches the             stant w to observations, as it could be seen in Table V
+present value of φ0 /fa ∼ 1.1–1.4, traversing approxi-           [47] in DR2 and Table III in [40] for DR1 comparison.
+mately ∆φ ∼ (0.2 − 0.4)MPl .                                     The mirage direction fully captures the DE phenomenol-
+                                                                 ogy suggested by the data, with merely one degree of
+                                                                 freedom w0 that quantifies the strength of the mirage,
+                 B.     Emergent dark energy                     with w0 = −1 corresponds to ΛCDM where the mirage
+                                                                 is real. This mirage effect is also expected to persist in the
+   The second family of DE models that we consider is the        growth of cosmic structures, provided that general rela-
+emergent class, where dark energy had a vanishing pres-          tivity remains unmodified [177–179]. As noted in [44], by
+ence during most of cosmic history, and only ‘emerges’           reducing the late-time dark energy density (i.e., increas-
+in recent times. Following [169, 170], we parametrize the        ing Ωm ), one can make w0 even less negative — and cor-
+equation of state as                                             respondingly wa more negative — enhancing the mirage
+                                                           effect. For comparison, DESI+CMB+Union3 prefers
+                  ∆                          1+z                 Ωm ≈ 0.304 in ΛCDM which increases to Ωm ≈ 0.327
+w(z) = −1 −              1 + tanh ∆ log10               .
+              3 ln (10)                      1 + zt              in w0 wa which essentially lies along the mirage direction.
+                                                     (17)        From the data viewpoint, the mirage line in Figure 1
+The parameter ∆ determines the steepness of the tran-            can be seen as the ‘principal component’, or ‘axis’ in the
+sition in w(z) and the transtion redshift parameter zt is        w0 wa plane carrying the most meaningful information,
+determined by the equality ρDE (zt ) = ρm (zt ). The phe-        i.e., the eigenvector with the highest eigenvalue. Despite
+nomenology we are trying to capture is that of abrupt            effectively reducing the dimensionality of the DE phe-
+changes in the equation of state, w(z), driven by phys-          nomenology, the exact physical mechanism for such rapid
+ical mechanisms, such as second-order phase transitions          emergence of dark energy (w(a) ≪ −1 ) remains unclear
+[171–173].                                                       (see [180] for more discussion).
+                                                                                                                      16
+
+                                                              SNe Ia datasets indicate overall consistency with ΛCDM.
+             Thaw. (Cal.)                                     The emergent (middle panel) exhibits a similar trend,
+                                                              with constraints on ∆ reflecting no significant departures
+     −0.8                                                     from the standard cosmological framework (∆ = 0). In
+                                                              contrast, the mirage class (bottom panel) demonstrates
+                                                              deviations from the value of w0 = −1 across all three
+     −0.9                                                     SNe Ia datasets.
+w0
+
+
+
+
+                                                                 We also make a quantitative comparison, examining
+                                                              the deviance information criterion (DIC)[181, 182], as
+     −1.0                                                     defined below, along with the ∆χ2 . The former com-
+                                                              plements the ∆χ2 by accounting for model complexity,
+                                                              which does not take into account the number of ad-
+                                                              ditional degrees of freedom in a particular model and
+     −1.1
+                                                              could be made arbitrarily low if sufficient parameters
+                                                              were added. The DIC is defined as
+             Emergent
+                                                                         DIC ≡ D(θ̄) + 2pD = D(θ) + pD ,            (19)
+      0.1
+                                                              where pD = D(θ) − D(θ̄) is a penalty term, and D(θ̄) =
+                                                              −2 ln L + C is the ‘deviance’ of the likelihood, with con-
+                                                              stant C vanishing in pD . In practice, we use
+∆
+
+
+
+
+      0.0
+                                                                                pD = χ2 (θ) − χ2 (θ) ,              (20)
+                                                              and pD becomes effectively equivalent to the number of
+     −0.1                                                     extra parameters in the limit of parameters that are well-
+                   DESI + CMB + Union3
+                   DESI + CMB + PantheonPlus                  constrained with respect to their prior. We consider the
+                   DESI + CMB + DESY5                         DE classes in this section and the w0 wa parametrization,
+                                                              for the data combinations DESI+CMB+SNe Ia. The
+     −0.4                                                     comparisons are made between each model class and the
+             Mirage
+                                                              ΛCDM model, and the key metric for each comparison
+     −0.5                                                     being the DIC. The ∆DIC (and ∆χ2 ) values are reported
+                                                              in Table III, with a preference for the more complex
+     −0.6                                                     model indicated by negative values, and for the simpler
+                                                              model, in this case ΛCDM, by positive values. For nested
+w0
+
+
+
+
+     −0.7                                                     models, a decrease (∆DIC < 0) of at least 2 is required
+                                                              for a not ‘insignificant’ improvement, and up to 5 con-
+     −0.8                                                     stitutes a ‘positive’ preference over ΛCDM. A decrease
+                                                              of up to 10 is considered a ‘strong’ preference, and be-
+     −0.9                                                     yond this, the preference is ‘decisive’ [183]. However, for
+                                                              classes that are not nested within each other, there is no
+     −1.0                                                     absolute scale for comparison and can only be quantita-
+            0.30        0.31      0.32     0.33   0.34        tively compared against ΛCDM.
+                                  Ωm                             The w0 wa parametrization achieves −∆χ2 ∼ 10.7 −
+                                                              21.0 and −∆DIC ∼ 6.8 − 17.2, indicating that it is
+FIG. 13. Constraints on three dark energy model classes:
+                                                              strongly to decisively preferred over the standard ΛCDM.
+calibrated thawing, emergent, and mirage, each with one ad-   Comparatively, the calibrated thawing performs poorly.
+ditional degree of freedom compared to ΛCDM. The contours     The algebraic thawing class improves the fit slightly
+represent 68% and 95% confidence regions for different SNe    more, and since the ∆DIC is consistently larger than for
+combinations: PantheonPlus (blue), Union3 (orange), and       calibrated thawing, the improvement in χ2 must be suffi-
+DESY5 (green).                                                cient to reconcile the former’s second additional degree of
+                                                              freedom. The emergent dark energy class shows no sig-
+                                                              nificant improvement in fit, faring even worse than the
+                                                              thawing class. The final mirage class attains −∆χ2 ∼
+                   D.   Model Comparison
+                                                              10.5 − 20.7, comparable to the w0 wa parametrization, as
+                                                              well as −∆DIC ∼ 9.1 − 18.7. This is perhaps unsur-
+   In Figure 13, we show the constraints on the single        prising, given how closely the mirage direction aligns the
+additional parameters of the three DE classes. In the         w0 wa CDM constraints.
+calibrated thawing (top panel), there is a mild devia-           The advantage of the thawing and emergent classes
+tion observed with the DESY5 dataset, but the other two       is their connection to a physical interpretation, which is
+                                                                                                                           17
+
+                                                                    underperform compared to those that do. The specific
+TABLE III. ∆χ2MAP ≡ χ2model − χ2ΛCDM and ∆DIC ≡                     behavior of w(z) suggested by the data — a phantom
+DICmodel − DICΛCDM values for various data combinations,
+                                                                    crossing from w(z ≳ 0.5) < −1 to w(z ≲ 0.5) > −1 — is
+including DESI, CMB with each different SNe Ia, and
+DE classes, namely: Thawing (Calibrated and Algebraic:
+                                                                    not predicted by any of the simplest and most studied
+‘Thaw. (Cal.)’ and ‘Thaw. (Alg.)’, respectively), Emergent          extensions of ΛCDM (see also the recent discussion in
+and Mirage. The minimum χ2 values were obtained using the           [180]).
+iminuit [91] minimizer.                                                While the phantom crossing can be seen as theoret-
+                                                                    ically challenging due to stability issues, for example,
+DESI+CMB: +PantheonPlus             +Union3         +DESY5          within the framework of minimally-coupled scalar fields,
+DE classes                       ∆DIC (∆χ2 )                        obtaining such behavior is not difficult in extended the-
+                                                                    oretical frameworks. For example, phantom crossing can
+Thaw. (Cal.) +0.4 (−1.6)         −0.6 (−2.5) −5.8 (−7.1)
+                                                                    arise in models where dark energy possesses multiple
+Thaw. (Alg.) −1.0 (−2.9)         −4.6 (−6.9) −10.1 (−13.2)          internal degrees of freedom, such as multi-field scenar-
+Emergent       +2.1 (−0.05)      +1.8 (−0.1) +0.2 (−1.5)            ios [187–192], non-standard vacuum models [171, 172],
+Mirage         −9.1 (−10.5)      −13.8 (−16.2) −18.7 (−20.7)        frameworks where dark energy interacts with dark mat-
+                                                                    ter [193–198], and modified theories of gravity [199–
+w0 wa          −6.8 (−10.7)      −13.5 (−17.4) −17.2 (−21.0)        209]. Because of the aforementioned multiple internal
+                                                                    degrees of freedom in these models, the effective, observ-
+                                                                    able equation of state w(z) can cross the phantom divide
+fairly straightforward, while for the mirage class less so.         even though the null-energy condition is not violated.
+It is also important to note that the model comparison              Whether a compelling theoretical mechanism — one that
+metrics used in this section serve both to quantify the             does not require many extra degrees of freedom or exotic
+data’s preference for each model—providing an absolute              assumptions — can be constructed to cross the phan-
+scale in the case of nested models—and to facilitate a              tom divide in the way suggested by data remains an open
+relative ranking among non-nested models, such as the               question, although some models have recently been put
+algebraic thawing and w0 wa parameterizations.                      forward as viable in this regard [206, 207].
+
+
+     E.   Is there evidence for phantom crossing?                                   VII.   CONCLUSIONS
+
+   Both the parametric and non-parametric methods dis-                 This work presents constraints on dark energy from
+cussed in Section IV and Section V indicate a possible              DR2 BAO, in combination with cosmic microwave back-
+crossing of the phantom divide line; however, as illus-             ground, and type Ia supernova data. We began our study
+trated in Figure 16, this does not guarantee that the               by summarizing and expanding upon the w0 wa CDM
+crossing is genuine. Specifically, the apparent crossing            analysis presented in [47]. Under the assumption of
+in the w0 wa parameterization may be spurious to match              a linearly evolving w(a) = w0 + wa (1 − a), the lat-
+observables, raising the question of whether w(a) truly             est DESI+CMB results indicate a ≃ 3σ deviation from
+crosses −1 or if the behavior is simply an artifact of the          ΛCDM. The data shows a clear preference for the (w0 >
+parameterization.                                                   −1, wa < 0) quadrant, and in particular w0 + wa < −1,
+   To address this, we analyze the behavior of thaw-                implying a past phantom-like equation of state transi-
+ing quintessence using the algebraic model described by             tioning to w(z) > −1 today. The reconstructed Om(z)
+Eq. (15), which enforces w(z) ≥ −1. Although the al-                and deceleration parameter q(z) also show clear devia-
+gebraic thawing model, restricted by our prior p < 30,              tions from ΛCDM, reinforcing the case for evolving dark
+yields a better fit to the data than ΛCDM by 3 ≲                    energy.
+−∆χ2 ≲ 13 and −1 < −∆DIC < 10, it is considerably                      To assess the robustness of our findings, we conducted
+less favored than the w0 wa model. This overall preference          a series of analyses: i) varying the redshift dependence
+for w0 wa CDM over algebraic-thawing model, however,                of w(z), by considering various parametrizations (Sec-
+cannot be straightforwardly converted into p-values or              tion IV A), and ii) studying the improvement in fit as
+n-sigma levels because algebraic thawing and w0 wa CDM              more freedom is given to the dark energy characteristics
+models are not nested.                                              (Section IV B). As in DR1, the results are rather stable
+   To achieve −∆χ2 comparable to w0 wa with thawing                 under changes in the assumed form for w(z), and the
+models would require an exceptionally fine-tuned poten-             data does not seem to require more degrees of freedom in
+tial V (φ) [184], precise initial field settings [185], or ‘data-   w(z), beyond w0 wa , as shown in Figure 6 (see also [43]).
+informed’ prior choices [186], resulting in w(z ≳ 0.3) =               Next, we implemented two non-parametric recon-
+−1 followed by a rapid increase to w(z ≲ 0.3) > −1. This            struction techniques and applied them to the redshift-
+suggests that a sharp increase followed by a decrease in            dependent equation of state w(z) and dark energy den-
+dark energy density may be a necessary feature, since               sity fDE (z), in order to allow more flexibility than that
+models that do not cross the phantom divide tend to                 available in the parametric methods. Overall, the con-
+                                                                                                                       18
+
+straints support the evolution indicated by the w0 wa                         ACKNOWLEDGMENTS
+parametrization, giving the tightest constraints at low
+redshifts, where they display a preference for a devia-            The authors thank Eric Linder for his valuable dis-
+tion with w(z) > −1, while suggesting a crossover to the        cussions and Robert Crittenden and Kazuya Koyama for
+phantom regime at higher redshift. The low redshift de-         their detailed comments. R.C. is funded by the Czech
+viation is evidently independent of the chosen binning          Ministry of Education, Youth and Sports (MEYS) and
+variable, although the constraints remain within 2σ of          European Structural and Investment Funds (ESIF) under
+ΛCDM at higher redshifts. Gaussian process regression           project number CZ.02.01.01/00/22 008/0004632. A.S.
+is better able to localize the redshift where the crossing      would like to acknowledge the support by National Re-
+should occur, around z ∼ 0.5.                                   search Foundation of Korea 2021M3F7A1082056. MI ac-
+   In order to provide possible interpretations for the         knowledges that this material is based upon work sup-
+physical origin of the observed deviation, three model          ported in part by the Department of Energy, Office of
+classes were considered, each endowed with a different          Science, under Award Number DE-SC0022184, and also
+dynamical behavior and motivated to various degrees by          in part by the U.S. National Science Foundation under
+physical theory. The thawing and emergent classes are           grant AST2327245. CGQ acknowledges support pro-
+the least well-supported, indicating that the data might        vided by NASA through the NASA Hubble Fellowship
+not favor dark energy evolution that arises from, respec-       grant HST-HF2-51554.001-A awarded by the Space Tele-
+tively, either minimally-coupled scalar field models or         scope Science Institute, which is operated by the Associ-
+emergent behavior in energy density. In contrast, the mi-       ation of Universities for Research in Astronomy, Inc., for
+rage class performs remarkably well, capturing DE phe-          NASA, under contract NAS5-26555.
+nomenology with just one additional degree of freedom,             This material is based upon work supported by the
+which warrants an inquiry into whether any underlying           U.S. Department of Energy (DOE), Office of Science,
+physics or systematic effects could explain this mirage.        Office of High-Energy Physics, under Contract No.
+   In summary, irrespective of the parametric/non-              DE–AC02–05CH11231, and by the National Energy Re-
+parametric methods used, the evidence of deviation from         search Scientific Computing Center, a DOE Office of
+ΛCDM is significant. Our findings suggest that the              Science User Facility under the same contract. Addi-
+canonical w0 wa parametrization effectively captures the        tional support for DESI was provided by the U.S. Na-
+essence of dark energy evolution in our study. Decisive         tional Science Foundation (NSF), Division of Astronomi-
+tests of dark energy and its possible deviations from the       cal Sciences under Contract No. AST-0950945 to the NSF
+ΛCDM model will require a combination of complemen-             National Optical-Infrared Astronomy Research Labora-
+tary probes. The forthcoming DESI data releases, in-            tory; the Science and Technology Facilities Council of the
+cluding constraints from redshift space distortions and         United Kingdom; the Gordon and Betty Moore Founda-
+peculiar velocities, will offer crucial insights into the na-   tion; the Heising-Simons Foundation; the French Alter-
+ture of dark energy and gravity. The upcoming SNe mea-          native Energies and Atomic Energy Commission (CEA);
+surements from the ZTF survey [210, 211], the Vera C.           the National Council of Humanities, Science and Tech-
+Rubin Observatory [212, 213] and Nancy Grace Roman              nology of Mexico (CONAHCYT); the Ministry of Sci-
+Space Telescope [214] will extend the Hubble diagram            ence and Innovation of Spain (MICINN), and by the
+probed by DESI to very low redshifts, improving con-            DESI Member Institutions: https://www.desi.lbl.
+straints on w0 . Meanwhile, data from Euclid [215] and          gov/collaborating-institutions.
+Rubin will serve as an important cross-check of DESI’s             The DESI Legacy Imaging Surveys consist of three in-
+findings, helping to assess the impact of potential sys-        dividual and complementary projects: the Dark Energy
+tematics. Finally, next-generation CMB experiments will         Camera Legacy Survey (DECaLS), the Beijing-Arizona
+further tighten constraints on early-universe parameters,       Sky Survey (BASS), and the Mayall z-band Legacy Sur-
+breaking degeneracies with late-time observables. With          vey (MzLS). DECaLS, BASS and MzLS together in-
+these advancements, the next decade promises to deter-          clude data obtained, respectively, at the Blanco tele-
+mine if we are entering a new era in modern cosmology           scope, Cerro Tololo Inter-American Observatory, NSF
+that necessitates a paradigm shift.                             NOIRLab; the Bok telescope, Steward Observatory, Uni-
+                                                                versity of Arizona; and the Mayall telescope, Kitt Peak
+                                                                National Observatory, NOIRLab. NOIRLab is operated
+                                                                by the Association of Universities for Research in As-
+                                                                tronomy (AURA) under a cooperative agreement with
+            VIII.    DATA AVAILABILITY
+                                                                the National Science Foundation. Pipeline processing
+                                                                and analyses of the data were supported by NOIRLab
+   The data used in this analysis will be made pub-             and the Lawrence Berkeley National Laboratory. Legacy
+lic along the Data Release 2 (details in https://data.          Surveys also uses data products from the Near-Earth Ob-
+desi.lbl.gov/doc/releases/). The data points corre-             ject Wide-field Infrared Survey Explorer (NEOWISE),
+sponding to the figures from this paper will be available       a project of the Jet Propulsion Laboratory/California
+in a Zenodo repository.                                         Institute of Technology, funded by the National Aero-
+                                                                                                                             19
+
+nautics and Space Administration. Legacy Surveys was             ergy. The complete acknowledgments can be found at
+supported by: the Director, Office of Science, Office of         https://www.legacysurvey.org/.
+High Energy Physics of the U.S. Department of En-                   Any opinions, findings, and conclusions or recommen-
+ergy; the National Energy Research Scientific Comput-            dations expressed in this material are those of the au-
+ing Center, a DOE Office of Science User Facility; the           thor(s) and do not necessarily reflect the views of the
+U.S. National Science Foundation, Division of Astro-             U.S. National Science Foundation, the U.S. Department
+nomical Sciences; the National Astronomical Observato-           of Energy, or any of the listed funding agencies.
+ries of China, the Chinese Academy of Sciences and the              The authors are honored to be permitted to conduct
+Chinese National Natural Science Foundation. LBNL                scientific research on Iolkam Du’ag (Kitt Peak), a moun-
+is managed by the Regents of the University of Cali-             tain with particular significance to the Tohono O’odham
+fornia under contract to the U.S. Department of En-              Nation.
+
+
+
+
+  [1] A. Einstein, Sitzungsber. Preuss. Akad. Wiss. Berlin             L17 (1988).
+      (Math. Phys. ) 1917, 142 (1917).                            [22] V. Sahni and A. A. Starobinsky, Int. J. Mod. Phys. D
+  [2] A. G. Riess and others (Supernova Search Team), As-              9, 373 (2000), arXiv:astro-ph/9904398.
+      tron. J. 116, 1009 (1998), arXiv:astro-ph/9805201.          [23] P. J. E. Peebles and B. Ratra, Rev. Mod. Phys. 75, 559
+  [3] S. Perlmutter and others (Supernova Cosmology                    (2003), arXiv:astro-ph/0207347.
+      Project), Astrophys. J. 517, 565 (1999), arXiv:astro-       [24] E. J. Copeland, M. Sami, and S. Tsujikawa, Int. J. Mod.
+      ph/9812133.                                                      Phys. D 15, 1753 (2006), arXiv:hep-th/0603057.
+  [4] W. J. Percival, W. Sutherland, J. A. Peacock,               [25] P. Bull and others, Phys. Dark Univ. 12, 56 (2016),
+      C. M. Baugh, and others, MNRAS 337, 1068 (2002),                 arXiv:1512.05356 [astro-ph.CO].
+      arXiv:astro-ph/0206256 [astro-ph].                          [26] L. Perivolaropoulos and F. Skara, New Astron. Rev. 95,
+  [5] D. J. Eisenstein, New A Rev. 49, 360 (2005).                     101659 (2022), arXiv:2105.05208 [astro-ph.CO].
+  [6] S. Cole, W. J. Percival, J. A. Peacock, P. Norberg,         [27] M. Levi, C. Bebek, T. Beers, R. Blum, and others, arXiv
+      and others, MNRAS 362, 505 (2005), arXiv:astro-                  e-prints , arXiv:1308.0847 (2013), arXiv:1308.0847
+      ph/0501174 [astro-ph].                                           [astro-ph.CO].
+  [7] Planck Collaboration, N. Aghanim, Y. Akrami,                [28] DESI Collaboration, A. Aghamousa, J. Aguilar,
+      M. Ashdown, and others, A&A 641, A6 (2020),                      S. Ahlen, and others, arXiv e-prints , arXiv:1611.00037
+      arXiv:1807.06209 [astro-ph.CO].                                  (2016), arXiv:1611.00037 [astro-ph.IM].
+  [8] S. Alam, M. Aubert, S. Avila, C. Balland, and others,       [29] C. Poppett, L. Tyas, J. Aguilar, C. Bebek, and others,
+      Physical Review D 103, 10.1103/physrevd.103.083533               AJ 168, 245 (2024).
+      (2021).                                                     [30] J. H. Silber, P. Fagrelius, K. Fanning, M. Schubnell,
+  [9] C. Zhao, A. Variu, M. He, D. Forero-Sánchez, and oth-           and others, AJ 165, 9 (2023), arXiv:2205.09014 [astro-
+      ers, Monthly Notices of the Royal Astronomical Society           ph.IM].
+      511, 5492–5524 (2022).                                      [31] T. N. Miller, P. Doel, G. Gutierrez, R. Besuner, and oth-
+ [10] T. M. C. Abbott and others (DES), Phys. Rev. D 98,               ers, AJ 168, 95 (2024), arXiv:2306.06310 [astro-ph.IM].
+      043526 (2018), arXiv:1708.01530 [astro-ph.CO].              [32] J. Guy, S. Bailey, A. Kremin, S. Alam, and others, AJ
+ [11] M. A. Troxel and others (DES), Phys. Rev. D 98,                  165, 144 (2023), arXiv:2209.14482 [astro-ph.IM].
+      043528 (2018), arXiv:1708.01538 [astro-ph.CO].              [33] E. F. Schlafly, D. Kirkby, D. J. Schlegel, A. D. My-
+ [12] S. Alam and others (eBOSS), Phys. Rev. D 103, 083533             ers, and others, AJ 166, 259 (2023), arXiv:2306.06309
+      (2021), arXiv:2007.08991 [astro-ph.CO].                          [astro-ph.CO].
+ [13] C. Heymans and others, Astron. Astrophys. 646, A140         [34] DESI Collaboration, A. Aghamousa, J. Aguilar,
+      (2021), arXiv:2007.15632 [astro-ph.CO].                          S. Ahlen, and others, arXiv e-prints , arXiv:1611.00036
+ [14] T. M. C. Abbott and others (DES), Phys. Rev. D 105,              (2016), arXiv:1611.00036 [astro-ph.IM].
+      023520 (2022), arXiv:2105.13549 [astro-ph.CO].              [35] DESI Collaboration, B. Abareshi, J. Aguilar, S. Ahlen,
+ [15] G. Efstathiou, W. J. Sutherland, and S. J. Maddox,               and others, AJ 164, 207 (2022), arXiv:2205.10939
+      Nature 348, 705 (1990).                                          [astro-ph.IM].
+ [16] J. Frieman, M. Turner, and D. Huterer, Ann. Rev. As-        [36] DESI Collaboration, A. G. Adame, J. Aguilar, S. Ahlen,
+      tron. Astrophys. 46, 385 (2008), arXiv:0803.0982 [astro-         and others, AJ 168, 58 (2024), arXiv:2306.06308 [astro-
+      ph].                                                             ph.CO].
+ [17] D. H. Weinberg, M. J. Mortonson, D. J. Eisenstein,          [37] DESI Collaboration,        M. A. Karim,           A. G.
+      C. Hirata, and others, Phys. Rept. 530, 87 (2013),               Adame, D. Aguado, and others, arXiv e-prints ,
+      arXiv:1201.2434 [astro-ph.CO].                                   arXiv:2503.14745 (2025), arXiv:2503.14745 [astro-
+ [18] J. P. Ostriker and P. J. Steinhardt, Nature 377, 600             ph.CO].
+      (1995).                                                     [38] DESI Collaboration, A. G. Adame, J. Aguilar, S. Ahlen,
+ [19] S. Weinberg, Rev. Mod. Phys. 61, 1 (1989).                       and others, arXiv e-prints , arXiv:2404.03000 (2024),
+ [20] B. Ratra and P. J. E. Peebles, Phys. Rev. D 37, 3406             arXiv:2404.03000 [astro-ph.CO].
+      (1988).                                                     [39] DESI Collaboration, A. G. Adame, J. Aguilar, S. Ahlen,
+ [21] P. J. E. Peebles and B. Ratra, Astrophys. J. Lett. 325,          and others, J. Cosmology Astropart. Phys. 2025, 124
+                                                                                                                           20
+
+     (2025), arXiv:2404.03001 [astro-ph.CO].                         ph/0501171 [astro-ph].
+[40] DESI Collaboration, A. G. Adame, J. Aguilar, S. Ahlen,     [66] U. Andrade, E. Paillas, J. Mena-Fernández, Q. Li,
+     and others, J. Cosmology Astropart. Phys. 2025, 021             and others, arXiv e-prints , arXiv:2503.14742 (2025),
+     (2025), arXiv:2404.03002 [astro-ph.CO].                         arXiv:2503.14742 [astro-ph.CO].
+[41] DESI Collaboration, A. G. Adame, J. Aguilar, S. Ahlen,     [67] L. Casas, H. K. Herrera-Alcantar, J. Chaves-Montero,
+     and others, arXiv e-prints , arXiv:2411.12022 (2024),           A. Cuceu, and others, arXiv e-prints , arXiv:2503.14741
+     arXiv:2411.12022 [astro-ph.CO].                                 (2025), arXiv:2503.14741 [astro-ph.IM].
+[42] DESI Collaboration, A. G. Adame, J. Aguilar, S. Ahlen,     [68] A. Brodzeller, M. Wolfson, D. M. Santos, M. Ho,
+     and others, arXiv e-prints , arXiv:2411.12021 (2024),           and others, arXiv e-prints , arXiv:2503.14740 (2025),
+     arXiv:2411.12021 [astro-ph.CO].                                 arXiv:2503.14740 [astro-ph.CO].
+[43] R. Calderon and others (DESI), JCAP 10, 048,               [69] D. Brout, D. Scolnic, B. Popovic, A. G. Riess, and oth-
+     arXiv:2405.04216 [astro-ph.CO].                                 ers, ApJ 938, 110 (2022), arXiv:2202.04077 [astro-
+[44] K. Lodha and others (DESI), Phys. Rev. D 111, 023532            ph.CO].
+     (2025), arXiv:2405.13588 [astro-ph.CO].                    [70] D. Rubin, G. Aldering, M. Betoule, A. Fruchter,
+[45] DESI Collaboration, in preparation (2026).                      and others, arXiv e-prints , arXiv:2311.12098 (2023),
+[46] DESI Collaboration, M. A. Karim, J. Aguilar, S. Ahlen,          arXiv:2311.12098 [astro-ph.CO].
+     and others, arXiv e-prints , arXiv:2503.14739 (2025),      [71] T. M. C. Abbott and others (DES), ApJ (accepted,
+     arXiv:2503.14739 [astro-ph.CO].                                 2024), arXiv:2401.02929 [astro-ph.CO].
+[47] DESI Collaboration, M. A. Karim, J. Aguilar, S. Ahlen,     [72] Planck Collaboration, N. Aghanim, Y. Akrami,
+     and others, arXiv e-prints , arXiv:2503.14738 (2025),           F. Arroja, and others, A&A 641, A1 (2020),
+     arXiv:2503.14738 [astro-ph.CO].                                 arXiv:1807.06205 [astro-ph.CO].
+[48] W. Elbers, A. Aviles, H. E. Noriega, D. Chebat,            [73] N. Aghanim and others (Planck), Astron. Astrophys.
+     and others, arXiv e-prints , arXiv:2503.14744 (2025),           641, A5 (2020), arXiv:1907.12875 [astro-ph.CO].
+     arXiv:2503.14744 [astro-ph.CO].                            [74] G. Efstathiou and S. Gratton, The Open Journal of As-
+[49] D. Huterer and M. S. Turner, Phys. Rev. D 64, 123527            trophysics 4, 8 (2021).
+     (2001), arXiv:astro-ph/0012510.                            [75] J. Torrado and A. Lewis, J. Cosmology Astropart. Phys.
+[50] M. Chevallier and D. Polarski, International Journal of         2021, 057 (2021), arXiv:2005.05290 [astro-ph.IM].
+     Modern Physics D 10, 213–223 (2001).                       [76] J. Carron, M. Mirmelstein, and A. Lewis, JCAP 09,
+[51] E. V. Linder, Phys. Rev. Lett. 90, 091301 (2003),               039, arXiv:2206.07773 [astro-ph.CO].
+     arXiv:astro-ph/0208512 [astro-ph].                         [77] E. Rosenberg, S. Gratton, and G. Efstathiou, MNRAS
+[52] D. Huterer and G. Starkman, Physical Review Letters             517, 4620 (2022), arXiv:2205.10869 [astro-ph.CO].
+     90, 10.1103/physrevlett.90.031301 (2003).                  [78] M. S. Madhavacheril, F. J. Qu, B. D. Sherwin,
+[53] A. Shafieloo, U. Alam, V. Sahni, and A. A. Starobin-            N. MacCrann, and others, ApJ 962, 113 (2024),
+     sky, Mon. Not. Roy. Astron. Soc. 366, 1081 (2006),              arXiv:2304.05203 [astro-ph.CO].
+     arXiv:astro-ph/0505329.                                    [79] G. S. Farren and others (ACT), Astrophys. J. 966, 157
+[54] R. de Putter and E. V. Linder, J. Cosmology Astropart.          (2024), arXiv:2309.05659 [astro-ph.CO].
+     Phys. 2008, 042 (2008), arXiv:0808.0189 [astro-ph].        [80] P. Lemos and A. Lewis, Phys. Rev. D 107, 103505
+[55] R. G. Crittenden, L. Pogosian, and G.-B. Zhao, J. Cos-          (2023), arXiv:2302.12911 [astro-ph.CO].
+     mology Astropart. Phys. 2009, 025 (2009), arXiv:astro-     [81] A. Lewis and S. Bridle, Phys. Rev. D 66, 103511 (2002),
+     ph/0510293 [astro-ph].                                          arXiv:astro-ph/0205436 [astro-ph].
+[56] C. Bogdanos and S. Nesseris, JCAP 05, 006,                 [82] A. Lewis, Phys. Rev. D 87, 103529 (2013),
+     arXiv:0903.2805 [astro-ph.CO].                                  arXiv:1304.4473 [astro-ph.CO].
+[57] T. Holsclaw, U. Alam, B. Sansó, H. Lee, and others,       [83] J. Torrado and A. Lewis, J. Cosmology Astropart. Phys.
+     Phys. Rev. Lett. 105, 241302 (2010).                            05, 057 (2021), arXiv:2005.05290 [astro-ph.IM].
+[58] T. Holsclaw, U. Alam, B. Sansó, H. Lee, and oth-          [84] R. M. Neal, arXiv Mathematics e-prints , math/0502099
+     ers, Physical Review D 84, 10.1103/physrevd.84.083501           (2005), arXiv:math/0502099 [math.ST].
+     (2011).                                                    [85] A. Lewis, A. Challinor, and A. Lasenby, ApJ 538, 473
+[59] G.-B. Zhao, R. G. Crittenden, L. Pogosian, and                  (2000), arXiv:astro-ph/9911177 [astro-ph].
+     X. Zhang, Phys. Rev. Lett. 109, 171301 (2012),             [86] C. Howlett, A. Lewis, A. Hall, and A. Challinor,
+     arXiv:1207.3804 [astro-ph.CO].                                  J. Cosmology Astropart. Phys. 2012, 027 (2012),
+[60] S. Nesseris and J. Garcı́a-Bellido, Journal of Cosmology        arXiv:1201.3654 [astro-ph.CO].
+     and Astroparticle Physics 2012 (11), 033–033.              [87] W. Hu and I. Sawicki, Phys. Rev. D 76, 104043 (2007),
+[61] B. L’Huillier and A. Shafieloo, JCAP 01, 015,                   arXiv:0708.1190 [astro-ph].
+     arXiv:1606.06832 [astro-ph.CO].                            [88] W. Fang, W. Hu, and A. Lewis, Phys. Rev. D 78, 087303
+[62] R. Calderón, B. L’Huillier, D. Polarski, A. Shafieloo,         (2008), arXiv:0808.3125 [astro-ph].
+     and others, Phys. Rev. D 106, 083513 (2022),               [89] J. Lesgourgues, The Cosmic Linear Anisotropy Solving
+     arXiv:2206.13820 [astro-ph.CO].                                 System (CLASS) I: Overview (2011), arXiv:1104.2932
+[63] R. L. Workman, V. D. Burkert, V. Crede, E. Klempt,              [astro-ph.IM].
+     and others, Progress of Theoretical and Experimental       [90] D. Blas, J. Lesgourgues, and T. Tram, J. Cosmology As-
+     Physics 2022, 083C01 (2022).                                    tropart. Phys. 1107, 034 (2011), arXiv:1104.2933 [astro-
+[64] J. Lesgourgues and S. Pastor, Phys. Rep. 429, 307               ph.CO].
+     (2006), arXiv:astro-ph/0603494 [astro-ph].                 [91] H. Dembinski and P. O. et al., scikit-hep/iminuit (2020).
+[65] D. J. Eisenstein, I. Zehavi, D. W. Hogg, R. Scocci-        [92] M. Ishak, J. Pan, R. Calderon, K. Lodha, and oth-
+     marro, and others, ApJ 633, 560 (2005), arXiv:astro-            ers, arXiv e-prints , arXiv:2411.12026 (2024),
+                                                                                                                              21
+
+      arXiv:2411.12026 [astro-ph.CO].                                     Soc. 533, 2615 (2024), arXiv:2406.05048 [astro-ph.CO].
+ [93] V. Poulin, T. L. Smith, R. Calderón, and T. Simon,           [122] M. Tegmark, Physical Review D 55, 5895–5907 (1997).
+      arXiv:2407.18292 [astro-ph.CO] (2024).                        [123] D. Huterer and A. Cooray, Physical Review D 71,
+ [94] R. R. Caldwell, Phys. Lett. B 545, 23 (2002),                       10.1103/physrevd.71.023506 (2005).
+      arXiv:astro-ph/9908168.                                       [124] R. G. Crittenden, L. Pogosian, and G.-B. Zhao, JCAP
+ [95] S. W. Hawking and G. F. R. Ellis, The Large Scale                   12, 025, arXiv:astro-ph/0510293.
+      Structure of Space-Time, Cambridge Monographs on              [125] F. Simpson and S. Bridle, Phys. Rev. D 73, 083001
+      Mathematical Physics (Cambridge University Press,                   (2006), arXiv:astro-ph/0602213.
+      2023).                                                        [126] C. Garcia-Quintero, M. Ishak, and O. Ning, JCAP 12,
+ [96] V. Sahni, A. Shafieloo, and A. A. Starobinsky, Phys.                018, arXiv:2010.12519 [astro-ph.CO].
+      Rev. D 78, 103502 (2008), arXiv:0807.3548 [astro-ph].         [127] P. A. R. Ade and others (Planck), Astron. Astrophys.
+ [97] I. Wasserman, Phys. Rev. D 66, 123511 (2002),                       594, A14 (2016), arXiv:1502.01590 [astro-ph.CO].
+      arXiv:astro-ph/0203137.                                       [128] G.-B. Zhao and others, Nature Astron. 1, 627 (2017),
+ [98] M. Kunz, Phys. Rev. D 80, 123001 (2009).                            arXiv:1701.08165 [astro-ph.CO].
+ [99] A. Shafieloo and E. V. Linder, Phys. Rev. D 84, 063519        [129] M. Raveri, L. Pogosian, K. Koyama, M. Martinelli,
+      (2011).                                                             and others, A joint reconstruction of dark energy and
+[100] W. Giarè, M. Najafi, S. Pan, E. Di Valentino, and oth-             modified growth evolution (2021), arXiv:2107.12990
+      ers, JCAP 10, 035, arXiv:2407.16689 [astro-ph.CO].                  [astro-ph.CO].
+[101] W. J. Wolf, C. Garcı́a-Garcı́a, and P. G. Ferreira,           [130] L. Pogosian, M. Raveri, K. Koyama, M. Mar-
+      arXiv:2502.04929 [astro-ph.CO] (2025).                              tinelli, and others, Nature Astron. 6, 1484 (2022),
+[102] E. M. Barboza and J. S. Alcaniz, Physics Letters B 666,             arXiv:2107.12992 [astro-ph.CO].
+      415 (2008), arXiv:0805.1713 [astro-ph].                       [131] P. Bansal and D. Huterer, arXiv:2502.07185 [astro-
+[103] G. Efstathiou, MNRAS 310, 842 (1999), arXiv:astro-                  ph.CO] (2025).
+      ph/9904356 [astro-ph].                                        [132] J. a. Rebouças, D. H. F. de Souza, K. Zhong, V. Mi-
+[104] N. Dimakis, A. Karagiorgos, A. Zampeli, A. Paliathana-              randa, and others, JCAP 02, 024, arXiv:2408.14628
+      sis, and others, Phys. Rev. D 93, 123518 (2016),                    [astro-ph.CO].
+      arXiv:1604.05168 [gr-qc].                                     [133] Y.-H. Pang,        X. Zhang, and Q.-G. Huang,
+[105] S. Pan, W. Yang, and A. Paliathanasis, European Phys-               arXiv:2408.14787 [astro-ph.CO] (2024).
+      ical Journal C 80, 274 (2020), arXiv:1902.07108 [astro-       [134] W. Handley, The Journal of Open Source Software 3,
+      ph.CO].                                                             10.21105/joss.00849 (2018).
+[106] H. K. Jassal, J. S. Bagla, and T. Padmanab-                   [135] C. Rasmussen and C. Williams, Gaussian Processes for
+      han, Phys. Rev. D 72, 103503 (2005), arXiv:astro-                   Machine Learning, Adaptative computation and ma-
+      ph/0506748 [astro-ph].                                              chine learning series (University Press Group Limited,
+[107] A. Shafieloo, T. Clifton, and P. Ferreira, Journal of Cos-          2006).
+      mology and Astroparticle Physics 2011 (08), 017.              [136] T. Holsclaw, U. Alam, B. Sansó, H. Lee, and oth-
+[108] A. Shafieloo, Journal of Cosmology and Astroparticle                ers, Physical Review D 82, 10.1103/physrevd.82.103502
+      Physics 2012 (08), 002–002.                                         (2010).
+[109] A. Shafieloo, Journal of Cosmology and Astroparticle          [137] T. Holsclaw, U. Alam, B. Sansó, H. Lee, and others,
+      Physics 2012 (05), 024–024.                                         Phys. Rev. Lett. 105, 241302 (2010).
+[110] S. Haude, S. Salehi, S. Vidal, M. Maturi, and others,         [138] A. Shafieloo, A. G. Kim, and E. V. Linder, Phys. Rev.
+      arXiv:1912.04560 [astro-ph.CO] (2019).                              D 85, 123530 (2012), arXiv:1204.2272 [astro-ph.CO].
+[111] J. Grande, J. Solà Peracaula, and H. Stefancic, JCAP         [139] M. Seikel, C. Clarkson, and M. Smith, Journal of Cos-
+      08, 011, arXiv:gr-qc/0604057.                                       mology and Astroparticle Physics 2012 (06), 036–036.
+[112] J. A. Vazquez, S. Hee, M. P. Hobson, A. N. Lasenby,           [140] A. Shafieloo, A. G. Kim, and E. V. Linder, Phys. Rev. D
+      and others, JCAP 07, 062, arXiv:1208.2542 [astro-                   87, 023520 (2013), arXiv:1211.6128 [astro-ph.CO].
+      ph.CO].                                                       [141] R. E. Keeley, S. Joudaki, M. Kaplinghat, and D. Kirkby,
+[113] L. Visinelli, S. Vagnozzi, and U. Danielsson, Symmetry              JCAP 12, 035, arXiv:1905.10198 [astro-ph.CO].
+      11, 1035 (2019), arXiv:1907.07953 [astro-ph.CO].              [142] E. Belgacem, S. Foffa, M. Maggiore, and T. Yang, Phys.
+[114] R. Calderón, R. Gannouji, B. L’Huillier, and D. Po-                Rev. D 101, 063505 (2020), arXiv:1911.11497 [astro-
+      larski, Phys. Rev. D 103, 10.1103/physrevd.103.023526               ph.CO].
+      (2021).                                                       [143] R. E. Keeley, A. Shafieloo, B. L’Huillier, and E. V.
+[115] T. Chiba, T. Okabe, and M. Yamaguchi, Phys. Rev. D                  Linder, Mon. Not. Roy. Astron. Soc. 491, 3983 (2020),
+      62, 023511 (2000), arXiv:astro-ph/9912463.                          arXiv:1905.10216 [astro-ph.CO].
+[116] V. Sahni and Y. Shtanov, Journal of Cosmology and             [144] F. Gerardi, M. Martinelli, and A. Silvestri, JCAP 07,
+      Astroparticle Physics 2003 (11), 014.                               042, arXiv:1902.09423 [astro-ph.CO].
+[117] F. Bauer, J. Solà , and H. Štefancić, Journal of Cosmol-   [145] P. Mukherjee and A. Mukherjee, Mon. Not. Roy. Astron.
+      ogy and Astroparticle Physics 2010 (12), 029.                       Soc. 504, 3938 (2021), arXiv:2104.06066 [astro-ph.CO].
+[118] B. Boisseau, H. Giacomini, D. Polarski, and A. A.             [146] R. Calderón, B. L’Huillier, D. Polarski, A. Shafieloo,
+      Starobinsky, JCAP 07, 002, arXiv:1504.07927 [gr-qc].                and others, Phys. Rev. D 108, 023504 (2023),
+[119] E. V. Linder and D. Huterer, Phys. Rev. D 72, 043509                arXiv:2301.00640 [astro-ph.CO].
+      (2005), arXiv:astro-ph/0505330.                               [147] B. R. Dinda and R. Maartens, JCAP 01, 120,
+[120] D. Muthukrishna and D. Parkinson, JCAP 11, 052,                     arXiv:2407.17252 [astro-ph.CO].
+      arXiv:1607.01884 [astro-ph.CO].                               [148] P. Mukherjee and A. A. Sen, Phys. Rev. D 110, 123502
+[121] R. Camilleri and others (DES), Mon. Not. Roy. Astron.               (2024), arXiv:2405.19178 [astro-ph.CO].
+                                                                                                                               22
+
+[149] S. Joudaki, M. Kaplinghat, R. Keeley, and D. Kirkby,       [179] M. J. Francis, G. F. Lewis, and E. V. Linder, Mon. Not.
+      Phys. Rev. D 97, 123501 (2018), arXiv:1710.04236                 Roy. Astron. Soc. 380, 1079 (2007), arXiv:0704.0312
+      [astro-ph.CO].                                                   [astro-ph].
+[150] S.-g. Hwang, B. L’Huillier, R. E. Keeley, M. J. Jee,       [180] E. V. Linder, (2024), arXiv:2410.10981 [astro-ph.CO].
+      and others, JCAP 02, 014, arXiv:2206.15081 [astro-         [181] D. J. Spiegelhalter, N. G. Best, B. P. Carlin, and A. Van
+      ph.CO].                                                          Der Linde, Journal of the royal statistical society: Series
+[151] R. R. Caldwell and E. V. Linder, Phys. Rev. Lett. 95,            b (statistical methodology) 64, 583 (2002).
+      141301 (2005), arXiv:astro-ph/0505494.                     [182] A. R. Liddle, Monthly Notices of the Royal Astronomi-
+[152] E. V. Linder, Phys. Rev. D 73, 063010 (2006),                    cal Society: Letters 377, L74 (2007).
+      arXiv:astro-ph/0601052.                                    [183] S. Grandis, D. Rapetti, A. Saro, J. J. Mohr, and oth-
+[153] R. N. Cahn, R. de Putter, and E. V. Linder, JCAP 11,             ers, Mon. Not. Roy. Astron. Soc. 463, 1416 (2016),
+      015, arXiv:0807.1346 [astro-ph].                                 arXiv:1604.06463 [astro-ph.CO].
+[154] B. Ratra and P. J. E. Peebles, Phys. Rev. D 37, 3406       [184] W. J. Wolf, C. Garcı́a-Garcı́a, D. J. Bartlett, and
+      (1988).                                                          P. G. Ferreira, Phys. Rev. D 110, 083528 (2024),
+[155] C. Wetterich, Nucl. Phys. B 302, 668 (1988),                     arXiv:2408.17318 [astro-ph.CO].
+      arXiv:1711.03844 [hep-th].                                 [185] D. Shlivko and P. Steinhardt, (2024), arXiv:2405.03933
+[156] P. G. Ferreira and M. Joyce, Phys. Rev. D 58, 023503             [astro-ph.CO].
+      (1998), arXiv:astro-ph/9711102.                            [186] G. Payeur, E. McDonough, and R. Brandenberger,
+[157] R. J. Scherrer and A. A. Sen, Phys. Rev. D 77, 083515            arXiv:2411.13637 [astro-ph.CO] (2024).
+      (2008), arXiv:0712.3450 [astro-ph].                        [187] W. Hu, Phys. Rev. D 71, 047301 (2005), arXiv:astro-
+[158] S. Tsujikawa, Class. Quant. Grav. 30, 214003 (2013),             ph/0410680.
+      arXiv:1304.1961 [gr-qc].                                   [188] Z.-K. Guo, Y.-S. Piao, X.-M. Zhang, and Y.-Z. Zhang,
+[159] J. Martin, Mod. Phys. Lett. A 23, 1252 (2008),                   Phys. Lett. B 608, 177 (2005), arXiv:astro-ph/0410654.
+      arXiv:0803.4076 [astro-ph].                                [189] H. Wei, R.-G. Cai, and D.-F. Zeng, Class. Quant. Grav.
+[160] J. A. Frieman, C. T. Hill, A. Stebbins, and                      22, 3189 (2005), arXiv:hep-th/0501160.
+      I. Waga, Phys. Rev. Lett. 75, 2077 (1995), arXiv:astro-    [190] R. R. Caldwell and M. Doran, Phys. Rev. D 72, 043527
+      ph/9505060.                                                      (2005), arXiv:astro-ph/0501104.
+[161] J. M. Cline, S. Jeon, and G. D. Moore, Phys. Rev. D        [191] Y.-F. Cai, T. Qiu, R. Brandenberger, Y.-S. Piao,
+      70, 043543 (2004), arXiv:hep-ph/0311312.                         and others, JCAP 03, 013, arXiv:0711.2187 [hep-th].
+[162] A. Vikman, Phys. Rev. D 71, 023515 (2005),                 [192] Y.-F. Cai, T. Qiu, Y.-S. Piao, M. Li, and others, JHEP
+      arXiv:astro-ph/0407107.                                          10, 071, arXiv:0704.1090 [gr-qc].
+[163] E. V. Linder, Gen. Rel. Grav. 40, 329 (2008),              [193] L. Amendola, Phys. Rev. D 62, 043511 (2000),
+      arXiv:0704.2064 [astro-ph].                                      arXiv:astro-ph/9908023.
+[164] E. V. Linder, Phys. Rev. D 91, 063006 (2015),              [194] A. P. Billyard and A. A. Coley, Phys. Rev. D 61, 083503
+      arXiv:1501.01634 [astro-ph.CO].                                  (2000), arXiv:astro-ph/9908224.
+[165] R. Crittenden, E. Majerotto, and F. Piazza, Phys. Rev.     [195] L. Amendola, Phys. Rev. D 69, 103524 (2004),
+      Lett. 98, 251301 (2007), arXiv:astro-ph/0702003.                 arXiv:astro-ph/0311175.
+[166] N. Kaloper and L. Sorbo, JCAP 04, 007, arXiv:astro-        [196] S. Nojiri, S. D. Odintsov, and S. Tsujikawa, Phys. Rev.
+      ph/0511543.                                                      D 71, 063004 (2005), arXiv:hep-th/0501025.
+[167] D. J. E. Marsh, Phys. Rept. 643, 1 (2016),                 [197] T. Clemson, K. Koyama, G.-B. Zhao, R. Maartens,
+      arXiv:1510.07633 [astro-ph.CO].                                  and others, Phys. Rev. D 85, 043007 (2012),
+[168] S. Dutta and R. J. Scherrer, Phys. Rev. D 78, 123525             arXiv:1109.6234 [astro-ph.CO].
+      (2008), arXiv:0809.4441 [astro-ph].                        [198] A. Shafieloo, D. K. Hazra, V. Sahni, and A. A. Starobin-
+[169] X. Li and A. Shafieloo, Astrophys. J. Lett. 883, L3              sky, Monthly Notices of the Royal Astronomical Society
+      (2019), arXiv:1906.08275 [astro-ph.CO].                          473, 2760–2770 (2017).
+[170] X. Li and A. Shafieloo, Astrophys. J. 902, 58 (2020),      [199] F. C. Carvalho and A. Saa, Phys. Rev. D 70, 087302
+      arXiv:2001.05103 [astro-ph.CO].                                  (2004), arXiv:astro-ph/0408013.
+[171] L. Parker and A. Raval, Phys. Rev. D 62, 083503 (2000),    [200] W. Hu and I. Sawicki, Phys. Rev. D 76, 064004 (2007),
+      [Erratum: Phys.Rev.D 67, 029903 (2003)], arXiv:gr-               arXiv:0705.1158 [astro-ph].
+      qc/0003103.                                                [201] J. Martin, C. Schimd, and J.-P. Uzan, Phys. Rev. Lett.
+[172] R. R. Caldwell, W. Komp, L. Parker, and D. A. T.                 96, 061303 (2006).
+      Vanzella, Phys. Rev. D 73, 023513 (2006), arXiv:astro-     [202] A. Anisimov, E. Babichev, and A. Vikman, JCAP 06,
+      ph/0507622.                                                      006, arXiv:astro-ph/0504560.
+[173] A. Banihashemi, N. Khosravi, and A. Shafieloo, JCAP        [203] S. Nesseris and L. Perivolaropoulos, Phys. Rev. D 73,
+      06, 003, arXiv:2012.01407 [astro-ph.CO].                         103511 (2006), arXiv:astro-ph/0602053.
+[174] M. S. Turner, Phys. Rev. D 31, 1212 (1985).                [204] C. Deffayet, O. Pujolas, I. Sawicki, and A. Vikman,
+[175] L. Barnes, M. J. Francis, G. F. Lewis, and E. V. Linder,         JCAP 10, 026, arXiv:1008.0048 [hep-th].
+      Publ. Astron. Soc. Austral. 22, 315 (2005), arXiv:astro-   [205] O. Pujolas, I. Sawicki, and A. Vikman, JHEP 11, 156,
+      ph/0510791.                                                      arXiv:1103.5360 [hep-th].
+[176] W. Zimdahl, Int. J. Mod. Phys. D 14, 2319 (2005),          [206] G. Ye, M. Martinelli, B. Hu, and A. Silvestri,
+      arXiv:gr-qc/0505056.                                             arXiv:2407.15832 [astro-ph.CO] (2024).
+[177] E. V. Linder, arXiv:0708.0024 [astro-ph] (2007).           [207] W. J. Wolf, P. G. Ferreira, and C. Garcı́a-Garcı́a, Phys.
+[178] E. V. Linder and M. J. White, Phys. Rev. D 72, 061304            Rev. D 111, L041303 (2025), arXiv:2409.17019 [astro-
+      (2005), arXiv:astro-ph/0508401.                                  ph.CO].
+                                                                                                                            23
+
+[208] Y. Yang, X. Ren, Q. Wang, Z. Lu, and others, Sci. Bull.          Appendix A: Bayesian Model Comparison
+      69, 2698 (2024), arXiv:2404.19437 [astro-ph.CO].
+[209] O. Christiansen, F. Hassani, and D. F. Mota, JCAP 01,
+                                                                   Here we discuss the Bayesian model comparison and
+      043, arXiv:2405.00668 [astro-ph.CO].
+[210] M. Rigault, M. Smith, A. Goobar, K. Maguire,
+                                                                 compute Bayes factor between the w0 wa and Λ models,
+      and others, arXiv e-prints , arXiv:2409.04346 (2024),      which is given by the corresponding ratio of their evi-
+      arXiv:2409.04346 [astro-ph.CO].                            dence Z under a given data set: Bw0 wa Λ = Zw0wa /ZΛ .
+[211] E. C. Bellm, S. R. Kulkarni, M. J. Graham, R. Dekany,      In practice, we compute Bayes factors using the nested
+      and others, PASP 131, 018002 (2019), arXiv:1902.01932      sampler polychord [216], employing the same priors6
+      [astro-ph.IM].                                             and the Boltzmann solver (CAMB) as in the posterior
+[212] M. Lochner, D. Scolnic, H. Almoubayyed, T. Anguita,        analysis discussed in the main text. The evidence is then
+      and others, ApJS 259, 58 (2022), arXiv:2104.05676          estimated using the anesthetic package [217].
+      [astro-ph.CO].                                               The logarithm of the evidence (log Z) can be expressed
+[213] P. Gris, N. Regnault, H. Awan, I. Hook, and others,        as the contribution from two terms in the form [218]
+      ApJS 264, 22 (2023), arXiv:2205.07651 [astro-ph.CO].
+[214] D. Spergel, N. Gehrels, C. Baltay, D. Bennett, and oth-                  log Z = ⟨ln L⟩P − ⟨ln(P/π)⟩P              (A1)
+      ers, Wide-field infrarred survey telescope-astrophysics
+      focused telescope assets wfirst-afta 2015 report (2015),   where, L is the likelihood, P is the posterior, π represents
+      arXiv:1503.03757 [astro-ph.IM].                            the prior distribution and ⟨⟩P is the posterior weighted
+[215] R. Laureijs, J. Amiaux, S. Arduini, J. L. Auguères,
+                                                                 average. The posterior average of the log-likelihood
+      and others, arXiv e-prints , arXiv:1110.3193 (2011),
+      arXiv:1110.3193 [astro-ph.CO].
+                                                                 ⟨ln L⟩P , removes the prior-dependent Occam‘s penalty,
+[216] W. J. Handley, M. P. Hobson, and A. N. Lasenby,            ⟨ln(P/π)⟩P , contribution from the log-evidence to pro-
+      Mon. Not. Roy. Astron. Soc. 450, L61 (2015),               vide a quantitative assessment of how well the model fits
+      arXiv:1502.01856 [astro-ph.CO].                            the data and can be considered the Bayesian equivalent
+[217] W. Handley, J. Open Source Softw. 4, 1414 (2019),          of χ2 .
+      arXiv:1905.04768 [astro-ph.IM].                               In Table IV, we report the differences between the
+[218] L. T. Hergt, W. J. Handley, M. P. Hobson, and              w0 wa CDM and ΛCDM models, for values of ln B (=
+      A. N. Lasenby, Phys. Rev. D 103, 123511 (2021),            ∆ ln Z), ∆⟨ln L⟩P , and ∆⟨ln(P/π)⟩P for each data com-
+      arXiv:2102.11511 [astro-ph.CO].                            bination. The Bayesian evidence ratio indicates that the
+[219] H. Jeffreys, The Theory of Probability, Oxford Classic     support for the w0 wa model increases with the latest DR2
+      Texts in the Physical Sciences (1939).
+                                                                 release. On Jeffreys’ scale [219, 220], the DESY5 com-
+[220] R. Trotta, Mon. Not. Roy. Astron. Soc. 378, 72 (2007),
+      arXiv:astro-ph/0504022.                                    bination indicates almost a strong preference (≤ 5) for
+[221] L. Amendola and S. Tsujikawa, Dark Energy: Theory          the w0 wa CDM model when combined with DR2 com-
+      and Observations (Cambridge University Press, 2015).       pared to a moderate preference (≤ 2.5) with the DR1
+[222] A. J. Shajib and J. A. Frieman, arXiv:2502.06929 [astro-   dataset, while Union3 shows a moderate preference for
+      ph.CO] (2025).                                             w0 wa compared to the weak preference observed when
+[223] V. Smer-Barreto and A. R. Liddle, Journal of Cosmol-       combined with the DR1 dataset. In contrast, Pantheon-
+      ogy and Astroparticle Physics 2017 (01), 023–023.          Plus provides inconclusive evidence, showing a preference
+[224] A. Abrahamse, A. Albrecht, M. Barnard, and B. Bozek,       for Λ, though this preference diminishes in the change
+      Phys. Rev. D 77, 103503 (2008), arXiv:0712.2879 [astro-    from DR1 to DR2. In all three cases, we observe that
+      ph].
+                                                                 the trends in ∆⟨ln L⟩P remain consistent with the fre-
+[225] M. Kawasaki, T. Moroi, and T. Takahashi, Phys. Rev.
+      D 64, 083009 (2001), arXiv:astro-ph/0105161.
+                                                                 quentist ∆χ2 results presented in Table III, with a clear
+[226] S. C. C. Ng and D. L. Wiltshire, Phys. Rev. D 63,          improvement in the likelihood of the fit when switching
+      023503 (2001), arXiv:astro-ph/0004138.                     from the DR1 to the DR2 dataset. We note that since
+[227] K. Coble, S. Dodelson, and J. A. Frieman, Phys. Rev.       the Bayesian evidence value includes likelihood contribu-
+      D 55, 1851 (1997), arXiv:astro-ph/9608122.                 tions across a range of possible parameter values, it is
+[228] J. A. Frieman and I. Waga, Phys. Rev. D 57, 4642           less susceptible to random fluctuations in the data lead-
+      (1998), arXiv:astro-ph/9709063.                            ing to a better fit at a specific point in parameter space by
+[229] P. T. P. Viana and A. R. Liddle, Phys. Rev. D 57, 674      chance. Therefore, ln B or ∆⟨ln L⟩P comparisons should
+      (1998), arXiv:astro-ph/9708247.                            be less noisy and more robust than ∆χ2 .
+[230] F. X. L. Cedeño, A. X. González-Morales, and L. A.          A larger Occam’s penalty (i.e., a greater compression
+      Ureña López, Phys. Rev. D 96, 061301 (2017),
+                                                                 from prior to posterior) is typically expected with more
+      arXiv:1703.10180 [gr-qc].
+[231] F. X. Linares Cedeño, A. X. González-Morales, and        informative data. However, this is not the case for the
+      L. A. Ureña López, JCAP 01, 051, arXiv:2006.05037        DESY5 dataset, although it is a better fit for the data.
+      [astro-ph.CO].                                             Even so, all of the Occam penalty factors for DESI +
+
+
+                                                                 6 We substitute θ    with H0 to avoid numerical issues arising
+                                                                                  MC
+                                                                   from the shooting method.
+                                                                                                                             24
+
+                                                                 128], though the interpretation is not necessarily straight-
+TABLE IV. Bayesian evidence ln Bw0 wa Λ , posterior average
+                                                                 forward, and it remains subject to various caveats [54].
+of log-likelihood ⟨ln L⟩P , and Occam’s penalty ⟨ln(P/π)⟩P
+for different supernova datasets (PantheonPlus, Union3, and        In this appendix, we lay out the full mathematical ex-
+DESY5) in combination with CMB and DESI BAO measure-             pressions for the PCA performed on the binning results.
+ments. We report results for DESI DR2 BAO + CMB and              We start by writing the equation of state in terms of the
+DESI DR1 BAO + CMB with associated uncertainties for             binning amplitude parameters and an initial basis
+comparison. All reported values correspond to the difference
+between the w0 wa CDM and the ΛCDM.                                                              N
+                                                                                                 X
+                                                                                       w(z) =          wj ej              (B1)
+                 +PantheonPlus       +Union3       +DESY5                                        j=0
+ DESI DR2 BAO + CMB
+                                                                 where wi are the bin amplitude parameters, defined as
+ln Bw0 wa Λ       −0.66 ± 0.44      3.03 ± 0.44   4.88 ± 0.44    previously, and ej is simply the tanh smoothed top-hat
+∆⟨ln L⟩P           4.53 ± 0.17      7.78 ± 0.16   9.42 ± 0.16    function
+∆⟨ln(P/π)⟩P        5.18 ± 0.43      4.75 ± 0.43   4.54 ± 0.44
+                                                                    ej ≡ e(z, zj , zj−1 )
+ DESI DR1 BAO + CMB                                                                                          
+                                                                         1            z − zj            z − zj−1
+ln Bw0 wa Λ       −1.54 ± 0.44      1.62 ± 0.44   2.35 ± 0.44          =    tanh               − tanh               ,     (B2)
+                                                                         2                s                s
+∆⟨ln L⟩P           3.34 ± 0.17      6.03 ± 0.16   7.67 ± 0.16
+∆⟨ln(P/π)⟩P        4.87 ± 0.43      4.41 ± 0.43   5.32 ± 0.43    which has value one in the interval zj−1 ≲ z ≲ zj and
+                                                                 zero elsewhere, allowing us to recover the expression in
+                                                                 Eq. (13).
+                                                                    If we diagonalize the covariance matrix of these coeffi-
+CMB + SNe Ia data are roughly consistent with each               cients to obtain
+other, given the estimated error on these values.
+   Please note that in the [40] used the Boltzmann solver                               C −1 = OT ΛO ,                    (B3)
+class with a different set of priors and CMB likelihood.
+For a better comparison, we recomputed evidence for              then the orthogonal matrix O contains the eigenvectors of
+DESI DR1 BAO using consistent priors and methodology             C −1 and the diagonal matrix Λ contains the correspond-
+as described in the Section II.                                  ing eigenvalues [52, 54]. For convenience, we normalize
+   We remind readers that Bayesian model comparison re-          O to have a determinant of one.
+lies on the prior, this is especially important in the case of     To obtain the new coefficients, we use the rows of O as
+testing phenomenological models like w0 wa CDM, as the           weights on the originals
+prior chosen for the extra parameters is only phenomeno-                                       N
+logically justified. Occam’s penalty can be adjusted by                                        X
+                                                                                       qi =          Oij wj .             (B4)
+choosing different priors. Generally, a wider prior tends
+                                                                                               j=0
+to favor the simpler model, in this case is the ΛCDM.
+However, the priors chosen in Tab. I are broad enough            Since O is orthogonal, i.e. O−1 = OT , the coefficients
+for w0 wa , and the posterior of these parameters is well        and basis will transform in the same way. As such, the
+constrained inside this prior when the datasets are com-         new basis functions (see Figure 8) may be obtained in a
+bined. A different choice of prior on these parameters           similar fashion using [52, 54]
+could change the ranking, such that ΛCDM would be fa-
+vored over w0 wa CDM for all data combinations, but to                                         N
+                                                                                               X
+do this in the most extreme case (DESI DR2 BAO +                                       e′i =         Oij ej .             (B5)
+CMB + DESY5) the prior range would need to be ex-                                              j=0
+panded by a factor of more than 10 times for both w
+parameters, leading to a greater than 100 times expan-           The uncertainty in the new parameters is given by the
+sion in prior volume. Such a prior would not doubt be            inverse of the eigenvalues [52]
+considered unphysical and unreasonable by most.
+                                                                                      σi ≡ σ[qi ] = Λ−1
+                                                                                                     ii .                 (B6)
+
+                                                                 While the PCA is no doubt a useful approach, it must
+         Appendix B: Details of Binning PCA                      be noted that, in general, eigenvectors are formally not
+                                                                 well-defined for the inverse covariance matrix, and that
+  Principal component analysis (PCA) is a commonly-              the set of eigenvectors found will themselves depend on
+used strategy that leverages the number of bins, or ad-          the binning parametrization and variable. Finally, there
+ditional free parameters, against the uncertainties in the       is no clear a priori interpretation of the size of σ[qi ] with-
+constrained amplitudes, in an attempt to analyse how             out making further assumptions about the form of the
+most efficiently to segment the data [52, 54, 123, 124,          equation of state [54].
+                                                                                                                                25
+
+Appendix C: Details on Gaussian Process Regression                   where ma denotes the mass of the boson particles related
+                                                                     to the scalar field, and fa is regarded as the effective en-
+   In this appendix, we discuss the details of the method-           ergy scale of the theory. This model, also referred to
+ology and implementation of the Gaussian process regres-             as PNGB in [160], has since been a recurrent feature in
+sion results presented in Section V B. We adopt a flexible           cosmological analyses [54, 222–229]. The Klein-Gordon
+and non-parametric approach to model the dark energy                 equation derived from the action in Eq. (D1), in a stan-
+equation of state w(z) utilizing a Gaussian Process with             dard cosmological setting, is
+a squared exponential kernel given by
+                                                                                 φ̈ + 3H φ̇ − m2a fa sin(φ/fa ) = 0 ,         (D3)
+
+     w(z) ∼ GP (m(z) = −1, K = k(σf , ℓf )) ,                 (C1)   with H being the Hubble parameter. We then perform
+                                                                     the following polar transformation on the field variables
+                                                      !              (φ, φ̇) (see [230, 231] and references therein),
+                                        (xi − xj )2
+    k(xi , xj ; σf , ℓf ) = σf2   exp −                   ,   (C2)             r
+                                            2ℓ2f                                 2 ma fa cos(φ/2fa )
+                                                                                                      = Ω1/2
+                                                                                                           φ cos(θ/2) , (D4a)
+   where σf denotes the typical deviations of w from the                         3       MP l H
+mean function, which we consider to be the ΛCDM value                                          φ̇
+                                                                                          √           = Ω1/2
+                                                                                                           φ sin(θ/2) . (D4b)
+w(z) = −1. The parameter ℓf controls the correla-                                            6MP l H
+tion length of samples. We draw samples from a joint
+Gaussian distribution across a dense uniform grid rang-              Here, MP l is the reduced Planck mass, Ωφ is the density
+ing from z = 0 to z = 10 that smoothly go back to                    parameter of the scalar field, and θ is an angular variable
+w(z) → −1 at high redshifts to maintain numerical sta-               directly related to the scalar field equation of state wφ ,
+bility. We fix σf = 1 for accommodating a broad spec-
+trum of dark energy behaviors and impose a generalized                         φ̇2 − 2m2a fa2 [1 + cos(φ/fa )]
+                                                                        wφ =                                   = − cos θ .    (D5)
+inverse Gaussian prior on ℓf :                                                 φ̇2 + 2m2a fa2 [1 + cos(φ/fa )]
+
+                                                                     Equation (D5) directly shows that, for quintessence mod-
+                   (b)p/2 p−1 −(x+b/x)/2                             els, the equation of state only varies in the range −1 ≤
+   f (x | p, b) =      √ x e               , x > 0, (C3)
+                  2Kp ( b)                                           wφ ≤ 1.
+                √                                                       As a result, the Klein-Gordon equation of motion can
+   where Kp ( b) denotes the modified Bessel function of             be rewritten as a dynamical system in the new variables,
+the second kind. We select p = 3 and b = 2 to penalize               namely,
+low ℓf values, thus preventing excessive freedom in w(z),                                      q
+while also constraining high ℓf values to avoid oversam-                       θ′ = −3 sin θ + y 2 − αΩφ (1 + cos θ) , (D6a)
+pling nearly linear functions. To improve the efficiency
+of our sampling procedure, we introduce a latent vari-                            3
+                                                                              y′ =  (1 + wtot )y ,                           (D6b)
+able that directly samples w(zl ) at zl (we fix zl = 0.4)                         2
+from a Gaussian prior with width σf . These sampled                         Ω′φ = 3(wtot + cos θ)Ωφ ,                        (D6c)
+values are subsequently employed to generate samples of
+w(z) from a conditional distribution, facilitating signifi-          where a prime denotes a derivative with respect to N =
+cantly quicker convergence. We have assessed the impact              ln a, and wtot is the total equation of state of the mat-
+of varying zl (over the range z ∈ [0.2, 1.5]) and marginal-          ter budget of the universe. The boson mass ma appears
+izing σf with a uniform prior (π(σf ) = U[0, 2]), finding            implicitly in the definition of the new dynamical vari-
+our results and conclusions to be reasonably robust.                 able y = 2ma /H, which directly measures the ratio of
+                                                                     the boson mass to the Hubble parameter. Likewise, the
+                                                                     effective energy scale fa appears implicitly in the new
+                Appendix D: Quintessence                             parameter α = 3/(fa /MPl )2 and adopt following prior
+                                                                     ma ∈ U[0.1, 10] and α ∈ U[10−6 , 100] to sample mass
+  We discuss the constraints on a quintessence model                 and effective scale.
+with a scalar field φ minimally-coupled to gravity, with                To solve the dynamical system Eq. (D6), we follow
+action given by (e.g. [221])                                         the prescription in [231]. The initial value of y is deter-
+          Z                                                        mined by choosing a value of the boson mass ma , that
+              4 √        1 µν                                        is, yi = 2ma /Hi , while the initial angular variable is
+    Sφ = d x −g − g ∂µ φ∂ν φ − V (φ) ,              (D1)
+                         2                                           given by θi = (1/5)yi , which is an attractor solution at
+where g is the determinant of the metric gµν . For our               early times. As we will assume that ma ∼ H0 ≪ Hi ,
+purposes, the scalar field potential has a periodic depen-           the initial value of the equation of state is wφi ≃ −1,
+dence on the field φ in the form,                                    which means that the field φ starts its evolution close
+                                                                     to a slow-roll regime. Finally, once a value of α is cho-
+               V (φ) = m2a fa2 [1 + cos(φ/fa )] ,             (D2)   sen, the initial value Ωφi is adjusted using a numerical
+                                                                                                                          26
+
+       −0.6                                                             −0.6
+                    Truth                                                             Truth
+       −0.8                                                             −0.8
+w(z)
+
+
+
+
+                                                                w(z)
+       −1.0                                                             −1.0
+
+       −1.2                                                             −1.2
+
+       −1.4     ΛCDM                                                    −1.4     ΛCDM
+       −0.6                        z                                    −0.6                        z
+       −0.8                                                             −0.8
+w(z)
+
+
+
+
+                                                                w(z)
+       −1.0                                                             −1.0
+
+       −1.2                                                             −1.2
+
+       −1.4     w0 wa CDM                                               −1.4     w0 wa CDM
+          0.0        0.5     1.0       1.5     2.0       2.5               0.0        0.5     1.0       1.5    2.0       2.5
+                                   z                                                                z
+
+FIG. 14. Validation of w(z) binned in 3 uniform bins, for the   FIG. 15. Validation of w(z) reconstructed using GP, for two
+two mock datasets. The circular data points show the median     mock datasets. In both of the mocks, the true w(z) function,
+values of the reconstruction, with 1σ and 2σ vertical error     used to generate them and shown in a black dashed line, is
+bars, as well as posterior distributions of the bin amplitude   recovered well within the 1σ contour.
+parameters. In both cases, the true evolution of w, shown in
+a black dashed line, is well recovered.
+                                                                        −0.6          Truth
+
+                                                                        −0.8
+shooting routine inside the Boltzmann solver class until
+                                                                 w(z)
+
+
+
+
+the desired value of Ωφ at the present time is obtained.                −1.0
+Using the polar transformations (D4b), the physical pa-
+rameters (ma , fa ), and the initial values (Hi , Ωφi ), one            −1.2
+can calculate the initial values of the original field vari-
+ables (φi , φ̇i ) corresponding to the attractor solution at            −1.4     Binning
+early times.                                                            −0.6
+
+                                                                        −0.8
+                Appendix E: Validation on Mocks
+                                                                 w(z)
+
+
+
+
+                                                                        −1.0
+   Non-parametric approaches offer significant advan-                   −1.2
+tages by minimizing assumptions about the underlying
+physical properties of dark energy, allowing for a more                 −1.4     GP
+flexible and unbiased reconstruction of cosmic expansion                   0.0          0.5   1.0       1.5    2.0       2.5
+and structure growth. However, their power comes with                                               z
+the challenge of ensuring robustness, as the lack of an ex-
+plicit model can introduce degeneracies and reconstruc-
+                                                                FIG. 16. Reconstructions of w(z) using binning and GP, for
+tion artifacts. Careful validation using mock datasets          a selected extreme thawing case. In both reconstructions, the
+is essential to assess the reliability of these techniques      particular behavior used to generate the mock (shown in black
+and identify potential biases that may arise due to the         dashed line) cannot be recovered well, given the implementa-
+methodology itself, ensuring that the inferred constraints      tion used.
+are driven by true cosmological signals and not system-
+atic effects.
+   In this appendix, we assess the robustness of the non-       ogy (w0 = −1, wa = 0), with the cosmological param-
+parametric methodologies used in the main text with a           eters set to their bestfit Planck values. The second
+set of two mock datasets, each generated from a dis-            one is a w0 wa CDM realization, with w0 = −0.75 and
+tinct dark energy model and comprising a combination of         wa = −0.85. We refer to these as the ΛCDM mock
+simulated DESI, PantheonPlus SNe Ia, and CMB data.              and the w0 wa CDM mock, respectively. While admittedly
+The first synthetic dataset assumes a ΛCDM cosmol-              not an exhaustive sample of possible dark energy models,
+                                                                                                                               27
+
+           0.0                                                         preparing a third mock following Eq. (15) with w0 = −0.5
+                   DESI DR2 BAO + (θ∗ , ωb , ωbc )CMB + Union3
+                                                                       and p = 20. As shown in Figure 16, this demonstrates
+                   DESI DR1 BAO + (θ∗ , ωb , ωbc )CMB + Union3         the possibility of limitations in the non-parametric imple-
+       −0.5
+                                                                       mentation used here to pick up some extreme behaviors.
+w(z)
+
+
+       −1.0                                                            We simply note that our implementation does have some
+                                                                       limitations, and further improvements, such as investi-
+       −1.5
+                                                                       gating the impact of priors on hyperparameters and the
+       −2.0                                                            choice of kernel, are left to future work.
+                                                                          Aside from the extreme case, the two approaches inves-
+                                                                       tigated here are seen to recover the simulated mock data
+          1.25
+                                                                       well, without any significant bias detected in the mocks
+          1.00                                                         tested. Though not shown here, the same tests are per-
+ fDE(z)
+
+
+
+
+                                                                       formed for direct fDE (z) reconstruction, with compara-
+          0.75                                                         ble analogous results. These non-parametric implemen-
+                                                                       tations are then applied without modification to the real
+          0.50                                                         data for the actual analysis.
+
+          0.25
+             0.0    0.5       1.0        1.5       2.0           2.5
+                                    z                                           Appendix F: Comparison with DESI DR1
+
+
+FIG. 17. Comparison of the constraints obtained using DESI                Figure 17 compares the results of a Chebyshev expan-
+DR1 vs DR2 data, in combination with (θ∗ , ωb , ωbc )CMB and           sion of w(z) and fDE (z) using DR1 BAO vs DR2 BAO
+Union3 measurements. The top panel shows a Chebyshev                   data, in combination with (θ∗ , ωb , ωbc )CMB and Union3
+expansion of w(z) as in Eq. (11), while the bottom panel               measurements. Figure 18 presents a similar comparison
+shows an expansion of fDE (z) as in Eq. (12) with N = 3.               for the GP reconstruction of w(z) using DESI in combi-
+                                                                       nation with CMB and Union3. It is seen that while the
+                                                                       main trends in the DE remain unchanged between the
+these different mocks span a range of physical behaviors               two data releases, the uncertainties in the reconstructions
+that allow us to quantify the statistical uncertainties and            have significantly decreased with DR2.
+possible biases introduced by the methods themselves.
+  Figure 14 shows the binned w(z) reconstruction in the
+case of 3 uniform bins between z = 0 and z = 2.1. The                         −0.6
+                                                                                                DESI DR2 BAO + CMB + Union3
+median values with 68% and 95% CL for the two mock
+                                                                                                DESI DR1 BAO + CMB + Union3
+datasets are shown. The true w(z) for both mocks, plot-                       −0.8
+ted with a black dashed line, lies mostly within the 1σ
+contours, sometimes straying into the 2σ range near the
+                                                                              −1.0
+edges of each bin where, as expected, the three uniform
+                                                                       w(z)
+
+
+
+
+bin scheme is not necessarily flexible enough to capture
+                                                                              −1.2
+the precise behavior. The deviation from ΛCDM (shown
+in gray dashed line) is correctly detected at more than
+2σ in the two lowest redshift bins in the case of the                         −1.4
+w0 wa CDM Mock. Figure 15 shows that Gaussian process
+(GP) reconstructions of w(z) for the two mock datasets.                       −1.6
+The figure includes the median values as well as 68% and                         0.0    0.5      1.0       1.5       2.0       2.5
+95% CL for both of the mock datasets. The true ex-                                                     z
+pected function lies well within the 1σ contours in each
+case.                                                                  FIG. 18. Comparison of GP reconstruction obtained using
+  In the interest of completeness, we also test an ex-                 DESI DR1 vs DR2 data, in combination with CMB and
+treme case, falling in the thawing class of models, by                 Union3 measurements.
+

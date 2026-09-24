@@ -1,0 +1,44 @@
+{
+  "scope": "Equation checks and synthetic density only; no SPARC/cosmology fit; no Lean proof",
+  "uniform_density_test": {
+    "K": 1.0,
+    "S": 1.0,
+    "radius_range": [
+      0.2,
+      1.2
+    ],
+    "paper_Eq23_max_absolute_residual": 0.2682110481022828,
+    "corrected_cot_max_absolute_residual": 4.247784415878364e-12,
+    "max_error_in_identity_R_paper_equals_2K_g_squared": 4.279392812334137e-12
+  },
+  "gaussian_density_crosscheck": {
+    "K": 0.4,
+    "S": "exp(-r^2)",
+    "radius_range": [
+      0.0001,
+      5.0
+    ],
+    "minimum_sampled_u": 0.8418442408438386,
+    "max_absolute_g_difference": 4.800362884971321e-11,
+    "max_relative_g_difference": 5.010181446444847e-10
+  },
+  "isolated_uniform_sphere": {
+    "assumptions": "constant K>0, S>0; density truncates at R; regular centre; phi(infinity)=0; Newtonian-connected positive branch",
+    "x_critical": 1.5707963267948966,
+    "x_qR": [
+      0.2,
+      0.5,
+      1.0,
+      1.3,
+      1.5
+    ],
+    "M_app_over_M_b": [
+      1.0162633157521803,
+      1.1112597562509716,
+      1.6722231739647069,
+      3.143517225263512,
+      11.20126217526375
+    ]
+  },
+  "paper_K_flat_regime_speed_km_s": 171.49858514250883
+}

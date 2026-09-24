@@ -1,0 +1,22 @@
+test_cpl_lcdm_limit_and_eds_integral (test_background_bao.BackgroundNumericsTests.test_cpl_lcdm_limit_and_eds_integral) ... ok
+test_nested_synthetic_lambda_is_recovered_by_cpl_fit (test_background_bao.BackgroundNumericsTests.test_nested_synthetic_lambda_is_recovered_by_cpl_fit) ... ok
+test_parser_preserves_observable_row_order_and_cholesky_likelihood (test_background_bao.BackgroundNumericsTests.test_parser_preserves_observable_row_order_and_cholesky_likelihood) ... ok
+test_parser_rejects_undocumented_observable_and_bad_covariance (test_background_bao.BackgroundNumericsTests.test_parser_rejects_undocumented_observable_and_bad_covariance) ... ok
+test_vector_gauss_legendre_matches_independent_quad (test_background_bao.BackgroundNumericsTests.test_vector_gauss_legendre_matches_independent_quad) ... ok
+test_download_records_integrity_and_http_provenance (test_fetch_context.FetchContextTests.test_download_records_integrity_and_http_provenance) ... ok
+test_dry_run_is_offline_and_does_not_write (test_fetch_context.FetchContextTests.test_dry_run_is_offline_and_does_not_write) ... ok
+test_lock_checkpoints_completed_sources_before_the_next_download (test_fetch_context.FetchContextTests.test_lock_checkpoints_completed_sources_before_the_next_download) ... ok
+test_manifest_hash_mismatch_during_refresh_keeps_verified_file (test_fetch_context.FetchContextTests.test_manifest_hash_mismatch_during_refresh_keeps_verified_file) ... ok
+test_pdf_extractor_rejects_text_companion_symlink (test_fetch_context.FetchContextTests.test_pdf_extractor_rejects_text_companion_symlink) ... ok
+test_pdf_html_challenge_is_rejected_and_cleaned (test_fetch_context.FetchContextTests.test_pdf_html_challenge_is_rejected_and_cleaned) ... ok
+test_prior_lock_is_not_reused_after_source_url_changes (test_fetch_context.FetchContextTests.test_prior_lock_is_not_reused_after_source_url_changes) ... ok
+test_relative_subdirectories_are_allowed_but_traversal_is_rejected (test_fetch_context.FetchContextTests.test_relative_subdirectories_are_allowed_but_traversal_is_rejected) ... ok
+test_size_limit_is_a_recorded_failure_with_response_metadata (test_fetch_context.FetchContextTests.test_size_limit_is_a_recorded_failure_with_response_metadata) ... ok
+test_truncated_response_is_not_accepted_as_a_successful_data_file (test_fetch_context.FetchContextTests.test_truncated_response_is_not_accepted_as_a_successful_data_file) ... ok
+test_unverified_existing_file_is_preserved_and_refused (test_fetch_context.FetchContextTests.test_unverified_existing_file_is_preserved_and_refused) ... ok
+test_valid_pdf_is_kept_and_missing_extractor_is_recorded (test_fetch_context.FetchContextTests.test_valid_pdf_is_kept_and_missing_extractor_is_recorded) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.607s
+
+OK

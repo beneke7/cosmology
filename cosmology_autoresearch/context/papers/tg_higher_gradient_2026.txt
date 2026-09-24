@@ -1,0 +1,251 @@
+                                                    Ghost-free higher-gradient Newtonian gravity from the Second Law of
+                                                                              Thermodynamics
+
+                                                                                         M. Pszota1, 2 and P. Ván2, 3, 4
+                                                                                  1
+                                                                               Eötvös Loránd University, Budapest, Hungary
+                                                    2
+                                                     Department of Theoretical Physics, Wigner Research Centre for Physics, H-1525 Budapest, Hungary
+                                             3
+                                               Department of Energy Engineering, Budapest University of Technology and Economics, H-1111 Budapest, Hungary
+                                                                     4
+                                                                       Montavid Thermodynamic Research Group, Budapest, Hungary
+                                                                                         (Dated: September 2, 2026)
+                                                           Higher-gradient modifications of Newtonian gravity remove the point-mass singularity, but their
+                                                        Lagrangian dynamics is haunted by the Ostrogradsky instability. We show that the same field
+                                                        equations follow from the Second Law of thermodynamics applied to a self-gravitating fluid with a
+                                                        weakly nonlocal state space, and that on this route the instability is absent by construction: the
+                                                        potential obeys a first-order relaxation equation that is a gradient flow, whose Lyapunov function
+                                                        is the entropy density, and whose relaxation spectrum is negative definite at every wavenumber
+arXiv:2609.00317v1 [gr-qc] 31 Aug 2026
+
+
+
+
+                                                        precisely when the entropy is concave. The derivation also yields the pressure tensor and the
+                                                        energy current, an exact identity that reproduces Newton’s force law without further input, and a
+                                                        dissipation-free cross-coupling to the bulk viscous pressure that no variational principle
+                                                                                                                                          P        can produce.
+                                                        Regularity constrains the Yukawa-type corrections by an amplitude sum rule, i αi = −1, so that
+                                                        laboratory tests of the inverse-square law bound the largest internal length below 4 × 10−5 m, and
+                                                        identify the complex-root regime as a classically consistent Lee–Wick-like sector.
+
+
+                                            Introduction. Newtonian gravity has no intrinsic                 thermodynamic route yields more structure than the La-
+                                         length scale and a divergent point-mass potential. Gra-             grangian one.
+                                         dient extensions repair this: adding first and second gra-            Balances and state space. The fluid is described by the
+                                         dients of the field strength to the energy yields a sixth-          mass density ρ, velocity v, specific total energy e and the
+                                         order field equation whose point-mass solution is finite at         gravitational potential φ; an overdot is the substantial
+                                         the origin, with two internal lengths [1, 2], in close anal-        derivative. The balances contain no gravitational body
+                                         ogy with Bopp–Podolsky electrodynamics [3] and gradi-               force,
+                                         ent elasticity. The price is well known. Made dynamical
+                                                                                                               ρ̇+ρ∇·v = 0,     ρv̇+∇·P = 0,      ρė+∇·q = −P : ∇v, (1)
+                                         in the obvious Lagrangian way, every such theory falls
+                                         under Ostrogradsky’s theorem [4, 5]: the Hamiltonian is             gravity entering only through the pressure tensor P; q is
+                                         linear in one of the momenta, the extra pole is a negative-         the energy flux. The total energy is split as u = e − ε/ρ,
+                                         energy mode, and the vacuum is unstable, as in Stelle’s             with u the specific internal energy and
+                                         higher-derivative gravity [6]. Known escapes operate at                             1 h                                   i
+                                         the quantum level [7, 8].                                               ε = ρφ +        (∇φ)2 + ℓ21 (∇2 φ)2 + ℓ42 (∇3 φ)2    (2)
+                                                                                                                            8πG
+                                            Here we take a different route, and the instability never        the gravitational energy density: the Ohanian form,
+                                         arises. We treat the gravitational potential as a ther-             which is the thermodynamically distinguished represen-
+                                         modynamic variable of a self-gravitating fluid and de-              tative of the classical energy expressions [11, 12], ex-
+                                         rive, rather than postulate, its evolution from the Second          tended by the two gradient invariants of Ref. [1] with
+                                         Law, extending the non-dissipative construction of [9, 10]          internal lengths ℓ1 , ℓ2 . The entropy is s(u, v), v = 1/ρ,
+                                         to a third-order weakly nonlocal state space. The re-               with the usual Gibbs relation defining T , the thermo-
+                                         sult is threefold. First, the higher-gradient field equa-           static pressure p, and µ; the second law reads ρṡ+∇·j ≥ 0.
+                                         tions of Ref. [1] are recovered as the stationary limit                The construction is of weakly nonlocal nonequilibrium
+                                         of a first-order relaxation equation which is a gradient            thermodynamics: six fields, six balances, and the con-
+                                         flow of the gravitational energy: there is no propagat-             stitutive functions (P, q, j, φ̇) are fixed by the entropy
+                                         ing mode, hence no ghost, and stability is equivalent to            inequality, leaving three external inputs – s(u, v), ε, and
+                                         the concavity of the entropy. Second, the construction              the transport coefficients. All model dependence resides
+                                         determines the pressure tensor and the energy current               in Eq. (2).
+                                         along with the field equation, and an exact identity re-               Second Law. Write A = ∂ε/∂(∇φ), B = ∂ε/∂(∇2 φ),
+                                         turns Newton’s force law without further input. Third,              C = ∂ε/∂(∇3 φ) – of rank one, two and three, symmetric
+                                         the Second Law permits a dissipation-free cross-coupling            in all indices – and
+                                         between the field and the bulk viscous pressure of the
+                                                                                                                    M = A − ∇·B + ∇2: C,             N = B − ∇·C.    (3)
+                                         medium, invisible to any variational principle; its conse-
+                                         quences for galactic phenomenology are developed else-              The gravitational thermodynamic force is G ≡ ∇ · M −
+                                         where, and here it serves to show that the constructive             ∂φ ε= −δφ ε, where δφ denotes the variational derivative;
+                                                                                                                              2
+
+for Eq. (2), 4πG G = ∆φ − ℓ21 ∆2 φ + ℓ42 ∆3 φ − 4πGρ, so          additional requirements are thermal rather than gravi-
+G = 0 is the sixth-order field equation of Ref. [1]. Three        tational: internal perfectness (G = 0), mechanical per-
+pressures occur: the thermostatic p; the gravitational            fectness (Π = 0, Πdev = 0), and integrability of the
+pressure tensor                                                   entropic force. The last is nontrivial because ∇p/ρ is
+                                                                  not a gradient: the Gibbs relation for the specific en-
+ Pg = −(ε − ρ∂ρ ε)I + M⊗∇φ + N·∇2 φ + C : ∇3 φ, (4)               thalpy gives ∇p/ρ = ∇h − T ∇s, leaving the continuum
+                                                                  entropic force T ∇s, which is a gradient precisely when
+with scalar part pg = 31 tr Pg ; and the viscous pressure
+                                                                  ∇T × ∇s = 0 [10]. The weakly nonlocal sector, gradient
+tensor Π ≡ P − pI − Pg , with bulk viscous pressure
+                                                                  terms included, is itself of gradient form and contributes
+Π = 31 tr Π and Πdev ≡ Π − Π I, both vanishing in
+                                                                  nothing here, so the only obstruction is the classical ther-
+mechanical equilibrium. Substituting Eq. (1) into the
+                                                                  mal one already present for an Euler fluid – equivalently,
+entropy inequality and separating divergences yields the
+                                                                  the absence of baroclinic vorticity generation.
+entropy flux j = Jth /T , with Jth the energy flux corrected
+                                                                     No Ostrogradsky instability. Two separate statements
+by weakly nonlocal terms, and the production
+                                                                  are needed. For statics, Ostrogradsky’s theorem does not
+ T σs = Jth·T ∇ T1 + G φ̇ − Π ∇·v − Πdev : (∇v)dev ≥ 0. (5)       apply at all: it concerns higher time derivatives, while the
+                                                                  theory of Ref. [1] is a purely spatial elliptic problem. The
+One can verify Eqs. (4)–(5) symbolically, without invok-          relevant requirement is thermodynamic: concavity of the
+ing Liu’s procedure or the separation of divergences: in          entropy in the extended state space, i.e. convexity of ε,
+one dimension, where the combinatorial coefficients co-           which for Eq. (2) reads ℓ21 > 0, ℓ42 > 0.
+incide, the residual of the entropy balance vanishes iden-           For dynamics, the danger is real on the Lagrangian
+tically for arbitrary ε(ρ, φ, φ′ , φ′′ , φ′′′ ), and the three-   route – □(1 − ℓ2 □)φ = 4πGρ propagates a negative-
+dimensional index placement is fixed by the identity (8)          energy pole – but Eq. (7) with Π = 0 is a gradient flow,
+below.
+                                                                                     τ ∂t φ = −4πGℓ2 δφ ε,                   (9)
+   By Curie’s principle the scalar parts may couple. The
+linear Onsagerian equations with a conductivity matrix            and the Lyapunov function of that flow is the entropy
+L and their entropy bound are                                     density. The local entropy balance is pointwise, so no
+                                                            boundary condition and no integration over the domain
+     φ̇        l1 l12     G
+          =                    , l1 l2 ≥ 41 (l12 + l21 )2 , (6)   is needed: the local production σs is non-negative, and
+    −Π        l21 l2     ∇·v
+                                                                  the associated stability requirement is concavity of s in
+with l1 , l2 ≥ 0; l2 is the bulk viscosity. For a scalar field    the extended state space. That ε decreases along the flow
+no microscopic time-reversal argument enforces l12 = l21 ;        follows at fixed ρ and fixed specific total energy e, since
+the antisymmetric part is dissipation-free. In particu-           by u = e − ε/ρ a decrease of ε raises u and hence s. Lin-
+lar l1 = 0 – gravity itself produces no entropy – forces          earizing about any background at fixed ρ, a perturbation
+l21 = −l12 , a purely reactive coupling. Eliminating ∇·v          ∝ eik·x+λt obeys
+(possible for l2 ̸= 0) gives the central result,                                ℓ2 2
+                                                                                   k + ℓ21 k 4 + ℓ42 k 6 < 0
+                                                                                                        
+                                                                     λ(k) = −                                  for all k,   (10)
+                                                                                τ
+                τ ∂t φ = 4πG ℓ2 G − 6K Π ,
+                                        
+                                                           (7)
+                                                                  precisely when the entropy is concave: the gradient terms
+                                                                  increase the damping at large k. There is no negative-
+with ℓ2 /τ = det L/4πGl2 and K = l12 /6 det L. The
+                                                                  energy propagating mode because there is no propagating
+potential relaxes towards the stationary state δφ ε = 0,
+                                                                  mode at all – the potential carries no independent dy-
+driven additionally by the bulk viscous pressure. The
+                                                                  namical degree of freedom, only a relaxation transient,
+cross-term is the promised non-variational structure; in
+                                                                  and the elliptic (Lagrangian) theory is recovered as the
+mechanical equilibrium (Π = 0) it is absent, but we set
+                                                                  constraint limit τ → 0. The theorem is evaded not by
+K = 0 for the remainder of this Letter.
+                                                                  curing its conclusion but by failing its hypotheses: it
+  Potential representability and Newton’s force. Taking
+                                                                  presumes a nondegenerate Lagrangian containing higher
+the divergence of Eq. (4), the M and N terms cancel
+                                                                  time derivatives, hence a canonical Hamiltonian linear in
+identically and one obtains the exact, off-shell identity
+                                                                  one momentum, whereas (7) is first order in time and
+                ∇·Pg = ρ ∇(∂ρ ε) + G ∇φ.                   (8)    carries no Hamiltonian structure at all. What replaces
+                                                                  boundedness of the Hamiltonian is concavity of the en-
+On shell (G = 0) the divergence of the gravitational pres-        tropy, the same condition (10) requires. This is different
+sure tensor is ρ times a gradient, so that the Newtonian          in kind from the quantum routes of Refs. [7, 8], which re-
+force density follows from the pressure tensor alone, with        tain the Lagrangian and repair the instability after quan-
+no separate body-force postulate [9, 10, 13].                     tization. Stability of the full coupled system – continuity,
+  The reduction of the momentum balance to the mass-              momentum and Eq. (7) together – adds only the physi-
+point form v̇ = −∇Φ requires more than (8), and the               cal Jeans instability below the Jeans wavenumber, with
+                                                                                                                               3
+
+a Routh–Hurwitz analysis showing that the field sector              otherwise, where the correction becomes a damped os-
+contributes damped modes only; details will be given                cillation. If a static potential arises from single-particle
+elsewhere.                                                          exchange with a non-negative spectral density, it is com-
+   Two instabilities must not be conflated here. The                pletely monotone [16, 17] and cannot change sign; the
+Jeans instability of a self-gravitating fluid is tachyonic:         oscillatory regime therefore requires complex-conjugate
+the wrong sign belongs to the mass term, ω 2 = c2s k 2 −            poles, the classic Lee–Wick situation [8]. In the present
+4πGρ0 , exactly as in spontaneous symmetry breaking. It             framework this is no obstruction: both stability condi-
+is physical, self-resolving, and must be retained by any            tions – convexity and Eq. (10) – hold throughout the
+theory of gravity. The Ostrogradsky instability is a ghost:         regime, which is thus classically consistent, while a stan-
+the wrong sign belongs to the kinetic term, the energy is           dard particle interpretation and a naive relativistic com-
+unbounded below, and there is no state to settle into.              pletion are obstructed there. The thermodynamic route
+The two occupy opposite ends of the spectrum, k < kJ                cleanly separates the two statements.
+against k ∼ ℓ−1  1  , and do   not couple  at linear order.  The       Discussion. The Second Law, evaluated on a weakly
+statement is therefore not merely that the theory is ghost-         nonlocal state space, does three things that the La-
+free, but that the pathology is removed while the physics           grangian route does not. It selects first-order relaxational
+is kept.                                                            dynamics, making the higher-gradient sector ghost-free
+   Regularity, the amplitude sum rule, and the laboratory.          by construction, with stability tied to entropy concavity.
+For the stationary linear theory, ∆(1 − ℓ21 ∆ + ℓ42 ∆2 )φ =         It delivers the pressure tensor and energy current along-
+4πGρ, partial fractions give the point-mass potential               side the field equation, with Newton’s force law emerging
+             GM       X                 X                         from the identity (8) rather than being imposed. And it
+φ(r) = −            1+     αi e−r/λi ,        αi = −1, i ∈ {1, 2}, admits the reactive cross-coupling of Eq. (7), through
+              r         i                  i                        which the field is driven by the bulk viscous pressure of
+                                                             (11)
+                                                                    the medium – a term invisible to any variational prin-
+the sum rule being equivalent to regularity at the origin.
+                                                                    ciple, whose astrophysical consequences (a missing-mass
+The amplitudes are therefore fixed by the ranges. The
+                                                                    effect generated by the field’s own gradient energy, local-
+two roots of the factorisation 1 + ℓ21 k 2 + ℓ42 k 4 = (1 +
+                                                                    ized where the dissipative gas is) are partially developed
+ak 2 )(1 + bk 2 ) obey
+                                                                    in Ref. [18]. The same construction with other choices of
+              2              4
+                                           √           √            ε reproduces self-consistent scalar gravity [19–22] and the
+  a + b = ℓ1 ,        ab = ℓ2 ,     λa = a, λb = b, (12)
+                                                                    AQUAL field equation [23, 24], so the framework embeds
+so a, b have the dimension of length squared and the                these theories with their hidden thermodynamic compat-
+Yukawa ranges are their square roots. Taking a > b,                 ibility made explicit; relative to Refs. [9, 10] the present
+partial fractions give                                              results are the extension to third-order weak nonlocality,
+                                                                    the gradient-flow resolution of the Ostrogradsky problem,
+              a            λ2a
+  αa = −           =− 2           ≤ −1, αb = −αa − 1 ≥ 0.           and the amplitude sum rule with its laboratory bound.
+            a−b         λa − λ2b
+                                                                       There are two limitations. The evolution equation does
+                                                             (13)
+                                                                    not derive from an action, so the standard field-theoretic
+For a single length ℓ2 = 0, hence b = 0, λa = ℓ1 and
+                                                                    toolbox – quantization, particle content, relativistic com-
+α = −1 exactly. The short-range repulsion this implies
+                                                                    pletion – does not apply to it in its present form; and the
+is not itself the ghost: it is present in the static theory,
+                                                                    relaxation pair (ℓ, τ ) is constrained only through the ratio
+to which Ostrogradsky’s theorem does not apply. Both
+                                                                    ℓ2 /τ . Both point to the same open problem, the relativis-
+are consequences of the single sign in (12). This is the
+                                                                    tic extension of the thermodynamic construction.
+decisive structural difference from a generic fifth force,
+whose amplitudes and ranges are independent, and it                    We thank R. Trasarti-Battistoni for insightful remarks.
+makes the theory unusually easy to test. Torsion-balance            The authors acknowledge support by the grant NKFIH
+experiments exclude |α| = 1 for λ > 38.6 µm at 95% con-             NKKP-Advanced 150038 and an STSM Grant from FuSe
+fidence [14] (earlier 56 µm [15]); since the gradient theory        COST Action [CA24101], funded by COST. The authors
+has no amplitude freedom,                                           used Claude Opus 5 to assist with literature synthesis and
+                                                                    revising scientific claims. The authors provided the draft
+                        ℓ1 ≲ 4 × 10−5 m.                     (14)   and thermodynamic background, carried out all calcula-
+                                                                    tions and the physical interpretation and independently
+Because the corrections are exponentially confined below
+                                                                    reviewed and verified all resulting material.
+ℓ1 , all larger-scale gravity is untouched, while inside mat-
+ter and at interfaces the higher-order equation requires
+additional boundary conditions – the regime where the
+theory genuinely differs from Newton.
+   The factorization 1 + ℓ21 k 2 + ℓ42 k 4 = (1 + ak 2 )(1 + bk 2 )  [1] M. Lazar, Phys. Rev. D 102, 096002 (2020),
+has real roots for ℓ41 > 4ℓ42 and complex-conjugate roots                arXiv:2009.09846.
+                                                                                                                             4
+
+ [2] M. Lazar, Wave Motion 91, 102388 (2019).                         and B. R. Heckel, Phys. Rev. Lett. 124, 101101 (2020).
+ [3] B. Podolsky, Phys. Rev. 62, 68 (1942).                      [15] D. J. Kapner, T. S. Cook, E. G. Adelberger, J. H. Gund-
+ [4] R. P. Woodard, Scholarpedia 10, 32243 (2015),                    lach, B. R. Heckel, C. D. Hoyle, and H. E. Swanson, Phys.
+     arXiv:1506.02210.                                                Rev. Lett. 98, 021101 (2007).
+ [5] A. Pais and G. E. Uhlenbeck, Phys. Rev. 79, 145 (1950).     [16] D. V. Widder, The Laplace Transform (Princeton Uni-
+ [6] K. S. Stelle, Phys. Rev. D 16, 953 (1977).                       versity Press, 1941).
+ [7] J. F. Donoghue and G. Menezes, Phys. Rev. D 104,            [17] G. Feinberg and J. Sucher, Phys. Rev. 166, 1638 (1968).
+     045010 (2021).                                              [18] M. Pszota and P. Ván, Physics of the Dark Universe 46,
+ [8] T. D. Lee and G. C. Wick, Nucl. Phys. B 9, 209 (1969).           101660 (2024), arXiv:2306.01825v3.
+ [9] P. Ván and S. Abe, Physica A 588, 126505 (2022),           [19] A. Einstein, Ann. Phys. (Leipzig) 38, 443 (1912).
+     arXiv:1912.00252.                                           [20] D. Giulini, Phys. Lett. A 232, 165 (1997), arXiv:gr-
+[10] M. Szücs and P. Ván, To be published           (2026),         qc/9605011.
+     arXiv:2504.07296v2.                                         [21] J. Franklin, Am. J. Phys. 83, 332 (2015),
+[11] H. C. Ohanian and R. Ruffini, Gravitation and Space-             arXiv:1408.3594.
+     time, 3rd ed. (Cambridge University Press, Cambridge,       [22] D. P. L. Bragança and J. P. S. Lemos, Eur. Phys. J.
+     England, 2013).                                                  C 78, 494 (2018), erratum: Eur. Phys. J. C 78, 594,
+[12] R. Trasarti-Battistoni, M. Pszota, and P. Ván, To be            arXiv:1807.00036.
+     published (2026), arXiv:2605.02976.                         [23] M. Milgrom, Astrophys. J. 270, 365 (1983).
+[13] P. Ván, Physics of Fluids 35, 057105 (2023),               [24] J. Bekenstein and M. Milgrom, Astrophys. J. 286, 7
+     arXiv:2301.07177v2.                                              (1984).
+[14] J. G. Lee, E. G. Adelberger, T. S. Cook, S. M. Fleischer,
+

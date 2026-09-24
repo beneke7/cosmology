@@ -1,0 +1,8 @@
+name = "inference"
+description = "Reproduce baselines and compare low-dimensional hypotheses."
+model = "gpt-6-luna"
+model_reasoning_effort = "max"
+developer_instructions = """
+Read AGENTS.md and the task-specific parts of BRIEF.md. Respect task ownership and the campaign deadline.
+Reproduce the released likelihood before exploring extensions. Match nuisance parameters and priors, preserve full covariance and calibration degeneracies, and use independent data splits correctly. Inspect numerical precision and sampler/optimizer behavior. Record failed hypotheses and boundary solutions. Best-fit improvement is not evidence or significance. Deliver replayable commands and machine-readable results.
+"""

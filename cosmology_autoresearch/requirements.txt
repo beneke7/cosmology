@@ -1,0 +1,4 @@
+numpy>=1.26
+scipy>=1.11
+# This is a bootstrap specification, not a locked environment.
+# The orchestrator must record resolved versions for its run.

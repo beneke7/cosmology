@@ -1,0 +1,938 @@
+                                                         FIELD EQUATION OF THERMODYNAMIC GRAVITY AND
+                                                                  GALACTIC ROTATIONAL CURVES
+
+                                                                                  M. PSZOTA1,2,3,4 AND P. VÁN2,3,4
+
+                                                         Abstract. The rotational velocity curve (RC) of galaxy NGC 3198 is modelled in
+                                                         various theoretical frameworks: Thermodynamic Gravity (TG) is compared to Dark
+                                                         Matter (DM) and Modified Newtonian Dynamics (MOND). The nonlinear gravitational
+                                                         field equation of TG is solved using the baryonic mass density as the source of the
+                                                         gravitational field. In this paper, first, a dissipation motivated numerical method is
+arXiv:2306.01825v3 [physics.gen-ph] 20 Sep 2024
+
+
+
+
+                                                         verified with the help of exact solutions. Then, the obtained optimal velocity curve
+                                                         is compared to DC14 model DM and MOND EFE (Modified Newtonian Dynamics -
+                                                         External Field Effect aspect) parametrisations for the RC of the galaxy.
+
+
+
+
+                                                                                         1. Introduction
+
+                                                       The most successful model in cosmology so far is the so-called ΛCDM model, where Λ
+                                                  stands for the cosmological constant in the Einstein-equation accounting for dark energy,
+                                                  and CDM stands for cold dark matter. The composition of DM is unknown. There is
+                                                  an ongoing theoretical, experimental and computational hunt to find proper candidates
+                                                  in the framework of existing or new particles of the Standard Model of Particle Physics
+                                                  [1, 2, 3].
+
+                                                       The most well-known effect of dark matter is its influence on the rotation curves
+                                                  of galaxies. Properly modelling the observed galactic rotational velocity curves with DM
+                                                  requires particular dark matter distributions, [4, 1, 5, 6]. However, in spite of the flexibility
+                                                  in modelling with the help of a potentially unknown distribution, there are some well-
+                                                  known problems and inconsistencies both in the case of individual galaxies and general,
+                                                  global properties.
+
+                                                       Regularities in baryon-DM coupling can be summarised in the Radial Acceleration
+                                                  Relation (RAR). This relation generalises the more well-known dynamical relations, like
+                                                  Renzo’s rule or the baryonic Tully-Fisher relation. The RAR encompasses these effects
+                                                  for various types of galaxies and establishes the strong connection between the baryonic
+                                                  contribution and the rotation curve [7, 8]. These regularities indicate that DM is not a
+                                                  simple passive background but interacts with the baryonic mass component.
+
+                                                       Related well-documented problems of the ΛCDM paradigm are the core-cusp prob-
+                                                  lem, the missing satellite problem and the too-big-to-fail problem. The simulations that
+                                                  include dark matter predict that DM halo density profiles should rise steeply at small radii
+                                                  as ρ(r) ∝ r−γ with γ ≃ 0.8 − 1.4 for small galaxies. This is in contrast to observations
+                                                  with many low-mass DM-dominated galaxies. A related ’central density problem’ also
+                                                  exists as simulations predict more dark matter in the central regions than they should
+                                                  host. These two issues (low-density cores and high-density cusps) are summarised as the
+                                                  core-cusp problem [9, 10]. That is one of the reasons that hydrodynamics-motivated DM
+                                                  distributions are widely used for rotational velocity curve modelling.
+
+                                                    Date: September 23, 2024.
+                                                                                                   1
+2                              M. PSZOTA1,2,3,4 AND P. VÁN2,3,4
+
+    Because of the above-mentioned problematic aspects, there are several other pro-
+posals to explain the missing mass. The superfluid theories suggest a particular multi-
+component form of dark matter, [11, 12, 13, 6, 14], where the explanation of rotational
+curves may come from a logarithmic field potential, [15, 16], or scale invariance, [17].
+
+     Among these suggestions, the most popular and most developed is MOND. Its success
+is based on the insight regarding the nonrelativistic, phenomenological observations, in
+particular, the galactic rotational curves. The reason became clear after the development
+of the first modified gravity version of MOND, called A QUAdratic Lagrangian theory
+(AQUAL), [18]. It has a vacuum solution with a force that is inversely proportional to
+the distance of the central mass: that can exactly counterbalance the centrifugal force
+and explain the typical flat velocity profiles.
+
+     While MOND has remarkable success in explaining many observational features of
+the local Universe [19], and TeVeS, the relativistic extension of AQUAL, is successful
+in explaining gravitational lensing and matter perturbation evolution, as Dodelson [20]
+points out, it still faces serious challenges, notably in the explanation of galaxy clusters,
+and the shape of the power spectrum of baryon-acoustic oscillations.
+
+     A different approach was proposed by Verlinde, whose emergent gravity (also known
+as entropic gravity) uses the idea that spacetime and gravity emerge together from the
+entanglement structure of an underlying microscopic theory. Using insights from black
+hole thermodynamics, quantum information theory and string theory, emergent gravity is
+motivated and borrows elements of various nonrelativistic constitutive theories. For the
+DM phenomena, emergent gravity is motivated by generalised nonrelativistic elasticity
+[21]. The AQUAL type field equation in the nonrelativistic limit can be obtained from a
+covariant version of the theory, [22].
+
+      There is also a theory of gravity based on nonequilibrium thermodynamics, refered as
+thermodynamic gravity (TG) in the following, [23, 24]. Then the gravitational potential
+is treated as a thermodynamic state variable and the standard Newtonian gravity can be
+derived. The approach is based on the simple and only assumption that field energy and
+interaction energy is included in the total energy density. Then the inequality describing
+the entropy production rate in a local equilibrium state leads to the following dissipative
+field equation for gravity:
+
+                            ∂φ   l2
+                                    ∆φ − K (∇φ)2 − 4πGρ ,
+                                                       
+(1)                            =
+                            ∂t   τ
+
+where φ is the gravitational potential field, l refers to the macroscopic spatial scale of
+variations of the whole system, τ is the relaxation time, ∆ is the Laplace operator, K
+is a characteristic coefficient of the dimensions s2 m−2 , G is the Newtonian constant of
+gravity and ρ is the mass density. The stationary solution yields a nonlinear field equation
+for a modified gravitational interaction, while the strength of deviation from the classical
+case is characterised by the K constant, which arises from the linear coupling between
+the gravitational and mechanical interactions. This leads to a dynamic crossover between
+Newtonian and non-Newtonian regimes in the vacuum region.
+
+      There, the relaxation to a stationary nonlinear field equation indicates the dissipative
+character of the theory. The nonlinear term is due to the presence of the gravitational
+field pressure, which is a consequence of the holographic properties of Newtonian gravity,
+and in general, the result of thermodynamic requirements, [25, 26].
+  FIELD EQUATION OF THERMODYNAMIC GRAVITY AND GALACTIC ROTATIONAL CURVES 3
+
+     Therefore, due to the pressure of the gravitational field, there is a cross effect between
+the thermodynamic force of the scalar gravitational interaction and the scalar part of the
+mechanical interaction and the nonlinear term of eq. 1 emerges naturally. Therefore,
+the parameter K is not fundamental, it belongs to a particular transport property of the
+thermodynamic cross effect of gravitational field and mechanical momentum transport:
+the gravitational field transports material momentum and material momentum pulls the
+related gravity field along. K is a material parameter that characterises the intensity of the
+aforementioned coupling in a galactic environment, therefore it is not a self-energy term
+as in the similar field equations of [27, 28, 29]. Also, it has a direct physical interpretation,
+as vK = K −1/2 is a characteristic velocity of a flat rotational curve because FK = Kr      1
+                                                                                               is
+the force field in a stationary vacuum solution of the field equation in TG.
+
+     In the TG theory, the source term of the field equation is the density distribution of
+the baryonic mass, the sum of the visible matter and the atomic hydrogen densities. The
+gravitational field and the corresponding centrifugal force can be calculated by solving
+the stationary part of eq. 1. This paper serves as a proof of concept for this method, to
+be detailed for additional galaxies in following publications.
+
+      In the following sections, we give a finite difference scheme to solve the field equations
+and verify the method with the help of known exact solutions of the equation with con-
+stant, ρ0 ≥ 0 density distributions. Then, we demonstrate the applicability of the method,
+solving the equation with a realistic example, with the mass distribution of galaxy NGC
+3198 as a source term. Here the sum of the visible part (referenced also as a stellar disk)
+and the atomic H (HI) component is used to solve the stationary part of the field equation
+1. The numerical method is of a relaxational type, exploiting that the time-dependent
+field equation relaxes to the stationary solution.
+
+     The paper first presents the exact solutions of the equation. Then, a short description
+of the numerical method is given. Afterwards, we validate the approach, showing that
+the numerical scheme relaxes to the known exact solutions. Then, the velocity curve of
+the NGC 3198 galaxy is modelled, fitting the K parameter. Finally, a short analysis and
+interpretation follow.
+
+
+
+                               2. Thermodynamic gravity
+
+    For the exact and numerical solutions, a spherically symmetric case will be treated,
+with the r variable denoting the distance from the centre, as before. In this case, equation
+1 can be rewritten into the following form:
+                             l2
+                                                                  
+                                         2                       2
+(2)                   ∂t φ =      ∂rr φ + ∂r φ − 4πGρ − K(∂r φ) .
+                             τ           r
+
+
+2.1. Exact solutions. In this section the analytical solution for the stationary part of
+eq. 1 is investigated in the spherically symmetric case. Let us introduce the following
+shorthand notation:
+
+(3)                                      ∂r φ(r) = φ′ ,
+(4)                                      ∂rr φ(r) = φ′′ .
+4                              M. PSZOTA1,2,3,4 AND P. VÁN2,3,4
+
+If the field is time-independent, then φ(r, t) can be written for φ(r) as
+                                   2                        2
+(5)                        φ′′ = − φ′ + 4πGρ(r) + K (φ′ ) ,
+                                   r
+whereby using gravitational acceleration, which is by definition
+(6)                                      g = −∇φ,
+and here becomes
+(7)                                     g(r) = −φ′ ,
+we may obtain the following form:
+                                    2
+(8)                        g(r)′ = − g(r) − 4πGρ(r) − Kg(r)2 .
+                                    r
+
+     This non-linear Riccati equation has well-known solutions when the density is zero
+or a constant value.
+
+2.1.1. Vacuum solution. For solutions with zero density, i.e. ρ(r) = 0, eq. 8 becomes
+                                         2
+(9)                            g(r)′ = − g(r) − Kg(r)2 ,
+                                         r
+which is a Bernoulli-type equation, and can be solved by introducing:
+(10)                                   w(r) = g(r)−1 ,
+whereupon eq. 9 becomes:
+                                               2
+(11)                                  w(r)′ − w = K.
+                                               r
+This is a first-order linear ordinary differential equation, and has the following solution:
+(12)                                w(r) = −Cr2 − Kr.
+By substituting this into eq. 10, one can obtain the following formulas:
+                                                 1
+(13)                               g(r) = −           ,
+                                             Kr + Cr2
+                                        1       r
+(14)                           φ(r) =     ln         + φ0 .
+                                       K K + Cr
+
+     This solution has a singularity at r = 0, so it may only be used after the effect of
+the mass distribution is negligible (e.g. far from the bulk of the galactic mass). The C
+constant then may be fitted using the boundary condition at the transition to this regime.
+One can recover the Newtonian solution with a central point mass, if K tends to zero:
+                                 GM                     1
+(15)                           − 2 = g(r)K=0 = − 2 ,
+                                   r                  Cr
+                                                1
+(16)                                   C :=        .
+                                             GMaa
+This indicates that the parameter corresponds to an apparent asymptotic equivalent point-
+mass (Maa ) at the centre of our field. Therefore, introducing also the characteristic
+distance, R = K/C, one obtains the vacuum solution in the following intuitive form, [24]:
+                                                GMaa
+(17)                                g(r) = −            .
+                                               (R + r)r
+  FIELD EQUATION OF THERMODYNAMIC GRAVITY AND GALACTIC ROTATIONAL CURVES 5
+
+2.1.2. Solution with constant density. Eq. 8 can be solved analytically if the density is a
+nonzero ρc constant, too. Then a general solution can be written as
+                               √
+                          1      −4πGρc K       p                    
+(18)             g(r) =      +              tan    −4πGρc K · r + C .
+                         Kr          K
+
+     For further consideration, let us examine the cases where K > 0 and K < 0. In the
+K > 0 case, we can rewrite eq. 18 as
+                                  r
+                            1        4πGρc         p                 
+(19)              g+ (r) =     +            · i tan i 4πGρc K · r + C ,
+                           Kr          K
+(20)                                      iC̃ = C,
+                                  r
+                            1        4πGρc          p                
+(21)              g+ (r) =     −             · tanh   4πGρc K · r + C̃ ,
+                           Kr          K
+and in the K < 0 case, as
+                                     s
+                             1           4πGρc       p                  
+(22)             g− (r) = −      −             · tan    4πGρc |K| · r + C .
+                            |K|r          |K|
+
+
+     Here i is the imaginary unit, C and C̃ are constants. Since for this constant density
+mass model we want to eliminate the singularity at r = 0, we may do so by appropriately
+choosing C or C̃. By choosing C̃ = i π2 , the tanh(x) function becomes coth(x), and will
+have the following series representation in the equation:
+                                     r
+                                1       4πGρc         p             
+(23)                  g+ (r) =    −            · coth    4πGρc K · r
+                               Kr         K
+            r                             √                  √         3            !
+      1        4πGρc            1           4πGρc K · r       4πGρc K · r3
+                                                                             + O r5
+                                                                                    
+   ≈     −            · √               +                −
+     Kr          K          4πGρc K · r          3                45
+                            1              K
+                                             (4πGρc )2 · r3 + O r5 ,
+                                                                   
+                       ≈ − · 4πGρc · r +
+                            3             45
+and thus eliminates the singularity. We can note that the first term corresponds to the
+usual result in the case of Newtonian gravity, while the higher-order terms, which also
+contain the K parameter, serve as corrections. For g− (r), we can choose C = π2 and
+obtain similarly:
+                                      s
+                                1         4πGρc       p              
+(24)                g− (r) = −      +           · cot   4πGρc |K| · r
+                               |K|r        |K|
+                                                              p             3               
+                                                                                     3
+            s
+                                                                 4πGρ      |K|   · r
+                                             p
+      1        4πGρc            1             4πGρc |K| · r             c
+≈−        +           · p                 −                 −                         + O(r5 )
+                                                                                               
+     |K|r        |K|         4πGρc |K| · r          3                   45
+
+                        1              |K|
+                                           (4πGρc )2 · r3 + O r5 .
+                                                                
+                     ≈ − · 4πGρc · r −
+                        3               45
+which is the same in the first two orders as in the previous case, considering the sign of
+K. The difference only appears in terms containing higher orders of K, as the two series
+diverge.
+6                              M. PSZOTA1,2,3,4 AND P. VÁN2,3,4
+
+2.2. Numerical solution. This chapter details the numerical method for the solution of
+eq. 2. Here, generally, ρ(r, t) can be a function of time, as it is coupled to the fundamental
+hydrodynamic balances. However, changes in the density due to the characteristic speed
+of matter will be considered negligible relative to the relaxation of the potential. This
+is justified by experimental boundaries on the possible delay time of the gravitational
+field, summarised in the work of Diósi [30], and the characteristic timescale must be
+below millisecond. This insight also serves as a justification to numerically treat the
+gravitational potential as relaxing to the stationary solution in eq. 2.
+
+
+2.2.1. Dimensionless formalism. In order to solve the equation, a dimensionless form is
+created, by introducing the following notation:
+(25)                                      ρ = ρd ρ̃,
+                                           l2
+(26)                                          = a,
+                                           τ
+(27)                                      r = rd r̃,
+(28)                                       φ = φd φ̃,
+                                                1
+(29)                                       K=      K̃,
+                                                φd
+                                                   r2 τ r2
+(30)                             t = td t̃ → td = d2 = d ,
+                                                    l   a
+where the quantities with the index d denote a value with appropriate dimensions and
+the values with a tilde are dimensionless. Substituting these into eq. 2, we obtain the
+following:
+                            2
+                                                                                      2 !
+         ∂ (φd φ̃)       ∂ (φd φ̃)       2 ∂ (φd φ̃)                 1      ∂ (φd φ̃)
+(31)               =a             2 +                  − 4πGρd ρ̃ − K̃                     ,
+          ∂ td t̃         ∂ (rd r̃)     rd r̃ ∂ (rd r̃)              φd      ∂ (rd r̃)
+                                                                     2
+                       ∂ φ̃     ∂ 2 φ̃ 2 ∂ φ̃ 4πGρd rd2              ∂ φ̃
+(32)                          =     2
+                                      +         −           ρ̃ − K̃        .
+                       ∂ t̃     ∂r̃     r̃ ∂r̃          φd            ∂r̃
+Let us also choose
+                                       4πGρd rd2 !
+(33)                                             = 1.
+                                         φd
+
+By leaving the tilde notation, we obtain the equation analogue to eq. 2 in the following
+form:
+                                         2
+(34)                       ∂t φ = ∂rr φ + ∂r φ − ρ − K (∂r φ)2 .
+                                         r
+
+    For the numerical method, rd is chosen to be the furthest point of the velocity curve
+data and ρd as the mean of the derived density distribution, as can be seen later in eq.
+48.
+
+
+2.2.2. Discretisation. In order to solve eq. 34 numerically, a discretisation method of
+staggered grids is employed [31, 32, 33]. This means that the derivative of the field is
+introduced as q = ∂r φ, which allows us to rewrite eq. 34 as a system of two first-order
+  FIELD EQUATION OF THERMODYNAMIC GRAVITY AND GALACTIC ROTATIONAL CURVES 7
+
+differential equations:
+                                               2
+(35)                             ∂t φ = ∂r q + q − ρ − Kq 2 ,
+                                               r
+(36)                                        q = ∂r φ.
+
+     The aim of this method is the numerical prescription of Neumann-type boundary
+conditions and the better numerical handling of the nonlinear term with the coefficient
+K. During the numerical solution, in a given timestep, the φ field is evaluated first, using
+the values of φ and q from the previous timestep, and then the derivate field q is evaluated,
+using the obtained new field value. In the staggered grids method, the two variables are
+shifted by ∆x/2 for better handling. The schematic representation of this can be seen in
+Fig. 1. Henceforth, r will be shown with dimensional values (e.g. r = rd for r̃ = 1) for
+easier comprehension, however, all other physical quantities remain dimensionless.
+
+
+
+
+       Figure 1. The schematic representation of the discretisation method of
+       staggered grids, which was used in the numerical solution [31]. The
+       (Neumman-type) boundary conditions (B.C.) are set for the derivative field.
+
+     For the terms containing q explicitly, the average of the q field at two spatially
+neighbouring points can be used. By denoting the spatial indices with j and the temporal
+indices with t, the two equations can be simply discretised in the following way:
+
+
+(37)
+                                                                                                2 !
+                      qj+1,t − qj,t         2       qj,t + qj+1,t                qj,t + qj+1,t
+ φj,t+1 = φj,t + ∆t                 +   1
+                                                                 − ρj − K                              ,
+                          ∆x            2
+                                          + j · ∆x        2                            2
+                                            φj,t+1 − φj−1,t+1
+(38)                              qj,t+1 =                    .
+                                                   ∆x
+
+                                                                                   ∆t
+    In order to ensure the stability of the numerical method, a sufficiently small ∆x2 ratio
+
+was chosen. Unless otherwise noted, for the numerical calculations, N = 200 was used.
+The initial conditions for the arrays φ and q were chosen to be
+(39)                                    φ(t = 0) = 0,
+(40)                                    q(t = 0) = 0,
+8                             M. PSZOTA1,2,3,4 AND P. VÁN2,3,4
+
+except in the boundaries, while the boundary conditions were
+                                             vobserved (rmin )2
+(41)                          q(r = rmin ) =                    ,
+                                                    φd
+
+                                             vobserved (rd )2
+(42)                            q(r = rd ) =                  ,
+                                                   φd
+during the galaxy velocity curve calculation, with rmin denoting the radial position of the
+innermost observed velocity data point. For the reliability testing, the boundaries were
+set to the corresponding values of the theoretical curves.
+
+2.2.3. Convergence and reliability. In order for the numerical solution to yield a good
+enough approximation of the stationary solution, the number of the timesteps needs to
+be sufficiently high. To ensure this, the number of temporal iterations T is set to fulfil
+the following:
+                                                     1
+(43)                             T · ∆t = 1 → T =      .
+                                                    ∆t
+
+    The relaxation process is shown for the relaxation of the potential and the derivative
+in Fig. 2. As can be seen, the method converges fast, and this choice provides enough
+timesteps for a good convergence to the theoretical solution.
+
+
+
+
+       Figure 2. The numerical method shown to be relaxing to the stationary
+       solution in the ρ(r) = ρ0 solution, with N = 200 and dimensionless values
+       of K = 10 and ρ = 1.
+  FIELD EQUATION OF THERMODYNAMIC GRAVITY AND GALACTIC ROTATIONAL CURVES 9
+
+     To test the reliability of the numerical method, its results are compared to the theo-
+retical results from eqs. 13, 24 and 23. Note that due to the nonlinear term, the numerical
+method and the theoretical solutions can only be compared with an opposite sign of K.
+The results are shown in Fig. 3.
+
+
+
+
+       Figure 3. The result of the numerical method compared to the theoretical
+       solution in the regimes of K ≪ ρ0 , K = ρ0 and K ≫ ρ0 for constant density
+       and for K ≪ C, K = C and K ≫ C for vacuum.
+
+
+    We can see that the numerical solution reproduces the exact theoretical solution for
+constant density, but only reproduces the theoretical solution closer to the boundary for
+vacuum in the K ≪ C regime, that is, when the effect of the apparent mass is much
+10                             M. PSZOTA1,2,3,4 AND P. VÁN2,3,4
+
+greater than the effect of the nonlinear term. By choosing the appropriate scale, we can
+see the crossover as in [24] on Fig. 4.
+
+
+
+
+       Figure 4. The crossover in the vacuum solution. Near the inner boundary,
+            1
+       the Kr  term dominates, and at the outer boundary, the Cr1 2 dominates.
+       The resulting field looks Newtonian from far away, but with a greater mass,
+       compared to the classical case.
+
+     Furthermore, the joint solution of a nonzero density core surrounded with vacuum
+is tested, where ρ(r) = ρc in the interval r ∈ [0, 21 rd ), and ρ(r) = 0 in the interval
+r ∈ [ 12 rd , rd ]. To determine the C parameter in the vacuum solution, the continuity of the
+derivative was prescribed:
+                                                             
+                                         1                  1
+(44)                                g±     rd = gvacuum       rd ,
+                                         2                  2
+                                                  4         2K
+(45)                                  C=−                 −     .
+                                             g± 12 rd rd2
+                                                     
+                                                             rd
+
+     The boundary conditions are the corresponding constant density and vacuum deriva-
+tives. The numerical method is shown to reproduce the theoretical joint case in of dimen-
+sionless values ρc = 1, K = −10 and K = 10 in Fig. 5.
+  FIELD EQUATION OF THERMODYNAMIC GRAVITY AND GALACTIC ROTATIONAL CURVES 11
+
+
+
+
+       Figure 5. The result of the numerical method compared to the joint the-
+       oretical solutions in the case of dimensionless values ρc = 1, K = −10 and
+       K = 10.
+
+
+     Therefore we can trust that the numerical solution for the thermodynamically mod-
+ified gravitational field will be reliable for realistic mass distributions as well, as long as
+they have similar characteristic parameter relations. Larger K values relative to ρc result
+in negative C as per eq. 45 and are unlikely to be physically meaningful as per eq. 16.
+
+
+
+                    3. Analyses of rotational velocity curves
+
+3.1. Methodology. To calculate velocity curves, the derivative field from the numerical
+solution is used to calculate the inferred rotational velocity, calculating the dimensional
+values:
+                                                     21
+                                           φd
+(46)                                vj =      r qj,T      .
+                                           rd
+
+
+     The velocities corresponding to the surface densities for atomic hydrogen (HI) and
+the stellar disk (SD) were converted into an equivalent pseudo-spherical dataset to cal-
+culate density data. The original velocities are defined as the velocities each component
+would induce in the plane of the galaxy, and for the comparison a spherical case is consid-
+ered. The Spitzer Photometry and Accurate Rotation Curves (SPARC) database (Lelli
+et al. [34]) uses the convention that the negative sign of the hydrogen gas data means
+that it has a negative contribution when calculating the total v 2 sum, that is, it has an
+outward gravitational effect due to the lack of spherical symmetry and the specifics of its
+distribution. The observed velocity curve data from SPARC is based on Spitzer photom-
+etry at 3.6 µm (tracing the stellar mass distribution) and high-quality HI+Hα rotation
+curves. To calculate the ρj for the numerical method from the interpolated function of
+the rotation velocities vrot (r), the following procedure was used:
+
+                        ∂(vrot,SD (r)2 r)               ∂(vrot,HI (r)2 r)
+                                                                       
+                                                1                               1
+(47)        ρj = Υ1 ·                        ·    2
+                                                    +                        ·    2
+                                                                                    ,
+                               ∂r           j 4πGrj            ∂r           j 4πGrj
+12                             M. PSZOTA1,2,3,4 AND P. VÁN2,3,4
+
+with Υ1 = M∗ /L denoting the fitted mass-luminosity ratio and ρd was selected to be the
+mean of the array ρj :
+(48)                                   ρd = mean(ρj ),
+                                                ρj
+(49)                                   ρ̃j =           .
+                                             mean(ρj )
+
+     For comparison, we show a dark matter and a MOND modelling parametrisation.
+The dark matter model with DC14 density profile and with flat prior is used, from the
+work of Li et al. [35, 36]. This model has the density profile
+                                                  ρs
+(50)                        ρDC14 (r) =  γ h     α i(β−γ)/α ,
+                                         r
+                                         rs
+                                               1 + rrs
+
+where ρs is a characteristic volume density, rs is the scale radius; β and γ are the in-
+ner and outer slopes respectively, and α describes the transition between the inner and
+outer regions. The last three paramaters’ value depends on the stellar-to halo mass ratio
+(adopted from [35]), and ultimately, the corresponding dark matter rotation curve is given
+by
+                                  s
+                                    C200 B(a, b + 1, ϵ) + B(a + 1, b, ϵ)
+(51)             vDC14 (r) = v200                                           ,
+                                      x B(a, b + 1, ϵc ) + B(a + 1, b, ϵc )
+                                       (r/rs )α            Cα
+with a = (3−γ)/α, b = (β−3)/α, ϵ = 1+(r/r    s)
+                                               α , ϵc = 1+C α , B(a, b, x) being the incomplete
+                                                          200
+                                                           200
+beta-function and x = rrs . The above formula is obtained after calculating the total mass
+of the DC14 mass distribution inside a given radius r. The C200 and v200 parameters were
+used in their fitting method, and the relate to the fitted physical parameters as
+(52)                         C200 = r200 /rs , v200 = 10C200 rs H0 ,
+with r200 being the virial radius inside of which the average density is 200 times the critical
+                                    3H 2
+density of the Universe (ρcrit = 8πG0 ) and H0 = 73kms−1 Mpc−1 is the Hubble constant.
+For the galactic calculation, the fitted parameters for the flat prior DC14 dark matter
+model are taken from the SPARC website1 from [35, 36]. To obtain the velocity curve
+from the DC14 DM model, the contributions of the SD and HI are added to this:
+                    q
+                        2
+(53)      vDM (r) = vDC14    (r) + (M∗ /L)vrot,SD (r)2 + vrot,HI (r) · abs (vrot,HI (r)).
+
+Regarding MOND, the method and data of Chae et al. are used, [37]. The exact form of
+the interpolating function of MOND is not fixed by the theory itself and some forms work
+better in explaining certain phenomena. Zhao & Famaey [38] found that a simplified form
+of the interpolating function not only provides good fits to the observed rotational curves
+but also the derived mass/luminosity ratios are more compatible with those obtained from
+stellar populations synthesis models. It is also important to remark, that considering the
+observation uncertainties, like with the mass/luminosity ratio, not only the quality of the
+modelling is improved, but also there is no need to deviate from the standard MOND
+acceleration, a0 , contrary to the modelling approach of Wang and Chen [39]. In [37] the
+expected acceleration of a test particle (v 2 /r for circular motion) is given by
+(54)                               g = νeN (y ≡ gN /a0 ) gN ,
+
+1http://astroweb.cwru.edu/SPARC
+  FIELD EQUATION OF THERMODYNAMIC GRAVITY AND GALACTIC ROTATIONAL CURVES 13
+
+with gN as the Newtonian internal gravitational field (from the galactic matter), a0 =
+1.2 · 10−10 ms−2 MOND acceleration scale and νeN being
+                                   s
+                               1      1 2           De (y)      eN CeN
+(55)                  νeN (y) = +        DeN (y) + N       −p               ,
+                               2      4               y          |eN | y
+                p                                                                           p
+where CeN ≡ 1 + |eN |/4, DeN (y) ≡ 1+|eN |/y and the fitted parameter is ẽ ≡ eN / |eN |.
+Here, gN is given as
+                                                 v2
+(56)                                      gN = bar ,
+                                                   r
+with
+                      q
+(57)        vbar (r) = (M∗,disk /L)vrot,SD (r)2 + (Mgas /MHI )vrot,HI (r) · abs (vrot,HI (r))
+ describing the contribution of the stellar disk and the neutral hydrogen. Both the DM
+and MOND EFE methods fit the distance to the galaxy and its inclination, which can be
+summarised as
+                                     2          Dfit 2
+(58)                                vbar,fit =        v ,
+                                               Dobs bar
+                                                   sin iobs
+(59)                               vobs,fit = vobs           ,
+                                                    sin ifit
+                                               Dfit
+(60)                                  rfit =         robs
+                                              Dobs
+with vobs denoting the observed rotational velocity of the galaxy and vobs,fit its fit-adjusted
+value. In our method, this gives diminishing return, thus for the better quality of the
+algorithmic fit, we omit these parameters, but note that their uncertainties are important
+to consider when evaluating galactic RC fits.
+
+3.2. Galactic rotational velocity curve of NGC 3198. In this section, the above-
+mentioned method is applied to reproduce the velocity curve of NGC 3198. The parame-
+ters Υ1 and K were fitted using scipy and their presented error is the resulting estimate
+from the fit. The reduced chi-squared value is calculated as the following:
+                                   X (vobs − vf it )2 /σ 2
+                                2                       obs
+(61)                          χν =                          ,
+                                     r
+                                              N −f
+with σobs denoting the uncertainties in the observed velocity curve, N the number of data
+points and N − f the degrees of freedom. In our case, f = 4, as the two ends of the data
+set are used as fixed boundary points and two parameters are fitted. Due to our simpler,
+spherical model, our mass-luminosity ratio is not strictly physical (as a cylindrical model
+is usually preferred), but gives a plausible conversion factor for the fit.
+14                      M. PSZOTA1,2,3,4 AND P. VÁN2,3,4
+
+                                                           NGC 3198
+                                                       DC14 DM model
+                                             log(ρs ) [ρs : M⊙ pc−3 ] −1.46 ± 0.21
+                                                    D [Mpc]           10.47 ± 1.17
+                                                     rs [kpc]          5.77 ± 1.23
+                                                      i [deg]           71.5 ± 3.0
+                                                     M∗ /L             0.40 ± 0.09
+                                                          2
+                                                        χν                 1.26
+                                                           MOND EFE
+                                                         ẽ            0.055+0.012
+                                                                             −0.011
+                                                    D [Mpc]             15.27+1.17
+                                                                              −1.08
+                                                      i [deg]           75.62+2.73
+                                                                              −2.71
+                                                  Mgas /MHI              1.36+0.13
+                                                                             −0.12
+                                                  M∗,disk /L             0.43+0.04
+                                                                             −0.04
+                                                        χ2ν                1.62
+                                                 Thermodynamic gravity
+                                               K [10−5 s2 km−2 ]       3.40 ± 0.04
+                                                     M∗ /L            0.762 ± 0.007
+                                                          2
+                                                        χν                 1.29
+
+     Figure      6. NGC      3198                   Table 1. TG, MOND
+     galaxy, source: Sloan Digital                  EFE and DC14 DM
+     Sky Survey.                                    parameters for galaxy
+                                                    NGC 3198 [37, 35, 36] .
+  FIELD EQUATION OF THERMODYNAMIC GRAVITY AND GALACTIC ROTATIONAL CURVES 15
+
+
+
+
+       Figure 7. Velocity curves from thermodynamic gravity, MOND EFE from
+       Chae et al. [37] and DC14 (flat prior) from [35, 36] dark matter for the NGC
+       3198 galaxy.
+
+
+3.3. Discussion. NGC 3198 is a barred spiral galaxy known for its prototypical flat
+rotation curve, [40, 41, 42]. It was chosen because all three investigated theories provide a
+good fit for the observed velocity data. It is remarkable that first MOND based rotation
+curve fits give acceptable result only with varying MOND acceleration parameters [43,
+39]. However, a more sophisticated modelling methodology considers the observation
+uncertainties and results in a good modelling also with the fixed, universal a0 , as in the
+16                             M. PSZOTA1,2,3,4 AND P. VÁN2,3,4
+
+MOND EFE model of Li et al. [35, 36]. In our work, thermodynamic gravity can very
+similarly match the rotation curves as the DC14 model DM and also as MOND EFE.
+
+      In TG, the K parameter arising from the coupling can naturally vary between galax-
+ies, allowing for a more versatile approach, while still having a strong foundation.
+
+
+3.4. Mass estimation. The DC14 model total halo mass can be estimated as:
+                                     1
+(62)                 M (r) = 4πrs3 ρs [B(a, b + 1, ϵ) + B(a + 1, b, ϵ)] .
+                                     α
+ For the purposes of this estimation, the edge of the galaxy will be considered to be at
+the last observational velocity curve datapoint (rd ). In the case of MDM , the galactic-
+distance-corrected distance is used. Using the insights from eqs. 13 and 16, by considering
+the fitted K parameter for the galaxy, it is possible to estimate the apparent asymptotic
+mass of the galaxy by setting the acceleration inferred from the edge of the galaxy to
+equal to the vacuum solution:
+                               vobserved (rd )2           1
+(63)                                            =               ,
+                                     rd            Krd + Crd2
+                                                             
+                                    1           1
+(64)                          C=                           −K ,
+                                    rd vobserved (rd )2
+                                           vobserved (rd )2   rd
+(65)                          Maa =                         2
+                                                                  .
+                                       1 − Kvobserved (rd ) G
+
+
+     In the case of K = 0, eq. 65 should approximately yield the gravitating mass required
+for the observed velocity for the galaxy and is expected from the total mass inside rd with
+DM included. It can also be used to estimate the mass of the stellar disk (SD) and gas
+(HI) in the case of spherical symmetry, by using their respective velocities in the equation
+(and factoring in our fitted mass-luminosity ratio). Therefore, we can call Maa,K=0 as
+apparent total asymptotic mass of the galaxy. The results are shown in Table 2:
+
+         Galaxy        MSD    MHI    MBM       MDM       MBM +DM      Maa,K=0   Maa
+        NGC 3198       34.1   23.4    57.5      147.5        205.0     227.5    927.8
+
+       Table 2. The mass components and estimates for DC14 DM mass, all
+       values are in the units of 109 M⊙ . MSD is the mass of the stellar components,
+       MHI is the mass of neutral hydrogen, MBM is the total mass of MSD and
+       MHI , MDM is the mass of the DC14 model DM halo up to rd , MBM +DM
+       is the total mass, including baryonic and DM components, and Maa is the
+       apparent asymptotic mass from the thermodynamic theory.
+
+     We can see, that the total baryonic and dark matter mass of NGC 3198, MBM +DM ,
+is smaller than the apparent total mass of TG, but the apparent asymptotic mass with
+the galactic K value, Maa , while differing from the DC14 DM mass, up to rd results in
+the same gravitational effect. The characteristic R spatial distance of the crossover, as
+pictured on Fig. 4 and detailed in [24] can be obtained as
+(66)                                 R = KGMaa,K=0 ,
+according to eq. 17.
+  FIELD EQUATION OF THERMODYNAMIC GRAVITY AND GALACTIC ROTATIONAL CURVES 17
+
+     Using the Maa,K=0 = 227.5 · 109 M⊙ mass for this scale, the expected characteristic
+crossover distance of this galaxy is R ≈ 33.3 kpc. That is a crude estimate for distance
+where the flat velocity curve is expected to start declining and tending to a Newtonian one,
+which is determined by the vacuum solution of the Poisson equation with the apparent
+total asymptotic mass.
+
+3.5. Conclusions. In this work, the analytical solutions of the nonlinear stationary field
+equation of TG were presented for the gravitational field in the cases of vacuum and
+constant matter density. Using the staggered grid-type discretisation, a numerical relax-
+ation method was developed to solve the dissipative field equation for arbitrary spherically
+symmetric mass distribution. The stationary solution was obtained in the limit of the
+relaxation. The rotational velocity curve was calculated for galaxy NGC 3198 from the
+SPARC dataset, with only the baryonic matter contributing to the matter density source
+term [34]. The K parameter in the theory investigated by this work arises from the cou-
+pling between the gravitational and mechanical thermodynamic forces and fluxes and,
+thus, naturally varies across the galaxies, depending on their smaller-scale dynamics and
+characteristics.
+
+     Based on the developed numerical method, a next step is to extend the analysis to
+other galaxies of the SPARC sample, with a detailed comparison of the alternative models,
+in particular for Fuzzy DM hydro solutions, similarly to [44] and [6]. It is also natural to
+investigate thermodynamic gravity on the scale of galaxy clusters. It may be the case that
+on much larger scales, the theory has effects similar to Newtonian or general relativistic
+gravity, except the apparent mass is larger due to the thermodynamic coupling, with a
+crossover between the regimes [24].
+
+     The investigation of other challenging observed effects, such as gravitational lensing
+and the description of the fluid mechanics of the intracluster gas in the Bullet Cluster
+(1E 0657-56) are necessary to estimate the feasibility of a novel theory of gravity. In this
+respect, TG seems to be promising because the nonlinear field equation and the strong
+hydrodynamic coupling indicate that the lensing convergence can be non-zero where there
+is no projected matter, contrary to Einsteinian gravity, [45]. Also, the success of self-
+interacting dark matter investigations indicate the modelling potential of hydrodynamic
+approaches, [46]. Naturally, the Bullet Cluster, together with several other cosmological
+observations that have already been studied in the context of DM and MOND, require
+further research. The constitutive character of TG is an advantage when explaining and
+substituting the rich phenomenology of DM with modified gravity, [47].
+
+     For simplicity and analytical comparisons, the numerical method worked with a
+spherically symmetric model of mass distribution, although the baryonic mass of the non-
+elliptical galaxies usually is described by exponential disks with different scale heights
+in the axial z and radial directions. However, the solution of nonlinear field equations
+for nonspherical mass distributions can be mathemathically demanding [48] and certain
+physical considerations should be taken into account [49, 50, 51].
+18                                 M. PSZOTA1,2,3,4 AND P. VÁN2,3,4
+
+                                       Acknowledgements
+
+     We would like to thank Professor W. J. G. de Blok for providing us with the THINGS
+data [52]. We would also like to thank S. Abe and R. Trasarti-Battistoni for providing
+insightful remarks regarding the theory. We would like to thank the anonymous referees
+for their constructive and helpful feedback.
+
+     The work was supported by the grants National Research, Development and Inno-
+vation Office – FK134277. The research reported in this paper is part of project no.
+BME-NVA-02, implemented with the support provided by the Ministry of Innovation and
+Technology of Hungary from the National Research, Development and Innovation Fund,
+financed under the TKP2021 funding scheme.
+
+                                        Data Availability
+
+        The data for the galaxy NGC 3198 used in this paper is based on the SPARC sample,
+[34].
+
+
+                                            References
+ [1] G. Bertone and T. M. P. Tait. A new era in the search for dark matter. Nature, 562(7725):51–56,
+     oct 2018.
+ [2] A. J. Krasznahorkay, M. Csatlós, L. Csige, J. Gulyás, A. Krasznahorkay, B. M. Nyakó, I. Rajta,
+     J. Timár, I. Vajda, and N. J. Sas. New anomaly observed in 4 He supports the existence of the
+     hypothetical X17 particle. Phys. Rev. C, 104:044003, Oct 2021.
+ [3] A. Datta, R. Roshan, and A. Sil. Imprint of the Seesaw Mechanism on Feebly Interacting Dark
+     Matter and the Baryon Asymmetry. Phys. Rev. Lett., 127:231801, Dec 2021.
+ [4] B. Famaey and S. S. McGaugh. Modified Newtonian Dynamics (MOND): Observational Phenomenol-
+     ogy and Relativistic Extensions. Living Reviews in Relativity, 15(1), 2012.
+ [5] Harley Katz, Federico Lelli, Stacy S. McGaugh, Arianna Di Cintio, Chris B. Brook, and James M.
+     Schombert. Testing feedback-modified dark matter haloes with galaxy rotation curves: estimation
+     of halo parameters and consistency with ΛCDM scaling relations. Monthly Notices of the Royal
+     Astronomical Society, 466(2):1648–1668, 12 2016.
+ [6] Mariia Khelashvili, Anton Rudakovskyi, and Sabine Hossenfelder. SPARC galaxies prefer Dark Mat-
+     ter over MOND, 2024.
+ [7] F. Lelli, S. S. McGaugh, J. M. Schombert, and M. S. Pawlowski. One Law to Rule Them All: The
+     Radial Acceleration Relation of Galaxies. The Astrophysical Journal, 836(2):152, feb 2017.
+ [8] P. Li, F. Lelli, S. McGaugh, and J. Schombert. Fitting the radial acceleration relation to individual
+     SPARC galaxies. Astronomy & Astrophysics, 615:A3, 2018.
+ [9] James S. Bullock and Michael Boylan-Kolchin. Small-Scale Challenges to the ΛCDM Paradigm.
+     Annual Review of Astronomy and Astrophysics, 55(1):343–387, 2017.
+[10] P. Boldrini. The cusp–core problem in gas-poor dwarf spheroidal galaxies. Galaxies, 10(01):5, 2021.
+[11] L. Berezhiani and J. Khoury. Theory of dark matter superfluidity. Physical Review D, 92(10):103510,
+     2015.
+[12] S. Hossenfelder. Covariant version of Verlinde’s emergent gravity. Phys. Rev. D, 95:124018, Jun 2017.
+[13] Horst Foidl, Tanja Rindler-Daller, and Werner W. Zeilinger. Halo formation and evolution in scalar
+     field dark matter and cold dark matter: New insights from the fluid approach. Phys. Rev. D,
+     108:043012, Aug 2023.
+[14] Mina, Mattia, Mota, David F., and Winther, Hans A. Solitons in the dark: First approach to
+     non-linear structure formation with fuzzy dark matter. A&A, 662:A29, 2022.
+[15] K.G. Zloshchastiev. Galaxy rotation curves in superfluid vacuum theory. Pramana, 97(1):2, 2022.
+[16] T. C. Scott. From Modified Newtonian Dynamics to superfluid vacuum theory. Entropy, 25(1):12,
+     2022.
+[17] A. Maeder and V. G. Gueorguiev. The scale-invariant vacuum (SIV) theory: A possible origin of
+     dark matter and dark energy. Universe, 6(3):46, 2020.
+   FIELD EQUATION OF THERMODYNAMIC GRAVITY AND GALACTIC ROTATIONAL CURVES 19
+
+[18] J. Bekenstein and M. Milgrom. Does the missing mass problem signal the breakdown of Newtonian
+     gravity? The Astrophysical Journal, 286:7–14, November 1984.
+[19] P. Kroupa, B. Famaey, K. S. de Boer, J. Dabringhausen, M. S. Pawlowski, C. M. Boily, H. Jerjen,
+     D. Forbes, G. Hensler, and M. Metz. Local-Group tests of dark-matter concordance cosmology -
+     Towards a new paradigm for structure formation. A&A, 523:A32, 2010.
+[20] S. Dodelson. The real problem with MOND. International Journal of Modern Physics D,
+     20(14):2749–2753, 2011.
+[21] E. P. Verlinde. Emergent Gravity and the Dark Universe. SciPost Phys., 2:016, 2017.
+[22] S. Hossenfelder. Covariant version of verlinde’s emergent gravity. Physical Review D, 95(12):124018,
+     2017.
+[23] P. Ván and S. Abe. Emergence of extended Newtonian gravity from thermodynamics. Physica A:
+     Statistical Mechanics and its Applications, 588:126505, 2022.
+[24] S. Abe and P. Ván. Crossover in Extended Newtonian Gravity Emerging from Thermodynamics.
+     Symmetry, 14(5), 2022.
+[25] P. Ván. Holographic fluids: a thermodynamic road to quantum physics. Physics of Fluids,
+     35(5):057105, 2023. arXiv:2301.07177v2.
+[26] Pierre-Henri Chavanis. New logotropic model based on a complex scalar field with a logarithmic
+     potential. Phys. Rev. D, 106:063525, Sep 2022.
+[27] D. Giulini. Consistently implementing the field self-energy in Newtonian gravity. Physics Letters A,
+     232(3-4):165–170, 1997.
+[28] C. Sivaram, A. Kenath, and L. Rebecca. MOND, MONG, MORG as alternatives to dark matter
+     and dark energy, and consequences for cosmic structures. Journal of Astrophysics and Astronomy,
+     41(1), February 2020.
+[29] L. Rebecca, A. Kenath, and C. Sivaram. Baryonic matter abundance in the framework of mong.
+     Physical Sciences Forum, 7(1), 2023.
+[30] L. Diósi. Note on possible emergence time of Newtonian gravity. Physics Letters A, 377(31):1782 –
+     1783, 2013.
+[31] Kovács R. és Józsa V. Bevezetés a numerikus módszerekbe. Akadémiai Kiadó, 2019.
+[32] Á. Rieth, R. Kovács, and T. Fülöp. Implicit numerical schemes for generalized heat conduction
+     equations. International Journal of Heat and Mass Transfer, 126:1177–1182, 2018.
+[33] Á. Pozsár, M. Szücs, R. Kovács, and T. Fülöp. Four spacetime dimensional simulation of rheological
+     waves in solids and the merits of thermodynamics. Entropy, 22(12):1376, 2020.
+[34] Federico Lelli, Stacy S. McGaugh, and James M. Schombert. Sparc: Mass models for 175 disk galaxies
+     with spitzer photometry and accurate rotation curves. The Astronomical Journal, 152(6):157, nov
+     2016.
+[35] Pengfei Li, F. Lelli, S. S. McGaugh, N. Starkman, and J. M. Schombert. A constant characteristic
+     volume density of dark matter haloes from SPARC rotation curve fits. Monthly Notices of the Royal
+     Astronomical Society, 482(4):5106–5124, 2019.
+[36] Pengfei Li, Federico Lelli, Stacy McGaugh, and James Schombert. A Comprehensive Catalog of Dark
+     Matter Halo Models for SPARC Galaxies. The Astrophysical Journal Supplement Series, 247(1):31,
+     mar 2020.
+[37] Kyu-Hyun Chae, Harry Desmond, Federico Lelli, Stacy S. McGaugh, and James M. Schombert.
+     Testing the Strong Equivalence Principle. II. Relating the External Field Effect in Galaxy Rotation
+     Curves to the Large-scale Structure of the Universe. The Astrophysical Journal, 921(2):104, nov
+     2021.
+[38] H. S. Zhao and B. Famaey. Refining the MOND Interpolating Function and TeVeS Lagrangian. The
+     Astrophysical Journal, 638(1):L9, jan 2006.
+[39] Lin Wang and Da-Ming Chen. Comparison of modeling SPARC spiral galaxies’ rotation curves: halo
+     models vs. MOND. Research in Astronomy and Astrophysics, 21(11):271, dec 2021.
+[40] T. S. van Albada, J. N. Bahcall, K. Begeman, and R. Sancisi. Distribution of dark matter in the
+     spiral galaxy NGC 3198. The Astrophysical Journal, 295:305, August 1985.
+[41] E.V. Karukes, P. Salucci, and G. Gentile. The dark matter distribution in the spiral NGC 3198 out
+     to 0.22 Rvir. Astronomy & Astrophysics, 578:A13, 2015.
+[42] G. Gentile, G.I.G. Józsa, P. Serra, G.H. Heald, W.J.G. de Blok, F. Fraternali, M.T. Patterson,
+     R.A.M. Walterbos, and T. Oosterloo. HALOGAS: Extraplanar gas in NGC 3198. Astronomy &
+     Astrophysics, 554:A125, 2013.
+[43] T. H. Randriamampandry and C. Carignan. Galaxy mass models: MOND versus dark matter haloes.
+     Monthly Notices of the Royal Astronomical Society, 439(2):2132–2145, 2014.
+20                                 M. PSZOTA1,2,3,4 AND P. VÁN2,3,4
+
+[44] Kyu-Hyun Chae. Distinguishing dark matter, modified gravity, and modified inertia with the inner
+     and outer parts of galactic rotation curves. The Astrophysical Journal, 941(1):55, dec 2022.
+[45] G. W. Angus, B. Famaey, and HongSheng Zhao. Can MOND take a bullet? Analytical comparisons
+     of three versions of MOND beyond spherical symmetry. Monthly Notices of the Royal Astronomical
+     Society, 371(1):138–146, 2006.
+[46] Andrew Robertson, Richard Massey, and Vincent Eke. What does the Bullet Cluster tell us about
+     self-interacting dark matter? Monthly Notices of the Royal Astronomical Society, 465(1):569–587,
+     10 2016.
+[47] P. Salucci. The distribution of dark matter in galaxies. The Astronomy and Astrophysics Review,
+     27(1), February 2019.
+[48] Kyu-Hyun Chae and Mordehai Milgrom. Numerical Solutions of the External Field Effect on the
+     Radial Acceleration in Disk Galaxies. The Astrophysical Journal, 928(1):24, mar 2022.
+[49] D. Giordano, P. Amodio, F. Iavernaro, A. Labianca, M. Lazzo, F. Mazzia, and L. Pisani. Fluid statics
+     of a self-gravitating perfect-gas isothermal sphere. European Journal of Mechanics - B/Fluids, 78:62–
+     87, 2019.
+[50] P.-H. Chavanis. The self-gravitating Fermi gas in Newtonian gravity and general relativity, 2021.
+[51] Domenico Giordano, Pierluigi Amodio, Felice Iavernaro, Francesca Mazzia, Péter Ván, and Má-
+     tyás Szücs. Fluid statics of a self-gravitating isothermal sphere of van der Waals’ gas, 2024.
+     arXiv:2311.12150, to be published in Physics of Fluids.
+[52] W. J. G. de Blok, F. Walter, E. Brinks, C. Trachternach, S-H. Oh, and R. C. Kennicutt. High-
+     Resolution Rotation Curves and Galaxy Mass Models from THINGS. The Astronomical Journal,
+     136(6):2648–2719, 2008.
+
+
+     1
+      Eötvös Loránd University, Budapest, 2 Department of Theoretical Physics, Wigner
+Research Centre for Physics, H-1525 Budapest, Konkoly Thege Miklós u. 29-33., Hun-
+gary;, 3 Department of Energy Engineering, Faculty of Mechanical Engineering, Bu-
+dapest University of Technology and Economics, H-1111 Budapest, Műegyetem rkp. 3.,
+Hungary, 4 Montavid Thermodynamic Research Group, Budapest
+

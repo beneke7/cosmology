@@ -1,0 +1,232 @@
+{
+  "status": "exploratory_screen",
+  "utc": "2026-09-23T20:51:26.363670+00:00",
+  "scope": "13-row compressed DESI DR2 BAO only; free c/(H0 rd), flat late-time background, no radiation in fit; no posterior/evidence/significance claim",
+  "data_sha256": {
+    "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+  },
+  "code_sha256": {
+    "/workspace/scratch/217815644111/cosmology_autoresearch/scripts/run_seed_screen.py": "8eafbaad87fd87f48363fb0ac1914ffe7ab30d1693f672b5414442597cf440fb",
+    "/workspace/scratch/217815644111/cosmology_autoresearch/scripts/background_bao.py": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2"
+  },
+  "mean_row_order": [
+    {
+      "z": 0.295,
+      "observable": "DV_over_rs"
+    },
+    {
+      "z": 0.51,
+      "observable": "DM_over_rs"
+    },
+    {
+      "z": 0.51,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 0.706,
+      "observable": "DM_over_rs"
+    },
+    {
+      "z": 0.706,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 0.934,
+      "observable": "DM_over_rs"
+    },
+    {
+      "z": 0.934,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 1.321,
+      "observable": "DM_over_rs"
+    },
+    {
+      "z": 1.321,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 1.484,
+      "observable": "DM_over_rs"
+    },
+    {
+      "z": 1.484,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 2.33,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 2.33,
+      "observable": "DM_over_rs"
+    }
+  ],
+  "models": [
+    {
+      "model": "lcdm",
+      "alpha": 29.524633343012315,
+      "Omega_m": 0.2974618192059638,
+      "w0": -1.0,
+      "wa": 0.0,
+      "chi2": 10.271041002565596,
+      "n_data": 13,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameter_bound_hits": [],
+      "parameter_bounds": [
+        [
+          1e-06,
+          10000.0
+        ],
+        [
+          0.05,
+          0.6
+        ]
+      ],
+      "starts": 16,
+      "optimizer_seed": 20260923,
+      "independent_max_prediction_difference": 2.1316282072803006e-14,
+      "independent_chi2": 10.271041002565537,
+      "prediction": [
+        7.902458332354828,
+        13.256725998630744,
+        22.46870276252037,
+        17.41429961362884,
+        19.99891345575446,
+        21.679018412670604,
+        17.475607263920303,
+        27.745066572553775,
+        14.040578684162153,
+        29.936394113730127,
+        12.87125929938167,
+        8.636543627801768,
+        38.852238001292804
+      ],
+      "radiation_sensitivity": {
+        "Omega_r": 9e-05,
+        "refitted": false,
+        "assumption": "constant present-day radiation parameter, flatness restored by reducing Omega_de; illustrative only",
+        "delta_chi2_at_fixed_parameters": 0.01727754093982803,
+        "max_shift_over_marginal_measurement_sigma": 0.04010498563881537
+      }
+    },
+    {
+      "model": "wcdm",
+      "alpha": 30.054107965185743,
+      "Omega_m": 0.29769347747539937,
+      "w0": -0.911899089896181,
+      "wa": 0.0,
+      "chi2": 9.041046606437503,
+      "n_data": 13,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameter_bound_hits": [],
+      "parameter_bounds": [
+        [
+          1e-06,
+          10000.0
+        ],
+        [
+          0.05,
+          0.6
+        ],
+        [
+          -2.0,
+          -0.3
+        ]
+      ],
+      "starts": 16,
+      "optimizer_seed": 20260923,
+      "independent_max_prediction_difference": 2.1316282072803006e-14,
+      "independent_chi2": 9.04104660643749,
+      "prediction": [
+        7.941033988328355,
+        13.3014039712405,
+        22.3509711708376,
+        17.43431014018143,
+        19.873745767652327,
+        21.673690248376094,
+        17.38210431012286,
+        27.71675528753006,
+        14.013541872137807,
+        29.905568592477078,
+        12.866732939622656,
+        8.691160218886258,
+        38.848275446474986
+      ],
+      "radiation_sensitivity": {
+        "Omega_r": 9e-05,
+        "refitted": false,
+        "assumption": "constant present-day radiation parameter, flatness restored by reducing Omega_de; illustrative only",
+        "delta_chi2_at_fixed_parameters": -0.004102772736981564,
+        "max_shift_over_marginal_measurement_sigma": 0.03932294299558938
+      }
+    },
+    {
+      "model": "cpl",
+      "alpha": 32.40031241749559,
+      "Omega_m": 0.3739510688144882,
+      "w0": -0.3,
+      "wa": -2.303342291623181,
+      "chi2": 5.700615936324129,
+      "n_data": 13,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "parameter_bound_hits": [
+        {
+          "parameter": "w0",
+          "side": "upper",
+          "bound": -0.3
+        }
+      ],
+      "parameter_bounds": [
+        [
+          1e-06,
+          10000.0
+        ],
+        [
+          0.05,
+          0.6
+        ],
+        [
+          -2.0,
+          -0.3
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "starts": 16,
+      "optimizer_seed": 20260923,
+      "independent_max_prediction_difference": 2.842170943040401e-14,
+      "independent_chi2": 5.700615936324197,
+      "prediction": [
+        7.97830778445084,
+        13.331346438706026,
+        21.957781452546406,
+        17.41280018120347,
+        19.74132640160316,
+        21.64894077114335,
+        17.46130244895317,
+        27.745273263389297,
+        14.16434684189316,
+        29.956758038626333,
+        12.991425561245496,
+        8.643829132956585,
+        38.926733170540004
+      ],
+      "radiation_sensitivity": {
+        "Omega_r": 9e-05,
+        "refitted": false,
+        "assumption": "constant present-day radiation parameter, flatness restored by reducing Omega_de; illustrative only",
+        "delta_chi2_at_fixed_parameters": 0.0018285125645682854,
+        "max_shift_over_marginal_measurement_sigma": 0.03355814125084037
+      }
+    }
+  ],
+  "runtime_seconds": 1.6058681169997726
+}

@@ -1,0 +1,8 @@
+name = "theory"
+description = "Check mathematics and construct physically specified simple alternatives."
+model = "gpt-6-luna"
+model_reasoning_effort = "max"
+developer_instructions = """
+Read AGENTS.md and the task-specific parts of BRIEF.md. Respect task ownership and the campaign deadline.
+Independently check chain-rule derivations, signs, units, limits, boundary conditions and stability assumptions. Start from sources, not the proposed conclusion. For TG use the printed convention and reconcile the authors stated analytical sign choice. Distinguish background parameterizations from consistent perturbation theories. Return derivations and independent numerical checks under explicit assumptions.
+"""

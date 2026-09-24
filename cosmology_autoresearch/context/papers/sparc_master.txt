@@ -1,0 +1,1023 @@
+                                                 Draft version September 4, 2024
+                                                 Preprint typeset using LATEX style emulateapj v. 01/23/15
+
+
+
+
+                                                                                 SPARC: MASS MODELS FOR 175 DISK GALAXIES WITH
+                                                                             SPITZER PHOTOMETRY AND ACCURATE ROTATION CURVES.
+                                                                              Federico Lelli1,∗ , Stacy S. McGaugh1 and James M. Schombert2
+                                                                         1 Department of Astronomy, Case Western Reserve University, Cleveland, OH 44106, USA
+                                                                                2 Department of Physics, University of Oregon, Eugene, OR 97403, USA
+
+                                                                                                    Draft version September 4, 2024
+
+                                                                                                        ABSTRACT
+                                                         We introduce SPARC (Spitzer Photometry & Accurate Rotation Curves): a sample of 175 nearby
+arXiv:1606.09251v1 [astro-ph.GA] 29 Jun 2016
+
+
+
+
+                                                         galaxies with new surface photometry at 3.6 µm and high-quality rotation curves from previous H I/Hα
+                                                         studies. SPARC spans a broad range of morphologies (S0 to Irr), luminosities (∼5 dex), and surface
+                                                         brightnesses (∼4 dex). We derive [3.6] surface photometry and study structural relations of stellar
+                                                         and gas disks. We find that both the stellar mass−H I mass relation and the stellar radius−H I radius
+                                                         relation have significant intrinsic scatter, while the H I mass−radius relation is extremely tight.
+                                                         We build detailed mass models and quantify the ratio of baryonic-to-observed velocity (Vbar /Vobs )
+                                                         for different characteristic radii and values of the stellar mass-to-light ratio (Υ? ) at [3.6]. Assuming
+                                                         Υ? ≃ 0.5 M /L (as suggested by stellar population models) we find that (i) the gas fraction linearly
+                                                         correlates with total luminosity, (ii) the transition from star-dominated to gas-dominated galaxies
+                                                         roughly corresponds to the transition from spiral galaxies to dwarf irregulars in line with density
+                                                         wave theory; and (iii) Vbar /Vobs varies with luminosity and surface brightness: high-mass, high-
+                                                         surface-brightness galaxies are nearly maximal, while low-mass, low-surface-brightness galaxies are
+                                                         submaximal. These basic properties are lost for low values of Υ? ≃ 0.2 M /L as suggested by the
+                                                         DiskMass survey. The mean maximum-disk limit in bright galaxies is Υ? ≃ 0.7 M /L at [3.6]. The
+                                                         SPARC data are publicly available and represent an ideal test-bed for models of galaxy formation.
+                                                         Keywords: dark matter — galaxies: structure — galaxies: kinematics and dynamics — galaxies: spiral
+                                                                      — galaxies: irregular — galaxies: dwarf
+
+                                                                      1. INTRODUCTION                                 to uncertainties in the stellar mass-to-light ratio (Υ? ).
+                                                 The study of rotation curves has played a key role in                More generally, this should be called “star-halo degen-
+                                               our understanding of the mass distribution in galaxies                 eracy” because it also applies to bulge-dominated spi-
+                                               (e.g., Rubin et al. 1978; Bosma 1981; van Albada et al.                rals (e.g., Noordermeer 2006) and elliptical galaxies (e.g.,
+                                               1985). Atomic hydrogen (H I) is one of the best kine-                  Oguri et al. 2014). To minimize the star-halo degener-
+                                               matical tracer of the gravitational potential in nearby                acy, the best approach is to use near-infrared (NIR) sur-
+                                               galaxies for two basic reasons:                                        face photometry (K-band or 3.6 µm), which provides the
+                                                                                                                      closest proxy to the stellar mass (e.g., Verheijen 2001).
+                                                  1. H I gas is dynamically cold and follows nearly cir-              Stellar populations synthesis (SPS) models suggest that
+                                                     cular orbits, hence it directly traces the gravita-              Υ? displays much smaller variations in the NIR than in
+                                                     tional potential. The H I velocity dispersion is typ-            optical bands and depends weakly on the star formation
+                                                     ically of ∼10 km s−1 , so pressure support becomes               history of the galaxy. Several models actually predict
+                                                     significant only in very low-mass galaxies with ro-              that Υ? is nearly constant in the NIR over a broad range
+                                                     tation velocities of ∼20 km s−1 (e.g., Lelli et al.              of galaxy masses and morphologies (e.g., Bell & de Jong
+                                                     2012b). Strong assumptions about the velocity ten-               2001; Portinari et al. 2004; Meidt et al. 2014; Schombert
+                                                     sor, which are necessary in studies of stellar kine-             & McGaugh 2014a; McGaugh & Schombert 2014). The
+                                                     matics, are not required in H I studies.                         overall normalization of Υ? , however, is still uncertain
+                                                                                                                      up to a factor of ∼3 due to differences in the SPS models
+                                                  2. H I gas is diffuse and extends well beyond the                   (such as the treatment of asymptotic-giant-branch stars)
+                                                     galaxy stellar component, hence the gravitational                and in the assumed stellar initial mass function (IMF).
+                                                     potential can be traced up to several effective radii,           These issues are described in detail in Sect. 5.1.
+                                                     where dark matter (DM) is expected to dominate.                    To advance our understanding of the mass distribution
+                                               Studies of H I rotation curves, however, have been histor-             in galaxies, we have built SPARC (Spitzer Photometry
+                                               ically limited to small galaxy samples because they are                and Accurate Rotation Curves): a sample of 175 galaxies
+                                               significantly time costly: they require interferometric H I            with new surface photometry at 3.6 µm and extended H I
+                                               observations and careful modelling of 3D datasets.                     rotation curves from the literature. For ∼1/3 of SPARC
+                                                 The mass modelling of galaxies is generally plagued                  galaxies, we also have Hα rotation curves from long-slit
+                                               by the “disk-halo degeneracy” (van Albada et al. 1985):                spectroscopy, integral field units (IFUs), and Fabry-Perot
+                                               the relative contributions of stellar disk and DM halo to              interferometry, probing the inner regions at high spatial
+                                               the observed rotation curve are strongly degenerate due                resolutions. Contrary to previous samples, SPARC spans
+                                                                                                                      very broad ranges in luminosity, surface brightness, rota-
+                                                 ∗ federico.lelli@case.edu
+                                                                                                                      tion velocity, and Hubble type, forming a representative
+2
+
+                                                               Table 1
+                                                            Galaxy Sample
+
+Name      T        D        Met.    i         L[3.6]    Reff      Σeff      Rd         Σd         MH I     RH I        Vf     Q Ref.
+                 (Mpc)            (◦ )      (109 L )   (kpc) (L pc−2 ) (kpc) (L pc−2 ) (109 M ) (kpc) (km s−1 )
+ (1)      (2)     (3)        (4)   (5)         (6)       (7)      (8)       (9)      (10)          (11)    (12)       (13)   (14) (15)
+ CamB 10 3.36±0.26            2  65±5 0.075±0.003 1.21             7.9      0.47      66.2        0.016     ...        ...    2     1
+ D512-2 10 15.20±4.56         1  56±10 0.325±0.022 2.37            9.2      1.24      93.9        0.108     ...        ...    3     2
+ D564-8 10 8.79±0.28          2  63±7 0.033±0.004 0.72            10.1      0.45     30.8         0.039     ...        ...     3    2
+ D631-7 10 7.72±0.18          2  59±3 0.196±0.009 1.22            20.9      0.70     115.0        0.385     ...    57.7±2.7    1   2, 3
+  Note. — Table 1 is published in its entirety in a machine readable format. A portion is shown here for guidance regarding its form and
+content. References for H I and Hα data: (1) Begum et al. (2003); (2) Trachternach et al. (2009); (3) de Blok et al. (2001).
+
+
+sample of disk galaxies in the nearby Universe. To date,              Column (3) gives the assumed distance (see Sect. 2.2).
+this is the largest collection of galaxies with both high-            Column (4) gives the distance method: 1 = Hubble flow,
+quality rotation curves and NIR surface photometry.                   2 = Tip of the red giant branch, 3 = Cepheids, 4 = Ursa
+  The SPARC data will be explored in a series of papers               Major cluster of galaxies, 5 = Supernovae.
+and are available on-line at http://astroweb.cwru.                    Column (5) gives the assumed inclination angle (i).
+edu/SPARC. Preliminary SPARC data have already been                   Column (6) gives the total luminosity at 3.6 µm (L[3.6] ).
+used in several publications: (i) Lelli et al. (2016) study           Column (7) gives the effective radius (Reff ) encompass-
+the baryonic Tully-Fisher relation (BTFR); (ii) Di Cin-               ing half of the total luminosity.
+tio & Lelli (2016) investigate the mass discrepancy-                  Column (8) gives the effective surface brightness (Σeff ).
+acceleration relation in a ΛCDM context; and (iii) Katz               Column (9) gives the scale length of the stellar disk (Rd ).
+et al. (2016) fit different DM halo profiles to the SPARC             Column (10) gives the extrapolated central surface
+rotation curves. In this paper, we present the galaxy                 brightness of the stellar disk (Σd ).
+sample (Sect. 2), derive surface photometry at 3.6 µm                 Column (11) gives the total H I mass (MH I ).
+(Sect. 3.1), describe the collection of H I/Hα rotation               Column (12) gives the H I radius (RH I ) where the H I
+curves (Sect. 3.2), build mass models (Sect.3.3), study               surface density (corrected to face-on) reaches 1 M pc−2 .
+stellar and H I scaling relations (Sect. 4), and finally in-          Column (13) gives the velocity along the flat part of the
+vestigate gas fractions (Sect. 5.2) and the degree of bary-           rotation curve (Vf ) derived as in Lelli et al. (2016).
+onic maximality (Sect. 5.3) for different values of Υ? .              Column (14) gives the rotation-curve quality flag (Q):
+                    2. GALAXY SAMPLE                                  1 = high, 2 = medium, 3 = low. See Sect. 3.2 for details.
+                                                                      Column (15) gives the reference for the H I data.
+   We collected more than 200 extended H I rotation                      Inclination angles are typically derived by fitting a
+curves from previous compilations, large surveys, and                 tilted-ring model to the H I velocity fields (Begeman
+individual studies (see Sect. 3.2 for details). This kine-            1987) and considering systematic variations with radius
+matic dataset is the result of ∼30 years of interfero-                (warps): column 5 provides the mean value of i in the
+metric H I observations using the Westerbork Synthe-                  outer parts of the H I disk. In some cases, H I velocity
+sis Radio Telescope (WSRT), Very Large Array (VLA),                   fields are not adequate to properly trace the run of i with
+Australia Telescope Compact Array (ATCA), and Giant                   radius, hence the inclination is fixed to the optical value
+Metrewave Radio Telescope (GMRT). Subsequently, we                    (e.g., de Blok et al. 1996). The derivation of photometric
+searched the Spitzer archive and found useful [3.6] im-               properties (columns 6 to 10) is described in Sect. 3.1.
+ages for 175 galaxies. Most of these objects are part
+of the Spitzer Survey for Stellar Structure in Galaxies                                  2.1. General Properties
+(S4 G, Sheth et al. 2010). We also used [3.6] images from               The overall properties of SPARC galaxies are shown
+Schombert & McGaugh (2014b) for low surface bright-                   with histograms in Figure 1. SPARC spans a broad range
+ness (LSB) galaxies, which are usually under-represented              in morphologies (S0 to Im/BCD), luminosities (∼107
+in optical catalogues with respect to high surface bright-
+ness (HSB) spirals (e.g., McGaugh et al. 1995a). SPARC                to ∼1012 L ), effective radii (∼0.3 to ∼15 kpc), effec-
+is not a statistically complete or volume-limited sample,             tive surface brightnesses (∼5 to ∼5000 L pc−2 ), ro-
+but it forms a representative sample of disk galaxies in              tation velocities (∼20 to ∼300 km s−2 ), and gas con-
+the nearby Universe spanning the widest possible range                tent (0.01 . MH I /L[3.6] . 10). Galaxies with 1010 <
+of properties for galaxies with extended rotation curves.             L[3.6] /L < 1010.5 are slightly under-represented (in
+   Table 1 lists the main properties of SPARC galaxies.               a volume-weighted sense): apparently H I studies have
+Column (1) gives the galaxy name.                                     tended to focus on bright spirals and dwarf galaxies.
+Column (2) gives the numerical Hubble type from de                    As expected, SPARC does not contain galaxies with
+Vaucouleurs et al. (1991), Schombert et al. (1992), or                L[3.6] > 1012 L which typically are gas-poor ellipti-
+NED1 adopting the following scheme: 0 = S0, 1 = Sa,                   cals in clusters, nor galaxies with L[3.6] < 107 L for
+2 = Sab, 3 = Sb, 4 = Sbc, 5 = Sc, 6 = Scd, 7 = Sd,                    which our knowledge is restricted to gas-poor spheroidals
+8 = Sdm, 9 = Sm, 10 = Im, 11 = BCD.                                   around the Milky Way and M31.
+  1 The NASA/IPAC Extragalactic Database (NED) is operated              Most galaxies in SPARC have late Hubble types (9 to
+by the Jet Propulsion Laboratory, California Institute of Tech-       10), corresponding to Sm and Im galaxies. This hap-
+nology, under contract with the National Aeronautics and Space        pens because the Hubble classification is intrinsically bi-
+Administration.                                                       ased towards HSB features and assign most LSB galaxies
+                                                                                                                                                                                                                     3
+
+                      50                                                50                                                         50                                               50
+                                           (1)                                                      (2)                                                  (3)                                               (4)
+ Number of galaxies
+
+
+
+
+                                                   Number of galaxies
+
+
+
+
+                                                                                                              Number of galaxies
+
+
+
+
+                                                                                                                                                               Number of galaxies
+                      40                                                40                                                         40                                               40
+                      30                                                30                                                         30                                               30
+                      20                                                20                                                         20                                               20
+                      10                                                10                                                         10                                               10
+                       0                                                 0                                                          0                                                0
+                           0 2 4 6 8 10                                      7 8 9 10 11 12                                             0.5 0.0 0.5 1.0                                    1     2     3         4
+                             Hubble Type                                         log(L[3.6]/L ¯ )                                        log(Reff/kpc)                                   log(Σeff/L ¯ pc−2 )
+                      50                                                50                                                         50                                               50
+                                           (5)                                                      (6)                                                  (7)                                               (8)
+ Number of galaxies
+
+
+
+
+                                                   Number of galaxies
+
+
+
+
+                                                                                                              Number of galaxies
+
+
+
+
+                                                                                                                                                               Number of galaxies
+                      40                                                40                                                         40                                               40
+                      30                                                30                                                         30                                               30
+                      20                                                20                                                         20                                               20
+                      10                                                10                                                         10                                               10
+                       0                                                 0                                                          0                                                0
+                        0 50 100 150 200 250 300                             2       1      0             1                          0 2 4 6 8 10 12 14                              0.0 0.5 1.0 1.5 2.0 2.5
+                                     −1
+                             Vf (km s )                                          log(MHI/L[3.6])                                           RHI/Reff                                         log(D/Mpc)
+Figure 1. Overall properties of SPARC galaxies: (1) numerical Hubble type; (2) total [3.6] luminosity; (3) effective [3.6] surface brightness;
+(4) effective radius; (5) velocity along the flat part of the rotation curve; we assign Vf = 0 to rotation curves that do not reach a flat part
+within ∼5% (grey bin); (6) ratio of H I mass to [3.6] luminosity; (7) ratio of H I radius to effective radius; (8) assumed distance.
+
+within these two latest stages (McGaugh et al. 1995b).                                                                                            2.2. Galaxy Distances
+Currently, the SPARC dataset contains only three lentic-                                                                       The galaxies in SPARC can be classified in three main
+ulars because early-type galaxies generally lack a high-                                                                    groups depending on the distance estimate.
+density H I disk and have been historically neglected by                                                                       I. Accurate Distances: 50 objects have distances from
+interferometric H I studies. Recent surveys, however,                                                                       the tip of the red giant branch (45), Cepheids (3), or su-
+show that several early-type galaxies in the group and                                                                      pernovae (2). These distances have errors ranging from
+field environments possess an outer low-density H I disk                                                                    ∼5% to ∼10% and are generally on the same zero-point
+(Serra et al. 2012), which can be used for kinematic in-                                                                    scale (see discussion in Tully et al. 2013). The vast ma-
+vestigations (den Heijer et al. 2015).                                                                                      jority of these distances are drawn from the Extragalactic
+   The ratio RH I /Reff varies from ∼1 to ∼14 (Panel 8                                                                      Distance Database (Jacobs et al. 2009; Tully et al. 2013).
+of Fig. 1). Clearly, H I rotation curve probes the gravi-                                                                      II. Ursa Major : 28 objects lie in the Ursa Major clus-
+tational potential out to much larger radii than existing                                                                   ter (Verheijen & Sancisi 2001), which has an average dis-
+IFU surveys like CALIFA (Garcı́a-Lorenzo et al. 2015) or                                                                    tance of 18 ± 0.9 Mpc (Sorce et al. 2013b). This ex-
+MANGA (Bundy et al. 2015). Historically, the relative                                                                       plains the peak at log(D/Mpc) ≃ 1.25 in panel 10 of
+extent of H I-to-stellar disks has been measured using ei-                                                                  Fig. 1. The Ursa Major cluster has an estimated depth
+ther RH I /R25 where R25 is the B-band isophotal radius
+at 25 mag arcsec−2 (Broeils & Rhee 1997; Noordermeer                                                                        p ∼2.3 Mpc (Verheijen 2001), hence we adopt an error of
+                                                                                                                            of
+                                                                                                                               (2.32 + 0.92 ) = 2.5 Mpc for individual galaxies. Two
+et al. 2005), or RH I /R? where R? = 3.2Rd (Swaters
+                                                                                                                            galaxies from Verheijen (2001) are considered as back-
+et al. 2009; Lelli et al. 2014). The latter definition al-
+                                                                                                                            ground/foreground objects: NGC 3992 having D ≃ 24
+lows comparing stellar disks with different central surface
+                                                                                                                            Mpc from a Type-Ia supernova (Parodi et al. 2000), and
+brightnesses: a pure exponential disk with Σd = 21.5 B
+                                                                                                                            UGC 6446 laying near the cluster boundary in both space
+mag arcsec−2 (Freeman 1970) has R? = R25 . We find
+                                                                                                                            and velocity (D ≃ 12 Mpc from the Hubble flow).
+hRH I /R? i = 1.9 ± 1.0 with a median value of 1.7. This
+                                                                                                                               III. Hubble Flow : 97 objects have Hubble-flow dis-
+is in line with previous estimates of hRH I /R? i for dif-
+                                                                                                                            tances corrected for Virgocentric infall (taken from
+ferent galaxy types: 1.7 ± 0.7 (Noordermeer et al. 2005)
+for early-type galaxies (S0 to Sab), 1.7 ± 0.5 (Broeils                                                                     NED). We assume H0 = 73 km s−1 Mpc−1 , giving dis-
+& Rhee 1997) for spiral galaxies (mostly Sb to Scd),                                                                        tances on a similar zero-point scale as those in groups I
+1.8 ± 0.8 (Swaters et al. 2009) for late-type dwarfs (Sd to                                                                 and II (e.g., Tully et al. 2013). Hubble-flow distances are
+Im), and 1.7 ± 0.5 (Lelli et al. 2014) for starburst dwarfs                                                                 very uncertain for nearby galaxies where peculiar veloc-
+(Im and BCD). Martinsson et al. (2016), however, find                                                                       ities may strongly contribute to the systemic velocities,
+RH I /R25 = 1.35 ± 0.22 for 28 late-type spirals. We note                                                                   but become more accurate for distant objects. We adopt
+that SPARC galaxies are representative of the disk popu-                                                                    the following error scheme: 30% for D ≤ 20 Mpc; 25%
+lation in the field, nearby groups, and diffuse clusters like                                                               for 20 < D ≤ 40 Mpc; 20% for 40 < D ≤ 60 Mpc;
+Ursa Major (Tully & Verheijen 1997). Galaxies in dense                                                                      15% for 60 < D ≤ 80 Mpc; and 10% for D > 80 Mpc.
+clusters like Virgo may show smaller values of RH I /R?                                                                     This scheme considers that peculiar velocities can be as
+due to gas stripping (e.g., Chung et al. 2009).                                                                             high as ∼500 km s−1 and H0 has an uncertainty of ∼7%.
+4
+
+Lelli et al. (2016) show that the intrinsic scatter in the    estimated by recalculating the total magnitudes using a
+BTFR for galaxies in groups I+II is similar to that for       1σ variation in the sky value. Total luminosities assume
+the entire sample, indicating that the assumed errors on      a solar absolute magnitude of 3.24 at 3.6 µm (Oh et al.
+Hubble-flow distances are realistic.                          2008). We also calculated the effective radius (Reff ), i.e.
+                                                              the radius encompassing half of the total luminosity, and
+           3. DATA COLLECTION & ANALYSIS                      the effective surface brightness (Σeff ), i.e. the average
+                                                              surface brightness within Reff .
+                3.1. Surface Photometry                         To estimate the disk scale length (Rd ) and central sur-
+   For the 175 galaxies in SPARC, we derived homo-            face brightness (µd ), we fitted exponential functions to
+geneous surface photometry at 3.6 µm following the            the outer parts of the surface brightness profiles. We
+procedures of Schombert & McGaugh (2014b). The                stress that the results depend on the fitted radial range,
+frames were flat-fielded and calibrated using the stan-       which may be ambiguous for galaxies with outer down-
+dard Spitzer pipeline. Subsequently, they were interac-       bending (type II) or up-bending (type III) profiles (cf.
+tively cleaned by masking bright contaminating sources,       Erwin et al. 2008). For most low-mass and LSB galaxies,
+like foreground stars and background galaxies. This is        exponential functions provide a good description of the
+a crucial step because [3.6] images contain nearly 10         surface brightness profiles over a broad radial range but
+times more point sources than similar exposures in op-        several galaxies show light enanchements/depressions in
+tical bands. Masked pixels were subsequently replaced         the inner parts (similar to optical bands, e.g., Swaters &
+with the local mean isophotal value for aperture lumi-        Balcells 2002; Schombert et al. 2011). As expected, the
+nosity determination.                                         vast majority of spiral galaxies show deviations from ex-
+   The cleaned frames were analysed using the Archangel       ponential profiles in the inner parts due to bulges, bars,
+software (Schombert 2011). The absolute sky value and         and lenses. All surface brightness profiles are available
+its error were estimated using multiple sky-boxes, i.e. re-   for download at http://astroweb.cwru.edu/SPARC.
+gions in the frame that are free of background/foreground
+objects. The standard Spitzer pipeline provides a formal                         3.2. Rotation Curves
+zero-point error smaller than 2%, but a more realistic          The majority (∼75%) of SPARC rotation curves are
+photometric error should also consider the sky bright-        the result of Ph.D. theses from the University of Gronin-
+ness error, which dominates all other sources of uncer-       gen (Begeman 1987; Broeils 1992; de Blok 1997; Verhei-
+tainty in the surface photometry and aperture magni-          jen 1997; Swaters 1999; Noordermeer 2006; Lelli 2013).
+tudes (Schombert & McGaugh 2014b). The mean error             They were derived using similar techniques and software,
+on sky brightness is ∼3%.                                     forming a relatively homogeneous dataset. These 175 ro-
+   To derive azimuthally averaged surface brighntess pro-     tation curves are drawn from the following publications
+files, we fitted ellipses to the frames using a standard      (in parenthesis we provide the corresponding number of
+Fourier-series least-square algorithm. During the ellipse     objects excluding duplicates): Swaters et al. (2009, 32),
+fitting, pixels with values above 3σ of the mean isophote     Sanders & Verheijen (1998, 30), Sanders (1996, 17), No-
+were automatically masked and replaced with the mean          ordermeer et al. (2007, 12), de Blok et al. (2001, 10),
+value at that radius. These pixels typically corresponds      Begeman et al. (1991, 9), Lelli et al. (2012a,b, 2014, 8),
+to unresolved background/foreground objects, but we vi-       de Blok & Bosma (2002, 7), de Blok et al. (1996, 7),
+sually inspected each frame to ensure that real asym-         Kuzio de Naray et al. (2008, 6), Spekkens & Giovanelli
+metric features in the galaxy (like prominent spiral arms     (2006, 5), Gentile et al. (2004, 2007, 4), van Zee et al.
+or H II regions) were not removed. Most low-mass and          (1997, 4), Côté et al. (2000, 3), Fraternali et al. (2002,
+LSB galaxies have irregular morphologies, hence ellipses      2011, 3), Hallenbeck et al. (2014, 2), Trachternach et al.
+only provide a zeroth-order apporximation of their shape.     (2009, 2), Barbieri et al. (2005, 1), Battaglia et al. (2006,
+The errors in the surface brightness profiles, however, are   1), Begum et al. (2003, 1), Begum & Chengalur (2004,
+dominated by the uncertainties in the sky value rather        1), Blais-Ouellette et al. (2004, 1), Boomsma et al. (2008,
+than variations around each ellipse. For thin, egde-on        1), Chemin et al. (2006, 1), Elson et al. (2010, 1), Kepley
+galaxies, ellipse fitting does not provide satisfactory re-   et al. (2007, 1), Richards et al. (2015, 1), Simon et al.
+sults in the central regions, hence we derived surface        (2003, 1), Verdes-Montenegro et al. (1997, 1), Verheijen
+brightness profiles considering a narrow circular section     & de Blok (1999, 1), and Walsh et al. (1997, 1). For
+around the semi-major axes and average both sides.            duplicate galaxies, we select the most reliable rotation
+   To estimate aperture magnitudes, we built curves-of-       curve. Table 1 provides the reference for each galaxy.
+growth by summing both raw and replaced pixels within           We do not consider rotation curves from THINGS (de
+the best-fit ellipse at a given radius (sub-pixels are used   Blok et al. 2008) and LITTLE-THINGS (Oh et al. 2015)
+at the ellipse edges). The amount of light from replaced      for the sake of homogeneity. These rotation curves are
+pixels varies from 2% to 15%. Summing pixels generally        characterized by many small-scale bumps and wiggles
+leads to unstable curves-of-growth at large radii, where      that are not observed in other rotation curve samples.
+the galaxy surface brightness is comparable to the con-       Most likely these small-scale features do not trace the
+taminating halos of imperfectly masked sources. Hence,        smooth, axisymmetric gravitational potential, but may
+we replaced the aperture values with the mean isopho-         be due to non-circular components like streaming mo-
+tal values at large radii (beyond the radius containing       tions along spiral arms (e.g., Khoperskov & Bertin 2015).
+∼90% of the raw luminosity). This provides curves-of-         SPARC rotation curves are generally smooth but can
+growth that approach a clear asymptotic value at large        show large-scale features with a direct correspondence in
+radii. We calculated total magnitudes using asymptotic        the surface brightness profile, in agreement with Renzo’s
+fits to the curves-of-growth. Corresponding errors were       rule (Sancisi 2004): “For any feature in the luminosity
+                                                                                                                                   5
+
+profile there is a corresponding feature in the rotation                                    Table 2
+curve and vice versa”.                                                               Mass Model for UGCA 442
+  3.2.1. Beam smearing effects and hybrid rotation curves           Rad      Vobs   Vgas Vdisk Vbul            Σdisk  Σbul
+                                                                   (kpc)    ———— (km s−1 ) ————                – (L pc−2 ) –
+  The inner parts of rotation curves are a key tool to
+                                                                    0.42   14.2±1.9  4.9  4.8  0.0              11.0  0.0
+distinguish between cuspy or cored DM profiles (e.g., de            1.26   28.6±1.8 13.1 10.8  0.0              5.8   0.0
+Blok et al. 2001, 2008; Gentile et al. 2004), but they must         2.11   41.0±1.7 19.6 13.6  0.0              2.7   0.0
+be derived with great care because the limited spatial              2.96   49.0±1.9 22.4 13.3  0.0              1.0   0.0
+resolution may lead to a systematic underestimate of the            3.79   54.8±2.0 22.8 12.6  0.0              0.7   0.0
+inner rotation velocities (the so-called beam-smearing ef-          4.65   56.4±3.1 21.4 12.3  0.0              0.4   0.0
+fects, see e.g., Swaters et al. 2009). Several techniques           5.48   57.8±2.8 18.7 12.0  0.0              0.2   0.0
+have been developed to take beam-smearing effects into              6.33   56.5±0.6 16.7 10.6  0.0              0.0   0.0
+account: (i) projecting the derived rotation curves onto         Note. — Vdisk and Vbul are given for Υ? = 1 M /L . Similar
+position-velocity diagrams and correcting the inner ve-        tables are available for all galaxies at http://astroweb.cwru.edu/
+locity points by visual inspection (e.g., Begeman 1987; de     SPARC.
+Blok et al. 1996; Verheijen & Sancisi 2001), and (ii) build-
+ing 3D disk models and comparing model-cubes with ob-          sides of the disk, respectively, and δVfit is the formal er-
+served cubes (e.g., Swaters et al. 2009; Lelli et al. 2010).   ror from fitting the entire disk. We consider only velocity
+We carefully checked each rotation curve and conclude          points that are derived from both sides of the disk. Eq. 1
+that beam smearing does not play a major role. For             considers both local deviations from circular motions and
+only a few galaxies, the innermost points were perhaps         global kinematic asymmetries between the two sides of
+affected by beam smearing and have been rejected.              the disk. It does not include, however, systematic er-
+  For 56 galaxies (∼1/3 of SPARC), we have hybrid ro-          rors due the assumed inclination. If the H I disk is not
+tation curves combining Hα data in the inner regions           strongly warped, a change in i would change the normal-
+with H I data in the outer parts. Hα rotation curves           ization of the rotation curve without altering its shape.
+trace the kinematics at high spatial resolutions (∼100 ),      Inclination corrections go as sin(i), thus they are small
+hence beam-smearing effects are minimal. Hybrid rota-          for edge-on galaxies but becomes large for face-on ones.
+tion curves were derived using Hα IFU observations (7            We assign a quality flag (Q) to each rotation curve us-
+objects from Kuzio de Naray et al. 2008; Richards et al.       ing the following scheme: Q = 1 for galaxies with high
+2015) and long-slit spectroscopy (41 objects from Roelf-       quality H I data or hybrid Hα/H I rotation curves (99 ob-
+sema & Allen 1985; Walsh et al. 1997; Côté et al. 2000; de   jects); Q = 2 for galaxies with minor asymmetries and/or
+Blok et al. 2001; de Blok & Bosma 2002; Gentile et al.         H I data of lower quality (64 objects); Q = 3 for galax-
+2004; Spekkens & Giovanelli 2006; Noordermeer et al.           ies with major asymmetries, strong non-circular motions,
+2007). The raw Hα data are typically fit with a spline         and/or off-sets between H I and stellar distributions (12
+to derive smooth rotation curves (de Blok et al. 2001; de      objects). Galaxies with Q = 3 are not suited for detailed
+Blok & Bosma 2002; Noordermeer et al. 2007), which av-         dynamical studies: we build mass models for complete-
+erage over small-scale irregularities and trace the overall    ness but do not consider them in our analysis. Similarly,
+gravitational potential. We built another 8 hybrid rota-       we provide mass models for face-on galaxies with i < 30◦
+tion curves using Hα data from Fabry-Perot interferom-         but exclude them in our analysis. This does not intro-
+etry (Blais-Ouellette et al. 1999, 2001, 2004; Daigle et al.   duce any selection bias since galaxy disks are randomly
+2006; Dicaire et al. 2008). Apart a few cases (notably         oriented on the sky. Our final science sample is made of
+NGC 24), H I and Hα rotation curves are generally in           153 galaxies.
+good agreement, indicating that the former were prop-
+erly determined (see also McGaugh et al. 2001; Swaters                                  3.3. Mass Models
+et al. 2009). The rotation curve of NGC 2976 combines
+Hα and CO data (Simon et al. 2003).                              We derive the contributions of gas disk (Vgas ), stellar
+  Despite the high spatial resolution, Hα rotation             disk (Vdisk ), and bulge (Vbul ) to the observed rotation
+curves are sometimes quite uncertain due to the patchy         curves. The total baryonic contribution is then given by
+distribution and complex kinematics of Hα gas, es-
+pecially for low-mass and LSB galaxies.             We use                 q
+only H I data for the several objects: DDO 154,                  Vbar =        |Vgas |Vgas + Υdisk |Vdisk |Vdisk + Υbul |Vbul |Vbul ,
+IC 2574, NGC 3109, NGC 5033, NGC 5055, NGC 6946,                                                                                 (2)
+NGC 7331, UGC 2259. H I and Hα rotation curves, how-
+ever, agree within the errors.                                 where Υdisk and Υbul are the stellar mass-to-light ratios
+                                                               of disk and bulge components, respectively. Note that
+       3.2.2. Error budget and rotation curve quality
+                                                               absolute values are needed because Vgas can sometimes
+  The errors on the rotation velocities are estimated as       be negative in the innermost regions: this occurs when
+in Swaters et al. (2009):                                      the gas distribution has a significant central depression
+           s                      2                          and the material in the outer regions exerts a stronger
+      2        2       Vapp − Vrec                             gravitational force than that in the inner parts. In this
+     δV = δVfit +                                    (1)       paper, we investigate the ratio Vbar /Vobs for different as-
+                            4
+                                                               sumptions of Υ? (Sect. 5.3). Rotation curve fits with
+where Vapp and Vrec are the rotation velocities obtained       DM halos are presented in Katz et al. (2016) and will be
+from fitting separately the approaching and receding           exploited in future publications.
+6
+
+                                                                               104                                              11
+                    10   1                                                                                                      10
+                                                                                                                                9
+                                                                               103                                              8
+
+
+
+
+                                                                  Σeff (L ¯ pc−2 )
+                                                                                                                                7
+       Reff (kpc)
+
+
+                                                                                                                                6
+                                                                               102                                              5
+                    100                                                                                                         4
+                                                                                                                                3
+                                                                               101                                              2
+                                                                                                                                1
+                                                                                                                                0
+                             6   7   8       9     10   11   12                100 6 7 8 9 10 11 12 T
+                      10 10 10 10 10 10 10                                       10 10 10 10 10 10 10
+                                         L[3.6](L ¯ )                                             L[3.6](L ¯ )
+                                                                               104                                              11
+                                                                                                                                10
+                    101                                                                                                         9
+                                                                               103                                              8
+                                                                  Σd (L ¯ pc−2 )
+                                                                                                                                7
+      Rd (kpc)
+
+
+
+
+                                                                                                                                6
+                         0                                                     102                                              5
+                    10                                                                                                          4
+                                                                                                                                3
+                                                                               101                                              2
+                                                                                                                                1
+                                                                                                                                0
+                 10-1 6 7 8 9 10 11 12                                         100 6 7 8 9 10 11 12 T
+                    10 10 10 10 10 10 10                                         10 10 10 10 10 10 10
+                                         L[3.6](L ¯ )                                             L[3.6](L ¯ )
+Figure 2. Photometric relations. Galaxies are color-coded by Hubble type. In the top-left panel, the solid line shows the K-band
+mass-radius relation from the GAMA survey (Lange et al. 2015), where stellar masses have been converted to [3.6] luminosities assuming
+Υ? = 0.5 M /L . The dashed lines show a 0.4 dex deviation from the mean relation, corresponding to ∼2σ.
+
+   The gas contribution is calculated using the formula                        the exponential fit to R → ∞, unless the profile shows a
+from Casertano (1983), which solves the Poisson equa-                          clear truncation. For galaxies with T < 4 (Hubble types
+tion for a disk with finite thickness and arbitrary density                    earlier than Sbc), we perform bulge-disk decompositions
+distribution. We assume a thin disk with a total mass of                       in a non-parametric way. Firstly, we identify a fiducial
+1.33 MH I , where the factor 1.33 considers the contribu-                      radius Rbul within which the bulge light dominates. We
+tion of helium. Vgas is either computed using H I surface                      then subtract the stellar disk from the profile by extrap-
+density profiles or taken from published mass models.                          olating an exponential fit at R < Rbul : this fit describes
+For D512-2, D564-8, and D631-7, H I surface density pro-                       the inner disk structure (like lenses, rings) and does not
+files are not available, hence we compute Vgas assuming                        necessarily correspond to the outer disk fit. Finally, the
+an exponential profile with a scale length of 2 Rd . This                      residual luminosity profile is used to compute Vbul and
+is a reasonable approximation for such late-type galax-                        linearly extrapolated at R > Rbul to avoid unphysical
+ies (e.g., Swaters et al. 2002). We neglect the contribu-                      truncations. We assume that the bulge is spherical and
+tion of molecular gas because CO data are not available                        the disk has an exponential vertical distribution with
+for most SPARC galaxies. Fortunately, molecules con-                           scale height zd = 0.196 Rd0.633 (Bershady et al. 2010b).
+stitute a minor dynamical component and are generally                          The uncertainties in Vbul and Vdisk are dominated by Υ?
+sub-dominant with respect to stars and atomic gas (Si-                         rather than geometry. For example, for oblate bulges the
+mon et al. 2003; Frank et al. 2016). If molecules are dis-                     peak in Vbul would increase by less than 20% (Noorder-
+tributed in a similar way as the stars, their contribution                     meer 2008). For galaxies with T ≥ 4, we assume that
+is implicitly included in the assumed value of Υ? .                            all stars lie in a disk and interpret possible light con-
+   The stellar contribution is calculated using the ob-                        centrations as disky pseudobulges (Kormendy & Kenni-
+served [3.6] surface brightness profile and extrapolating                      cutt 2004). For only five Sbc-to-Scd galaxies (IC 4202,
+                                                                                                                            7
+
+NGC 5005, NGC 5033, NGC 6946, UGC 2885), bulge-                  of 3.5 M pc−2 . We find a slope of 1.87 which is similar
+disk decompositions improve the results. Conversely, we          to previous estimates: 1.96 (Broeils & Rhee 1997), 1.88
+do not decompose NGC 3769 despite being an Sb.                   (Verheijen 2001), 1.86 (Swaters et al. 2002), 1.80 (Noor-
+  In Table 2, we provide the values of Vbul and Vdisk for        dermeer et al. 2005), and 1.72 (Martinsson et al. 2016).
+Υ? = 1 M /L . This is just a convenient value but                These small differences likely arise from different sam-
+often exceeds a maximum disk fit. Vbul and Vstar can be          ple sizes and ranges in galaxy properties: in this respect
+trivially rescaled to any arbitrary Υ? .                         SPARC is the largest sample and spans the broadest dy-
+                                                                 namic range. The small tilt from the “expected” value
+              4. STRUCTURAL PROPERTIES                           of 2 implies that the H I disks of low-mass galaxies are
+  We study structural scaling relations of SPARC galax-          denser than those of high-mass ones (by a factor of ∼2,
+ies, considering both photometric properties (L[3.6] , Reff ,    see also Noordermeer et al. 2005; Martinsson et al. 2016).
+Σeff , Rd , and Σd ) and H I properties (MH I and RH I ).
+                                                                              4.3. Stellar-H I Scaling Relations
+           4.1. Photometric Scaling Relations                      Figure 3 (top right) shows the relation between MH I
+   Figure 2 illustrates the covariance between L[3.6] , Reff ,   and L[3.6] . A linear fit returns
+and Σeff (top panels) as well as L[3.6] , Rd , and Σd (bot-
+                                                                   log(MH I ) = (0.54±0.02) log(L[3.6] )+(3.90±0.23), (4)
+tom panels). As expected, the total luminosity broadly
+correlates with both radius (Reff and Rd ) and surface           with σint = 0.35 ± 0.02 dex. A slope of ∼0.6 implies that
+brightness (Σeff and Σd ). In the top-left panel, the solid      the ratio of gas mass (Mgas = 1.33MH I ) to stellar mass
+line shows the K-band mass-radius relation from the              (M? = Υ? L[3.6] ) is not constant in galaxies, but become
+GAMA survey (Lange et al. 2015) for morphologically              systematically higher for low-luminosity galaxies. For
+identified late-type galaxies. For comparison, the stellar       comparison, the dotted line shows the equality Mgas =
+masses from Lange et al. (2015) are converted into [3.6]         M? assuming Υ? = 0.5 M /L . Interestingly, this line
+luminosities adopting Υ? = 0.5 M /L (Schombert &                 broadly demarcates the transition from spirals (T = 1 to
+McGaugh 2014a). The dashed lines show a 0.4 dex de-              7) to irregulars (T = 8 to 11). Gas fractions are explored
+viation from the GAMA relation, corresponding to ∼2              in detail in Sect. 5.2.
+times the observed rms scatter (σobs ). We find over-              Finally, the bottom panels of Fig. 3 show the relation
+all agreement with Lange et al. (2015), indicating that          between H I radius and stellar radius. The latter is es-
+SPARC is not missing any type of galaxy disk in terms            timated as Reff (left) and Rd (right). Assuming a 10%
+of luminosity, size, or surface brightness.                      error on these radii, a linear fit returns
+   In Figure 2, one may discern two separate sequences
+                                                                    log(RH I ) = (0.88 ± 0.05) log(Reff ) + (0.68 ± 0.03) (5)
+in the luminosity-size planes, corresponding to early-type
+HSB spirals and late-type LSB galaxies. This separation          with σint = 0.22 ± 0.01 dex, and
+may be either real or due to the under-representation of
+galaxies with L[3.6] ≃ 1010 L in SPARC. Interestingly, a             log(RH I ) = (0.86 ± 0.04) log(Rd ) + (0.79 ± 0.02), (6)
+similar separation has been found by Schombert (2006)            with σint = 0.20 ± 0.01 dex. The slope and normalization
+and may indicate the existence of a surface brightness           of these relations imply that H I disks are generally more
+bimodality for stellar disks (Tully & Verheijen 1997; Mc-        extended than stellar disks, as we discussed in Sect. 2.1.
+Donald et al. 2009a,b; Sorce et al. 2013a).
+                                                                               5. DYNAMICAL PROPERTIES
+           4.2. The H I Mass-Radius Relation                       In this section, we explore dynamical properties of
+  Figure 3 (top left) shows the MH I − RH I relation             SPARC galaxies like gas fractions (Sect. 5.2) and degree
+(Broeils & Rhee 1997; Verheijen 2001). This correlation          of baryonic maximality (Sect. 5.3). Both quantities de-
+is extremely tight. We fit a line using LTS LINEFIT              pend on the assumed stellar mass-to-light ratio, hence
+(Cappellari et al. 2013), which considers errors in              we start by discussing the plausible values of Υ? at [3.6].
+both variables and allows for intrinsic scatter (σint ).
+LTS LINEFIT assumes that the errors on the two vari-                       5.1. The Stellar Mass-to-Light Ratio
+ables are independent, but MH I and RH I are affected               The major uncertainty in the mass modelling of galax-
+by galaxy distance as D2 and D, respectively. Hence, we          ies is the value of Υ? . To address this issue, the DiskMass
+introduce distance uncertainties only in MH I with a lin-        Survey (DMS, Bershady et al. 2010a) measured the ver-
+ear dependence. We also consider typical errors of 10%           tical velocity dispersion of disk stars in 30 face-on spirals
+on MH I and RH I due to flux calibration. We find                and employed the theoretical relation between vertical
+  log(MH I ) = (1.87±0.03) log(RH I )−(7.20±0.03), (3)           velocity dispersion, disk scale height, and dynamical sur-
+                                                                 face density (valid for a self-graviting disk). Since zd
+with σobs = 0.13 dex and σint = 0.06 ± 0.01 dex. This            cannot be directly measured in face-on galaxies, the DMS
+is one of the tightest scaling relations of galaxy disks.        statistically estimated the disk scale height using the em-
+For comparison, the BTFR has σobs ≃ 0.18 dex and                 pirical correlation between Rd and zd , calibrated using
+σint .0.11 dex (Lelli et al. 2016).                              NIR photometry of edge-on galaxies (Kregel et al. 2002).
+   A tight MH I − RH I relation with a slope of ∼2 im-              The DMS concluded that stellar disks are strongly sub-
+plies that the mean surface density of H I disks is con-         maximal, contributing less than 30% of the dynamical
+stant from galaxy to galaxy (Broeils & Rhee 1997). For           mass within 2.2 Rd and having Υ? = 0.31 M /L in the
+comparison, the dotted line in Figure 3 shows the ex-            K-band (Martinsson et al. 2013). After correcting for
+pected relation for H I disks with a mean surface density        the DM contribution, the DMS gives Υ? = 0.24 M /L
+8
+
+              1011                                                       1011                                                   11
+                                                                                                                                10
+              1010                                                       1010                                                   9
+                                                                                                                                8
+                                                                                                                                7
+      MHI (M ¯ )
+
+
+
+
+                                                                 MHI (M ¯ )
+                   109                                                        109                                               6
+                                                                                                                                5
+                                                                                                                                4
+                   108                                                        108                                               3
+                                                                                                                                2
+                                                                                                                                1
+                   107                                                        107                                               0
+                           100           101               102                       107 108 109 1010 1011 1012 T
+                                   RHI (kpc)                                                      L[3.6] (L ¯ )
+                   102                                                        102                                               11
+                                                                                                                                10
+                                                                                                                                9
+                                                                                                                                8
+                                                                                                                                7
+       RHI (kpc)
+
+
+
+
+                                                                  RHI (kpc)
+
+                   101                                                        101                                               6
+                                                                                                                                5
+                                                                                                                                4
+                                                                                                                                3
+                                                                                                                                2
+                   100                                                        100                                               1
+                                                                                                                                0
+                    10-1           100               101                       10-1               100             101       T
+                                   Reff (kpc)                                                     Rd (kpc)
+Figure 3. Stellar-H I scaling relations. Galaxies are color-coded by Hubble type. In each panel, the dashed line shows a linear fit. Top
+left: MH I versus RH I . The dotted line shows the expected relation for H I disks with a constant mean surface density of 3.5 M pc−2 .
+Top right: MH I versus L[3.6] . The dotted line shows M? = Mgas for Υ? = 0.5 M /L . Bottom: RH I versus Reff (left) and Rd (right).
+
+in the K-band (Swaters et al. 2014). Considering that                    ies and explore different normalizations. For 32 galaxies
+LK ≃ 1.3L[3.6] (Schombert & McGaugh 2014a), these                        with significant bulges, however, we adopt
+values correspond to Υ? ≃ 0.2 M /L at [3.6]. Angus                                  Υbul = 1.4Υdisk ,                                (7)
+et al. (2016) re-analized the DMS data pointing out that
+the DM contribution to the vertical force become signif-                 as suggested by SPS models (Schombert & McGaugh
+icant for such submaximal disks: when DM haloes are                      2014a). Hereafter, the different normalizations of Υ? al-
+included in a self-consistent way, the mean value of Υ?                  ways refer to the stellar disk, i.e. Υ? = Υdisk .
+further decreases to ∼0.18 M /L in the K-band (∼0.14                                          5.2. Gas Fractions
+M /L at [3.6]). These results are in tension with SPS
+models (McGaugh & Schombert 2014; Meidt et al. 2014;                          We define the gas fraction as
+Schombert & McGaugh 2014a), which find mean values                                           Mgas              Mgas
+between ∼0.6 and ∼0.8 M /L in the K-band (∼0.4 to                                   fgas =        =                              ,   (8)
+                                                                                             Mbar   Mgas + Υ? Ldisk + 1.4Υ? Lbul
+∼0.6 M /L at [3.6]) depending on the model and IMF.
+  Interestingly, both the DMS and SPS models suggest                     where Ldisk and Lbul are estimated using the non-
+that Υ? is nearly constant in the NIR (within ∼0.1 dex)                  parametric decompositions in Sect. 3.3. Figure 4 plots
+among galaxies of different masses and morphologies.                     fgas versus L[3.6] assuming Υ? = 0.5 M /L (left) and
+The discrepancy is only in the overall normalization of                  Υ? = 0.2 M /L (right). For any realistic value of Υ? ,
+Υ? . A nearly constant Υ? at [3.6] is also suggested by                  the gas fraction anticorrelates with L[3.6] but the overall
+the BTFR (McGaugh & Schombert 2015), which is re-                        shapes of these relations significantly change with Υ? .
+markably tight for a fixed Υ? (Lelli et al. 2016). Thus,                   A value of Υ? ≃ 0.5 M /L minimizes the scat-
+we assume that Υ? is constant among different galax-                     ter around the BTFR (Lelli et al. 2016) and is found
+                                                                                                                                       9
+
+
+                1.0         Υ ∗ =0.5 M ¯ /L ¯                                 1.0          Υ ∗ =0.2 M ¯ /L ¯
+                                                                                                                                 11
+                                                                                                                                 10
+                0.8                                                           0.8                                                9
+                                                                                                                                 8
+                0.6                                                           0.6                                                7
+    Mgas/Mbar
+
+
+
+
+                                                                  Mgas/Mbar
+                                                                                                                                 6
+                                                                                                                                 5
+                0.4                                                           0.4                                                4
+                                                                                                                                 3
+                0.2                                                           0.2                                                2
+                                                                                                                                 1
+                                                                                                                                 0
+                0.0                                                           0.0
+                      107 108 109 1010 1011 1012                                    107 108 109 1010 1011 1012T
+                                L[3.6] (L ¯ )                                                   L[3.6] (L ¯ )
+Figure 4. Gas fraction (Eq. 8) versus [3.6] luminosity for Υ? = 0.5 M /L (left) and Υ? = 0.2 M /L (right). Galaxies are color-coded
+by Hubble type. The vertical line at L[3.6] = 3 × 109 L approximately separates spirals (T = 1 to 7) from dwarf irregulars (T = 8 to 11).
+
+using self-consistent SPS models with standard IMFs                      This choice is inherited from early works on late-type
+(McGaugh & Schombert 2014; Schombert & McGaugh                           spiral galaxies (e.g., van Albada et al. 1985) and is moti-
+2014a). This normalization leads to the usual picture for                vated by two facts: (i) in spiral galaxies Vgas is typically
+the composition of galaxy disks:                                         much smaller than V? , and (ii) for a pure exponential
+                                                                         disk V? peaks at 2.2Rd . When comparing galaxies of
+   1. The fgas − log(L[3.6] ) relation is roughly linear.                different masses and morphologies, however, this choice
+      Dwarf galaxies are generally gas-dominated but                     becomes inadequate because (i) in dwarf galaxies Vgas
+      show a broad range in fgas from ∼0.5 to ∼0.9.                      can be larger than V? , and (ii) the vast majority of spi-
+   2. The transition between spirals (T = 1 to 7) and                    ral galaxies show deviations from exponential profiles in
+      irregulars (T = 8 to 11) roughly occurs at fgas ≃                  the inner parts due to bars, lenses, and bulges. Hence,
+      0.5. This is in line with density wave theory (Lin                 we consider the ratio Vbar /Vobs (instead of V? /Vobs ) and
+      & Shu 1964), since well-developed spiral patterns                  explore several characteristic radii.
+      are difficult to support in gas-dominated disks.
+                                                                                    5.3.1. The Choice of the Characteristic Radius
+  A value of Υ? = 0.2 M /L at [3.6] is comparable to                        Figure 5 shows mass models for two galaxies with dia-
+the DMS normalization. This low value of Υ? leads to                     metrically opposed properties: a bulge-dominated spiral
+some strange results:                                                    galaxy (NGC 7814) and a gas-dominated dwarf galaxy
+   1. The fgas − log(L[3.6] ) relation shows a flattening at             (UGCA 442). Top panels show [3.6] surface brightness
+      L[3.6] . 3 × 109 L (vertical dashed line). Con-                    profiles and exponential fits to the outer disk; bot-
+      sequently, the vast majority of dwarf irregulars                   tom panels show rotation curve decompositions adopting
+      are heavily gas-dominated with fgas ≃ 0.8 − 1.0.                   Υdisk = 0.5 M /L and Υbul = 0.7 M /L . The arrows
+      Dwarf irregulars are generally thought to be gas-                  illustrate three different characteristic radii: (i) the com-
+      dominated (e.g., McGaugh 2012), but this seems a                   monly used radius at 2.2Rd (R2.2 , grey); (ii) the effec-
+      very extreme situation.                                            tive radius encompassing half of the total [3.6] luminosity
+                                                                         (Reff , red); and (iii) the radius where Vbar is maximum
+   2. Several bright spirals (1010 < L[3.6] /L < 1011 )                  (Rbar , blue). The last radius was denoted as Rp by Mc-
+      have fgas & 0.5. This also includes four early-type                Gaugh (2005a).
+      spirals (Sa to Sb), corresponding to T = 1 to 3. It                   NGC 7814 (left) is an early-type spiral (Sab). The sur-
+      is unclear how these bright galaxies could sustain                 face brightness profile shows a central light enanchement
+      stellar bars and grand-design spiral patterns in such              due to the bulge. The rotation curve displays a very steep
+      gas-dominated disks (see e.g., Athanassoula 1984).                 rise in the inner parts, a decline of ∼50 km s−1 , and a flat
+                                                                         outer portion. These are typical features for early-type
+  This suggests that Υ? ≃ 0.5 M /L gives a more re-                      spirals (Noordermeer et al. 2007). For Υ? = 0.5 M /L
+alistic galaxy population than Υ? ≃ 0.2 M /L .                           baryons explain the inner parts of the rotation curve,
+                                                                         while DM is needed at large radii. Note that Reff occurs
+                      5.3. Baryonic Maximality                           along the declining part of the rotation curve, while R2.2
+  Historically, the degree of disk maximality is estimated               occurs along the flat part: Rbar is the only radius that
+by measuring the ratio V? /Vobs at 2.2Rd (Sackett 1997).                 captures the concept of baryonic maximality.
+10
+
+
+                                                                      NGC7814 (Q = 1)                                                                       UGCA442 (Q = 1)
+         Surface Brightness (mag arcsec−2 )
+
+
+
+
+                                                                                                Surface Brightness (mag arcsec−2 )
+                                              12                                                                                     20
+
+                                              14                                                                                     21
+                                              16
+                                                                                                                                     22
+                                              18
+                                                                                                                                     23
+                                              20
+                                   22                                                                                                24
+                                  300
+                                                                                                                                     60
+                                  250
+Rotation Velocity (km s−1 )
+
+
+
+
+                                                                                                Rotation Velocity (km s−1 )
+                                                                                                                                     50
+                                  200
+                                                                                                                                     40
+                                   150                                                                                               30
+                                   100                                                                                               20
+                                              50                                                                                     10
+                                                   Rbar Reff   R2.2                                                                              Reff       R2.2        Rbar
+                                              00               5          10          15   20                                         00     1          2           3      4      5   6   7
+                                                                         Radius (kpc)                                                                              Radius (kpc)
+
+Figure 5. Mass models for two SPARC galaxies adopting Υdisk = 0.5 M /L and Υbul = 0.7 M /L . Top panels show the [3.6]
+surface brightness profiles (red dots) and exponential fits to the outer stellar disk (dashed line). Open circles show extrapolated values for
+bulge (purple) and disk (red) components. Bottom panels show the observed rotation curves (black dots) and the velocity contributions
+due to gas (green dotted line), stars (red dashed line), bulge (purple dash-dotted line), and total baryons (blue solid line). The arrows
+indicate three characteristic radii: 2.2 Rd (grey), Reff (red), and Rbar (blue). The grey band shows the velocity-points used to compute Vf
+(black-solid line), as described in Lelli et al. (2016). Similar figures for all SPARC galaxies are available as Figure Set.
+                                                                                                   √
+   UGCA 442 (right) is a late-type dwarf (Sm). The sur-                                         as D other than on the assumed Υ? . Uncertainties
+face brightness profile is well described by an exponential                                     in galaxy distances, therefore, may affect the value of
+law, but there is a central flattening due to a cored light                                     Vbar /Vobs . Moreover, the normalization of Vobs depends
+distribution. The rotation curve shows a slow rise in the                                       on the assumed inclination as sin(i), but this is a minor
+central regions and a flat part beyond the stellar compo-                                       source of uncertainty for galaxies with i & 30◦ .
+nent. For Υ? = 0.5 M /L baryons cannot fully explain
+the inner rise of the rotation curve and DM is needed                                                                                5.3.2. The Effect of the Stellar Mass-To-Light Ratio
+down to small radii. This is a typical behaviour for low-
+mass and LSB galaxies: maximum disk decompositions                                                 Figures 6 and 7 show Vbar /Vobs measured at R2.2 and
+require high values of Υ? that are ruled out by standard                                        Rbar , respectively. We illustrate the covariance with
+SPS models (de Blok & McGaugh 1997; Swaters et al.                                              L[3.6] (top) and Σeff (bottom). We consider two different
+2011). Note that the shape of Vbar is mostly driven by                                          normalizations of Υ? as described in Sect. 5.1. Firstly,
+the gas contribution and Rbar occurs well beyond Reff or                                        we note that the degree of maximality of dwarf galaxies
+R2.2 due to the gas dominance.                                                                  does not strongly depend on Υ? because these objects are
+   These two examples illustrate that both R2.2 and Reff                                        gas-dominated: the values of Vbar /Vobs stay in the range
+can be misleading in quantifying the baryonic maximal-                                          0.3 to 0.6 (apart a few outliers) using both R2.2 and Rbar .
+ity because they can be far from the radius where Vbar                                          Conversely, the degree of maximality of spirals depends
+peaks. In the following, we consider Rbar as our fiducial                                       strongly on Υ? .
+characteristic radius but we also show Vbar /Vobs at R2.2                                          For Υ? = 0.5 M /L , high-luminosity HSB galaxies
+(hereafter V2.2 /Vobs ) to compare with previous works.                                         are nearly maximal, whereas low-luminosity LSB galax-
+   In the previous examples, the value of Rbar does not                                         ies are submaximal. By definition, the value of Vbar /Vobs
+depend on the assumed Υ? because the shape of Vbar                                              is higher at Rbar than R2.2 , especially in galaxies with
+is dominated by either V? or Vgas . In galaxies where                                           bulges. Some objects have Vbar /Vobs & 1 but this is
+V? ≃ Vgas , however, the value of Rbar may depend on the                                        not surprising. We expect some intrinsic scatter around
+assumed Υ? because the overall shape of Vbar is affected                                        the mean value of Υ? (of ∼0.1 dex, see Meidt et al.
+by the relative contributions of V? and Vgas : these cases                                      2014; Lelli et al. 2016), hence a few objects may have
+represent a minority among SPARC galaxies.                                                      Vbar /Vobs > 1 for a fixed Υ? . We also note that sev-
+   Finally, we note that Vbar depends on galaxy distance                                        eral galaxies with Vbar /Vobs > 1 have uncertain distances
+                                                                                                and are consistent with Vbar /Vobs . 1 within the errors.
+                                                                                                                                           11
+
+                                                                                                              11
+                   1.5 Υdisk =0.50                                                1.5 Υdisk =0.20             10
+                        Υ =0.70                                                        Υbul =0.28
+                   1.3 bul                                                        1.3                         9
+                                                                                                              8
+                   1.1                                                            1.1                         7
+       V2.2/Vobs
+
+
+
+
+                                                                      V2.2/Vobs
+                   0.9                                                            0.9                         6
+                                                                                                              5
+                   0.7                                                            0.7                         4
+                                                                                                              3
+                   0.5                                                            0.5                         2
+                   0.3                                                            0.3                         1
+                                                                                                              0
+                   0.1 7                                                          0.1 7
+                       10 108 109 1010 1011 1012                                             8    9 10
+                                                                                      10 10 10 10 10 1011 12T
+                                  L[3.6] (L ¯ )                                                L[3.6] (L ¯ )
+                                                                                                                                   11
+                   1.5 Υdisk =0.50                                                1.5 Υdisk =0.20                                  10
+                       Υ =0.70                                                        Υ =0.28
+                   1.3 bul                                                        1.3 bul                                          9
+                                                                                                                                   8
+                   1.1                                                            1.1                                              7
+       V2.2/Vobs
+
+
+
+
+                                                                      V2.2/Vobs
+
+                   0.9                                                            0.9                                              6
+                                                                                                                                   5
+                   0.7                                                            0.7                                              4
+                                                                                                                                   3
+                   0.5                                                            0.5                                              2
+                   0.3                                                            0.3                                              1
+                                                                                                                                   0
+                   0.1                                                            0.1
+                          101      102            103           104                     101       102          103         104T
+                              Σeff (L ¯ pc−2 )                                               Σeff (L ¯ pc−2 )
+Figure 6. Ratio of baryonic to observed rotation velocity at 2.2 disk scale lengths (V2.2 /Vobs ). We show the covariance with the total [3.6]
+luminosity (top) and effective surface brightness (bottom). Two different normalizations of Υ? are illustrated. Galaxies are color-coded by
+Hubble type. In these plots we exclude galaxies with i < 30◦ and Q = 3. Large and small circles correspond to galaxies with Q = 1 and
+Q = 2, respectively. The dashed line shows Vbar /Vobs = 1, denoting the upper limit for physically acceptable disks.
+
+The degree of baryonic maximality correlates better with                    dominated spiral galaxies: galaxies with intermediate
+surface brightness than luminosity, in line with previous                   surface brightnesses are generally disk-dominated and
+studies (e.g., McGaugh 2005a, 2016).                                        would be less maximal than gas-dominated LSB galaxies
+   For Υ? = 0.2 M /L , spiral galaxies are submaximal                       for Υ? = 0.2 M /L . This seems strange.
+as found by the DMS (Martinsson et al. 2013). For this                        It is important to derive an upper limit for the mean
+low value of Υ? , most spirals are nearly as submaximal                     value of Υ? since this can be used to constrain different
+as dwarf galaxies (which are not included in the DMS).                      IMFs and SPS models. In Figure 8 we show Vbar /Vobs
+This would imply that there is no strong dynamical dif-                     at Rbar for Υ? = 0.8 M /L . For this high normal-
+ference among objects spanning ∼5 dex in luminosity                         ization, a large fraction of high-mass HSB galaxies have
+and ∼4 dex in surface brightness. One does expect a                         Vbar /Vobs > 1. It is conceivable that Υ? may scatter
+difference over this range because HSB and LSB galaxies                     up to 0.8 M /L for some individual galaxies, but this
+lie on the same BTFR. At a given p  baryonic mass, Vobs is                  cannot be the correct mean Υ? . In the extreme scenario
+nearly the same but Vbar goes as Mbar /Rbar , hence it                      where the “true” mean Υ? gives Vbar /Vobs = 1 in bright
+is higher in HSB galaxies (with small Rbar ) than in LSB                    galaxies, the scatter in Υ? should drive ∼50% of galaxies
+galaxies (with large Rbar ). Therefore, Vbar /Vobs should                   to values of Vbar /Vobs > 1. If we consider galaxies with
+correlate with surface brightness, but this trend is barely                 L[3.6] > 2 × 1010 L , a value of Υ? = 0.8 M /L im-
+perceptible for Υ? = 0.2 M /L . If Rbar is adopted,                         plies over-maximal disks in ∼67% of the cases, which is
+Vbar /Vobs shows a parabolic trend with Σeff (Figure 7,                     statistically unacceptable. For truly maximal disks with
+bottom right). The LSB end is driven by gas-dominated                       Vbar /Vobs = 1, we find that the upper limit on the mean
+dwarf galaxies, while the HSB end is driven by bulge-                       value of Υ? is ∼0.7 M /L . If we adopt the customary
+12
+
+                                                                                                                             11
+                  1.5 Υdisk =0.50                                             1.5 Υdisk =0.20             10
+                       Υ =0.70                                                     Υbul =0.28
+                  1.3 bul                                                     1.3                         9
+                                                                                                          8
+                  1.1                                                         1.1                         7
+      Vbar/Vobs
+
+
+
+
+                                                                  Vbar/Vobs
+                  0.9                                                         0.9                         6
+                                                                                                          5
+                  0.7                                                         0.7                         4
+                                                                                                          3
+                  0.5                                                         0.5                         2
+                  0.3                                                         0.3                         1
+                                                                                                          0
+                  0.1 7                                                       0.1 7
+                      10 108 109 1010 1011 1012                                           8   9 10
+                                                                                  10 10 10 10 10 1011 12T
+                                L[3.6] (L ¯ )                                                 L[3.6] (L ¯ )
+                                                                                                                             11
+                  1.5 Υdisk =0.50                                             1.5 Υdisk =0.20                                10
+                      Υ =0.70                                                     Υ =0.28
+                  1.3 bul                                                     1.3 bul                                        9
+                                                                                                                             8
+                  1.1                                                         1.1                                            7
+      Vbar/Vobs
+
+
+
+
+                                                                  Vbar/Vobs
+
+                  0.9                                                         0.9                                            6
+                                                                                                                             5
+                  0.7                                                         0.7                                            4
+                                                                                                                             3
+                  0.5                                                         0.5                                            2
+                  0.3                                                         0.3                                            1
+                                                                                                                             0
+                  0.1                                                         0.1
+                         101      102           103         104                     101       102             103     104T
+                             Σeff (L ¯ pc−2 )                                              Σeff (L ¯ pc−2 )
+Figure 7. Same as Figure 6 but we now show the value of Vbar /Vobs measured at the peak of the baryonic contribution (Rbar ).
+
+definition of maximum disk as Vbar /Vobs = 0.85 (Sackett                 ratio (Υ? ).
+1997), then the mean maximum-disk value of Υ? is ∼0.5                      Assuming Υ? = 0.5 M /L , we find the usual picture
+M /L , which is similar to the predictions of SPS mod-                   for the overall composition of galaxy disks:
+els with standard IMFs (e.g., McGaugh & Schombert                           1. The relation between fgas and log(L[3.6] ) is roughly
+2014; Meidt et al. 2014; Schombert & McGaugh 2014a).                           linear: dwarf galaxies are generally gas-dominated
+                   6. SUMMARY & CONCLUSIONS                                    but display a broad range in fgas from 0.5 to 0.9.
+  We introduce SPARC: a sample of 175 galaxies with                            2. The transition between spiral galaxies and dwarf
+new Spitzer photometry at 3.6 µm and high-quality ro-                             irregulars roughly occurs at fgas ≃ 0.5 in line with
+tation curves from previous H I/Hα works. We describe                             the predictions of density wave theory: stellar bars
+the galaxy sample, derive homogeneous [3.6] photometry,                           and grand-desing spiral arms are generally sup-
+and study structural relations of stellar and H I disks.                          pressed in gas-dominated disks.
+We find that the relation between stellar and H I mass
+has significant intrinsic scatter (σint ≃ 0.35 dex) as well                 3. The ratio Vbar /Vobs (measured at the peak of
+as the relation between stellar and H I radius (σint ≃ 0.2                     Vbar ) varies with luminosity and surface brightness:
+dex). Conversely, the H I mass-radius relation is ex-                          high-mass HSB galaxies are nearly maximal, while
+tremely tight (σint ≃ 0.06 dex) and implies that H I disks                     low-mass LSB galaxies are submaximal. The de-
+have the same mean surface density within a factor of ∼2.                      gree of baryonic maximality correlates better with
+  We build detailed mass models, which are available                           surface brightness than luminosity.
+at http://astroweb.cwru.edu/SPARC. In this first                           A mean value of Υ? & 0.7 M /L is statistically ruled
+SPARC paper, we investigate gas fractions (fgas =                        out because it implies over-maximal baryonic contribu-
+Mgas /Mbar ) and the degree of baryonic maximality                       tions in high-mass HSB galaxies. If we adopt the cus-
+(Vbar /Vobs ) for different values of the stellar mass-to-light          tomary definition of maximum disk as Vbar /Vobs = 0.85
+                                                                                                                                    13
+
+            1.9 Υdisk =0.80             11                          Schombert 2014; Meidt et al. 2014), resolved stellar
+                                                                    populations in the LMC (Eskew et al. 2012), the BTFR
+            1.7 Υbul =1.12              10                          (McGaugh & Schombert 2015; Lelli et al. 2016), and the
+                                        9                           results presented in this paper.
+            1.5                         8
+            1.3                         7
+                                                                       This work would have not been possible without the
+Vbar/Vobs
+
+
+                                                                    high-quality rotation curves that were derived over the
+            1.1                         6                           past 30 years by many good people. In particular we
+                                                                    thank Erwin de Blok, Filippo Fraternali, Gianfranco
+                                        5
+            0.9                         4
+                                                                    Gentile, Rachel Kuzio de Naray, Renzo Sancisi, Bob
+                                                                    Sanders, Rob Swaters, Thijs van der Hulst, Liese van
+            0.7                         3                           Zee, and Marc Verheijen. This publication was made
+            0.5                         2                           possible through the support of a grant from the John
+                                                                    Templeton Foundation. The opinions expressed in this
+            0.3                         1                           publication are those of the authors and do not necessar-
+                                        0                           ily reflect the views of the John Templeton Foundation.
+            0.1 7      8    9 10 11 12T
+                10 10 10 10 10 10                                                           REFERENCES
+                         L[3.6] (L ¯ )                              Angus, G. W., Gentile, G., & Famaey, B. 2016, A&A, 585, A17
+                                                                    Aniyan, S., Freeman, K. C., Gerhard, O. E., Arnaboldi, M., &
+                                                                      Flynn, C. 2016, MNRAS, 456, 1484
+Figure 8. Same as Figure 7 (top) but adopting Υ? = 0.8 M /L .       Athanassoula, E. 1984, Phys. Rep., 114, 319
+This value of Υ? gives unphysical results for high-mass galaxies.   Barbieri, C. V., Fraternali, F., Oosterloo, T., et al. 2005, A&A,
+                                                                      439, 947
+(Sackett 1997), the mean maximum-disk value of Υ? is                Battaglia, G., Fraternali, F., Oosterloo, T., & Sancisi, R. 2006,
+∼0.5 M /L for bright galaxies.                                        A&A, 447, 49
+  If the assumed value of Υ? is too low (like 0.2 M /L ),           Begeman, K. G. 1987, PhD thesis, University of Groningen
+we find some strange results:                                       Begeman, K. G., Broeils, A. H., & Sanders, R. H. 1991, MNRAS,
+                                                                      249, 523
+    1. The fgas − log(L[3.6] ) relation shows a flattening at       Begum, A., & Chengalur, J. N. 2004, A&A, 424, 509
+                                                                    Begum, A., Chengalur, J. N., & Hopp, U. 2003, New A, 8, 267
+       the low-luminosity end, implying that dwarf irregu-          Bell, E. F., & de Jong, R. S. 2001, ApJ, 550, 212
+       lars are extremely gas-dominated (fgas ≃ 0.8−1.0).           Bershady, M. A., Verheijen, M. A. W., Swaters, R. A., et al.
+                                                                      2010a, ApJ, 716, 198
+    2. Several spiral galaxies (including Sa-Sb types)              Bershady, M. A., Verheijen, M. A. W., Westfall, K. B., et al.
+       would be gas-dominated (fgas & 0.5). It would                  2010b, ApJ, 716, 234
+       then be unclear how these spiral galaxies could sus-         Blais-Ouellette, S., Amram, P., & Carignan, C. 2001, AJ, 121,
+                                                                      1952
+       tain stellar bars and grand-design spiral patterns in        Blais-Ouellette, S., Amram, P., Carignan, C., & Swaters, R. 2004,
+       such gas-dominated disks.                                      A&A, 420, 147
+                                                                    Blais-Ouellette, S., Carignan, C., Amram, P., & Côté, S. 1999,
+    3. The ratio Vbar /Vobs would show a parabolic trend              AJ, 118, 2123
+       with surface brightness. Disk-dominated galax-               Boomsma, R., Oosterloo, T. A., Fraternali, F., van der Hulst,
+       ies of intermediate surface brightnesses would be              J. M., & Sancisi, R. 2008, A&A, 490, 555
+                                                                    Bosma, A. 1981, AJ, 86, 1825
+       more submaximal than gas-dominated LSB dwarfs                Broeils, A. H. 1992, PhD thesis, University of Groningen
+       as well as bulge-dominated HSB spirals.                      Broeils, A. H., & Rhee, M.-H. 1997, A&A, 324, 877
+                                                                    Bundy, K., Bershady, M. A., Law, D. R., et al. 2015, ApJ, 798, 7
+  A value of Υ? = 0.2 M /L at [3.6] (∼0.26 M /L                     Cappellari, M., McDermid, R. M., Alatalo, K., et al. 2013,
+in the K-band) is comparable to the results of the DMS                MNRAS, 432, 1862
+(Martinsson et al. 2013; Swaters et al. 2014). Hence,               Carignan, C., & Beaulieu, S. 1989, ApJ, 347, 760
+                                                                    Casertano, S. 1983, MNRAS, 203, 735
+one may wonder whether there are some systematics                   Chemin, L., Carignan, C., Drouin, N., & Freeman, K. C. 2006,
+in the DMS or we should change our general view of                    AJ, 132, 2527
+the composition of galaxy disks. A possible solution                Chung, A., van Gorkom, J. H., Kenney, J. D. P., Crowl, H., &
+to this controversy has been offered by Aniyan et al.                 Vollmer, B. 2009, AJ, 138, 1741
+(2016). They pointed out that the scale-heights from                Côté, S., Carignan, C., & Freeman, K. C. 2000, AJ, 120, 3027
+                                                                    Daigle, O., Carignan, C., Amram, P., et al. 2006, MNRAS, 367,
+the DMS are representative of old stellar populations,                469
+whereas the vertical velocity dispersions come from                 de Blok, W. J. G. 1997, PhD thesis, Kapteyn Astronomical
+integrated light measurements containing contributions                Institute, Groningen, The Netherlands
+from K-giants of different ages. In the solar vicinity,             de Blok, W. J. G., & Bosma, A. 2002, A&A, 385, 816
+Aniyan et al. (2016) find that young K-giants have                  de Blok, W. J. G., & McGaugh, S. S. 1997, MNRAS, 290, 533
+                                                                    de Blok, W. J. G., McGaugh, S. S., & Rubin, V. C. 2001, AJ,
+significantly smaller velocity dispersion and scale-height            122, 2396
+than old K-giants, hence the DMS may have system-                   de Blok, W. J. G., McGaugh, S. S., & van der Hulst, J. M. 1996,
+atically underestimated the disk surface densities by a               MNRAS, 283, 18
+factor of ∼2 due to the combination of light-integrated             de Blok, W. J. G., Walter, F., Brinks, E., et al. 2008, AJ, 136,
+velocity dispersions from multiple stellar populations                2648
+                                                                    de Vaucouleurs, G., de Vaucouleurs, A., Corwin, Jr., H. G., et al.
+and scale-heights from old stellar populations. If true,              1991, Third Reference Catalogue of Bright Galaxies.
+this would give Υ? ≃ 0.4 − 0.5 M /L in agreement                    den Heijer, M., Oosterloo, T. A., Serra, P., et al. 2015, A&A, 581,
+with stellar population synthesis models (McGaugh &                   A98
+14
+
+Di Cintio, A., & Lelli, F. 2016, MNRAS, 456, L127                       Noordermeer, E., van der Hulst, J. M., Sancisi, R., Swaters, R. S.,
+Dicaire, I., Carignan, C., Amram, P., et al. 2008, MNRAS, 385,            & van Albada, T. S. 2007, MNRAS, 376, 1513
+  553                                                                   Oguri, M., Rusu, C. E., & Falco, E. E. 2014, MNRAS, 439, 2494
+Elson, E. C., de Blok, W. J. G., & Kraan-Korteweg, R. C. 2010,          Oh, S.-H., de Blok, W. J. G., Walter, F., Brinks, E., & Kennicutt,
+  MNRAS, 404, 2061                                                        Jr., R. C. 2008, AJ, 136, 2761
+Erwin, P., Pohlen, M., & Beckman, J. E. 2008, AJ, 135, 20               Oh, S.-H., Hunter, D. A., Brinks, E., et al. 2015, AJ, 149, 180
+Eskew, M., Zaritsky, D., & Meidt, S. 2012, AJ, 143, 139                 Parodi, B. R., Saha, A., Sandage, A., & Tammann, G. A. 2000,
+Frank, B. S., de Blok, W. J. G., Walter, F., Leroy, A., &                 ApJ, 540, 634
+  Carignan, C. 2016, AJ, 151, 94                                        Portinari, L., Sommer-Larsen, J., & Tantalo, R. 2004, MNRAS,
+Fraternali, F., Sancisi, R., & Kamphuis, P. 2011, A&A, 531, A64           347, 691
+Fraternali, F., van Moorsel, G., Sancisi, R., & Oosterloo, T. 2002,     Richards, E. E., van Zee, L., Barnes, K. L., et al. 2015, MNRAS,
+  AJ, 123, 3124                                                           449, 3981
+Freeman, K. C. 1970, ApJ, 160, 811                                      Roelfsema, P. R., & Allen, R. J. 1985, A&A, 146, 213
+Garcı́a-Lorenzo, B., Márquez, I., Barrera-Ballesteros, J. K., et al.   Rubin, V. C., Thonnard, N., & Ford, Jr., W. K. 1978, ApJL, 225,
+  2015, A&A, 573, A59                                                     L107
+Gentile, G., Salucci, P., Klein, U., & Granato, G. L. 2007,             Sackett, P. D. 1997, ApJ, 483, 103
+  MNRAS, 375, 199                                                       Sancisi, R. 2004, in IAU Symposium, Vol. 220, Dark Matter in
+Gentile, G., Salucci, P., Klein, U., Vergani, D., & Kalberla, P.          Galaxies, ed. S. Ryder, D. Pisano, M. Walker, & K. Freeman,
+  2004, MNRAS, 351, 903                                                   233
+Hallenbeck, G., Huang, S., Spekkens, K., et al. 2014, AJ, 148, 69       Sanders, R. H. 1996, ApJ, 473, 117
+Jacobs, B. A., Rizzi, L., Tully, R. B., et al. 2009, AJ, 138, 332       Sanders, R. H., & Verheijen, M. A. W. 1998, ApJ, 503, 97
+Katz, H., Lelli, F., McGaugh, S. S., et al. 2016, ArXiv e-prints,       Schombert, J. 2011, ARCHANGEL: Galaxy Photometry System,
+  arXiv:1605.05971                                                        Astrophysics Source Code Library, ascl:1107.011
+Kepley, A. A., Wilcots, E. M., Hunter, D. A., & Nordgren, T.            Schombert, J., Maciel, T., & McGaugh, S. 2011, Advances in
+  2007, AJ, 133, 2242                                                     Astronomy, 2011, 143698
+Khoperskov, S. A., & Bertin, G. 2015, Journal of Plasma Physics,        Schombert, J., & McGaugh, S. 2014a, PASA, 31, 36
+  81, 495810607                                                         Schombert, J. M. 2006, AJ, 131, 296
+Kormendy, J., & Kennicutt, Jr., R. C. 2004, ARA&A, 42, 603              Schombert, J. M., Bothun, G. D., Schneider, S. E., & McGaugh,
+Kregel, M., van der Kruit, P. C., & de Grijs, R. 2002, MNRAS,             S. S. 1992, AJ, 103, 1107
+  334, 646                                                              Schombert, J. M., & McGaugh, S. 2014b, PASA, 31, 11
+Kuzio de Naray, R., McGaugh, S. S., & de Blok, W. J. G. 2008,           Serra, P., Oosterloo, T., Morganti, R., et al. 2012, MNRAS, 422,
+  ApJ, 676, 920                                                           1835
+Kuzio de Naray, R., McGaugh, S. S., de Blok, W. J. G., &                Sheth, K., Regan, M., Hinz, J. L., et al. 2010, PASP, 122, 1397
+  Bosma, A. 2006, ApJS, 165, 461                                        Simon, J. D., Bolatto, A. D., Leroy, A., & Blitz, L. 2003, ApJ,
+Lange, R., Driver, S. P., Robotham, A. S. G., et al. 2015,                596, 957
+  MNRAS, 447, 2603                                                      Sorce, J. G., Courtois, H. M., Sheth, K., & Tully, R. B. 2013a,
+Lelli, F. 2013, PhD thesis, Kapteyn Astronomical Institute,               MNRAS, 433, 751
+  University of Groningen                                               Sorce, J. G., Courtois, H. M., Tully, R. B., et al. 2013b, ApJ, 765,
+Lelli, F., Fraternali, F., & Sancisi, R. 2010, A&A, 516, A11              94
+Lelli, F., McGaugh, S. S., & Schombert, J. M. 2016, ApJL, 816,          Spekkens, K., & Giovanelli, R. 2006, AJ, 132, 1426
+  L14                                                                   Swaters, R. A. 1999, PhD thesis, , Rijksuniversiteit Groningen,
+Lelli, F., Verheijen, M., & Fraternali, F. 2014, A&A, 566, A71            (1999)
+Lelli, F., Verheijen, M., Fraternali, F., & Sancisi, R. 2012a, A&A,     Swaters, R. A., & Balcells, M. 2002, A&A, 390, 863
+  537, A72                                                              Swaters, R. A., Bershady, M. A., Martinsson, T. P. K., et al.
+—. 2012b, A&A, 544, A145                                                  2014, ApJL, 797, L28
+Lin, C. C., & Shu, F. H. 1964, ApJ, 140, 646                            Swaters, R. A., Sancisi, R., van Albada, T. S., & van der Hulst,
+Martinsson, T. P. K., Verheijen, M. A. W., Bershady, M. A.,               J. M. 2009, A&A, 493, 871
+  et al. 2016, A&A, 585, A99                                            —. 2011, ApJ, 729, 118
+Martinsson, T. P. K., Verheijen, M. A. W., Westfall, K. B., et al.      Swaters, R. A., van Albada, T. S., van der Hulst, J. M., &
+  2013, A&A, 557, A131                                                    Sancisi, R. 2002, A&A, 390, 829
+McDonald, M., Courteau, S., & Tully, R. B. 2009a, MNRAS, 393,           Toomre, A. 1981, in Structure and Evolution of Normal Galaxies,
+  628                                                                     ed. S. M. Fall & D. Lynden-Bell, 111–136
+—. 2009b, MNRAS, 394, 2022                                              Trachternach, C., de Blok, W. J. G., McGaugh, S. S., van der
+McGaugh, S. S. 2005a, Physical Review Letters, 95, 171302                 Hulst, J. M., & Dettmar, R.-J. 2009, A&A, 505, 577
+—. 2005b, ApJ, 632, 859                                                 Tully, R. B., & Verheijen, M. A. W. 1997, ApJ, 484, 145
+—. 2012, 143, 40                                                        Tully, R. B., Courtois, H. M., Dolphin, A. E., et al. 2013, AJ,
+—. 2016, ApJ, 816, 42                                                     146, 86
+McGaugh, S. S., Bothun, G. D., & Schombert, J. M. 1995a, AJ,            van Albada, T. S., Bahcall, J. N., Begeman, K., & Sancisi, R.
+  110, 573                                                                1985, ApJ, 295, 305
+McGaugh, S. S., Rubin, V. C., & de Blok, W. J. G. 2001, AJ,             van Zee, L., Haynes, M. P., Salzer, J. J., & Broeils, A. H. 1997,
+  122, 2381                                                               AJ, 113, 1618
+McGaugh, S. S., & Schombert, J. M. 2014, AJ, 148, 77                    Verdes-Montenegro, L., Bosma, A., & Athanassoula, E. 1997,
+—. 2015, ApJ, 802, 18                                                     A&A, 321, 754
+McGaugh, S. S., Schombert, J. M., & Bothun, G. D. 1995b, AJ,            Verheijen, M., & de Blok, E. 1999, Ap&SS, 269, 673
+  109, 2019                                                             Verheijen, M. A. W. 1997, PhD thesis, University of Groningen
+Meidt, S. E., Schinnerer, E., van de Ven, G., et al. 2014, ApJ,         —. 2001, ApJ, 563, 694
+  788, 144                                                              Verheijen, M. A. W., & Sancisi, R. 2001, A&A, 370, 765
+Noordermeer, E. 2006, PhD thesis, Groningen: Rijksuniversiteit          Walsh, W., Staveley-Smith, L., & Oosterloo, T. 1997, AJ, 113,
+—. 2008, MNRAS, 385, 1359                                                 1591
+Noordermeer, E., van der Hulst, J. M., Sancisi, R., Swaters,
+  R. A., & van Albada, T. S. 2005, A&A, 442, 137
+

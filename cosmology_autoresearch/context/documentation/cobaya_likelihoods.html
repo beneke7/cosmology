@@ -1,0 +1,665 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" />
+  <meta name="readthedocs-addons-api-version" content="1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmological theory codes and likelihoods &mdash; cobaya 3.6.2 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+    <link rel="shortcut icon" href="_static/cobaya.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=c0c9fa11"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="_static/js/versions.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic cosmology runs" href="cosmo_basic_runs.html" />
+    <link rel="prev" title="Installing cosmological codes and data" href="installation_cosmo.html" /> 
+<script async type="text/javascript" src="/_/static/javascript/readthedocs-addons.js"></script><meta name="readthedocs-project-slug" content="cobaya" /><meta name="readthedocs-version-slug" content="latest" /><meta name="readthedocs-resolver-filename" content="/cosmo_theories_likes.html" /><meta name="readthedocs-http-status" content="200" /></head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            cobaya
+              <img src="_static/cobaya_clear.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="switch-menus">
+                <div class="version-switch"></div>
+                <div class="language-switch"></div>
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Installation and quickstart</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installing cobaya</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Quickstart example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_advanced.html">Advanced example</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">General topics and components</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="input.html">Input and invocation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="output.html">Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="params_prior.html">Parameters and priors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models: finer interaction with Cobaya’s pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihoods.html">Likelihoods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood_one.html"><code class="docutils literal notranslate"><span class="pre">one</span></code> likelihood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood_gaussian_mixture.html"><code class="docutils literal notranslate"><span class="pre">gaussian_mixture</span></code> likelihood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theories_and_dependencies.html">Creating theory classes and dependencies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampler.html">Samplers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampler_evaluate.html"><code class="docutils literal notranslate"><span class="pre">evaluate</span></code> sampler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampler_mcmc.html"><code class="docutils literal notranslate"><span class="pre">mcmc</span></code> sampler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampler_polychord.html"><code class="docutils literal notranslate"><span class="pre">polychord</span></code> sampler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sampler_minimize.html"><code class="docutils literal notranslate"><span class="pre">minimize</span></code> sampler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="post.html">Importance reweighting and general <code class="docutils literal notranslate"><span class="pre">post</span></code>-processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cosmology!</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation_cosmo.html">Installing cosmological codes and data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cosmological theory codes and likelihoods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cosmological-theory-code">Cosmological theory code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#theories.cosmo.BoltzmannBase"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.initialize"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.initialize_with_params"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.initialize_with_params()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_allow_agnostic"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_allow_agnostic()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_param"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_param()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.must_provide"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.must_provide()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.requested"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.requested()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.check_no_repeated_input_extra"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.check_no_repeated_input_extra()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Cl"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_Cl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_unlensed_Cl"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_unlensed_Cl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_lensed_scal_Cl"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_lensed_scal_Cl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Hubble"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_Hubble()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Omega_b"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_Omega_b()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Omega_cdm"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_Omega_cdm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Omega_nu_massive"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_Omega_nu_massive()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_angular_diameter_distance"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_angular_diameter_distance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_angular_diameter_distance_2"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_angular_diameter_distance_2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_comoving_radial_distance"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_comoving_radial_distance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Pk_interpolator"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_Pk_interpolator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Pk_grid"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_Pk_grid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_sigma_R"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_sigma_R()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_source_Cl"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_source_Cl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_sigma8_z"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_sigma8_z()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_fsigma8"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_fsigma8()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_auto_covmat"><code class="docutils literal notranslate"><span class="pre">BoltzmannBase.get_auto_covmat()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#theories.cosmo.PowerSpectrumInterpolator"><code class="docutils literal notranslate"><span class="pre">PowerSpectrumInterpolator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.PowerSpectrumInterpolator.input_kmin"><code class="docutils literal notranslate"><span class="pre">PowerSpectrumInterpolator.input_kmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.PowerSpectrumInterpolator.input_kmax"><code class="docutils literal notranslate"><span class="pre">PowerSpectrumInterpolator.input_kmax</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.PowerSpectrumInterpolator.kmin"><code class="docutils literal notranslate"><span class="pre">PowerSpectrumInterpolator.kmin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.PowerSpectrumInterpolator.kmax"><code class="docutils literal notranslate"><span class="pre">PowerSpectrumInterpolator.kmax</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.PowerSpectrumInterpolator.check_ranges"><code class="docutils literal notranslate"><span class="pre">PowerSpectrumInterpolator.check_ranges()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.PowerSpectrumInterpolator.P"><code class="docutils literal notranslate"><span class="pre">PowerSpectrumInterpolator.P()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#theories.cosmo.PowerSpectrumInterpolator.logP"><code class="docutils literal notranslate"><span class="pre">PowerSpectrumInterpolator.logP()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cosmological-theory-code-inheritance">Cosmological theory code inheritance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cosmo_basic_runs.html">Basic cosmology runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmo_troubleshooting.html">Troubleshooting in cosmological runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmo_model.html">Using the <code class="docutils literal notranslate"><span class="pre">model</span></code> wrapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmo_external_likelihood.html">Creating your own cosmological likelihood</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cosmo_external_likelihood_class.html">Creating your own cosmological likelihood class</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cosmological theory codes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="theory_camb.html">CAMB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory_class.html">CLASS (<code class="docutils literal notranslate"><span class="pre">classy</span></code>)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Cosmological likelihoods</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="likelihood_H0.html">Local measurement of <em>H</em><sub>0</sub></a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood_planck.html">CMB from Planck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood_bk.html">CMB from BICEP/Keck XIII October 2021</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood_des.html">Clustering and weak lensing from DES Y1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood_bao.html">Baryonic Acoustic Oscillations &amp; Redshift Distortions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood_sn.html">Type Ia Supernovae</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood_external.html">External likelihoods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="likelihood_external.html#list-of-external-packages">List of external packages</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Running on clusters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="run_job.html">Submitting and running jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_job.html#job-script-templates">Job script templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_job.html#optional-arguments">Optional arguments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_job.html#job-control">Job control</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Grids of runs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="grids.html">Running grids of jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grids.html#analysing-grid-results">Analysing grid results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grids.html#tables-of-grid-results">Tables of grid results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grids.html#exporting-grid-results">Exporting grid results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grids.html#grid-script-parameters">Grid script parameters</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="devel.html">Development notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="component.html">Base components</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inheritance.html">Core class structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="llm_context.html">Documentation for LLM Context</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">cobaya</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Cosmological theory codes and likelihoods</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cosmo_theories_likes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cosmological-theory-codes-and-likelihoods">
+<h1>Cosmological theory codes and likelihoods<a class="headerlink" href="#cosmological-theory-codes-and-likelihoods" title="Link to this heading"></a></h1>
+<p>Models in Cosmology are usually split in two: <span class="math notranslate nohighlight">\(\mathcal{M}=\mathcal{T}+\mathcal{E}\)</span>, where</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathcal{T}\)</span>, the <em>theoretical</em> model, is used to compute observable quantities <span class="math notranslate nohighlight">\(\mathcal{O}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal{E}\)</span>, the <em>experimental</em> model, accounts for instrumental errors, foregrounds… when comparing the theoretical observable with some data <span class="math notranslate nohighlight">\(\mathcal{D}\)</span>.</p></li>
+</ul>
+<p>In practice the theoretical model is encapsulated in one or more <strong>theory codes</strong> (<a class="reference internal" href="theory_class.html"><span class="doc">CLASS</span></a>, <a class="reference internal" href="theory_camb.html"><span class="doc">CAMB</span></a>…) and the experimental model in a <strong>likelihood</strong>, which gives the probability of the data being a realization of the given observable in the context of the experiment:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L}\left[\mathcal{D}\,|\,\mathcal{M}\right] =
+\mathcal{L}\left[\mathcal{D}\,|\,\mathcal{O},\mathcal{E}\right]\]</div>
+<p>Each iteration of a sampler reproduces the model using the following steps:</p>
+<ol class="arabic simple">
+<li><p>A new set of theory+experimental parameters is proposed by the sampler.</p></li>
+<li><p>The theory parameters are passed to the theory codes, which compute one or more observables.</p></li>
+<li><p>The experimental parameters are passed to each of the likelihoods, which in turn ask the theory code for the current value of the observables they need, and use all of that to compute a log-probability of the data.</p></li>
+</ol>
+<p><strong>cobaya</strong> wraps the most popular cosmological codes under a single interface, documented below. The codes themselves are documented in the next sections, followed by the internal likelihoods included in <strong>cobaya</strong>.</p>
+<section id="cosmological-theory-code">
+<h2>Cosmological theory code<a class="headerlink" href="#cosmological-theory-code" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">theories.cosmo.</span></span><span class="sig-name descname"><span class="pre">BoltzmannBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">mappingproxy({})</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packages_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initialize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standalone</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase" title="Link to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.initialize">
+<span class="sig-name descname"><span class="pre">initialize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.initialize" title="Link to this definition"></a></dt>
+<dd><p>Initializes the class (called from __init__, before other initializations).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.initialize_with_params">
+<span class="sig-name descname"><span class="pre">initialize_with_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.initialize_with_params" title="Link to this definition"></a></dt>
+<dd><p>Additional initialization after requirements called and input_params and
+output_params have been assigned (but provider and assigned requirements not yet
+set).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_allow_agnostic">
+<span class="sig-name descname"><span class="pre">get_allow_agnostic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_allow_agnostic" title="Link to this definition"></a></dt>
+<dd><p>Whether it is allowed to pass all unassigned input parameters to this
+component (True) or whether parameters must be explicitly specified (False).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True or False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_param">
+<span class="sig-name descname"><span class="pre">get_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_param" title="Link to this definition"></a></dt>
+<dd><p>Interface function for likelihoods and other theory components to get derived
+parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.must_provide">
+<span class="sig-name descname"><span class="pre">must_provide</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">requirements</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.must_provide" title="Link to this definition"></a></dt>
+<dd><p>Specifies the quantities that this Boltzmann code is requested to compute.</p>
+<p>Typical requisites in Cosmology (as keywords, case-insensitive):</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Cl={...}</span></code>: CMB lensed power spectra, as a dictionary <code class="docutils literal notranslate"><span class="pre">{[spectrum]:</span>
+<span class="pre">l_max}</span></code>, where the possible spectra are combinations of <code class="docutils literal notranslate"><span class="pre">&quot;t&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;e&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;p&quot;</span></code> (lensing potential). Get with <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Cl" title="theories.cosmo.BoltzmannBase.get_Cl"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_Cl()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unlensed_Cl={...}</span></code>: CMB unlensed power spectra, as a dictionary
+<code class="docutils literal notranslate"><span class="pre">{[spectrum]:</span> <span class="pre">l_max}</span></code>, where the possible spectra are combinations of
+<code class="docutils literal notranslate"><span class="pre">&quot;t&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;e&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code>. Get with <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_unlensed_Cl" title="theories.cosmo.BoltzmannBase.get_unlensed_Cl"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_unlensed_Cl()</span></code></a>.</p></li>
+<li><p><strong>[BETA: CAMB only; notation may change!]</strong> <code class="docutils literal notranslate"><span class="pre">source_Cl={...}</span></code>:
+<span class="math notranslate nohighlight">\(C_\ell\)</span> of given sources with given windows, e.g.:
+<code class="docutils literal notranslate"><span class="pre">source_name:</span> <span class="pre">{&quot;function&quot;:</span> <span class="pre">&quot;spline&quot;|&quot;gaussian&quot;,</span> <span class="pre">[source_args]</span></code>;
+for now, <code class="docutils literal notranslate"><span class="pre">[source_args]</span></code> follows the notation of <a class="reference external" href="https://camb.readthedocs.io/en/latest/sources.html">CAMBSources</a>.
+It can also take <code class="docutils literal notranslate"><span class="pre">&quot;lmax&quot;:</span> <span class="pre">[int]</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;limber&quot;:</span> <span class="pre">True</span></code> if Limber approximation
+desired, and <code class="docutils literal notranslate"><span class="pre">&quot;non_linear&quot;:</span> <span class="pre">True</span></code> if non-linear contributions requested.
+Get with <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_source_Cl" title="theories.cosmo.BoltzmannBase.get_source_Cl"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_source_Cl()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Pk_interpolator={...}</span></code>: Matter power spectrum interpolator in <span class="math notranslate nohighlight">\((z, k)\)</span>.
+Takes <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;:</span> <span class="pre">[list_of_evaluated_redshifts]</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;k_max&quot;:</span> <span class="pre">[k_max]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;nonlinear&quot;:</span> <span class="pre">[True|False]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;vars_pairs&quot;:</span> <span class="pre">[[&quot;delta_tot&quot;,</span> <span class="pre">&quot;delta_tot&quot;],</span> <span class="pre">[&quot;Weyl&quot;,</span> <span class="pre">&quot;Weyl&quot;],</span> <span class="pre">[...]]}</span></code>.
+Notice that <code class="docutils literal notranslate"><span class="pre">k_min</span></code> cannot be specified. To reach a lower one, use
+<code class="docutils literal notranslate"><span class="pre">extra_args</span></code> in CAMB to increase <code class="docutils literal notranslate"><span class="pre">accuracyboost</span></code> and <code class="docutils literal notranslate"><span class="pre">TimeStepBoost</span></code>, or
+in CLASS to decrease <code class="docutils literal notranslate"><span class="pre">k_min_tau0</span></code>. The method <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Pk_interpolator" title="theories.cosmo.BoltzmannBase.get_Pk_interpolator"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_Pk_interpolator()</span></code></a> to
+retrieve the interpolator admits extrapolation limits <code class="docutils literal notranslate"><span class="pre">extrap_[kmax|kmin]</span></code>.
+It is recommended to use <code class="docutils literal notranslate"><span class="pre">extrap_kmin</span></code> to reach the desired <code class="docutils literal notranslate"><span class="pre">k_min</span></code>, and
+increase precision parameters only as much as necessary to improve over the
+interpolation. All <span class="math notranslate nohighlight">\(k\)</span> values should be in units of
+<span class="math notranslate nohighlight">\(1/\mathrm{Mpc}\)</span>.</p>
+<p>Non-linear contributions are included by default. Note that the non-linear
+setting determines whether non-linear corrections are calculated; the
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Pk_interpolator" title="theories.cosmo.BoltzmannBase.get_Pk_interpolator"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_Pk_interpolator()</span></code></a> method also has a non-linear argument to specify if
+you want the linear or non-linear spectrum returned (to have both linear and
+non-linear spectra available request a tuple <code class="docutils literal notranslate"><span class="pre">(False,True)</span></code> for the non-linear
+argument).</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Pk_grid={...}</span></code>: similar to <code class="docutils literal notranslate"><span class="pre">Pk_interpolator</span></code> except that rather than
+returning a bicubic spline object it returns the raw power spectrum grid as
+a <code class="docutils literal notranslate"><span class="pre">(k,</span> <span class="pre">z,</span> <span class="pre">P(z,k))</span></code> set of arrays. Get with <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Pk_grid" title="theories.cosmo.BoltzmannBase.get_Pk_grid"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_Pk_grid()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sigma_R={...}</span></code>: RMS linear fluctuation in spheres of radius <span class="math notranslate nohighlight">\(R\)</span> at
+redshifts <span class="math notranslate nohighlight">\(z\)</span>. Takes <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;:</span> <span class="pre">[list_of_evaluated_redshifts]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;k_max&quot;:</span> <span class="pre">[k_max]</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;vars_pairs&quot;:</span> <span class="pre">[[&quot;delta_tot&quot;,</span> <span class="pre">&quot;delta_tot&quot;],</span>&#160; <span class="pre">[...]]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;R&quot;:</span> <span class="pre">[list_of_evaluated_R]</span></code>. Note that <span class="math notranslate nohighlight">\(R\)</span> is in <span class="math notranslate nohighlight">\(\mathrm{Mpc}\)</span>,
+not <span class="math notranslate nohighlight">\(h^{-1}\,\mathrm{Mpc}\)</span>. Get with <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_sigma_R" title="theories.cosmo.BoltzmannBase.get_sigma_R"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_sigma_R()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Hubble={'z':</span> <span class="pre">[z_1,</span> <span class="pre">...]}</span></code>: Hubble rates at the requested redshifts.
+Get it with <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Hubble" title="theories.cosmo.BoltzmannBase.get_Hubble"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_Hubble()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Omega_b={'z':</span> <span class="pre">[z_1,</span> <span class="pre">...]}</span></code>: Baryon density parameter at the requested
+redshifts. Get it with <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Omega_b" title="theories.cosmo.BoltzmannBase.get_Omega_b"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_Omega_b()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Omega_cdm={'z':</span> <span class="pre">[z_1,</span> <span class="pre">...]}</span></code>: Cold dark matter density parameter at the
+requested redshifts. Get it with <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Omega_cdm" title="theories.cosmo.BoltzmannBase.get_Omega_cdm"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_Omega_cdm()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Omega_nu_massive={'z':</span> <span class="pre">[z_1,</span> <span class="pre">...]}</span></code>: Massive neutrinos’ density parameter at
+the requested redshifts. Get it with
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Omega_nu_massive" title="theories.cosmo.BoltzmannBase.get_Omega_nu_massive"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_Omega_nu_massive()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">angular_diameter_distance={'z':</span> <span class="pre">[z_1,</span> <span class="pre">...]}</span></code>: Physical angular
+diameter distance to the redshifts requested. Get it with
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_angular_diameter_distance" title="theories.cosmo.BoltzmannBase.get_angular_diameter_distance"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_angular_diameter_distance()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">angular_diameter_distance_2={'z_pairs':</span> <span class="pre">[(z_1a,</span> <span class="pre">z_1b),</span> <span class="pre">(z_2a,</span> <span class="pre">z_2b)...]}</span></code>:
+Physical angular diameter distance between the pairs of redshifts requested.
+If a 1d array of redshifts is passed as <cite>z_pairs</cite>, all possible combinations
+of two are computed and stored (not recommended if only a subset is needed).
+Get it with <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_angular_diameter_distance_2" title="theories.cosmo.BoltzmannBase.get_angular_diameter_distance_2"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_angular_diameter_distance_2()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">comoving_radial_distance={'z':</span> <span class="pre">[z_1,</span> <span class="pre">...]}</span></code>: Comoving radial distance
+from us to the redshifts requested. Get it with
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_comoving_radial_distance" title="theories.cosmo.BoltzmannBase.get_comoving_radial_distance"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_comoving_radial_distance()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sigma8_z={'z':</span> <span class="pre">[z_1,</span> <span class="pre">...]}</span></code>: Amplitude of rms fluctuations
+<span class="math notranslate nohighlight">\(\sigma_8\)</span> at the redshifts requested. Get it with
+<code class="xref py py-func docutils literal notranslate"><span class="pre">get_sigma8()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fsigma8={'z':</span> <span class="pre">[z_1,</span> <span class="pre">...]}</span></code>: Structure growth rate
+<span class="math notranslate nohighlight">\(f\sigma_8\)</span> at the redshifts requested. Get it with
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_fsigma8" title="theories.cosmo.BoltzmannBase.get_fsigma8"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_fsigma8()</span></code></a>.</p></li>
+<li><p><strong>Other derived parameters</strong> that are not included in the input but whose
+value the likelihood may need.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.requested">
+<span class="sig-name descname"><span class="pre">requested</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.requested" title="Link to this definition"></a></dt>
+<dd><p>Returns the full set of requested cosmological products and parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.check_no_repeated_input_extra">
+<span class="sig-name descname"><span class="pre">check_no_repeated_input_extra</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.check_no_repeated_input_extra" title="Link to this definition"></a></dt>
+<dd><p>Checks that there are no repeated parameters between input and extra.</p>
+<p>Should be called at initialisation, and at the end of every call to must_provide()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_Cl">
+<span class="sig-name descname"><span class="pre">get_Cl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ell_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'FIRASmuK2'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_Cl" title="Link to this definition"></a></dt>
+<dd><p>Returns a dictionary of lensed total CMB power spectra and the
+lensing potential <code class="docutils literal notranslate"><span class="pre">pp</span></code> power spectrum.</p>
+<p>Set the units with the keyword <code class="docutils literal notranslate"><span class="pre">units=number|'muK2'|'K2'|'FIRASmuK2'|'FIRASK2'</span></code>.
+The default is <code class="docutils literal notranslate"><span class="pre">FIRASmuK2</span></code>, which returns CMB <span class="math notranslate nohighlight">\(C_\ell\)</span>’s in
+FIRAS-calibrated <span class="math notranslate nohighlight">\(\mu K^2\)</span>, i.e. scaled by a fixed factor of
+<span class="math notranslate nohighlight">\((2.7255\cdot 10^6)^2\)</span> (except for the lensing potential power spectrum,
+which is always unitless).
+The <code class="docutils literal notranslate"><span class="pre">muK2</span></code> and <code class="docutils literal notranslate"><span class="pre">K2</span></code> options use the model’s CMB temperature.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">ell_factor=True</span></code> (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>), multiplies the spectra by
+<span class="math notranslate nohighlight">\(\ell(\ell+1)/(2\pi)\)</span> (or by <span class="math notranslate nohighlight">\([\ell(\ell+1)]^2/(2\pi)\)</span> in the case of
+the lensing potential <code class="docutils literal notranslate"><span class="pre">pp</span></code> spectrum, and <span class="math notranslate nohighlight">\([\ell(\ell+1)]^{3/2}/(2\pi)\)</span> for
+the cross spectra <code class="docutils literal notranslate"><span class="pre">tp</span></code> and <code class="docutils literal notranslate"><span class="pre">ep</span></code>).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_unlensed_Cl">
+<span class="sig-name descname"><span class="pre">get_unlensed_Cl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ell_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'FIRASmuK2'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_unlensed_Cl" title="Link to this definition"></a></dt>
+<dd><p>Returns a dictionary of unlensed CMB power spectra.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">units</span></code> options, see <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Cl" title="theories.cosmo.BoltzmannBase.get_Cl"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_Cl()</span></code></a>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">ell_factor=True</span></code> (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>), multiplies the spectra by
+<span class="math notranslate nohighlight">\(\ell(\ell+1)/(2\pi)\)</span>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_lensed_scal_Cl">
+<span class="sig-name descname"><span class="pre">get_lensed_scal_Cl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ell_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'FIRASmuK2'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_lensed_scal_Cl" title="Link to this definition"></a></dt>
+<dd><p>Returns a dictionary of lensed scalar CMB power spectra and the lensing
+potential <code class="docutils literal notranslate"><span class="pre">pp</span></code> power spectrum.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">units</span></code> options, see <a class="reference internal" href="#theories.cosmo.BoltzmannBase.get_Cl" title="theories.cosmo.BoltzmannBase.get_Cl"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_Cl()</span></code></a>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">ell_factor=True</span></code> (default: <code class="docutils literal notranslate"><span class="pre">False</span></code>), multiplies the spectra by
+<span class="math notranslate nohighlight">\(\ell(\ell+1)/(2\pi)\)</span>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_Hubble">
+<span class="sig-name descname"><span class="pre">get_Hubble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'km/s/Mpc'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_Hubble" title="Link to this definition"></a></dt>
+<dd><p>Returns the Hubble rate at the given redshift(s) <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+<p>The redshifts must be a subset of those requested when
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.must_provide" title="theories.cosmo.BoltzmannBase.must_provide"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_provide()</span></code></a> was called.
+The available units are <code class="docutils literal notranslate"><span class="pre">&quot;km/s/Mpc&quot;</span></code> (i.e. <span class="math notranslate nohighlight">\(cH(\mathrm(Mpc)^{-1})\)</span>) and
+<code class="docutils literal notranslate"><span class="pre">1/Mpc</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_Omega_b">
+<span class="sig-name descname"><span class="pre">get_Omega_b</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_Omega_b" title="Link to this definition"></a></dt>
+<dd><p>Returns the Baryon density parameter at the given redshift(s) <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+<p>The redshifts must be a subset of those requested when
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.must_provide" title="theories.cosmo.BoltzmannBase.must_provide"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_provide()</span></code></a> was called.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_Omega_cdm">
+<span class="sig-name descname"><span class="pre">get_Omega_cdm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_Omega_cdm" title="Link to this definition"></a></dt>
+<dd><p>Returns the Cold Dark Matter density parameter at the given redshift(s) <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+<p>The redshifts must be a subset of those requested when
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.must_provide" title="theories.cosmo.BoltzmannBase.must_provide"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_provide()</span></code></a> was called.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_Omega_nu_massive">
+<span class="sig-name descname"><span class="pre">get_Omega_nu_massive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_Omega_nu_massive" title="Link to this definition"></a></dt>
+<dd><p>Returns the Massive neutrinos’ density parameter at the given redshift(s) <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+<p>The redshifts must be a subset of those requested when
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.must_provide" title="theories.cosmo.BoltzmannBase.must_provide"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_provide()</span></code></a> was called.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_angular_diameter_distance">
+<span class="sig-name descname"><span class="pre">get_angular_diameter_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_angular_diameter_distance" title="Link to this definition"></a></dt>
+<dd><p>Returns the physical angular diameter distance in <span class="math notranslate nohighlight">\(\mathrm{Mpc}\)</span> to the
+given redshift(s) <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+<p>The redshifts must be a subset of those requested when
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.must_provide" title="theories.cosmo.BoltzmannBase.must_provide"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_provide()</span></code></a> was called.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_angular_diameter_distance_2">
+<span class="sig-name descname"><span class="pre">get_angular_diameter_distance_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z_pairs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_angular_diameter_distance_2" title="Link to this definition"></a></dt>
+<dd><p>Returns the physical angular diameter distance between pairs of redshifts
+<cite>z_pairs</cite> in <span class="math notranslate nohighlight">\(\mathrm{Mpc}\)</span>.</p>
+<p>The redshift pairs must be a subset of those requested when
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.must_provide" title="theories.cosmo.BoltzmannBase.must_provide"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_provide()</span></code></a> was called.</p>
+<p>Return zero for pairs in which <code class="docutils literal notranslate"><span class="pre">z1</span> <span class="pre">&gt;</span> <span class="pre">z2</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_comoving_radial_distance">
+<span class="sig-name descname"><span class="pre">get_comoving_radial_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_comoving_radial_distance" title="Link to this definition"></a></dt>
+<dd><p>Returns the comoving radial distance in <span class="math notranslate nohighlight">\(\mathrm{Mpc}\)</span> to the given
+redshift(s) <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+<p>The redshifts must be a subset of those requested when
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.must_provide" title="theories.cosmo.BoltzmannBase.must_provide"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_provide()</span></code></a> was called.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_Pk_interpolator">
+<span class="sig-name descname"><span class="pre">get_Pk_interpolator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_pair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('delta_tot',</span> <span class="pre">'delta_tot')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonlinear</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrap_kmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrap_kmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_Pk_interpolator" title="Link to this definition"></a></dt>
+<dd><p>Get a <span class="math notranslate nohighlight">\(P(z,k)\)</span> bicubic interpolation object
+(<a class="reference internal" href="#theories.cosmo.PowerSpectrumInterpolator" title="theories.cosmo.PowerSpectrumInterpolator"><code class="xref py py-class docutils literal notranslate"><span class="pre">PowerSpectrumInterpolator</span></code></a>).</p>
+<p>In the interpolator returned, the input <span class="math notranslate nohighlight">\(k\)</span> and resulting
+<span class="math notranslate nohighlight">\(P(z,k)\)</span> are in units of <span class="math notranslate nohighlight">\(1/\mathrm{Mpc}\)</span> and
+<span class="math notranslate nohighlight">\(\mathrm{Mpc}^3\)</span> respectively (not in <span class="math notranslate nohighlight">\(h^{-1}\)</span> units).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>var_pair</strong> – variable pair for power spectrum</p></li>
+<li><p><strong>nonlinear</strong> – non-linear spectrum (default True)</p></li>
+<li><p><strong>extrap_kmin</strong> – use log linear extrapolation from <code class="docutils literal notranslate"><span class="pre">extrap_kmin</span></code> up to min
+<span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+<li><p><strong>extrap_kmax</strong> – use log linear extrapolation beyond max <span class="math notranslate nohighlight">\(k\)</span> computed up
+to <code class="docutils literal notranslate"><span class="pre">extrap_kmax</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#theories.cosmo.PowerSpectrumInterpolator" title="theories.cosmo.PowerSpectrumInterpolator"><code class="xref py py-class docutils literal notranslate"><span class="pre">PowerSpectrumInterpolator</span></code></a> instance.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_Pk_grid">
+<span class="sig-name descname"><span class="pre">get_Pk_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_pair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('delta_tot',</span> <span class="pre">'delta_tot')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonlinear</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_Pk_grid" title="Link to this definition"></a></dt>
+<dd><p>Get  matter power spectrum, e.g. suitable for splining.
+Returned arrays may be bigger or more densely sampled than requested, but will
+include required values.</p>
+<p>In the grid returned, <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(P(z,k)\)</span> are in units of
+<span class="math notranslate nohighlight">\(1/\mathrm{Mpc}\)</span> and <span class="math notranslate nohighlight">\(\mathrm{Mpc}^3\)</span> respectively
+(not in <span class="math notranslate nohighlight">\(h^{-1}\)</span> units), and <span class="math notranslate nohighlight">\(z\)</span> and <span class="math notranslate nohighlight">\(k\)</span> are in
+<strong>ascending</strong> order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nonlinear</strong> – whether the linear or non-linear spectrum</p></li>
+<li><p><strong>var_pair</strong> – which power spectrum</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">k</span></code>, <code class="docutils literal notranslate"><span class="pre">z</span></code>, <code class="docutils literal notranslate"><span class="pre">Pk</span></code>, where <code class="docutils literal notranslate"><span class="pre">k</span></code> and <code class="docutils literal notranslate"><span class="pre">z</span></code> are 1-d arrays,
+and the 2-d array <code class="docutils literal notranslate"><span class="pre">Pk[i,j]</span></code> is the value of <span class="math notranslate nohighlight">\(P(z,k)\)</span> at <code class="docutils literal notranslate"><span class="pre">z[i]</span></code>,
+<code class="docutils literal notranslate"><span class="pre">k[j]</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_sigma_R">
+<span class="sig-name descname"><span class="pre">get_sigma_R</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_pair</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('delta_tot',</span> <span class="pre">'delta_tot')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_sigma_R" title="Link to this definition"></a></dt>
+<dd><p>Get <span class="math notranslate nohighlight">\(\sigma_R(z)\)</span>, the RMS power in a sphere of radius <span class="math notranslate nohighlight">\(R\)</span> at
+redshift <span class="math notranslate nohighlight">\(z\)</span>.</p>
+<p>Note that <span class="math notranslate nohighlight">\(R\)</span> is in <span class="math notranslate nohighlight">\(\mathrm{Mpc}\)</span>, not <span class="math notranslate nohighlight">\(h^{-1}\,\mathrm{Mpc}\)</span>,
+and <span class="math notranslate nohighlight">\(z\)</span> and <span class="math notranslate nohighlight">\(R\)</span> are returned in <strong>ascending</strong> order.</p>
+<p>You may get back more values than originally requested, but the requested
+<span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(z\)</span> should be in the returned arrays.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>var_pair</strong> – which two fields to use for the RMS power</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">z</span></code>, <code class="docutils literal notranslate"><span class="pre">R</span></code>, <code class="docutils literal notranslate"><span class="pre">sigma_R</span></code>, where <code class="docutils literal notranslate"><span class="pre">z</span></code> and <code class="docutils literal notranslate"><span class="pre">R</span></code> are arrays of computed
+values, and <code class="docutils literal notranslate"><span class="pre">sigma_R[i,j]</span></code> is the value <span class="math notranslate nohighlight">\(\sigma_R(z)\)</span> for
+<code class="docutils literal notranslate"><span class="pre">z[i]</span></code>, <code class="docutils literal notranslate"><span class="pre">R[j]</span></code>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_source_Cl">
+<span class="sig-name descname"><span class="pre">get_source_Cl</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_source_Cl" title="Link to this definition"></a></dt>
+<dd><p>Returns a dict of power spectra of for the computed sources, with keys a tuple of
+sources <code class="docutils literal notranslate"><span class="pre">([source1],</span> <span class="pre">[source2])</span></code>, and an additional key <code class="docutils literal notranslate"><span class="pre">ell</span></code> containing the
+multipoles.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_sigma8_z">
+<span class="sig-name descname"><span class="pre">get_sigma8_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_sigma8_z" title="Link to this definition"></a></dt>
+<dd><p>Present day linear theory root-mean-square amplitude of the matter
+fluctuation spectrum averaged in spheres of radius 8 h^{−1} Mpc.</p>
+<p>The redshifts must be a subset of those requested when
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.must_provide" title="theories.cosmo.BoltzmannBase.must_provide"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_provide()</span></code></a> was called.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_fsigma8">
+<span class="sig-name descname"><span class="pre">get_fsigma8</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_fsigma8" title="Link to this definition"></a></dt>
+<dd><p>Structure growth rate <span class="math notranslate nohighlight">\(f\sigma_8\)</span>, as defined in eq. 33 of
+<a class="reference external" href="https://arxiv.org/pdf/1502.01589.pdf">Planck 2015 results. XIII.
+Cosmological parameters</a>,
+at the given redshift(s) <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p>
+<p>The redshifts must be a subset of those requested when
+<a class="reference internal" href="#theories.cosmo.BoltzmannBase.must_provide" title="theories.cosmo.BoltzmannBase.must_provide"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_provide()</span></code></a> was called.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.BoltzmannBase.get_auto_covmat">
+<span class="sig-name descname"><span class="pre">get_auto_covmat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params_info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">likes_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.BoltzmannBase.get_auto_covmat" title="Link to this definition"></a></dt>
+<dd><p>Tries to get match to a database of existing covariance matrix files for the
+current model and data.</p>
+<p><code class="docutils literal notranslate"><span class="pre">params_info</span></code> should contain preferably the slow parameters only.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="theories.cosmo.PowerSpectrumInterpolator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">theories.cosmo.</span></span><span class="sig-name descname"><span class="pre">PowerSpectrumInterpolator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P_or_logP</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrap_kmin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrap_kmax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logP</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logsign</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.PowerSpectrumInterpolator" title="Link to this definition"></a></dt>
+<dd><p>2D spline interpolation object (scipy.interpolate.RectBivariateSpline)
+to evaluate matter power spectrum as function of z and k.</p>
+<p><em>This class is adapted from CAMB’s own P(k) interpolator, by Antony Lewis;
+it’s mostly interface-compatible with the original.</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> – values of z for which the power spectrum was evaluated.</p></li>
+<li><p><strong>k</strong> – values of k for which the power spectrum was evaluated.</p></li>
+<li><p><strong>P_or_logP</strong> – Values of the power spectrum (or log-values, if logP=True).</p></li>
+<li><p><strong>logP</strong> – if True (default: False), log of power spectrum are given and used
+for the underlying interpolator.</p></li>
+<li><p><strong>logsign</strong> – if logP is True, P_or_logP is log(logsign*Pk)</p></li>
+<li><p><strong>extrap_kmax</strong> – if set, use power law extrapolation beyond kmax up to
+extrap_kmax; useful for tails of integrals.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="theories.cosmo.PowerSpectrumInterpolator.input_kmin">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">input_kmin</span></span><a class="headerlink" href="#theories.cosmo.PowerSpectrumInterpolator.input_kmin" title="Link to this definition"></a></dt>
+<dd><p>Minimum k for the interpolation (not incl. extrapolation range).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="theories.cosmo.PowerSpectrumInterpolator.input_kmax">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">input_kmax</span></span><a class="headerlink" href="#theories.cosmo.PowerSpectrumInterpolator.input_kmax" title="Link to this definition"></a></dt>
+<dd><p>Maximum k for the interpolation (not incl. extrapolation range).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="theories.cosmo.PowerSpectrumInterpolator.kmin">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">kmin</span></span><a class="headerlink" href="#theories.cosmo.PowerSpectrumInterpolator.kmin" title="Link to this definition"></a></dt>
+<dd><p>Minimum k of the interpolator (incl. extrapolation range).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="theories.cosmo.PowerSpectrumInterpolator.kmax">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">kmax</span></span><a class="headerlink" href="#theories.cosmo.PowerSpectrumInterpolator.kmax" title="Link to this definition"></a></dt>
+<dd><p>Maximum k of the interpolator (incl. extrapolation range).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.PowerSpectrumInterpolator.check_ranges">
+<span class="sig-name descname"><span class="pre">check_ranges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.PowerSpectrumInterpolator.check_ranges" title="Link to this definition"></a></dt>
+<dd><p>Checks that we are not trying to extrapolate beyond the interpolator limits.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.PowerSpectrumInterpolator.P">
+<span class="sig-name descname"><span class="pre">P</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.PowerSpectrumInterpolator.P" title="Link to this definition"></a></dt>
+<dd><p>Get the power spectrum at (z,k).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="theories.cosmo.PowerSpectrumInterpolator.logP">
+<span class="sig-name descname"><span class="pre">logP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#theories.cosmo.PowerSpectrumInterpolator.logP" title="Link to this definition"></a></dt>
+<dd><p>Get the log power spectrum at (z,k). (or minus log power spectrum if
+islog and logsign=-1)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="cosmological-theory-code-inheritance">
+<h2>Cosmological theory code inheritance<a class="headerlink" href="#cosmological-theory-code-inheritance" title="Link to this heading"></a></h2>
+<div class="graphviz"><object data="_images/inheritance-6d112715d37592c84e51d0e87fd23ee1095ee174.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">Inheritance diagram of theorys</p></object></div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation_cosmo.html" class="btn btn-neutral float-left" title="Installing cosmological codes and data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cosmo_basic_runs.html" class="btn btn-neutral float-right" title="Basic cosmology runs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026 Jesus Torrado and Antony Lewis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".cosmo-example .alt").hide();
+    $(".cosmo-example .switch").click(function() {
+      $(".cosmo-example .default, .cosmo-example .alt").toggle(400)
+    });
+  });
+</script>
+
+
+</body>
+</html>

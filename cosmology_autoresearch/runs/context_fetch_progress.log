@@ -1,0 +1,40 @@
+[1/39] fetching desi_dr2_mean
+[1/39] desi_dr2_mean: verified_existing (472 bytes)
+[2/39] fetching desi_dr2_cov
+[2/39] desi_dr2_cov: verified_existing (2547 bytes)
+[3/39] fetching sparc_massmodels
+[3/39] sparc_massmodels: verified_existing (110737 bytes)
+[4/39] fetching sparc_photometry
+[4/39] sparc_photometry: verified_existing (131423 bytes)
+[5/39] fetching desi_dr2_bao
+[5/39] desi_dr2_bao: verified_existing (12175089 bytes)
+[6/39] fetching desi_extended_de
+[6/39] desi_extended_de: verified_existing (3479327 bytes)
+[7/39] fetching des_dovekie
+[7/39] des_dovekie: verified_existing (2691260 bytes)
+[8/39] fetching act_dr6
+[8/39] act_dr6: verified_existing (9352354 bytes)
+[9/39] fetching desi_lya_ap
+[9/39] desi_lya_ap: verified_existing (2160430 bytes)
+[10/39] fetching sn_unite
+[10/39] sn_unite: verified_existing (1877829 bytes)
+[11/39] fetching tg_preprint
+[11/39] tg_preprint: verified_existing (1672052 bytes)
+[12/39] fetching sparc_master
+[12/39] sparc_master: verified_existing (2476532 bytes)
+[13/39] fetching des_y6
+[13/39] des_y6: verified_existing (4832597 bytes)
+[14/39] fetching tg_higher_gradient_2026
+[14/39] tg_higher_gradient_2026: downloaded (290116 bytes)
+[21/39] fetching desi_products
+[21/39] desi_products: verified_existing (21099 bytes)
+[22/39] fetching des_dovekie_repo
+[22/39] des_dovekie_repo: verified_existing (274235 bytes)
+[23/39] fetching des_dovekie_docs
+[23/39] des_dovekie_docs: verified_existing (20883 bytes)
+[24/39] fetching sparc_index
+[24/39] sparc_index: verified_existing (7895 bytes)
+[25/39] fetching act_products
+[25/39] act_products: verified_existing (17103 bytes)
+[26/39] fetching cobaya_likelihoods
+[26/39] cobaya_likelihoods: verified_existing (74101 bytes)

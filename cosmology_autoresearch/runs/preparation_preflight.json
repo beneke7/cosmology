@@ -1,0 +1,38 @@
+{
+  "utc": "2026-09-23T20:46:20.619514+00:00",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "logical_cpu_count": 9,
+  "affinity_cpu_count": 9,
+  "physical_memory_bytes": 23109898240,
+  "cgroup_limits": {
+    "cpu.max": "800000 100000",
+    "memory.max": "21474836480"
+  },
+  "free_disk_bytes": 31968059392,
+  "package_versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": null,
+    "torch": null,
+    "jax": null,
+    "jaxlib": null,
+    "cobaya": null,
+    "camb": null,
+    "classy": null,
+    "pymupdf": "1.26.6"
+  },
+  "codex": {
+    "available": false
+  },
+  "gpu": {
+    "available": false
+  },
+  "tools": {
+    "git": "/usr/local/bin/git",
+    "pdftotext": "/usr/bin/pdftotext",
+    "tmux": null
+  },
+  "note": "GPU/CPU visibility does not establish an exclusive allocation. No model availability or CUDA kernel execution was tested."
+}
