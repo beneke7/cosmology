@@ -1,0 +1,22 @@
+{
+  "attempt": 1,
+  "logged_utc": "2026-09-24T22:44:34Z",
+  "status": "failed_result_serialization_after_numerical_scoring",
+  "exit_code": 1,
+  "failure": {
+    "type": "TypeError",
+    "message": "Object of type ndarray is not JSON serializable",
+    "stage": "json.dumps(result) before result.json write",
+    "comparative_result_persisted": false,
+    "scientific_interpretation": "No comparative value is promoted from this attempt; the bounded script reached serialization after computing the declared checks and scores in memory."
+  },
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --seconds 1200 -- .venv/bin/python experiments/dovekie_frozen_shape_cv/conditional_cv.py",
+  "code_sha256": "0a68000435fca6121180920b179bb7c6b355b116a87e851c53f588372a3080d3",
+  "input_provenance": {
+    "hubble_diagram_sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+    "packed_precision_sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+    "bao_profile_result": "experiments/interacting_vacuum_screen/result.json",
+    "dovekie_contract": "work/data_audit4/dovekie_frozen_shape_contract.json"
+  },
+  "disposition": "Fix JSON conversion only, preserve the locked model points, primary folds, edge variants and scoring formulas; rerun once and retain this failed attempt record."
+}

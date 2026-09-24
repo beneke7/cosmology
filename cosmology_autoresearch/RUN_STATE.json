@@ -35,7 +35,11 @@
     "perturbation_closure_audit": "gpt-6-luna/max",
     "ivs_current_source_check": "gpt-6-luna/medium",
     "ivs_early_positivity": "gpt-6-luna/high",
-    "ivs_block_cv": "gpt-6-luna/high"
+    "ivs_block_cv": "gpt-6-luna/high",
+    "dovekie_contract_audit": "gpt-6-luna/max",
+    "dovekie_cv_preflight_and_independent_result_review": "gpt-6-luna/max",
+    "ivs_author_artifacts": "gpt-6-luna/max",
+    "dovekie_ivs_profile_contract": "gpt-6-luna/max"
   },
   "hardware": {
     "logical_and_affinity_cpus": 20,
@@ -98,6 +102,18 @@
         "commit": "d449d1c1bdec897fd64b18dd793699fae5a875e1",
         "report": "work/warden/push-d449d1c.md",
         "recommendation": "Continue the interacting-vacuum lane; first complete identifiability, sign, zero-rate and positivity checks, then calibrate the exact search if useful."
+      },
+      {
+        "event": "commit",
+        "commit": "38e9b72ac174257f949dea8694664f609c8609d3",
+        "report": "work/warden/commit-38e9b72.md",
+        "recommendation": "Continue the planned frozen-BAO-shape Dovekie prediction test; verify precision/covariance block algebra."
+      },
+      {
+        "event": "push",
+        "commit": "38e9b72ac174257f949dea8694664f609c8609d3",
+        "report": "work/warden/push-38e9b72.md",
+        "recommendation": "Continue the frozen-shape Dovekie test; retain the caveat that BAO holdout loss is dominated by one high-z pair."
       }
     ]
   },
@@ -159,12 +175,37 @@
       "status": "complete",
       "utc": "2026-09-24T21:40:21Z",
       "evidence": "MORNING_REPORT.md and NEXT.md updated to include all IVS profile/null/early-positivity/CV evidence and the independent CV PASS. RUN_STATE and all ledger JSON rows validate; the documented unittest suite passes 17/17 (0.525 s, one numerical thread). The proposed next test freezes BAO-fit shapes and conditionally evaluates DES-Dovekie redshift blocks using the full SN covariance and a training-only magnitude intercept; it is planned, not run."
+    },
+    {
+      "id": "dovekie_precision_block_algebra_synthetic",
+      "status": "complete_synthetic_numerical_check",
+      "utc": "2026-09-24T22:10:09Z",
+      "evidence": "work/compute6/precision_block_algebra_check.py (seed 20260924; n=60; four folds; one numerical thread; bounded 30 s command) compares precision-block Schur formulas against explicit covariance-domain calculations, including exact flat-prior intercept-marginal predictive covariance with its rank-one term. All training Schur complements are Cholesky-positive; max training-offset difference 5.55e-17, conditional-mean difference 2.22e-15, conditional-covariance difference 7.77e-16, plug-in conditional chi2 difference 4.27e-14, integrated-intercept predictive-covariance difference 8.88e-16 and predictive chi2 difference 2.84e-14. Synthetic algebra only; no Dovekie scores."
+    },
+    {
+      "id": "dovekie_frozen_shape_conditional_prediction",
+      "status": "complete_independently_reproduced_pass",
+      "utc": "2026-09-24T23:00:00Z",
+      "evidence": "experiments/dovekie_frozen_shape_cv/result.json and independent_review_record.json; data audit work/data_audit4/dovekie_frozen_shape_contract.md; static pre-score review work/compute7/dovekie_cv_preflight_review.md; independent covariance-domain reproduction work/compute8/dovekie_result_independent_review.md/.json. The verified 1820-row DES-Dovekie release maps to pinned upstream blobs; actual covariance is SPD. Exact BAO-only shapes are frozen. Four full-covariance, training-offset-integrated conditional folds sum to delta IVS-LCDM=-4.03659, with the low-z fold=-5.54183 and other three slightly favoring LCDM; six predeclared edge shifts range [-4.11795,-3.04857]. Independent reproduction matches fold scores within 9.1e-13 and variant deltas within 3.1e-12. One serialization-only failed attempt is preserved. Result is descriptive over overlapping folds, not joint evidence; BAO and SN remain separate."
+    },
+    {
+      "id": "ivs_author_artifact_probe",
+      "status": "complete_source_trail_probe",
+      "utc": "2026-09-24T22:44:34Z",
+      "evidence": "work/literature3/ivs_author_artifact_probe.md and .json. Exact arXiv v1 PDF is byte-identical to local cached PDF (4,524,530 bytes, SHA-256 0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c); source bundle and paper-cited wgcosmo tree contain no modified-CAMB patch/base commit, complete IVS Cobaya config or explicit perturbation IC. Faithful author-run reproduction remains blocked in checked primary sources."
+    },
+    {
+      "id": "dovekie_ivs_profile_contract",
+      "status": "complete_root_reviewed_pre_fit_gate",
+      "utc": "2026-09-24T23:00:00Z",
+      "evidence": "work/theory7/dovekie_ivs_profile_contract.md/.json. No fit or comparative score was run. Root review confirms the paper sign convention and u=ln(1+z) equations, analytic full-covariance intercept profile, distinction between g and Omega_m search domains vs priors, and an explicit positive baryon/CDM split existence guard over the observed Dovekie range. Remaining numerical checks and domain-extension rule are recorded; proceed only as an exploratory SN-only profile, never combined with BAO."
     }
   ],
   "active_local_job": null,
   "latest_scientific_checkpoint": {
-    "utc": "2026-09-24T21:40:21+00:00",
+    "utc": "2026-09-24T23:00:00+00:00",
     "evidence": [
+      "Latest checkpoint 2026-09-24 23:00 UTC: Dovekie frozen-shape prediction independently reproduced PASS. The dense covariance-domain reviewer did not import production scoring code or refit; maximum primary fold-score discrepancy 9.1e-13 and six-edge variant delta discrepancy 3.1e-12. Result remains an overlapping-fold descriptive score, not joint BAO-SN evidence. See experiments/dovekie_frozen_shape_cv/independent_review_record.json and work/compute8/dovekie_result_independent_review.md.",
       "experiments/bao_robustness/result.json: 200 full-covariance null mocks; 16/64-start tail estimate agrees at 17/200 with exact 95% interval [0.0503,0.1326]. scripts/recheck_bao_optimizer.py independently retried all 52 nonconverged candidates: original χ² recomputation max error 8.0e-14, no alternative improved any fit by >1e-7, and reported selected tail statistic remains stable.",
       "work/inference/REPORT.md and experiments/dovekie_screen/: independently checked exploratory 1820-row DES-Dovekie full-precision profile fit; wider CPL bound moves from wa=-3 edge to wa≈-6.78 interior, not a posterior/significance result.",
       "work/critic/REPORT.md: independent parser, likelihood and differential-evolution searches reproduce four Dovekie profile points; full-covariance algebra paths agree within 1.4e-12 and minima within 3.5e-8.",
@@ -189,7 +230,10 @@
       "Conditional redshift-block predictive check experiments/interacting_vacuum_block_cv/ and work/compute4/: seven held-out groups scored with exact Gaussian conditional means/Schur covariances and full 13x13 covariance. Summed plug-in conditional chi2 is flat LCDM 12.9670 vs IVS 35.7173 (delta +22.7503; positive favors LCDM); the z=2.33 pair contributes +22.0698. The folds are overlapping assessments from one survey, not joint evidence or an independent-survey test. Independent dense-solve/scalar implementation review is complete and passes; see work/compute5/interacting_vacuum_cv_review.md.",
       "The documented repository regression suite `python -m unittest discover -s scripts -p 'test_*.py'` passes 17/17 in 0.533 s with one numerical thread; pytest is not installed, and unittest is the project-prescribed suite.",
       "Independent review of the seven-fold IVS block-CV calculation PASS (work/compute5/interacting_vacuum_cv_review.md; experiments/interacting_vacuum_block_cv/independent_review_record.json): dense solves reproduce all conditional means, Schur covariances and scores; theory4 scalar/adaptive integration reproduces all 14 saved fold predictions without refitting. Aggregate delta=+22.75029962435, z=2.33 contribution=+22.06981238180; no arithmetic/leakage defect. The score remains a plug-in, overlapping-fold descriptive diagnostic dominated by that high-z block.",
-      "Root consolidated campaign findings in MORNING_REPORT.md and NEXT.md. The highest-value next screen is planned as a frozen BAO-fit-shape conditional prediction on the distinct DES-Dovekie SN likelihood, profiling only the common magnitude intercept and preserving the full SN covariance; first verify its exact data/likelihood contract. This is not a joint BAO+SN likelihood or H0 measurement."
+      "Root consolidated campaign findings in MORNING_REPORT.md and NEXT.md. The frozen BAO-fit-shape conditional prediction on DES-Dovekie is complete and independently reproduced. The next high-value screen is a separate Dovekie-only two-parameter IVS background profile after review of its no-score physical/domain contract; no joint likelihood, H0, evidence or posterior claim.",
+      "One-shot Astra Max Warden reports were written immediately after commit and push 38e9b72 (work/warden/commit-38e9b72.md and work/warden/push-38e9b72.md). Both recommend continuing the Dovekie frozen-shape test; the commit Warden specifically cautions that Dovekie supplies precision, so principal precision blocks cannot be mistaken for marginal training precision.",
+      "A bounded Luna Max/max contract audit is running in work/data_audit4/: verify Dovekie provenance, row/covariance mapping and the precision-matrix conditional/training algebra before any comparative score. No cosmology refit is authorized in that task.",
+      "Root independently checked both plug-in and flat-prior intercept-marginal precision-block identities on synthetic covariance data against an explicit covariance-domain reference. The exact predictive covariance includes the training-intercept rank-one variance term; maximum integrated predictive-covariance disagreement was 8.88e-16 and predictive-chi2 disagreement 2.84e-14. This is an algebra unit test, not evidence from Dovekie observations; see work/compute6/precision_block_algebra_check.py."
     ]
   },
   "tasks": [
@@ -392,7 +436,7 @@
       "status": "complete",
       "budget_minutes": 15,
       "output": "work/compute4/ and experiments/interacting_vacuum_block_cv/",
-      "finding": "Seven full-covariance conditional leave-one-redshift-bin-out fits complete. Sum of conditional chi2 is LCDM=12.9670, IVS=35.7173, delta IVS-LCDM=+22.7503; high-z z=2.33 fold contributes +22.0698. Plug-in predictive check from one survey, not a joint statistic/posterior/evidence; all IVS candidates checked through z=2.33; grid/refinements agree to <3e-11 training chi2. Independent review is running."
+      "finding": "Seven full-covariance conditional leave-one-redshift-bin-out fits complete. Sum of conditional chi2 is LCDM=12.9670, IVS=35.7173, delta IVS-LCDM=+22.7503; high-z z=2.33 fold contributes +22.0698. Plug-in predictive check from one survey, not a joint statistic/posterior/evidence; all IVS candidates checked through z=2.33; grid/refinements agree to <3e-11 training chi2. Independent dense-solve/scalar-code review PASS; the aggregate is dominated by the high-z pair."
     },
     {
       "id": "ivs_block_cv_independent_review",
@@ -412,15 +456,64 @@
     },
     {
       "id": "dovekie_frozen_shape_cross_probe_cv",
-      "owner": "Root orchestration; bounded Luna Max data/compute review to be assigned",
-      "status": "planned",
+      "owner": "Root orchestration, gated by Luna Max /root/dovekie_contract_audit",
+      "status": "complete_independently_reproduced_pass",
       "budget_minutes": 30,
       "output": "work/compute6/dovekie_frozen_shape_cv.* and experiments/dovekie_frozen_shape_cv/",
-      "finding": "Planned only. Audit exact existing DES-Dovekie data/likelihood contract, then conditionally score BAO-fitted flat-LCDM and IVS shapes on predeclared SN redshift blocks with only the common magnitude intercept fit on training rows and full-covariance Gaussian conditional scores. No BAO+SN product, H0 inference, or SN shape refit. Stop if sample/covariance provenance or conditional algebra cannot be verified."
+      "finding": "Data contract verified; one-thread bounded run completed in 1.554 s. Exact frozen BAO shapes on four 455-row full-covariance conditional redshift folds yield integrated-intercept delta IVS-LCDM=-4.03659 (low-z fold=-5.54183; remaining three total +1.50524), with six predeclared edge shifts all negative [-4.11795,-3.04857]. Pre-score precision/covariance reference agrees to <=1.14e-13 chi2; independent dense covariance-domain reproduction matches fold scores within 9.1e-13 and edge variant deltas within 3.1e-12. Descriptive overlapping folds only; no BAO×SN product or H0 inference. First serialization failure is preserved."
+    },
+    {
+      "id": "dovekie_frozen_shape_data_contract_audit",
+      "owner": "Luna Max/max subagent /root/dovekie_contract_audit",
+      "status": "complete_verified_proceed_with_adapter",
+      "budget_minutes": 10,
+      "output": "work/data_audit4/dovekie_frozen_shape_contract.md and .json",
+      "finding": "PASS: exact Hubble diagram and packed precision match official upstream Git blobs at pinned commit c9a4fcafc4cbd19bd750dee47fc76194a45c181f; all 1820 SNANA rows and order verified; P=C^-1 precision is SPD and explicit covariance is SPD. Training GLS/marginal predictive derivation including the positive rank-one offset variance is correct. Official reader/default paths need a Dovekie whitespace/path adapter. No score/refit in this audit. BAO-SN cross-covariance is unavailable; Dovekie overlaps original DES-SN5YR substantially."
+    },
+    {
+      "id": "dovekie_precision_block_algebra_synthetic",
+      "owner": "Root orchestrator",
+      "status": "complete",
+      "budget_seconds": 30,
+      "output": "work/compute6/precision_block_algebra_check.py",
+      "finding": "Independent covariance-domain reference confirms the precision-block formulas for training-marginal GLS intercept and held-out conditional mean/covariance/chi2 in four synthetic folds. Maximum discrepancies are at most 4.27e-14. Synthetic-only; no observed SN score."
+    },
+    {
+      "id": "dovekie_cv_static_preflight_review",
+      "owner": "Luna Max /root/dovekie_cv_preflight",
+      "status": "complete_pass_static_pre_score_implementation",
+      "budget_minutes": 10,
+      "output": "work/compute7/dovekie_cv_preflight_review.md and .json",
+      "finding": "Independent static review confirms precision-block signs, Q_T Schur complement, training GLS offset and rank-one variance, D_L convention/H0 cancellation, exact BAO point provenance, six preregistered edge variants, normalized scores, all seven actual-covariance reference tolerance keys, self-code hash, fail-before-comparative-scores behavior on reference failure, and overlap caveats. Static implementation only; did not run empirical scores."
+    },
+    {
+      "id": "dovekie_cv_independent_result_reproduction",
+      "owner": "Luna Max /root/dovekie_cv_preflight",
+      "status": "complete_independently_reproduced_pass",
+      "budget_minutes": 10,
+      "output": "work/compute8/dovekie_result_independent_review.md and .json",
+      "finding": "Independent SNANA parser, full dense covariance-domain conditioning and separately coded distance integration reproduce primary folds and all six edge variants. No production score import or fit/refit. Max primary score difference 9.1e-13; max variant delta difference 3.1e-12; input hashes and fold maps match."
+    },
+    {
+      "id": "ivs_author_artifact_probe",
+      "owner": "Luna Max /root/ivs_author_artifacts",
+      "status": "complete_no_exact_solver_config_found_in_checked_sources",
+      "budget_minutes": 15,
+      "output": "work/literature3/ivs_author_artifact_probe.md and .json",
+      "finding": "Current primary-source follow-up confirms exact cached arXiv v1 PDF (SHA-256 0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c); source bundle contains only TeX/build metadata/figures. Paper-cited wgcosmo main at pinned inspected commit 80fa9742f10616bcaf55d5888a15e8f07e74cd25 lacks IVS config or CAMB patch. No explicit perturbation IC. Faithful solver/config reproduction remains blocked unless author artifacts are supplied."
+    },
+    {
+      "id": "dovekie_ivs_profile_contract",
+      "owner": "Luna Max /root/dovekie_ivs_profile_contract",
+      "status": "complete_root_reviewed_pre_fit_gate",
+      "budget_minutes": 10,
+      "output": "work/theory7/dovekie_ivs_profile_contract.md and .json",
+      "finding": "Pre-fit contract complete and root-reviewed. Specifies source sign/ODE, profiled full-covariance intercept, finite search box explicitly not an Omega_m prior, and existential baryon/CDM feasibility over the SN redshift interval. No optimizer or observed score run. Gate passes for an exploratory Dovekie-only profile with its own convergence, domain-sensitivity, and independent distance/physicality checks."
     }
   ],
   "next_commands": [
-    "Audit DES-Dovekie likelihood/sample provenance, row mapping and full covariance; if valid, run the bounded frozen-BAO-shape conditional SN holdout specified in NEXT.md, fitting only the common magnitude intercept on training rows and reporting the probe separately.",
+    "Run a bounded exploratory Dovekie-only two-parameter IVS background profile under the reviewed no-score contract in work/theory7; use full STAT+SYS covariance, an analytic common magnitude intercept, the declared positive-density/split guard, and report all convergence and boundary diagnostics.",
+    "Independently reproduce the Dovekie-only profile's selected point and distance/physicality diagnostics; keep the SN-only profile separate from BAO and uncalibrated by posterior/evidence language.",
     "Request from the user, if available, the exact IVS authors' modified-CAMB patch/source, base commit, complete Cobaya configuration and initial-condition settings; otherwise retain the explicit independent-implementation limitation.",
     "Treat the Results IV replacement likelihood as blocked pending an official machine-readable file/cross-covariance; do not substitute the approximate Eq. (26) pair or unrelated unified-tracer supplement.",
     "Validate every experiment record and ledger row, source/claim-map references, all code/data/PDF hashes, and repeat the full test suite plus current plots.",

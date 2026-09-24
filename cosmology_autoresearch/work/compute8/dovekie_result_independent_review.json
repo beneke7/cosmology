@@ -1,0 +1,174 @@
+{
+  "audit": "Independent covariance-domain reproduction of Dovekie frozen-shape conditional scores",
+  "date": "2026-09-25",
+  "status": "independent_reproduction_matches_recorded_result_to_floating_point",
+  "production_conditional_cv_imported": false,
+  "cosmology_fit_or_refit": false,
+  "method": {
+    "sn_input": "Direct SNANA VARNAMES/SN parse in exact release order; no imported likelihood/data helper.",
+    "covariance": "Unpack upper-triangle float32 P in original row order, Cholesky-solve C=P^-1, then calculate every conditional block from dense covariance-domain submatrices and solves.",
+    "prediction": "Own DOP853 integration of dM/du=3M+gX/E and dX/du=-gX/E with E^2=M+X; own adaptive scalar quadrature of 1/E to each zHD; DL=(1+zHEL)(c/H0)DC.",
+    "conditional_score": "Integrate training-only GLS intercept uncertainty with V=S+a a^T/(1_T^T C_TT^-1 1_T); plug-in sensitivity uses S alone.",
+    "fold_contract": "Four contiguous nearest-equal-row-count zHD bins over unique redshift groups, plus the six locked single-boundary +/-1%-of-N target perturbations; ties are not split."
+  },
+  "inputs": {
+    "row_count": 1820,
+    "unique_CID_count": 1820,
+    "CID_order_sha256": "b7d5c6ad8dfdadf1e12443852b14006c0d9d0ceb4bcb46efb378f058ce5aa5a3",
+    "sha256": {
+      "des_dovekie_hd.csv": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+      "des_dovekie_stat_sys.npz": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+      "bao_result.json": "e347b8934b2afdc23d23ef7d39c70f963b73888d17137f55caf7e51af87d43ae",
+      "recorded_dovekie_result.json": "c28468a4ab9b20a71822eb2c7d971bb78a3e780e587992b2dc6c76ea0c8cd64f"
+    },
+    "precision_stored_dtype": "float32",
+    "precision_shape": [1820, 1820],
+    "precision_exactly_symmetric_after_unpack": true,
+    "covariance_asymmetry_before_roundoff_symmetrization": 9.71445146547012e-17,
+    "covariance_cholesky_minimum_diagonal": 0.06749781848523825,
+    "max_absolute_precision_times_covariance_minus_identity": 7.518291544883482e-15
+  },
+  "fixed_bao_fit_points": {
+    "BAO_flat_LCDM": {
+      "Omega_m": 0.2974618149542753,
+      "g": 0.0,
+      "selected_optimizer_status": 0,
+      "selected_success": true
+    },
+    "BAO_interacting_vacuum": {
+      "Omega_m": 0.38697100769747017,
+      "g": -0.4666647299169934,
+      "selected_optimizer_status": 0,
+      "selected_success": true
+    }
+  },
+  "prediction_checks": {
+    "H0_gauge_km_s_Mpc": 70.0,
+    "speed_of_light_km_s": 299792.458,
+    "distance_modulus_convention": "5log10(DL/Mpc)+25; DL=(1+zHEL)(c/H0) integral_0^zHD dz/E(z)",
+    "max_absolute_Gamma0_vs_flat_LCDM_distance_modulus_difference_mag": 9.643274665532873e-16,
+    "adaptive_quadrature_max_absolute_DC_error": {
+      "BAO_flat_LCDM": 9.452526889597439e-15,
+      "BAO_interacting_vacuum": 9.226844145029595e-15
+    },
+    "adaptive_quadrature_max_relative_DC_error": {
+      "BAO_flat_LCDM": 1.1102230246251567e-14,
+      "BAO_interacting_vacuum": 1.1102230246251567e-14
+    }
+  },
+  "primary": {
+    "edges_zHD": [0.32433, 0.479345, 0.626935],
+    "folds": [
+      {
+        "fold": 0,
+        "zHD_range": [0.02509, 0.32394],
+        "heldout_count": 455,
+        "training_count": 1365,
+        "heldout_row_index_sha256": "62af845cd1199648fa947e05536ed4e8cb54f19210b066a671c4fcd595719c8e",
+        "integrated_minus2logpredictive_LCDM": -253.91646151652287,
+        "integrated_minus2logpredictive_IVS": -259.45829191666905,
+        "delta_IVS_minus_LCDM_integrated": -5.541830400146182,
+        "plugin_minus2logpredictive_LCDM": -252.8417107602903,
+        "plugin_minus2logpredictive_IVS": -259.62429409280264,
+        "delta_IVS_minus_LCDM_plugin": -6.782583332512331
+      },
+      {
+        "fold": 1,
+        "zHD_range": [0.32472, 0.47905],
+        "heldout_count": 455,
+        "training_count": 1365,
+        "heldout_row_index_sha256": "879d486ad351dcfe71ce4c623ac613f899178b86fe634bd833033673bd278d76",
+        "integrated_minus2logpredictive_LCDM": -52.64595428538257,
+        "integrated_minus2logpredictive_IVS": -51.85837581080693,
+        "delta_IVS_minus_LCDM_integrated": 0.7875784745756391,
+        "plugin_minus2logpredictive_LCDM": -52.8224139507721,
+        "plugin_minus2logpredictive_IVS": -52.05558318837518,
+        "delta_IVS_minus_LCDM_plugin": 0.7668307623969213
+      },
+      {
+        "fold": 2,
+        "zHD_range": [0.47964, 0.62684],
+        "heldout_count": 455,
+        "training_count": 1365,
+        "heldout_row_index_sha256": "3f9a7c6c26cd804296fd894156f6ea4f90f8884ced44cd45b7e7559fdb9f5bbc",
+        "integrated_minus2logpredictive_LCDM": -165.8008186805306,
+        "integrated_minus2logpredictive_IVS": -165.4618246152544,
+        "delta_IVS_minus_LCDM_integrated": 0.3389940652762107,
+        "plugin_minus2logpredictive_LCDM": -165.90771485965195,
+        "plugin_minus2logpredictive_IVS": -165.61510240801238,
+        "delta_IVS_minus_LCDM_plugin": 0.2926124516395703
+      },
+      {
+        "fold": 3,
+        "zHD_range": [0.62703, 1.14418],
+        "heldout_count": 455,
+        "training_count": 1365,
+        "heldout_row_index_sha256": "a4892ad1108f31bf35ce667caf9cc44b5343d5125507d34d8241d93211b996f9",
+        "integrated_minus2logpredictive_LCDM": -40.89354971526541,
+        "integrated_minus2logpredictive_IVS": -40.51487959540816,
+        "delta_IVS_minus_LCDM_integrated": 0.3786701198572473,
+        "plugin_minus2logpredictive_LCDM": -41.12491785260488,
+        "plugin_minus2logpredictive_IVS": -40.59931053332025,
+        "delta_IVS_minus_LCDM_plugin": 0.5256073192846316
+      }
+    ],
+    "descriptive_aggregate_sums": {
+      "integrated_minus2logpredictive_LCDM": -513.2567841977014,
+      "integrated_minus2logpredictive_IVS": -517.2933719381385,
+      "delta_IVS_minus_LCDM_integrated": -4.036587740437085,
+      "plugin_minus2logpredictive_LCDM": -512.6967574233192,
+      "plugin_minus2logpredictive_IVS": -517.8942902225104,
+      "delta_IVS_minus_LCDM_plugin": -5.197532799191208,
+      "interpretation": "Descriptive sums of overlapping leave-one-block-out conditional predictions; not an additive joint score."
+    }
+  },
+  "edge_sensitivity": {
+    "integrated_delta_range": [-4.117954457864926, -3.048568810312986],
+    "plugin_delta_range": [-5.366524249128588, -3.5226631279817866],
+    "all_six_variant_aggregate_deltas_negative": true,
+    "variants": [
+      {"variant":"boundary_1_left","target_shift_rows":{"1":-18.2},"edges_zHD":[0.31484,0.479345,0.626935],"integrated_delta":-3.048568810312986,"plugin_delta":-3.5226631279817866,"heldout_counts":[437,473,455,455]},
+      {"variant":"boundary_1_right","target_shift_rows":{"1":18.2},"edges_zHD":[0.33043999999999996,0.479345,0.626935],"integrated_delta":-3.986540133900803,"plugin_delta":-5.196245687092301,"heldout_counts":[473,437,455,455]},
+      {"variant":"boundary_2_left","target_shift_rows":{"2":-18.2},"edges_zHD":[0.32433,0.473285,0.626935],"integrated_delta":-3.9300529620719544,"plugin_delta":-5.03850962222657,"heldout_counts":[455,437,473,455]},
+      {"variant":"boundary_2_right","target_shift_rows":{"2":18.2},"edges_zHD":[0.32433,0.48994000000000004,0.626935],"integrated_delta":-4.089034702474919,"plugin_delta":-5.288339759909491,"heldout_counts":[455,473,437,455]},
+      {"variant":"boundary_3_left","target_shift_rows":{"3":-18.2},"edges_zHD":[0.32433,0.479345,0.621895],"integrated_delta":-3.8525614719424084,"plugin_delta":-4.939266070439089,"heldout_counts":[455,455,437,473]},
+      {"variant":"boundary_3_right","target_shift_rows":{"3":18.2},"edges_zHD":[0.32433,0.479345,0.63399],"integrated_delta":-4.117954457864926,"plugin_delta":-5.366524249128588,"heldout_counts":[455,455,473,437]}
+    ]
+  },
+  "comparison_after_independent_calculation": {
+    "primary_fold_maps_exact": true,
+    "all_six_variant_edges_and_row_maps_exact": true,
+    "maximum_absolute_fold_scalar_discrepancies": {
+      "offset_mag": 4.718447854656915e-16,
+      "offset_variance_mag2": 3.3881317890172014e-21,
+      "integrated_chi2": 7.958078640513122e-13,
+      "integrated_logdet": 6.821210263296962e-13,
+      "integrated_normalized_minus2logpredictive": 6.821210263296962e-13,
+      "plugin_chi2": 8.526512829121202e-13,
+      "plugin_logdet": 4.547473508864641e-13,
+      "plugin_normalized_minus2logpredictive": 9.094947017729282e-13
+    },
+    "aggregate_delta_absolute_discrepancies": {
+      "integrated_normalized_minus2logpredictive": 1.2505552149377763e-12,
+      "plugin_normalized_minus2logpredictive": 1.8189894035458565e-12,
+      "integrated_chi2": 1.5916157281026244e-12,
+      "plugin_chi2": 1.8189894035458565e-12
+    },
+    "maximum_edge_variant_delta_absolute_discrepancy": {
+      "integrated": 2.8421709430404007e-12,
+      "plugin": 3.069544618483633e-12
+    }
+  },
+  "runtime_seconds": 5.784808871336281,
+  "environment": {"python":"3.12.3","numpy":"2.5.3","scipy":"1.18.1","numerical_threads":1},
+  "command_prefix": "timeout 590s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 /home/v/proj/bene/cosmology/cosmology_autoresearch/.venv/bin/python -",
+  "limitations": [
+    "The independent inline implementation was not preserved as a standalone script because the task limited ownership to these two report files.",
+    "This evaluates fixed BAO points without propagating BAO shape uncertainty; no SN cosmology fit/refit was performed.",
+    "Only a late-time background model is evaluated; radiation, perturbations, growth, and the paper's modified-CAMB/sampler pipeline are outside scope.",
+    "H0=70 is an arbitrary magnitude gauge absorbed by the fitted training intercept; no H0 or absolute-calibration inference follows.",
+    "The fold sums overlap and are descriptive, not an additive joint predictive density, calibrated p-value, evidence, or posterior uncertainty.",
+    "BAO and SN are reported separately without a joint likelihood or exact-independence claim; Dovekie overlaps other SN compilations, none of which was included.",
+    "The edge perturbations show the aggregate sign is stable over this fixed six-variant set only; they do not calibrate a model-selection procedure."
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "record_type": "primary_source_artifact_provenance_probe",
+  "paper": {
+    "title": "Do DESI-DR2 BAO data imply a coupling of dark matter and dark energy?",
+    "authors": [
+      "Weiqiang Yang",
+      "Sibo Zhang",
+      "Dinorah Barbosa",
+      "Marco Antonio Alvarez",
+      "Supriya Pan",
+      "Leila Graef"
+    ],
+    "arxiv_id": "2609.05660",
+    "doi": "10.1103/6kdf-vzq4",
+    "checked_at_utc": "2026-09-24",
+    "timezone_note": "The project environment date was 2026-09-25 in Europe/Budapest; source checks were recorded in UTC."
+  },
+  "scope": [
+    "arXiv record/history, versioned PDF, v1 source bundle, and article text",
+    "APS accepted-paper page, current issue listing, and DOI routes",
+    "the GitHub repository explicitly cited by the paper"
+  ],
+  "verdict": {
+    "faithful_source_replication_possible": false,
+    "summary": "The exact arXiv v1 PDF is public, but the modified CAMB source and base commit, complete paper-run Cobaya configuration, and explicit scalar perturbation initial conditions were not found in the checked primary sources. APS version-of-record PDF/supplement was not verifiable. A faithful source-paper replication remains blocked; an independent implementation can be clearly labeled as such."
+  },
+  "artifacts": {
+    "versioned_arxiv_pdf": {
+      "status": "found",
+      "version": "v1",
+      "url": "https://arxiv.org/pdf/2609.05660v1",
+      "http_status": 200,
+      "bytes": 4524530,
+      "sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+      "hash_method": "streamed official PDF body through sha256sum; it matches the existing local cached PDF",
+      "local_cached_copy": "context/papers/interacting_de_desi_dr2_2026.pdf",
+      "history": "arXiv record lists only v1, submitted 2026-09-04 18:45:40 UTC",
+      "prospective_v2_record_http_status": 404,
+      "prospective_v2_pdf_http_status": 404
+    },
+    "arxiv_source_bundle": {
+      "status": "found_text_and_figures_only",
+      "url": "https://arxiv.org/src/2609.05660v1",
+      "http_status": 200,
+      "bytes": 3662580,
+      "sha256": "bfa9fad7bd0c8c6b159f65c99b508d6ab4d67e3661e727c66ac743f78ca1354f",
+      "hash_method": "streamed source archive through sha256sum; archive was not saved",
+      "contents": [
+        "00README.json",
+        "clean.tex",
+        "plot PDFs"
+      ],
+      "missing_from_bundle": [
+        "CAMB source or patch",
+        "Cobaya YAML/INI",
+        "chains or likelihood/config lockfile"
+      ]
+    },
+    "modified_camb_source_and_base_commit": {
+      "status": "not_found_in_checked_public_primary_sources",
+      "article_claim": "The article says it used a modified version of CAMB.",
+      "evidence": "No repository, patch/diff, release, or commit is given in the article/source bundle. The only explicit software repository link is cited for the evidence-calculation interface, not the CAMB modification."
+    },
+    "full_cobaya_configuration": {
+      "status": "not_found_in_checked_public_primary_sources",
+      "evidence": "No run config is in the arXiv source bundle. The paper-cited wgcosmo main tree has generic likelihood/model examples, but no IVS/interacting-DM-DE config matching the paper."
+    },
+    "explicit_perturbation_initial_conditions": {
+      "status": "not_found_in_article_or_source_bundle",
+      "evidence": "The paper specifies synchronous gauge and a dark-sector perturbation closure but not the scalar IC mode or initialization. Literal searches of clean.tex for initial condition(s), adiabatic, isocurvature, and primordial returned no matches. Without the run config, the actual CAMB IC setting cannot be inferred."
+    },
+    "aps_version_of_record_and_supplement": {
+      "status": "not_identified_as_of_check",
+      "accepted_page": "https://journals.aps.org/prd/accepted/10.1103/6kdf-vzq4",
+      "accepted_date": "2026-09-03",
+      "aps_issue_checked": "https://journals.aps.org/prd/issues/114/6",
+      "issue_result": "The partial Volume 114, Issue 6 listing, current to 2026-09-24, did not list the title or DOI.",
+      "supplement_result": "Accepted-paper page says author supplements, if provided, become available upon version-of-record publication.",
+      "direct_route_statuses": {
+        "abstract": "browser route returned internal error",
+        "pdf": "HTTP 403 Cloudflare challenge",
+        "supplement": "HTTP 403 Cloudflare challenge"
+      }
+    }
+  },
+  "linked_repository_snapshot": {
+    "repository": "https://github.com/williamgiare/wgcosmo",
+    "why_paper_links_it": "The article cites its Cobaya interface for the MCEvidence calculation.",
+    "api_metadata_url": "https://api.github.com/repos/williamgiare/wgcosmo",
+    "tree_url": "https://api.github.com/repos/williamgiare/wgcosmo/git/trees/main?recursive=1",
+    "default_branch": "main",
+    "checked_commit": "80fa9742f10616bcaf55d5888a15e8f07e74cd25",
+    "commit_date_utc": "2026-08-05T22:41:24Z",
+    "listed_branches": [
+      "main"
+    ],
+    "tags": [],
+    "releases": [],
+    "tree_finding": "Generic Planck/CMB, BAO/DESI DR2, and standard model YAML examples are present. No IVS/interacting configuration or modified-CAMB repository/patch appears in the current main tree; an introductory CAMB notebook is unrelated to source-paper provenance.",
+    "inspection_limit": "Repository metadata and tree paths only; no repository code was downloaded or run. This does not exclude private, unlinked, or later-published artifacts."
+  },
+  "checked_sources": [
+    {
+      "url": "https://arxiv.org/abs/2609.05660",
+      "checked_at_utc": "2026-09-24",
+      "result": "One history entry (v1); paper marked accepted for PRD; DOI listed."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.05660",
+      "checked_at_utc": "2026-09-24",
+      "result": "Methods/software description, perturbation discussion, explicit repository citation, and IC terms checked."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2609.05660v1",
+      "checked_at_utc": "2026-09-24",
+      "result": "HTTP 200; exact v1 PDF streamed and hashed."
+    },
+    {
+      "url": "https://arxiv.org/src/2609.05660v1",
+      "checked_at_utc": "2026-09-24",
+      "result": "HTTP 200; source archive streamed for listing, text-term checks, and hash."
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.05660v2",
+      "checked_at_utc": "2026-09-24",
+      "result": "HTTP 404."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2609.05660v2",
+      "checked_at_utc": "2026-09-24",
+      "result": "HTTP 404."
+    },
+    {
+      "url": "https://journals.aps.org/prd/accepted/10.1103/6kdf-vzq4",
+      "checked_at_utc": "2026-09-24",
+      "result": "Accepted 2026-09-03; supplements deferred until version of record."
+    },
+    {
+      "url": "https://journals.aps.org/prd/issues/114/6",
+      "checked_at_utc": "2026-09-24",
+      "result": "Searched current partial issue contents; target title and DOI absent."
+    },
+    {
+      "url": "https://journals.aps.org/prd/abstract/10.1103/6kdf-vzq4",
+      "checked_at_utc": "2026-09-24",
+      "result": "Browser open returned internal error."
+    },
+    {
+      "url": "https://journals.aps.org/prd/pdf/10.1103/6kdf-vzq4",
+      "checked_at_utc": "2026-09-24",
+      "result": "HTTP 403 Cloudflare challenge."
+    },
+    {
+      "url": "https://journals.aps.org/prd/supplemental/10.1103/6kdf-vzq4",
+      "checked_at_utc": "2026-09-24",
+      "result": "HTTP 403 Cloudflare challenge."
+    },
+    {
+      "url": "https://github.com/williamgiare/wgcosmo",
+      "checked_at_utc": "2026-09-24",
+      "result": "Current repository tree/commit and YAML path names inspected via official GitHub API; no matching IVS/CAMB artifact."
+    }
+  ],
+  "minimum_remaining_provenance": [
+    "authors' modified-CAMB patch/repository and base commit/version",
+    "complete Cobaya input with exact likelihood/data releases, solver options, and sampler controls",
+    "explicit scalar perturbation initial-condition choice"
+  ],
+  "limits": [
+    "Negative findings are limited to checked public primary sources and the linked repository's current main tree.",
+    "A separate APS VOR or unlinked/private author artifact could appear later or be available elsewhere; it was not verified here.",
+    "No code was cloned, installed, or run; no model fit was performed."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "des_dovekie_frozen_bao_shape_conditional_cv_independent_review_20260925",
+  "objective": "Independently reproduce the frozen-BAO-shape Dovekie full-covariance conditional scores and locked edge variants without fitting or importing production scoring code.",
+  "status": "independently_reproduced_pass",
+  "reviewer": "gpt-6-luna/max subagent /root/dovekie_cv_preflight",
+  "reviewed_date": "2026-09-25",
+  "runtime_seconds": 5.785,
+  "cpu_threads": 1,
+  "gpu_used": false,
+  "production_conditional_cv_imported": false,
+  "refit_performed": false,
+  "result": {
+    "integrated_intercept_delta_ivs_minus_lcdm": -4.0365877404,
+    "fixed_offset_plugin_delta_ivs_minus_lcdm": -5.1975327992,
+    "integrated_delta_edge_variant_range": [-4.1179544579, -3.0485688103],
+    "plugin_delta_edge_variant_range": [-5.3665242491, -3.5226631280],
+    "max_primary_fold_score_difference": 9.1e-13,
+    "max_edge_variant_delta_difference": 3.1e-12,
+    "input_hashes_match": true,
+    "fold_maps_match": true
+  },
+  "interpretation": "Independent numerical reproduction passes to floating-point agreement. The result is still a descriptive sum over overlapping conditional folds, not an additive joint likelihood, significance, posterior, evidence, physical validation, or full paper reproduction; BAO and SN remain separate.",
+  "artifacts": {
+    "report": "work/compute8/dovekie_result_independent_review.md",
+    "result": "work/compute8/dovekie_result_independent_review.json",
+    "production_result": "experiments/dovekie_frozen_shape_cv/result.json"
+  }
+}

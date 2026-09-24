@@ -1,36 +1,25 @@
-# Next experiment: test whether the BAO-selected IVS shape predicts an independent probe
+# Next experiment: profile IVS on DES-Dovekie alone
 
-## Question
+## Current evidence
 
-Does the simple interacting-vacuum background selected by DESI DR2 BAO predict the separate DES-Dovekie Type Ia supernova distance-redshift data at least as well as the BAO-selected flat-ΛCDM shape?
+The frozen BAO-shape prediction has passed independent covariance-domain reproduction. Four overlapping 455-SN conditional folds give integrated-intercept Δ(−2 log predictive) = −4.0366 (IVS−ΛCDM), with six locked edge variants all negative (−4.1180 to −3.0486). The lowest-redshift fold contributes −5.5418; the other three collectively favor ΛCDM by +1.5052. The result is a modest descriptive prediction diagnostic, not a joint BAO×SN likelihood, significance, posterior, or evidence. See [analysis](work/compute6/dovekie_frozen_shape_cv.md), [independent review](work/compute8/dovekie_result_independent_review.md), and [machine-readable result](experiments/dovekie_frozen_shape_cv/result.json).
 
-This follows the evidence already collected: the IVS profile gain is common in 1,200 matched BAO null searches, its seven-fold BAO conditional score is worse overall and dominated by the z=2.33 pair, but it does not suffer a CDM-positivity crossing in the declared early-time sensitivity domain. The unanswered issue is whether the shape improvement travels to a genuinely different probe.
+Prior counter-signals remain material: the IVS BAO profile gain is exceeded by 256/1200 matched flat-null searches, and the BAO redshift-block conditional score penalizes IVS by +22.7503, dominated by the z=2.33 pair. A Dovekie-only profile is the next useful bounded check: determine whether the SN likelihood itself prefers a compatible background shape or whether the fixed-point result is mostly local to one low-z block.
 
-## Locked first-pass contract
+## Gate before scoring
 
-1. Audit the existing DES-Dovekie files and likelihood definition, data/sample provenance, redshift ordering, covariance symmetry/positive-definiteness and hashes. Treat Dovekie as the one SN branch; do not add Pantheon+ or another overlapping compilation.
-2. Freeze the BAO-only flat-ΛCDM shape Ωm=0.2974618150 and IVS shape (Ωm=0.3869710077, g=Γ/H0=−0.4666647299). Do not refit shape parameters on the SN data. Use the source-paper sign convention and the same explicitly background-only late-time model.
-3. For each model and each predeclared contiguous redshift holdout, fit only the shared SN magnitude intercept on the training rows. Evaluate held-out distances and scores with the exact full covariance using the Gaussian conditional mean and Schur complement; never diagonalize or drop cross-block terms. Choose the number/bin edges from the observed redshift design before scoring. Store the fold map and all optimizer/linear-solve status.
-4. Use luminosity distance with a freely fitted/marginalized magnitude intercept. This cancels the absolute H0 scale; report no H0 or absolute-calibration inference. Compare the held-out conditional scores descriptively and keep the SN result separate from BAO—no joint likelihood or combined evidence.
-5. Validate the SN intercept solution against its analytic generalized-least-squares expression; independently reconstruct at least one fold by dense solves; check Γ=0 and distance units; verify numerical stability under equivalent covariance factorizations and bin-edge perturbations fixed before looking at comparative scores.
+A no-score model/likelihood contract is complete and root-reviewed in `work/theory7/dovekie_ivs_profile_contract.md` and `.json`. The gate passes for a bounded exploratory run: the paper's g=Γ/H0 range is distinguished from the inherited code Ωm search interval; neither is silently interpreted as an SN posterior prior. The late-time background variables, analytic intercept profile, and positive-density plus existential baryon/CDM split checks over the observed SN redshift interval are specified. No optimizer or observed profile score has yet been run.
 
-## Stop rules and interpretation
+The next run can proceed under this reviewed contract:
 
-- Stop before any score if the released Dovekie likelihood/covariance, sample definition, or row mapping cannot be verified from local source records.
-- Stop if full-covariance conditional calculations fail their independent reconstruction or positive-definiteness checks.
-- A better/worse descriptive score is a predictive diagnostic, not a posterior, evidence, calibrated p-value, physical stability test, or full paper reproduction. Do not claim the two probes are statistically independent without documenting the measurement/systematic contract.
-- First implementation/audit budget: 30 minutes CPU wall time with one numerical thread; explicitly cap every command. Use more CPU parallelism only if measured runtime warrants it. No GPU is expected to help this matrix/GLS calculation; benchmark before assigning one.
-- Do not proceed to a Dovekie-wide IVS parameter refit or a mock-calibrated claim unless the frozen-shape prediction itself is stable and informative.
+1. Use only the pinned 1,820-row DES-Dovekie branch and exact full STAT+SYS covariance; no second SN compilation and no extra `MUERR` term.
+2. Fit Ωm and g in the explicitly justified domain, profiling the one common additive magnitude intercept analytically by GLS. Keep the BAO profile separate; do not multiply likelihoods or claim exact probe independence.
+3. Verify Γ=0 recovers flat ΛCDM, units/sign convention, covariance positivity, optimizer convergence from independent starts, physical feasibility, and numerical tolerance. Compare a direct covariance-domain score with an independent implementation.
+4. Record the profile surface/contours, best fit, Δχ² relative to the Dovekie ΛCDM fit, and sensitivity to search bounds. Label the result exploratory; no evidence or calibrated significance without a separately designed null procedure.
+5. Start one numerical thread and measure runtime first. Scale CPU parallelism only if runtime and independent-work structure justify it; do not use the GPU for this small fit absent an end-to-end benchmark.
 
-## Source-artifact gate in parallel
+## Standing limitations and source requests
 
-The paper identifies modified CAMB and a linear perturbation closure, but the exact patch/version, complete Cobaya configuration, and initial-condition prescription remain unverified in the public source trail. If the user supplies those exact artifacts, hash and audit them before any source-reproduction claim. Otherwise, any solver implementation is an independent model implementation and must pass the background, perturbation-source, and Γ=0/spectrum gates in `work/perturbation_audit/solver_path.md`.
-
-Do not append DESI Results IV Lyα values to the existing BAO vector unless the official replacement/joint likelihood and cross-covariance become available. The current blocked-release evidence is `work/literature/desi_lya_release_probe.md`.
-
-## References
-
-- Current status and caveats: `MORNING_REPORT.md`.
-- BAO-selected profile and full-covariance null: `work/compute3/interacting_vacuum_screen_report.md`, `work/compute3/interacting_vacuum_null_extension_report.md`.
-- BAO block holdout and independent review: `work/compute4/interacting_vacuum_block_cv.md`, `work/compute5/interacting_vacuum_cv_review.md`.
-- Existing DES-Dovekie profile/source analysis: `work/inference/REPORT.md`, `work/critic/REPORT.md`, and `experiments/dovekie_screen/`.
+- The IVS computation remains a background-only independent implementation; exact author-modified CAMB source/base commit, full Cobaya settings, and explicit perturbation initial conditions were not located. The paper PDF is already local (SHA-256 `0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c`). If the user has the missing author artifacts, request them and hash/audit before source-faithful claims; otherwise retain the [solver-path gates](work/perturbation_audit/solver_path.md).
+- Do not append DESI Results IV Lyα values to the current BAO vector without an official replacement likelihood and cross-covariance; see [release audit](work/literature/desi_lya_release_probe.md).
+- The campaign's root-owned durable state is `RUN_STATE.json`, `experiments/ledger.jsonl`, and `MORNING_REPORT.md`. After a reviewed checkpoint is committed and pushed, invoke the configured one-shot Astra Max Warden and include its brief advice in the running state.

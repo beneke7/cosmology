@@ -1,0 +1,206 @@
+{
+  "audit": "DES-Dovekie-only late-time interacting-vacuum profile contract",
+  "as_of": "2026-09-25",
+  "status": "pre_fit_contract_complete",
+  "scope": {
+    "objective": "Profile a flat late-time interacting-vacuum background on DES-Dovekie alone in (Omega_m0, g=Gamma/H0), analytically profiling one shared additive magnitude intercept.",
+    "optimizer_run": false,
+    "cosmological_fit_run": false,
+    "new_comparative_scores_computed_or_inspected": false,
+    "external_downloads": false
+  },
+  "sources": {
+    "verified_dovekie_data_contract": {
+      "path": "work/data_audit4/dovekie_frozen_shape_contract.md",
+      "upstream_repository": "des-science/DES-SN5YR",
+      "upstream_commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f"
+    },
+    "hubble_diagram": {
+      "path": "context/data/des_dovekie_hd.csv",
+      "sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf"
+    },
+    "stat_sys_precision_archive": {
+      "path": "context/data/des_dovekie_stat_sys.npz",
+      "sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b"
+    },
+    "current_frozen_shape_adapter": {
+      "path": "experiments/dovekie_frozen_shape_cv/conditional_cv.py",
+      "sha256": "432d94c6876694b4db9cd079068fde0476ec0362f1d87d359d7e588ee786eb1a"
+    },
+    "current_interacting_vacuum_profile": {
+      "path": "experiments/interacting_vacuum_screen/interacting_vacuum_profile.py",
+      "sha256": "ae99ae789aa02885667e27aa2cbbaa0b035323e69d1a4bf7bbd3848949fc5282"
+    },
+    "existing_bao_reference_result": {
+      "path": "experiments/interacting_vacuum_screen/result.json",
+      "sha256": "e347b8934b2afdc23d23ef7d39c70f963b73888d17137f55caf7e51af87d43ae"
+    },
+    "interacting_vacuum_paper": {
+      "title": "Do DESI-DR2 BAO data imply a coupling of dark matter and dark energy?",
+      "version": "arXiv:2609.05660v1",
+      "path": "context/papers/interacting_de_desi_dr2_2026.pdf",
+      "sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+      "references_used": "Equations (4), (5), (8), and Table I"
+    }
+  },
+  "data_contract": {
+    "format": "SNANA whitespace VARNAMES/SN records despite .csv suffix",
+    "rows": 1820,
+    "unique_cid_count": 1820,
+    "cid_order_sha256_lf_joined_with_trailing_lf": "b7d5c6ad8dfdadf1e12443852b14006c0d9d0ceb4bcb46efb378f058ce5aa5a3",
+    "zHD_range": [0.02509, 1.14418],
+    "zHEL_range": [0.02385, 1.14501],
+    "all_rows_pass_official_zHD_greater_than_zero_cut": true,
+    "redshift_semantics": {
+      "zHD": "Hubble-diagram/CMB-frame redshift with peculiar-velocity correction; used in the expansion integral",
+      "zHEL": "heliocentric redshift; used in the luminosity-distance prefactor"
+    },
+    "muerr_handling": "MUERR and MUERR_SYS are diagnostics and are not added separately to the released STAT+SYS covariance"
+  },
+  "background_model": {
+    "scope": "Flat, late-time matter plus interacting vacuum; radiation and neutrinos omitted, with no perturbation or early-universe calculation.",
+    "paper_model": {
+      "equations": [
+        "dot(rho_x) = Gamma * rho_x",
+        "dot(rho_c) + 3 H rho_c = - Gamma * rho_x",
+        "Q = Gamma * rho_x",
+        "w_x = -1"
+      ],
+      "positive_Q_direction": "CDM to vacuum",
+      "table_I_ivS_prior_on_g": [-3.0, 3.0]
+    },
+    "variables": {
+      "u": "ln(1+z) = -ln(a)",
+      "g": "Gamma/H0",
+      "m": "(rho_b + rho_c)/rho_critical_0",
+      "x": "rho_x/rho_critical_0",
+      "E": "H/H0",
+      "D": "dimensionless radial comoving distance"
+    },
+    "gamma_over_H": "g/E",
+    "ode_system": [
+      "dx/du = -g*x/E",
+      "dm/du = 3*m + g*x/E",
+      "E^2 = m + x",
+      "dD/du = exp(u)/E"
+    ],
+    "initial_conditions": {
+      "m_at_u_0": "Omega_m0",
+      "x_at_u_0": "1 - Omega_m0",
+      "D_at_u_0": 0.0,
+      "flat_closure": true
+    },
+    "gamma_zero_limit": "At g=0, x=1-Omega_m0 and m=Omega_m0*(1+z)^3, exactly flat LCDM."
+  },
+  "sn_distance_and_identifiability": {
+    "distance_integral": "D(zHD)=integral_0^zHD dz/E(z)",
+    "luminosity_distance": "DL=(1+zHEL)*(c/H0_gauge)*D(zHD)",
+    "distance_modulus_base": "mu0=5*log10(DL/Mpc)+25",
+    "H0_gauge_km_s_mpc": 70.0,
+    "h0_gauge_role": "Common arbitrary distance scale consistent with released MU convention; its change is an additive magnitude absorbed by the profiled intercept.",
+    "identifiability": "Dovekie alone cannot separate H0 from the common SN absolute-magnitude/calibration intercept. The dimensionless shape g may affect relative distances; dimensional Gamma cannot be inferred without H0 calibration."
+  },
+  "covariance_and_profile_likelihood": {
+    "n": 1820,
+    "stored_quantity": "Packed upper triangle of full STAT+SYS precision P=C^-1",
+    "covariance_dimension": [1820, 1820],
+    "row_mapping": "Unpack and reflect the precision in exact release Hubble-diagram order; do not sort or join rows.",
+    "precision_positive_definite": "Verified in the source data contract; require successful Cholesky factorization in the fit adapter.",
+    "shared_intercept_symbol": "M_SN",
+    "intercept_domain": "Unbounded real additive magnitude offset, shared by all 1820 rows",
+    "definitions": {
+      "delta": "mu0 - y",
+      "q": "1^T P 1 > 0",
+      "Mhat": "-(1^T P delta)/q = (1^T P (y-mu0))/q",
+      "profile_residual": "r = delta + Mhat*1",
+      "profile_chi2": "r^T P r = delta^T P delta - (1^T P delta)^2/q",
+      "profile_minus_2_log_likelihood": "profile_chi2 + log|C| + n*log(2*pi)"
+    },
+    "normalization": "C is fixed across shape parameters. If the absolute normalized profile is recorded, compute log|C|=-log|P| from a Cholesky factorization. The official flat-prior marginalization adds log(q/(2*pi)); that term is not included in the requested profile likelihood and is shape-constant for this fixed covariance.",
+    "excluded_terms": [
+      "No separate MUERR or MUERR_SYS diagonal variance",
+      "No training/holdout split or conditional predictive covariance",
+      "No redshift-dependent or per-fold magnitude intercept"
+    ]
+  },
+  "physical_feasibility": {
+    "fit_guard_redshift_interval": [0.0, 1.14418],
+    "interval_choice": "Check the entire Dovekie observed interval from today to max(zHD); this is the SN-only likelihood domain. The integrator's maximum supported requested redshift remains 2.33.",
+    "required_positive_quantities": ["E^2", "m", "x"],
+    "baryon_split": {
+      "baryon_history": "b(u)=f_b*Omega_m0*exp(3u)",
+      "cdm_history": "c(u)=m(u)-b(u)",
+      "existence_condition": "0 < f_b < f_b_max",
+      "f_b_max": "min(1, min_{u in [0, ln(1+zHD_max)]} m(u)/(Omega_m0*exp(3u)))",
+      "candidate_guard": "Require a nonempty open positive-split interval and check an interior witness f_b=f_b_max/2."
+    },
+    "grid_check": "Sample the full interval densely (current code uses at least 257 points and spacing <=0.002 in u); refine at accepted profile points to check for missed narrow invalid regions.",
+    "uncalibrated_fb_limitation": "No CMB or BBN baryon calibration is in scope. A positive witness establishes only that some physical split exists; f_b is neither measured nor fitted. The previously used f_b=0.16 is illustrative only and is not imposed."
+  },
+  "search_domain": {
+    "Omega_m0": {
+      "range": [0.05, 0.6],
+      "role": "Initial finite numerical search domain, inherited from scripts/background_bao.py; not a paper prior."
+    },
+    "g": {
+      "range": [-3.0, 3.0],
+      "role": "Initial finite numerical search domain matching the current BAO screen and the paper Table I IVS uniform prior.",
+      "paper_prior_is_used_as_probability_measure": false
+    },
+    "paper_Omega_m0_prior": "No direct Omega_m0 prior in Table I; the paper lists omega_b=Omega_b*h^2 in [0.005, 0.1] and omega_c=Omega_c*h^2 in [0.001, 0.99] separately.",
+    "magnitude_intercept": "Profiled analytically over the real line; no bounds.",
+    "boundary_rule": "Record face hits. If the selected maximum or relevant surface touches a shape-box face, extend/recheck the domain before treating the profile as closed."
+  },
+  "bao_point_comparison": {
+    "bao_ivs_shape": {
+      "Omega_m0": 0.38697100769747017,
+      "g": -0.4666647299169934,
+      "source": "experiments/interacting_vacuum_screen/result.json",
+      "status": "Previously selected BAO-only point; coordinates are a fixed reference, not refit here."
+    },
+    "bao_lcdm_shape": {
+      "Omega_m0": 0.2974618149542753,
+      "g": 0.0,
+      "source": "experiments/interacting_vacuum_screen/result.json",
+      "status": "Previously selected nested BAO-only LCDM point; optional fixed reference."
+    },
+    "allowed_comparison": "Overlay fixed BAO coordinates on the SN-only profile and report the SN-only profile displacement chi2_SN_prof(BAO point)-min chi2_SN_prof as descriptive geometry.",
+    "prohibited_interpretations": [
+      "No BAO+SN likelihood product or summed score",
+      "No joint evidence or posterior preference",
+      "No exact independence claim; audited products supply no BAO-SN cross-covariance",
+      "No p-value, sigma, or Wilks-calibrated interval from profile differences or contour thresholds"
+    ]
+  },
+  "required_fit_diagnostics": [
+    "Record data, source-code, paper, contract, and BAO-reference identities/hashes; record row count/order hash and both redshift ranges.",
+    "Require Cholesky factorization of full P and record the profile normal-equation residual and fixed-covariance normalization convention.",
+    "At the selected point and reported profile points, record Omega_m0, g, Mhat, profiled chi2, physicality minima, f_b_max, witness fraction, and search-bound hits.",
+    "Retain all optimizer statuses and endpoint objective rechecks; use multiple starts and a coarse full-box surface/refinement check, without claiming globality from these checks.",
+    "Check the g=0 LCDM distance limit and independently compute distances at the selected point and fixed BAO point with a declared tolerance.",
+    "Count solver failures and physical-domain rejections; refine the feasibility guard at accepted points.",
+    "Report the BAO-point SN-profile displacement as descriptive only."
+  ],
+  "synthetic_algebra_check": {
+    "scope": "One 3-vector synthetic SPD covariance check of analytic intercept profiling only",
+    "optimizer_or_cosmology_used": false,
+    "direct_vs_closed_form_profile_quadratic_abs_difference": 0.0,
+    "normal_equation_abs_residual": 0.0
+  },
+  "review_gate": {
+    "independent_frozen_shape_review_gates_this_fit": false,
+    "reason": "The independent frozen-shape review concerns the conditional redshift-fold calculation; this new profile uses the full unpartitioned Dovekie likelihood.",
+    "previous_frozen_shape_empirical_reproduction": {
+      "status": "Parent reports passed",
+      "path": "work/compute8/dovekie_result_independent_review.md",
+      "scope_note": "This closes the earlier frozen-shape review; it does not validate the future profile implementation."
+    },
+    "new_profile_interpretation_gate": "The new profile's own full-covariance, independent-distance, and physical-feasibility diagnostics must pass before its result is interpreted."
+  },
+  "unresolved_conditions": [
+    "The search box is fixed initially; any relevant boundary contact requires domain extension/recheck before interpreting a closed profile.",
+    "The continuous physicality condition is represented numerically by a dense grid; accepted points require a refined check.",
+    "A calibrated baryon fraction is unavailable, so only existential baryon/CDM feasibility can be checked."
+  ],
+  "blockers": []
+}

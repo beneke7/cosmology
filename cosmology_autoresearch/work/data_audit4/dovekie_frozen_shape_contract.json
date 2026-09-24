@@ -1,0 +1,155 @@
+{
+  "audit": "DES-Dovekie frozen-shape data-contract audit",
+  "as_of": "2026-09-25",
+  "status": "verified_proceed_with_adapter",
+  "scope": {
+    "included": ["Pinned Dovekie data and likelihood provenance", "Row order, units, redshift range, covariance properties", "Flat-prior intercept-marginalized conditional predictive derivation", "BAO/SN and DES-SN5YR overlap caveats"],
+    "excluded": ["Comparative model scores", "Cosmological shape refits", "Published posterior/evidence reproduction", "Changes to shared reports, ledger, RUN_STATE, or experiment code"],
+    "numerical_threads": 1,
+    "thread_environment": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1",
+    "checks_wall_time": "under 1 second",
+    "large_product_downloaded": false
+  },
+  "provenance": {
+    "repository": "https://github.com/des-science/DES-SN5YR",
+    "commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+    "commit_date_utc": "2026-01-28T10:43:40Z",
+    "commit_message": "Update README.md; clarify covariance matrices are already inverted",
+    "pin_kind": "full Git commit, not a tag",
+    "tree_metadata_url": "https://api.github.com/repos/des-science/DES-SN5YR/git/trees/c9a4fcafc4cbd19bd750dee47fc76194a45c181f?recursive=1",
+    "exact_local_upstream_matches": {
+      "hubble_diagram": {
+        "local": "context/data/des_dovekie_hd.csv",
+        "upstream": "4_DISTANCES_COVMAT/DES-Dovekie_HD.csv",
+        "url": "https://github.com/des-science/DES-SN5YR/blob/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/4_DISTANCES_COVMAT/DES-Dovekie_HD.csv",
+        "bytes": 148002,
+        "git_blob": "f80ec4e2795edcbf3442f460c539bea56226027a",
+        "sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf"
+      },
+      "stat_sys_npz": {
+        "local": "context/data/des_dovekie_stat_sys.npz",
+        "upstream": "4_DISTANCES_COVMAT/STAT+SYS.npz",
+        "url": "https://github.com/des-science/DES-SN5YR/blob/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/4_DISTANCES_COVMAT/STAT%2BSYS.npz",
+        "bytes": 6244951,
+        "git_blob": "4289666487f427782ec81c327ae7f7741f0f5fe5",
+        "sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b"
+      },
+      "release_readme": {
+        "upstream": "4_DISTANCES_COVMAT/README.md",
+        "url": "https://github.com/des-science/DES-SN5YR/blob/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/4_DISTANCES_COVMAT/README.md",
+        "git_blob": "d5900bc1a4a2ce345012c878c929204cef5b5c52",
+        "local_snapshot": "work/data_audit/Dovekie_distances_readme.md"
+      },
+      "likelihood_source": {
+        "local": "work/data_audit/Dovekie_cosmosis_likelihood.py",
+        "upstream": "5_COSMOLOGY/Dovekie_cosmosis_likelihood.py",
+        "url": "https://github.com/des-science/DES-SN5YR/blob/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/5_COSMOLOGY/Dovekie_cosmosis_likelihood.py",
+        "bytes": 7674,
+        "git_blob": "b7142093d633bf62281a2253d85ccc54db48431a",
+        "sha256": "78526c0e6013619e3586a5509be504f0bc5f0461d1e55a3d5bec0154353645ff"
+      },
+      "paper": {
+        "version": "arXiv:2511.07517v3",
+        "submitted": "2025-11-10",
+        "last_revised": "2026-03-27",
+        "url": "https://arxiv.org/abs/2511.07517v3",
+        "html_url": "https://arxiv.org/html/2511.07517v3",
+        "local_pdf_sha256": "cd3dd615c36afe0d45bcdfabd9c31611f0ca511e325997f93c3eb1f5a9744eb6"
+      }
+    },
+    "verification": "Queried official GitHub commit tree metadata without fetching data payloads; local git hash-object values match the upstream blob IDs."
+  },
+  "data_contract": {
+    "file_format": "SNANA whitespace VARNAMES/SN records, despite .csv suffix; no commas",
+    "rows": 1820,
+    "unique_cid": 1820,
+    "cid_first_last": ["Gaia16agf", "1257587"],
+    "cid_order_sha256_lf_joined_with_trailing_lf": "b7d5c6ad8dfdadf1e12443852b14006c0d9d0ceb4bcb46efb378f058ce5aa5a3",
+    "zHD_nondecreasing": true,
+    "zHD_positive_rows": 1820,
+    "official_filter": "zHD > 0.00; all rows pass and order is unchanged",
+    "zHD_range": [0.02509, 1.14418],
+    "zHEL_range": [0.02385, 1.14501],
+    "redshift_units": "dimensionless",
+    "redshift_semantics": {"zHD": "CMB-frame/Hubble-diagram redshift with peculiar-velocity correction; used for D_A interpolation", "zHEL": "heliocentric redshift; enters luminosity-distance prefactor"},
+    "MU_range_mag": [34.98002, 44.62596],
+    "MU_convention": "Distance modulus in magnitudes; release assumes H0=70, while SN likelihood retains an unconstrained constant magnitude/H0 offset.",
+    "MUERR_range_mag": [0.0409, 468.0108],
+    "MUERR_role": "Diagnostic/stat error field; do not add separately to released STAT+SYS covariance.",
+    "archive": {
+      "keys": ["nsn", "cov", "allow_pickle"],
+      "nsn_shape_dtype_value": [[1], "int64", 1820],
+      "cov_shape_dtype": [[1657110], "float32"],
+      "packed_length": "1820*1821/2",
+      "stored_quantity": "upper triangle of inverse full STAT+SYS covariance P=C^-1",
+      "precision_shape": [1820, 1820],
+      "precision_exactly_symmetric": true,
+      "precision_cholesky": "pass",
+      "precision_eigenvalue_min_max": [4.565498854360711e-06, 271.84069918452985],
+      "precision_condition_2": 59542386.90146264,
+      "covariance_shape": [1820, 1820],
+      "inverse_covariance_max_antisymmetric_roundoff": 1.1102230246251565e-16,
+      "covariance_cholesky_after_symmetrizing_roundoff": "pass",
+      "positive_definite": true
+    },
+    "mapping": "Verified exact local-to-upstream Git blob identity and release README pairing/order warning; do not sort or use the metadata table."
+  },
+  "likelihood": {
+    "theory_mu": "g_i=5 log10[(1+zHD_i)(1+zHEL_i)D_A(zHD_i;theta)]+25",
+    "released_offset_marginalization": "For d=g-y and P=C^-1: Q=d^T P d-(1^T P d)^2/(1^T P 1), plus log[(1^T P 1)/(2*pi)] in the likelihood helper; fixed log|C| is added by the Gaussian base.",
+    "h0": "M is fully degenerate with H0; do not infer H0 from Dovekie alone.",
+    "mismatches": [
+      "Code defaults refer to DES-SN5YR_HD.csv and STAT+SYS.txt.gz, rather than Dovekie's DES-Dovekie_HD.csv and STAT+SYS.npz.",
+      "Code calls Table.read(format='ascii.csv'), but the exact paired data is SNANA whitespace. Use a format adapter and explicit Dovekie paths.",
+      "Release README has a likely typo DES-SN55YR_HD.csv in its ordering note; the exact upstream data asset is DES-Dovekie_HD.csv."
+    ],
+    "execution": "Inspected exact pinned source; CosmoSIS not run by this audit."
+  },
+  "conditional_redshift_block": {
+    "well_defined": true,
+    "requirements": ["Freeze shape theta from BAO only.", "Predeclare disjoint nonempty training T and held-out block H.", "Use full C and preserve identical row mapping in vectors/matrices.", "Integrate one flat-prior M using training rows only."],
+    "covariance_space": {
+      "K_T": "C_TT^-1",
+      "q_T": "1_T^T K_T 1_T > 0",
+      "r_T": "y_T-g_T",
+      "Mhat_T": "(1_T^T K_T r_T)/q_T",
+      "A": "C_HT K_T",
+      "a_H": "1_H-A 1_T = 1_H-C_HT C_TT^-1 1_T",
+      "S_H": "C_HH-C_HT K_T C_TH",
+      "posterior_intercept": "M|y_T,theta ~ Normal(Mhat_T,1/q_T)",
+      "predictive_mean": "m_H|T=g_H+A r_T+a_H Mhat_T",
+      "predictive_covariance": "V_H|T=S_H+a_H a_H^T/q_T",
+      "normalized_score": "-2 log p(y_H|y_T,theta)=e_H^T V_H|T^-1 e_H+log|V_H|T|+|H|log(2*pi), e_H=y_H-m_H|T",
+      "rank_one_term": "a_H a_H^T/q_T, with covariance-space vector a_H=1_H-C_HT C_TT^-1 1_T"
+    },
+    "precision_space_equivalent": {
+      "A": "C_HT C_TT^-1=-P_HH^-1 P_HT",
+      "S_H": "P_HH^-1",
+      "K_T": "C_TT^-1=P_TT-P_TH P_HH^-1 P_HT",
+      "warning": "P_TT alone is not the marginal training precision. Use the Schur complement and stable Cholesky solves."
+    },
+    "plug_in_difference": "Plugging in Mhat_T and scoring only with S_H drops the intercept-posterior rank-one variance and is not the flat-prior-marginalized predictive score.",
+    "score_limits": [
+      "Leave-one-block-out conditional scores are valid individually but are not additive.",
+      "For an additive sequence, designate an intercept-calibration anchor and score later blocks conditionally; the first block has no normalized predictive density under an improper flat prior unless M has a proper prior.",
+      "Do not use held-out rows to estimate M. Conditional scoring is a predictive diagnostic, not a second independent likelihood."
+    ]
+  },
+  "overlap_and_independence": {
+    "dovekie_paper_uses_desi_dr2_bao": "Yes; arXiv v3 section 4.2.",
+    "dovekie_zHD_range": [0.02509, 1.14418],
+    "local_desi_bao_redshift_anchor_range": [0.295, 2.33],
+    "redshift_ranges_overlap": true,
+    "same_object_rows_identified": false,
+    "desi_sn_cross_covariance": "No cross-probe covariance is provided by the audited products. A BAO*SN likelihood product assumes zero cross-covariance; common sky/cosmic volume could still correlate them.",
+    "des_sn5yr_overlap": {"dovekie_rows": 1820, "des_sn5yr_rows": 1829, "shared_sne_reported": 1718, "independent": false},
+    "double_counting": "Do not multiply by original DES-SN5YR or a Dovekie chain/joint summary already containing Dovekie and/or DESI factors."
+  },
+  "recommendation": {
+    "proceed": true,
+    "status": "Proceed with a path/format adapter, exact row order, full STAT+SYS, frozen BAO shape, and the rank-one intercept-marginalized conditional predictive covariance. Label zero BAO-SN cross-covariance as an approximation.",
+    "blocker": null,
+    "comparative_scores_computed": false,
+    "shapes_refit": false
+  }
+}

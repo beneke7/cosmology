@@ -1,0 +1,68 @@
+{
+  "id": "des_dovekie_frozen_bao_shape_conditional_cv_20260925",
+  "objective": "Predictively compare the exact DESI DR2 BAO-selected flat-LCDM and interacting-vacuum shapes on DES-Dovekie SNe, conditioning on training redshift blocks and analytically integrating only the shared magnitude intercept.",
+  "status": "computed_independently_reproduced_pass",
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --seconds 1200 -- .venv/bin/python experiments/dovekie_frozen_shape_cv/conditional_cv.py",
+  "runtime_seconds": 1.5540036670863628,
+  "result": "experiments/dovekie_frozen_shape_cv/result.json",
+  "writeup": "work/compute6/dovekie_frozen_shape_cv.md",
+  "preflight_review": "work/compute7/dovekie_cv_preflight_review.md",
+  "independent_review": {
+    "status": "independently_reproduced_pass",
+    "reviewer": "gpt-6-luna/max subagent /root/dovekie_cv_preflight",
+    "report": "work/compute8/dovekie_result_independent_review.md",
+    "result": "work/compute8/dovekie_result_independent_review.json",
+    "method": "Independent SNANA parser, dense covariance-domain conditioning, independent ODE/quadrature; no production scoring import and no refit.",
+    "max_primary_fold_score_difference": 9.1e-13,
+    "max_edge_variant_delta_difference": 3.1e-12
+  },
+  "models": {
+    "BAO_flat_LCDM": {"Omega_m": 0.2974618149542753, "g": 0.0, "source_chi2": 10.271041002565132, "source_selected_status": 0},
+    "BAO_interacting_vacuum": {"Omega_m": 0.38697100769747017, "g": -0.4666647299169934, "source_chi2": 8.753877932903617, "source_selected_status": 0}
+  },
+  "likelihood_contract": {
+    "dataset": "Pinned DES-Dovekie SNANA release, one 1820-row SN branch, exact order, full STAT+SYS precision.",
+    "hubble_diagram_sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+    "packed_precision_sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+    "cid_order_sha256": "b7d5c6ad8dfdadf1e12443852b14006c0d9d0ceb4bcb46efb378f058ce5aa5a3",
+    "precision_is_inverse_covariance": true,
+    "muerr_added_separately": false,
+    "redshift_partition": "4 equal-count contiguous zHD groups over unique z values, ties unsplit; edges [0.32433, 0.479345, 0.626935].",
+    "edge_robustness": "Six predeclared variants, each moving one internal quartile cumulative target by +/-1% of N, other targets fixed; range in IVS-minus-LCDM integrated conditional -2log predictive score [-4.11795446, -3.04856881].",
+    "nuisance": "One common additive magnitude offset; training-only GLS estimate and flat-prior posterior integrated into the predictive covariance with its rank-one variance term.",
+    "shape_refit": false,
+    "absolute_h0_inferred": false,
+    "joint_bao_sn_likelihood": false,
+    "probe_cross_covariance": "Not released; probes are reported separately and no statistical independence is claimed.",
+    "random_seed": null
+  },
+  "finding": {
+    "primary_delta_ivs_minus_lcdm_conditional_neg2logpredictive": -4.036587740435834,
+    "per_fold_delta_chi2": [-5.541830400145557, 0.7875784745753549, 0.3389940652770065, 0.3786701198575315],
+    "plug_in_sensitivity_delta": -5.1975327991892755,
+    "interpretation": "Modest, edge-stable descriptive prediction advantage for the BAO-frozen IVS point, driven by the lowest-z fold; other three folds slightly favor LCDM. Overlapping holdout sums are not an additive joint likelihood, significance, posterior, or evidence. Mixed with prior BAO-block CV, which strongly penalized IVS at z=2.33."
+  },
+  "numerical_checks": {
+    "direct_covariance_reference_pass": true,
+    "reference_max_conditional_chi2_abs_difference": 1.1368683772161603e-13,
+    "max_abs_P_times_C_minus_I": 7.518291544883482e-15,
+    "max_covariance_asymmetry_before_symmetrization": 9.71445146547012e-17,
+    "max_independent_distance_modulus_difference_mag": 7.105427357601002e-15,
+    "gamma0_limit_difference_mag": 1.4210854715202004e-14,
+    "fixed_fb_0p16_positive_through_z2p33": true
+  },
+  "failed_attempts": ["experiments/dovekie_frozen_shape_cv/attempt_001_failure.json"],
+  "artifacts": {
+    "plot_png": "experiments/dovekie_frozen_shape_cv/conditional_cv.png",
+    "plot_svg": "experiments/dovekie_frozen_shape_cv/conditional_cv.svg",
+    "plot_command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --seconds 30 -- .venv/bin/python experiments/dovekie_frozen_shape_cv/plot_result.py"
+  },
+  "sha256": {
+    "experiments/dovekie_frozen_shape_cv/conditional_cv.py": "432d94c6876694b4db9cd079068fde0476ec0362f1d87d359d7e588ee786eb1a",
+    "experiments/dovekie_frozen_shape_cv/plot_result.py": "f43d0010d11ef96080f1bb129495182210352ca806dc5cfc41c94525088069ec",
+    "experiments/dovekie_frozen_shape_cv/result.json": "c28468a4ab9b20a71822eb2c7d971bb78a3e780e587992b2dc6c76ea0c8cd64f",
+    "experiments/dovekie_frozen_shape_cv/conditional_cv.png": "dd95093cf18a9f7107e2a8d4ac31959c0954bd365891df14adb84d482147107e",
+    "experiments/dovekie_frozen_shape_cv/conditional_cv.svg": "3a5098be5e4002b66afa1d3e2a35fa8a0cb841f932eb282b803ec8148b7a23c3"
+  },
+  "stop_disposition": "Continue with a separately reported Dovekie-only two-parameter background profile after the no-score model-domain contract is reviewed. Keep BAO and SN likelihoods separate; do not interpret a profile gain as evidence."
+}

@@ -1,0 +1,60 @@
+{
+  "audit": "Dovekie frozen-shape conditional-CV implementation preflight re-review",
+  "date": "2026-09-25",
+  "review_mode": "static source inspection",
+  "scoring_script_run": false,
+  "cosmology_fit_run": false,
+  "refit_run": false,
+  "observed_scores": false,
+  "overall": "PASS_STATIC_PRE_SCORE_IMPLEMENTATION",
+  "summary": "Prior implementation holds are addressed. The actual-matrix covariance reference now runs before the primary/scenario score loop and failure emits a diagnostic-only record before exit. Its tolerance keys exactly cover all returned checks. Empirical covariance and bin-edge sensitivity outcomes remain unrun and unverified.",
+  "items": [
+    {
+      "item": "frozen_bao_point_provenance",
+      "status": "PASS",
+      "evidence": "conditional_cv.py:92-134 loads exact BAO coordinates, verifies selected optimizer success/status and locked rounded targets, and records exact points and selected statuses. The BAO result is hashed in the source file list at lines 377-388."
+    },
+    {
+      "item": "predeclared_bin_edge_perturbations",
+      "status": "PASS_IMPLEMENTED_OUTCOME_UNOBSERVED",
+      "evidence": "conditional_cv.py:46 sets the displacement to 1% of N. Lines 463-536 shift each internal quantile target independently in both directions, preserve equal-z groups, and record six maps, fold results and deltas; lines 624-643 retain variants and the delta range. No scoring calculation was run in this review."
+    },
+    {
+      "item": "normalized_conditional_scores_and_logdet_comparability",
+      "status": "PASS",
+      "evidence": "conditional_cv.py:271-288 writes normalized integrated and plug-in per-fold -2log predictive scores including log determinant and |H|log(2pi). Fold sums are explicitly descriptive, not a joint score, at lines 619-623."
+    },
+    {
+      "item": "actual_matrix_covariance_domain_reconstruction_and_stop_rule",
+      "status": "PASS_STATIC_GATE",
+      "evidence": "conditional_cv.py:389-395 forms C=P^-1 and checks symmetry, P*C identity and positive-definite Cholesky. Lines 297-355 directly reconstruct the reference fold. All seven keys returned by covariance_reference match the seven reference_tolerances keys at lines 397-405 exactly. On failure, lines 414-439 write only a diagnostic record with comparative_scoring_performed=false and exit before the primary/scenario fold loop at line 441.",
+      "empirical_check_run": false
+    },
+    {
+      "item": "numerical_status_hash_and_command_reporting",
+      "status": "PASS_STATIC",
+      "evidence": "The failure record carries failed status, reference tolerances/check values, input/source hashes and disposition at conditional_cv.py:419-439. The successful path is reachable only after reference_pass and records the bounded one-thread command, library versions, script/data/contract hashes, and pass_after_pre-score_covariance_reference status at lines 545-665."
+    },
+    {
+      "item": "precision_block_signs_training_intercept_and_rank_one_variance",
+      "status": "PASS_STATIC",
+      "evidence": "conditional_cv.py:243-256 uses the Schur-complement training precision, training-only GLS intercept, A=-P_HH^-1P_HT and v=1_H+P_HH^-1P_HT1_T. Lines 259-272 add intercept uncertainty through the positive rank-one Woodbury update."
+    },
+    {
+      "item": "sn_distance_convention_and_h0_cancellation",
+      "status": "PASS_STATIC",
+      "evidence": "conditional_cv.py:137-141 and 170-172 use D_L=(1+zHEL)(c/H0) integral_0^zHD dz/E. Lines 611-617 state units and that the magnitude intercept absorbs the common H0 gauge."
+    },
+    {
+      "item": "overlap_and_independence_caveats",
+      "status": "PASS_STATIC",
+      "evidence": "conditional_cv.py:667-674 keeps BAO and SN separate, avoids a combined likelihood, disclaims exact cross-probe independence, and notes overlap with other SN compilations."
+    }
+  ],
+  "empirical_checks_not_performed": [
+    "Scoring script execution",
+    "Actual-matrix covariance-reference numerical outcome",
+    "Observed edge-perturbation stability or comparative direction",
+    "Cosmology fitting/refitting"
+  ]
+}
