@@ -1,0 +1,170 @@
+{
+  "status": "started",
+  "start_utc": "2026-09-24T15:12:19.075004+00:00",
+  "deadline_utc": "2026-09-24T23:12:19.075004+00:00",
+  "preflight": "runs/preflight.json",
+  "requested_orchestrator": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "max",
+    "source": ".codex/config.toml"
+  },
+  "observed_orchestrator": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "source": "active cosmology Codex session UI",
+    "note": "Observed main-session model differs from project request; Astra availability or a switch was not confirmed. Continuing with the observed model and recording this limitation."
+  },
+  "actual_agent_models": {
+    "literature": "gpt-6-luna/max",
+    "data_audit": "gpt-6-luna/max",
+    "theory_check": "gpt-6-luna/max",
+    "inference": "gpt-6-luna/max",
+    "compute": "gpt-6-luna/max",
+    "critic": "gpt-6-luna/max",
+    "orchestrator2_radiation": "gpt-6-astra/max",
+    "theory2": "gpt-6-luna/max",
+    "compute2": "gpt-6-luna/max"
+  },
+  "hardware": {
+    "logical_and_affinity_cpus": 20,
+    "physical_memory_bytes": 134292787200,
+    "free_disk_bytes_at_start": 315594293248,
+    "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB total, 5003 MiB free at preflight; 0% utilization",
+    "allocation_note": "Host-visible CPUs/RAM/GPU are not established as exclusive allocations."
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "environment": ".venv"
+  },
+  "user_steering": {
+    "effective_utc": "2026-09-24T15:17:00+00:00",
+    "compute": "Use local workstation resources aggressively and parallelize for speed, subject to the campaign limits and resources already occupied by unrelated processes.",
+    "checkpointing": "User explicitly authorizes periodic commits and pushes with concise progress reports.",
+    "push_target": "current tracking branch after staged-file review",
+    "resource_contract": "Use visible CPU affinity and currently free GPU memory; one GPU owner; no cloud/purchases/publication or unrelated process termination."
+  },
+  "parallel_team_policy": {
+    "user_authorizes_additional_distinct_orchestration_compute_and_theory_lanes": true,
+    "scale_if_meaningful_to_three_or_four_concurrent_subagents": true,
+    "actual_runtime_limit_including_root": 4,
+    "method": "rotate bounded subagent teams as slots free; no duplicated work or GPU contention"
+  },
+  "warden_policy": {
+    "model": "gpt-6-astra/max",
+    "trigger": "after every successful commit and after every push",
+    "only_task": "write a concise evidence-based event report and advisory next-action recommendation; may recommend continuing unchanged",
+    "advisory_not_a_gate": true,
+    "must_not_pause_or_delay_active_work": true,
+    "owned_path": "work/warden/",
+    "reports_git_ignored": true,
+    "runs": []
+  },
+  "completed_checkpoints": [
+    {
+      "id": "target_preflight",
+      "status": "complete",
+      "utc": "2026-09-24T15:12:19.075004+00:00",
+      "evidence": "runs/preflight.json; project-local .venv with Python 3.12.3, NumPy 2.5.3, SciPy 1.18.1"
+    },
+    {
+      "id": "numerical_checks_and_seed_baseline",
+      "status": "complete",
+      "evidence": "17/17 included tests pass; experiments/campaign_seed_bao/result.json reproduces LCDM/wCDM/CPL profile minima; background_bao.py self-check and TG audit pass"
+    },
+    {
+      "id": "cpu_gpu_screen",
+      "status": "complete",
+      "evidence": "3000x13 float64 CPU predictions in 0.165 s; optional torch CUDA path unavailable; initial GPU 27,107 MiB used / 5,003 MiB free"
+    }
+  ],
+  "active_local_job": null,
+  "latest_scientific_checkpoint": {
+    "utc": "2026-09-24T16:53:36+00:00",
+    "evidence": [
+      "experiments/bao_robustness/result.json: 200 full-covariance null mocks; 16/64-start tail estimate agrees at 17/200 with exact 95% interval [0.0503,0.1326]. scripts/recheck_bao_optimizer.py independently retried all 52 nonconverged candidates: original χ² recomputation max error 8.0e-14, no alternative improved any fit by >1e-7, and reported selected tail statistic remains stable.",
+      "work/inference/REPORT.md and experiments/dovekie_screen/: independently checked exploratory 1820-row DES-Dovekie full-precision profile fit; wider CPL bound moves from wa=-3 edge to wa≈-6.78 interior, not a posterior/significance result.",
+      "work/critic/REPORT.md: independent parser, likelihood and differential-evolution searches reproduce four Dovekie profile points; full-covariance algebra paths agree within 1.4e-12 and minima within 3.5e-8.",
+      "work/compute/GPU_BAO_SURFACE.md and experiments/gpu_bao_surface/: reproducible 2^20 full-covariance profile-surface benchmark measured RTX 5090 29.21x CPU speed end-to-end including CUDA startup/transfer; FP64 CPU/GPU Δχ² max 1.10e-11; adaptive scalar cross-check max Δχ² 4.55e-12.",
+      "experiments/radiation_sensitivity/: Astra Max orchestrator with Luna Max theory/compute workers completed independent full-covariance radiation checks; at tested optima max fixed shift 0.075 marginal sigma, post-refit max 0.0112, max |delta chi2| 0.0238. The reference treats all neutrinos as massless and does not bound the entire fit domain.",
+      "experiments/ledger.jsonl and context/claim_map.json: all seven current experiments have durable records/ledger entries; literature provenance and overlap caveats are integrated in context/SOURCE_INDEX.md and reading cards.",
+      "Radiation scan hash b825ee41df8296c16bb332535acb2ae0b33eadf15b51227328d067292f109e21; saved-fit review hash cee983a7c3206eee6798678ca1976b5388b293d6019b39919c579c0aeed12b204; measured CPU runtime 6.835 seconds."
+    ]
+  },
+  "tasks": [
+    {
+      "id": "literature",
+      "owner": "Luna Max subagent /root/literature",
+      "status": "complete",
+      "budget_minutes": 35,
+      "output": "work/literature/reading_map.md, proposed_claim_map.json, proposed_sources.json"
+    },
+    {
+      "id": "data_audit",
+      "owner": "Luna Max subagent /root/data_audit",
+      "status": "complete",
+      "budget_minutes": 35,
+      "output": "work/data_audit/",
+      "early_finding": "DESI covariance is SPD (13x13, kappa2 about 116.8). DES-Dovekie public data are 1,820 SNANA whitespace rows plus packed inverse covariance; pinned plugin expects CSV and is format-incompatible."
+    },
+    {
+      "id": "theory_check",
+      "owner": "Luna Max subagent /root/theory_check",
+      "status": "complete",
+      "budget_minutes": 30,
+      "output": "work/theory/derivation.md and independent synthetic check",
+      "finding": "Exact fixed-source transform independently checked; paper's coth sign branch fails its displayed stationary equation as expected from its p.4 caveat; NGC 3198 cannot provide a prediction without unique 3D density and observed-velocity-independent outer boundary."
+    },
+    {
+      "id": "inference",
+      "owner": "Luna Max subagent /root/inference",
+      "status": "complete",
+      "budget_minutes": 35,
+      "output": "work/inference/ and experiments/dovekie_screen/",
+      "early_finding": "Implementing a separate SNANA parser and official full-precision covariance profile likelihood; will not claim published-posterior reproduction."
+    },
+    {
+      "id": "compute",
+      "owner": "Luna Max subagent /root/compute",
+      "status": "complete",
+      "output": "work/compute/GPU_BAO_SURFACE.md, experiments/gpu_bao_surface/",
+      "finding": "2^20 full-covariance CPL profile surface measured 29.21x end-to-end RTX 5090 speedup vs one-core CPU, with FP64 and adaptive scalar agreement."
+    },
+    {
+      "id": "critic",
+      "owner": "Luna Max subagent /root/critic",
+      "status": "complete",
+      "output": "work/critic/REPORT.md and independent_result.json",
+      "finding": "Independent Dovekie implementation/search reproduces four profile points and bounded minima; no posterior inference."
+    },
+    {
+      "id": "orchestrator2_radiation",
+      "owner": "Astra Max subagent /root/orchestrator2_radiation",
+      "status": "complete",
+      "output": "work/theory2/, work/compute2/, experiments/radiation_sensitivity/",
+      "finding": "The reference photon+massless-neutrino correction is below measurement precision at tested baselines/refits; no physical massive-neutrino or full-domain claim."
+    },
+    {
+      "id": "theory2",
+      "owner": "Luna Max subagent /root/orchestrator2_radiation/theory2",
+      "status": "complete",
+      "output": "work/theory2/report.md, work/theory2/check_radiation.py",
+      "finding": "Derived radiation response under flat closure and independently checked constants, dimensions, and scalar distances."
+    },
+    {
+      "id": "compute2",
+      "owner": "Luna Max subagent /root/orchestrator2_radiation/compute2",
+      "status": "complete",
+      "output": "experiments/radiation_sensitivity/result.json, experiments/radiation_sensitivity/radiation_scan.py, work/compute2/REPORT.md",
+      "finding": "Ten H0 values each refit LCDM/wCDM/CPL with full covariance; separate 41-point fixed-parameter H0 scan; all optimizer statuses preserved."
+    }
+  ],
+  "next_commands": [
+    "Run a fresh 1000-mock CPU extension of the already optimizer-rechecked fixed model/bound search, with a distinct seed/output so the original 200 remain immutable; then independently review the aggregate exact binomial interval.",
+    "Validate every experiment record and ledger row, source/claim-map references, all code/data hashes, and repeat the full test suite plus current plots.",
+    "Checkpoint only reviewed campaign files to the current branch; invoke an Astra Max warden immediately after the commit and again after the push, then keep researching.",
+    "Write MORNING_REPORT.md and NEXT.md at least 30 minutes before the fixed deadline; include negative findings, plots, reproducible commands, source provenance, and a ranked next experiment."
+  ]
+}

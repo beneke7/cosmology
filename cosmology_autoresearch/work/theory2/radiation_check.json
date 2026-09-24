@@ -1,0 +1,546 @@
+{
+  "status": "independent_check; exploratory fixed-shape/fixed-amplitude screen",
+  "purpose": "Quantify the omitted radiation term against the 13-row supplied DESI DR2 BAO covariance for flat LCDM, wCDM and CPL at campaign-seed fit points.",
+  "scientific_scope": {
+    "radiation_reference": "photons plus effectively massless radiation normalized with N_eff=3.046 relative to the nominal (4/11)^(1/3) neutrino-to-photon temperature ratio; N_eff is the effective-density parameterization, not a species-by-species thermal-history calculation",
+    "neutrino_caveat": "This massless-neutrino reference extension does not reproduce the DESI massive-neutrino density transition; Omega_m and fitted shape parameters are held fixed while flat closure is restored through Omega_de.",
+    "amplitude": "alpha=c/(H0 rd) remains a free BAO amplitude and is held fixed at each seed fit point; no H0 or rd inference is made.",
+    "H0_domain": "50-90 km s^-1 Mpc^-1 is a sensitivity screen only, not a prior or inference.",
+    "fit_points": "Supplied experiments/campaign_seed_bao/result.json exploratory optimizer fit points; models are not re-fit after radiation is added.",
+    "precision_metrics": "Per-row shifts use sqrt(diag(C)); full-covariance displacement is delta_prediction^T C^-1 delta_prediction. Delta-chi2 compares the data residual at the same fit parameters, before and after radiation."
+  },
+  "constants_and_physical_density": {
+    "T_CMB_K_input": 2.7255,
+    "h_P_J_s": 6.62607015e-34,
+    "k_B_J_K": 1.380649e-23,
+    "c_m_s": 299792458.0,
+    "G_m3_kg_s2": 6.6743e-11,
+    "G_relative_standard_uncertainty_CODATA_2022": 2.2e-05,
+    "AU_m_exact_IAU": 149597870700.0,
+    "parsec_m_from_pc_definition": 3.085677581491367e+16,
+    "Mpc_m": 3.085677581491367e+22,
+    "H100_s_inv": 3.240779289444365e-18,
+    "a_rad_J_m3_K4_from_h_k_c": 7.565733250280007e-16,
+    "sigma_SB_4sigma_over_c_J_m2_s_K4": 5.6703744191844314e-08,
+    "relative_a_rad_sigma_identity_residual": 0.0,
+    "photon_energy_density_J_m3_at_input_temperature": 4.1748009199298555e-14,
+    "photon_mass_density_kg_m3_at_input_temperature": 4.6450924775726515e-31,
+    "critical_mass_density_kg_m3_at_h_equals_1": 1.8783416169331677e-26,
+    "Omega_gamma_h2": 2.472975328714088e-05,
+    "N_eff": 3.046,
+    "neutrino_to_photon_density_factor_per_Neff": 0.22710731766023898,
+    "Omega_r_h2_massless_reference": 4.183702725849734e-05,
+    "Omega_r_screen_endpoints": {
+      "H0_50": 0.00016734810903398935,
+      "H0_90": 5.1650650936416465e-05
+    },
+    "formulae": {
+      "u_gamma": "(8*pi^5/15) (k_B^4/(h_P^3*c^3)) T_CMB^4 = a_rad*T_CMB^4",
+      "Omega_gamma_h2": "(8*pi*G/(3*c^2*H100^2))*u_gamma, with H100=100 km s^-1 Mpc^-1",
+      "Omega_r_h2": "Omega_gamma_h2 * [1+(7/8)*(4/11)^(4/3)*N_eff]",
+      "Omega_r_H0": "Omega_r_h2 / h^2, h=H0/(100 km s^-1 Mpc^-1)"
+    }
+  },
+  "input_sha256": {
+    "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+    "scripts/background_bao.py": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2",
+    "experiments/campaign_seed_bao/result.json": "92662f3ee42500d2be34d9f87b485fe56c82e9550fa674e42f4dec2bf2cab1f0"
+  },
+  "script_sha256": "36eca591a1d8155b3f7dea1f3170400092cc11c28ff4498684e68a6b88fb22c8",
+  "execution": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.5.3",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_only": true,
+    "dtype": "float64",
+    "blas_thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "quadrature": "Independent Gauss-Legendre integration, 512-point production values; convergence compared at 64/128/256 points."
+  },
+  "quadrature_convergence_at_H0_50": {
+    "lcdm": {
+      "max_abs_prediction_difference_64_vs_512": 3.552713678800501e-14,
+      "max_abs_prediction_difference_128_vs_512": 1.4210854715202004e-14,
+      "max_abs_prediction_difference_256_vs_512": 2.842170943040401e-14
+    },
+    "wcdm": {
+      "max_abs_prediction_difference_64_vs_512": 4.263256414560601e-14,
+      "max_abs_prediction_difference_128_vs_512": 1.0658141036401503e-14,
+      "max_abs_prediction_difference_256_vs_512": 2.842170943040401e-14
+    },
+    "cpl": {
+      "max_abs_prediction_difference_64_vs_512": 4.973799150320701e-14,
+      "max_abs_prediction_difference_128_vs_512": 2.1316282072803006e-14,
+      "max_abs_prediction_difference_256_vs_512": 2.842170943040401e-14
+    }
+  },
+  "models": [
+    {
+      "model": "lcdm",
+      "reference_parameters": {
+        "alpha": 29.524633230788915,
+        "Omega_m": 0.297461814179106,
+        "w0": -1.0,
+        "wa": 0.0
+      },
+      "independent_zero_radiation_max_abs_prediction_difference": 4.973799150320701e-14,
+      "results_by_H0_screen_endpoint": [
+        {
+          "H0_km_s_Mpc": 50.0,
+          "h_dimensionless_screen_value": 0.5,
+          "Omega_r_today": 0.00016734810903398935,
+          "first_order_prediction_shift": [
+            -0.0005747526933142757,
+            -0.0012355562977520874,
+            -0.004571795223977309,
+            -0.0022518638479564522,
+            -0.005735861694274398,
+            -0.0036724040288129756,
+            -0.006654823868754367,
+            -0.006425548089644211,
+            -0.007444717369279732,
+            -0.007651847803472786,
+            -0.00758807513490262,
+            -0.0075417531321850554,
+            -0.014113586375863437
+          ],
+          "exact_prediction_shift": [
+            -0.0005746754091475736,
+            -0.0012353144201657784,
+            -0.004570400335303759,
+            -0.0022512458656400725,
+            -0.005733395230990368,
+            -0.0036710719836889893,
+            -0.006651024980026676,
+            -0.006422326266164902,
+            -0.007438801493121261,
+            -0.007647596595035111,
+            -0.007581371552179306,
+            -0.007531888875929482,
+            -0.01410223001757771
+          ],
+          "exact_shift_over_marginal_row_sigma": [
+            -0.007552379839655121,
+            -0.007337043480124137,
+            -0.010656884808742518,
+            -0.012511702284220844,
+            -0.017172536281646347,
+            -0.02269153166474824,
+            -0.0330825582404332,
+            -0.019788045020210844,
+            -0.03312739586132007,
+            -0.010015742290938236,
+            -0.014635519892352025,
+            -0.07452707365297054,
+            -0.026523804214496228
+          ],
+          "max_abs_shift_over_marginal_row_sigma": 0.07452707365297054,
+          "full_covariance_shift_mahalanobis2": 0.016285457059315604,
+          "full_covariance_shift_mahalanobis": 0.1276144860872605,
+          "baseline_chi2_recomputed": 10.271041002565848,
+          "chi2_with_radiation_at_same_fit_parameters": 10.310663390128589,
+          "delta_chi2_at_same_fit_parameters": 0.03962238756274061,
+          "max_abs_exact_minus_first_order_over_marginal_sigma": 9.760554949772271e-05,
+          "first_order_relative_l2_error_in_prediction_shift": 0.0007827127406583871
+        },
+        {
+          "H0_km_s_Mpc": 90.0,
+          "h_dimensionless_screen_value": 0.9,
+          "Omega_r_today": 5.1650650936416465e-05,
+          "first_order_prediction_shift": [
+            -0.00017739280657848012,
+            -0.00038134453634323685,
+            -0.0014110479086349719,
+            -0.0006950197061593988,
+            -0.0017703276834180237,
+            -0.0011334580335842516,
+            -0.0020539579841834465,
+            -0.00198319385482846,
+            -0.002297752274469053,
+            -0.002361681420824934,
+            -0.0023419984984267344,
+            -0.002327701584007733,
+            -0.0043560451777356285
+          ],
+          "exact_prediction_shift": [
+            -0.0001773854436804001,
+            -0.0003813214911492224,
+            -0.0014109150005729987,
+            -0.0006949608229973592,
+            -0.0017700926508155135,
+            -0.0011333311024444015,
+            -0.002053595943788622,
+            -0.0019828868078484163,
+            -0.0022971883846913954,
+            -0.0023612762514453323,
+            -0.002341359482384675,
+            -0.0023267609712700477,
+            -0.00435496259349577
+          ],
+          "exact_shift_over_marginal_row_sigma": [
+            -0.002331198146597759,
+            -0.002264826116165759,
+            -0.0032898559279127145,
+            -0.003862369299262593,
+            -0.0053017416458056195,
+            -0.007005315807487553,
+            -0.010214697376227863,
+            -0.006109539098068481,
+            -0.010230124981567074,
+            -0.003092466256332463,
+            -0.004519896306854624,
+            -0.02302300115351883,
+            -0.008190915553593935
+          ],
+          "max_abs_shift_over_marginal_row_sigma": 0.02302300115351883,
+          "full_covariance_shift_mahalanobis2": 0.0015533961065529252,
+          "full_covariance_shift_mahalanobis": 0.03941314636708068,
+          "baseline_chi2_recomputed": 10.271041002565848,
+          "chi2_with_radiation_at_same_fit_parameters": 10.279807865053733,
+          "delta_chi2_at_same_fit_parameters": 0.008766862487885163,
+          "max_abs_exact_minus_first_order_over_marginal_sigma": 9.307242304705882e-06,
+          "first_order_relative_l2_error_in_prediction_shift": 0.00024163275555199681
+        }
+      ],
+      "H0_screen_41_point_grid_summary": {
+        "grid_endpoints_km_s_Mpc": [
+          50.0,
+          90.0
+        ],
+        "point_count": 41,
+        "max_marginal_sigma_shift": {
+          "H0_km_s_Mpc": 50.0,
+          "max_abs_shift_over_marginal_row_sigma": 0.07452707365297054,
+          "full_covariance_shift_mahalanobis": 0.1276144860872605,
+          "abs_delta_chi2_at_same_fit_parameters": 0.03962238756274061
+        },
+        "max_full_covariance_displacement": {
+          "H0_km_s_Mpc": 50.0,
+          "max_abs_shift_over_marginal_row_sigma": 0.07452707365297054,
+          "full_covariance_shift_mahalanobis": 0.1276144860872605,
+          "abs_delta_chi2_at_same_fit_parameters": 0.03962238756274061
+        },
+        "max_abs_delta_chi2_at_same_fit_parameters": {
+          "H0_km_s_Mpc": 50.0,
+          "max_abs_shift_over_marginal_row_sigma": 0.07452707365297054,
+          "full_covariance_shift_mahalanobis": 0.1276144860872605,
+          "abs_delta_chi2_at_same_fit_parameters": 0.03962238756274061
+        }
+      }
+    },
+    {
+      "model": "wcdm",
+      "reference_parameters": {
+        "alpha": 30.054107061126036,
+        "Omega_m": 0.2976934757648763,
+        "w0": -0.9118992203333512,
+        "wa": 0.0
+      },
+      "independent_zero_radiation_max_abs_prediction_difference": 6.394884621840902e-14,
+      "results_by_H0_screen_endpoint": [
+        {
+          "H0_km_s_Mpc": 50.0,
+          "h_dimensionless_screen_value": 0.5,
+          "Omega_r_today": 0.00016734810903398935,
+          "first_order_prediction_shift": [
+            -0.0005347214442314831,
+            -0.0011452602960095905,
+            -0.004224106099628316,
+            -0.00208599418740602,
+            -0.005321996918349378,
+            -0.003409529356806694,
+            -0.0062272148521762575,
+            -0.0060071789816320414,
+            -0.007079748598551922,
+            -0.0071771024350908,
+            -0.007261697939511645,
+            -0.007394556307179992,
+            -0.013443593955407788
+          ],
+          "exact_prediction_shift": [
+            -0.0005346548430509301,
+            -0.0011450527009060352,
+            -0.004222909007090436,
+            -0.0020854623135981853,
+            -0.005319860103085716,
+            -0.0034083736633725437,
+            -0.0062238704586370375,
+            -0.006004333295987152,
+            -0.007074387997318965,
+            -0.007173318640731452,
+            -0.007255556205098657,
+            -0.007385132586877674,
+            -0.013433140097930618
+          ],
+          "exact_shift_over_marginal_row_sigma": [
+            -0.007026429865550245,
+            -0.006800941781650788,
+            -0.009846633017843285,
+            -0.011590330488084761,
+            -0.01593392517922437,
+            -0.0210677478544001,
+            -0.030957868531106558,
+            -0.018500152850112774,
+            -0.031504544365173366,
+            -0.009394599987529773,
+            -0.01400654702634578,
+            -0.07307493901007181,
+            -0.025265364236670595
+          ],
+          "max_abs_shift_over_marginal_row_sigma": 0.07307493901007181,
+          "full_covariance_shift_mahalanobis2": 0.015025638390039632,
+          "full_covariance_shift_mahalanobis": 0.12257911074094,
+          "baseline_chi2_recomputed": 9.041046606439728,
+          "chi2_with_radiation_at_same_fit_parameters": 9.040377465020743,
+          "delta_chi2_at_same_fit_parameters": -0.0006691414189852196,
+          "max_abs_exact_minus_first_order_over_marginal_sigma": 9.324650278635516e-05,
+          "first_order_relative_l2_error_in_prediction_shift": 0.0007613173304866219
+        },
+        {
+          "H0_km_s_Mpc": 90.0,
+          "h_dimensionless_screen_value": 0.9,
+          "Omega_r_today": 5.1650650936416465e-05,
+          "first_order_prediction_shift": [
+            -0.00016503748278749478,
+            -0.00035347540000296,
+            -0.0013037364505025665,
+            -0.0006438253664833394,
+            -0.0016425916414658575,
+            -0.0010523238755576216,
+            -0.0019219798926469929,
+            -0.0018540675869234695,
+            -0.002185107592145655,
+            -0.0022151550725588885,
+            -0.0022412647961455694,
+            -0.0022822704651790098,
+            -0.004149257393644378
+          ],
+          "exact_prediction_shift": [
+            -0.0001650311377128233,
+            -0.0003534556213615758,
+            -0.0013036223907931799,
+            -0.0006437746888323659,
+            -0.001642388025924646,
+            -0.0010522137512651852,
+            -0.0019216611746735168,
+            -0.0018537963929396994,
+            -0.002184596644804415,
+            -0.002214794459327152,
+            -0.0022406793549905046,
+            -0.002281371883212202,
+            -0.004148260864177189
+          ],
+          "exact_shift_over_marginal_row_sigma": [
+            -0.002168837951890876,
+            -0.0020993191853748085,
+            -0.00303967981655093,
+            -0.0035778931869342332,
+            -0.004919243629199559,
+            -0.006503915412447076,
+            -0.00955844669361938,
+            -0.005711794287850863,
+            -0.00972871744415667,
+            -0.0029006250861113568,
+            -0.004325537542467414,
+            -0.022573881953215868,
+            -0.007802146104194076
+          ],
+          "max_abs_shift_over_marginal_row_sigma": 0.022573881953215868,
+          "full_covariance_shift_mahalanobis2": 0.0014331943227605857,
+          "full_covariance_shift_mahalanobis": 0.0378575530477154,
+          "baseline_chi2_recomputed": 9.041046606439728,
+          "chi2_with_radiation_at_same_fit_parameters": 9.037625713399825,
+          "delta_chi2_at_same_fit_parameters": -0.003420893039903561,
+          "max_abs_exact_minus_first_order_over_marginal_sigma": 8.891353221836185e-06,
+          "first_order_relative_l2_error_in_prediction_shift": 0.00023502800905080305
+        }
+      ],
+      "H0_screen_41_point_grid_summary": {
+        "grid_endpoints_km_s_Mpc": [
+          50.0,
+          90.0
+        ],
+        "point_count": 41,
+        "max_marginal_sigma_shift": {
+          "H0_km_s_Mpc": 50.0,
+          "max_abs_shift_over_marginal_row_sigma": 0.07307493901007181,
+          "full_covariance_shift_mahalanobis": 0.12257911074094,
+          "abs_delta_chi2_at_same_fit_parameters": 0.0006691414189852196
+        },
+        "max_full_covariance_displacement": {
+          "H0_km_s_Mpc": 50.0,
+          "max_abs_shift_over_marginal_row_sigma": 0.07307493901007181,
+          "full_covariance_shift_mahalanobis": 0.12257911074094,
+          "abs_delta_chi2_at_same_fit_parameters": 0.0006691414189852196
+        },
+        "max_abs_delta_chi2_at_same_fit_parameters": {
+          "H0_km_s_Mpc": 69.0,
+          "max_abs_shift_over_marginal_row_sigma": 0.03839486917179878,
+          "full_covariance_shift_mahalanobis": 0.06439488004548506,
+          "abs_delta_chi2_at_same_fit_parameters": 0.004106328628429523
+        }
+      }
+    },
+    {
+      "model": "cpl",
+      "reference_parameters": {
+        "alpha": 32.400312687004224,
+        "Omega_m": 0.37395105135385215,
+        "w0": -0.3,
+        "wa": -2.3033417732774923
+      },
+      "independent_zero_radiation_max_abs_prediction_difference": 7.105427357601002e-14,
+      "results_by_H0_screen_endpoint": [
+        {
+          "H0_km_s_Mpc": 50.0,
+          "h_dimensionless_screen_value": 0.5,
+          "Omega_r_today": 0.00016734810903398935,
+          "first_order_prediction_shift": [
+            -0.0003477458423746551,
+            -0.0007822217778287688,
+            -0.003187611985870768,
+            -0.0015265284584241514,
+            -0.004374630732307319,
+            -0.002652509064516796,
+            -0.005436539140999915,
+            -0.004969155664551012,
+            -0.0063718270213823,
+            -0.006021132717192304,
+            -0.006517448834144072,
+            -0.006309888898618772,
+            -0.01151395549999472
+          ],
+          "exact_prediction_shift": [
+            -0.0003477168647796347,
+            -0.000782117236958868,
+            -0.0031869180351336013,
+            -0.0015262173940051582,
+            -0.004373177157567909,
+            -0.0026517449961787065,
+            -0.005434001475542516,
+            -0.004967057309034573,
+            -0.0063675306958455025,
+            -0.006018283596269214,
+            -0.006512548488091241,
+            -0.006302988082255823,
+            -0.011506008395400613
+          ],
+          "exact_shift_over_marginal_row_sigma": [
+            -0.004569692382287813,
+            -0.004645317888664875,
+            -0.007430994202626146,
+            -0.008482226640031022,
+            -0.01309844173980479,
+            -0.01639089503419679,
+            -0.027029017457173073,
+            -0.01530416699116665,
+            -0.028356679529012704,
+            -0.007881898160416328,
+            -0.012572201783194202,
+            -0.06236725803819111,
+            -0.021640769834952386
+          ],
+          "max_abs_shift_over_marginal_row_sigma": 0.06236725803819111,
+          "full_covariance_shift_mahalanobis2": 0.010878072853698679,
+          "full_covariance_shift_mahalanobis": 0.10429800023825327,
+          "baseline_chi2_recomputed": 5.700615936327727,
+          "chi2_with_radiation_at_same_fit_parameters": 5.709041420076782,
+          "delta_chi2_at_same_fit_parameters": 0.00842548374905494,
+          "max_abs_exact_minus_first_order_over_marginal_sigma": 6.828269213991498e-05,
+          "first_order_relative_l2_error_in_prediction_shift": 0.0006752705765715504
+        },
+        {
+          "H0_km_s_Mpc": 90.0,
+          "h_dimensionless_screen_value": 0.9,
+          "Omega_r_today": 5.1650650936416465e-05,
+          "first_order_prediction_shift": [
+            -0.0001073289636958812,
+            -0.00024142647463850888,
+            -0.0009838308598366567,
+            -0.0004711507587728862,
+            -0.0013501946704652218,
+            -0.0008186756371965419,
+            -0.0016779441793209613,
+            -0.0015336900199231518,
+            -0.0019666132782044134,
+            -0.0018583742954297233,
+            -0.002011558282143232,
+            -0.001947496573647769,
+            -0.0035536899691341727
+          ],
+          "exact_prediction_shift": [
+            -0.00010732620310349716,
+            -0.0002414165148909575,
+            -0.0009837647431254481,
+            -0.0004711211213646038,
+            -0.0013500561677766143,
+            -0.0008186028332275441,
+            -0.0016777023549359171,
+            -0.0015334900550776354,
+            -0.0019662037987160375,
+            -0.001858102773500292,
+            -0.0020110912060626873,
+            -0.001946838650097149,
+            -0.0035529324636200954
+          ],
+          "exact_shift_over_marginal_row_sigma": [
+            -0.0014104801418037243,
+            -0.0014338725733787567,
+            -0.00229386197646804,
+            -0.002618340049076013,
+            -0.004043657830893969,
+            -0.005059925872760857,
+            -0.00834498231986144,
+            -0.004724887679373889,
+            -0.008756143263713743,
+            -0.0024334806756855436,
+            -0.003882327247660604,
+            -0.01926371855138857,
+            -0.006682438517519937
+          ],
+          "max_abs_shift_over_marginal_row_sigma": 0.01926371855138857,
+          "full_covariance_shift_mahalanobis2": 0.0010374175084799473,
+          "full_covariance_shift_mahalanobis": 0.03220896627462526,
+          "baseline_chi2_recomputed": 5.700615936327727,
+          "chi2_with_radiation_at_same_fit_parameters": 5.700895252530897,
+          "delta_chi2_at_same_fit_parameters": 0.00027931620316934413,
+          "max_abs_exact_minus_first_order_over_marginal_sigma": 6.51006908396851e-06,
+          "first_order_relative_l2_error_in_prediction_shift": 0.0002084557251399825
+        }
+      ],
+      "H0_screen_41_point_grid_summary": {
+        "grid_endpoints_km_s_Mpc": [
+          50.0,
+          90.0
+        ],
+        "point_count": 41,
+        "max_marginal_sigma_shift": {
+          "H0_km_s_Mpc": 50.0,
+          "max_abs_shift_over_marginal_row_sigma": 0.06236725803819111,
+          "full_covariance_shift_mahalanobis": 0.10429800023825327,
+          "abs_delta_chi2_at_same_fit_parameters": 0.00842548374905494
+        },
+        "max_full_covariance_displacement": {
+          "H0_km_s_Mpc": 50.0,
+          "max_abs_shift_over_marginal_row_sigma": 0.06236725803819111,
+          "full_covariance_shift_mahalanobis": 0.10429800023825327,
+          "abs_delta_chi2_at_same_fit_parameters": 0.00842548374905494
+        },
+        "max_abs_delta_chi2_at_same_fit_parameters": {
+          "H0_km_s_Mpc": 50.0,
+          "max_abs_shift_over_marginal_row_sigma": 0.06236725803819111,
+          "full_covariance_shift_mahalanobis": 0.10429800023825327,
+          "abs_delta_chi2_at_same_fit_parameters": 0.00842548374905494
+        }
+      }
+    }
+  ]
+}

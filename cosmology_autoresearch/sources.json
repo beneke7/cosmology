@@ -443,6 +443,106 @@
       "fetch": true,
       "filename": "documentation/roman_launch.html",
       "note": "Official August 2026 launch notice supersedes older pre-launch schedules; not a cosmology data release."
+    },
+    {
+      "id": "desi_lya_bao_results_i",
+      "kind": "paper",
+      "title": "DESI DR2 Ly-alpha BAO Results I",
+      "url": "https://arxiv.org/abs/2503.14739",
+      "priority": "core",
+      "fetch": false,
+      "note": "Full arXiv HTML read in the literature pass (v3, 2025-06-30). Earlier compressed BAO result from the same DR2 Ly-alpha data family as Results IV; not an independent factor. No local full-text artifact was saved."
+    },
+    {
+      "id": "desi_lya_ap_validation",
+      "kind": "paper",
+      "title": "DESI DR2 Ly-alpha full-shape validation companion",
+      "url": "https://arxiv.org/abs/2607.27411",
+      "priority": "core",
+      "fetch": false,
+      "note": "Full arXiv HTML read in the literature pass (v2, 2026-08-04). Same collaboration and survey sample; a validation study, not independent data confirmation. No local full-text artifact was saved."
+    },
+    {
+      "id": "chaudhary_desi_dr2_evidence",
+      "kind": "paper",
+      "title": "Evidence for evolving dark energy from DESI DR2 BAO and Pantheon+, DES-Dovekie, and Union3",
+      "url": "https://arxiv.org/abs/2508.10514",
+      "priority": "core",
+      "fetch": false,
+      "note": "Full arXiv HTML read (v8, 2026-05-22), as recorded in work/literature/reading_map.md. Independent inference pipeline on overlapping released observations, not a new survey extraction. No local full-text artifact was saved."
+    },
+    {
+      "id": "efstathiou_bao_angle",
+      "kind": "paper",
+      "title": "Baryon Acoustic Oscillations from a Different Angle",
+      "url": "https://arxiv.org/abs/2505.02658",
+      "priority": "core",
+      "fetch": false,
+      "note": "Full arXiv HTML read (v2, 2025-05-14), as recorded in work/literature/reading_map.md. Alternative interpretation of the same public BAO information, not an independent measurement. No local full-text artifact was saved."
+    },
+    {
+      "id": "pszota_van_2024_journal",
+      "kind": "paper",
+      "title": "Field equation of thermodynamic gravity and galactic rotational curves",
+      "url": "https://doi.org/10.1016/j.dark.2024.101660",
+      "priority": "core",
+      "fetch": false,
+      "filename": "user_provided/pszota_van_2024.pdf",
+      "note": "User-provided journal PDF, full text read with Eq. (1) visually checked; SHA-256 55cbfbbb0a916ea2ce0b70523334ee301897695860fb4bdb5fd2278ab47b62e. See work/literature/reading_map.md."
+    },
+    {
+      "id": "van_abe_extended_newtonian",
+      "kind": "paper",
+      "title": "Emergence of extended Newtonian gravity from thermodynamics",
+      "url": "https://arxiv.org/abs/1912.00252",
+      "priority": "optional",
+      "fetch": false,
+      "note": "Abstract and metadata only (v2, 2021-11-09); equation-level priority/equivalence claims are not supported. No local full-text artifact."
+    },
+    {
+      "id": "van_abe_crossover",
+      "kind": "paper",
+      "title": "Crossover in extended Newtonian gravity emerging from thermodynamics",
+      "url": "https://arxiv.org/abs/2205.05170",
+      "priority": "optional",
+      "fetch": false,
+      "note": "Abstract only (v1, 2022); equation-level priority/equivalence claims are not supported. No local full-text artifact."
+    },
+    {
+      "id": "codata_2022_constants",
+      "kind": "reference",
+      "title": "CODATA 2022 recommended values of the fundamental physical constants",
+      "url": "https://physics.nist.gov/cuu/pdf/JPCRD2022CODATA.pdf",
+      "priority": "core",
+      "fetch": false,
+      "note": "Targeted table check for exact SI c, Planck constant, Boltzmann constant, G and Stefan-Boltzmann constant used in the radiation sensitivity lane; no uncertainty propagation."
+    },
+    {
+      "id": "fixsen_2009_cmb_temperature",
+      "kind": "paper",
+      "title": "The Temperature of the Cosmic Microwave Background",
+      "url": "https://arxiv.org/abs/0911.1955",
+      "priority": "core",
+      "fetch": false,
+      "note": "Abstract value 2.72548 +/- 0.00057 K checked against the rounded T_CMB=2.7255 K sensitivity input; no local full-text artifact."
+    },
+    {
+      "id": "iau_2015_resolution_b2",
+      "kind": "reference",
+      "title": "IAU 2015 Resolution B2: recommended nominal conversion constants",
+      "url": "https://iauarchive.eso.org/static/resolutions/IAU2015_English.pdf",
+      "priority": "core",
+      "fetch": false,
+      "note": "Official archive PDF checked for exact astronomical unit and parsec conversion used in H100-to-SI units."
+    },
+    {
+      "id": "pdg_2024_neutrinos_cosmology",
+      "kind": "reference",
+      "title": "Review of Particle Physics 2024: Neutrinos in Cosmology",
+      "url": "https://pdg.lbl.gov/2024/reviews/rpp2024-rev-neutrinos-in-cosmology.pdf",
+      "priority": "core",
+      "fetch": false,
+      "note": "Targeted Eq. (26.1) check for effective relativistic density normalization; the lane explicitly notes the massless-neutrino approximation and does not apply it as DESI's full massive-neutrino model."
     }
   ]
 }

@@ -43,3 +43,16 @@ Prepared 2026-09-23. Downloaded is an access state, not a full-text reading clai
 | [CosmoPower-JAX](https://github.com/dpiras/cosmopower-jax) | code | not_selected | cosmopower_jax_code.txt |
 | [Exhaustive symbolic regression](https://github.com/DeaglanBartlett/ESR) | code | not_selected | esr.txt |
 | [Roman launch and commissioning schedule](https://www.nasa.gov/news-release/nasas-dark-universe-seeking-nancy-grace-roman-space-telescope-launches/) | documentation | not_selected | documentation/roman_launch.html |
+| [DESI DR2 Lyα BAO Results I](https://arxiv.org/abs/2503.14739) | paper | full arXiv HTML read; no local artifact | external source; same DR2 Lyα sample family as Results IV |
+| [DESI DR2 Lyα full-shape validation companion](https://arxiv.org/abs/2607.27411) | paper | full arXiv HTML read; no local artifact | external source; validation, not independent data |
+| [Chaudhary et al. DESI DR2/SN reanalysis](https://arxiv.org/abs/2508.10514) | paper | full arXiv HTML read; no local artifact | alternate inference on overlapping public data |
+| [Efstathiou, BAO from a Different Angle](https://arxiv.org/abs/2505.02658) | paper | full arXiv HTML read; no local artifact | alternative interpretation, not new survey data |
+| [Pszota–Ván 2024 thermodynamic gravity](https://doi.org/10.1016/j.dark.2024.101660) | user-provided paper | full local PDF read | user_provided/pszota_van_2024.pdf; SHA-256 in sources.json |
+| [Ván & Abe, extended Newtonian gravity](https://arxiv.org/abs/1912.00252) | paper | abstract/metadata only | no detailed priority claim made |
+| [Ván & Abe, thermodynamic gravity crossover](https://arxiv.org/abs/2205.05170) | paper | abstract only | no detailed priority claim made |
+| [CODATA 2022 constants](https://physics.nist.gov/cuu/pdf/JPCRD2022CODATA.pdf) | reference | targeted constants-table check | SI constants; no uncertainty propagation |
+| [Fixsen CMB temperature](https://arxiv.org/abs/0911.1955) | paper | abstract value checked | rounded 2.7255 K input only |
+| [IAU 2015 Resolution B2](https://iauarchive.eso.org/static/resolutions/IAU2015_English.pdf) | reference | targeted definition checked | exact AU/parsec unit conversion |
+| [PDG 2024 neutrinos in cosmology](https://pdg.lbl.gov/2024/reviews/rpp2024-rev-neutrinos-in-cosmology.pdf) | reference | targeted Eq. (26.1) check | effective relativistic density; does not model massive-neutrino evolution |
+
+Access/version details, hashes and read limitations are recorded in [work/literature/reading_map.md](../work/literature/reading_map.md). External HTML/abstract reads are identified as such rather than represented as local downloads.

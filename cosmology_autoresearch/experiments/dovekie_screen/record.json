@@ -1,0 +1,50 @@
+{
+  "status": "exploratory_profile_screen_independently_checked",
+  "id": "des_dovekie_full_stat_sys_profile_20260924",
+  "question": "What flat late-time LCDM, constant-w and CPL distance-modulus profiles fit the pinned DES-Dovekie Hubble diagram under its full released STAT+SYS precision?",
+  "hypothesis": "A native-format independent parser and profiled-magnitude likelihood can reproduce bounded release-data profile points without adding diagonal errors or treating the SN normalization as H0.",
+  "source_ids": ["des_dovekie", "des_dovekie_repo", "des_dovekie_hd", "des_dovekie_stat_sys"],
+  "assumptions_and_units": ["Use flat late-time matter plus dark energy; radiation/curvature omitted at z<=1.145.", "zHD enters the expansion integral and zHEL enters the luminosity-distance prefactor, matching the release likelihood convention.", "H0 gauge is 70 km/s/Mpc but analytically absorbed by the profiled magnitude offset; H0 not inferred.", "c=299792.458 km/s; distances in Mpc; magnitude residuals in mag."],
+  "data_files_and_sha256": {
+    "context/data/des_dovekie_hd.csv": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+    "context/data/des_dovekie_stat_sys.npz": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c10e38495463b"
+  },
+  "code_commit_or_sha256": {
+    "work/inference/fit_dovekie.py": "f796afccedf91b61af5b0cfc18281a4638a96d9abcfa9618f3ea79b672b10ce1",
+    "work/inference/check_cpl_boundary.py": "61602b976c364c4c3a58391821723dd24342a161feda68f770c23cfb79faedd7",
+    "work/critic/independent_dovekie.py": "4aaf8a9921135b0b5bee1af0605156dca3755701af3c95a7b7c16944a50d15b5"
+  },
+  "environment_lock": {"python": "3.12.3", "numpy": "2.5.3", "scipy": "1.18.1", "matplotlib": "3.11.2"},
+  "model_parameters_and_priors": {
+    "interpretation": "bounded profile search domains, not priors",
+    "LCDM": {"Omega_m": [0.05, 0.6]},
+    "constant_w": {"Omega_m": [0.05, 0.6], "w0": [-2.0, -0.3]},
+    "CPL_common_domain": {"Omega_m": [0.05, 0.6], "w0": [-2.0, -0.3], "wa": [-3.0, 3.0]},
+    "CPL_widened_sensitivity_domains": {"wa": [[-5.0, 3.0], [-10.0, 3.0], [-20.0, 3.0]]}
+  },
+  "nuisance_parameters": {"additive_magnitude_offset": "one analytically profiled common offset per model; complete Gaussian normalization terms are parameter-independent and omitted from profile minima"},
+  "training_validation_holdout_definition": "No split or holdout; all 1,820 rows retained under the official zHD>0 selection.",
+  "covariance_order_and_overlap_treatment": "Rows preserved in official Hubble-diagram order. Full 1,820x1,820 packed STAT+SYS inverse covariance reconstructed; no MUERR is added again. This SN release is analyzed alone, not multiplied by original DES-SN5YR, Pantheon+ or Union3.",
+  "random_seed": 20260924,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python work/inference/fit_dovekie.py --starts 12; OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python work/inference/check_cpl_boundary.py",
+  "start_utc": null,
+  "runtime_seconds": 7.263467065058649,
+  "hardware": {"CPU_visible": 20, "primary_BLAS_threads": 1, "GPU_used": false},
+  "numerical_checks": {"precision_cholesky": true, "precision_condition_number": 59542388.186450124, "profile_quadratic_forms_max_disagreement": 9.094947017729282e-13, "96_vs_160_point_quadrature_max_abs_mag": 7.105427357601002e-15, "H0_gauge_70_to_100_max_abs_delta_chi2": 5.911715561524e-12, "independent_critic_fixed_point_chi2_max_difference": "<1.4e-12", "independent_critic_search_minima_max_difference": "<3.5e-8"},
+  "metric_definition": "Minimum residual^T W residual after analytic profile of a single magnitude offset; W is the full released STAT+SYS precision.",
+  "results": {
+    "LCDM": {"Omega_m": 0.3303167905483107, "chi2_profile": 1631.4205355712377, "offset_mag": 0.007449125568204219},
+    "constant_w": {"Omega_m": 0.26104168872969835, "w0": -0.8326803641608329, "chi2_profile": 1630.177096763851, "offset_mag": 0.016628486378426597, "delta_chi2_vs_LCDM": -1.2434388073863},
+    "CPL_common_domain": {"Omega_m": 0.40983793405618746, "w0": -0.788385630604079, "wa": -3.0, "chi2_profile": 1626.6305383851586, "offset_mag": 0.029198403102266603, "delta_chi2_vs_LCDM": -4.7899971860791, "boundary_hit": "wa lower bound"},
+    "CPL_wide_domain": {"Omega_m": 0.465666, "w0": -0.538859, "wa": -6.7818, "chi2_profile": 1625.308491819304, "delta_chi2_vs_LCDM": -6.1120437519},
+    "boundary_sensitivity_runtime_seconds": 16.13,
+    "independent_critic_runtime_seconds": 21.252
+  },
+  "uncertainty": "No posterior, evidence, confidence interval or significance was computed. CPL best fit depends on the allowed wa range.",
+  "attempts_counted_in_search": {"primary_multistarts_per_model": 12, "seed": 20260924, "CPL_domain_variants": 4},
+  "interpretation_and_limits": "Independent reproduction of a profile-only release-data calculation. The official pinned module's CSV reader is inconsistent with the native SNANA whitespace input; our parser follows pinned release semantics but does not execute CosmoSIS or reproduce its published posterior. CPL improvement is modest and strongly domain-sensitive; no evolving-DE evidence claim follows.",
+  "artifacts": ["experiments/dovekie_screen/result.json", "experiments/dovekie_screen/boundary_sensitivity.json", "experiments/dovekie_screen/dovekie_hubble_residuals.png", "work/inference/REPORT.md", "work/critic/REPORT.md", "work/critic/independent_result.json"],
+  "independent_reviewer": "Luna Max critic used a separately written parser, distance evaluator, full covariance profile algebra and seeded differential-evolution search.",
+  "review_disposition": "Independent fixed-point and bounded-minimum reproductions agree; limitation is likelihood-reader mismatch and profile-only interpretation, not unresolved algebra.",
+  "next_test": "Radiation-sensitivity lane is evaluating the higher-redshift BAO approximation; if continuing SN work, first evaluate selection/calibration nuisance sensitivity rather than combining overlapping SN branches."
+}

@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "prepared": "2026-09-24",
+  "note": "First-pass extension proposal; not merged into shared sources.json. Local hashes are SHA-256. Full-text access does not imply computational reproduction.",
+  "sources": [
+    {
+      "id": "desi_dr2_bao",
+      "title": "DESI DR2 Results II: BAO and cosmological constraints",
+      "version": "arXiv:2503.14738 v3, revised 2025-10-09",
+      "url": "https://arxiv.org/abs/2503.14738",
+      "access": "local full PDF/text read",
+      "local_artifact": "context/papers/desi_dr2_bao.pdf",
+      "sha256": "1e82f26e4cc3901b16168cd147f252bfa804f9c3caad3f4f7e3532640d237841",
+      "locators": "Eqs. (1)-(5), (8)-(10), pp. 4-5; Eq. (12), p. 11; Table VI, p. 24.",
+      "data_code": [
+        "https://data.desi.lbl.gov/doc/papers/dr2/",
+        "https://data.desi.lbl.gov/public/papers/y3/bao-cosmo-params/README.html",
+        "https://github.com/CobayaSampler/bao_data/tree/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2"
+      ],
+      "role": "Primary DR2 BAO likelihood and collaboration cosmology reference."
+    },
+    {
+      "id": "desi_extended_de",
+      "title": "Extended dark-energy analysis using DESI DR2 BAO",
+      "version": "arXiv:2503.14743 v2, revised 2025-04-03",
+      "url": "https://arxiv.org/abs/2503.14743",
+      "access": "local full PDF/text read",
+      "local_artifact": "context/papers/desi_extended_de.pdf",
+      "sha256": "0de007414e3464ca00c81950a1db42c6be4a15dcac9bbabc559a7656e094274d",
+      "locators": "Table I p. 5; Eq. (6) p. 7; Sec. III pp. 8-9.",
+      "data_code": [
+        "https://data.desi.lbl.gov/doc/papers/dr2/",
+        "https://data.desi.lbl.gov/public/papers/y3/bao-cosmo-params/README.html"
+      ],
+      "role": "Companion source for priors, model and perturbation-code conventions; not independent data confirmation."
+    },
+    {
+      "id": "desi_lya_bao_results_i",
+      "title": "DESI DR2 Ly-alpha BAO Results I",
+      "version": "arXiv:2503.14739 v3, revised 2025-06-30",
+      "url": "https://arxiv.org/abs/2503.14739",
+      "access": "full arXiv HTML read",
+      "role": "Earlier compressed Ly-alpha BAO result; same DR2 data family as the later full-shape/AP analysis.",
+      "data_code": ["https://data.desi.lbl.gov/doc/papers/dr2/"],
+      "limitation": "Do not combine as an independent point with Results IV fullshape absent a released joint covariance/likelihood."
+    },
+    {
+      "id": "des_dovekie",
+      "title": "The Dark Energy Survey Supernova Program: A Reanalysis of Cosmology Results and Evidence for Evolving Dark Energy with an Updated Type Ia Supernova Calibration",
+      "version": "arXiv:2511.07517 v3, revised 2026-03-27",
+      "url": "https://arxiv.org/abs/2511.07517",
+      "access": "local full PDF/text read",
+      "local_artifact": "context/papers/des_dovekie.pdf",
+      "sha256": "cd3dd615c36afe0d45bcdfabd9c31611f0ca511e325997f93c3eb1f5a9744eb6",
+      "locators": "Eqs. (8)-(9), pp. 4-5; Tables 10-11, Sec. 7.",
+      "data_code": [
+        "https://github.com/des-science/DES-SN5YR",
+        "https://des-sn-dr.readthedocs.io/en/latest/"
+      ],
+      "role": "Updated SN recalibration and separate analysis branch that supersedes and overlaps older SN fits.",
+      "limitation": "Repository mutable; pin commit. Do not treat old DES-SN5YR and Dovekie as independent (1718 overlapping SNe)."
+    },
+    {
+      "id": "act_dr6",
+      "title": "The Atacama Cosmology Telescope: DR6 power spectra, likelihoods and Lambda-CDM parameters",
+      "version": "arXiv:2503.14452 v2, revised 2025-06-24",
+      "url": "https://arxiv.org/abs/2503.14452",
+      "access": "local full PDF/text read",
+      "local_artifact": "context/papers/act_dr6.pdf",
+      "sha256": "4cbf9ccdb2ada7a07bd4bad878dc7f548bca1e963eeeb1b8694f77603a31b93e",
+      "locators": "Eq. (17) p. 22; Eq. (33) p. 25; P-ACT definition Sec. 6.3 pp. 26-27.",
+      "data_code": [
+        "https://lambda.gsfc.nasa.gov/product/act/act_dr6.02/",
+        "https://github.com/ACTCollaboration/act_dr6_mflike",
+        "https://github.com/ACTCollaboration/DR6-ACT-lite",
+        "https://github.com/ACTCollaboration/act_dr6_lenslike"
+      ],
+      "role": "CMB likelihood and overlap contract. ACT spectra, ACT-lite and P-ACT are alternatives, not separate independent factors."
+    },
+    {
+      "id": "des_dovekie_repo",
+      "title": "DES-SN5YR/Dovekie release repository",
+      "version": "Mutable repository accessed 2026-09-24; no commit pinned in this pass",
+      "url": "https://github.com/des-science/DES-SN5YR",
+      "access": "release README and artifact index checked",
+      "role": "Distance vectors, covariance, systematic components, likelihood and chain locations.",
+      "limitation": "Repository is mutable. Dovekie overlaps the original DES-SN5YR sample and should replace, not be added to, that release."
+    },
+    {
+      "id": "act_products",
+      "title": "NASA LAMBDA ACT DR6.02 products",
+      "version": "Official product index accessed 2026-09-24; dynamic",
+      "url": "https://lambda.gsfc.nasa.gov/product/act/act_dr6.02/",
+      "access": "official product index read",
+      "local_artifact": "context/documentation/act_products.html",
+      "role": "Maps, spectra, covariance, chains and likelihood links."
+    },
+    {
+      "id": "desi_lya_ap",
+      "title": "DESI DR2 Results IV: Alcock-Paczynski Measurements from the Lyman Alpha Forest and Cosmological Constraints",
+      "version": "arXiv:2607.27410 v3, revised 2026-08-04",
+      "url": "https://arxiv.org/abs/2607.27410",
+      "access": "local full PDF/text read",
+      "local_artifact": "context/papers/desi_lya_ap.pdf",
+      "sha256": "6fcc44addcd8843a46fc6016753955a5f16c7a3b2593c5c8e74250dc1c632674",
+      "locators": "Eqs. (20)-(26), printed pp. 18-20; Sec. VI.D/Table IV pp. 24-27; Data Availability p. 30.",
+      "data_code": [
+        "https://data.desi.lbl.gov/doc/papers/dr2/",
+        "https://data.desi.lbl.gov/doc/releases/"
+      ],
+      "role": "Latest DR2 Ly-alpha full-shape/AP result and updated cosmology comparison.",
+      "limitation": "Exact joint likelihood link not located in first pass. Updated BAO+Ly-alpha FS replaces the Ly-alpha BAO point; avoid double-counting."
+    },
+    {
+      "id": "desi_lya_ap_validation",
+      "title": "DESI DR2 Ly-alpha forest full-shape validation companion",
+      "version": "arXiv:2607.27411 v2, revised 2026-08-04",
+      "url": "https://arxiv.org/abs/2607.27411",
+      "access": "full arXiv HTML read",
+      "role": "Companion mock/data-split validation; same collaboration and survey sample, not independent replication."
+    },
+    {
+      "id": "pszota_van_2024_journal",
+      "title": "Field equation of thermodynamic gravity and galactic rotational curves",
+      "version": "Physics of the Dark Universe 46 (2024) 101660; DOI 10.1016/j.dark.2024.101660",
+      "url": "https://doi.org/10.1016/j.dark.2024.101660",
+      "access": "local full journal PDF; Eq. (1) visually checked",
+      "local_artifact": "context/user_provided/pszota_van_2024.pdf",
+      "sha256": "55cbfbbb0a916ea2ce0b70523334ee301897695860fb4bdb5bfd2278ab47b62e",
+      "locators": "Eq. (1) p. 2; Eqs. (5)-(8) pp. 3-4; vacuum Eqs. (9)-(17) pp. 4-5; boundary Eqs. (41)-(42) p. 8.",
+      "data_code": ["https://astroweb.case.edu/SPARC/"],
+      "role": "Supplied primary source for constant-K equation and conditional NGC 3198 fit.",
+      "limitation": "Spherical approximation and observed endpoint velocities used as derivative boundary values; no public analysis code located."
+    },
+    {
+      "id": "tg_preprint",
+      "title": "Field equation of thermodynamic gravity and galactic rotational curves",
+      "version": "arXiv:2306.01825 v3, revised 2024-09-20",
+      "url": "https://arxiv.org/abs/2306.01825",
+      "access": "local full PDF/text read",
+      "local_artifact": "context/papers/tg_preprint.pdf",
+      "sha256": "73befc859339a2aa4603e0e26b1f5fc1ddcf62ef0c98a8ef88c9e6718e8726af",
+      "role": "Preprint companion to journal source; equation/method/boundary details.",
+      "limitation": "Journal Eq. (1) checked visually; versions not asserted byte-identical."
+    },
+    {
+      "id": "sparc_master",
+      "title": "SPARC: Mass Models for 175 Disk Galaxies",
+      "version": "arXiv:1606.09251 v1, submitted 2016-06-29",
+      "url": "https://arxiv.org/abs/1606.09251",
+      "access": "local full PDF/text read",
+      "local_artifact": "context/papers/sparc_master.pdf",
+      "sha256": "d089215877213661e40965543ee7e05736619082ad16d95e65ec059029588c63",
+      "data_code": ["https://astroweb.case.edu/SPARC/"],
+      "role": "Rotation-curve and baryon component data lineage.",
+      "limitation": "Disk/gas force components do not uniquely determine a positive spherical density."
+    },
+    {
+      "id": "chaudhary_desi_dr2_evidence",
+      "title": "Evidence for evolving dark energy from DESI DR2 BAO and Pantheon+, DES-Dovekie, and Union3",
+      "version": "arXiv:2508.10514 v8, revised 2026-05-22",
+      "url": "https://arxiv.org/abs/2508.10514",
+      "access": "full arXiv HTML read",
+      "role": "Alternative SimpleMC/dynesty inference and sensitivity result on overlapping public data.",
+      "limitation": "Different priors/data treatment; not a new survey extraction or fully independent observation."
+    },
+    {
+      "id": "efstathiou_bao_angle",
+      "title": "Baryon Acoustic Oscillations from a Different Angle",
+      "version": "arXiv:2505.02658 v2, revised 2025-05-14",
+      "url": "https://arxiv.org/abs/2505.02658",
+      "access": "full arXiv HTML read",
+      "role": "Methodological/interpretive critique of BAO-based evolving-DE preference.",
+      "limitation": "Alternative analysis of public BAO information, not independent survey measurement or official correction."
+    },
+    {
+      "id": "efstathiou_sn_systematics",
+      "title": "Evolving Dark Energy or Supernovae Systematics?",
+      "version": "arXiv:2408.07175 v3, revised 2025-05",
+      "url": "https://arxiv.org/abs/2408.07175",
+      "access": "abstract only",
+      "role": "Historical SN calibration-sensitivity motivation; later Dovekie directly re-calibrates DES sample."
+    },
+    {
+      "id": "wang_mota_des_dr2",
+      "title": "Did DESI DR2 truly reveal dynamical dark energy?",
+      "version": "arXiv:2504.15222 v2, revised 2025-11-20",
+      "url": "https://arxiv.org/abs/2504.15222",
+      "access": "abstract and metadata only",
+      "role": "Critique of significance interpretation; method not audited in this pass."
+    },
+    {
+      "id": "van_abe_extended_newtonian",
+      "title": "Emergence of extended Newtonian gravity from thermodynamics",
+      "version": "arXiv:1912.00252 v2, revised 2021-11-09; Physica A 588 (2022) 126505",
+      "url": "https://arxiv.org/abs/1912.00252",
+      "access": "abstract only",
+      "role": "Backward theoretical lineage for thermodynamic gravity and relaxation."
+    },
+    {
+      "id": "van_abe_crossover",
+      "title": "Crossover in extended Newtonian gravity emerging from thermodynamics",
+      "version": "arXiv:2205.05170 v1, 2022",
+      "url": "https://arxiv.org/abs/2205.05170",
+      "access": "abstract only",
+      "role": "Backward lineage for nonlinear/singular vacuum solutions and force crossover."
+    },
+    {
+      "id": "tg_higher_gradient_2026",
+      "title": "Ghost-free higher-gradient Newtonian gravity from the Second Law of Thermodynamics",
+      "version": "arXiv:2609.00317 v1, submitted 2026-08-31",
+      "url": "https://arxiv.org/abs/2609.00317",
+      "access": "local full PDF/text read",
+      "local_artifact": "context/papers/tg_higher_gradient_2026.pdf",
+      "sha256": "c0992fc15699bcd2c7abd5a4b044ace25203c2793c0cca42cb775888945fe165",
+      "role": "Recent direct theoretical follow-up, but a different higher-gradient/nonlocal model; not empirical validation of constant-K galaxy fit."
+    }
+  ]
+}

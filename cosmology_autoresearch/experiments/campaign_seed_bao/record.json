@@ -1,0 +1,45 @@
+{
+  "status": "exploratory_screen",
+  "id": "desi_dr2_baseline_profiles_20260924",
+  "question": "What flat late-time background profiles fit the paired 13-entry DESI DR2 BAO Gaussian likelihood?",
+  "hypothesis": "One free ruler-amplitude parameter suffices for a transparent BAO-only shape comparison; the resulting minima are screening fits, not collaboration posteriors.",
+  "source_ids": ["desi_dr2_mean", "desi_dr2_cov", "desi_dr2_bao"],
+  "assumptions_and_units": ["Flat late-time matter plus dark energy; radiation and curvature omitted.", "alpha=c/(H0 rd) is dimensionless and free, so H0 and rd are not separated.", "All 13 released measurements are distances divided by rd; full covariance retained in released row order."],
+  "data_files_and_sha256": {
+    "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+  },
+  "code_commit_or_sha256": {
+    "scripts/run_seed_screen.py": "8eafbaad87fd87f48363fb0ac1914ffe7ab30d1693f672b5414442597cf440fb",
+    "scripts/background_bao.py": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2"
+  },
+  "environment_lock": {"python": "3.12.3", "numpy": "2.5.3", "scipy": "1.18.1", "environment": ".venv"},
+  "model_parameters_and_priors": {
+    "interpretation": "search bounds, not Bayesian priors",
+    "LCDM": {"alpha": [0.000001, 10000.0], "Omega_m": [0.05, 0.6]},
+    "constant_w": {"alpha": [0.000001, 10000.0], "Omega_m": [0.05, 0.6], "w0": [-2.0, -0.3]},
+    "CPL": {"alpha": [0.000001, 10000.0], "Omega_m": [0.05, 0.6], "w0": [-2.0, -0.3], "wa": [-3.0, 3.0]}
+  },
+  "nuisance_parameters": {"alpha": "free c/(H0 rd) amplitude profiled by optimizer; no calibrated rd or H0"},
+  "training_validation_holdout_definition": "No training split or holdout; all 13 compressed BAO entries enter the correlated Gaussian likelihood.",
+  "covariance_order_and_overlap_treatment": "Use full released 13x13 covariance in desi_dr2_mean.txt row order, including high-z DH then DM. No additional probe is multiplied.",
+  "random_seed": 20260923,
+  "command": ".venv/bin/python scripts/run_seed_screen.py --mean context/data/desi_dr2_mean.txt --cov context/data/desi_dr2_cov.txt --output experiments/campaign_seed_bao/result.json",
+  "start_utc": "2026-09-24T15:18:21.873933+00:00",
+  "runtime_seconds": 1.3920198827981949,
+  "hardware": {"device": "CPU", "logical_cpus_visible": 20, "GPU_used": false},
+  "numerical_checks": {"all_three_model_optimizers_success": true, "scalar_adaptive_quadrature_max_prediction_difference": "<4.3e-14", "independent_full_covariance_chi2_recomputation": "agrees within 8e-14", "covariance": "Cholesky-positive; condition number about 116.82", "radiation_check": "fixed-parameter illustrative Omega_r=9e-5 sensitivity only; no refit; see results and separate radiation lane"},
+  "metric_definition": "Minimum residual^T C^-1 residual with full Gaussian covariance; profile-chi-square differences are descriptive only.",
+  "results": {
+    "LCDM": {"alpha": 29.524633230788915, "Omega_m": 0.297461814179106, "chi2": 10.271041002565878},
+    "constant_w": {"alpha": 30.054107061126036, "Omega_m": 0.2976934757648763, "w0": -0.9118992203333512, "chi2": 9.041046606439771},
+    "CPL": {"alpha": 32.400312687004224, "Omega_m": 0.37395105135385215, "w0": -0.3, "wa": -2.3033417732774923, "chi2": 5.700615936327723, "boundary_hit": "w0 upper bound"}
+  },
+  "uncertainty": "No posterior uncertainty or model-selection penalty calculated; local screening result only.",
+  "attempts_counted_in_search": {"optimizer_starts_per_model": 16, "optimizer_seed": 20260923},
+  "interpretation_and_limits": "Baseline is reproduced numerically under its stated simplified late-time model. CPL reaches a w0 boundary; a lower minimum is not evidence of evolving dark energy. The radiation term is omitted and is under separate sensitivity review.",
+  "artifacts": ["experiments/campaign_seed_bao/result.json", "scripts/run_seed_screen.py", "scripts/background_bao.py"],
+  "independent_reviewer": "Independent scalar quadrature/full-covariance objective coded in scripts/run_seed_screen.py; later GPU scalar check independently validates the forward model.",
+  "review_disposition": "Reproduced as an explicitly exploratory profile calculation; not an official DESI posterior reproduction.",
+  "next_test": "Complete standard-radiation sensitivity screen tied to H0, and preserve the null-mock calibration for model-search interpretation."
+}

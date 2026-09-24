@@ -1,0 +1,58 @@
+{
+  "status": "exploratory_robustness_screen",
+  "id": "desi_dr2_profile_selection_calibration_20260924",
+  "question": "How unusual is the observed best CPL improvement when the declared w0-bound search is repeated on null LCDM mocks?",
+  "hypothesis": "Searching the same finite model/bound set can yield apparent improvements under LCDM; calibrate that selection procedure with full-covariance null simulations.",
+  "source_ids": ["desi_dr2_mean", "desi_dr2_cov", "desi_dr2_bao"],
+  "assumptions_and_units": ["Flat late-time matter plus CPL dark energy; radiation, curvature, perturbations and rd calibration omitted.", "alpha=c/(H0 rd) is dimensionless and free.", "Mock values are generated from the fitted LCDM mean through the released full covariance Cholesky factor."],
+  "data_files_and_sha256": {
+    "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+  },
+  "code_commit_or_sha256": {
+    "scripts/run_bao_robustness.py": "54cb6d78b45f0b9a495bdf8733459ccef6b6a9b2cfc6cc5e8c835a602a09ebcb",
+    "scripts/background_bao.py": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2",
+    "scripts/recheck_bao_optimizer.py": "dbc51ed4b8603b27ee9642335c7bdcd2b4805ea582f8e1a6e6ae697a919833d2"
+  },
+  "environment_lock": {"python": "3.12.3", "numpy": "2.5.3", "scipy": "1.18.1", "matplotlib": "3.11.2", "visible_cpus": 20},
+  "model_parameters_and_priors": {
+    "interpretation": "finite search domains, not Bayesian priors",
+    "models": ["LCDM", "constant-w", "CPL"],
+    "LCDM": {"alpha": [0.000001, 10000.0], "Omega_m": [0.05, 0.6]},
+    "constant_w": {"alpha": [0.000001, 10000.0], "Omega_m": [0.05, 0.6], "w0": [-2.0, -0.3]},
+    "CPL": {"alpha": [0.000001, 10000.0], "Omega_m": [0.05, 0.6], "wa": [-3.0, 3.0], "w0_upper_scan": [-0.3, -0.1, 0.0, 0.1]}
+  },
+  "nuisance_parameters": {"alpha": "free BAO scale optimized in all fits"},
+  "training_validation_holdout_definition": "200 synthetic 13-row null realizations; all 13 observations are correlated and included in each fit; no independent holdout.",
+  "covariance_order_and_overlap_treatment": "Full released covariance retained in exact mean-vector row order. No additional likelihood factor used.",
+  "random_seed": 20260924,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python scripts/run_bounded.py --seconds 1800 -- .venv/bin/python scripts/run_bao_robustness.py --n-mocks 200 --seed 20260924 --workers 16 --output experiments/bao_robustness/result.json",
+  "start_utc": "2026-09-24T15:53:41.360207+00:00",
+  "runtime_seconds": 178.35736450739205,
+  "hardware": {"CPU_workers": 16, "visible_cpus": 20, "GPU_used": false},
+  "numerical_checks": {
+    "covariance": "Full 13x13 covariance factored by Cholesky; condition number about 116.82.",
+    "scalar_vs_vector_prediction": "max absolute difference 2.84e-14 in stored reference check.",
+    "profiled_response_checks": "stored five-point Jacobian stability and rank-aware whitening checks; full-covariance block-conditional calculation retained.",
+    "optimizer_recheck": "52 candidate fits marked ABNORMAL across 16/64-start budgets were retried by a separately implemented derivative-free/profiled-amplitude method; direct chi2 reconstruction max error 7.99e-14; all retry solver statuses succeeded; none improved chi2 by >1e-7; best retry shift was -1.18e-10."
+  },
+  "metric_definition": "For each mock, selected improvement is null-LCDM chi2 minus the minimum among constant-w/CPL candidates over declared w0 bounds; empirical tail fraction counts statistics >= the observed selected-model improvement.",
+  "results": {
+    "observed_search_delta_chi2": 4.652440971036443,
+    "mocks": 200,
+    "exceedances": 17,
+    "tail_fraction": 0.085,
+    "exact_clopper_pearson_95pct_interval": [0.05029591863025728, 0.13260516582955234],
+    "16_start_q95": 5.843864338930478,
+    "64_start_q95": 5.843864338931675,
+    "16_vs_64_start_tail_fraction": 0.085,
+    "nonconverged_candidate_fits": {"16_starts": 23, "64_starts": 29, "total_per_budget": 1200}
+  },
+  "uncertainty": "The exact two-sided 95% Clopper–Pearson interval is wide at N=200. This is a coarse null false-positive check, not discovery-significance calibration.",
+  "attempts_counted_in_search": {"models": ["LCDM", "constant-w", "CPL"], "CPL_w0_upper_bounds": [-0.3, -0.1, 0.0, 0.1], "multi_start_budgets": [16, 64], "optimizer_seed_each_fit": 20260923},
+  "interpretation_and_limits": "The selected improvement occurs in 17/200 simulations under the fitted null and declared search, with a broad binomial interval. The conclusion is limited to this small mock ensemble, finite profile model set and late-time compressed likelihood. It is not a posterior p-value or sigma claim.",
+  "artifacts": ["experiments/bao_robustness/result.json", "experiments/bao_robustness/optimizer_recheck.json", "experiments/bao_robustness/bao_screen_diagnostics.png", "experiments/bao_robustness/bao_screen_diagnostics.svg", "scripts/run_bao_robustness.py", "scripts/recheck_bao_optimizer.py"],
+  "independent_reviewer": "Root-authored independent profiled-alpha/Powell plus L-BFGS-B diagnostic over all recorded nonconverged mock candidates; exact rows retained in optimizer_recheck.json.",
+  "review_disposition": "Optimizer ABNORMAL statuses are documented and do not materially change the reported selected statistic in the bounded retry; the nominal tail estimate remains coarse.",
+  "next_test": "If this result remains central, expand the mock ensemble using the same fixed search procedure and independently audit the finite model/bound search before any significance interpretation."
+}

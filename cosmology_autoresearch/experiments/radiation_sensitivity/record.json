@@ -1,0 +1,63 @@
+{
+  "status": "independently_checked_reference_model_sensitivity_screen",
+  "id": "desi_dr2_radiation_reference_sensitivity_20260924",
+  "question": "Does a physically derived photon-plus-massless-neutrino radiation density materially change the exploratory DESI DR2 compressed-BAO profile screen over a declared H0 sensitivity grid?",
+  "hypothesis": "At baseline and refitted optima, the reference radiation term produces shifts smaller than the released BAO measurement precision; this is conditional on the massless-neutrino reference model and finite scan.",
+  "source_ids": ["desi_dr2_mean", "desi_dr2_cov", "desi_dr2_bao", "codata_2022_constants", "fixsen_2009_cmb_temperature", "iau_2015_resolution_b2", "pdg_2024_neutrinos_cosmology"],
+  "inputs_sha256": {
+    "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+    "experiments/campaign_seed_bao/result.json": "92662f3ee42500d2be34d9f87b485fe56c82e9550fa674e42f4dec2bf2cab1f0",
+    "scripts/background_bao.py": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2"
+  },
+  "code_and_review_sha256": {
+    "experiments/radiation_sensitivity/radiation_scan.py": "b825ee41df8296c16bb332535acb2ae0b33eadf15b51227328d067292f109e21",
+    "work/theory2/check_radiation.py": "36eca591a1d8155b3f7dea1f3170400092cc11c28ff4498684e68a6b88fb22c8",
+    "work/orchestrator2_radiation/scalar_reference.py": "284e6ec92bad5941e0830c0ff95ec195106b9f452d42d958793ce3c37041a1ed",
+    "work/orchestrator2_radiation/review_saved_fits.py": "b4241a4733d1f1162f6756411562e42a4380ddbb7465fe2b248192510eb8f73e",
+    "work/orchestrator2_radiation/saved_fit_review.json": "cee983a7c3206eee6798678ca1976b5388b293d6019b39919c579c0aeed12b204",
+    "work/orchestrator2_radiation/REVIEW.md": "36afe79d95d2fd23a140b7339f05109bd1401e0e0f7af88ea00f6791f47c5b45",
+    "work/theory2/report.md": "a6b075a6ff44f6cb4a291c26202732d65b4e5eea5180c5557a0158f1f062e655",
+    "work/compute2/REPORT.md": "ceac18f372f589e732eb8fdd8db6709e40380b4bd4aaf75e178eac92d377ebae"
+  },
+  "environment": {"python": "3.12.3", "numpy": "2.5.3", "scipy": "1.18.1", "device": "CPU FP64", "numerical_library_threads": 1},
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python scripts/run_bounded.py --seconds 1200 -- .venv/bin/python experiments/radiation_sensitivity/radiation_scan.py",
+  "generated_utc": "2026-09-24T16:34:11.511676+00:00",
+  "runtime_seconds": 6.834624116308987,
+  "random_seed_base": 20260924,
+  "model_and_numerical_contract": {
+    "likelihood": "13-row released mean and full 13x13 covariance in unchanged release order; Cholesky-positive",
+    "radiation_reference": "omega_gamma h^2=2.472975328714088e-5; omega_r h^2=4.183702725849734e-5; T_CMB=2.7255 K; N_eff=3.046, with all neutrinos treated as massless",
+    "closure_and_scaling": "Omega_de=1-Omega_m-Omega_r; Omega_r(H0)=omega_r h^2/(H0/100)^2",
+    "distance_scale": "alpha=c/(H0*r_d) remains independently profiled and is not an H0 measurement",
+    "radiation_refit_H0_grid_km_s_Mpc": [50.0, 55.0, 60.0, 65.0, 67.4, 70.0, 75.0, 80.0, 85.0, 90.0],
+    "separate_fixed_baseline_check": "41 H0 points from 50 to 90 in unit steps; fixed-parameter theory scan, not 41 refits",
+    "shape_search_bounds": {"Omega_m": [0.05, 0.6], "w0": [-2.0, -0.3], "wa": [-3.0, 3.0]},
+    "optimizer": "16-start bounded L-BFGS-B; separate differential-evolution screen; active-face Powell checks; failed starts retained",
+    "quadrature": "96-node Gauss-Legendre compared with 192-node and adaptive scalar integration"
+  },
+  "results": {
+    "fixed_baseline_max_abs_marginal_shift_sigma": 0.07452707281838783,
+    "fixed_baseline_max_full_covariance_displacement_norm": 0.12761448497003886,
+    "fixed_baseline_max_abs_delta_chi2": 0.039622286934898554,
+    "after_refit_max_abs_marginal_shift_sigma": 0.011174181259038359,
+    "after_refit_max_full_covariance_displacement_norm": 0.0190223,
+    "after_refit_max_abs_delta_chi2": 0.023755860189403677,
+    "model_ordering_across_refit_grid": ["cpl", "wcdm", "lcdm"],
+    "cpl_w0_upper_bound_remains_active": true,
+    "independent_optima_checked": 33,
+    "independent_max_abs_chi2_difference": 2.1e-13,
+    "independent_de_profile_max_abs_chi2_difference": 3.097172296406825e-9,
+    "failed_or_abnormal_lbfgsb_start_statuses_retained": 19,
+    "total_lbfgsb_start_attempts": 528,
+    "all_differential_evolution_checks_passed": true,
+    "all_active_face_checks_passed": true,
+    "max_gl96_vs_adaptive_prediction_difference": 4.263256414560601e-14,
+    "max_gl96_vs_adaptive_delta_chi2_difference": 2.0250467969162855e-13
+  },
+  "interpretation_and_limits": "Radiation omission is below measurement precision at the tested baseline/refitted optima for this finite reference-model profile screen. This is not a physical massive-neutrino DESI background, a bound over the full shape domain, a posterior/evidence/significance result, or an H0 inference.",
+  "artifacts": ["experiments/radiation_sensitivity/result.json", "experiments/radiation_sensitivity/radiation_scan.py", "work/orchestrator2_radiation/REVIEW.md", "work/orchestrator2_radiation/saved_fit_review.json", "work/theory2/report.md", "work/compute2/REPORT.md"],
+  "independent_reviewer": "Astra Max radiation orchestrator plus separate scalar adaptive-quadrature/full-covariance reproduction; dedicated Luna Max theory and compute workers",
+  "review_disposition": "All 33 saved optimum fits and both the 41-point fixed-parameter theory scan and ten-point-per-model refit grid are independently checked; radiation effect is small only under the stated reference assumptions.",
+  "next_test": "Expand the fixed-search LCDM null mock ensemble with a fresh independent seed; retain the same full-covariance generation and model/bound selection procedure, then recheck the aggregate tail interval."
+}

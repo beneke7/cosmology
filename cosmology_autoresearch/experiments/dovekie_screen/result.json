@@ -1,0 +1,792 @@
+{
+  "artifacts": {
+    "code": "work/inference/fit_dovekie.py",
+    "code_sha256": "f796afccedf91b61af5b0cfc18281a4638a96d9abcfa9618f3ea79b672b10ce1",
+    "plot": "experiments/dovekie_screen/dovekie_hubble_residuals.png",
+    "plot_sha256": "1ef79c39e1c2199400ee3a80a2c87288ef2f4013d3587bcb5e426d8c8bc57e4d",
+    "result": "experiments/dovekie_screen/result.json"
+  },
+  "checks": {
+    "all_rows_preserved_after_official_zHD_cut": true,
+    "arbitrary_H0_gauge_invariance": {
+      "CPL": {
+        "chi2_abs_difference": 2.7284841053187847e-12,
+        "chi2_at_H0_100_gauge": 1626.6305383851613,
+        "chi2_at_H0_70_gauge": 1626.6305383851586,
+        "expected_offset_shift_mag": 0.7745097999287158,
+        "offset_shift_mag_H0_100_minus_70": 0.774509799928716
+      },
+      "LCDM": {
+        "chi2_abs_difference": 5.9117155615240335e-12,
+        "chi2_at_H0_100_gauge": 1631.4205355712436,
+        "chi2_at_H0_70_gauge": 1631.4205355712377,
+        "expected_offset_shift_mag": 0.7745097999287158,
+        "offset_shift_mag_H0_100_minus_70": 0.7745097999287156
+      },
+      "constant_w": {
+        "chi2_abs_difference": 3.183231456205249e-12,
+        "chi2_at_H0_100_gauge": 1630.1770967638543,
+        "chi2_at_H0_70_gauge": 1630.177096763851,
+        "expected_offset_shift_mag": 0.7745097999287158,
+        "offset_shift_mag_H0_100_minus_70": 0.7745097999287164
+      }
+    },
+    "data_audit_condition_2_from_precision_eigenvalues": 59542388.186450124,
+    "data_audit_precision_eigenvalue_range": [
+      4.565498755832436e-06,
+      271.84069918452997
+    ],
+    "independent_cholesky_whitened_profile_algebra": {
+      "CPL": {
+        "direct_residual_quadratic": 1626.6305383851586,
+        "max_absolute_disagreement": 4.547473508864641e-13,
+        "offset_normal_equation_abs_residual": 1.0036416142611415e-13,
+        "schur_profile_quadratic": 1626.630538385159,
+        "whitened_residual_quadratic": 1626.6305383851588
+      },
+      "LCDM": {
+        "direct_residual_quadratic": 1631.4205355712377,
+        "max_absolute_disagreement": 4.547473508864641e-13,
+        "offset_normal_equation_abs_residual": 4.4853010194856324e-14,
+        "schur_profile_quadratic": 1631.4205355712381,
+        "whitened_residual_quadratic": 1631.4205355712381
+      },
+      "constant_w": {
+        "direct_residual_quadratic": 1630.177096763851,
+        "max_absolute_disagreement": 9.094947017729282e-13,
+        "offset_normal_equation_abs_residual": 2.1405099914773018e-13,
+        "schur_profile_quadratic": 1630.1770967638502,
+        "whitened_residual_quadratic": 1630.177096763851
+      }
+    },
+    "precision_cholesky_positive": true,
+    "quadrature_max_abs_mu_difference_96_vs_160_mag": {
+      "CPL": 7.105427357601002e-15,
+      "LCDM": 7.105427357601002e-15,
+      "constant_w": 7.105427357601002e-15
+    },
+    "row_count_equals_precision_dimension": true
+  },
+  "classification": "independent profile-likelihood implementation; not a published-posterior reproduction",
+  "fits": [
+    {
+      "bound_hits": [],
+      "chi2_per_ndof_screening": 0.8973710316673474,
+      "chi2_profile": 1631.4205355712377,
+      "delta_chi2_vs_LCDM": 0.0,
+      "delta_chi2_vs_best_model": 4.789997186079063,
+      "independent_algebra_check": {
+        "direct_residual_quadratic": 1631.4205355712377,
+        "max_absolute_disagreement": 4.547473508864641e-13,
+        "offset_normal_equation_abs_residual": 4.4853010194856324e-14,
+        "schur_profile_quadratic": 1631.4205355712381,
+        "whitened_residual_quadratic": 1631.4205355712381
+      },
+      "model": "LCDM",
+      "n_data": 1820,
+      "n_profiled_parameters": 1,
+      "n_shape_parameters": 1,
+      "ndof_screening": 1818,
+      "optimizer_best_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "optimizer_best_start": 3,
+      "optimizer_best_success": true,
+      "optimizer_runs": [
+        {
+          "chi2": 1631.4205355712402,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 12,
+          "nit": 4,
+          "parameters": [
+            0.33031681006850483
+          ],
+          "start_index": 0,
+          "success": true
+        },
+        {
+          "chi2": 1631.420535571242,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 16,
+          "nit": 5,
+          "parameters": [
+            0.33031682549840663
+          ],
+          "start_index": 1,
+          "success": true
+        },
+        {
+          "chi2": 1631.4205355712406,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 22,
+          "nit": 8,
+          "parameters": [
+            0.33031680608794994
+          ],
+          "start_index": 2,
+          "success": true
+        },
+        {
+          "chi2": 1631.4205355712377,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 110,
+          "nit": 8,
+          "parameters": [
+            0.3303167905483107
+          ],
+          "start_index": 3,
+          "success": true
+        },
+        {
+          "chi2": 1631.4205355712402,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 30,
+          "nit": 5,
+          "parameters": [
+            0.33031677840921236
+          ],
+          "start_index": 4,
+          "success": true
+        },
+        {
+          "chi2": 1631.4205355712413,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 12,
+          "nit": 4,
+          "parameters": [
+            0.3303167980026753
+          ],
+          "start_index": 5,
+          "success": true
+        },
+        {
+          "chi2": 1631.4205355712395,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 20,
+          "nit": 8,
+          "parameters": [
+            0.33031678653097735
+          ],
+          "start_index": 6,
+          "success": true
+        },
+        {
+          "chi2": 1631.4205355712404,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 14,
+          "nit": 5,
+          "parameters": [
+            0.33031679296409117
+          ],
+          "start_index": 7,
+          "success": true
+        },
+        {
+          "chi2": 1631.4205355712393,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 14,
+          "nit": 4,
+          "parameters": [
+            0.3303168057860829
+          ],
+          "start_index": 8,
+          "success": true
+        },
+        {
+          "chi2": 1631.4205355712384,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 26,
+          "nit": 6,
+          "parameters": [
+            0.3303167992191671
+          ],
+          "start_index": 9,
+          "success": true
+        },
+        {
+          "chi2": 1631.4205355712431,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 14,
+          "nit": 5,
+          "parameters": [
+            0.3303167864892166
+          ],
+          "start_index": 10,
+          "success": true
+        },
+        {
+          "chi2": 1631.42053557124,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 16,
+          "nit": 5,
+          "parameters": [
+            0.3303167890567216
+          ],
+          "start_index": 11,
+          "success": true
+        }
+      ],
+      "optimizer_total_starts": 12,
+      "parameter_bounds": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ]
+      },
+      "parameter_names": [
+        "Omega_m"
+      ],
+      "parameters": {
+        "Omega_m": 0.3303167905483107
+      },
+      "profiled_additive_magnitude_offset_mag": 0.007449125568204219
+    },
+    {
+      "bound_hits": [],
+      "chi2_per_ndof_screening": 0.8971805705910022,
+      "chi2_profile": 1630.177096763851,
+      "delta_chi2_vs_LCDM": -1.2434388073866103,
+      "delta_chi2_vs_best_model": 3.5465583786924526,
+      "independent_algebra_check": {
+        "direct_residual_quadratic": 1630.177096763851,
+        "max_absolute_disagreement": 9.094947017729282e-13,
+        "offset_normal_equation_abs_residual": 2.1405099914773018e-13,
+        "schur_profile_quadratic": 1630.1770967638502,
+        "whitened_residual_quadratic": 1630.177096763851
+      },
+      "model": "constant_w",
+      "n_data": 1820,
+      "n_profiled_parameters": 1,
+      "n_shape_parameters": 2,
+      "ndof_screening": 1817,
+      "optimizer_best_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "optimizer_best_start": 2,
+      "optimizer_best_success": true,
+      "optimizer_runs": [
+        {
+          "chi2": 1630.177096763867,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 57,
+          "nit": 14,
+          "parameters": [
+            0.2610417193089517,
+            -0.8326805652993134
+          ],
+          "start_index": 0,
+          "success": true
+        },
+        {
+          "chi2": 1630.1770967638774,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 48,
+          "nit": 13,
+          "parameters": [
+            0.2610417632567937,
+            -0.8326806798540465
+          ],
+          "start_index": 1,
+          "success": true
+        },
+        {
+          "chi2": 1630.177096763851,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 66,
+          "nit": 15,
+          "parameters": [
+            0.26104168872969835,
+            -0.8326803641608329
+          ],
+          "start_index": 2,
+          "success": true
+        },
+        {
+          "chi2": 1630.1770967638774,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 63,
+          "nit": 15,
+          "parameters": [
+            0.26104193743969656,
+            -0.8326807208252138
+          ],
+          "start_index": 3,
+          "success": true
+        },
+        {
+          "chi2": 1630.1770967639868,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 48,
+          "nit": 13,
+          "parameters": [
+            0.26104172233954315,
+            -0.8326808236927525
+          ],
+          "start_index": 4,
+          "success": true
+        },
+        {
+          "chi2": 1630.1770967638515,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 60,
+          "nit": 14,
+          "parameters": [
+            0.26104176136269686,
+            -0.8326805352260268
+          ],
+          "start_index": 5,
+          "success": true
+        },
+        {
+          "chi2": 1630.1770967638524,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 57,
+          "nit": 14,
+          "parameters": [
+            0.2610417727850437,
+            -0.8326805735928868
+          ],
+          "start_index": 6,
+          "success": true
+        },
+        {
+          "chi2": 1630.1770967638595,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 48,
+          "nit": 13,
+          "parameters": [
+            0.2610414814818964,
+            -0.8326800014748306
+          ],
+          "start_index": 7,
+          "success": true
+        },
+        {
+          "chi2": 1630.177096763949,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 63,
+          "nit": 15,
+          "parameters": [
+            0.26104107315497965,
+            -0.8326790524610295
+          ],
+          "start_index": 8,
+          "success": true
+        },
+        {
+          "chi2": 1630.1770967638563,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 57,
+          "nit": 15,
+          "parameters": [
+            0.26104186567852716,
+            -0.8326806881589338
+          ],
+          "start_index": 9,
+          "success": true
+        },
+        {
+          "chi2": 1630.177096763852,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 60,
+          "nit": 15,
+          "parameters": [
+            0.2610416324615571,
+            -0.8326802737337574
+          ],
+          "start_index": 10,
+          "success": true
+        },
+        {
+          "chi2": 1630.1770967638543,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 51,
+          "nit": 15,
+          "parameters": [
+            0.26104157700606656,
+            -0.8326801455437116
+          ],
+          "start_index": 11,
+          "success": true
+        }
+      ],
+      "optimizer_total_starts": 12,
+      "parameter_bounds": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ],
+        "w0": [
+          -2.0,
+          -0.3
+        ]
+      },
+      "parameter_names": [
+        "Omega_m",
+        "w0"
+      ],
+      "parameters": {
+        "Omega_m": 0.26104168872969835,
+        "w0": -0.8326803641608329
+      },
+      "profiled_additive_magnitude_offset_mag": 0.016628486378426597
+    },
+    {
+      "bound_hits": [
+        {
+          "bound": -3.0,
+          "parameter": "wa",
+          "side": "lower"
+        }
+      ],
+      "chi2_per_ndof_screening": 0.8957216621063648,
+      "chi2_profile": 1626.6305383851586,
+      "delta_chi2_vs_LCDM": -4.789997186079063,
+      "delta_chi2_vs_best_model": 0.0,
+      "independent_algebra_check": {
+        "direct_residual_quadratic": 1626.6305383851586,
+        "max_absolute_disagreement": 4.547473508864641e-13,
+        "offset_normal_equation_abs_residual": 1.0036416142611415e-13,
+        "schur_profile_quadratic": 1626.630538385159,
+        "whitened_residual_quadratic": 1626.6305383851588
+      },
+      "model": "CPL",
+      "n_data": 1820,
+      "n_profiled_parameters": 1,
+      "n_shape_parameters": 3,
+      "ndof_screening": 1816,
+      "optimizer_best_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "optimizer_best_start": 6,
+      "optimizer_best_success": true,
+      "optimizer_runs": [
+        {
+          "chi2": 1626.6305383852605,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 144,
+          "nit": 24,
+          "parameters": [
+            0.4098381173229186,
+            -0.7883868184499375,
+            -3.0
+          ],
+          "start_index": 0,
+          "success": true
+        },
+        {
+          "chi2": 1626.6305383851688,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 120,
+          "nit": 24,
+          "parameters": [
+            0.4098378664126735,
+            -0.78838544494405,
+            -3.0
+          ],
+          "start_index": 1,
+          "success": true
+        },
+        {
+          "chi2": 1626.6305383851618,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 108,
+          "nit": 18,
+          "parameters": [
+            0.40983792628988974,
+            -0.7883855380276814,
+            -3.0
+          ],
+          "start_index": 2,
+          "success": true
+        },
+        {
+          "chi2": 1626.63053838538,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 100,
+          "nit": 19,
+          "parameters": [
+            0.4098377423151127,
+            -0.7883857057801837,
+            -3.0
+          ],
+          "start_index": 3,
+          "success": true
+        },
+        {
+          "chi2": 1626.6305383851798,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 192,
+          "nit": 33,
+          "parameters": [
+            0.4098378887515493,
+            -0.7883857533637105,
+            -3.0
+          ],
+          "start_index": 4,
+          "success": true
+        },
+        {
+          "chi2": 1626.6305383851632,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 108,
+          "nit": 19,
+          "parameters": [
+            0.4098379321805125,
+            -0.7883858125388316,
+            -3.0
+          ],
+          "start_index": 5,
+          "success": true
+        },
+        {
+          "chi2": 1626.6305383851586,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 100,
+          "nit": 17,
+          "parameters": [
+            0.40983793405618746,
+            -0.788385630604079,
+            -3.0
+          ],
+          "start_index": 6,
+          "success": true
+        },
+        {
+          "chi2": 1626.630538385189,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 84,
+          "nit": 18,
+          "parameters": [
+            0.40983781401031344,
+            -0.7883850745527136,
+            -3.0
+          ],
+          "start_index": 7,
+          "success": true
+        },
+        {
+          "chi2": 1626.6305383851657,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 96,
+          "nit": 18,
+          "parameters": [
+            0.40983795214624935,
+            -0.7883855859122022,
+            -3.0
+          ],
+          "start_index": 8,
+          "success": true
+        },
+        {
+          "chi2": 1626.6305383851663,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 152,
+          "nit": 27,
+          "parameters": [
+            0.4098378937009658,
+            -0.7883853909346951,
+            -3.0
+          ],
+          "start_index": 9,
+          "success": true
+        },
+        {
+          "chi2": 1626.6305383852314,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 96,
+          "nit": 20,
+          "parameters": [
+            0.40983775249414606,
+            -0.7883847037629514,
+            -3.0
+          ],
+          "start_index": 10,
+          "success": true
+        },
+        {
+          "chi2": 1626.6305383851673,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 132,
+          "nit": 23,
+          "parameters": [
+            0.4098379076561895,
+            -0.7883857291332427,
+            -3.0
+          ],
+          "start_index": 11,
+          "success": true
+        }
+      ],
+      "optimizer_total_starts": 12,
+      "parameter_bounds": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ],
+        "w0": [
+          -2.0,
+          -0.3
+        ],
+        "wa": [
+          -3.0,
+          3.0
+        ]
+      },
+      "parameter_names": [
+        "Omega_m",
+        "w0",
+        "wa"
+      ],
+      "parameters": {
+        "Omega_m": 0.40983793405618746,
+        "w0": -0.788385630604079,
+        "wa": -3.0
+      },
+      "profiled_additive_magnitude_offset_mag": 0.029198403102266603
+    }
+  ],
+  "input_contract": {
+    "IDSURVEY_counts": {
+      "10": 1623,
+      "150": 117,
+      "5": 8,
+      "63": 16,
+      "64": 31,
+      "65": 22,
+      "66": 3
+    },
+    "MUERR_range_mag_diagnostic_only": [
+      0.0409,
+      468.0108
+    ],
+    "archive_keys": [
+      "nsn",
+      "cov",
+      "allow_pickle"
+    ],
+    "calibration": "MU is used directly (released bias/contamination-corrected distance modulus assuming H0=70); no external absolute-magnitude or H0 calibration",
+    "covariance_storage": "full STAT+SYS inverse covariance Covtot_inv, packed upper triangle, float32; unpacked to exactly symmetric float64 precision W",
+    "hashes_sha256": {
+      "des_dovekie_hd.csv": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+      "des_dovekie_stat_sys.npz": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b"
+    },
+    "hd_format": "SNANA VARNAMES/SN whitespace records despite .csv suffix",
+    "hubble_diagram_url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/4_DISTANCES_COVMAT/DES-Dovekie_HD.csv",
+    "official_filter": "retain zHD > 0.00, matching release code; all 1820 rows pass",
+    "official_reader_issue": "pinned Dovekie_cosmosis_likelihood.py calls Astropy Table.read(format='ascii.csv'), inconsistent with the pinned HD asset; this implementation uses the native official record format",
+    "official_row_order": "unmodified file order, which the release README says is paired to the covariance; no sorting or metadata join",
+    "offset_information_1TW1": 43938.33706138445,
+    "packed_precision_entries": 1657110,
+    "precision_cholesky": "pass",
+    "precision_shape": [
+      1820,
+      1820
+    ],
+    "precision_url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/4_DISTANCES_COVMAT/STAT+SYS.npz",
+    "redshift": "zHD (CMB-frame with VPEC correction) enters E(z) integral; zHEL (heliocentric, no VPEC correction) enters the luminosity-distance prefactor",
+    "repository": "https://github.com/des-science/DES-SN5YR",
+    "repository_commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+    "row_count": 1820,
+    "unique_cid_count": 1820,
+    "zHD_range": [
+      0.02509,
+      1.14418
+    ],
+    "zHEL_range": [
+      0.02385,
+      1.14501
+    ]
+  },
+  "likelihood_algebra": {
+    "chi2_before_profile": "(mu_base + M_offset - MU)^T W (mu_base + M_offset - MU)",
+    "distance_modulus": "mu_base(zHD,zHEL)=5 log10[(1+zHEL)(c/H0_gauge) integral_0^zHD dz/E(z)] + 25",
+    "domain_note": "bounds match the campaign's flat-background profile-screen domains; these are search domains, not posterior priors",
+    "flat_expansion": {
+      "CPL": "E^2=Om(1+z)^3+(1-Om)(1+z)^(3(1+w0+wa))*exp[-3 wa z/(1+z)]",
+      "LCDM": "E^2=Om(1+z)^3+(1-Om)",
+      "constant_w": "E^2=Om(1+z)^3+(1-Om)(1+z)^(3(1+w))"
+    },
+    "optimizer": "SciPy L-BFGS-B, 12 deterministic starts/model (midpoint, nominal nested point, seeded uniform starts), ftol=1e-13, gtol=1e-8, maxiter=2000, maxfun=10000",
+    "parameter_domains": {
+      "CPL": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ],
+        "w0": [
+          -2.0,
+          -0.3
+        ],
+        "wa": [
+          -3.0,
+          3.0
+        ]
+      },
+      "LCDM": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ]
+      },
+      "constant_w": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ],
+        "w0": [
+          -2.0,
+          -0.3
+        ]
+      }
+    },
+    "profile_chi2": "d^T W d - (1^T W d)^2/(1^T W 1), evaluated stably as r^T W r with r=d+Mhat*1",
+    "profile_solution": "Mhat = -1^T W d / (1^T W 1), d=mu_base-MU",
+    "quadrature": "96-point Gauss-Legendre on each [0,zHD] interval; independent 160-point check at each reported optimum",
+    "released_likelihood_relation": "the release code adds log[(1^T W 1)/(2 pi)] for analytic integration over this same constant offset, plus a fixed Gaussian log determinant; both terms are model-independent for this fixed covariance, so profile Delta-chi-square is unchanged"
+  },
+  "limits": [
+    "This is an independent, reproducible profile comparison, not the official CosmoSIS pipeline run; the pinned official table reader has a format mismatch.",
+    "No posterior sampling, Bayesian evidence, confidence intervals, or published-constraint reproduction is claimed.",
+    "No calibrated H0 is measured; its distance normalization is exactly degenerate with the profiled magnitude offset in this radiation-free background screen.",
+    "Radiation, curvature, perturbations, selection refits, and systematic nuisance parameters are not varied; the full released STAT+SYS covariance is retained.",
+    "The three nested background families and bounded search were selected in advance; Delta-chi-square describes only these profile minima over recorded domains."
+  ],
+  "run_history": [
+    {
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python work/inference/fit_dovekie.py --starts 12",
+      "failure": "First invocation completed the three fits and numerical checks but Matplotlib rejected the plot's mathtext label (`\\mathcal`); it exited before writing result.json. The label was simplified and the full command rerun.",
+      "status": "failed_output_render"
+    }
+  ],
+  "runtime": {
+    "blas_thread_env": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python work/inference/fit_dovekie.py --starts 12",
+    "device": "CPU double precision; no GPU calculation",
+    "logical_cpu_count_visible": 20,
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "random_seed": 20260924,
+    "scipy": "1.18.1",
+    "wall_seconds_fit_and_checks_excluding_plot_and_serialization": 7.0383800230920315,
+    "wall_seconds_through_plot_excluding_serialization": 7.263467065058649
+  },
+  "scientific_scope": {
+    "H0": "fixed to an arbitrary 70 km/s/Mpc distance-unit gauge and analytically absorbed by the free magnitude offset; not inferred or calibrated",
+    "absolute_magnitude": "one unconstrained additive magnitude profiled analytically in every model",
+    "curvature": "fixed to zero",
+    "dataset": "DES-Dovekie Hubble diagram only",
+    "geometry": "flat, late-time matter plus dark energy",
+    "likelihood_metric": "minimum profile chi-square using the complete released STAT+SYS inverse covariance",
+    "models": [
+      "LCDM",
+      "constant_w",
+      "CPL"
+    ],
+    "muerr_handling": "MUERR and diagnostic MUERR_SYS are not added separately; released full STAT+SYS precision already supplies the Gaussian covariance",
+    "overlapping_supernova_compilations_used": [],
+    "probe_combinations": [],
+    "radiation": "omitted for this z<=1.144 screening calculation"
+  },
+  "status": "exploratory_screening_calculation"
+}

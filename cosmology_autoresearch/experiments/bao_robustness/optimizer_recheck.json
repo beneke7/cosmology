@@ -1,0 +1,4518 @@
+{
+  "status": "complete",
+  "classification": "diagnostic independent derivative-free recheck of L-BFGS-B candidates marked non-converged; does not itself prove global optimality",
+  "source_result": "experiments/bao_robustness/result.json",
+  "command": ".venv/bin/python scripts/run_bounded.py --seconds 1800 -- .venv/bin/python scripts/recheck_bao_optimizer.py --workers 8",
+  "optimizer": "SciPy Powell over unit-scaled shape parameters with alpha analytically profiled using the full covariance (saved point and box center), plus a reconditioned unit-scaled L-BFGS-B retry",
+  "covariance_handling": "Cholesky solves with the released full 13x13 covariance; direct residual chi-square recomputed at the original reported candidate",
+  "reconstructed_null_generator": "NumPy default_rng PCG64; original fixed seed and full-covariance Cholesky transform",
+  "random_seed": 20260924,
+  "n_mocks": 200,
+  "failed_candidates_rechecked": 52,
+  "workers": 8,
+  "runtime_seconds": 0.7133318753913045,
+  "summary": {
+    "original_chi2_recalculation_max_abs_difference": 7.993605777301127e-14,
+    "best_checked_minus_original_min": -1.170281649365279e-10,
+    "best_checked_minus_original_max": 0.0,
+    "alternative_candidates_improved_by_more_than_1e-7": 0,
+    "failed_candidates_with_all_retries_successful": 52,
+    "alternative_optimizer_candidate_count": 156
+  },
+  "rechecks": [
+    {
+      "mock_index": 0,
+      "start_budget": "16_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 6.12300086716784,
+      "original_direct_chi2": 6.12300086716784,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 6.1230008671674785,
+          "initial_parameters": {
+            "alpha": 29.98448240047352,
+            "Omega_m": 0.306017938746686,
+            "w0": -0.9435291782907467
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 35,
+          "chi2": 6.123000867165184,
+          "parameters": {
+            "alpha": 29.984482940276422,
+            "Omega_m": 0.3060179503219981,
+            "w0": -0.9435291297053585
+          },
+          "normalized_shape": [
+            0.46548718240363296,
+            0.6214534531144951
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 18.4343102707731,
+          "initial_parameters": {
+            "alpha": 29.36393248666762,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 141,
+          "chi2": 6.123000867165176,
+          "parameters": {
+            "alpha": 29.9844830069269,
+            "Omega_m": 0.3060179507672423,
+            "w0": -0.9435291200751268
+          },
+          "normalized_shape": [
+            0.4654871832131679,
+            0.6214534587793372
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 6.1230008671674785,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 57,
+          "chi2": 6.123000867165372,
+          "parameters": {
+            "alpha": 29.98448279160665,
+            "Omega_m": 0.3060179481339496,
+            "w0": -0.9435291467767901
+          },
+          "normalized_shape": [
+            0.46548717842536297,
+            0.6214534430724764
+          ]
+        }
+      ],
+      "best_checked_chi2": 6.123000867165176,
+      "best_checked_parameters": {
+        "alpha": 29.9844830069269,
+        "Omega_m": 0.3060179507672423,
+        "w0": -0.9435291200751268
+      },
+      "best_checked_minus_original_direct_chi2": -2.6636470806806756e-12,
+      "runtime_seconds": 0.025220106355845928
+    },
+    {
+      "mock_index": 0,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 6.12300086716784,
+      "original_direct_chi2": 6.12300086716784,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 6.1230008671674785,
+          "initial_parameters": {
+            "alpha": 29.98448240047352,
+            "Omega_m": 0.306017938746686,
+            "w0": -0.9435291782907467
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 35,
+          "chi2": 6.123000867165184,
+          "parameters": {
+            "alpha": 29.984482940276422,
+            "Omega_m": 0.3060179503219981,
+            "w0": -0.9435291297053585
+          },
+          "normalized_shape": [
+            0.46548718240363296,
+            0.6214534531144951
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 18.4343102707731,
+          "initial_parameters": {
+            "alpha": 29.36393248666762,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 141,
+          "chi2": 6.123000867165176,
+          "parameters": {
+            "alpha": 29.9844830069269,
+            "Omega_m": 0.3060179507672423,
+            "w0": -0.9435291200751268
+          },
+          "normalized_shape": [
+            0.4654871832131679,
+            0.6214534587793372
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 6.1230008671674785,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 57,
+          "chi2": 6.123000867165372,
+          "parameters": {
+            "alpha": 29.98448279160665,
+            "Omega_m": 0.3060179481339496,
+            "w0": -0.9435291467767901
+          },
+          "normalized_shape": [
+            0.46548717842536297,
+            0.6214534430724764
+          ]
+        }
+      ],
+      "best_checked_chi2": 6.123000867165176,
+      "best_checked_parameters": {
+        "alpha": 29.9844830069269,
+        "Omega_m": 0.3060179507672423,
+        "w0": -0.9435291200751268
+      },
+      "best_checked_minus_original_direct_chi2": -2.6636470806806756e-12,
+      "runtime_seconds": 0.03279115539044142
+    },
+    {
+      "mock_index": 7,
+      "start_budget": "16_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 15.867291549913075,
+      "original_direct_chi2": 15.867291549913077,
+      "original_chi2_recalculation_abs_difference": 1.7763568394002505e-15,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 15.867291549912593,
+          "initial_parameters": {
+            "alpha": 29.487027959092487,
+            "Omega_m": 0.28673666502639245,
+            "w0": -0.9633611693539452
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 35,
+          "chi2": 15.86729154991048,
+          "parameters": {
+            "alpha": 29.487028705758732,
+            "Omega_m": 0.2867366720677617,
+            "w0": -0.9633610723801496
+          },
+          "normalized_shape": [
+            0.4304303128504759,
+            0.609787604482265
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 44.609498082187095,
+          "initial_parameters": {
+            "alpha": 29.413103341211603,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 146,
+          "chi2": 15.867291549910442,
+          "parameters": {
+            "alpha": 29.48702861121976,
+            "Omega_m": 0.2867366722644299,
+            "w0": -0.963361088777078
+          },
+          "normalized_shape": [
+            0.43043031320805436,
+            0.609787594837013
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 15.867291549912593,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 18,
+          "chi2": 15.867291549910796,
+          "parameters": {
+            "alpha": 29.48702846102523,
+            "Omega_m": 0.2867366691189383,
+            "w0": -0.9633611017394794
+          },
+          "normalized_shape": [
+            0.4304303074889788,
+            0.6097875872120709
+          ]
+        }
+      ],
+      "best_checked_chi2": 15.867291549910442,
+      "best_checked_parameters": {
+        "alpha": 29.48702861121976,
+        "Omega_m": 0.2867366722644299,
+        "w0": -0.963361088777078
+      },
+      "best_checked_minus_original_direct_chi2": -2.6343371928305714e-12,
+      "runtime_seconds": 0.027669016271829605
+    },
+    {
+      "mock_index": 7,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 15.867291549913075,
+      "original_direct_chi2": 15.867291549913077,
+      "original_chi2_recalculation_abs_difference": 1.7763568394002505e-15,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 15.867291549912593,
+          "initial_parameters": {
+            "alpha": 29.487027959092487,
+            "Omega_m": 0.28673666502639245,
+            "w0": -0.9633611693539452
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 35,
+          "chi2": 15.86729154991048,
+          "parameters": {
+            "alpha": 29.487028705758732,
+            "Omega_m": 0.2867366720677617,
+            "w0": -0.9633610723801496
+          },
+          "normalized_shape": [
+            0.4304303128504759,
+            0.609787604482265
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 44.609498082187095,
+          "initial_parameters": {
+            "alpha": 29.413103341211603,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 146,
+          "chi2": 15.867291549910442,
+          "parameters": {
+            "alpha": 29.48702861121976,
+            "Omega_m": 0.2867366722644299,
+            "w0": -0.963361088777078
+          },
+          "normalized_shape": [
+            0.43043031320805436,
+            0.609787594837013
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 15.867291549912593,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 18,
+          "chi2": 15.867291549910796,
+          "parameters": {
+            "alpha": 29.48702846102523,
+            "Omega_m": 0.2867366691189383,
+            "w0": -0.9633611017394794
+          },
+          "normalized_shape": [
+            0.4304303074889788,
+            0.6097875872120709
+          ]
+        }
+      ],
+      "best_checked_chi2": 15.867291549910442,
+      "best_checked_parameters": {
+        "alpha": 29.48702861121976,
+        "Omega_m": 0.2867366722644299,
+        "w0": -0.963361088777078
+      },
+      "best_checked_minus_original_direct_chi2": -2.6343371928305714e-12,
+      "runtime_seconds": 0.027648319490253925
+    },
+    {
+      "mock_index": 11,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_-0.3",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 14.461058068882698,
+      "original_direct_chi2": 14.461058068882627,
+      "original_chi2_recalculation_abs_difference": 7.105427357601002e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 14.46105806888227,
+          "initial_parameters": {
+            "alpha": 31.036870301652257,
+            "Omega_m": 0.33839681912254505,
+            "w0": -0.6405596983881168,
+            "wa": -1.2506970722818047
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 151,
+          "chi2": 14.46105806885872,
+          "parameters": {
+            "alpha": 31.036872790174712,
+            "Omega_m": 0.33839687487678544,
+            "w0": -0.6405593923674624,
+            "wa": -1.2506973694354846
+          },
+          "normalized_shape": [
+            0.5243579543214282,
+            0.7996709456661986,
+            0.6478898631720427
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 61.699535478694685,
+          "initial_parameters": {
+            "alpha": 28.404295570630723,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.65
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 767,
+          "chi2": 14.461058068839723,
+          "parameters": {
+            "alpha": 31.0368789863221,
+            "Omega_m": 0.33839705990949803,
+            "w0": -0.6405577284817772,
+            "wa": -1.2507035123070658
+          },
+          "normalized_shape": [
+            0.524358290744542,
+            0.799671924422484,
+            0.64788758803442
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 14.46105806888227,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 28,
+          "chi2": 14.461058068861028,
+          "parameters": {
+            "alpha": 31.036872319865914,
+            "Omega_m": 0.33839686461801227,
+            "w0": -0.6405595046656902,
+            "wa": -1.2506970469985237
+          },
+          "normalized_shape": [
+            0.5243579356691133,
+            0.7996708796084175,
+            0.6478899825931393
+          ]
+        }
+      ],
+      "best_checked_chi2": 14.461058068839723,
+      "best_checked_parameters": {
+        "alpha": 31.0368789863221,
+        "Omega_m": 0.33839705990949803,
+        "w0": -0.6405577284817772,
+        "wa": -1.2507035123070658
+      },
+      "best_checked_minus_original_direct_chi2": -4.290434674203425e-11,
+      "runtime_seconds": 0.08997789677232504
+    },
+    {
+      "mock_index": 11,
+      "start_budget": "64_starts",
+      "candidate": "cpl_w0_upper_-0.3",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 14.461058068882698,
+      "original_direct_chi2": 14.461058068882627,
+      "original_chi2_recalculation_abs_difference": 7.105427357601002e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 14.46105806888227,
+          "initial_parameters": {
+            "alpha": 31.036870301652257,
+            "Omega_m": 0.33839681912254505,
+            "w0": -0.6405596983881168,
+            "wa": -1.2506970722818047
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 151,
+          "chi2": 14.46105806885872,
+          "parameters": {
+            "alpha": 31.036872790174712,
+            "Omega_m": 0.33839687487678544,
+            "w0": -0.6405593923674624,
+            "wa": -1.2506973694354846
+          },
+          "normalized_shape": [
+            0.5243579543214282,
+            0.7996709456661986,
+            0.6478898631720427
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 61.699535478694685,
+          "initial_parameters": {
+            "alpha": 28.404295570630723,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.65
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 767,
+          "chi2": 14.461058068839723,
+          "parameters": {
+            "alpha": 31.0368789863221,
+            "Omega_m": 0.33839705990949803,
+            "w0": -0.6405577284817772,
+            "wa": -1.2507035123070658
+          },
+          "normalized_shape": [
+            0.524358290744542,
+            0.799671924422484,
+            0.64788758803442
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 14.46105806888227,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 28,
+          "chi2": 14.461058068861028,
+          "parameters": {
+            "alpha": 31.036872319865914,
+            "Omega_m": 0.33839686461801227,
+            "w0": -0.6405595046656902,
+            "wa": -1.2506970469985237
+          },
+          "normalized_shape": [
+            0.5243579356691133,
+            0.7996708796084175,
+            0.6478899825931393
+          ]
+        }
+      ],
+      "best_checked_chi2": 14.461058068839723,
+      "best_checked_parameters": {
+        "alpha": 31.0368789863221,
+        "Omega_m": 0.33839705990949803,
+        "w0": -0.6405577284817772,
+        "wa": -1.2507035123070658
+      },
+      "best_checked_minus_original_direct_chi2": -4.290434674203425e-11,
+      "runtime_seconds": 0.09035389870405197
+    },
+    {
+      "mock_index": 13,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_-0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 8.299770779552137,
+      "original_direct_chi2": 8.29977077955215,
+      "original_chi2_recalculation_abs_difference": 1.2434497875801753e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 74.57910209611306,
+          "initial_parameters": {
+            "alpha": 26.361443963475303,
+            "Omega_m": 0.2322367887876099,
+            "w0": -1.2553644779050934,
+            "wa": -0.10000000000000009
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 248,
+          "chi2": 9.649773117977972,
+          "parameters": {
+            "alpha": 29.20942342962011,
+            "Omega_m": 0.2984314370938062,
+            "w0": -1.0335911959086566,
+            "wa": -0.10000000184902103
+          },
+          "normalized_shape": [
+            0.4516935219887386,
+            0.568475767112555,
+            0.9999999993624066
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 42.006450390553255,
+          "initial_parameters": {
+            "alpha": 28.36330634881237,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.55
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 1641,
+          "chi2": 9.649773117977995,
+          "parameters": {
+            "alpha": 29.2094234736214,
+            "Omega_m": 0.2984314359226449,
+            "w0": -1.0335911821005075,
+            "wa": -0.10000000184902325
+          },
+          "normalized_shape": [
+            0.45169351985935446,
+            0.5684757752349957,
+            0.9999999993624058
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 74.57910209611306,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 92,
+          "chi2": 9.649773114938899,
+          "parameters": {
+            "alpha": 29.209423164633094,
+            "Omega_m": 0.29843143334003785,
+            "w0": -1.033591230265672,
+            "wa": -0.10000000000000009
+          },
+          "normalized_shape": [
+            0.4516935151637052,
+            0.5684757469025459,
+            1.0
+          ]
+        }
+      ],
+      "best_checked_chi2": 8.29977077955215,
+      "best_checked_parameters": {
+        "alpha": 29.209423164633094,
+        "Omega_m": 0.29843143334003785,
+        "w0": -1.033591230265672,
+        "wa": -0.10000000000000009
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.18423461820930243
+    },
+    {
+      "mock_index": 14,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 10.466803616006148,
+      "original_direct_chi2": 10.46680361600622,
+      "original_chi2_recalculation_abs_difference": 7.283063041541027e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 10.466803616006246,
+          "initial_parameters": {
+            "alpha": 31.33974073757707,
+            "Omega_m": 0.35642005399467763,
+            "w0": -0.5668555759612619,
+            "wa": -1.7226251934179198
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 98,
+          "chi2": 10.466803615974573,
+          "parameters": {
+            "alpha": 31.339739414487575,
+            "Omega_m": 0.356420067083461,
+            "w0": -0.5668556718940421,
+            "wa": -1.7226263789700853
+          },
+          "normalized_shape": [
+            0.557127394697202,
+            0.8430260753564459,
+            0.4120560067838434
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 39.79357003652542,
+          "initial_parameters": {
+            "alpha": 28.528763750797378,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.45
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 576,
+          "chi2": 10.466803615889193,
+          "parameters": {
+            "alpha": 31.339754817059138,
+            "Omega_m": 0.35642049287711824,
+            "w0": -0.5668515577416482,
+            "wa": -1.7226407476916632
+          },
+          "normalized_shape": [
+            0.5571281688674878,
+            0.8430284954460893,
+            0.4120513717123667
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 10.466803616006246,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 164,
+          "chi2": 10.466803615889386,
+          "parameters": {
+            "alpha": 31.339753991007587,
+            "Omega_m": 0.35642047242862557,
+            "w0": -0.5668517876468813,
+            "wa": -1.7226399815925588
+          },
+          "normalized_shape": [
+            0.5571281316884102,
+            0.8430283602077169,
+            0.4120516188411101
+          ]
+        }
+      ],
+      "best_checked_chi2": 10.466803615889193,
+      "best_checked_parameters": {
+        "alpha": 31.339754817059138,
+        "Omega_m": 0.35642049287711824,
+        "w0": -0.5668515577416482,
+        "wa": -1.7226407476916632
+      },
+      "best_checked_minus_original_direct_chi2": -1.170281649365279e-10,
+      "runtime_seconds": 0.0819994006305933
+    },
+    {
+      "mock_index": 39,
+      "start_budget": "64_starts",
+      "candidate": "cpl_w0_upper_0",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 9.480350360063504,
+      "original_direct_chi2": 9.480350360063504,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 9.480350360062852,
+          "initial_parameters": {
+            "alpha": 31.75111932366115,
+            "Omega_m": 0.3622078952724696,
+            "w0": -0.49893452675746186,
+            "wa": -1.7733089339515777
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 58,
+          "chi2": 9.480350360056866,
+          "parameters": {
+            "alpha": 31.751119354777696,
+            "Omega_m": 0.3622079163455869,
+            "w0": -0.498934581289316,
+            "wa": -1.77330904255761
+          },
+          "normalized_shape": [
+            0.5676507569919763,
+            0.8829796580651083,
+            0.40889698581413003
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 46.73459451958486,
+          "initial_parameters": {
+            "alpha": 28.503424638321015,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.5
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 765,
+          "chi2": 9.480350360056606,
+          "parameters": {
+            "alpha": 31.751119459195422,
+            "Omega_m": 0.3622079157928461,
+            "w0": -0.4989345367038065,
+            "wa": -1.7733091558667293
+          },
+          "normalized_shape": [
+            0.567650755986993,
+            0.8829796842918786,
+            0.40889694804442356
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 9.480350360062852,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 72,
+          "chi2": 9.480350360056814,
+          "parameters": {
+            "alpha": 31.75111918688781,
+            "Omega_m": 0.3622079073252062,
+            "w0": -0.4989345958586522,
+            "wa": -1.773308955521566
+          },
+          "normalized_shape": [
+            0.5676507405912841,
+            0.8829796494949105,
+            0.4088970148261447
+          ]
+        }
+      ],
+      "best_checked_chi2": 9.480350360056606,
+      "best_checked_parameters": {
+        "alpha": 31.751119459195422,
+        "Omega_m": 0.3622079157928461,
+        "w0": -0.4989345367038065,
+        "wa": -1.7733091558667293
+      },
+      "best_checked_minus_original_direct_chi2": -6.8975936073911726e-12,
+      "runtime_seconds": 0.08466239366680384
+    },
+    {
+      "mock_index": 40,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_-0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 7.9326840194371,
+      "original_direct_chi2": 7.9326840194371,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 62.47164091985735,
+          "initial_parameters": {
+            "alpha": 26.305737941878295,
+            "Omega_m": 0.23657893086526544,
+            "w0": -1.3054982764201166,
+            "wa": -0.10000000000000009
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 408,
+          "chi2": 8.79949891837111,
+          "parameters": {
+            "alpha": 29.10158375640431,
+            "Omega_m": 0.29960781776558,
+            "w0": -1.0686631774022888,
+            "wa": -0.10000000184902058
+          },
+          "normalized_shape": [
+            0.45383239593741825,
+            0.5478451897633596,
+            0.9999999993624067
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 35.8626662981892,
+          "initial_parameters": {
+            "alpha": 28.404924557203792,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.55
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 1124,
+          "chi2": 8.812033810120793,
+          "parameters": {
+            "alpha": 29.052825906050376,
+            "Omega_m": 0.2985786160846768,
+            "w0": -1.0735054061409415,
+            "wa": -0.10000000001996234
+          },
+          "normalized_shape": [
+            0.45196112015395784,
+            0.5449968199170933,
+            0.9999999999931164
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 62.47164091985735,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 92,
+          "chi2": 8.799498916266188,
+          "parameters": {
+            "alpha": 29.101583506463154,
+            "Omega_m": 0.2996078132215767,
+            "w0": -1.0686632061510477,
+            "wa": -0.10000000000000009
+          },
+          "normalized_shape": [
+            0.45383238767559403,
+            0.5478451728523248,
+            1.0
+          ]
+        }
+      ],
+      "best_checked_chi2": 7.9326840194371,
+      "best_checked_parameters": {
+        "alpha": 29.101583506463154,
+        "Omega_m": 0.2996078132215767,
+        "w0": -1.0686632061510477,
+        "wa": -0.10000000000000009
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.16331996209919453
+    },
+    {
+      "mock_index": 40,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 8.689442298379017,
+      "original_direct_chi2": 8.689442298379037,
+      "original_chi2_recalculation_abs_difference": 1.9539925233402755e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 8.689442298378747,
+          "initial_parameters": {
+            "alpha": 29.01249564494652,
+            "Omega_m": 0.29662624383997105,
+            "w0": -1.0925317682041642
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 33,
+          "chi2": 8.68944229837813,
+          "parameters": {
+            "alpha": 29.012495744882557,
+            "Omega_m": 0.2966262505208677,
+            "w0": -1.092531780421417
+          },
+          "normalized_shape": [
+            0.4484113645833959,
+            0.5338048350462253
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 20.969062766599905,
+          "initial_parameters": {
+            "alpha": 29.419057405363,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 182,
+          "chi2": 8.68944229837807,
+          "parameters": {
+            "alpha": 29.012495645398825,
+            "Omega_m": 0.2966262495690038,
+            "w0": -1.092531795693418
+          },
+          "normalized_shape": [
+            0.44841136285273425,
+            0.5338048260626954
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 8.689442298378747,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 42,
+          "chi2": 8.689442298378165,
+          "parameters": {
+            "alpha": 29.012495670720167,
+            "Omega_m": 0.29662624773012575,
+            "w0": -1.0925317817876163
+          },
+          "normalized_shape": [
+            0.4484113595093196,
+            0.5338048342425786
+          ]
+        }
+      ],
+      "best_checked_chi2": 8.68944229837807,
+      "best_checked_parameters": {
+        "alpha": 29.012495645398825,
+        "Omega_m": 0.2966262495690038,
+        "w0": -1.092531795693418
+      },
+      "best_checked_minus_original_direct_chi2": -9.663381206337363e-13,
+      "runtime_seconds": 0.03348966967314482
+    },
+    {
+      "mock_index": 46,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 5.5913642921149505,
+      "original_direct_chi2": 5.5913642921149505,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 5.5913642921148625,
+          "initial_parameters": {
+            "alpha": 29.072306604526748,
+            "Omega_m": 0.28546501701279026,
+            "w0": -1.028551022428395
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 41,
+          "chi2": 5.591364292113639,
+          "parameters": {
+            "alpha": 29.072307056239225,
+            "Omega_m": 0.28546501702726895,
+            "w0": -1.0285509414063858
+          },
+          "normalized_shape": [
+            0.4281182127768527,
+            0.571440622702126
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 32.59328599648895,
+          "initial_parameters": {
+            "alpha": 29.406412824185466,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 191,
+          "chi2": 5.591364292113642,
+          "parameters": {
+            "alpha": 29.072307231208836,
+            "Omega_m": 0.2854650191432906,
+            "w0": -1.0285509190369497
+          },
+          "normalized_shape": [
+            0.42811821662416477,
+            0.5714406358606179
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 5.5913642921148625,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 54,
+          "chi2": 5.591364292114845,
+          "parameters": {
+            "alpha": 29.072306604526748,
+            "Omega_m": 0.28546501701279003,
+            "w0": -1.0285510224283945
+          },
+          "normalized_shape": [
+            0.42811821275052736,
+            0.571440575042121
+          ]
+        }
+      ],
+      "best_checked_chi2": 5.591364292113639,
+      "best_checked_parameters": {
+        "alpha": 29.072307056239225,
+        "Omega_m": 0.28546501702726895,
+        "w0": -1.0285509414063858
+      },
+      "best_checked_minus_original_direct_chi2": -1.311839525897085e-12,
+      "runtime_seconds": 0.029291056096553802
+    },
+    {
+      "mock_index": 53,
+      "start_budget": "64_starts",
+      "candidate": "lcdm",
+      "model": "lcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 14.686300582630155,
+      "original_direct_chi2": 14.686300582630155,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 14.686300582629933,
+          "initial_parameters": {
+            "alpha": 29.3403280414699,
+            "Omega_m": 0.28587254930799527
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 18,
+          "chi2": 14.686300582629341,
+          "parameters": {
+            "alpha": 29.340328192069375,
+            "Omega_m": 0.2858725557232418
+          },
+          "normalized_shape": [
+            0.42885919222407604
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 34.81550854009902,
+          "initial_parameters": {
+            "alpha": 30.226795044266535,
+            "Omega_m": 0.32499999999999996
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 40,
+          "chi2": 14.686300582629341,
+          "parameters": {
+            "alpha": 29.340328192069375,
+            "Omega_m": 0.2858725557232418
+          },
+          "normalized_shape": [
+            0.42885919222407604
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 14.686300582629933,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 16,
+          "chi2": 14.68630058262944,
+          "parameters": {
+            "alpha": 29.34032813425965,
+            "Omega_m": 0.28587255326065925
+          },
+          "normalized_shape": [
+            0.4288591877466532
+          ]
+        }
+      ],
+      "best_checked_chi2": 14.686300582629341,
+      "best_checked_parameters": {
+        "alpha": 29.340328192069375,
+        "Omega_m": 0.2858725557232418
+      },
+      "best_checked_minus_original_direct_chi2": -8.135714324453147e-13,
+      "runtime_seconds": 0.010559470392763615
+    },
+    {
+      "mock_index": 61,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 15.633384527945855,
+      "original_direct_chi2": 15.633384527945855,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 2310.958485063552,
+          "initial_parameters": {
+            "alpha": 25.135294142142513,
+            "Omega_m": 0.05,
+            "w0": -0.756607301087844,
+            "wa": 0.10000000000000009
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 390,
+          "chi2": 15.80460908067817,
+          "parameters": {
+            "alpha": 30.20471768057552,
+            "Omega_m": 0.3141232581696145,
+            "w0": -0.9898195312292852,
+            "wa": 0.09999999802346027
+          },
+          "normalized_shape": [
+            0.4802241057629355,
+            0.594223805159244,
+            0.9999999993624066
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 44.25338659305585,
+          "initial_parameters": {
+            "alpha": 28.579782384183545,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.45
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 845,
+          "chi2": 15.804716041704523,
+          "parameters": {
+            "alpha": 30.201165421436347,
+            "Omega_m": 0.3140310828379079,
+            "w0": -0.9900881698933868,
+            "wa": 0.09999999999967812
+          },
+          "normalized_shape": [
+            0.4800565142507418,
+            0.5940657824156549,
+            0.9999999999998961
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 2310.958485063552,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 96,
+          "chi2": 15.804609080622027,
+          "parameters": {
+            "alpha": 30.20471764199466,
+            "Omega_m": 0.31412325624352655,
+            "w0": -0.9898195310015454,
+            "wa": 0.10000000000000009
+          },
+          "normalized_shape": [
+            0.4802241022609574,
+            0.5942238052932086,
+            1.0
+          ]
+        }
+      ],
+      "best_checked_chi2": 15.633384527945855,
+      "best_checked_parameters": {
+        "alpha": 30.20471764199466,
+        "Omega_m": 0.31412325624352655,
+        "w0": -0.9898195310015454,
+        "wa": 0.10000000000000009
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.12379864882677794
+    },
+    {
+      "mock_index": 64,
+      "start_budget": "64_starts",
+      "candidate": "lcdm",
+      "model": "lcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 9.683376850621398,
+      "original_direct_chi2": 9.683376850621439,
+      "original_chi2_recalculation_abs_difference": 4.085620730620576e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 9.683376850621574,
+          "initial_parameters": {
+            "alpha": 29.51957581595575,
+            "Omega_m": 0.2927424801984683
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 21,
+          "chi2": 9.683376850620096,
+          "parameters": {
+            "alpha": 29.519576053140256,
+            "Omega_m": 0.2927424904174658
+          },
+          "normalized_shape": [
+            0.4413499825772106
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 22.57681722678558,
+          "initial_parameters": {
+            "alpha": 30.247040096601665,
+            "Omega_m": 0.32499999999999996
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 35,
+          "chi2": 9.683376850620096,
+          "parameters": {
+            "alpha": 29.519576053140256,
+            "Omega_m": 0.2927424904174658
+          },
+          "normalized_shape": [
+            0.4413499825772106
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 9.683376850621574,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 10,
+          "chi2": 9.683376850620327,
+          "parameters": {
+            "alpha": 29.519575991227935,
+            "Omega_m": 0.292742487749999
+          },
+          "normalized_shape": [
+            0.4413499777272709
+          ]
+        }
+      ],
+      "best_checked_chi2": 9.683376850620096,
+      "best_checked_parameters": {
+        "alpha": 29.519576053140256,
+        "Omega_m": 0.2927424904174658
+      },
+      "best_checked_minus_original_direct_chi2": -1.3429257705865894e-12,
+      "runtime_seconds": 0.008373108692467213
+    },
+    {
+      "mock_index": 65,
+      "start_budget": "64_starts",
+      "candidate": "lcdm",
+      "model": "lcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 22.866495705756602,
+      "original_direct_chi2": 22.866495705756652,
+      "original_chi2_recalculation_abs_difference": 4.973799150320701e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 22.866495705756716,
+          "initial_parameters": {
+            "alpha": 29.48766398968761,
+            "Omega_m": 0.29819242202767987
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 16,
+          "chi2": 22.866495705756527,
+          "parameters": {
+            "alpha": 29.487663990763508,
+            "Omega_m": 0.29819242207471836
+          },
+          "normalized_shape": [
+            0.4512589492267607
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 31.784020800223928,
+          "initial_parameters": {
+            "alpha": 30.086465952267794,
+            "Omega_m": 0.32499999999999996
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 31,
+          "chi2": 22.866495705756527,
+          "parameters": {
+            "alpha": 29.487663990763508,
+            "Omega_m": 0.29819242207471836
+          },
+          "normalized_shape": [
+            0.45125894922676074
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 22.866495705756716,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 14,
+          "chi2": 22.86649570575666,
+          "parameters": {
+            "alpha": 29.487663989501385,
+            "Omega_m": 0.298192422019538
+          },
+          "normalized_shape": [
+            0.4512589491264327
+          ]
+        }
+      ],
+      "best_checked_chi2": 22.866495705756527,
+      "best_checked_parameters": {
+        "alpha": 29.487663990763508,
+        "Omega_m": 0.29819242207471836
+      },
+      "best_checked_minus_original_direct_chi2": -1.2434497875801753e-13,
+      "runtime_seconds": 0.006832345388829708
+    },
+    {
+      "mock_index": 69,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 7.476146023349855,
+      "original_direct_chi2": 7.476146023349855,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 7.476146023349925,
+          "initial_parameters": {
+            "alpha": 29.450124519379987,
+            "Omega_m": 0.29175877422407687,
+            "w0": -0.9790486190679524
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 31,
+          "chi2": 7.476146023348356,
+          "parameters": {
+            "alpha": 29.45012491393337,
+            "Omega_m": 0.29175878395827365,
+            "w0": -0.9790485895563659
+          },
+          "normalized_shape": [
+            0.43956142537867937,
+            0.6005596532021378
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 29.81386442923857,
+          "initial_parameters": {
+            "alpha": 29.355490490529924,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 181,
+          "chi2": 7.476146023348301,
+          "parameters": {
+            "alpha": 29.450124879811668,
+            "Omega_m": 0.29175878426535146,
+            "w0": -0.9790485966026634
+          },
+          "normalized_shape": [
+            0.4395614259370027,
+            0.6005596490572568
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 7.476146023349925,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 45,
+          "chi2": 7.476146023348458,
+          "parameters": {
+            "alpha": 29.45012471229897,
+            "Omega_m": 0.29175878205269723,
+            "w0": -0.979048616642958
+          },
+          "normalized_shape": [
+            0.439561421913995,
+            0.6005596372688483
+          ]
+        }
+      ],
+      "best_checked_chi2": 7.476146023348301,
+      "best_checked_parameters": {
+        "alpha": 29.450124879811668,
+        "Omega_m": 0.29175878426535146,
+        "w0": -0.9790485966026634
+      },
+      "best_checked_minus_original_direct_chi2": -1.5543122344752192e-12,
+      "runtime_seconds": 0.025311630219221115
+    },
+    {
+      "mock_index": 72,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 7.69119306763467,
+      "original_direct_chi2": 7.691193067634682,
+      "original_chi2_recalculation_abs_difference": 1.2434497875801753e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 7.691193067633999,
+          "initial_parameters": {
+            "alpha": 29.559450543505175,
+            "Omega_m": 0.30699418526959177,
+            "w0": -1.0395876153909147
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 32,
+          "chi2": 7.691193067629674,
+          "parameters": {
+            "alpha": 29.55945055691439,
+            "Omega_m": 0.3069942017301373,
+            "w0": -1.0395876855043862
+          },
+          "normalized_shape": [
+            0.46726218496388605,
+            0.5649484202915375
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 14.90881199615152,
+          "initial_parameters": {
+            "alpha": 29.45089019559471,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 187,
+          "chi2": 7.691193067629611,
+          "parameters": {
+            "alpha": 29.559450424570958,
+            "Omega_m": 0.3069941995117734,
+            "w0": -1.0395877010065449
+          },
+          "normalized_shape": [
+            0.4672621809304972,
+            0.5649484111726207
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 7.691193067633999,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 24,
+          "chi2": 7.691193067629821,
+          "parameters": {
+            "alpha": 29.559450537965866,
+            "Omega_m": 0.3069941978488646,
+            "w0": -1.0395876719896986
+          },
+          "normalized_shape": [
+            0.4672621779070267,
+            0.5649484282413537
+          ]
+        }
+      ],
+      "best_checked_chi2": 7.691193067629611,
+      "best_checked_parameters": {
+        "alpha": 29.559450424570958,
+        "Omega_m": 0.3069941995117734,
+        "w0": -1.0395877010065449
+      },
+      "best_checked_minus_original_direct_chi2": -5.070610598068015e-12,
+      "runtime_seconds": 0.023632019758224487
+    },
+    {
+      "mock_index": 73,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 15.976658753078784,
+      "original_direct_chi2": 15.976658753078864,
+      "original_chi2_recalculation_abs_difference": 7.993605777301127e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 15.976658753078821,
+          "initial_parameters": {
+            "alpha": 29.740929178890312,
+            "Omega_m": 0.29985126689023384,
+            "w0": -0.9530974668199006
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 31,
+          "chi2": 15.976658753073025,
+          "parameters": {
+            "alpha": 29.740930235560423,
+            "Omega_m": 0.299851283433117,
+            "w0": -0.953097350070945
+          },
+          "normalized_shape": [
+            0.4542750607874855,
+            0.6158250881935619
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 31.838324810746016,
+          "initial_parameters": {
+            "alpha": 29.312976204959874,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 150,
+          "chi2": 15.976658753073078,
+          "parameters": {
+            "alpha": 29.740930316530083,
+            "Omega_m": 0.2998512853854152,
+            "w0": -0.9530973436873504
+          },
+          "normalized_shape": [
+            0.4542750643371186,
+            0.6158250919486175
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 15.976658753078821,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 15,
+          "chi2": 15.976658753074103,
+          "parameters": {
+            "alpha": 29.74093001844542,
+            "Omega_m": 0.2998512760010495,
+            "w0": -0.9530973589648688
+          },
+          "normalized_shape": [
+            0.45427504727463547,
+            0.6158250829618419
+          ]
+        }
+      ],
+      "best_checked_chi2": 15.976658753073025,
+      "best_checked_parameters": {
+        "alpha": 29.740930235560423,
+        "Omega_m": 0.299851283433117,
+        "w0": -0.953097350070945
+      },
+      "best_checked_minus_original_direct_chi2": -5.838884931108623e-12,
+      "runtime_seconds": 0.019241771660745144
+    },
+    {
+      "mock_index": 94,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 14.011637750661833,
+      "original_direct_chi2": 14.011637750661881,
+      "original_chi2_recalculation_abs_difference": 4.796163466380676e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 14.011637750661206,
+          "initial_parameters": {
+            "alpha": 30.094348689454577,
+            "Omega_m": 0.28573580995462095,
+            "w0": -0.8627203393636649
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 35,
+          "chi2": 14.011637750660032,
+          "parameters": {
+            "alpha": 30.09434872174819,
+            "Omega_m": 0.2857358186973764,
+            "w0": -0.8627203617158234
+          },
+          "normalized_shape": [
+            0.4286105794497754,
+            0.6689880225201038
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 48.99817666524086,
+          "initial_parameters": {
+            "alpha": 29.391936370400927,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 199,
+          "chi2": 14.011637750660073,
+          "parameters": {
+            "alpha": 30.094348694737377,
+            "Omega_m": 0.28573582099127703,
+            "w0": -0.8627203727201376
+          },
+          "normalized_shape": [
+            0.42861058362050375,
+            0.6689880160469779
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 14.011637750661206,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 15,
+          "chi2": 14.011637750660247,
+          "parameters": {
+            "alpha": 30.094348777053337,
+            "Omega_m": 0.2857358176557125,
+            "w0": -0.8627203504847587
+          },
+          "normalized_shape": [
+            0.428610577555841,
+            0.6689880291266126
+          ]
+        }
+      ],
+      "best_checked_chi2": 14.011637750660032,
+      "best_checked_parameters": {
+        "alpha": 30.09434872174819,
+        "Omega_m": 0.2857358186973764,
+        "w0": -0.8627203617158234
+      },
+      "best_checked_minus_original_direct_chi2": -1.8491874698156607e-12,
+      "runtime_seconds": 0.024021072313189507
+    },
+    {
+      "mock_index": 98,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_-0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 8.9878235444663,
+      "original_direct_chi2": 8.987823544466323,
+      "original_chi2_recalculation_abs_difference": 2.3092638912203256e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 528.956030991469,
+          "initial_parameters": {
+            "alpha": 24.449465170959574,
+            "Omega_m": 0.15868633171176066,
+            "w0": -1.1631951835393208,
+            "wa": -0.10000000000000009
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 498,
+          "chi2": 9.379042816710221,
+          "parameters": {
+            "alpha": 28.70711919398925,
+            "Omega_m": 0.29552134807813096,
+            "w0": -1.121484172168642,
+            "wa": -0.10000000184902103
+          },
+          "normalized_shape": [
+            0.44640245105114723,
+            0.5167740163713871,
+            0.9999999993624066
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 33.942701111191,
+          "initial_parameters": {
+            "alpha": 28.3659524735931,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.55
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 2966,
+          "chi2": 9.379042815770736,
+          "parameters": {
+            "alpha": 28.707118743127648,
+            "Omega_m": 0.2955213755443783,
+            "w0": -1.1214844135301223,
+            "wa": -0.10000000000033804
+          },
+          "normalized_shape": [
+            0.44640250098977874,
+            0.5167738743940458,
+            0.9999999999998835
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 528.956030991469,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 64,
+          "chi2": 9.37904281574285,
+          "parameters": {
+            "alpha": 28.707118930788873,
+            "Omega_m": 0.29552134445341927,
+            "w0": -1.121484209527924,
+            "wa": -0.10000000000000009
+          },
+          "normalized_shape": [
+            0.4464024444607623,
+            0.5167739943953389,
+            1.0
+          ]
+        }
+      ],
+      "best_checked_chi2": 8.987823544466323,
+      "best_checked_parameters": {
+        "alpha": 28.707118930788873,
+        "Omega_m": 0.29552134445341927,
+        "w0": -1.121484209527924,
+        "wa": -0.10000000000000009
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.3248351700603962
+    },
+    {
+      "mock_index": 98,
+      "start_budget": "64_starts",
+      "candidate": "cpl_w0_upper_-0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 8.9878235444663,
+      "original_direct_chi2": 8.987823544466323,
+      "original_chi2_recalculation_abs_difference": 2.3092638912203256e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 528.956030991469,
+          "initial_parameters": {
+            "alpha": 24.449465170959574,
+            "Omega_m": 0.15868633171176066,
+            "w0": -1.1631951835393208,
+            "wa": -0.10000000000000009
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 498,
+          "chi2": 9.379042816710221,
+          "parameters": {
+            "alpha": 28.70711919398925,
+            "Omega_m": 0.29552134807813096,
+            "w0": -1.121484172168642,
+            "wa": -0.10000000184902103
+          },
+          "normalized_shape": [
+            0.44640245105114723,
+            0.5167740163713871,
+            0.9999999993624066
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 33.942701111191,
+          "initial_parameters": {
+            "alpha": 28.3659524735931,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.55
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 2966,
+          "chi2": 9.379042815770736,
+          "parameters": {
+            "alpha": 28.707118743127648,
+            "Omega_m": 0.2955213755443783,
+            "w0": -1.1214844135301223,
+            "wa": -0.10000000000033804
+          },
+          "normalized_shape": [
+            0.44640250098977874,
+            0.5167738743940458,
+            0.9999999999998835
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 528.956030991469,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 64,
+          "chi2": 9.37904281574285,
+          "parameters": {
+            "alpha": 28.707118930788873,
+            "Omega_m": 0.29552134445341927,
+            "w0": -1.121484209527924,
+            "wa": -0.10000000000000009
+          },
+          "normalized_shape": [
+            0.4464024444607623,
+            0.5167739943953389,
+            1.0
+          ]
+        }
+      ],
+      "best_checked_chi2": 8.987823544466323,
+      "best_checked_parameters": {
+        "alpha": 28.707118930788873,
+        "Omega_m": 0.29552134445341927,
+        "w0": -1.121484209527924,
+        "wa": -0.10000000000000009
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.3243907317519188
+    },
+    {
+      "mock_index": 106,
+      "start_budget": "16_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 5.543242087892155,
+      "original_direct_chi2": 5.543242087892155,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 5.543242087891844,
+          "initial_parameters": {
+            "alpha": 30.281239067966837,
+            "Omega_m": 0.2791163303228527,
+            "w0": -0.8322856304580681
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 67,
+          "chi2": 5.543242087883987,
+          "parameters": {
+            "alpha": 30.28123965058464,
+            "Omega_m": 0.27911635108555727,
+            "w0": -0.8322856108723069
+          },
+          "normalized_shape": [
+            0.4165751837919223,
+            0.6868908171339372
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 50.291723091112075,
+          "initial_parameters": {
+            "alpha": 29.499141020272234,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 190,
+          "chi2": 5.54324208788395,
+          "parameters": {
+            "alpha": 30.281239743986625,
+            "Omega_m": 0.27911635218229325,
+            "w0": -0.8322856012946938
+          },
+          "normalized_shape": [
+            0.4165751857859878,
+            0.6868908227678272
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 5.543242087891844,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 15,
+          "chi2": 5.5432420878840905,
+          "parameters": {
+            "alpha": 30.28123961366388,
+            "Omega_m": 0.2791163501644925,
+            "w0": -0.8322856132519187
+          },
+          "normalized_shape": [
+            0.41657518211725914,
+            0.6868908157341654
+          ]
+        }
+      ],
+      "best_checked_chi2": 5.54324208788395,
+      "best_checked_parameters": {
+        "alpha": 30.281239743986625,
+        "Omega_m": 0.27911635218229325,
+        "w0": -0.8322856012946938
+      },
+      "best_checked_minus_original_direct_chi2": -8.204992241189757e-12,
+      "runtime_seconds": 0.02615734376013279
+    },
+    {
+      "mock_index": 107,
+      "start_budget": "64_starts",
+      "candidate": "cpl_w0_upper_0",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 11.12077668035134,
+      "original_direct_chi2": 11.12077668035132,
+      "original_chi2_recalculation_abs_difference": 2.1316282072803006e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 11.120776680351039,
+          "initial_parameters": {
+            "alpha": 30.19855033239302,
+            "Omega_m": 0.3226564455863623,
+            "w0": -0.7858328354180704,
+            "wa": -0.9457553685495776
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 103,
+          "chi2": 11.120776680327948,
+          "parameters": {
+            "alpha": 30.198548885425854,
+            "Omega_m": 0.3226564545543911,
+            "w0": -0.7858329675231781,
+            "wa": -0.9457563231595159
+          },
+          "normalized_shape": [
+            0.4957390082807112,
+            0.7142159014569541,
+            0.6847478922801614
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 48.34027574128009,
+          "initial_parameters": {
+            "alpha": 28.426464044443748,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.5
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 735,
+          "chi2": 11.120776680268545,
+          "parameters": {
+            "alpha": 30.198561633425506,
+            "Omega_m": 0.3226568234231197,
+            "w0": -0.7858296292122882,
+            "wa": -0.945768604162541
+          },
+          "normalized_shape": [
+            0.4957396789511268,
+            0.7142178651692422,
+            0.6847437986124864
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 11.120776680351039,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 224,
+          "chi2": 11.12077668027147,
+          "parameters": {
+            "alpha": 30.198558876723503,
+            "Omega_m": 0.32265674216610535,
+            "w0": -0.7858303456311486,
+            "wa": -0.9457659432598042
+          },
+          "normalized_shape": [
+            0.49573953121110076,
+            0.7142174437463832,
+            0.6847446855800652
+          ]
+        }
+      ],
+      "best_checked_chi2": 11.120776680268545,
+      "best_checked_parameters": {
+        "alpha": 30.198561633425506,
+        "Omega_m": 0.3226568234231197,
+        "w0": -0.7858296292122882,
+        "wa": -0.945768604162541
+      },
+      "best_checked_minus_original_direct_chi2": -8.277467600237287e-11,
+      "runtime_seconds": 0.10189603548496962
+    },
+    {
+      "mock_index": 116,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_-0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 12.106288768645948,
+      "original_direct_chi2": 12.106288768645948,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 12.106288768646191,
+          "initial_parameters": {
+            "alpha": 31.153685170168632,
+            "Omega_m": 0.3353394464384454,
+            "w0": -0.5990806804931568,
+            "wa": -1.1922567349031374
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 56,
+          "chi2": 12.106288768637517,
+          "parameters": {
+            "alpha": 31.153685732416335,
+            "Omega_m": 0.33533946607504433,
+            "w0": -0.599080590845315,
+            "wa": -1.192257034108965
+          },
+          "normalized_shape": [
+            0.5187990292273534,
+            0.8240702406792265,
+            0.6233596434107017
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 69.83708125083706,
+          "initial_parameters": {
+            "alpha": 28.346758880974264,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.55
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 724,
+          "chi2": 12.106288768529453,
+          "parameters": {
+            "alpha": 31.15370113773647,
+            "Omega_m": 0.33533993652943395,
+            "w0": -0.5990766940117374,
+            "wa": -1.192271101967519
+          },
+          "normalized_shape": [
+            0.5187998845989709,
+            0.8240725329342722,
+            0.6233547924249935
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 12.106288768646191,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 108,
+          "chi2": 12.106288768530051,
+          "parameters": {
+            "alpha": 31.153700265617836,
+            "Omega_m": 0.3353399092671583,
+            "w0": -0.599076894670572,
+            "wa": -1.1922703921500173
+          },
+          "normalized_shape": [
+            0.518799835031197,
+            0.8240724148996635,
+            0.6233550371896492
+          ]
+        }
+      ],
+      "best_checked_chi2": 12.106288768529453,
+      "best_checked_parameters": {
+        "alpha": 31.15370113773647,
+        "Omega_m": 0.33533993652943395,
+        "w0": -0.5990766940117374,
+        "wa": -1.192271101967519
+      },
+      "best_checked_minus_original_direct_chi2": -1.1649525788470783e-10,
+      "runtime_seconds": 0.08453324995934963
+    },
+    {
+      "mock_index": 121,
+      "start_budget": "16_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 3.6359716922651693,
+      "original_direct_chi2": 3.6359716922651693,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 3.6359716922650303,
+          "initial_parameters": {
+            "alpha": 29.32860520602344,
+            "Omega_m": 0.2972524830262444,
+            "w0": -1.0542287694157264
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 36,
+          "chi2": 3.6359716922621965,
+          "parameters": {
+            "alpha": 29.32860594330003,
+            "Omega_m": 0.2972524816760728,
+            "w0": -1.0542286233634393
+          },
+          "normalized_shape": [
+            0.44954996668376884,
+            0.5563361039038592
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 17.194543268518807,
+          "initial_parameters": {
+            "alpha": 29.524342091964357,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 182,
+          "chi2": 3.6359716922619487,
+          "parameters": {
+            "alpha": 29.328606091911123,
+            "Omega_m": 0.29725248541810434,
+            "w0": -1.0542286120030215
+          },
+          "normalized_shape": [
+            0.44954997348746245,
+            0.5563361105864579
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 3.6359716922650303,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 39,
+          "chi2": 3.635971692262062,
+          "parameters": {
+            "alpha": 29.32860592542749,
+            "Omega_m": 0.297252482710608,
+            "w0": -1.054228631415847
+          },
+          "normalized_shape": [
+            0.4495499685647419,
+            0.5563360991671488
+          ]
+        }
+      ],
+      "best_checked_chi2": 3.6359716922619487,
+      "best_checked_parameters": {
+        "alpha": 29.328606091911123,
+        "Omega_m": 0.29725248541810434,
+        "w0": -1.0542286120030215
+      },
+      "best_checked_minus_original_direct_chi2": -3.220534949832654e-12,
+      "runtime_seconds": 0.02517311368137598
+    },
+    {
+      "mock_index": 121,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 3.6359716922651693,
+      "original_direct_chi2": 3.6359716922651693,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 3.6359716922650303,
+          "initial_parameters": {
+            "alpha": 29.32860520602344,
+            "Omega_m": 0.2972524830262444,
+            "w0": -1.0542287694157264
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 36,
+          "chi2": 3.6359716922621965,
+          "parameters": {
+            "alpha": 29.32860594330003,
+            "Omega_m": 0.2972524816760728,
+            "w0": -1.0542286233634393
+          },
+          "normalized_shape": [
+            0.44954996668376884,
+            0.5563361039038592
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 17.194543268518807,
+          "initial_parameters": {
+            "alpha": 29.524342091964357,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 182,
+          "chi2": 3.6359716922619487,
+          "parameters": {
+            "alpha": 29.328606091911123,
+            "Omega_m": 0.29725248541810434,
+            "w0": -1.0542286120030215
+          },
+          "normalized_shape": [
+            0.44954997348746245,
+            0.5563361105864579
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 3.6359716922650303,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 39,
+          "chi2": 3.635971692262062,
+          "parameters": {
+            "alpha": 29.32860592542749,
+            "Omega_m": 0.297252482710608,
+            "w0": -1.054228631415847
+          },
+          "normalized_shape": [
+            0.4495499685647419,
+            0.5563360991671488
+          ]
+        }
+      ],
+      "best_checked_chi2": 3.6359716922619487,
+      "best_checked_parameters": {
+        "alpha": 29.328606091911123,
+        "Omega_m": 0.29725248541810434,
+        "w0": -1.0542286120030215
+      },
+      "best_checked_minus_original_direct_chi2": -3.220534949832654e-12,
+      "runtime_seconds": 0.02529407199472189
+    },
+    {
+      "mock_index": 127,
+      "start_budget": "16_starts",
+      "candidate": "lcdm",
+      "model": "lcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 7.115848528393555,
+      "original_direct_chi2": 7.115848528393584,
+      "original_chi2_recalculation_abs_difference": 2.842170943040401e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 7.115848528392612,
+          "initial_parameters": {
+            "alpha": 29.269707119355264,
+            "Omega_m": 0.282402150655362
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 17,
+          "chi2": 7.115848528388339,
+          "parameters": {
+            "alpha": 29.269707529607846,
+            "Omega_m": 0.2824021680172034
+          },
+          "normalized_shape": [
+            0.42254939639491534
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 30.737822265844294,
+          "initial_parameters": {
+            "alpha": 30.237860432680133,
+            "Omega_m": 0.32499999999999996
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 30,
+          "chi2": 7.115848528388339,
+          "parameters": {
+            "alpha": 29.269707529607846,
+            "Omega_m": 0.2824021680172034
+          },
+          "normalized_shape": [
+            0.42254939639491534
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 7.115848528392612,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 62,
+          "chi2": 7.115848528388423,
+          "parameters": {
+            "alpha": 29.269707447951443,
+            "Omega_m": 0.2824021645615141
+          },
+          "normalized_shape": [
+            0.4225493901118439
+          ]
+        }
+      ],
+      "best_checked_chi2": 7.115848528388339,
+      "best_checked_parameters": {
+        "alpha": 29.269707529607846,
+        "Omega_m": 0.2824021680172034
+      },
+      "best_checked_minus_original_direct_chi2": -5.2446935683292395e-12,
+      "runtime_seconds": 0.012377901002764702
+    },
+    {
+      "mock_index": 131,
+      "start_budget": "16_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 6.971555551090632,
+      "original_direct_chi2": 6.971555551090632,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 6.971555551089602,
+          "initial_parameters": {
+            "alpha": 29.062705186188932,
+            "Omega_m": 0.29557510324180675,
+            "w0": -1.0754936195428613
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 69,
+          "chi2": 6.971555551070569,
+          "parameters": {
+            "alpha": 29.062707218561147,
+            "Omega_m": 0.29557514006680746,
+            "w0": -1.0754933952733832
+          },
+          "normalized_shape": [
+            0.44650025466692267,
+            0.5438274145450688
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 20.916699262528873,
+          "initial_parameters": {
+            "alpha": 29.407831663264393,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 164,
+          "chi2": 6.97155555107054,
+          "parameters": {
+            "alpha": 29.062707262740233,
+            "Omega_m": 0.2955751412960785,
+            "w0": -1.0754933924010714
+          },
+          "normalized_shape": [
+            0.4465002569019609,
+            0.5438274162346639
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 6.971555551089602,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 33,
+          "chi2": 6.971555551070771,
+          "parameters": {
+            "alpha": 29.062707108942227,
+            "Omega_m": 0.29557513722259304,
+            "w0": -1.0754934033620276
+          },
+          "normalized_shape": [
+            0.4465002494956238,
+            0.5438274097870426
+          ]
+        }
+      ],
+      "best_checked_chi2": 6.97155555107054,
+      "best_checked_parameters": {
+        "alpha": 29.062707262740233,
+        "Omega_m": 0.2955751412960785,
+        "w0": -1.0754933924010714
+      },
+      "best_checked_minus_original_direct_chi2": -2.0092372210456233e-11,
+      "runtime_seconds": 0.025909475050866604
+    },
+    {
+      "mock_index": 137,
+      "start_budget": "64_starts",
+      "candidate": "cpl_w0_upper_0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 15.750735811705558,
+      "original_direct_chi2": 15.750735811705558,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 15.750735811703446,
+          "initial_parameters": {
+            "alpha": 30.032493343322773,
+            "Omega_m": 0.3231584662102178,
+            "w0": -0.8142896113343348,
+            "wa": -1.0459205620471475
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 107,
+          "chi2": 15.75073581165682,
+          "parameters": {
+            "alpha": 30.032496455296634,
+            "Omega_m": 0.32315851341687585,
+            "w0": -0.8142893259601054,
+            "wa": -1.0459198581181692
+          },
+          "normalized_shape": [
+            0.496651842576138,
+            0.697476867082291,
+            0.6303484328651067
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 45.07511256447226,
+          "initial_parameters": {
+            "alpha": 28.510947758532804,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.45
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 843,
+          "chi2": 15.750735811656522,
+          "parameters": {
+            "alpha": 30.03249680160208,
+            "Omega_m": 0.3231585209818168,
+            "w0": -0.8142892140950337,
+            "wa": -1.045920245393198
+          },
+          "normalized_shape": [
+            0.49665185633057607,
+            0.6974769328852742,
+            0.630348307937678
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 15.750735811703446,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 64,
+          "chi2": 15.750735811656721,
+          "parameters": {
+            "alpha": 30.032496607928394,
+            "Omega_m": 0.3231585147795514,
+            "w0": -0.8142892470249321,
+            "wa": -1.0459201321450158
+          },
+          "normalized_shape": [
+            0.49665184505372983,
+            0.6974769135147458,
+            0.6303483444693497
+          ]
+        }
+      ],
+      "best_checked_chi2": 15.750735811656522,
+      "best_checked_parameters": {
+        "alpha": 30.03249680160208,
+        "Omega_m": 0.3231585209818168,
+        "w0": -0.8142892140950337,
+        "wa": -1.045920245393198
+      },
+      "best_checked_minus_original_direct_chi2": -4.9036330551643914e-11,
+      "runtime_seconds": 0.09511622320860624
+    },
+    {
+      "mock_index": 140,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 13.042453883200183,
+      "original_direct_chi2": 13.042453883200183,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 13.042453883199668,
+          "initial_parameters": {
+            "alpha": 29.278755926374686,
+            "Omega_m": 0.29019733221410615,
+            "w0": -1.0146982542293594
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 41,
+          "chi2": 13.042453883195082,
+          "parameters": {
+            "alpha": 29.278756841596604,
+            "Omega_m": 0.2901973466613335,
+            "w0": -1.014698151439808
+          },
+          "normalized_shape": [
+            0.4367224484751519,
+            0.5795893226824659
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 35.0178529162054,
+          "initial_parameters": {
+            "alpha": 29.424386962321964,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 190,
+          "chi2": 13.042453883194996,
+          "parameters": {
+            "alpha": 29.278756993027276,
+            "Omega_m": 0.2901973500528858,
+            "w0": -1.0146981386132286
+          },
+          "normalized_shape": [
+            0.4367224546416107,
+            0.5795893302275127
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 13.042453883199668,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 42,
+          "chi2": 13.042453883195133,
+          "parameters": {
+            "alpha": 29.278756872507476,
+            "Omega_m": 0.2901973456023154,
+            "w0": -1.014698141508093
+          },
+          "normalized_shape": [
+            0.43672244654966447,
+            0.5795893285246512
+          ]
+        }
+      ],
+      "best_checked_chi2": 13.042453883194996,
+      "best_checked_parameters": {
+        "alpha": 29.278756993027276,
+        "Omega_m": 0.2901973500528858,
+        "w0": -1.0146981386132286
+      },
+      "best_checked_minus_original_direct_chi2": -5.186961971048731e-12,
+      "runtime_seconds": 0.026788090355694294
+    },
+    {
+      "mock_index": 152,
+      "start_budget": "64_starts",
+      "candidate": "cpl_w0_upper_-0.3",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 12.252486319978216,
+      "original_direct_chi2": 12.252486319978255,
+      "original_chi2_recalculation_abs_difference": 3.907985046680551e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 12.252486319978273,
+          "initial_parameters": {
+            "alpha": 32.79512963462416,
+            "Omega_m": 0.38114009879620175,
+            "w0": -0.30000000000000004,
+            "wa": -2.1026815615654875
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 81,
+          "chi2": 12.252486323110144,
+          "parameters": {
+            "alpha": 32.795129670879724,
+            "Omega_m": 0.3811401058722065,
+            "w0": -0.3000000010839088,
+            "wa": -2.1026816374364956
+          },
+          "normalized_shape": [
+            0.6020729197676482,
+            0.9999999993624066,
+            0.33234013428277936
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 74.26316294731144,
+          "initial_parameters": {
+            "alpha": 28.391067131512237,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.65
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 1559,
+          "chi2": 12.42138302360338,
+          "parameters": {
+            "alpha": 32.91008883682239,
+            "Omega_m": 0.38221567555012737,
+            "w0": -0.3000000001165577,
+            "wa": -2.0189436393114155
+          },
+          "normalized_shape": [
+            0.6040285010002316,
+            0.9999999999314367,
+            0.3633542076624387
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 12.252486319978273,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 48,
+          "chi2": 12.25248631997782,
+          "parameters": {
+            "alpha": 32.79512970380341,
+            "Omega_m": 0.3811401026386014,
+            "w0": -0.30000000000000004,
+            "wa": -2.1026815617702797
+          },
+          "normalized_shape": [
+            0.6020729138883663,
+            1.0,
+            0.3323401623073038
+          ]
+        }
+      ],
+      "best_checked_chi2": 12.25248631997782,
+      "best_checked_parameters": {
+        "alpha": 32.79512970380341,
+        "Omega_m": 0.3811401026386014,
+        "w0": -0.30000000000000004,
+        "wa": -2.1026815617702797
+      },
+      "best_checked_minus_original_direct_chi2": -4.3520742565306136e-13,
+      "runtime_seconds": 0.15600636694580317
+    },
+    {
+      "mock_index": 154,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 5.861840066864121,
+      "original_direct_chi2": 5.861840066864091,
+      "original_chi2_recalculation_abs_difference": 3.019806626980426e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 885.2622290438512,
+          "initial_parameters": {
+            "alpha": 25.58500898510106,
+            "Omega_m": 0.12039597590682968,
+            "w0": -0.9090874404285687,
+            "wa": 0.10000000000000009
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 361,
+          "chi2": 6.043229871886983,
+          "parameters": {
+            "alpha": 29.62351716841405,
+            "Omega_m": 0.29282037025690194,
+            "w0": -0.9885316049830923,
+            "wa": 0.09999999802346027
+          },
+          "normalized_shape": [
+            0.4414915822852763,
+            0.5949814088334751,
+            0.9999999993624066
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 46.770819517358966,
+          "initial_parameters": {
+            "alpha": 28.469512950783013,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.45
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 723,
+          "chi2": 6.057675426011012,
+          "parameters": {
+            "alpha": 29.64460349101894,
+            "Omega_m": 0.29201950617694383,
+            "w0": -0.9820076272895133,
+            "wa": 0.0999999999998673
+          },
+          "normalized_shape": [
+            0.4400354657762615,
+            0.5988190427708746,
+            0.9999999999999571
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 885.2622290438512,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 116,
+          "chi2": 6.043229871102698,
+          "parameters": {
+            "alpha": 29.62351709130012,
+            "Omega_m": 0.2928203683738979,
+            "w0": -0.9885316111889029,
+            "wa": 0.10000000000000009
+          },
+          "normalized_shape": [
+            0.44149157886163265,
+            0.5949814051829984,
+            1.0
+          ]
+        }
+      ],
+      "best_checked_chi2": 5.861840066864091,
+      "best_checked_parameters": {
+        "alpha": 29.62351709130012,
+        "Omega_m": 0.2928203683738979,
+        "w0": -0.9885316111889029,
+        "wa": 0.10000000000000009
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.11288807168602943
+    },
+    {
+      "mock_index": 154,
+      "start_budget": "64_starts",
+      "candidate": "cpl_w0_upper_0",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 5.861840066723354,
+      "original_direct_chi2": 5.861840066723298,
+      "original_chi2_recalculation_abs_difference": 5.595524044110789e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 980.5381324344996,
+          "initial_parameters": {
+            "alpha": 25.31812183683258,
+            "Omega_m": 0.12039241434064367,
+            "w0": -0.9090804837126021,
+            "wa": 0.0
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 379,
+          "chi2": 6.087316346917243,
+          "parameters": {
+            "alpha": 29.716221775147048,
+            "Omega_m": 0.2966164804127045,
+            "w0": -0.9659086869034808,
+            "wa": -1.91278015648777e-09
+          },
+          "normalized_shape": [
+            0.4483936007503718,
+            0.6082890077038349,
+            0.9999999993624066
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 48.0223987787145,
+          "initial_parameters": {
+            "alpha": 28.443872462647143,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.5
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 728,
+          "chi2": 6.101566856120825,
+          "parameters": {
+            "alpha": 29.738488915914264,
+            "Omega_m": 0.2958853387727419,
+            "w0": -0.9593641647932178,
+            "wa": -1.341149413747189e-13
+          },
+          "normalized_shape": [
+            0.44706425231407626,
+            0.6121387265922248,
+            0.9999999999999554
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 980.5381324344996,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 220,
+          "chi2": 6.087316345988991,
+          "parameters": {
+            "alpha": 29.71622167182547,
+            "Omega_m": 0.29661647876284897,
+            "w0": -0.9659086985522043,
+            "wa": 0.0
+          },
+          "normalized_shape": [
+            0.44839359775063453,
+            0.6082890008516445,
+            1.0
+          ]
+        }
+      ],
+      "best_checked_chi2": 5.861840066723298,
+      "best_checked_parameters": {
+        "alpha": 29.71622167182547,
+        "Omega_m": 0.29661647876284897,
+        "w0": -0.9659086985522043,
+        "wa": 0.0
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.12529338244348764
+    },
+    {
+      "mock_index": 159,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 7.016868270356047,
+      "original_direct_chi2": 7.016868270356047,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 52.697011095324044,
+          "initial_parameters": {
+            "alpha": 27.7469344307087,
+            "Omega_m": 0.2609804955202496,
+            "w0": -1.1850629669196178,
+            "wa": 0.10000000000000009
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 404,
+          "chi2": 8.03676838147508,
+          "parameters": {
+            "alpha": 29.93377781171796,
+            "Omega_m": 0.3191203744337245,
+            "w0": -1.0360837716904698,
+            "wa": 0.09999999802346071
+          },
+          "normalized_shape": [
+            0.489309771697681,
+            0.5670095460644294,
+            0.9999999993624067
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 29.494146007444606,
+          "initial_parameters": {
+            "alpha": 28.459272887035773,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.45
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 2389,
+          "chi2": 8.10684668025348,
+          "parameters": {
+            "alpha": 29.814631373458614,
+            "Omega_m": 0.3167511561677936,
+            "w0": -1.0486713606266636,
+            "wa": 0.09999999999975584
+          },
+          "normalized_shape": [
+            0.48500210212326117,
+            0.5596050819843156,
+            0.9999999999999212
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 52.697011095324044,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 52,
+          "chi2": 8.036768378578369,
+          "parameters": {
+            "alpha": 29.933777689762614,
+            "Omega_m": 0.3191203714849588,
+            "w0": -1.0360837827656462,
+            "wa": 0.10000000000000009
+          },
+          "normalized_shape": [
+            0.48930976633628886,
+            0.5670095395496199,
+            1.0
+          ]
+        }
+      ],
+      "best_checked_chi2": 7.016868270356047,
+      "best_checked_parameters": {
+        "alpha": 29.933777689762614,
+        "Omega_m": 0.3191203714849588,
+        "w0": -1.0360837827656462,
+        "wa": 0.10000000000000009
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.26118188071995974
+    },
+    {
+      "mock_index": 159,
+      "start_budget": "64_starts",
+      "candidate": "cpl_w0_upper_0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 7.016868270356047,
+      "original_direct_chi2": 7.016868270356047,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 52.697011095324044,
+          "initial_parameters": {
+            "alpha": 27.7469344307087,
+            "Omega_m": 0.2609804955202496,
+            "w0": -1.1850629669196178,
+            "wa": 0.10000000000000009
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 404,
+          "chi2": 8.03676838147508,
+          "parameters": {
+            "alpha": 29.93377781171796,
+            "Omega_m": 0.3191203744337245,
+            "w0": -1.0360837716904698,
+            "wa": 0.09999999802346071
+          },
+          "normalized_shape": [
+            0.489309771697681,
+            0.5670095460644294,
+            0.9999999993624067
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 29.494146007444606,
+          "initial_parameters": {
+            "alpha": 28.459272887035773,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.45
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 2389,
+          "chi2": 8.10684668025348,
+          "parameters": {
+            "alpha": 29.814631373458614,
+            "Omega_m": 0.3167511561677936,
+            "w0": -1.0486713606266636,
+            "wa": 0.09999999999975584
+          },
+          "normalized_shape": [
+            0.48500210212326117,
+            0.5596050819843156,
+            0.9999999999999212
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 52.697011095324044,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 52,
+          "chi2": 8.036768378578369,
+          "parameters": {
+            "alpha": 29.933777689762614,
+            "Omega_m": 0.3191203714849588,
+            "w0": -1.0360837827656462,
+            "wa": 0.10000000000000009
+          },
+          "normalized_shape": [
+            0.48930976633628886,
+            0.5670095395496199,
+            1.0
+          ]
+        }
+      ],
+      "best_checked_chi2": 7.016868270356047,
+      "best_checked_parameters": {
+        "alpha": 29.933777689762614,
+        "Omega_m": 0.3191203714849588,
+        "w0": -1.0360837827656462,
+        "wa": 0.10000000000000009
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.2617220738902688
+    },
+    {
+      "mock_index": 164,
+      "start_budget": "16_starts",
+      "candidate": "lcdm",
+      "model": "lcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 7.724045758972523,
+      "original_direct_chi2": 7.724045758972527,
+      "original_chi2_recalculation_abs_difference": 3.552713678800501e-15,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 7.724045758971922,
+          "initial_parameters": {
+            "alpha": 29.785201371145234,
+            "Omega_m": 0.30463066694598895
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 21,
+          "chi2": 7.724045758971885,
+          "parameters": {
+            "alpha": 29.785201416396763,
+            "Omega_m": 0.30463066893572954
+          },
+          "normalized_shape": [
+            0.4629648526104175
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 12.658036390026016,
+          "initial_parameters": {
+            "alpha": 30.24031455296774,
+            "Omega_m": 0.32499999999999996
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 37,
+          "chi2": 7.724045758971885,
+          "parameters": {
+            "alpha": 29.785201416396763,
+            "Omega_m": 0.30463066893572954
+          },
+          "normalized_shape": [
+            0.4629648526104175
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 7.724045758971922,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 106,
+          "chi2": 7.724045758971831,
+          "parameters": {
+            "alpha": 29.785201371145213,
+            "Omega_m": 0.3046306669459887
+          },
+          "normalized_shape": [
+            0.46296484899270685
+          ]
+        }
+      ],
+      "best_checked_chi2": 7.724045758971831,
+      "best_checked_parameters": {
+        "alpha": 29.785201371145213,
+        "Omega_m": 0.3046306669459887
+      },
+      "best_checked_minus_original_direct_chi2": -6.954437026251981e-13,
+      "runtime_seconds": 0.018363002687692642
+    },
+    {
+      "mock_index": 167,
+      "start_budget": "64_starts",
+      "candidate": "lcdm",
+      "model": "lcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 12.408335594317634,
+      "original_direct_chi2": 12.408335594317634,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 12.408335594317675,
+          "initial_parameters": {
+            "alpha": 29.42954923903629,
+            "Omega_m": 0.29326496326286405
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 21,
+          "chi2": 12.40833559431765,
+          "parameters": {
+            "alpha": 29.429549178242176,
+            "Omega_m": 0.2932649606321144
+          },
+          "normalized_shape": [
+            0.4422999284220262
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 25.055251578641542,
+          "initial_parameters": {
+            "alpha": 30.14243596075152,
+            "Omega_m": 0.32499999999999996
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 41,
+          "chi2": 12.40833559431765,
+          "parameters": {
+            "alpha": 29.429549178242176,
+            "Omega_m": 0.2932649606321144
+          },
+          "normalized_shape": [
+            0.4422999284220262
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 12.408335594317675,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 54,
+          "chi2": 12.408335594317675,
+          "parameters": {
+            "alpha": 29.42954923903629,
+            "Omega_m": 0.29326496326286405
+          },
+          "normalized_shape": [
+            0.4422999332052074
+          ]
+        }
+      ],
+      "best_checked_chi2": 12.408335594317634,
+      "best_checked_parameters": {
+        "alpha": 29.429549178242176,
+        "Omega_m": 0.2932649606321144
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.01281424704939127
+    },
+    {
+      "mock_index": 170,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 8.347349294148945,
+      "original_direct_chi2": 8.347349294148945,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 2669.991532317932,
+          "initial_parameters": {
+            "alpha": 23.3817810015911,
+            "Omega_m": 0.05,
+            "w0": -0.850664501048255,
+            "wa": 0.10000000000000009
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 709,
+          "chi2": 8.425518719490963,
+          "parameters": {
+            "alpha": 29.38238893361771,
+            "Omega_m": 0.3019991871093841,
+            "w0": -0.9230557328042854,
+            "wa": -0.42302076171489444
+          },
+          "normalized_shape": [
+            0.45818034019888026,
+            0.6334966277621851,
+            0.8312836252532598
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 48.98633190198219,
+          "initial_parameters": {
+            "alpha": 28.275818428113702,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.45
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 834,
+          "chi2": 8.425518719490933,
+          "parameters": {
+            "alpha": 29.382388744413827,
+            "Omega_m": 0.3019991809697101,
+            "w0": -0.923055774458444,
+            "wa": -0.42302060265425023
+          },
+          "normalized_shape": [
+            0.45818032903583666,
+            0.6334966032597388,
+            0.8312836765631451
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 2669.991532317932,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 124,
+          "chi2": 8.425518719491222,
+          "parameters": {
+            "alpha": 29.3823884542676,
+            "Omega_m": 0.301999171884254,
+            "w0": -0.9230558215267362,
+            "wa": -0.42302044770363434
+          },
+          "normalized_shape": [
+            0.4581803125168255,
+            0.6334965755725082,
+            0.8312837265472147
+          ]
+        }
+      ],
+      "best_checked_chi2": 8.347349294148945,
+      "best_checked_parameters": {
+        "alpha": 29.382388744413827,
+        "Omega_m": 0.3019991809697101,
+        "w0": -0.923055774458444,
+        "wa": -0.42302060265425023
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.15690234396606684
+    },
+    {
+      "mock_index": 173,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 12.08966447053914,
+      "original_direct_chi2": 12.08966447053917,
+      "original_chi2_recalculation_abs_difference": 3.019806626980426e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 12.089664470538644,
+          "initial_parameters": {
+            "alpha": 28.845997136676385,
+            "Omega_m": 0.2949660333710849,
+            "w0": -1.102367916016088
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 37,
+          "chi2": 12.089664470536349,
+          "parameters": {
+            "alpha": 28.845996993275097,
+            "Omega_m": 0.2949660439980947,
+            "w0": -1.1023679969324234
+          },
+          "normalized_shape": [
+            0.4453928072692631,
+            0.5280188253338686
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 25.321394339264305,
+          "initial_parameters": {
+            "alpha": 29.34040082122386,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 171,
+          "chi2": 12.089664470536082,
+          "parameters": {
+            "alpha": 28.84599688392094,
+            "Omega_m": 0.2949660406858063,
+            "w0": -1.1023680027963993
+          },
+          "normalized_shape": [
+            0.4453928012469206,
+            0.5280188218844709
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 12.089664470538644,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 12,
+          "chi2": 12.089664470536782,
+          "parameters": {
+            "alpha": 28.845997194635885,
+            "Omega_m": 0.2949660410115459,
+            "w0": -1.102367941693287
+          },
+          "normalized_shape": [
+            0.4453928018391744,
+            0.5280188578274783
+          ]
+        }
+      ],
+      "best_checked_chi2": 12.089664470536082,
+      "best_checked_parameters": {
+        "alpha": 28.84599688392094,
+        "Omega_m": 0.2949660406858063,
+        "w0": -1.1023680027963993
+      },
+      "best_checked_minus_original_direct_chi2": -3.0873081868776353e-12,
+      "runtime_seconds": 0.02127481810748577
+    },
+    {
+      "mock_index": 176,
+      "start_budget": "16_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 7.176399281158832,
+      "original_direct_chi2": 7.176399281158832,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 7.1763992811587904,
+          "initial_parameters": {
+            "alpha": 29.53928799017603,
+            "Omega_m": 0.3049526862028172,
+            "w0": -1.023605440093438
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 42,
+          "chi2": 7.176399281158654,
+          "parameters": {
+            "alpha": 29.539287821862565,
+            "Omega_m": 0.30495268603968867,
+            "w0": -1.023605470834897
+          },
+          "normalized_shape": [
+            0.46355033825397945,
+            0.5743497230382959
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 16.369181109330075,
+          "initial_parameters": {
+            "alpha": 29.39315738803682,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 175,
+          "chi2": 7.176399281158633,
+          "parameters": {
+            "alpha": 29.53928783527967,
+            "Omega_m": 0.30495268617642074,
+            "w0": -1.0236054689144096
+          },
+          "normalized_shape": [
+            0.46355033850258326,
+            0.5743497241679943
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 7.1763992811587904,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 81,
+          "chi2": 7.176399281158776,
+          "parameters": {
+            "alpha": 29.53928799017604,
+            "Omega_m": 0.3049526862028171,
+            "w0": -1.0236054400934382
+          },
+          "normalized_shape": [
+            0.46355033855057665,
+            0.5743497411215069
+          ]
+        }
+      ],
+      "best_checked_chi2": 7.176399281158633,
+      "best_checked_parameters": {
+        "alpha": 29.53928783527967,
+        "Omega_m": 0.30495268617642074,
+        "w0": -1.0236054689144096
+      },
+      "best_checked_minus_original_direct_chi2": -1.9895196601282805e-13,
+      "runtime_seconds": 0.02973149623721838
+    },
+    {
+      "mock_index": 176,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 7.176399281158832,
+      "original_direct_chi2": 7.176399281158832,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 7.1763992811587904,
+          "initial_parameters": {
+            "alpha": 29.53928799017603,
+            "Omega_m": 0.3049526862028172,
+            "w0": -1.023605440093438
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 42,
+          "chi2": 7.176399281158654,
+          "parameters": {
+            "alpha": 29.539287821862565,
+            "Omega_m": 0.30495268603968867,
+            "w0": -1.023605470834897
+          },
+          "normalized_shape": [
+            0.46355033825397945,
+            0.5743497230382959
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 16.369181109330075,
+          "initial_parameters": {
+            "alpha": 29.39315738803682,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 175,
+          "chi2": 7.176399281158633,
+          "parameters": {
+            "alpha": 29.53928783527967,
+            "Omega_m": 0.30495268617642074,
+            "w0": -1.0236054689144096
+          },
+          "normalized_shape": [
+            0.46355033850258326,
+            0.5743497241679943
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 7.1763992811587904,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 81,
+          "chi2": 7.176399281158776,
+          "parameters": {
+            "alpha": 29.53928799017604,
+            "Omega_m": 0.3049526862028171,
+            "w0": -1.0236054400934382
+          },
+          "normalized_shape": [
+            0.46355033855057665,
+            0.5743497411215069
+          ]
+        }
+      ],
+      "best_checked_chi2": 7.176399281158633,
+      "best_checked_parameters": {
+        "alpha": 29.53928783527967,
+        "Omega_m": 0.30495268617642074,
+        "w0": -1.0236054689144096
+      },
+      "best_checked_minus_original_direct_chi2": -1.9895196601282805e-13,
+      "runtime_seconds": 0.029467097483575344
+    },
+    {
+      "mock_index": 177,
+      "start_budget": "64_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 9.68049297040421,
+      "original_direct_chi2": 9.68049297040421,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 9.68049297040395,
+          "initial_parameters": {
+            "alpha": 29.48939721354217,
+            "Omega_m": 0.29177906754595956,
+            "w0": -0.9937417533861284
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 43,
+          "chi2": 9.680492970394532,
+          "parameters": {
+            "alpha": 29.489398623057117,
+            "Omega_m": 0.2917790877036521,
+            "w0": -0.9937415894075812
+          },
+          "normalized_shape": [
+            0.4395983412793674,
+            0.5919167121131875
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 31.07367134446362,
+          "initial_parameters": {
+            "alpha": 29.479348751229608,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 189,
+          "chi2": 9.68049297039441,
+          "parameters": {
+            "alpha": 29.489398545365564,
+            "Omega_m": 0.29177908934013974,
+            "w0": -0.993741609493995
+          },
+          "normalized_shape": [
+            0.4395983442547996,
+            0.59191670029765
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 9.68049297040395,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 57,
+          "chi2": 9.680492970394592,
+          "parameters": {
+            "alpha": 29.489398647711496,
+            "Omega_m": 0.2917790879067828,
+            "w0": -0.9937415859384031
+          },
+          "normalized_shape": [
+            0.4395983416486961,
+            0.5919167141538805
+          ]
+        }
+      ],
+      "best_checked_chi2": 9.68049297039441,
+      "best_checked_parameters": {
+        "alpha": 29.489398545365564,
+        "Omega_m": 0.29177908934013974,
+        "w0": -0.993741609493995
+      },
+      "best_checked_minus_original_direct_chi2": -9.800160682971182e-12,
+      "runtime_seconds": 0.028420668095350266
+    },
+    {
+      "mock_index": 181,
+      "start_budget": "16_starts",
+      "candidate": "wcdm",
+      "model": "wcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 6.622294943073293,
+      "original_direct_chi2": 6.622294943073293,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 6.622294943073297,
+          "initial_parameters": {
+            "alpha": 30.528786106123675,
+            "Omega_m": 0.3005864467929344,
+            "w0": -0.8576399997003699
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 32,
+          "chi2": 6.622294943066913,
+          "parameters": {
+            "alpha": 30.528787214962573,
+            "Omega_m": 0.30058646474892714,
+            "w0": -0.8576398904696372
+          },
+          "normalized_shape": [
+            0.45561175408895854,
+            0.6719765350178605
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 27.003404519037062,
+          "initial_parameters": {
+            "alpha": 29.477918290075653,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 184,
+          "chi2": 6.622294943066835,
+          "parameters": {
+            "alpha": 30.528787199421927,
+            "Omega_m": 0.3005864608998935,
+            "w0": -0.8576398808762524
+          },
+          "normalized_shape": [
+            0.4556117470907155,
+            0.671976540661028
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 6.622294943073297,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 21,
+          "chi2": 6.622294943066954,
+          "parameters": {
+            "alpha": 30.528787132229393,
+            "Omega_m": 0.3005864589413858,
+            "w0": -0.8576398848036875
+          },
+          "normalized_shape": [
+            0.45561174352979245,
+            0.6719765383507721
+          ]
+        }
+      ],
+      "best_checked_chi2": 6.622294943066835,
+      "best_checked_parameters": {
+        "alpha": 30.528787199421927,
+        "Omega_m": 0.3005864608998935,
+        "w0": -0.8576398808762524
+      },
+      "best_checked_minus_original_direct_chi2": -6.4579452896396106e-12,
+      "runtime_seconds": 0.022949719801545143
+    },
+    {
+      "mock_index": 183,
+      "start_budget": "64_starts",
+      "candidate": "cpl_w0_upper_0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 9.467003351186552,
+      "original_direct_chi2": 9.467003351186603,
+      "original_chi2_recalculation_abs_difference": 5.1514348342607263e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 10.424035201507497,
+          "initial_parameters": {
+            "alpha": 31.87055091389451,
+            "Omega_m": 0.3757316038656643,
+            "w0": -0.30000000000000004,
+            "wa": -3.0
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 332,
+          "chi2": 9.553846581199473,
+          "parameters": {
+            "alpha": 31.91970049495982,
+            "Omega_m": 0.37017591968901925,
+            "w0": -0.3000000010839088,
+            "wa": -2.8131444614276435
+          },
+          "normalized_shape": [
+            0.5821380357982169,
+            0.9999999993624066,
+            0.06027598018463112
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 47.744686845833314,
+          "initial_parameters": {
+            "alpha": 28.537356253465056,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.45
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 1927,
+          "chi2": 9.553846579348164,
+          "parameters": {
+            "alpha": 31.919700140811184,
+            "Omega_m": 0.3701759725864598,
+            "w0": -0.30000000000002247,
+            "wa": -2.8131460495812513
+          },
+          "normalized_shape": [
+            0.5821381319753816,
+            0.9999999999999868,
+            0.060275467877015744
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 10.424035201507497,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 84,
+          "chi2": 9.553846579277206,
+          "parameters": {
+            "alpha": 31.91970060610229,
+            "Omega_m": 0.37017591813674633,
+            "w0": -0.30000000000000004,
+            "wa": -2.8131443088841643
+          },
+          "normalized_shape": [
+            0.5821380329759025,
+            1.0,
+            0.06027602939220512
+          ]
+        }
+      ],
+      "best_checked_chi2": 9.467003351186603,
+      "best_checked_parameters": {
+        "alpha": 31.91970060610229,
+        "Omega_m": 0.37017591813674633,
+        "w0": -0.30000000000000004,
+        "wa": -2.8131443088841643
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.21489357110112906
+    },
+    {
+      "mock_index": 184,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_-0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 16.460626862213317,
+      "original_direct_chi2": 16.460626862213314,
+      "original_chi2_recalculation_abs_difference": 3.552713678800501e-15,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 16.46062686221279,
+          "initial_parameters": {
+            "alpha": 30.11545707071657,
+            "Omega_m": 0.30516793644657536,
+            "w0": -0.8395083237624501,
+            "wa": -0.47495641014093426
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 162,
+          "chi2": 16.460626862191912,
+          "parameters": {
+            "alpha": 30.11545824371211,
+            "Omega_m": 0.3051679894411048,
+            "w0": -0.8395082126065059,
+            "wa": -0.4749569455449447
+          },
+          "normalized_shape": [
+            0.463941798983827,
+            0.682642227878526,
+            0.8707045015362259
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 69.88033231043144,
+          "initial_parameters": {
+            "alpha": 28.470903229262053,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.55
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 688,
+          "chi2": 16.460626862129832,
+          "parameters": {
+            "alpha": 30.115469883714887,
+            "Omega_m": 0.3051683838380203,
+            "w0": -0.8395052366310534,
+            "wa": -0.47496879597688135
+          },
+          "normalized_shape": [
+            0.4639425160691279,
+            0.6826439784523216,
+            0.8707004151803858
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 16.46062686221279,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 20,
+          "chi2": 16.46062686219719,
+          "parameters": {
+            "alpha": 30.115457708802,
+            "Omega_m": 0.30516796559464476,
+            "w0": -0.8395083208683631,
+            "wa": -0.47495643197254145
+          },
+          "normalized_shape": [
+            0.46394175562662693,
+            0.6826421641950805,
+            0.8707046786301581
+          ]
+        }
+      ],
+      "best_checked_chi2": 16.460626862129832,
+      "best_checked_parameters": {
+        "alpha": 30.115469883714887,
+        "Omega_m": 0.3051683838380203,
+        "w0": -0.8395052366310534,
+        "wa": -0.47496879597688135
+      },
+      "best_checked_minus_original_direct_chi2": -8.348166602445417e-11,
+      "runtime_seconds": 0.08097754046320915
+    },
+    {
+      "mock_index": 184,
+      "start_budget": "64_starts",
+      "candidate": "cpl_w0_upper_-0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 16.460626862213317,
+      "original_direct_chi2": 16.460626862213314,
+      "original_chi2_recalculation_abs_difference": 3.552713678800501e-15,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 16.46062686221279,
+          "initial_parameters": {
+            "alpha": 30.11545707071657,
+            "Omega_m": 0.30516793644657536,
+            "w0": -0.8395083237624501,
+            "wa": -0.47495641014093426
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 162,
+          "chi2": 16.460626862191912,
+          "parameters": {
+            "alpha": 30.11545824371211,
+            "Omega_m": 0.3051679894411048,
+            "w0": -0.8395082126065059,
+            "wa": -0.4749569455449447
+          },
+          "normalized_shape": [
+            0.463941798983827,
+            0.682642227878526,
+            0.8707045015362259
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 69.88033231043144,
+          "initial_parameters": {
+            "alpha": 28.470903229262053,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.55
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 688,
+          "chi2": 16.460626862129832,
+          "parameters": {
+            "alpha": 30.115469883714887,
+            "Omega_m": 0.3051683838380203,
+            "w0": -0.8395052366310534,
+            "wa": -0.47496879597688135
+          },
+          "normalized_shape": [
+            0.4639425160691279,
+            0.6826439784523216,
+            0.8707004151803858
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 16.46062686221279,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 20,
+          "chi2": 16.46062686219719,
+          "parameters": {
+            "alpha": 30.115457708802,
+            "Omega_m": 0.30516796559464476,
+            "w0": -0.8395083208683631,
+            "wa": -0.47495643197254145
+          },
+          "normalized_shape": [
+            0.46394175562662693,
+            0.6826421641950805,
+            0.8707046786301581
+          ]
+        }
+      ],
+      "best_checked_chi2": 16.460626862129832,
+      "best_checked_parameters": {
+        "alpha": 30.115469883714887,
+        "Omega_m": 0.3051683838380203,
+        "w0": -0.8395052366310534,
+        "wa": -0.47496879597688135
+      },
+      "best_checked_minus_original_direct_chi2": -8.348166602445417e-11,
+      "runtime_seconds": 0.08089354261755943
+    },
+    {
+      "mock_index": 189,
+      "start_budget": "16_starts",
+      "candidate": "lcdm",
+      "model": "lcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 8.399781528360702,
+      "original_direct_chi2": 8.399781528360709,
+      "original_chi2_recalculation_abs_difference": 7.105427357601002e-15,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 8.399781528360743,
+          "initial_parameters": {
+            "alpha": 29.20579059169676,
+            "Omega_m": 0.28930463977262244
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 16,
+          "chi2": 8.399781528358561,
+          "parameters": {
+            "alpha": 29.20579087437594,
+            "Omega_m": 0.289304651976167
+          },
+          "normalized_shape": [
+            0.43509936722939463
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 24.436205910797327,
+          "initial_parameters": {
+            "alpha": 30.006485379153073,
+            "Omega_m": 0.32499999999999996
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 30,
+          "chi2": 8.39978152835851,
+          "parameters": {
+            "alpha": 29.205790878622615,
+            "Omega_m": 0.28930465215950035
+          },
+          "normalized_shape": [
+            0.435099367562728
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 8.399781528360743,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 48,
+          "chi2": 8.399781528358613,
+          "parameters": {
+            "alpha": 29.20579081856808,
+            "Omega_m": 0.28930464956688584
+          },
+          "normalized_shape": [
+            0.4350993628488834
+          ]
+        }
+      ],
+      "best_checked_chi2": 8.39978152835851,
+      "best_checked_parameters": {
+        "alpha": 29.205790878622615,
+        "Omega_m": 0.28930465215950035
+      },
+      "best_checked_minus_original_direct_chi2": -2.19912976717751e-12,
+      "runtime_seconds": 0.010653949342668056
+    },
+    {
+      "mock_index": 189,
+      "start_budget": "64_starts",
+      "candidate": "lcdm",
+      "model": "lcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 8.399781528360702,
+      "original_direct_chi2": 8.399781528360709,
+      "original_chi2_recalculation_abs_difference": 7.105427357601002e-15,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 8.399781528360743,
+          "initial_parameters": {
+            "alpha": 29.20579059169676,
+            "Omega_m": 0.28930463977262244
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 16,
+          "chi2": 8.399781528358561,
+          "parameters": {
+            "alpha": 29.20579087437594,
+            "Omega_m": 0.289304651976167
+          },
+          "normalized_shape": [
+            0.43509936722939463
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 24.436205910797327,
+          "initial_parameters": {
+            "alpha": 30.006485379153073,
+            "Omega_m": 0.32499999999999996
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 30,
+          "chi2": 8.39978152835851,
+          "parameters": {
+            "alpha": 29.205790878622615,
+            "Omega_m": 0.28930465215950035
+          },
+          "normalized_shape": [
+            0.435099367562728
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 8.399781528360743,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 48,
+          "chi2": 8.399781528358613,
+          "parameters": {
+            "alpha": 29.20579081856808,
+            "Omega_m": 0.28930464956688584
+          },
+          "normalized_shape": [
+            0.4350993628488834
+          ]
+        }
+      ],
+      "best_checked_chi2": 8.39978152835851,
+      "best_checked_parameters": {
+        "alpha": 29.205790878622615,
+        "Omega_m": 0.28930465215950035
+      },
+      "best_checked_minus_original_direct_chi2": -2.19912976717751e-12,
+      "runtime_seconds": 0.010659409686923027
+    },
+    {
+      "mock_index": 190,
+      "start_budget": "16_starts",
+      "candidate": "lcdm",
+      "model": "lcdm",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 14.049138243487082,
+      "original_direct_chi2": 14.049138243487103,
+      "original_chi2_recalculation_abs_difference": 2.1316282072803006e-14,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 14.049138243487173,
+          "initial_parameters": {
+            "alpha": 29.821222393315328,
+            "Omega_m": 0.3091936057453233
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 19,
+          "chi2": 14.04913824348604,
+          "parameters": {
+            "alpha": 29.82122256058104,
+            "Omega_m": 0.30919361317226185
+          },
+          "normalized_shape": [
+            0.471261114858658
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 16.958537297719413,
+          "initial_parameters": {
+            "alpha": 30.172391313134632,
+            "Omega_m": 0.32499999999999996
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 37,
+          "chi2": 14.049138243485993,
+          "parameters": {
+            "alpha": 29.82122264966587,
+            "Omega_m": 0.30919361712780974
+          },
+          "normalized_shape": [
+            0.47126112205056325
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 14.049138243487173,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 18,
+          "chi2": 14.049138243486102,
+          "parameters": {
+            "alpha": 29.82122253975776,
+            "Omega_m": 0.3091936122476658
+          },
+          "normalized_shape": [
+            0.4712611131775742
+          ]
+        }
+      ],
+      "best_checked_chi2": 14.049138243485993,
+      "best_checked_parameters": {
+        "alpha": 29.82122264966587,
+        "Omega_m": 0.30919361712780974
+      },
+      "best_checked_minus_original_direct_chi2": -1.1102230246251565e-12,
+      "runtime_seconds": 0.008069736883044243
+    },
+    {
+      "mock_index": 194,
+      "start_budget": "16_starts",
+      "candidate": "cpl_w0_upper_0",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 5.0804609293812755,
+      "original_direct_chi2": 5.0804609293812755,
+      "original_chi2_recalculation_abs_difference": 0.0,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 6.5299508441260885,
+          "initial_parameters": {
+            "alpha": 32.13873574927977,
+            "Omega_m": 0.38354304435172215,
+            "w0": -0.30000000000000004,
+            "wa": -3.0
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 323,
+          "chi2": 5.181830727894938,
+          "parameters": {
+            "alpha": 32.20326219424615,
+            "Omega_m": 0.3765319139734612,
+            "w0": -0.3000000010839088,
+            "wa": -2.761853245453055
+          },
+          "normalized_shape": [
+            0.5936943890426568,
+            0.9999999993624066,
+            0.07938225151564836
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 40.643424926148725,
+          "initial_parameters": {
+            "alpha": 28.609611969687005,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.5
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 2434,
+          "chi2": 5.181830726208786,
+          "parameters": {
+            "alpha": 32.20326219466499,
+            "Omega_m": 0.376531914271994,
+            "w0": -0.30000000010962213,
+            "wa": -2.7618532567694243
+          },
+          "normalized_shape": [
+            0.5936943895854437,
+            0.9999999999355164,
+            0.07938224774352519
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 6.5299508441260885,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 48,
+          "chi2": 5.181830726019202,
+          "parameters": {
+            "alpha": 32.20326214413453,
+            "Omega_m": 0.3765319114474813,
+            "w0": -0.30000000000000004,
+            "wa": -2.76185325082895
+          },
+          "normalized_shape": [
+            0.5936943844499661,
+            1.0,
+            0.07938224972368334
+          ]
+        }
+      ],
+      "best_checked_chi2": 5.0804609293812755,
+      "best_checked_parameters": {
+        "alpha": 32.20326214413453,
+        "Omega_m": 0.3765319114474813,
+        "w0": -0.30000000000000004,
+        "wa": -2.76185325082895
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.2543150344863534
+    },
+    {
+      "mock_index": 196,
+      "start_budget": "64_starts",
+      "candidate": "cpl_w0_upper_0.1",
+      "model": "cpl",
+      "original_optimizer_success": false,
+      "original_optimizer_message": "ABNORMAL: ",
+      "original_reported_chi2": 8.344837615296434,
+      "original_direct_chi2": 8.344837615296443,
+      "original_chi2_recalculation_abs_difference": 8.881784197001252e-15,
+      "alternative_optimizer_runs": [
+        {
+          "start": "saved_optimizer_point",
+          "initial_chi2": 2355.351292228795,
+          "initial_parameters": {
+            "alpha": 24.2890563535008,
+            "Omega_m": 0.05,
+            "w0": -0.7968386403077599,
+            "wa": 0.10000000000000009
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 425,
+          "chi2": 8.706844505758891,
+          "parameters": {
+            "alpha": 29.503891879557465,
+            "Omega_m": 0.29256740002649584,
+            "w0": -0.9875028734636968,
+            "wa": 0.09999999802346027
+          },
+          "normalized_shape": [
+            0.4410316364118107,
+            0.5955865450213549,
+            0.9999999993624066
+          ]
+        },
+        {
+          "start": "box_center",
+          "initial_chi2": 49.91228542689673,
+          "initial_parameters": {
+            "alpha": 28.354046908285877,
+            "Omega_m": 0.32499999999999996,
+            "w0": -1.15,
+            "wa": -1.45
+          },
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "nfev": 706,
+          "chi2": 8.714270396139856,
+          "parameters": {
+            "alpha": 29.510744179187515,
+            "Omega_m": 0.2919161408803014,
+            "w0": -0.9839055886004584,
+            "wa": 0.09999999999918252
+          },
+          "normalized_shape": [
+            0.4398475288732753,
+            0.5977025949409068,
+            0.9999999999997362
+          ]
+        },
+        {
+          "start": "saved_optimizer_point",
+          "method": "L-BFGS-B with profiled alpha",
+          "initial_chi2": 2355.351292228795,
+          "initial_parameters": null,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 108,
+          "chi2": 8.706844505304966,
+          "parameters": {
+            "alpha": 29.503891657161144,
+            "Omega_m": 0.2925673982725274,
+            "w0": -0.9875029045727048,
+            "wa": 0.10000000000000009
+          },
+          "normalized_shape": [
+            0.4410316332227772,
+            0.5955865267219383,
+            1.0
+          ]
+        }
+      ],
+      "best_checked_chi2": 8.344837615296443,
+      "best_checked_parameters": {
+        "alpha": 29.503891657161144,
+        "Omega_m": 0.2925673982725274,
+        "w0": -0.9875029045727048,
+        "wa": 0.10000000000000009
+      },
+      "best_checked_minus_original_direct_chi2": 0.0,
+      "runtime_seconds": 0.11693842243403196
+    }
+  ]
+}

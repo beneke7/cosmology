@@ -1,0 +1,313 @@
+{
+  "status": "reproduced benchmark; exploratory profile surface",
+  "scope": "DESI DR2 13-row compressed BAO likelihood; flat late-time CPL, radiation omitted; free alpha=c/(H0 rd) analytically profiled; no posterior/evidence/significance claim",
+  "parameter_order": [
+    "Omega_m",
+    "w0",
+    "wa"
+  ],
+  "sobol_domains": {
+    "Omega_m": [
+      0.05,
+      0.6
+    ],
+    "w0": [
+      -2.0,
+      -0.3
+    ],
+    "wa": [
+      -3.0,
+      3.0
+    ]
+  },
+  "alpha_profile_bounds": [
+    1e-06,
+    10000.0
+  ],
+  "seed": 20260924,
+  "sobol": "SciPy scrambled Sobol; deterministic prefix of one 3D sequence; affine uniform mapping on listed domains",
+  "quadrature": {
+    "method": "96-point Gauss-Legendre on each [0,z] interval",
+    "order": 96,
+    "matches_repository_kernel": true
+  },
+  "likelihood": "all 13 ordered means and full 13x13 covariance; Cholesky-whitened float64 residual norm; alpha profiled by whitened least squares, then clipped to original CPL alpha bounds",
+  "mean_row_order": [
+    {
+      "z": 0.295,
+      "observable": "DV_over_rs"
+    },
+    {
+      "z": 0.51,
+      "observable": "DM_over_rs"
+    },
+    {
+      "z": 0.51,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 0.706,
+      "observable": "DM_over_rs"
+    },
+    {
+      "z": 0.706,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 0.934,
+      "observable": "DM_over_rs"
+    },
+    {
+      "z": 0.934,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 1.321,
+      "observable": "DM_over_rs"
+    },
+    {
+      "z": 1.321,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 1.484,
+      "observable": "DM_over_rs"
+    },
+    {
+      "z": 1.484,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 2.33,
+      "observable": "DH_over_rs"
+    },
+    {
+      "z": 2.33,
+      "observable": "DM_over_rs"
+    }
+  ],
+  "data_sha256": {
+    "/home/v/proj/bene/cosmology/cosmology_autoresearch/context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "/home/v/proj/bene/cosmology/cosmology_autoresearch/context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+  },
+  "code_sha256": {
+    "/home/v/proj/bene/cosmology/cosmology_autoresearch/experiments/gpu_bao_surface/benchmark_bao_surface.py": "a6bcae6202fc2f2238c2d5b2e5b0e85d43c82e3eff4d91fcd8c133e5f36c7a1a",
+    "/home/v/proj/bene/cosmology/cosmology_autoresearch/scripts/background_bao.py": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2"
+  },
+  "git_head": "833a2a2a0d023c6308e891d196d30a549a52e602",
+  "system": {
+    "utc": "2026-09-24T16:08:06.969393+00:00",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "processor": "Intel(R) Core(TM) Ultra 7 265K",
+    "affinity_cpus": 20,
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "gpu_nvidia_smi_before_cuda_context": "NVIDIA GeForce RTX 5090, 580.159.03, 32607, 27107, 5003"
+  },
+  "common_setup_seconds": 0.03484778944402933,
+  "shared_covariance_details": {
+    "shape": [
+      13,
+      13
+    ],
+    "condition_number_2": 116.82382904395578,
+    "cholesky_min_diagonal": 0.07609196324185624
+  },
+  "api_prediction_check": {
+    "method": "repository predict_bao() vs independent batched NumPy kernel",
+    "max_abs_prediction_difference": 1.4210854715202004e-14
+  },
+  "cpu_chunk_size": 1024,
+  "gpu_chunk_size": 1024,
+  "gpu_pool_limit_gib": 2.0,
+  "adaptive_check_requested": 32,
+  "batches": [
+    {
+      "power": 8,
+      "samples": 256,
+      "cpu_float64_seconds": 0.005885221995413303,
+      "cpu_throughput_samples_per_second": 43498.78393704022,
+      "cpu_wall_including_common_setup_seconds": 0.040733011439442635,
+      "gpu_end_to_end_float64_seconds": 1.5620016930624843,
+      "gpu_throughput_samples_per_second": 163.89226793863617,
+      "gpu_wall_including_common_setup_seconds": 1.5968494825065136,
+      "gpu_speedup_over_cpu_end_to_end": 0.0037677436724634066,
+      "gpu_includes": [
+        "CuPy import on first measured batch",
+        "CUDA context/device setup",
+        "host-to-device data and parameter transfers",
+        "96-point distance integration",
+        "full-covariance whitening and alpha profile",
+        "device-to-host outputs",
+        "explicit CUDA synchronization"
+      ],
+      "max_abs_alpha_difference_gpu_vs_cpu": 2.1316282072803006e-14,
+      "max_abs_chi2_difference_gpu_vs_cpu": 3.637978807091713e-12,
+      "max_rel_chi2_difference_gpu_vs_cpu": 1.1464600749918849e-14,
+      "max_cpu_chi2": 10841.376099636196,
+      "min_sampled_profile_chi2": 6.585067140261734,
+      "min_sampled_profile_parameters": {
+        "Omega_m": 0.35422618580050763,
+        "w0": -0.5270836396142842,
+        "wa": -1.5992670971900225,
+        "alpha": 31.542421002906426
+      },
+      "fraction_alpha_at_profile_bound": 0.0,
+      "gpu": {
+        "cupy_version": "14.2.0",
+        "cuda_runtime_version": 12090,
+        "cuda_driver_version": 13000,
+        "device_name": "NVIDIA GeForce RTX 5090",
+        "free_bytes_after_cuda_context": 4717543424,
+        "total_vram_bytes": 33668857856,
+        "peak_cupy_pool_reserved_bytes": 12864512,
+        "pool_limit_bytes": 2147483648
+      }
+    },
+    {
+      "power": 10,
+      "samples": 1024,
+      "cpu_float64_seconds": 0.01621549390256405,
+      "cpu_throughput_samples_per_second": 63149.47951342275,
+      "cpu_wall_including_common_setup_seconds": 0.05106328334659338,
+      "gpu_end_to_end_float64_seconds": 0.001813928596675396,
+      "gpu_throughput_samples_per_second": 564520.5670591485,
+      "gpu_wall_including_common_setup_seconds": 0.03666171804070473,
+      "gpu_speedup_over_cpu_end_to_end": 8.939433411151974,
+      "gpu_includes": [
+        "CuPy import on first measured batch",
+        "CUDA context/device setup",
+        "host-to-device data and parameter transfers",
+        "96-point distance integration",
+        "full-covariance whitening and alpha profile",
+        "device-to-host outputs",
+        "explicit CUDA synchronization"
+      ],
+      "max_abs_alpha_difference_gpu_vs_cpu": 2.1316282072803006e-14,
+      "max_abs_chi2_difference_gpu_vs_cpu": 7.275957614183426e-12,
+      "max_rel_chi2_difference_gpu_vs_cpu": 1.1464600749918849e-14,
+      "max_cpu_chi2": 11415.61930228743,
+      "min_sampled_profile_chi2": 6.585067140261734,
+      "min_sampled_profile_parameters": {
+        "Omega_m": 0.35422618580050763,
+        "w0": -0.5270836396142842,
+        "wa": -1.5992670971900225,
+        "alpha": 31.542421002906426
+      },
+      "fraction_alpha_at_profile_bound": 0.0,
+      "gpu": {
+        "cupy_version": "14.2.0",
+        "cuda_runtime_version": 12090,
+        "cuda_driver_version": 13000,
+        "device_name": "NVIDIA GeForce RTX 5090",
+        "free_bytes_after_cuda_context": 4700766208,
+        "total_vram_bytes": 33668857856,
+        "peak_cupy_pool_reserved_bytes": 53673984,
+        "pool_limit_bytes": 2147483648
+      }
+    },
+    {
+      "power": 12,
+      "samples": 4096,
+      "cpu_float64_seconds": 0.05407857242971659,
+      "cpu_throughput_samples_per_second": 75741.64435134418,
+      "cpu_wall_including_common_setup_seconds": 0.08892636187374592,
+      "gpu_end_to_end_float64_seconds": 0.0030679581686854362,
+      "gpu_throughput_samples_per_second": 1335089.911527399,
+      "gpu_wall_including_common_setup_seconds": 0.03791574761271477,
+      "gpu_speedup_over_cpu_end_to_end": 17.62689367205038,
+      "gpu_includes": [
+        "CuPy import on first measured batch",
+        "CUDA context/device setup",
+        "host-to-device data and parameter transfers",
+        "96-point distance integration",
+        "full-covariance whitening and alpha profile",
+        "device-to-host outputs",
+        "explicit CUDA synchronization"
+      ],
+      "max_abs_alpha_difference_gpu_vs_cpu": 2.1316282072803006e-14,
+      "max_abs_chi2_difference_gpu_vs_cpu": 7.275957614183426e-12,
+      "max_rel_chi2_difference_gpu_vs_cpu": 1.4935130075267927e-14,
+      "max_cpu_chi2": 12624.228175439373,
+      "min_sampled_profile_chi2": 6.585067140261734,
+      "min_sampled_profile_parameters": {
+        "Omega_m": 0.35422618580050763,
+        "w0": -0.5270836396142842,
+        "wa": -1.5992670971900225,
+        "alpha": 31.542421002906426
+      },
+      "fraction_alpha_at_profile_bound": 0.0,
+      "gpu": {
+        "cupy_version": "14.2.0",
+        "cuda_runtime_version": 12090,
+        "cuda_driver_version": 13000,
+        "device_name": "NVIDIA GeForce RTX 5090",
+        "free_bytes_after_cuda_context": 4700766208,
+        "total_vram_bytes": 33668857856,
+        "peak_cupy_pool_reserved_bytes": 53673984,
+        "pool_limit_bytes": 2147483648
+      }
+    },
+    {
+      "power": 14,
+      "samples": 16384,
+      "cpu_float64_seconds": 0.2190538588911295,
+      "cpu_throughput_samples_per_second": 74794.39112799607,
+      "cpu_wall_including_common_setup_seconds": 0.2539016483351588,
+      "gpu_end_to_end_float64_seconds": 0.007228950969874859,
+      "gpu_throughput_samples_per_second": 2266442.263653038,
+      "gpu_wall_including_common_setup_seconds": 0.04207674041390419,
+      "gpu_speedup_over_cpu_end_to_end": 30.30230247846342,
+      "gpu_includes": [
+        "CuPy import on first measured batch",
+        "CUDA context/device setup",
+        "host-to-device data and parameter transfers",
+        "96-point distance integration",
+        "full-covariance whitening and alpha profile",
+        "device-to-host outputs",
+        "explicit CUDA synchronization"
+      ],
+      "max_abs_alpha_difference_gpu_vs_cpu": 2.842170943040401e-14,
+      "max_abs_chi2_difference_gpu_vs_cpu": 7.275957614183426e-12,
+      "max_rel_chi2_difference_gpu_vs_cpu": 1.8807096903083944e-14,
+      "max_cpu_chi2": 12699.373985594295,
+      "min_sampled_profile_chi2": 5.850725879392483,
+      "min_sampled_profile_parameters": {
+        "Omega_m": 0.36544101783074434,
+        "w0": -0.38156022634357223,
+        "wa": -2.023937478661537,
+        "alpha": 32.093836771185934
+      },
+      "fraction_alpha_at_profile_bound": 0.0,
+      "gpu": {
+        "cupy_version": "14.2.0",
+        "cuda_runtime_version": 12090,
+        "cuda_driver_version": 13000,
+        "device_name": "NVIDIA GeForce RTX 5090",
+        "free_bytes_after_cuda_context": 4700766208,
+        "total_vram_bytes": 33668857856,
+        "peak_cupy_pool_reserved_bytes": 53673984,
+        "pool_limit_bytes": 2147483648
+      }
+    }
+  ],
+  "adaptive_scalar_cpu_check": {
+    "count": 32,
+    "independent_method": "scalar Python CPL E(z) plus scipy.integrate.quad per observed redshift; direct residual^T C^-1 residual via np.linalg.solve",
+    "quad_epsabs": 1e-13,
+    "quad_epsrel": 1e-13,
+    "max_abs_prediction_difference_vs_96_point_GL": 4.973799150320701e-14,
+    "max_abs_chi2_difference_vs_float64_CPU_whitened": 2.7284841053187847e-12,
+    "max_abs_chi2_difference_direct_full_covariance": 2.7284841053187847e-12,
+    "total_adaptive_integral_seconds": 0.003105505369603634,
+    "gpu_subset_max_abs_chi2_difference": 7.275957614183426e-12
+  },
+  "surface_file": "experiments/gpu_bao_surface/pilot.npz",
+  "surface_sha256": "7d28283241ee6c6ffd1a156c97ab3276dd862b33cb8c08d8384f6af39c3db5fc"
+}

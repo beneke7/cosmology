@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "prepared": "2026-09-24",
+  "scope": "Claims used in this campaign. Literature statements distinguish full-text reads from abstract-only access; local profile calculations are not posterior reproductions.",
+  "claims": [
+    {
+      "claim_id": "bao_scale_identifiability",
+      "statement": "The released compressed DESI DR2 BAO vector constrains distances relative to the drag sound horizon. A BAO-only background fit without an early-time ruler calibration does not identify H0 separately.",
+      "status": "primary-source-supported; local profile calculation reproduced",
+      "confidence": "high",
+      "primary_evidence": [
+        {"source_id": "desi_dr2_bao", "locator": "Printed pp. 4-5, Eqs. (1)-(5), and Sec. VII, pp. 23-25."}
+      ],
+      "local_evidence": ["experiments/campaign_seed_bao/result.json", "experiments/bao_robustness/result.json", "scripts/background_bao.py"],
+      "counterevidence_or_limit": "An explicit early-universe ruler model or calibration can constrain rd and then H0; that adds assumptions and/or data not present in this BAO-only screen.",
+      "experiment_implication": "Retain alpha=c/(H0 rd) as a free amplitude and report profile fits as screening calculations, not H0 measurements."
+    },
+    {
+      "claim_id": "profile_screen_is_not_official_posterior_reproduction",
+      "statement": "The campaign's flat late-time LCDM, constant-w and CPL fits are correlated-Gaussian profile minima over stated bounds; they do not reproduce DESI collaboration posterior constraints or Bayesian evidence.",
+      "status": "local numerical method reproduced; interpretation bounded by paper",
+      "confidence": "high",
+      "primary_evidence": [
+        {"source_id": "desi_dr2_bao", "locator": "Results II, Sec. VII and Table VI; collaboration model and CMB/SN likelihood combinations."},
+        {"source_id": "desi_extended_de", "locator": "Table I prior ranges and Secs. II-III model/likelihood conventions."}
+      ],
+      "local_evidence": ["experiments/campaign_seed_bao/result.json", "experiments/bao_robustness/result.json", "work/compute/GPU_BAO_SURFACE.md"],
+      "counterevidence_or_limit": "The numerical minima are reproducible for the pinned 13-point vector, but the screen omits radiation/curvature/perturbations and does not sample a posterior.",
+      "experiment_implication": "Do not translate local Delta-chi-square values into sigma, odds, calibrated probabilities or collaboration posterior intervals."
+    },
+    {
+      "claim_id": "evolving_de_preference_is_data_and_analysis_sensitive",
+      "statement": "Published preferences for evolving dark energy vary with likelihood, data branch, prior and statistic; reanalyses of the same released observations are not independent survey confirmations.",
+      "status": "full-text-supported by collaboration and alternative reanalyses; inputs overlap",
+      "confidence": "moderate",
+      "primary_evidence": [
+        {"source_id": "desi_dr2_bao", "locator": "Table VI, p. 24; conditional profile Delta-chi-square comparisons for stated data combinations."},
+        {"source_id": "des_dovekie", "locator": "Tables 10-11, Sec. 7; updated calibration and model-comparison metrics."},
+        {"source_id": "chaudhary_desi_dr2_evidence", "locator": "Full arXiv HTML read, v8; alternative inference over overlapping BAO/SN inputs."},
+        {"source_id": "efstathiou_bao_angle", "locator": "Full arXiv HTML read, v2; alternative directional interpretation of the same BAO information."}
+      ],
+      "local_evidence": ["experiments/bao_robustness/result.json", "experiments/dovekie_screen/result.json", "work/critic/REPORT.md"],
+      "counterevidence_or_limit": "The cited analyses use differing likelihoods, data branches and priors; no average of their nominal significances is valid, and this campaign did not run posterior/evidence inference.",
+      "experiment_implication": "Prioritize same-likelihood baseline comparisons, boundary sensitivity and null-mock selection calibration; preserve the published parameter/statistic definitions."
+    },
+    {
+      "claim_id": "dovekie_is_a_recalibrated_overlapping_sn_branch",
+      "statement": "DES-Dovekie is an updated calibration/reanalysis of the DES supernova program, not an independent sample to multiply by the original DES-SN5YR likelihood; the local screen profiles one magnitude offset and cannot infer H0.",
+      "status": "full-text and pinned-release supported; independent profile reproduction",
+      "confidence": "high",
+      "primary_evidence": [
+        {"source_id": "des_dovekie", "locator": "Calibration discussion; sample comparison; Tables 10-11."},
+        {"source_id": "des_dovekie_repo", "locator": "Pinned commit c9a4fcafc4cbd19bd750dee47fc76194a45c181f, release README and paired likelihood files."}
+      ],
+      "local_evidence": ["work/inference/REPORT.md", "work/critic/REPORT.md", "experiments/dovekie_screen/result.json", "experiments/dovekie_screen/boundary_sensitivity.json"],
+      "counterevidence_or_limit": "The official module requests CSV while the pinned data file contains whitespace SNANA records; our native-format implementations follow documented semantics but do not execute the complete released CosmoSIS pipeline or reproduce its posterior.",
+      "experiment_implication": "Use one SN branch at a time, keep full STAT+SYS precision and row order, and document overlap before combining with other SN compilations."
+    },
+    {
+      "claim_id": "lya_ap_and_lya_bao_are_not_independent_factors",
+      "statement": "DESI DR2 Ly-alpha full-shape/AP Results IV and the earlier Ly-alpha BAO Results I share the DR2 sample family; updated combinations replace/recondition the older Ly-alpha representation rather than adding it as an independent likelihood factor.",
+      "status": "full-text-supported; public joint likelihood locator incomplete",
+      "confidence": "high for sample overlap; moderate for an external combination recipe",
+      "primary_evidence": [
+        {"source_id": "desi_lya_ap", "locator": "Eqs. (24)-(26), Sec. VI and Data Availability."},
+        {"source_id": "desi_lya_bao_results_i", "locator": "Full arXiv HTML read, v3; earlier compressed measurement from the DR2 Ly-alpha sample family."},
+        {"source_id": "desi_lya_ap_validation", "locator": "Full arXiv HTML read, v2; companion mock/data-split checks, not independent observations."}
+      ],
+      "local_evidence": ["context/papers/desi_lya_ap.pdf", "work/literature/reading_map.md", "experiments/bao_robustness/result.json"],
+      "counterevidence_or_limit": "An exact public joint covariance/likelihood for the updated full-shape product was not located in the literature pass; the local 13-point BAO vector still includes the earlier Ly-alpha rows.",
+      "experiment_implication": "Do not multiply Results IV constraints by the old Ly-alpha BAO entries; require and audit the released replacement/joint likelihood first."
+    },
+    {
+      "claim_id": "act_likelihood_representations_overlap",
+      "statement": "ACT full spectra, ACT-lite and P-ACT are alternative likelihood products/combinations, not independent factors; P-ACT applies Planck overlap cuts and other DR2 CMB bundles may already include ACT/Planck lensing.",
+      "status": "full-text and official-product-supported",
+      "confidence": "high",
+      "primary_evidence": [
+        {"source_id": "act_dr6", "locator": "Eq. (17), p. 22; Eq. (33), p. 25; Sec. 6.3, pp. 26-27."},
+        {"source_id": "act_products", "locator": "NASA LAMBDA DR6.02 likelihood/product inventory."}
+      ],
+      "local_evidence": ["work/literature/reading_map.md", "context/documentation/act_products.html"],
+      "counterevidence_or_limit": "Official collaboration products can define valid combinations under their documented cuts; dependence must be assessed from the chosen product, not assumed universally absent.",
+      "experiment_implication": "Before any CMB extension, name every constituent spectrum/lensing likelihood and avoid multiplying a joint posterior by its components."
+    },
+    {
+      "claim_id": "prescribed_source_tg_transform_is_exact_but_not_novelty_or_stability",
+      "statement": "For prescribed density, constant K and positive u=exp(-K phi), the printed thermodynamic-gravity evolution equation transforms exactly to u_t=D[laplacian(u)+4 pi G K rho u]; its stationary fixed-source equation is linear in u.",
+      "status": "full-text equation check and independent algebra/synthetic reproduction; not a novelty claim",
+      "confidence": "high for the chain-rule identity; conditional physical interpretation",
+      "primary_evidence": [
+        {"source_id": "pszota_van_2024_journal", "locator": "Printed Eq. (1), p. 2, visually checked in user-provided journal PDF."},
+        {"source_id": "tg_preprint", "locator": "Eqs. (2), (5)-(8), pp. 3-4; source/sign conventions."}
+      ],
+      "local_evidence": ["runs/tg_audit.json", "work/theory/derivation.md", "work/theory/independent_check.py"],
+      "counterevidence_or_limit": "The transform alone proves neither positivity/stability nor boundary-condition equivalence, coupled matter evolution or observational success; use the Poisson limit directly at K=0.",
+      "experiment_implication": "A meaningful next theory test needs transformed boundary conditions, positivity and near-singular/domain-convergence checks before predictive data fitting."
+    },
+    {
+      "claim_id": "published_ngc3198_tg_fit_is_conditional",
+      "statement": "The supplied paper's NGC 3198 comparison is a conditional spherical surrogate fit, not an isolated-boundary or whole-galaxy holdout prediction, because observed endpoint velocities enter derivative boundary conditions.",
+      "status": "full-text-supported method assessment; not an independent numerical refit",
+      "confidence": "high for the stated boundary prescription; low for any broader theory verdict",
+      "primary_evidence": [
+        {"source_id": "pszota_van_2024_journal", "locator": "Finite-difference scheme Eqs. (34)-(42), pp. 7-8, including observed endpoint velocities in Eqs. (41)-(42)."},
+        {"source_id": "tg_preprint", "locator": "Sec. 3.2, pp. 8-9; conditional NGC 3198 proof-of-concept description."},
+        {"source_id": "sparc_master", "locator": "Secs. 2 and 5; disk geometry and baryonic-mass-model limitations."}
+      ],
+      "local_evidence": ["work/theory/derivation.md", "context/data/Rotmod_LTG.zip", "context/data/sfb_LTG.zip"],
+      "counterevidence_or_limit": "The present campaign did not reconstruct a unique 3D baryon density, implement an exterior boundary at infinity, or rerun the paper's galaxy fit.",
+      "experiment_implication": "Report only conditional reproduction unless a source geometry and outer physical boundary independent of held-out observed velocities are specified."
+    },
+    {
+      "claim_id": "radiation_omission_small_at_tested_bao_profile_optima",
+      "statement": "For the campaign's tested DESI DR2 BAO profile optima, a standard-reference massless-radiation term tied to H0 over 50-90 km/s/Mpc shifts predictions by less than 0.075 marginal sigma and less than 0.128 in the full-covariance displacement norm; this supports radiation omission only for this stated screen and tested optima.",
+      "status": "independently checked conditional model-sensitivity result",
+      "confidence": "moderate within the explicitly tested massless-radiation reference; not a bound over the full parameter domain",
+      "primary_evidence": [
+        {"source_id": "desi_dr2_bao", "locator": "Printed pp. 4-5, Eqs. (4)-(10), including flat distance and separate photon/neutrino background terms."},
+        {"source_id": "codata_2022_constants", "locator": "Table XXXII; SI constants used for the photon/radiation density."},
+        {"source_id": "fixsen_2009_cmb_temperature", "locator": "Reported CMB temperature 2.72548 +/- 0.00057 K; calculation uses rounded 2.7255 K."},
+        {"source_id": "iau_2015_resolution_b2", "locator": "Note 4; exact AU/parsec conversion in H100 unit conversion."},
+        {"source_id": "pdg_2024_neutrinos_cosmology", "locator": "Eq. (26.1), effective relativistic density normalization; not a massive-neutrino evolution model."}
+      ],
+      "local_evidence": ["experiments/radiation_sensitivity/result.json", "work/orchestrator2_radiation/REVIEW.md", "work/orchestrator2_radiation/saved_fit_review.json", "work/theory2/report.md"],
+      "counterevidence_or_limit": "The reference treats neutrinos as massless radiation, unlike the DESI massive-neutrino background; H0 values form a declared sensitivity grid, not posterior support; the whole shape box and higher redshift are not exhaustively bounded.",
+      "experiment_implication": "Use a consistent physical massive-neutrino model for any precision inference or for claims outside the tested best-fit points and H0 grid."
+    }
+  ]
+}

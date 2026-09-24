@@ -1,0 +1,41 @@
+{
+  "utc": "2026-09-24T15:12:19.075004+00:00",
+  "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "python_executable": "/home/v/proj/bene/cosmology/cosmology_autoresearch/.venv/bin/python",
+  "logical_cpu_count": 20,
+  "affinity_cpu_count": 20,
+  "physical_memory_bytes": 134292787200,
+  "cgroup_limits": {},
+  "free_disk_bytes": 315594293248,
+  "package_versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "sympy": null,
+    "torch": null,
+    "jax": null,
+    "jaxlib": null,
+    "cobaya": null,
+    "camb": null,
+    "classy": null,
+    "pymupdf": null
+  },
+  "codex": {
+    "available": true,
+    "returncode": 0,
+    "stdout": "codex-cli 0.156.1\n",
+    "stderr": ""
+  },
+  "gpu": {
+    "available": true,
+    "returncode": 0,
+    "stdout": "NVIDIA GeForce RTX 5090, 580.159.03, 32607 MiB, 5003 MiB, 0 %\n",
+    "stderr": ""
+  },
+  "tools": {
+    "git": "/usr/bin/git",
+    "pdftotext": "/usr/bin/pdftotext",
+    "tmux": "/usr/bin/tmux"
+  },
+  "note": "GPU/CPU visibility does not establish an exclusive allocation. No model availability or CUDA kernel execution was tested."
+}

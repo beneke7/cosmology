@@ -1,0 +1,252 @@
+{
+  "bounded_differential_evolution": {
+    "CPL_wa_ge_minus10": {
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          -2.0,
+          -0.3
+        ],
+        [
+          -10.0,
+          3.0
+        ]
+      ],
+      "function_evaluations": 1284,
+      "iterations": 52,
+      "message": "Optimization terminated successfully.",
+      "parameters": [
+        0.4656656140000549,
+        -0.5388875990842283,
+        -6.781625210428736
+      ],
+      "profile_chi2": 1625.3084918408179,
+      "success": true
+    },
+    "CPL_wa_ge_minus3": {
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          -2.0,
+          -0.3
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "function_evaluations": 1572,
+      "iterations": 64,
+      "message": "Optimization terminated successfully.",
+      "parameters": [
+        0.40983917483582866,
+        -0.7883928175611891,
+        -2.999999960288817
+      ],
+      "profile_chi2": 1626.6305384196294,
+      "success": true
+    },
+    "LCDM": {
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ]
+      ],
+      "function_evaluations": 110,
+      "iterations": 12,
+      "message": "Optimization terminated successfully.",
+      "parameters": [
+        0.33031680524382984
+      ],
+      "profile_chi2": 1631.4205355712386,
+      "success": true
+    },
+    "constant_w": {
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          -2.0,
+          -0.3
+        ]
+      ],
+      "function_evaluations": 457,
+      "iterations": 27,
+      "message": "Optimization terminated successfully.",
+      "parameters": [
+        0.2610394933049232,
+        -0.8326761519294752
+      ],
+      "profile_chi2": 1630.1770967647396,
+      "success": true
+    }
+  },
+  "environment": {
+    "cpu_affinity_count": 20,
+    "numpy": "2.5.3",
+    "optimizer": "scipy.optimize.differential_evolution; seeded independently by fit; one worker",
+    "python": "3.12.3",
+    "scipy": "1.18.1",
+    "thread_env": {
+      "BLIS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    }
+  },
+  "fixed_points": {
+    "CPL_wa_minus_3": {
+      "cholesky_whitened_chi2": 1626.6305383851657,
+      "if_zHD_used_in_prefactor_chi2": 1627.3900998255647,
+      "if_zHD_used_in_prefactor_offset_mag": 0.0302735592430372,
+      "max_algebra_difference": 4.547473508864641e-13,
+      "model": "CPL",
+      "offset_normal_equation": -3.7214675785435247e-13,
+      "parameters": [
+        0.409838,
+        -0.788386,
+        -3.0
+      ],
+      "profile_chi2": 1626.630538385166,
+      "profile_offset_mag": 0.02919837435370652,
+      "schur_chi2": 1626.6305383851663
+    },
+    "CPL_widened": {
+      "cholesky_whitened_chi2": 1625.3084918193038,
+      "if_zHD_used_in_prefactor_chi2": 1626.1794584330598,
+      "if_zHD_used_in_prefactor_offset_mag": 0.04376167483829774,
+      "max_algebra_difference": 2.2737367544323206e-13,
+      "model": "CPL",
+      "offset_normal_equation": -8.704148513061227e-13,
+      "parameters": [
+        0.465666,
+        -0.538859,
+        -6.7818
+      ],
+      "profile_chi2": 1625.3084918193035,
+      "profile_offset_mag": 0.04268648994896681,
+      "schur_chi2": 1625.3084918193035
+    },
+    "LCDM": {
+      "cholesky_whitened_chi2": 1631.4205355712402,
+      "if_zHD_used_in_prefactor_chi2": 1631.7779986996973,
+      "if_zHD_used_in_prefactor_offset_mag": 0.008524310457534462,
+      "max_algebra_difference": 4.547473508864641e-13,
+      "model": "LCDM",
+      "offset_normal_equation": -1.099120794378905e-12,
+      "parameters": [
+        0.3303167905483107
+      ],
+      "profile_chi2": 1631.42053557124,
+      "profile_offset_mag": 0.007449125568203728,
+      "schur_chi2": 1631.4205355712395
+    },
+    "constant_w": {
+      "cholesky_whitened_chi2": 1630.1770967644388,
+      "if_zHD_used_in_prefactor_chi2": 1630.7898293759024,
+      "if_zHD_used_in_prefactor_offset_mag": 0.017703905044671744,
+      "max_algebra_difference": 1.3642420526593924e-12,
+      "model": "constant_w",
+      "offset_normal_equation": -3.2152058793144533e-13,
+      "parameters": [
+        0.2610419,
+        -0.83268
+      ],
+      "profile_chi2": 1630.1770967644393,
+      "profile_offset_mag": 0.016628720155340768,
+      "schur_chi2": 1630.177096764438
+    }
+  },
+  "inputs": {
+    "CID_first": "Gaia16agf",
+    "CID_last": "1257587",
+    "CID_order_sha256": "9c7ebdc43bd32c00623c43d0155c1d4bcfe54391fd79576447cd5a4c58d18683",
+    "all_rows_positive_zHD": true,
+    "muerr_added_separately": false,
+    "muerr_range": [
+      0.0409,
+      468.0108
+    ],
+    "pinned_release_commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+    "precision_cholesky": "pass",
+    "precision_dtype_on_disk": "float32",
+    "precision_offset_information_1TP1": 43938.33706138445,
+    "precision_shape": [
+      1820,
+      1820
+    ],
+    "precision_source": "NPZ cov array, upper triangle float32, symmetrized; used as P=C_STAT+SYS^-1",
+    "rows": 1820,
+    "selected_zHD_positive_rows": 1820,
+    "sha256": {
+      "des_dovekie_hd.csv": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+      "des_dovekie_stat_sys.npz": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b"
+    },
+    "unique_CIDs": 1820,
+    "zHD_range": [
+      0.02509,
+      1.14418
+    ],
+    "zHEL_range": [
+      0.02385,
+      1.14501
+    ]
+  },
+  "likelihood": {
+    "H0_gauge_km_s_Mpc": 70.0,
+    "chi2": "(d+Mhat*1)^T P (d+Mhat*1); full dense P, no diagonal approximation",
+    "distance_modulus": "5 log10[(1+zHEL) (c/H0_gauge) integral_0^zHD dz/E(z)] +25",
+    "distance_redshift": "zHD",
+    "luminosity_prefactor_redshift": "zHEL",
+    "offset": "Mhat=-(1^T P d)/(1^T P 1), d=mu_theory-mu_obs",
+    "quadrature": "128-point Gauss-Legendre on [0,zHD] per row",
+    "rationale_for_recentering": "subtract d[0] before precision products; the profiled constant absorbs this exactly"
+  },
+  "runtime_seconds": 21.217521079815924,
+  "status": "independent_profile_validation",
+  "zHD_prefactor_error_probe": {
+    "CPL_wa_minus_3": {
+      "parameters": [
+        0.4111108969001672,
+        -0.803146601410172,
+        -3.0
+      ],
+      "profile_chi2": 1627.364797839752,
+      "success": false
+    },
+    "CPL_widened": {
+      "parameters": [
+        0.4644956966159733,
+        -0.5650656250975442,
+        -6.6391520865875355
+      ],
+      "profile_chi2": 1626.1513214093484,
+      "success": false
+    },
+    "LCDM": {
+      "parameters": [
+        0.32873339154543074
+      ],
+      "profile_chi2": 1631.7671987157946,
+      "success": true
+    },
+    "constant_w": {
+      "parameters": [
+        0.26765352468764453,
+        -0.8495280476593333
+      ],
+      "profile_chi2": 1630.7662846462938,
+      "success": true
+    }
+  }
+}

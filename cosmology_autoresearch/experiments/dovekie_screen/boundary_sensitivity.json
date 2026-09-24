@@ -1,0 +1,681 @@
+{
+  "baseline_domains": {
+    "Omega_m": [
+      0.05,
+      0.6
+    ],
+    "w0": [
+      -2.0,
+      -0.3
+    ],
+    "wa": [
+      -3.0,
+      3.0
+    ]
+  },
+  "boundary_check_code_sha256": "61602b976c364c4c3a58391821723dd24342a161feda68f770c23cfb79faedd7",
+  "data_sha256": {
+    "des_dovekie_hd.csv": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+    "des_dovekie_stat_sys.npz": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b"
+  },
+  "extended_wa_domains": [
+    [
+      -5.0,
+      3.0
+    ],
+    [
+      -10.0,
+      3.0
+    ],
+    [
+      -20.0,
+      3.0
+    ]
+  ],
+  "fits": [
+    {
+      "bound_hits": [
+        {
+          "bound": -5.0,
+          "parameter": "wa",
+          "side": "lower"
+        }
+      ],
+      "chi2_per_ndof_screening": 0.8951376209043393,
+      "chi2_profile": 1625.5699195622803,
+      "delta_chi2_vs_LCDM": -5.850616008957331,
+      "independent_algebra_check": {
+        "direct_residual_quadratic": 1625.5699195622803,
+        "max_absolute_disagreement": 6.821210263296962e-13,
+        "offset_normal_equation_abs_residual": 4.916067553040193e-13,
+        "schur_profile_quadratic": 1625.5699195622808,
+        "whitened_residual_quadratic": 1625.569919562281
+      },
+      "model": "CPL",
+      "n_data": 1820,
+      "n_profiled_parameters": 1,
+      "n_shape_parameters": 3,
+      "ndof_screening": 1816,
+      "optimizer_best_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "optimizer_best_start": 5,
+      "optimizer_best_success": true,
+      "optimizer_runs": [
+        {
+          "chi2": 1625.5699195622826,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 128,
+          "nit": 23,
+          "parameters": [
+            0.44446017323970516,
+            -0.6640466360236776,
+            -5.0
+          ],
+          "start_index": 0,
+          "success": true
+        },
+        {
+          "chi2": 1625.569919562284,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 116,
+          "nit": 26,
+          "parameters": [
+            0.44446015078092027,
+            -0.6640466148507607,
+            -5.0
+          ],
+          "start_index": 1,
+          "success": true
+        },
+        {
+          "chi2": 1625.5699195624316,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 128,
+          "nit": 24,
+          "parameters": [
+            0.44446028762406886,
+            -0.664046440205118,
+            -5.0
+          ],
+          "start_index": 2,
+          "success": true
+        },
+        {
+          "chi2": 1625.5699195622844,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 92,
+          "nit": 17,
+          "parameters": [
+            0.44446019933426656,
+            -0.6640468810120692,
+            -5.0
+          ],
+          "start_index": 3,
+          "success": true
+        },
+        {
+          "chi2": 1625.5699195622954,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 196,
+          "nit": 35,
+          "parameters": [
+            0.4444602360634558,
+            -0.6640470086137024,
+            -5.0
+          ],
+          "start_index": 4,
+          "success": true
+        },
+        {
+          "chi2": 1625.5699195622803,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 100,
+          "nit": 17,
+          "parameters": [
+            0.44446016207193134,
+            -0.6640467456736029,
+            -5.0
+          ],
+          "start_index": 5,
+          "success": true
+        },
+        {
+          "chi2": 1625.569919562289,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 112,
+          "nit": 20,
+          "parameters": [
+            0.44446020223323945,
+            -0.6640470641193288,
+            -5.0
+          ],
+          "start_index": 6,
+          "success": true
+        },
+        {
+          "chi2": 1625.5699195623017,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 100,
+          "nit": 20,
+          "parameters": [
+            0.444460232945881,
+            -0.66404722926158,
+            -5.0
+          ],
+          "start_index": 7,
+          "success": true
+        },
+        {
+          "chi2": 1625.569919562425,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 136,
+          "nit": 29,
+          "parameters": [
+            0.4444600982710782,
+            -0.6640455123347232,
+            -5.0
+          ],
+          "start_index": 8,
+          "success": true
+        },
+        {
+          "chi2": 1625.5699195623215,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 164,
+          "nit": 31,
+          "parameters": [
+            0.444460143291352,
+            -0.6640461254499516,
+            -5.0
+          ],
+          "start_index": 9,
+          "success": true
+        },
+        {
+          "chi2": 1625.569919562293,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 104,
+          "nit": 19,
+          "parameters": [
+            0.4444601148679782,
+            -0.6640463316519293,
+            -5.0
+          ],
+          "start_index": 10,
+          "success": true
+        },
+        {
+          "chi2": 1625.569919562306,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 112,
+          "nit": 21,
+          "parameters": [
+            0.4444601101398175,
+            -0.6640461562218063,
+            -5.0
+          ],
+          "start_index": 11,
+          "success": true
+        }
+      ],
+      "optimizer_total_starts": 12,
+      "parameter_bounds": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ],
+        "w0": [
+          -2.0,
+          -0.3
+        ],
+        "wa": [
+          -5.0,
+          3.0
+        ]
+      },
+      "parameter_names": [
+        "Omega_m",
+        "w0",
+        "wa"
+      ],
+      "parameters": {
+        "Omega_m": 0.44446016207193134,
+        "w0": -0.6640467456736029,
+        "wa": -5.0
+      },
+      "profiled_additive_magnitude_offset_mag": 0.036686474656923325
+    },
+    {
+      "bound_hits": [],
+      "chi2_per_ndof_screening": 0.8949936628961068,
+      "chi2_profile": 1625.30849181933,
+      "delta_chi2_vs_LCDM": -6.112043751907777,
+      "independent_algebra_check": {
+        "direct_residual_quadratic": 1625.30849181933,
+        "max_absolute_disagreement": 2.2737367544323206e-13,
+        "offset_normal_equation_abs_residual": 6.772360450213455e-13,
+        "schur_profile_quadratic": 1625.30849181933,
+        "whitened_residual_quadratic": 1625.3084918193301
+      },
+      "model": "CPL",
+      "n_data": 1820,
+      "n_profiled_parameters": 1,
+      "n_shape_parameters": 3,
+      "ndof_screening": 1816,
+      "optimizer_best_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "optimizer_best_start": 5,
+      "optimizer_best_success": true,
+      "optimizer_runs": [
+        {
+          "chi2": 1625.3084918202508,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 128,
+          "nit": 22,
+          "parameters": [
+            0.46566792354896297,
+            -0.5388462875608631,
+            -6.781982349581925
+          ],
+          "start_index": 0,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918230286,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 132,
+          "nit": 28,
+          "parameters": [
+            0.46566699887549234,
+            -0.5388636781904241,
+            -6.781839016080341
+          ],
+          "start_index": 1,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084919940948,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 160,
+          "nit": 23,
+          "parameters": [
+            0.4656631437989797,
+            -0.5389191332276903,
+            -6.781052163920977
+          ],
+          "start_index": 2,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918237284,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 108,
+          "nit": 18,
+          "parameters": [
+            0.46566532039850866,
+            -0.5388513746853064,
+            -6.781797060622007
+          ],
+          "start_index": 3,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918259958,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 288,
+          "nit": 46,
+          "parameters": [
+            0.4656697833603177,
+            -0.5388326312358833,
+            -6.782158512338436
+          ],
+          "start_index": 4,
+          "success": true
+        },
+        {
+          "chi2": 1625.30849181933,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 144,
+          "nit": 20,
+          "parameters": [
+            0.46566629818196914,
+            -0.5388584660507465,
+            -6.781813974142371
+          ],
+          "start_index": 5,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918795985,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 148,
+          "nit": 25,
+          "parameters": [
+            0.465675656650553,
+            -0.538786436887213,
+            -6.78273967792114
+          ],
+          "start_index": 6,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918324062,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 232,
+          "nit": 28,
+          "parameters": [
+            0.46567090494329827,
+            -0.5388235862911345,
+            -6.782279678122176
+          ],
+          "start_index": 7,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918193406,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 152,
+          "nit": 23,
+          "parameters": [
+            0.4656669034291677,
+            -0.5388560299506002,
+            -6.781868097027674
+          ],
+          "start_index": 8,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918337631,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 160,
+          "nit": 26,
+          "parameters": [
+            0.46566186364148826,
+            -0.5388851117459812,
+            -6.781414718444015
+          ],
+          "start_index": 9,
+          "success": true
+        },
+        {
+          "chi2": 1625.308491906356,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 136,
+          "nit": 24,
+          "parameters": [
+            0.46565492243652373,
+            -0.5389309166862231,
+            -6.780824609134499
+          ],
+          "start_index": 10,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918208665,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 140,
+          "nit": 23,
+          "parameters": [
+            0.46566586149210526,
+            -0.5388635227060746,
+            -6.78174727938884
+          ],
+          "start_index": 11,
+          "success": true
+        }
+      ],
+      "optimizer_total_starts": 12,
+      "parameter_bounds": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ],
+        "w0": [
+          -2.0,
+          -0.3
+        ],
+        "wa": [
+          -10.0,
+          3.0
+        ]
+      },
+      "parameter_names": [
+        "Omega_m",
+        "w0",
+        "wa"
+      ],
+      "parameters": {
+        "Omega_m": 0.46566629818196914,
+        "w0": -0.5388584660507465,
+        "wa": -6.781813974142371
+      },
+      "profiled_additive_magnitude_offset_mag": 0.04268657011545873
+    },
+    {
+      "bound_hits": [],
+      "chi2_per_ndof_screening": 0.8949936628961396,
+      "chi2_profile": 1625.3084918193895,
+      "delta_chi2_vs_LCDM": -6.112043751848205,
+      "independent_algebra_check": {
+        "direct_residual_quadratic": 1625.3084918193895,
+        "max_absolute_disagreement": 4.547473508864641e-13,
+        "offset_normal_equation_abs_residual": 8.202327705930657e-13,
+        "schur_profile_quadratic": 1625.3084918193895,
+        "whitened_residual_quadratic": 1625.308491819389
+      },
+      "model": "CPL",
+      "n_data": 1820,
+      "n_profiled_parameters": 1,
+      "n_shape_parameters": 3,
+      "ndof_screening": 1816,
+      "optimizer_best_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "optimizer_best_start": 6,
+      "optimizer_best_success": true,
+      "optimizer_runs": [
+        {
+          "chi2": 1625.3084918236752,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 144,
+          "nit": 22,
+          "parameters": [
+            0.46566911763011826,
+            -0.5388385725481778,
+            -6.782101081380351
+          ],
+          "start_index": 0,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918230286,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 132,
+          "nit": 28,
+          "parameters": [
+            0.46566699887549234,
+            -0.5388636781904241,
+            -6.781839016080341
+          ],
+          "start_index": 1,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918195007,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 140,
+          "nit": 22,
+          "parameters": [
+            0.46566700378757625,
+            -0.5388494130724908,
+            -6.7819090514606515
+          ],
+          "start_index": 2,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084919036141,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 104,
+          "nit": 15,
+          "parameters": [
+            0.4656762273788363,
+            -0.5387710159137107,
+            -6.782864136630193
+          ],
+          "start_index": 3,
+          "success": true
+        },
+        {
+          "chi2": 1625.308491861618,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 364,
+          "nit": 55,
+          "parameters": [
+            0.4656743258977168,
+            -0.5387994170129674,
+            -6.782613243733534
+          ],
+          "start_index": 4,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918194124,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 144,
+          "nit": 21,
+          "parameters": [
+            0.46566621120283963,
+            -0.5388596065260157,
+            -6.781803535525697
+          ],
+          "start_index": 5,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918193895,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 128,
+          "nit": 20,
+          "parameters": [
+            0.4656658190215692,
+            -0.5388588763357326,
+            -6.78179333840659
+          ],
+          "start_index": 6,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918264851,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 204,
+          "nit": 31,
+          "parameters": [
+            0.46566977705457,
+            -0.5388311650503391,
+            -6.782163339768281
+          ],
+          "start_index": 7,
+          "success": true
+        },
+        {
+          "chi2": 1625.308491824165,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 152,
+          "nit": 23,
+          "parameters": [
+            0.4656641436410773,
+            -0.5388752582481038,
+            -6.781600668875744
+          ],
+          "start_index": 8,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918263216,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 156,
+          "nit": 26,
+          "parameters": [
+            0.4656698604803073,
+            -0.5388341757133077,
+            -6.782165414209727
+          ],
+          "start_index": 9,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918281609,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 132,
+          "nit": 25,
+          "parameters": [
+            0.46566373478254497,
+            -0.5388790120184228,
+            -6.7815334109471115
+          ],
+          "start_index": 10,
+          "success": true
+        },
+        {
+          "chi2": 1625.3084918195925,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "nfev": 140,
+          "nit": 23,
+          "parameters": [
+            0.4656663627891741,
+            -0.5388570640672553,
+            -6.781818948185059
+          ],
+          "start_index": 11,
+          "success": true
+        }
+      ],
+      "optimizer_total_starts": 12,
+      "parameter_bounds": {
+        "Omega_m": [
+          0.05,
+          0.6
+        ],
+        "w0": [
+          -2.0,
+          -0.3
+        ],
+        "wa": [
+          -20.0,
+          3.0
+        ]
+      },
+      "parameter_names": [
+        "Omega_m",
+        "w0",
+        "wa"
+      ],
+      "parameters": {
+        "Omega_m": 0.4656658190215692,
+        "w0": -0.5388588763357326,
+        "wa": -6.78179333840659
+      },
+      "profiled_additive_magnitude_offset_mag": 0.04268648089360482
+    }
+  ],
+  "interpretation_limit": "An extended-domain minimum at the new lower edge remains boundary-limited; it does not establish an unconstrained CPL best fit or evidence for evolving dark energy.",
+  "main_code_sha256": "f796afccedf91b61af5b0cfc18281a4638a96d9abcfa9618f3ea79b672b10ce1",
+  "main_result_sha256": "55f9ab7cd1fbc5417a8a23703b094f9c36d635ca21dfae505a0e5bff129cd0e5",
+  "parameters_held_fixed": {
+    "Omega_m": [
+      0.05,
+      0.6
+    ],
+    "w0": [
+      -2.0,
+      -0.3
+    ]
+  },
+  "purpose": "CPL profile minimum in the base comparison is at wa=-3; extend only that lower bound while holding other domains fixed.",
+  "reference_LCDM_chi2_profile": 1631.4205355712377,
+  "runtime": {
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python work/inference/check_cpl_boundary.py",
+    "optimizer": "same L-BFGS-B settings and deterministic start recipe as the main profile calculation",
+    "wall_seconds": 16.129795720800757
+  },
+  "seed": 20260926,
+  "starts_per_model": 12,
+  "status": "exploratory_boundary_sensitivity"
+}

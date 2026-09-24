@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "prepared": "2026-09-24",
+  "scope": "Provisional literature claim map for near-term DESI BAO/AP and thermodynamic-gravity checks. This is not the shared project claim map and does not assert computational reproduction.",
+  "claims": [
+    {
+      "claim_id": "bao_identifies_distances_over_rd",
+      "statement": "The compressed DR2 BAO observable constrains transverse/radial distances relative to the drag sound horizon, not H0 separately; without an early-time ruler calibration, report H0*rd or equivalent.",
+      "status": "literature-supported; full text read",
+      "confidence": "high",
+      "primary_evidence": [
+        {
+          "source_id": "desi_dr2_bao",
+          "locator": "Printed pp. 4-5, Eqs. (1)-(5); Sec. VII, pp. 23-25; released 13-vector/covariance."
+        },
+        {
+          "source_id": "desi_lya_ap",
+          "locator": "Eq. (26), printed around p. 20, reports DM/rd and DH/rd."
+        }
+      ],
+      "counterevidence_or_limit": "CMB/BBN or another explicit pre-recombination calibration can determine rd and then H0, but that is an additional model/data assumption.",
+      "experiment_implication": "Use an independent ruler-amplitude parameter for BAO-only fits; distinguish background screening from a calibrated CMB/BBN posterior."
+    },
+    {
+      "claim_id": "official_desi_cpl_preference_is_conditional_profile_result",
+      "statement": "The DESI collaboration reports a CPL improvement over flat LCDM, but its quoted sigma values are profile/effective Delta-chi-square comparisons conditional on the data combination, CMB likelihood, parameterization, priors and two-extra-parameter conversion; they are not Bayesian model odds.",
+      "status": "reported-result confirmed in full text; interpretation bounded",
+      "confidence": "high for what paper reports; moderate for cross-analysis comparison",
+      "primary_evidence": [
+        {
+          "source_id": "desi_dr2_bao",
+          "locator": "Printed Table VI p. 24 and adjacent definition; DESI+CMB Delta-chi2_MAP=-12.5 (3.1 sigma), with SN combinations spanning 2.8-4.2 sigma."
+        },
+        {
+          "source_id": "desi_extended_de",
+          "locator": "Table I p. 5 prior domain; Secs. II-III describe model/data/CMB branches."
+        }
+      ],
+      "counterevidence_or_limit": "The extended-DE paper is a companion collaboration analysis rather than independent confirmation. The DR2 paper notes CMB lensing shifts the model comparison relative to compressed early-universe priors.",
+      "experiment_implication": "State profile versus posterior/evidence metric explicitly; match parameter bounds, SN compilation, covariance, CMB constituent likelihoods and nuisance treatment for any comparison."
+    },
+    {
+      "claim_id": "reported_evolving_de_significance_is_data_and_analysis_sensitive",
+      "statement": "Published DR2-era evolving-DE preferences vary materially with SN calibration, CMB/data combination, BAO representation and inference/prior choices; the evidence record supports sensitivity testing rather than a single invariant significance.",
+      "status": "supported by multiple analyses of overlapping data; not a new independent observation",
+      "confidence": "moderate",
+      "primary_evidence": [
+        {
+          "source_id": "desi_dr2_bao",
+          "locator": "Table VI p. 24: 2.8 sigma for Pantheon+, 3.8 sigma Union3, 4.2 sigma DESY5 when combined with CMB."
+        },
+        {
+          "source_id": "des_dovekie",
+          "locator": "Tables 10-11: updated DES sample gives 3.2 sigma profile preference and weak (~5:1) Bayesian preference under that paper's convention."
+        },
+        {
+          "source_id": "chaudhary_desi_dr2_evidence",
+          "locator": "Full HTML read; independent SimpleMC/dynesty reanalysis reports more modest roughly 1.1-2.3 sigma late-time-only evidence across its combinations."
+        },
+        {
+          "source_id": "efstathiou_bao_angle",
+          "locator": "Full HTML read; alternative directional parameterization emphasizes transverse-distance agreement with Planck."
+        }
+      ],
+      "counterevidence_or_limit": "These studies share DESI and/or overlapping SN inputs and differ in likelihood/prior/metric; they do not form statistically independent confirmations or corrections. Wang-Mota and the historical SN-systematics paper are abstract-only in this pass.",
+      "experiment_implication": "Treat same-likelihood LCDM/wCDM/CPL fits as a discriminating baseline, then run prior-boundary and data-branch sensitivities. Do not average published sigma values."
+    },
+    {
+      "claim_id": "dovekie_is_calibration_update_not_independent_sn_sample",
+      "statement": "DES-Dovekie is an updated cross-calibration, SALT retraining and systematic treatment of the DES-SN5YR-era data, with a materially updated cosmological result; it is not independent of original DES-SN5YR and overlaps other low-z compilations.",
+      "status": "full-text-supported",
+      "confidence": "high",
+      "primary_evidence": [
+        {
+          "source_id": "des_dovekie",
+          "locator": "Secs. 3-5 on calibration; N=1820 and 1718 overlaps in sample comparison; Table 11 on cosmology/model preference."
+        },
+        {
+          "source_id": "des_dovekie_repo",
+          "locator": "Current release README says Dovekie supersedes original results and provides distances/covariance/systematic products."
+        }
+      ],
+      "counterevidence_or_limit": "The repository branch is mutable and no commit was pinned here; SN overlap with Pantheon+/Union3 also requires explicit source-level accounting.",
+      "experiment_implication": "Use one SN branch at a time; freeze repo version and validate exact distance/covariance ordering before claiming likelihood reproduction."
+    },
+    {
+      "claim_id": "act_representations_overlap_and_are_alternatives",
+      "statement": "ACT MFLike full spectra, ACT-lite and P-ACT are distinct alternative likelihood representations/combinations; P-ACT includes selected Planck spectra with cuts to address sky overlap, and must not be multiplied by constituent ACT/Planck products.",
+      "status": "full-text and official-product-supported",
+      "confidence": "high",
+      "primary_evidence": [
+        {
+          "source_id": "act_dr6",
+          "locator": "Eq. (17) p. 22 (1651 full multi-frequency bandpowers), Eq. (33) p. 25 (135 ACT-lite bandpowers), Sec. 6.3 pp. 26-27 (P-ACT Planck overlap cuts)."
+        },
+        {
+          "source_id": "act_products",
+          "locator": "NASA LAMBDA DR6.02 data and likelihood product inventory."
+        }
+      ],
+      "counterevidence_or_limit": "The DR2 paper's default CMB likelihood already includes Planck spectra plus ACT/Planck lensing; a P-ACT or ACT posterior is not independent of those constituents.",
+      "experiment_implication": "Write a CMB likelihood contract naming the exact ACT and Planck factors; choose one valid composition and avoid posterior-times-constituent reuse."
+    },
+    {
+      "claim_id": "new_lya_ap_is_high_z_check_but_correlated_with_old_lya_bao",
+      "statement": "DESI DR2 Results IV reports a roughly 1% Ly-alpha AP ratio and combined sub-percent distance ratios at z_eff=2.33; it is a valuable high-redshift geometry check, but shares DR2 Ly-alpha spectra/quasar correlations with the earlier Ly-alpha BAO point.",
+      "status": "full-text-supported; likelihood availability incomplete",
+      "confidence": "high for paper's measurements/sample relationship; moderate for external combination recipe",
+      "primary_evidence": [
+        {
+          "source_id": "desi_lya_ap",
+          "locator": "Eqs. (24)-(26), printed pp. 18-20; Sec. VI results pp. 22-27; Data Availability p. 30."
+        },
+        {
+          "source_id": "desi_lya_bao_results_i",
+          "locator": "Full-text read; earlier Results I measurement is BAO from same DR2 Ly-alpha sample family."
+        },
+        {
+          "source_id": "desi_lya_ap_validation",
+          "locator": "Full-text validation companion on mocks/data splits; same survey collaboration/sample."
+        }
+      ],
+      "counterevidence_or_limit": "The exact public joint full-shape likelihood/covariance URL was not found in this pass. Results IV's author analysis combines updated Ly-alpha fullshape with galaxy/quasar BAO rather than adding a duplicate old Ly-alpha row.",
+      "experiment_implication": "For first-pass BAO screening use either the released 13-entry DR2 Gaussian vector or the official Results IV replacement/joint product, never both Ly-alpha representations as independent."
+    },
+    {
+      "claim_id": "supplied_tg_equation_has_exact_linearizing_transform",
+      "statement": "For prescribed density rho, constant K, D=ell^2/tau and positive u=exp(-K phi), the printed TG evolution equation transforms exactly to u_t=D[laplacian(u)+4 pi G K rho u]; the stationary equation is linear in u.",
+      "status": "algebraic identity from full-text-checked primary equation; not a literature novelty claim",
+      "confidence": "high for chain-rule identity; physical interpretation remains conditional",
+      "primary_evidence": [
+        {
+          "source_id": "pszota_van_2024_journal",
+          "locator": "Eq. (1) p. 2, locally visually checked in supplied journal PDF."
+        },
+        {
+          "source_id": "tg_preprint",
+          "locator": "Spherical/stationary equations Eqs. (2), (5)-(8) pp. 3-4."
+        }
+      ],
+      "counterevidence_or_limit": "This does not prove positivity/stability, solve coupled matter dynamics, establish transformed boundary equivalence, or make the theory observationally successful. At K=0 use Poisson equation directly.",
+      "experiment_implication": "Implement an independent transformed solver with boundary conditions derived from phi conditions; test positivity, synthetic solutions, K->0 and sign conventions."
+    },
+    {
+      "claim_id": "published_tg_ngc3198_fit_is_conditional_not_holdout_prediction",
+      "statement": "The paper's NGC 3198 comparison is a conditional spherical surrogate fit, not a predictive whole-galaxy or isolated-boundary test: it fits K and a stellar mass-to-light factor while imposing observed inner and outer velocity values as derivative boundary conditions.",
+      "status": "full-text-supported",
+      "confidence": "high",
+      "primary_evidence": [
+        {
+          "source_id": "pszota_van_2024_journal",
+          "locator": "Numerical scheme Eqs. (34)-(42), pp. 7-8; Eqs. (41)-(42) use observed endpoint velocities; text says spherical Upsilon is not strictly physical."
+        },
+        {
+          "source_id": "tg_preprint",
+          "locator": "Sec. 3.2 NGC 3198 and fit description, pp. 8-9; paper calls it proof of concept."
+        },
+        {
+          "source_id": "sparc_master",
+          "locator": "Secs. 2 and 5 on disk geometry/mass models and stellar mass-to-light uncertainties."
+        }
+      ],
+      "counterevidence_or_limit": "This assessment concerns the paper's stated method; it does not independently rerun or refute the conditional numerical fit. SPARC velocity components do not uniquely define a 3D density."
+      ,"experiment_implication": "If reproducing, label as conditional reproduction and use the same endpoint conditions; predictive tests require an exterior condition not set by held-out velocities and whole-galaxy holdout."
+    },
+    {
+      "claim_id": "thermodynamic_gravity_lineage_precludes_broad_novelty_claim",
+      "statement": "Thermodynamic/dissipative extended Newtonian gravity and nonlinear crossover solutions predate the supplied 2024 galaxy application; a later higher-gradient thermodynamic-gravity proposal is a distinct direct follow-up. Broad novelty claims about the framework, relaxation principle or vacuum crossover are therefore unsupported by this first-pass literature record.",
+      "status": "literature-only; two predecessor sources abstract-only; recent follow-up full text read",
+      "confidence": "moderate for existence of prior art; low for fine-grained priority claims",
+      "primary_evidence": [
+        {
+          "source_id": "van_abe_extended_newtonian",
+          "locator": "arXiv:1912.00252 v2 abstract and metadata only."
+        },
+        {
+          "source_id": "van_abe_crossover",
+          "locator": "arXiv:2205.05170 v1 abstract only."
+        },
+        {
+          "source_id": "tg_higher_gradient_2026",
+          "locator": "Full local text read; different higher-gradient/nonlocal weak-field model."
+        }
+      ],
+      "counterevidence_or_limit": "The older predecessor full texts have not been read; do not assert exact equation equivalence or priority from abstracts.",
+      "experiment_implication": "Restrict claims to a specifically verified transform, numerical boundary-value formulation, or out-of-sample predictive test after reading predecessor full texts."
+    },
+    {
+      "claim_id": "lyalpha_and_sn_data_contract_is_required",
+      "statement": "The available BAO, Ly-alpha, SN and CMB evidence has representations and shared components that make naive multiplication unsafe; a joint likelihood contract is required before combining probes.",
+      "status": "supported by primary-source likelihood descriptions",
+      "confidence": "high",
+      "primary_evidence": [
+        {
+          "source_id": "desi_dr2_bao",
+          "locator": "Official 13-entry vector includes Ly-alpha; official CMB bundle described in chain README."
+        },
+        {
+          "source_id": "desi_lya_ap",
+          "locator": "Uses same Ly-alpha DR2 sample family and updated combination."
+        },
+        {
+          "source_id": "des_dovekie",
+          "locator": "Overlap with original DES-SN5YR and common low-z compilations."
+        },
+        {
+          "source_id": "act_dr6",
+          "locator": "P-ACT includes Planck cuts; alternative compressed ACT likelihoods."
+        }
+      ],
+      "counterevidence_or_limit": "Some official released combination products already construct a defensible joint likelihood under stated assumptions; do not infer that all cross-probe combinations are invalid.",
+      "experiment_implication": "List each observational factor, source release, covariance/conditional-independence assumption, shared data and duplicate representation before any joint score."
+    }
+  ]
+}

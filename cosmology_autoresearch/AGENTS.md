@@ -10,6 +10,16 @@ Each assignment states: scientific question, files owned, input versions, bounde
 
 The root checks results, promotes informative experiments and stops unproductive ones. Reuse existing software when its assumptions fit. Do not spend the night rebuilding infrastructure or writing a literature survey without running feasible calculations. Poll scientific jobs briefly, checkpoint, and work on independent tasks while they run.
 
+## Run-specific user steering (2026-09-24)
+
+For this campaign, the user explicitly directs aggressive parallel use of the local workstation and authorizes periodic progress commits and pushes with a short accompanying report. Use the available CPUs at higher concurrency when measured work benefits, while keeping numerical-library threads coordinated. The GPU has one scheduler; benchmark a useful end-to-end scientific task with FP64 checks, and use only memory actually available to the campaign. Do not terminate unrelated existing processes to reclaim resources. The initial inventory found 20 CPUs in affinity, 5,003 MiB free on the RTX 5090, and no CUDA Python framework installed. Continue to honor the eight-hour deadline, data/download limits, and no-cloud/no-purchase/no-publication restrictions in `BRIEF.md`.
+
+The user authorizes adding parallel research teams (including additional orchestrator, compute and theory roles) when there are distinct, useful paths. Scale to three or four concurrent subagents only when task ownership and evidence quality remain clear; the actual collaboration runtime currently caps the whole tree at four concurrent agents including the root, so rotate teams as slots free rather than pretending additional workers are live. Every added worker must still be an explicitly spawned subagent with bounded scope, owned paths, and a stop condition. Do not duplicate work or overload the one-owner GPU policy merely to increase headcount.
+
+Checkpoint commits must include only reviewed campaign artifacts; exclude `.venv`, caches and transient files. Push to the current tracking branch after confirming the exact staged file list, then provide a concise progress note. This run-specific user authorization does not change global account, machine or approval settings.
+
+The user also requires a one-shot Astra Max `warden` after every successful commit and after every push. The configured `.codex/agents/warden.toml` owns only a short event report under `work/warden/` and an advisory recommendation for the fastest, most relevant next step. It may recommend that active work simply continue unchanged; it is not a gate and should not pause or delay ongoing work. The orchestrator launches it immediately after each event and relays its report; it does not delegate implementation to the warden. Warden reports are local and git-ignored so a report cannot trigger an endless commit/report cycle. If Astra Max is unavailable, record the failed invocation and do not silently substitute a different model.
+
 ## Evidence and correctness
 
 Label findings: reproduced; independently checked; exploratory; literature-only; blocked; or falsified. Include exact source/equation or executable evidence for each substantive claim. Primary source availability is not the same as full-paper reading or computational reproduction.

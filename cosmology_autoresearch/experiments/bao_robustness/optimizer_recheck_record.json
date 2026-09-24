@@ -1,0 +1,33 @@
+{
+  "status": "complete_diagnostic_recheck",
+  "id": "desi_dr2_optimizer_status_recheck_20260924",
+  "question": "Did L-BFGS-B candidate fits marked ABNORMAL alter the reported null-mock search statistic or candidate minima?",
+  "hypothesis": "If the warnings are line-search termination near an adequate minimum, direct score reconstruction and a differently scaled/profiled solver should return the same objective to numerical tolerance.",
+  "source_ids": ["desi_dr2_mean", "desi_dr2_cov", "desi_dr2_bao"],
+  "assumptions_and_units": ["Same BAO forward model and full released covariance as the source run.", "The positive free alpha amplitude is analytically profiled for the alternative solver; shape parameters are optimized on a unit box."],
+  "data_files_and_sha256": {
+    "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+  },
+  "code_commit_or_sha256": {"scripts/recheck_bao_optimizer.py": "dbc51ed4b8603b27ee9642335c7bdcd2b4805ea582f8e1a6e6ae697a919833d2", "scripts/background_bao.py": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2"},
+  "environment_lock": {"python": "3.12.3", "numpy": "2.5.3", "scipy": "1.18.1"},
+  "model_parameters_and_priors": {"search_domain": "The exact per-candidate bounds from the originating result; not priors.", "solver": "Powell on unit-scaled shape parameters plus a reconditioned L-BFGS-B retry; full-covariance alpha profile."},
+  "nuisance_parameters": {"alpha": "analytically profiled from full-covariance quadratic at each shape point"},
+  "training_validation_holdout_definition": "Reconstructed each original 200-mock realization from the recorded seed, fitted LCDM mean and covariance Cholesky; rechecked all 52 candidates whose saved best L-BFGS-B run was marked unsuccessful under either start budget.",
+  "covariance_order_and_overlap_treatment": "Full released 13x13 covariance in original measurement order; no other data/probe combined.",
+  "random_seed": 20260924,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python scripts/run_bounded.py --seconds 1800 -- .venv/bin/python scripts/recheck_bao_optimizer.py --workers 8",
+  "start_utc": null,
+  "runtime_seconds": 0.7133318753913045,
+  "hardware": {"CPU_workers": 8, "GPU_used": false},
+  "numerical_checks": {"direct_chi2_reconstruction_max_abs_error": 7.993605777301127e-14, "retry_successes": "all 52 cases report successful alternative solver exits", "largest_alternative_improvement": 1.170281649365279e-10, "candidates_improved_by_more_than_1e-7": 0},
+  "metric_definition": "Difference between the best checked alternative/profiled objective and the direct covariance score recomputed at the original candidate parameters.",
+  "results": {"failed_candidate_fits_rechecked": 52, "alternative_solver_runs": 156, "max_abs_score_reconstruction_error": 7.993605777301127e-14, "minimum_delta_chi2": -1.170281649365279e-10, "maximum_delta_chi2": 0.0, "reported_16_and_64_start_tail_statistic_change": "none beyond stored numerical precision"},
+  "uncertainty": "This is an optimizer-status diagnostic, not a proof of global optimality; it tests only the recorded nonconverged candidate points and center starts.",
+  "attempts_counted_in_search": {"candidate_cases": 52, "alternative_solver_calls": 156},
+  "interpretation_and_limits": "ABNORMAL statuses are a visible optimizer limitation, but in this deterministic recheck they did not shift any saved candidate by more than 1e-7 or the selected null tail statistic.",
+  "artifacts": ["experiments/bao_robustness/optimizer_recheck.json", "scripts/recheck_bao_optimizer.py", "experiments/bao_robustness/result.json"],
+  "independent_reviewer": "Root implementation using direct full-covariance score reconstruction and a distinct profile-amplitude optimization parameterization.",
+  "review_disposition": "Accepted as a bounded nonconvergence check; do not erase the original ABNORMAL messages from the source run.",
+  "next_test": "Keep exact optimizer messages with future null mocks; increase mock count only if the estimate remains a report's main claim."
+}
