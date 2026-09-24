@@ -1,0 +1,15 @@
+{
+  "id": "interacting_vacuum_block_cv_20260924",
+  "objective": "Leave-one-redshift-bin-out conditional predictive validation of late-time IVS against nested flat LCDM on the released 13-row DESI DR2 BAO vector.",
+  "status": "complete",
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 timeout 90s .venv/bin/python experiments/interacting_vacuum_block_cv/leave_bin_out.py",
+  "runtime_seconds": 34.6,
+  "result": "experiments/interacting_vacuum_block_cv/result.json",
+  "writeup": "work/compute4/interacting_vacuum_block_cv.md",
+  "aggregate_delta_ivs_minus_lcdm_conditional_chi2": 22.750300,
+  "stop_disposition": "All seven held-out redshift groups and numerical checks completed within the 15-minute compute cap; stopped normally.",
+  "sha256": {
+    "experiments/interacting_vacuum_block_cv/leave_bin_out.py": "81c5ce44ab6ec27539290a9d3754e85d5dd809559dc04d8558a4a6d31cb3367c",
+    "experiments/interacting_vacuum_block_cv/result.json": "9d1bf8ac6536328d36d5e26d3a1dd2e2a8ddf6c2761ad6472a1ac9adc9b69a55"
+  }
+}

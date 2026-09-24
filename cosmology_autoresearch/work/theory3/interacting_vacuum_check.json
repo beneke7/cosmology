@@ -1,0 +1,308 @@
+{
+  "status": "independent synthetic equation check; no DESI data fit",
+  "model": {
+    "interaction": "Q=Gamma*rho_x",
+    "sign": "Gamma>0 transfers energy from CDM to vacuum/DE",
+    "dimensionless_coupling": "gamma=Gamma/H0",
+    "background_variables": "N=ln(a), u_i=rho_i/rho_crit, E=H/H0",
+    "equations": [
+      "du_b/dN=-3*u_b",
+      "du_c/dN=-3*u_c-gamma*u_x/E",
+      "du_x/dN=gamma*u_x/E",
+      "E^2=u_b+u_c+u_x (flat; radiation omitted)"
+    ],
+    "initial_values": [
+      "u_b(0)=f_b*Omega_m0",
+      "u_c(0)=(1-f_b)*Omega_m0",
+      "u_x(0)=1-Omega_m0"
+    ]
+  },
+  "numerical_domain": {
+    "redshift": [
+      0.0,
+      2.33
+    ],
+    "Omega_m0_grid": [
+      0.05,
+      0.6,
+      9
+    ],
+    "gamma_grid": [
+      -0.2,
+      0.2,
+      9
+    ],
+    "baryon_fraction_grid": [
+      0.0,
+      1.0,
+      7
+    ],
+    "grid_case_count": 567,
+    "integration": "SciPy solve_ivp DOP853, backward in N from today; dense sample of 401 N values",
+    "rtol": 2e-11,
+    "atol": 1e-13,
+    "analytic_positivity": "u_x>0; u_b>=0. For gamma>=0, a^3*u_c(N)=Omega_c0+gamma*int_N^0 exp(3n)u_x(n)/E(n)dn>=0.",
+    "negative_gamma_viability": "Must impose u_c>=0 over the whole integration interval; the rectangular gamma/f_b box is not uniformly physical.",
+    "grid_minimum_E2": 0.6591394784245208,
+    "grid_minimum_Omega_c": -2.399941847245815,
+    "grid_minimum_Omega_x": 0.35188225134122025,
+    "negative_component_grid_cases": 59,
+    "integration_failures": [],
+    "invalid_examples": [
+      {
+        "Omega_m0": 0.05,
+        "gamma": -0.2,
+        "baryon_fraction": 0.0,
+        "min_Omega_b": 0.0,
+        "min_Omega_c": -0.5536399972458139,
+        "min_Omega_x": 0.95,
+        "min_E2": 0.6591394784245219
+      },
+      {
+        "Omega_m0": 0.05,
+        "gamma": -0.2,
+        "baryon_fraction": 0.16666666666666666,
+        "min_Omega_b": 0.008333333333333333,
+        "min_Omega_c": -0.8613569722458151,
+        "min_Omega_x": 0.95,
+        "min_E2": 0.659139478424521
+      },
+      {
+        "Omega_m0": 0.05,
+        "gamma": -0.2,
+        "baryon_fraction": 0.3333333333333333,
+        "min_Omega_b": 0.016666666666666666,
+        "min_Omega_c": -1.169073947245815,
+        "min_Omega_x": 0.95,
+        "min_E2": 0.6591394784245214
+      },
+      {
+        "Omega_m0": 0.05,
+        "gamma": -0.2,
+        "baryon_fraction": 0.5,
+        "min_Omega_b": 0.025,
+        "min_Omega_c": -1.4767909222458142,
+        "min_Omega_x": 0.95,
+        "min_E2": 0.6591394784245215
+      },
+      {
+        "Omega_m0": 0.05,
+        "gamma": -0.2,
+        "baryon_fraction": 0.6666666666666666,
+        "min_Omega_b": 0.03333333333333333,
+        "min_Omega_c": -1.7845078972458135,
+        "min_Omega_x": 0.95,
+        "min_E2": 0.659139478424523
+      },
+      {
+        "Omega_m0": 0.05,
+        "gamma": -0.2,
+        "baryon_fraction": 0.8333333333333333,
+        "min_Omega_b": 0.041666666666666664,
+        "min_Omega_c": -2.092224872245815,
+        "min_Omega_x": 0.95,
+        "min_E2": 0.659139478424523
+      },
+      {
+        "Omega_m0": 0.05,
+        "gamma": -0.2,
+        "baryon_fraction": 1.0,
+        "min_Omega_b": 0.05,
+        "min_Omega_c": -2.399941847245815,
+        "min_Omega_x": 0.95,
+        "min_E2": 0.6591394784245208
+      },
+      {
+        "Omega_m0": 0.05,
+        "gamma": -0.15000000000000002,
+        "baryon_fraction": 0.16666666666666666,
+        "min_Omega_b": 0.008333333333333333,
+        "min_Omega_c": -0.20434005058225851,
+        "min_Omega_x": 0.95,
+        "min_E2": 1.0
+      }
+    ]
+  },
+  "synthetic_checks": {
+    "Gamma_zero_LCDM_recovery": {
+      "Omega_m0": 0.3,
+      "baryon_fraction": 0.37,
+      "z": [
+        0.0,
+        0.1,
+        0.5,
+        1.0,
+        2.33
+      ],
+      "max_abs_E2_error_vs_Omega_m_a_minus3_plus_lambda": 8.881784197001252e-15
+    },
+    "background_invariance_to_baryon_CDM_split": [
+      {
+        "gamma": -0.05,
+        "split_values": [
+          0.1,
+          0.3,
+          0.6,
+          0.9
+        ],
+        "max_abs_E2_difference_across_splits": 1.4210854715202004e-14,
+        "component_positivity_at_splits": [
+          {
+            "baryon_fraction": 0.1,
+            "minimum_Omega_c": 0.27,
+            "minimum_Omega_x": 0.7,
+            "minimum_E2": 1.0
+          },
+          {
+            "baryon_fraction": 0.3,
+            "minimum_Omega_c": 0.21,
+            "minimum_Omega_x": 0.7,
+            "minimum_E2": 1.0
+          },
+          {
+            "baryon_fraction": 0.6,
+            "minimum_Omega_c": 0.12,
+            "minimum_Omega_x": 0.7,
+            "minimum_E2": 1.0
+          },
+          {
+            "baryon_fraction": 0.9,
+            "minimum_Omega_c": 0.029999999999999992,
+            "minimum_Omega_x": 0.7,
+            "minimum_E2": 1.0
+          }
+        ]
+      },
+      {
+        "gamma": 0.05,
+        "split_values": [
+          0.1,
+          0.3,
+          0.6,
+          0.9
+        ],
+        "max_abs_E2_difference_across_splits": 1.4210854715202004e-14,
+        "component_positivity_at_splits": [
+          {
+            "baryon_fraction": 0.1,
+            "minimum_Omega_c": 0.27,
+            "minimum_Omega_x": 0.6738315037226265,
+            "minimum_E2": 1.0
+          },
+          {
+            "baryon_fraction": 0.3,
+            "minimum_Omega_c": 0.21,
+            "minimum_Omega_x": 0.6738315037226265,
+            "minimum_E2": 1.0
+          },
+          {
+            "baryon_fraction": 0.6,
+            "minimum_Omega_c": 0.12,
+            "minimum_Omega_x": 0.6738315037226265,
+            "minimum_E2": 1.0
+          },
+          {
+            "baryon_fraction": 0.9,
+            "minimum_Omega_c": 0.029999999999999992,
+            "minimum_Omega_x": 0.6738315037226265,
+            "minimum_E2": 1.0
+          }
+        ]
+      }
+    ],
+    "comoving_CDM_integral_sign_and_identity": {
+      "identity": "a^3*u_c=Omega_c0+gamma*int_N^0 exp(3n)u_x/E dn",
+      "maximum_absolute_identity_error": 2.498001805406602e-16,
+      "checks": [
+        {
+          "gamma": -0.05,
+          "direction": "vacuum_to_CDM",
+          "rows": [
+            {
+              "z": 0.0,
+              "comoving_Omega_c": 0.21,
+              "integral_identity_rhs": 0.21,
+              "absolute_identity_error": 0.0,
+              "Omega_x": 0.7
+            },
+            {
+              "z": 0.5,
+              "comoving_Omega_c": 0.20244065031845263,
+              "integral_identity_rhs": 0.20244065031845254,
+              "absolute_identity_error": 8.326672684688674e-17,
+              "Omega_x": 0.7127605447517433
+            },
+            {
+              "z": 1.0,
+              "comoving_Omega_c": 0.20104411689445353,
+              "integral_identity_rhs": 0.20104411689445345,
+              "absolute_identity_error": 8.326672684688674e-17,
+              "Omega_x": 0.7196587462735655
+            },
+            {
+              "z": 2.33,
+              "comoving_Omega_c": 0.20050388211655545,
+              "integral_identity_rhs": 0.20050388211655545,
+              "absolute_identity_error": 0.0,
+              "Omega_x": 0.7274708577080973
+            }
+          ]
+        },
+        {
+          "gamma": 0.05,
+          "direction": "CDM_to_vacuum",
+          "rows": [
+            {
+              "z": 0.0,
+              "comoving_Omega_c": 0.21,
+              "integral_identity_rhs": 0.21,
+              "absolute_identity_error": 0.0,
+              "Omega_x": 0.7
+            },
+            {
+              "z": 0.5,
+              "comoving_Omega_c": 0.21743731036590347,
+              "integral_identity_rhs": 0.2174373103659034,
+              "absolute_identity_error": 5.551115123125783e-17,
+              "Omega_x": 0.6874982759639982
+            },
+            {
+              "z": 1.0,
+              "comoving_Omega_c": 0.2187584648177323,
+              "integral_identity_rhs": 0.21875846481773215,
+              "absolute_identity_error": 1.6653345369377348e-16,
+              "Omega_x": 0.6809854023416173
+            },
+            {
+              "z": 2.33,
+              "comoving_Omega_c": 0.21925504227928466,
+              "integral_identity_rhs": 0.2192550422792844,
+              "absolute_identity_error": 2.498001805406602e-16,
+              "Omega_x": 0.6738315037226265
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "paper": {
+    "title": "Do DESI-DR2 BAO data imply a coupling of dark matter and dark energy?",
+    "doi": "10.1103/6kdf-vzq4",
+    "online_primary": "https://journals.aps.org/prd/accepted/10.1103/6kdf-vzq4",
+    "local_pdf": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "local_pdf_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c"
+  },
+  "execution": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "cpu_only": true,
+    "blas_thread_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "script_sha256": "5713cef34f98b6486cd78478862e743734f126bffef222caa40c9b5d51814ff4"
+  }
+}

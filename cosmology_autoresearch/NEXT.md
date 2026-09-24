@@ -1,20 +1,36 @@
-# Next experiment
+# Next experiment: test whether the BAO-selected IVS shape predicts an independent probe
 
-## 1. Physically explicit interacting-vacuum background (highest executable value)
+## Question
 
-Derive and implement the paper's (Q=\Gamma\rho_x), (w_x=-1) continuity system on the same 13-row DESI DR2 BAO mean/full covariance. The derivation must preserve the paper's sign convention (positive Γ transfers CDM energy to DE), keep baryons separately conserved, and state whether the baryon/CDM split is fitted as a nuisance or fixed from an external prior. No hidden CMB calibration: keep α=c/(H0 rd) free. Scope is background geometry only.
+Does the simple interacting-vacuum background selected by DESI DR2 BAO predict the separate DES-Dovekie Type Ia supernova distance-redshift data at least as well as the BAO-selected flat-ΛCDM shape?
 
-Pre-fit checks: Γ=0 recovers flat ΛCDM, units and signs match the paper's continuity equations, densities and H² stay positive throughout 0≤z≤2.33, and two independent integration/quadrature implementations agree. Compare finite bounds and one sensitivity to the baryon split. Fit with all covariance terms, retain optimizer statuses, and if the profile adds useful leverage run the same selected search on the existing 1,200 disjoint-seed fitted-flat-null vectors. Stop if the physical domain is unstable or the rate is unidentifiable without an unjustified prior.
+This follows the evidence already collected: the IVS profile gain is common in 1,200 matched BAO null searches, its seven-fold BAO conditional score is worse overall and dominated by the z=2.33 pair, but it does not suffer a CDM-positivity crossing in the declared early-time sensitivity domain. The unanswered issue is whether the shape improvement travels to a genuinely different probe.
 
-Existing source: [Yang et al., arXiv:2609.05660](https://arxiv.org/abs/2609.05660); exact local PDF/text and equation-level notes in `context/papers/interacting_de_desi_dr2_2026.pdf` and `work/literature/physical_model_update.md`.
+## Locked first-pass contract
 
-## 2. Official Lyα replacement likelihood (blocked pending a public artifact)
+1. Audit the existing DES-Dovekie files and likelihood definition, data/sample provenance, redshift ordering, covariance symmetry/positive-definiteness and hashes. Treat Dovekie as the one SN branch; do not add Pantheon+ or another overlapping compilation.
+2. Freeze the BAO-only flat-ΛCDM shape Ωm=0.2974618150 and IVS shape (Ωm=0.3869710077, g=Γ/H0=−0.4666647299). Do not refit shape parameters on the SN data. Use the source-paper sign convention and the same explicitly background-only late-time model.
+3. For each model and each predeclared contiguous redshift holdout, fit only the shared SN magnitude intercept on the training rows. Evaluate held-out distances and scores with the exact full covariance using the Gaussian conditional mean and Schur complement; never diagonalize or drop cross-block terms. Choose the number/bin edges from the observed redshift design before scoring. Store the fold map and all optimizer/linear-solve status.
+4. Use luminosity distance with a freely fitted/marginalized magnitude intercept. This cancels the absolute H0 scale; report no H0 or absolute-calibration inference. Compare the held-out conditional scores descriptively and keep the SN result separate from BAO—no joint likelihood or combined evidence.
+5. Validate the SN intercept solution against its analytic generalized-least-squares expression; independently reconstruct at least one fold by dense solves; check Γ=0 and distance units; verify numerical stability under equivalent covariance factorizations and bin-edge perturbations fixed before looking at comparative scores.
 
-The completed 2026-09-24 official-page/directory, Results IV paper, Zenodo and linked-code audit found no machine-readable replacement/joint likelihood or cross-covariance. Eq. (26) has rounded summary values for an explicitly approximate 2D Gaussian; do not mistake it for an exact likelihood. The August 2026 unified-tracer supplement concerns galaxy/quasar BAO and is not a substitute. Full evidence is in `work/literature/desi_lya_release_probe.md`. Recheck official release links if they change, then pin/hash the artifact and validate overlap/order before use.
+## Stop rules and interpretation
 
-## Stop/quality criteria
+- Stop before any score if the released Dovekie likelihood/covariance, sample definition, or row mapping cannot be verified from local source records.
+- Stop if full-covariance conditional calculations fail their independent reconstruction or positive-definiteness checks.
+- A better/worse descriptive score is a predictive diagnostic, not a posterior, evidence, calibrated p-value, physical stability test, or full paper reproduction. Do not claim the two probes are statistically independent without documenting the measurement/systematic contract.
+- First implementation/audit budget: 30 minutes CPU wall time with one numerical thread; explicitly cap every command. Use more CPU parallelism only if measured runtime warrants it. No GPU is expected to help this matrix/GLS calculation; benchmark before assigning one.
+- Do not proceed to a Dovekie-wide IVS parameter refit or a mock-calibrated claim unless the frozen-shape prediction itself is stable and informative.
 
-- No BAO-only H0 claim: α leaves H0 and rd degenerate.
-- A likelihood gain is exploratory until search-selection effects are calibrated on the same flat null.
-- No perturbation/growth/stability claim without implementing and validating the paper's full perturbation closure.
-- Every command stays bounded by an explicit task-level runtime; GPU only if an end-to-end benchmark shows a real advantage.
+## Source-artifact gate in parallel
+
+The paper identifies modified CAMB and a linear perturbation closure, but the exact patch/version, complete Cobaya configuration, and initial-condition prescription remain unverified in the public source trail. If the user supplies those exact artifacts, hash and audit them before any source-reproduction claim. Otherwise, any solver implementation is an independent model implementation and must pass the background, perturbation-source, and Γ=0/spectrum gates in `work/perturbation_audit/solver_path.md`.
+
+Do not append DESI Results IV Lyα values to the existing BAO vector unless the official replacement/joint likelihood and cross-covariance become available. The current blocked-release evidence is `work/literature/desi_lya_release_probe.md`.
+
+## References
+
+- Current status and caveats: `MORNING_REPORT.md`.
+- BAO-selected profile and full-covariance null: `work/compute3/interacting_vacuum_screen_report.md`, `work/compute3/interacting_vacuum_null_extension_report.md`.
+- BAO block holdout and independent review: `work/compute4/interacting_vacuum_block_cv.md`, `work/compute5/interacting_vacuum_cv_review.md`.
+- Existing DES-Dovekie profile/source analysis: `work/inference/REPORT.md`, `work/critic/REPORT.md`, and `experiments/dovekie_screen/`.

@@ -1,0 +1,412 @@
+{
+  "status": "pass",
+  "scope": "CPU-only deterministic provenance audit; no interacting-vacuum mock fits",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39"
+  },
+  "mock_generator_contract": {
+    "random_generator": "np.random.default_rng(seed), NumPy PCG64",
+    "draw_call": "standard_normal((n_mocks, 13))",
+    "zero_based_indexing": "mock index i is row i of the one complete draw array, equivalent to its consecutive 13-normal row block",
+    "mean": {
+      "source": "campaign_seed_bao/result.json fitted flat LCDM prediction",
+      "alpha": 29.524633230788915,
+      "Omega_m": 0.297461814179106,
+      "independent_scalar_quadrature_max_abs_difference": 2.842170943040401e-14
+    },
+    "covariance_transform": "y_i = mean + normals[i] @ L.T; L = lower Cholesky factor of the full ordered 13x13 covariance",
+    "seed_streams_are_separately_initialized": true,
+    "exact_duplicate_normal_rows_across_both_finite_streams": false,
+    "overlap_caveat": "Distinct seeds and distinct verified PCG64 stream digests establish independently initialized streams for these runs; no finite check proves mathematical non-overlap of infinite PRNG sequences.",
+    "streams": {
+      "20260924": {
+        "n_mocks": 200,
+        "bit_generator": "PCG64",
+        "normal_shape": [
+          200,
+          13
+        ],
+        "normal_stream_sha256_little_endian_float64": "a5265eba65345219facd2ce66e1edf653f7a2a872f51a79905db228fe1f3de21",
+        "recorded_normal_digest_matches": true,
+        "indices_checked_zero_based": [
+          0,
+          99,
+          199
+        ],
+        "sample_mock_indices_are_consecutive_13-normal_draw_blocks": true,
+        "checks": [
+          {
+            "seed": 20260924,
+            "index": 0,
+            "regenerated_vector_sha256_little_endian_float64": "5ab7dbaea400be73a4bf6967fac486ff6a4231d8b0d9760a5c4e969063bd57e9",
+            "vector_max_abs_diff_from_reconstruction_via_independent_scalar_mean": 2.842170943040401e-14,
+            "stored_flat_fit": {
+              "Omega_m": 0.30552658633813423,
+              "alpha": 29.651352615869207,
+              "chi2": 6.57182067953871
+            },
+            "independent_flat_fit": {
+              "Omega_m": 0.30552658719508097,
+              "alpha": 29.651352635228697,
+              "chi2": 6.571820679538844,
+              "prediction": [
+                7.918019266351334,
+                13.275876324732792,
+                22.437492942219013,
+                17.424274003150966,
+                19.939004625141028,
+                21.67306214173121,
+                17.39806145026747,
+                27.706964232110362,
+                13.955206829423835,
+                29.88443510490041,
+                12.786869868651863,
+                8.568052092006175,
+                38.735077056413765
+              ],
+              "grid_step": 0.017187499999999994
+            },
+            "differences_independent_minus_stored": {
+              "Omega_m": 8.56946735794395e-10,
+              "alpha": 1.9359490011083835e-08,
+              "chi2": 1.3322676295501878e-13,
+              "max_abs_prediction": 6.24896046019785e-09
+            },
+            "stored_fit_success": true,
+            "stored_failed_start_count": 0
+          },
+          {
+            "seed": 20260924,
+            "index": 99,
+            "regenerated_vector_sha256_little_endian_float64": "0b04f567419775768902623ab692bd94a75dac21aa130674697ef8d2a2633ff0",
+            "vector_max_abs_diff_from_reconstruction_via_independent_scalar_mean": 2.842170943040401e-14,
+            "stored_flat_fit": {
+              "Omega_m": 0.2974188684936594,
+              "alpha": 29.565273223974643,
+              "chi2": 8.36744653349696
+            },
+            "independent_flat_fit": {
+              "Omega_m": 0.29741887111778814,
+              "alpha": 29.565273284268162,
+              "chi2": 8.36744653349694,
+              "prediction": [
+                7.913433759227489,
+                13.275175149374537,
+                22.50031400025452,
+                17.438616458710737,
+                20.02722391715463,
+                21.709389545129383,
+                17.500482791421284,
+                27.78410093129075,
+                14.060690719338057,
+                29.978570297884367,
+                12.889729971277886,
+                8.649002592004848,
+                38.90724577606818
+              ],
+              "grid_step": 0.017187499999999994
+            },
+            "differences_independent_minus_stored": {
+              "Omega_m": 2.6241287476302944e-09,
+              "alpha": 6.029351951042372e-08,
+              "chi2": -1.9539925233402755e-14,
+              "max_abs_prediction": 1.9768380710161182e-08
+            },
+            "stored_fit_success": true,
+            "stored_failed_start_count": 0
+          },
+          {
+            "seed": 20260924,
+            "index": 199,
+            "regenerated_vector_sha256_little_endian_float64": "b48cc0911299401b6a6990462e0de9ebf4983fce9eb723b0c05fadb5b81367f2",
+            "vector_max_abs_diff_from_reconstruction_via_independent_scalar_mean": 2.842170943040401e-14,
+            "stored_flat_fit": {
+              "Omega_m": 0.28162486544131954,
+              "alpha": 29.11883102182987,
+              "chi2": 13.60084619717735
+            },
+            "independent_flat_fit": {
+              "Omega_m": 0.2816248672668139,
+              "alpha": 29.11883106482996,
+              "chi2": 13.600846197177418,
+              "prediction": [
+                7.829689652470554,
+                13.148564669632938,
+                22.412394707620898,
+                17.302655058525175,
+                20.014478663826644,
+                21.57722027810323,
+                17.54144298864125,
+                27.677090232139253,
+                14.141985576479405,
+                29.885374744160607,
+                12.97723424969636,
+                8.73307393955306,
+                38.889050580825106
+              ],
+              "grid_step": 0.017187499999999994
+            },
+            "differences_independent_minus_stored": {
+              "Omega_m": 1.825494366780589e-09,
+              "alpha": 4.3000088822964244e-08,
+              "chi2": 6.750155989720952e-14,
+              "max_abs_prediction": 1.4541958748282013e-08
+            },
+            "stored_fit_success": true,
+            "stored_failed_start_count": 0
+          }
+        ]
+      },
+      "20260925": {
+        "n_mocks": 1000,
+        "bit_generator": "PCG64",
+        "normal_shape": [
+          1000,
+          13
+        ],
+        "normal_stream_sha256_little_endian_float64": "b9cf266dee55dd1f67366c030273a27ae1fb107691baf8bfc3eab07fa407c985",
+        "recorded_normal_digest_matches": true,
+        "indices_checked_zero_based": [
+          0,
+          499,
+          999
+        ],
+        "sample_mock_indices_are_consecutive_13-normal_draw_blocks": true,
+        "checks": [
+          {
+            "seed": 20260925,
+            "index": 0,
+            "regenerated_vector_sha256_little_endian_float64": "eb2ecfe32281fbc41c76426df3ea3333c4514d3f81e94a63aa98cddd4d3582bf",
+            "vector_max_abs_diff_from_reconstruction_via_independent_scalar_mean": 2.842170943040401e-14,
+            "stored_flat_fit": {
+              "Omega_m": 0.3116787398250335,
+              "alpha": 29.91591085010889,
+              "chi2": 4.886822440357412
+            },
+            "independent_flat_fit": {
+              "Omega_m": 0.31167874373656407,
+              "alpha": 29.915910937961133,
+              "chi2": 4.886822440357352,
+              "prediction": [
+                7.974642580576096,
+                13.36556487203311,
+                22.54090120971175,
+                17.530533683712246,
+                20.006862255160552,
+                21.79143330129521,
+                17.438542910837988,
+                27.835508754326064,
+                13.970643557449536,
+                30.014996363766343,
+                12.796507279536504,
+                8.56581947794856,
+                38.867363502000615
+              ],
+              "grid_step": 0.017187499999999994
+            },
+            "differences_independent_minus_stored": {
+              "Omega_m": 3.9115305439096915e-09,
+              "alpha": 8.785224281382398e-08,
+              "chi2": -6.039613253960852e-14,
+              "max_abs_prediction": 2.8026631682109837e-08
+            },
+            "stored_fit_success": true,
+            "stored_failed_start_count": 0
+          },
+          {
+            "seed": 20260925,
+            "index": 499,
+            "regenerated_vector_sha256_little_endian_float64": "bf14c66ed4db4a2fe94266c0488ed2b0913a07b80dd25de93a0bcd5399d206cb",
+            "vector_max_abs_diff_from_reconstruction_via_independent_scalar_mean": 2.842170943040401e-14,
+            "stored_flat_fit": {
+              "Omega_m": 0.29624432725493655,
+              "alpha": 29.52217465796725,
+              "chi2": 3.9540899301272843
+            },
+            "independent_flat_fit": {
+              "Omega_m": 0.2962443249973737,
+              "alpha": 29.522174606020677,
+              "chi2": 3.9540899301272834,
+              "prediction": [
+                7.904572739406063,
+                13.261333106354162,
+                22.486206637485637,
+                17.422667891102993,
+                20.01943193463585,
+                21.692249375486817,
+                17.497430275601864,
+                27.76668421830136,
+                14.0616959874654,
+                29.961390584254627,
+                12.891573384479948,
+                8.652030632709906,
+                38.892360454302754
+              ],
+              "grid_step": 0.017187499999999994
+            },
+            "differences_independent_minus_stored": {
+              "Omega_m": -2.2575628588761276e-09,
+              "alpha": -5.194657148877013e-08,
+              "chi2": -8.881784197001252e-16,
+              "max_abs_prediction": 1.7070526325824176e-08
+            },
+            "stored_fit_success": true,
+            "stored_failed_start_count": 0
+          },
+          {
+            "seed": 20260925,
+            "index": 999,
+            "regenerated_vector_sha256_little_endian_float64": "1bd5376e3459f9020fea65950b60d2127c238084c3c29dcb1b51290cf56f8661",
+            "vector_max_abs_diff_from_reconstruction_via_independent_scalar_mean": 2.842170943040401e-14,
+            "stored_flat_fit": {
+              "Omega_m": 0.2978671497485152,
+              "alpha": 29.507069085042993,
+              "chi2": 17.953256343158937
+            },
+            "independent_flat_fit": {
+              "Omega_m": 0.2978671527172186,
+              "alpha": 29.507069153043943,
+              "chi2": 17.95325634315881,
+              "prediction": [
+                7.896835386672698,
+                13.246941380114983,
+                22.448900127021673,
+                17.4006776108812,
+                19.979650655659068,
+                21.661127322844255,
+                17.457485652876606,
+                27.720616665379044,
+                14.02483347246793,
+                29.909459385423187,
+                12.856509493760681,
+                8.62603322471423,
+                38.814737695073795
+              ],
+              "grid_step": 0.017187499999999994
+            },
+            "differences_independent_minus_stored": {
+              "Omega_m": 2.9687033942238372e-09,
+              "alpha": 6.800095064818379e-08,
+              "chi2": -1.2789769243681803e-13,
+              "max_abs_prediction": 2.2276029909562567e-08
+            },
+            "stored_fit_success": true,
+            "stored_failed_start_count": 0
+          }
+        ]
+      }
+    }
+  },
+  "covariance": {
+    "shape": [
+      13,
+      13
+    ],
+    "symmetric_max_abs_difference": 0.0,
+    "cholesky_success": true,
+    "minimum_eigenvalue": 0.00578998687,
+    "maximum_eigenvalue": 0.6764084362676288,
+    "condition_number_2": 116.8238290439558,
+    "row_order_sha256_source_mean": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "covariance_sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+  },
+  "source_hash_audit": {
+    "20260924": {
+      "result_path": "experiments/bao_robustness/result.json",
+      "result_sha256": "0f477285029024fa359740e726b46f2abf8c87ea8704f488d8ad6658c3fc2a3e",
+      "data_hashes_match_current": true,
+      "data_hashes_recorded": {
+        "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+        "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+      },
+      "run_bao_robustness_hash_matches_current": true,
+      "run_bao_robustness_hash_recorded": "54cb6d78b45f0b9a495bdf8733459ccef6b6a9b2cfc6cc5e8c835a602a09ebcb",
+      "background_bao_hash_matches_current": true,
+      "background_bao_hash_recorded": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2"
+    },
+    "20260925": {
+      "result_path": "experiments/bao_robustness/null_extension_1000_seed20260925.json",
+      "result_sha256": "5063ae50f267477b41febd30eabe00c3167b0ccb2d826cd94f3fc966dc025693",
+      "data_hashes_match_current": true,
+      "data_hashes_recorded": {
+        "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+        "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+      },
+      "run_bao_robustness_hash_matches_current": true,
+      "run_bao_robustness_hash_recorded": "54cb6d78b45f0b9a495bdf8733459ccef6b6a9b2cfc6cc5e8c835a602a09ebcb",
+      "background_bao_hash_matches_current": true,
+      "background_bao_hash_recorded": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2"
+    }
+  },
+  "curvature_record_hash_audit": {
+    "record_path": "experiments/curvature_screen/record.json",
+    "record_sha256": "33a0e0a90595b042ffb9a86f419565ca6a92e4672b36ab4b9c7549663918e786",
+    "mean_hash_matches_record": true,
+    "covariance_hash_matches_record": true,
+    "seed_20260924_result_hash_matches_record": true,
+    "seed_20260925_result_hash_matches_record": true,
+    "curvature_code_hash_matches_record": true,
+    "mock_jsonl_hash_matches_record": true,
+    "curvature_result_hash_matches_record": true
+  },
+  "current_code_hashes": {
+    "scripts/run_bao_robustness.py": "54cb6d78b45f0b9a495bdf8733459ccef6b6a9b2cfc6cc5e8c835a602a09ebcb",
+    "scripts/background_bao.py": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2",
+    "experiments/curvature_screen/curvature_profile.py": "191d933c6c263a767e9d87c2aee294066e3e3c023c64e6de54886acc59491108"
+  },
+  "saved_mock_records": {
+    "path": "experiments/curvature_screen/mock_realizations.jsonl",
+    "rows": 1200,
+    "row_keys_unique": true,
+    "sha256": "812167e6b5f9dbc8d164e20180f421a980e1c793ef5afa35662da89b15c3752f",
+    "curvature_result_sha256": "5457e02073b51a1c3905007f8263698a403c910e983e54ce632437a03d99350c"
+  },
+  "matched_interaction_search_contract": {
+    "data": "same released DESI DR2 13-row mean order and full 13x13 covariance; no Ly-alpha Results IV addition",
+    "null": "fixed best-fit flat LCDM mean from campaign_seed_bao/result.json; regenerate and reuse all 1,200 vectors from seeds 20260924 and 20260925",
+    "mock_fit_statistic": "Delta chi2 = flat-LCDM profiled score minus one-rate interacting-vacuum profiled score; gamma=0 is nested",
+    "interaction_model": "current screen Q=Gamma*rho_x, w_x=-1, baryons separately conserved, dimensionless Gamma/H0; background-only, radiation and perturbations omitted",
+    "nuisances": "profile alpha=c/(H0*rd) on [1e-6,1e4] using full covariance; fit Omega_m0; no H0, rd, or baryon fraction inference",
+    "physicality": "repeat exact ODE domain and baryon/CDM positivity feasibility rule through z=2.33; preserve every invalid evaluation and optimizer status",
+    "primary_domain_status": "resolved_and_frozen_before_observed_fit",
+    "primary_Gamma_over_H0_search_domain": [
+      -3.0,
+      3.0
+    ],
+    "primary_domain_basis": "source paper Table-I box; declared in the locked compute contract before the observed optimization; nested [-1,1] and [-0.5,0.5] profiles retain the same interior minimum",
+    "compact_theory_domain_status": "[-0.2,0.2] is an exploratory alternative only; its independent profile hits the lower boundary and it does not replace the primary null-search domain",
+    "selection_warning": "1,200-mock one-model calibration corrects this exact interacting search only; claims selecting among CPL, curvature, and interaction also need the full across-model selection rule repeated per null or clearly remain lane-specific screens",
+    "retained_fit_protocol": "rerun flat and interacting fits with the same prespecified start grids, optimizer, physical masks, alpha profiling and retry/failure disposition used on observed data; keep full per-mock fit/status rows and checkpoint output",
+    "process_pool": {
+      "recommended_workers": 20,
+      "basis": "20 CPUs are in affinity; realizations are independent CPU ODE/profile jobs; cap BLAS/OpenMP/MKL/NumExpr at one thread and use chunksize 1",
+      "gpu": "not justified for adaptive low-dimensional ODE fits without an end-to-end benchmark"
+    },
+    "timing_evidence_seconds": {
+      "interaction_observed_39_start_plus_41x41_grid_one_cpu": 12.096865177154541,
+      "CPL_selection_1000_mocks_20_workers": 711.5716000488028,
+      "flat_curvature_1200_mocks_20_workers": 6.3639099495485425,
+      "interpretation": "these timings differ in model cost and fit protocol; they do not justify a precise interaction-mock runtime"
+    },
+    "bounded_runtime_plan": "run the first 40 exact final mock fits on the 20-worker pool, checkpoint every 25, project total runtime from measured throughput, then resume the remaining 1,160 from those saved rows with explicit per-command timeout/checkpointing",
+    "mock_fits_run_by_this_audit": 0
+  },
+  "overall_numeric_checks": {
+    "all_selected_stored_flat_fits_successful": true,
+    "max_abs_selected_fit_score_difference": 1.3322676295501878e-13,
+    "max_abs_selected_fit_prediction_difference": 2.8026631682109837e-08,
+    "max_abs_selected_fit_Omega_m_difference": 3.9115305439096915e-09,
+    "max_abs_selected_fit_alpha_difference": 8.785224281382398e-08
+  },
+  "pass_criteria": {
+    "both_prior_result_source_hash_sets_match_current": true,
+    "curvature_recorded_input_and_output_hashes_match_current": true,
+    "all_1200_fit_records_present_with_unique_keys": true,
+    "finite_streams_have_no_exact_duplicate_normal_rows": true,
+    "selected_fit_score_abs_difference_lt_5e-10": true,
+    "selected_prediction_max_difference_lt_1e-7": true,
+    "covariance_positive_definite": true
+  }
+}

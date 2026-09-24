@@ -1,0 +1,51 @@
+{
+  "status": "complete_thermal_neutrino_sensitivity",
+  "id": "interacting_vacuum_massive_neutrino_positivity_sensitivity_20260924",
+  "question": "Does replacing the fully massless-neutrino approximation by an explicit thermal 0.06-eV neutrino background change the early-time CDM-positivity disposition for the selected interacting-vacuum background point?",
+  "hypothesis": "Because the fitted interaction changes the past comoving-CDM density, neutrino mass-transition effects in E(a) could shift the positivity integral; compare identical H0/f_b cases.",
+  "source_ids": ["interacting_de_desi_dr2_2026"],
+  "assumptions_and_units": [
+    "Flat FLRW; w_x=-1; Q=Gamma*rho_x; baryons and photons separately conserved; CDM and vacuum exchange energy.",
+    "One fully populated thermal massive neutrino eigenstate with m=0.06 eV and 2.044 massless effective species, N_eff=3.044; this is an explicit sensitivity prescription, not verified as the authors' CAMB configuration.",
+    "Thermal FD density uses T_nu/T_gamma=(4/11)^(1/3); H0 in km/s/Mpc, masses and temperatures in eV, densities normalized to today's critical density.",
+    "Omega_m0 retains the screen definition as baryons plus CDM; flat closure subtracts present photon and neutrino densities from Omega_v0."
+  ],
+  "data_files_and_sha256": {
+    "context/papers/interacting_de_desi_dr2_2026.pdf": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+    "experiments/interacting_vacuum_screen/result.json": "e347b8934b2afdc23d23ef7d39c70f963b73888d17137f55caf7e51af87d43ae",
+    "work/theory5/ivs_early_positivity.json": "f35f5499d7dd3c94d42d6b1934cb47e91f713d6b63b3f4692f253c77fad9713b"
+  },
+  "code_commit_or_sha256": "work/theory6/ivs_massive_nu_sensitivity.py SHA-256 f0dae2ba45f4c8785822dd5db3cb76741462e204b4d658b47277d3961ae14347",
+  "environment_lock": "Python 3.12.3, NumPy 2.5.3, SciPy 1.18.1; project .venv; one numerical thread",
+  "model_parameters_and_priors": {
+    "fixed_screen_point": {"Omega_m0_baryon_plus_CDM": 0.3869710077, "g_Gamma_over_H0": -0.4666647299, "w_x": -1.0},
+    "H0_sensitivity_grid_km_s_Mpc": [55.0, 65.0, 75.0, 85.0],
+    "baryon_fraction_sensitivity_grid": [0.10, 0.15, 0.20, 0.25],
+    "priors": "none; no BAO/CMB/BBN fit or calibration"
+  },
+  "nuisance_parameters": {"neutrino_mass_model": "one 0.06-eV FD species plus 2.044 massless species; not exact author CAMB config"},
+  "training_validation_holdout_definition": "No likelihood fit. Re-run the same 16 H0/f_b cases through z=1e10 with thermal massive neutrinos and compare against the archived massless results.",
+  "covariance_order_and_overlap_treatment": "No likelihood covariance in this background-only sensitivity; BAO-screen point imported unchanged.",
+  "random_seed": null,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python work/theory6/ivs_massive_nu_sensitivity.py",
+  "start_utc": null,
+  "runtime_seconds": 9.516,
+  "hardware": "CPU-only, one numerical thread; no GPU",
+  "numerical_checks": {
+    "thermal_density": "rho_nu/rho_gamma0=(15/pi^4)(Tnu/Tgamma)^4 a^-4 [F(ma/Tnu0)+(N_eff-1)F(0)], F(y)=integral_0^infinity q^2 sqrt(q^2+y^2)/(exp(q)+1)dq.",
+    "integrator": "DOP853 with adaptive Gauss-Kronrod quad for FD energy integrals, cached by y.",
+    "max_ode_tolerance_refinement_scaled_difference": 1.900e-14,
+    "max_comoving_identity_residual": 2.998e-15,
+    "adaptive_FD_quadrature_tightening_max_relative_difference": 0.0,
+    "max_tight_quadrature_error_estimate": 1.18e-11
+  },
+  "metric_definition": "Compare zero crossings and q_c(z=1e10) against the massless-neutrino screen over the same 16 parameter sensitivity cases.",
+  "results": {"cases": 16, "massive_case_crossings": 0, "massless_case_crossings": 0, "minimum_massive_q_c_at_zmax": 0.206504, "maximum_massive_q_c_at_zmax": 0.264550, "maximum_absolute_delta_q_c_vs_massless": 3.729e-4, "disposition_changed": false},
+  "uncertainty": "Finite sensitivity grid only; no posterior or probability statement. Neutrino prescription is explicit but may differ from the unprovided author-CAMB settings.",
+  "attempts_counted_in_search": 16,
+  "interpretation_and_limits": "The minimal-mass thermal background changes the endpoint transfer integral only slightly in this grid and does not create a CDM zero. This is not evidence that the full perturbation-level model is stable or reproduces the paper's CMB spectra.",
+  "artifacts": ["work/theory6/ivs_massive_nu_sensitivity.py", "work/theory6/ivs_massive_nu_sensitivity.json", "work/theory6/ivs_massive_nu_sensitivity.md"],
+  "independent_reviewer": "Root analytically checked the FD normalization F(0) and the comoving-CDM sign identity; the Luna Max theory worker performed adaptive-integral and ODE tolerance checks.",
+  "review_disposition": "Thermal-neutrino sensitivity completed; exact CAMB provenance/config unavailable from the official article trail as of 2026-09-24.",
+  "next_test": "If a full physical IVS claim is pursued, obtain author patch/config or independently implement and test the published synchronous-gauge closure in a version-pinned Einstein-Boltzmann solver."
+}

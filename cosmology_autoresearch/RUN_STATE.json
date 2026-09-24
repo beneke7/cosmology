@@ -30,7 +30,12 @@
     "critic": "gpt-6-luna/max",
     "orchestrator2_radiation": "gpt-6-astra/max",
     "theory2": "gpt-6-luna/max",
-    "compute2": "gpt-6-luna/max"
+    "compute2": "gpt-6-luna/max",
+    "interaction_mock_stream_audit": "gpt-6-luna/max",
+    "perturbation_closure_audit": "gpt-6-luna/max",
+    "ivs_current_source_check": "gpt-6-luna/medium",
+    "ivs_early_positivity": "gpt-6-luna/high",
+    "ivs_block_cv": "gpt-6-luna/high"
   },
   "hardware": {
     "logical_and_affinity_cpus": 20,
@@ -81,6 +86,18 @@
         "commit": "28858bebef036b9f0ea29694386d75aeca385720",
         "report": "work/warden/push-28858be.md",
         "recommendation": "Continue unchanged with the fresh extension and independently review the aggregate interval."
+      },
+      {
+        "event": "commit",
+        "commit": "d449d1c1bdec897fd64b18dd793699fae5a875e1",
+        "report": "work/warden/commit-d449d1c.md",
+        "recommendation": "Continue the interacting-vacuum lanes; check coupling identifiability and physical limits before matched mocks."
+      },
+      {
+        "event": "push",
+        "commit": "d449d1c1bdec897fd64b18dd793699fae5a875e1",
+        "report": "work/warden/push-d449d1c.md",
+        "recommendation": "Continue the interacting-vacuum lane; first complete identifiability, sign, zero-rate and positivity checks, then calibrate the exact search if useful."
       }
     ]
   },
@@ -112,11 +129,41 @@
       "status": "complete",
       "utc": "2026-09-24T18:59:10+00:00",
       "evidence": "work/literature/desi_lya_release_probe.md audits the official DR2 page, public directory, Results IV paper, Zenodo and linked Vega repository. No official machine-readable Results IV replacement/joint likelihood or cross-covariance found. Eq. (26) permits only a rounded 2D Gaussian approximation; the 2026-08-28 unified galaxy/quasar supplement is unrelated. No files downloaded."
+    },
+    {
+      "id": "interacting_vacuum_40_mock_timing",
+      "status": "complete",
+      "utc": "2026-09-24T19:52:02+00:00",
+      "evidence": "experiments/interacting_vacuum_screen/null_timing_40.json and .jsonl: first 20 mock indices from each provenance-verified fitted-flat null stream. All 40 complete; 6/40 selections meet/exceed observed Delta-chi2=1.5172 (pilot-only exact CP95 0.0571-0.2984, not calibrated). Runtime 35.83 s on 20 CPU workers (570.16 worker-CPU seconds); no GPU. All selected interaction endpoints finite and physically rechecked. Across 39-start fits 480 penalty endpoints were excluded; two grid-refinement SciPy status-2 endpoints remained physically valid and are retained as such. The 1,160-mock extension is now complete; see its report and pooled result in the subsequent checkpoint."
+    },
+    {
+      "id": "interacting_vacuum_perturbation_closure_audit",
+      "status": "complete",
+      "utc": "2026-09-24T20:06:52+00:00",
+      "evidence": "work/perturbation_audit/REPORT.md and CHECKLIST.json read against the exact local arXiv:2609.05660v1 PDF (SHA-256 0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c). Corrects any blanket 'no perturbation closure' statement: the paper specifies synchronous-gauge linear IVS equations and no momentum transfer in the CDM rest frame, operationally the geodesic-CDM vacuum closure, but no action/microphysical model and no explicit primordial IC/full versioned CAMB configuration. The exact a^3 rho_c identity gives a past positivity bound for Gamma<0. Our fit remains checked only through z=2.33."
+    },
+    {
+      "id": "interacting_vacuum_null_extension_1160",
+      "status": "complete",
+      "utc": "2026-09-24T20:27:27Z",
+      "evidence": "experiments/interacting_vacuum_screen/null_extension_1160_summary.json and .jsonl: exactly 1,160/1,160 remaining provenance-verified seed/index fits complete with zero fit exceptions in 892.43 s using 20 CPU workers (17,490.30 worker-CPU seconds), no GPU. Extension-only exceedances are 250/1,160. Root's preliminary disjoint-pool calculation with the protected 40 pilot gives 256/1,200=0.21333 (exact CP95 0.19046-0.23762), linear q50=0.47047, q95=3.78610, q99=6.15132, against observed Delta-chi2=1.51716. This is a finite-search fitted-flat null for the truncated BAO background only; independent audit is in progress."
+    },
+    {
+      "id": "interacting_vacuum_block_cv_independent_review",
+      "status": "complete",
+      "utc": "2026-09-24T21:22:30Z",
+      "evidence": "work/compute5/interacting_vacuum_cv_review.md and experiments/interacting_vacuum_block_cv/independent_review_record.json: independent dense solves reproduce all seven conditional means, Schur covariances and scores; theory4 scalar/adaptive distances reproduce all 14 saved fold predictions without refitting. Aggregate delta=+22.75029962435 and z=2.33 contribution=+22.06981238180; no arithmetic/leakage defect. Interpretation remains a one-survey, overlapping-fold plug-in diagnostic dominated by the high-z pair."
+    },
+    {
+      "id": "status_report_and_cross_probe_plan",
+      "status": "complete",
+      "utc": "2026-09-24T21:40:21Z",
+      "evidence": "MORNING_REPORT.md and NEXT.md updated to include all IVS profile/null/early-positivity/CV evidence and the independent CV PASS. RUN_STATE and all ledger JSON rows validate; the documented unittest suite passes 17/17 (0.525 s, one numerical thread). The proposed next test freezes BAO-fit shapes and conditionally evaluates DES-Dovekie redshift blocks using the full SN covariance and a training-only magnitude intercept; it is planned, not run."
     }
   ],
   "active_local_job": null,
   "latest_scientific_checkpoint": {
-    "utc": "2026-09-24T18:59:10+00:00",
+    "utc": "2026-09-24T21:40:21+00:00",
     "evidence": [
       "experiments/bao_robustness/result.json: 200 full-covariance null mocks; 16/64-start tail estimate agrees at 17/200 with exact 95% interval [0.0503,0.1326]. scripts/recheck_bao_optimizer.py independently retried all 52 nonconverged candidates: original χ² recomputation max error 8.0e-14, no alternative improved any fit by >1e-7, and reported selected tail statistic remains stable.",
       "work/inference/REPORT.md and experiments/dovekie_screen/: independently checked exploratory 1820-row DES-Dovekie full-precision profile fit; wider CPL bound moves from wa=-3 edge to wa≈-6.78 interior, not a posterior/significance result.",
@@ -131,7 +178,18 @@
       "Curved-LCDM screen: delta-chi2=0.317363 at Omega_k=+0.022517; full covariance and 1200 flat-null mock refits give an empirical finite-search exceedance frequency 692/1200=0.5767 (CP95 0.5481-0.6048), pooled mock q95=3.822. It is not posterior significance/evidence. Main script/result/mock-stream hashes and independent review are in experiments/curvature_screen/record.json.",
       "The independent curved-FRW scalar quadrature/profile check agrees with the main chi-square minima within 3.1e-13 and verifies units, curvature sign, flat limit, analytic alpha profiling and positivity. One direct 3-parameter diagnostic at the Omega_k +/-0.10 box reports ABNORMAL at iteration 0 while its objective matches the independently profiled value; it is not counted as a successful direct optimizer run.",
       "Results IV AP/BAO replaces or conditions the older Ly-alpha BAO sample block. A dated official release audit found no machine-readable replacement/joint likelihood or cross-covariance; Eq. (26) is only a rounded 2D Gaussian approximation, and the nearby unified-tracer supplement is unrelated. Do not append it to the existing vector. Validation paper excludes f-sigma8 after mock bias, so the current product is geometry-only for our purposes. See work/literature/desi_lya_release_probe.md.",
-      "With deadline_utc=null, all future local jobs must carry an explicit task-specific --seconds bound."
+      "With deadline_utc=null, all future local jobs must carry an explicit task-specific --seconds bound.",
+      "Interaction null timing tranche completed 40/40 under a 1,800-second task bound; actual wall 35.83 s, 20 CPU workers, no GPU. Exact provenance-checked streams and input hashes are in experiments/interacting_vacuum_screen/null_timing_40.json. Six of forty selected finite-search improvements equal/exceed observed Delta-chi2 1.5172 (exact CP95 0.0571-0.2984, descriptive only); selected endpoints pass physical reevaluation, raw SciPy and invalid-penalty statuses remain explicit. The 1,160-row extension is complete; independent all-vector/provenance and eight-row adaptive-quadrature audit is still running.",
+      "The exact-current-source physical audit in work/perturbation_audit/ finds that arXiv:2609.05660v1 specifies an operational linear IVS closure (geodesic CDM; synchronous gauge; vacuum homogeneous only on CDM-comoving slices), so a blanket claim that perturbations are unspecified would be wrong. Missing for reproduction are a microphysical action and explicit primordial initial conditions/versioned CAMB config. Derived CDM positivity conditions show the selected negative Gamma background requires an early-time positivity check; our screen reaches only z=2.33.",
+      "The reviewed 1,160-mock extension completed at 20:27:27Z (892.43 seconds, 20 CPU workers, no GPU, within the 3,600-second bound): all 1,160 indices have exactly one successful record and no fit exceptions. Full extension input/output hashes are in null_extension_1160_summary.json. The separate 40-row pilot remains hash-protected.",
+      "Independent work/data_audit3/interaction_null_audit.md audit PASS: all 1,200 keys, PCG64 streams, vectors/hashes, score/fallback arithmetic and optimizer/status tallies reconcile; eight saved-parameter rows reevaluated with theory4 adaptive scalar quadrature agree to max objective 5.24e-13 / prediction 4.27e-14. Pooled 256/1,200 exceedances (0.21333; exact CP95 [0.19046,0.23762]) and linear quantiles q50=0.47047, q95=3.78610, q99=6.15132. This is a finite-search fitted-flat BAO-background null, not a posterior p-value, model evidence, or physical/CMB validation.",
+      "Official-source audit in work/literature2/ivs_current_source.md confirms arXiv v1 only as of 2026-09-24 and no exact paper CAMB patch/config in the checked public article trail; the authors' linked wgcosmo repository is cited for the MCEvidence interface, not expressly for modified CAMB. Exact implementation provenance remains an open reproducibility limitation.",
+      "Independent audit work/data_audit3/interaction_null_audit.md PASS: all 1,200 keys, PCG64 streams, vectors/hashes, score/fallback arithmetic and optimizer/status tallies reconcile; 8 saved parameter rows re-evaluated using theory4 adaptive scalar quadrature agree to max objective 5.24e-13 / prediction 4.27e-14. This validates the finite-search mock calibration, not a posterior or full physical-model claim.",
+      "Early-time IVS screen work/theory5/ extends the selected negative-rate point with photons and massless-neutrino radiation through z=1e10: no CDM zero crossing over 16 explicit H0=55–85 / fb=0.10–0.25 sensitivity cases; minimum q_c=0.206114. Follow-up work/theory6/ uses a thermal Fermi-Dirac 0.06-eV eigenstate plus 2.044 massless effective species; all 16 cases remain positive and maximum endpoint q_c shift is 3.73e-4. Both are conditional background calculations, not the exact paper CAMB configuration or a perturbation/CMB test.",
+      "Conditional redshift-block predictive check experiments/interacting_vacuum_block_cv/ and work/compute4/: seven held-out groups scored with exact Gaussian conditional means/Schur covariances and full 13x13 covariance. Summed plug-in conditional chi2 is flat LCDM 12.9670 vs IVS 35.7173 (delta +22.7503; positive favors LCDM); the z=2.33 pair contributes +22.0698. The folds are overlapping assessments from one survey, not joint evidence or an independent-survey test. Independent dense-solve/scalar implementation review is complete and passes; see work/compute5/interacting_vacuum_cv_review.md.",
+      "The documented repository regression suite `python -m unittest discover -s scripts -p 'test_*.py'` passes 17/17 in 0.533 s with one numerical thread; pytest is not installed, and unittest is the project-prescribed suite.",
+      "Independent review of the seven-fold IVS block-CV calculation PASS (work/compute5/interacting_vacuum_cv_review.md; experiments/interacting_vacuum_block_cv/independent_review_record.json): dense solves reproduce all conditional means, Schur covariances and scores; theory4 scalar/adaptive integration reproduces all 14 saved fold predictions without refitting. Aggregate delta=+22.75029962435, z=2.33 contribution=+22.06981238180; no arithmetic/leakage defect. The score remains a plug-in, overlapping-fold descriptive diagnostic dominated by that high-z block.",
+      "Root consolidated campaign findings in MORNING_REPORT.md and NEXT.md. The highest-value next screen is planned as a frozen BAO-fit-shape conditional prediction on the distinct DES-Dovekie SN likelihood, profiling only the common magnitude intercept and preserving the full SN covariance; first verify its exact data/likelihood contract. This is not a joint BAO+SN likelihood or H0 measurement."
     ]
   },
   "tasks": [
@@ -250,19 +308,99 @@
     {
       "id": "interacting_vacuum_background_contract",
       "owner": "Luna Max /root/orchestrator2_radiation/theory2",
-      "status": "running",
+      "status": "complete",
       "budget_minutes": 20,
       "output": "work/theory3/interacting_vacuum_contract.md and optional independent check",
-      "finding": "Derive Q=Gamma rho_x, w_x=-1 with baryons separately conserved, sign/domain, Gamma=0 limit, and BAO-only identifiability; no fit."
+      "finding": "Independent continuity/sign, Gamma=0, split-invariance and CDM integral identity checks pass (about 2.5e-16); 59/567 sampled model points violate positive CDM, so explicit physical feasibility is needed. BAO-only homogeneous distances do not identify f_b."
     },
     {
       "id": "interacting_vacuum_bao_profile",
       "owner": "Luna Max /root/orchestrator2_radiation/compute2",
-      "status": "running",
+      "status": "complete",
       "budget_minutes": 25,
       "budget_seconds": 1500,
       "output": "experiments/interacting_vacuum_screen/ and work/compute3/interacting_vacuum_screen_report.md",
-      "finding": "Independent bounded CPU implementation/observed profile if defensible; exact paper sign, conserved baryons, free BAO alpha, full covariance, optimizer and synthetic/Gamma=0 checks; no null ensemble in this first pass."
+      "finding": "Full-covariance background-only fit gives chi2=8.753878 at Omega_m=0.386971, Gamma/H0=-0.466665 versus flat chi2=10.271041 (Delta=1.517163). Sign means DE-to-CDM under the source convention; 27/39 multistart endpoints are finite/physical. Independent quadrature and tolerance checks agree at ~1e-13; strong Omega_m-rate degeneracy, no perturbation/early-time inference."
+    },
+    {
+      "id": "interacting_vacuum_null_timing_40",
+      "owner": "Luna Max subagent /root/orchestrator2_radiation/compute2",
+      "status": "complete",
+      "budget_seconds": 1800,
+      "output": "experiments/interacting_vacuum_screen/null_timing_40.jsonl, checkpoint/final JSON and work/compute3/interacting_vacuum_null_timing_tranche.md",
+      "finding": "CPU-only timing/calibration tranche of 40 provenance-verified flat-null BAO vectors. All 40 fit records complete; 6/40 equal or exceed observed Delta-chi2=1.5172 (exact CP95 0.0571-0.2984, pilot only). Twenty workers, 35.83 s wall, 570.16 aggregate worker-CPU seconds; all selected endpoints physically rechecked and invalid/status counts preserved. Extension is pending source review."
+    },
+    {
+      "id": "interacting_vacuum_null_extension_1160",
+      "owner": "Luna Max /root/orchestrator2_radiation/compute2",
+      "status": "complete",
+      "budget_seconds": 3600,
+      "output": "experiments/interacting_vacuum_screen/null_extension_1160.jsonl, null_extension_1160_checkpoint.json, null_extension_1160_summary.json",
+      "finding": "All 1,160 remaining indices (seed 20260924: 20-199; seed 20260925: 20-999) completed under the exact full-covariance 16-flat/39-interaction-start plus 41x41/refinement search, physical endpoint checks and nested-flat fallback. Zero mock exceptions; 250/1,160 exceed observed Delta-chi2=1.51716. Runtime 892.43 s, 20 CPU workers, no GPU. The full pool including pilot is preliminarily 256/1,200 (21.33%, CP95 19.05-23.76%), q95=3.7861; independent review is pending. Background-only finite-search null, not discovery/physical validation."
+    },
+    {
+      "id": "interacting_vacuum_perturbation_closure_audit",
+      "owner": "Luna Max subagent /root/perturbation_closure_audit",
+      "status": "complete",
+      "budget_minutes": 30,
+      "output": "work/perturbation_audit/",
+      "finding": "arXiv:2609.05660v1 specifies synchronous-gauge IVS equations/no momentum transfer in the CDM frame, operationally geodesic-CDM vacuum; vacuum homogeneous only on that slicing. No action/microphysical model or explicit primordial IC/full versioned CAMB config in article prose. Derived exact a^3*rho_c identity gives a past positivity bound for Gamma<0. Advisory only; no solver or fit."
+    },
+    {
+      "id": "interacting_vacuum_null_independent_review",
+      "owner": "Luna Max /root/interaction_mock_stream_audit",
+      "status": "complete",
+      "budget_seconds": 900,
+      "output": "work/data_audit3/interaction_null_audit.md, interaction_null_audit.json, audit_interaction_null.py",
+      "finding": "Independent audit PASS: complete PCG64 streams and all 1,200 mock vectors/hashes, score/fallback arithmetic, optimizer/status tallies and pilot-protection hashes reconcile. Eight saved rows independently re-evaluated using theory4 adaptive scalar quadrature; max objective discrepancy 5.24e-13 and prediction 4.27e-14. No refits; pooled exceedance 256/1200, CP95 [0.19046,0.23762]; finite-search background-null only."
+    },
+    {
+      "id": "interacting_vacuum_solver_path_audit",
+      "owner": "Luna Max /root/perturbation_closure_audit",
+      "status": "complete",
+      "budget_minutes": 20,
+      "output": "work/perturbation_audit/solver_path.md and solver_path.json",
+      "finding": "Official-source audit found public CAMB 2.0.4 and Planck 2018 likelihood interfaces/assets but did not verify the paper's exact CAMB patch/version, complete Cobaya configuration, or initial-condition setup. No downloads/installs/fits; staged implementation gates documented."
+    },
+    {
+      "id": "ivs_current_source_check",
+      "owner": "Luna Max subagent /root/ivs_current_source_check",
+      "status": "complete",
+      "budget_minutes": 10,
+      "output": "work/literature2/ivs_current_source.md",
+      "finding": "As of 2026-09-24, official arXiv history lists v1 only, APS accepted record exists, no article-linked exact CAMB patch/config or version-of-record was located. wgcosmo is cited for the MCEvidence interface; its YAML listing could not be fetched, so absence claims are restricted to the checked source trail."
+    },
+    {
+      "id": "ivs_early_positivity",
+      "owner": "Luna Max subagent /root/ivs_early_positivity",
+      "status": "complete",
+      "budget_minutes": 15,
+      "output": "work/theory5/ivs_early_positivity.py, .json, .md",
+      "finding": "The fixed BAO-screen point stays CDM-positive to z=1e10 in all 16 explicit massless-radiation H0/f_b cases (H0 55–85, f_b 0.10–0.25); q_c(zmax)>=0.206114. Independent n/u integrations, adaptive identity quadrature and tolerance check agree ~1e-14. Conditional background screen only; source paper's sum mnu=0.06 eV is approximated as fully massless and exact solver config remains unknown."
+    },
+    {
+      "id": "ivs_massive_nu_sensitivity",
+      "owner": "Luna Max subagent /root/ivs_early_positivity",
+      "status": "complete",
+      "budget_minutes": 10,
+      "output": "work/theory6/ivs_massive_nu_sensitivity.*",
+      "finding": "Explicit thermal FD background with one 0.06-eV eigenstate plus 2.044 massless effective species; all 16 H0/f_b cases remain positive through z=1e10 and max q_c endpoint shift from all-massless case is 3.73e-4. Formula, adaptive quadrature and tolerance checks recorded; not exact author-CAMB reproduction."
+    },
+    {
+      "id": "ivs_block_cv",
+      "owner": "Luna Max subagent /root/ivs_block_cv",
+      "status": "complete",
+      "budget_minutes": 15,
+      "output": "work/compute4/ and experiments/interacting_vacuum_block_cv/",
+      "finding": "Seven full-covariance conditional leave-one-redshift-bin-out fits complete. Sum of conditional chi2 is LCDM=12.9670, IVS=35.7173, delta IVS-LCDM=+22.7503; high-z z=2.33 fold contributes +22.0698. Plug-in predictive check from one survey, not a joint statistic/posterior/evidence; all IVS candidates checked through z=2.33; grid/refinements agree to <3e-11 training chi2. Independent review is running."
+    },
+    {
+      "id": "ivs_block_cv_independent_review",
+      "owner": "Luna Max subagent /root/interaction_mock_stream_audit",
+      "status": "complete",
+      "budget_minutes": 6,
+      "output": "work/compute5/interacting_vacuum_cv_review.*",
+      "finding": "PASS. Dense solves independently reproduce all seven Schur conditional means/covariances/scores, and theory4 scalar/adaptive integration reproduces all 14 saved fold predictions without refitting. Aggregate delta=+22.75029962435 and z=2.33 contribution=+22.06981238180; hashes pass and no arithmetic/leakage defect. Interpretation remains a one-survey overlapping-fold plug-in score dominated by the high-z pair."
     },
     {
       "id": "desi_lya_official_release_probe",
@@ -271,10 +409,19 @@
       "budget_minutes": 20,
       "output": "work/literature/desi_lya_release_probe.md",
       "finding": "Official page/directory, Results IV paper, Zenodo and linked Vega audit found no machine-readable replacement/joint likelihood or cross-covariance. Eq. (26) supports only a rounded approximate 2D Gaussian; nearby 2026 unified-tracer supplement is unrelated. No download."
+    },
+    {
+      "id": "dovekie_frozen_shape_cross_probe_cv",
+      "owner": "Root orchestration; bounded Luna Max data/compute review to be assigned",
+      "status": "planned",
+      "budget_minutes": 30,
+      "output": "work/compute6/dovekie_frozen_shape_cv.* and experiments/dovekie_frozen_shape_cv/",
+      "finding": "Planned only. Audit exact existing DES-Dovekie data/likelihood contract, then conditionally score BAO-fitted flat-LCDM and IVS shapes on predeclared SN redshift blocks with only the common magnitude intercept fit on training rows and full-covariance Gaussian conditional scores. No BAO+SN product, H0 inference, or SN shape refit. Stop if sample/covariance provenance or conditional algebra cannot be verified."
     }
   ],
   "next_commands": [
-    "Select one physically specified one-rate background departure with explicit conservation equations, identifiability and stable domain; derive it independently before coding and add matched null-selection calibration if informative.",
+    "Audit DES-Dovekie likelihood/sample provenance, row mapping and full covariance; if valid, run the bounded frozen-BAO-shape conditional SN holdout specified in NEXT.md, fitting only the common magnitude intercept on training rows and reporting the probe separately.",
+    "Request from the user, if available, the exact IVS authors' modified-CAMB patch/source, base commit, complete Cobaya configuration and initial-condition settings; otherwise retain the explicit independent-implementation limitation.",
     "Treat the Results IV replacement likelihood as blocked pending an official machine-readable file/cross-covariance; do not substitute the approximate Eq. (26) pair or unrelated unified-tracer supplement.",
     "Validate every experiment record and ledger row, source/claim-map references, all code/data/PDF hashes, and repeat the full test suite plus current plots.",
     "Checkpoint only reviewed campaign files to the current branch; invoke an Astra Max warden immediately after the commit and again after the push, then keep researching.",

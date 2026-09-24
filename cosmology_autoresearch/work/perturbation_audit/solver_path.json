@@ -1,0 +1,170 @@
+{
+  "audit_id": "ivs_2609_05660_solver_path_2026-09-24",
+  "scope": "Implementation/reproducibility path for Q=Gamma*rho_x, w_x=-1; source audit only, no downloads or code execution",
+  "status": "advisory-literature-and-source-audit",
+  "paper": {
+    "arxiv": "2609.05660v1",
+    "url": "https://arxiv.org/abs/2609.05660",
+    "submitted": "2026-09-04",
+    "accepted_prd_doi_reported_by_arxiv": "10.1103/6kdf-vzq4",
+    "local_pdf": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "local_pdf_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+    "local_pdf_provenance": "Previously acquired from arXiv PDF endpoint recorded in manifest.lock.json; verified_existing, HTTP 200; no download performed in this audit",
+    "locators": {
+      "background": "Eqs. (4)-(8), pp. 2-3",
+      "perturbation_closure": "Section II.B, p. 4; Eqs. (19)-(20)",
+      "planck": "Section III, around p. 9: plikTTTEEE+lowl+lowE",
+      "modified_solver": "Section III, around p. 9: modified CAMB + Cobaya; no version/commit/config identified in visible paper text",
+      "neutrinos": "Footnote 2, p. 2: sum m_nu=0.06 eV; N_eff=3.044"
+    }
+  },
+  "public_artifacts": {
+    "exact_ivs_camb_patch_confirmed": false,
+    "exact_ivs_cobaya_config_confirmed": false,
+    "paper_names_camb_version_or_commit": false,
+    "wgcosmo": {
+      "url": "https://github.com/williamgiare/wgcosmo",
+      "confirmed": "Public general cosmology toolbox; bibliography [157] links it in the MCEvidence/Cobaya paragraph; README describes general likelihoods, notebooks, tools and collected YAMLs.",
+      "not_confirmed": "No verifiable exact IVS CAMB patch or complete run config in browsable root/indexed results during this audit; subdirectory access was not verified, so absence is not asserted."
+    },
+    "related_not_equivalent_ide_patch": {
+      "url": "https://github.com/liaocrane/IDECAMB",
+      "confirmed": "Public CAMB/CosmoMC patch for IDE models including coupled quintessence/fluid and PPF treatments, per repository README.",
+      "same_model_verified": false
+    }
+  },
+  "model_equations": {
+    "background": [
+      "dot(rho_x)=Gamma*rho_x",
+      "dot(rho_c)+3*H*rho_c=-Gamma*rho_x",
+      "rho_x(a)=rho_x0*exp[-Gamma*integral_a^1 dln(a')/H(a')]",
+      "rho_c(a)=a^-3*[rho_c0+integral_a^1 (Gamma/H(a'))*rho_x(a')*a'^3*dln(a')]"
+    ],
+    "perturbations": [
+      "delta_c'=-(theta_c+h'/2)+a*Gamma*(rho_x/rho_c)*delta_c",
+      "theta_c'=-calH*theta_c"
+    ],
+    "sign_positivity": {
+      "Gamma_positive": "DM-to-vacuum flow; for rho_x>0, H>0 and past a<=1, the integral term in the CDM bracket is positive.",
+      "Gamma_negative": "Vacuum-to-DM forward; backward integral reduces the CDM bracket and can produce rho_c<=0.",
+      "required": ["rho_x>0", "rho_c>0 throughout integration range", "H^2>0"],
+      "warning": "The sign of the explicit delta_c source alone is not a full perturbative stability test."
+    }
+  },
+  "closure_contract": {
+    "paper_specifies": [
+      "Q=Gamma*rho_x and positive-Q direction DM->DE",
+      "baryons, radiation and neutrinos separately conserved",
+      "synchronous-gauge perturbation equations",
+      "no momentum transfer in DM rest frame",
+      "w_x=-1 vacuum has no perturbative DE contribution (Eqs. 19-20)",
+      "sum m_nu=0.06 eV and N_eff=3.044"
+    ],
+    "explicit_in_reproducer_or_author_query": [
+      "covariant Q^mu sign convention and Q^mu parallel to u_c^mu statement",
+      "whether zero-anisotropic-stress phrase applies only to dark sector; retain/clarify photon and neutrino shear for CMB",
+      "scalar initial condition; paper visible text/config does not identify it",
+      "early radiation and neutrino hierarchy, Y_He/BBN, recombination, primordial spectrum",
+      "growth/RSD density and velocity convention",
+      "Gamma/H0 conversion to solver internal time units"
+    ]
+  },
+  "camb": {
+    "current_release_as_of_2026_09_24": {
+      "version": "2.0.4",
+      "release_date": "2026-08-25",
+      "source": "https://pypi.org/project/camb/",
+      "verified_upstream_commit": "a6de8cc59124c8bbe3924f1c546f96cef73dcabb",
+      "sdist_sha256": "2f1f5f3b3964a3746693dc88a54218dca4ea049a04726f8177664c11d2d2616e",
+      "paper_version_confirmed": false
+    },
+    "legacy": {
+      "version": "1.6.6",
+      "url": "https://github.com/cmbant/CAMB",
+      "upstream_note": "described as last Planck-era precision version; CAMB_v0 is named as Planck 2018 Fortran-oriented source",
+      "paper_version_confirmed": false
+    },
+    "hooks": [
+      {
+        "files": ["fortran/equations.f90"],
+        "hooks": ["dtauda(a)", "init_background", "GaugeInterface scalar derivs", "CDM clxc derivative"],
+        "evidence": ["https://github.com/cmbant/CAMB/blob/a6de8cc59124c8bbe3924f1c546f96cef73dcabb/fortran/readme.html", "https://github.com/cmbant/CAMB/blob/a6de8cc59124c8bbe3924f1c546f96cef73dcabb/fortran/equations.f90"],
+        "adaptation": "Coupled rho_c/rho_x background and CDM energy-source perturbation; preserve geodesic velocity and species/metric sources."
+      },
+      {
+        "files": ["fortran/results.f90"],
+        "hooks": ["CAMBdata_SetParams", "grho_no_de", "GetBackgroundDensities", "distance/sound horizon/transfer output"],
+        "evidence": ["https://github.com/cmbant/CAMB/blob/a6de8cc59124c8bbe3924f1c546f96cef73dcabb/fortran/results.f90"],
+        "adaptation": "Make initialization, densities, derived quantities and transfer weights consistently use evolving interacting densities."
+      },
+      {
+        "files": ["fortran/model.f90", "camb/model.py"],
+        "hooks": ["CAMBparams Gamma field", "Python wrapper field exposure"],
+        "evidence": ["https://camb.readthedocs.io/en/latest/model.html"],
+        "adaptation": "Expose Gamma to Cobaya; official docs prescribe a Fortran CAMBparams field and matching Python model.py _fields_ entry."
+      },
+      {
+        "files": ["Cobaya run YAML / theory interface"],
+        "hooks": ["CAMB path/version", "Gamma mapping", "Planck likelihood blocks"],
+        "evidence": ["https://github.com/CobayaSampler/cobaya/blob/master/cobaya/theories/camb/camb.py", "https://github.com/CobayaSampler/cobaya/blob/master/docs/likelihood_planck.rst"],
+        "adaptation": "Pin exact theory and likelihood versions, dataset/config and model parameter transfer; do not assume the paper YAML is public."
+      }
+    ],
+    "initial_conditions": {
+      "docs": "https://camb.readthedocs.io/en/latest/model.html",
+      "supported": ["adiabatic", "CDM isocurvature", "baryon isocurvature", "neutrino density isocurvature", "neutrino velocity isocurvature", "linear initial-mode combinations"],
+      "paper_setting_confirmed": false
+    }
+  },
+  "planck": {
+    "availability": "Official Planck likelihood data are public via PLA; Cobaya documents baseline interface and package name.",
+    "archive": "COM_Likelihood_Data-baseline_R3.00.tar.gz",
+    "official_archive": "https://pla.esac.esa.int/",
+    "software_docs": "https://github.com/CobayaSampler/cobaya/blob/master/docs/likelihood_planck.rst",
+    "example_members": ["commander_dx12_v3_2_29.clik", "plik_rd12_HM_v22b_TTTEEE.clik"],
+    "authors_exact_config_confirmed": false,
+    "downloaded": false,
+    "gate": "Inspect exact PLA size first; fetch only needed likelihood code/data; honor 200 MiB bootstrap cap unless root records authorized cache expansion; hash archive and internal files."
+  },
+  "staged_gates": [
+    {
+      "id": "0-source-contract",
+      "pass": "Obtain exact patch/base commit, full Cobaya config, likelihood version, scalar IC and fiducial outputs, or record unavailable.",
+      "limit": "No downloads, code edits or fits.",
+      "stop": "If artifacts remain unavailable, label later results independent implementation, not source-paper reproduction."
+    },
+    {
+      "id": "1-background-positivity",
+      "pass": "Independent ODE and quadrature agree; Gamma=0 recovers LambdaCDM; both signs retain rho_c>0,rho_x>0,H^2>0 from early radiation era to today.",
+      "limit": {"cpu_cores": 1, "wall_minutes": 10, "gpu": false, "new_data": false},
+      "stop": "Any conservation, sign, units or positivity failure."
+    },
+    {
+      "id": "2-two-component-perturbation-sign",
+      "pass": "Eqs. 19-20 in CDM-comoving synchronous gauge pass Gamma=0 and +/-Gamma fixed-metric tests, a*Gamma unit check, conservation/frame diagnostics and independent source implementation.",
+      "limit": {"cpu_cores": 1, "wall_minutes": 10, "gpu": false, "likelihood": false},
+      "stop": "Any unresolved closure, frame, sign or unit conversion."
+    },
+    {
+      "id": "3-linear-camb-cmb-growth",
+      "pass": "Pinned solver; coupled densities feed thermodynamics/distances/transfers; Gamma=0 spectra recovery; convergence for CMB, sound horizon and linear growth; then exact Planck likelihood smoke test before inference.",
+      "limit": {"initial_processes": 1, "initial_smoke_wall_minutes": 30, "initial_chains_max": 4, "blas_openmp_threads_per_chain": 1, "gpu": "none absent measured end-to-end benefit"},
+      "download": "Planck baseline likelihood code/data only; check PLA bytes; honor bootstrap cap/cache approval; no maps or full chain grids.",
+      "stop": "Do not promote on failed Gamma=0 recovery or unconverged spectra/likelihood."
+    }
+  ],
+  "sources": [
+    {"role":"source article/metadata", "title":"arXiv:2609.05660v1", "url":"https://arxiv.org/abs/2609.05660", "type":"primary"},
+    {"role":"model predecessor", "title":"Yang et al. arXiv:1808.01669", "url":"https://arxiv.org/abs/1808.01669", "type":"primary"},
+    {"role":"interacting-vacuum geodesic-CDM closure precedent, not same Q law", "title":"Martinelli et al. arXiv:1902.10694", "url":"https://arxiv.org/abs/1902.10694", "type":"primary"},
+    {"role":"CAMB release/provenance", "title":"CAMB 2.0.4 PyPI", "url":"https://pypi.org/project/camb/", "type":"official project registry with upstream attestation"},
+    {"role":"CAMB source", "title":"equations.f90 at verified 2.0.4 source commit", "url":"https://github.com/cmbant/CAMB/blob/a6de8cc59124c8bbe3924f1c546f96cef73dcabb/fortran/equations.f90", "type":"primary software source"},
+    {"role":"CAMB source map", "title":"Fortran ReadMe at verified 2.0.4 source commit", "url":"https://github.com/cmbant/CAMB/blob/a6de8cc59124c8bbe3924f1c546f96cef73dcabb/fortran/readme.html", "type":"official documentation"},
+    {"role":"CAMB parameter/IC docs", "title":"Input parameter model", "url":"https://camb.readthedocs.io/en/latest/model.html", "type":"official documentation"},
+    {"role":"official Planck data", "title":"Planck Legacy Archive", "url":"https://pla.esac.esa.int/", "type":"official mission portal"},
+    {"role":"Planck release", "title":"ESA Planck mission page", "url":"https://www.cosmos.esa.int/web/planck", "type":"official mission page"},
+    {"role":"Planck likelihood interface", "title":"Cobaya Planck likelihood documentation", "url":"https://github.com/CobayaSampler/cobaya/blob/master/docs/likelihood_planck.rst", "type":"primary project documentation"},
+    {"role":"Planck likelihood methods", "title":"Planck 2018 results V", "url":"https://arxiv.org/abs/1907.12875", "type":"primary collaboration paper"},
+    {"role":"related distinct IDE patch", "title":"IDECAMB", "url":"https://github.com/liaocrane/IDECAMB", "type":"primary code repository"}
+  ]
+}

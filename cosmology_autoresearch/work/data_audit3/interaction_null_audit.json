@@ -1,0 +1,1426 @@
+{
+  "status": "pass",
+  "scope": "Fitted-flat, finite-search, 13-row DESI DR2 BAO background null calibration; provenance/status audit and eight saved-parameter scalar-distance reevaluations; no full search/refits",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "cpu_only": true,
+    "gpu_used": false,
+    "numerical_threads": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "audit_runtime_seconds": 0.4800830688327551
+  },
+  "commands": {
+    "audit": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --seconds 900 -- .venv/bin/python work/data_audit3/audit_interaction_null.py",
+    "no_refit_statement": "All 1,200 archived optimizer records were inspected; only the eight selected rows were reevaluated at saved parameter values. No optimizer was called in this audit."
+  },
+  "provenance": {
+    "input_sha256": {
+      "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "experiments/campaign_seed_bao/result.json": "92662f3ee42500d2be34d9f87b485fe56c82e9550fa674e42f4dec2bf2cab1f0",
+      "work/data_audit2/provenance_check.json": "8c4fed3713b9670c37133bfef13ca1a315acbc7d7880e23547f35673fdd7f581",
+      "experiments/interacting_vacuum_screen/result.json": "e347b8934b2afdc23d23ef7d39c70f963b73888d17137f55caf7e51af87d43ae",
+      "experiments/interacting_vacuum_screen/null_timing_40.jsonl": "a5138b807ff21baf776e389848177db617e08b6f59d9318b3ff1e421f9dab09e",
+      "experiments/interacting_vacuum_screen/null_timing_40.json": "402ed8fe5c9864be6629aa0022f7e666d3a919674b8f75b3333951363cb27b97",
+      "experiments/interacting_vacuum_screen/null_timing_40_record.json": "78afee1a796bcf712fcf4c54c35fc8d77a78a63ba509f9a82399dbec47f03a43",
+      "experiments/interacting_vacuum_screen/null_timing_40_checkpoint.json": "3f283ee1083f8353ebb8c00b8ae63695702174704afef8be97946d6bee5961ca",
+      "experiments/interacting_vacuum_screen/null_extension_1160.jsonl": "caf01a78e711ede965f98b5e389e28affe74e1e292e888c1483fc8fcc85feed1",
+      "experiments/interacting_vacuum_screen/null_extension_1160_summary.json": "8bcc93486846237f020b3178403518a8d7f668da5761c0bf7d4c4e83ec8c287a",
+      "experiments/interacting_vacuum_screen/null_extension_1160_checkpoint.json": "55b616637a08c0cf47e2559969dc15beedb34359e4f81f50ce8b44dd3e9d2a1d",
+      "experiments/interacting_vacuum_screen/interacting_vacuum_null_extension.py": "26cdb4216af9e8bfed219115d5b35de86f03a806c6a76601693c561070e00534",
+      "experiments/interacting_vacuum_screen/interacting_vacuum_null_timing.py": "35f8edf052a7d76eaa63ea1e2390d79123c1111e7c605f8b2b49973f5b79d5d4",
+      "experiments/interacting_vacuum_screen/interacting_vacuum_profile.py": "ae99ae789aa02885667e27aa2cbbaa0b035323e69d1a4bf7bbd3848949fc5282",
+      "work/theory4/audit_interacting_identifiability.py": "6cb55d20d50baa4520970296fdb74bf94f66273c1db3cf0bf2438018194a3052",
+      "work/theory4/interacting_vacuum_identifiability.json": "4f113f3f5ae8afd2f6d41c7fb1bf64caf086ef34a0bda5411f090aba2bec4a4b"
+    },
+    "prior_data_audit2_status": "pass",
+    "prior_stream_reconstruction": {
+      "20260924": {
+        "count": 200,
+        "bit_generator": "PCG64",
+        "shape": [
+          200,
+          13
+        ],
+        "normal_stream_sha256_little_endian_float64": "a5265eba65345219facd2ce66e1edf653f7a2a872f51a79905db228fe1f3de21",
+        "matches_passing_data_audit2_contract": true
+      },
+      "20260925": {
+        "count": 1000,
+        "bit_generator": "PCG64",
+        "shape": [
+          1000,
+          13
+        ],
+        "normal_stream_sha256_little_endian_float64": "b9cf266dee55dd1f67366c030273a27ae1fb107691baf8bfc3eab07fa407c985",
+        "matches_passing_data_audit2_contract": true
+      }
+    },
+    "fitted_flat_null_mean_source": "experiments/campaign_seed_bao/result.json, model=lcdm saved prediction",
+    "fitted_flat_null_mean_vector_sha256_little_endian_float64": "707f6894421b38233ed79459c814cdf23a76df29e28973ac5dbebdf8851096b0",
+    "covariance_sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+    "covariance_shape": [
+      13,
+      13
+    ],
+    "covariance_cholesky_positive": true,
+    "covariance_min_eigenvalue": 0.00578998687,
+    "covariance_condition_number_2": 116.8238290439558,
+    "pilot_result_hash_audit": {
+      "record": true,
+      "result": true,
+      "all_result_input_hashes_match_current": true,
+      "file_hash_checks": {
+        "context/data/desi_dr2_cov.txt": {
+          "expected": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+          "actual": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+          "matches": true
+        },
+        "context/data/desi_dr2_mean.txt": {
+          "expected": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+          "actual": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+          "matches": true
+        },
+        "experiments/bao_robustness/null_extension_1000_seed20260925.json": {
+          "expected": "5063ae50f267477b41febd30eabe00c3167b0ccb2d826cd94f3fc966dc025693",
+          "actual": "5063ae50f267477b41febd30eabe00c3167b0ccb2d826cd94f3fc966dc025693",
+          "matches": true
+        },
+        "experiments/bao_robustness/result.json": {
+          "expected": "0f477285029024fa359740e726b46f2abf8c87ea8704f488d8ad6658c3fc2a3e",
+          "actual": "0f477285029024fa359740e726b46f2abf8c87ea8704f488d8ad6658c3fc2a3e",
+          "matches": true
+        },
+        "experiments/campaign_seed_bao/result.json": {
+          "expected": "92662f3ee42500d2be34d9f87b485fe56c82e9550fa674e42f4dec2bf2cab1f0",
+          "actual": "92662f3ee42500d2be34d9f87b485fe56c82e9550fa674e42f4dec2bf2cab1f0",
+          "matches": true
+        },
+        "experiments/interacting_vacuum_screen/interacting_vacuum_null_timing.py": {
+          "expected": "35f8edf052a7d76eaa63ea1e2390d79123c1111e7c605f8b2b49973f5b79d5d4",
+          "actual": "35f8edf052a7d76eaa63ea1e2390d79123c1111e7c605f8b2b49973f5b79d5d4",
+          "matches": true
+        },
+        "experiments/interacting_vacuum_screen/interacting_vacuum_profile.py": {
+          "expected": "ae99ae789aa02885667e27aa2cbbaa0b035323e69d1a4bf7bbd3848949fc5282",
+          "actual": "ae99ae789aa02885667e27aa2cbbaa0b035323e69d1a4bf7bbd3848949fc5282",
+          "matches": true
+        },
+        "experiments/interacting_vacuum_screen/null_timing_40.jsonl": {
+          "expected": "a5138b807ff21baf776e389848177db617e08b6f59d9318b3ff1e421f9dab09e",
+          "actual": "a5138b807ff21baf776e389848177db617e08b6f59d9318b3ff1e421f9dab09e",
+          "matches": true
+        },
+        "scripts/background_bao.py": {
+          "expected": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2",
+          "actual": "34bdf1d81397b39b740faa3e2f4a79748d5fa9d3bfdd8303619d631dbf8aa2e2",
+          "matches": true
+        },
+        "work/data_audit2/provenance_check.json": {
+          "expected": "8c4fed3713b9670c37133bfef13ca1a315acbc7d7880e23547f35673fdd7f581",
+          "actual": "8c4fed3713b9670c37133bfef13ca1a315acbc7d7880e23547f35673fdd7f581",
+          "matches": true
+        }
+      },
+      "recorded_file_sha256": {
+        "pilot_rows": "a5138b807ff21baf776e389848177db617e08b6f59d9318b3ff1e421f9dab09e",
+        "pilot_result": "402ed8fe5c9864be6629aa0022f7e666d3a919674b8f75b3333951363cb27b97"
+      }
+    },
+    "extension_provenance_audit": {
+      "all_summary_input_hashes_match_current": true,
+      "pilot_protection_hashes_match": true,
+      "pilot_protection": {
+        "pilot_output_paths_modified": false,
+        "unchanged_hash_checks": {
+          "experiments/interacting_vacuum_screen/interacting_vacuum_null_timing.py": {
+            "matches_reviewed_hash": true,
+            "sha256": "35f8edf052a7d76eaa63ea1e2390d79123c1111e7c605f8b2b49973f5b79d5d4"
+          },
+          "experiments/interacting_vacuum_screen/null_timing_40.json": {
+            "matches_reviewed_hash": true,
+            "sha256": "402ed8fe5c9864be6629aa0022f7e666d3a919674b8f75b3333951363cb27b97"
+          },
+          "experiments/interacting_vacuum_screen/null_timing_40.jsonl": {
+            "matches_reviewed_hash": true,
+            "sha256": "a5138b807ff21baf776e389848177db617e08b6f59d9318b3ff1e421f9dab09e"
+          },
+          "experiments/interacting_vacuum_screen/null_timing_40_checkpoint.json": {
+            "matches_reviewed_hash": true,
+            "sha256": "3f283ee1083f8353ebb8c00b8ae63695702174704afef8be97946d6bee5961ca"
+          }
+        }
+      },
+      "checkpoint_and_jsonl_hashes_match": true,
+      "summary_code_sha256": "26cdb4216af9e8bfed219115d5b35de86f03a806c6a76601693c561070e00534",
+      "extension_code_sha256_current": "26cdb4216af9e8bfed219115d5b35de86f03a806c6a76601693c561070e00534",
+      "extension_attempt_record_count": 1160,
+      "extension_unique_complete_count": 1160
+    },
+    "record_counts": {
+      "pilot_file_rows": 40,
+      "extension_file_rows": 1160,
+      "pilot_expected_unique_keys": 40,
+      "extension_expected_unique_keys": 1160,
+      "pooled_unique_keys": 1200,
+      "pilot_extension_key_overlap": 0,
+      "complete_status_counts": {
+        "complete": 1200
+      },
+      "missing_or_duplicated_keys": {
+        "pilot": 0,
+        "extension": 0,
+        "pooled": 0
+      }
+    },
+    "mock_vector_reconstruction": {
+      "generator": "np.random.default_rng(seed) (PCG64); standard_normal((N,13)); mean + normals[i] @ L.T with L=lower Cholesky(full covariance)",
+      "stored_vector_field": "mock_vector, float64 values checked array-exactly; little-endian float64 SHA-256 also checked",
+      "max_abs_value_difference": 0.0,
+      "vectors_checked": 1200,
+      "sampled_vector_digests_are_not_substitutes_for_full_stream_digest": true
+    }
+  },
+  "pooled_null_statistics": {
+    "null": "fixed fitted flat-LCDM mean; full correlated Gaussian 13-vector mocks; search rerun under a finite multi-start plus 41x41/refinement interacting-vacuum BAO background profile",
+    "statistic": "selection_delta_chi2_flat_minus_selected_interaction_including_exact_nested_flat_fallback",
+    "observed_delta_chi2_reference": 1.5171630696615157,
+    "n": 1200,
+    "exceedance_count_delta_ge_observed": 256,
+    "exceedance_fraction_descriptive_only": 0.21333333333333335,
+    "exact_two_sided_clopper_pearson_95_interval": [
+      0.1904634676852676,
+      0.23761698314656451
+    ],
+    "quantiles_linear_interpolation": {
+      "q50": 0.47047069856798296,
+      "q95": 3.7860981373732976,
+      "q99": 6.151324592226679
+    },
+    "raw_delta_quantiles_linear_interpolation": {
+      "q50": 0.47047069856798296,
+      "q95": 3.7860981373732976,
+      "q99": 6.151324592226679
+    },
+    "selected_delta_min_median_max": [
+      2.3342919064361922e-07,
+      0.47047069856798296,
+      7.48846760928911
+    ],
+    "raw_delta_min_median_max": [
+      2.3342919064361922e-07,
+      0.47047069856798296,
+      7.48846760928911
+    ],
+    "classification": "fitted-flat finite-search BAO-background null frequency, not a p-value, posterior probability, evidence, discovery significance, or validation of the full physical interacting cosmology"
+  },
+  "search_integrity_and_negative_checks": {
+    "mismatches": {},
+    "selected_delta_negative_count": 0,
+    "raw_delta_negative_count": 0,
+    "nested_flat_fallback_count_independent": 0,
+    "stored_summary_nested_fallback_count": 0,
+    "selected_delta_formula_max_abs_error": 0.0,
+    "raw_delta_formula_max_abs_error": 0.0,
+    "endpoint_optimizer_audit": {
+      "flat_attempts": 19200,
+      "flat_raw_success": 18458,
+      "flat_raw_failure": 742,
+      "flat_valid_physical": 19200,
+      "flat_invalid_or_penalty": 0,
+      "flat_success_and_valid": 18458,
+      "flat_failure_but_valid": 742,
+      "flat_success_but_invalid": 0,
+      "flat_failure_and_invalid": 0,
+      "flat_invalid_penalty_endpoints": 0,
+      "interaction_attempts": 46800,
+      "interaction_raw_success": 46712,
+      "interaction_raw_failure": 88,
+      "interaction_valid_physical": 32400,
+      "interaction_invalid_or_penalty": 14400,
+      "interaction_success_and_valid": 32312,
+      "interaction_failure_but_valid": 88,
+      "interaction_success_but_invalid": 14400,
+      "interaction_failure_and_invalid": 0,
+      "interaction_invalid_penalty_endpoints": 14400,
+      "grid_refinement_total": 1200,
+      "grid_refinement_physically_valid": 1200,
+      "grid_refinement_raw_success": 1120,
+      "grid_refinement_raw_failure": 80,
+      "grid_refinement_success_but_invalid": 0,
+      "grid_refinement_failure_but_valid": 80,
+      "grid_invalid_evaluations": 584400,
+      "nested_fallback_total": 0,
+      "selected_gamma_negative": 597,
+      "selected_gamma_zero": 0,
+      "selected_gamma_positive": 603,
+      "raw_gamma_negative": 597,
+      "raw_gamma_zero": 0,
+      "raw_gamma_positive": 603
+    },
+    "endpoint_status_count_reconciliation_vs_tranche_summaries": {
+      "flat_raw_scipy_failures": {
+        "record_recount": 742,
+        "stored_tranche_summaries": 742,
+        "matches": true
+      },
+      "flat_invalid_penalty_endpoints": {
+        "record_recount": 0,
+        "stored_tranche_summaries": 0,
+        "matches": true
+      },
+      "interaction_raw_scipy_failures": {
+        "record_recount": 88,
+        "stored_tranche_summaries": 88,
+        "matches": true
+      },
+      "interaction_invalid_penalty_endpoints": {
+        "record_recount": 14400,
+        "stored_tranche_summaries": 14400,
+        "matches": true
+      },
+      "grid_refinement_raw_scipy_failures": {
+        "record_recount": 80,
+        "stored_tranche_summaries": 80,
+        "matches": true
+      },
+      "grid_invalid_evaluations": {
+        "record_recount": 584400,
+        "stored_tranche_summaries": 584400,
+        "matches": true
+      },
+      "nested_flat_fallback_count": {
+        "record_recount": 0,
+        "stored_tranche_summaries": 0,
+        "matches": true
+      }
+    },
+    "endpoint_audit_mismatch_counts": {},
+    "flat_selected_bound_hits": {},
+    "interaction_multistart_selected_bound_hits": {},
+    "final_selected_bound_hits": {},
+    "selected_candidate_success_and_source_counts": {
+      "True:39-start bounded multistart": 1075,
+      "True:41x41 grid plus L-BFGS-B refinement": 107,
+      "False:41x41 grid plus L-BFGS-B refinement": 18
+    },
+    "raw_and_selected_gamma_sign_counts": {
+      "selected": {
+        "negative": 597,
+        "zero": 0,
+        "positive": 603,
+        "minimum": -1.0910390933742373,
+        "maximum": 1.0945244556595017
+      },
+      "raw_best": {
+        "negative": 597,
+        "zero": 0,
+        "positive": 603,
+        "minimum": -1.0910390933742373,
+        "maximum": 1.0945244556595017
+      }
+    },
+    "grid_valid_candidate_source_counts": {
+      "41x41 grid plus L-BFGS-B refinement": 1200
+    },
+    "known_numerical_behavior": "Raw SciPy success is recorded separately from endpoint physical validity. Invalid penalty endpoints that carry success=true remain invalid and are excluded from profile candidate selection; valid endpoints with success=false remain separately visible. The grid-refinement candidate is retained when its endpoint is physically revalidated, matching the observed-data search contract."
+  },
+  "eight_deterministic_theory4_checks": {
+    "selection_rule": "sort all complete rows by (seed,index); choose the first four with selected delta >= observed delta and first four below it",
+    "independent_code": "work/theory4/audit_interacting_identifiability.py",
+    "method": "theory4 scalar_history DOP853 plus adaptive scalar quadrature for D_M and full-covariance Cholesky likelihood at saved alpha, Omega_m and Gamma/H0; flat, raw-interaction and selected-interaction candidates evaluated per row",
+    "fixed_baryon_split": "try theory4 f_b=0.16; if that illustrative split is not viable, repeat geometry at an explicit positive split below the independently computed feasibility ceiling and retain the f_b=0.16 failure flag",
+    "rows": [
+      {
+        "seed": 20260924,
+        "index": 3,
+        "class": "exceedance",
+        "selected_delta_chi2": 2.1145657807800653,
+        "nested_flat_fallback_used": false,
+        "selected_source": "39-start bounded multistart",
+        "fit_reevaluations": [
+          {
+            "role": "flat_LCDM",
+            "parameters": {
+              "Omega_m": 0.27383598733428827,
+              "Gamma_over_H0": 0.0,
+              "alpha": 29.105664886916045
+            },
+            "independent_chi2": 14.004976588983066,
+            "stored_chi2": 14.004976588982995,
+            "chi2_difference_independent_minus_stored": 7.105427357601002e-14,
+            "independent_prediction": [
+              7.843993481292675,
+              13.179646200145095,
+              22.529602686996252,
+              17.359026296409375,
+              20.15299417168028,
+              21.666567853586475,
+              17.69005653170133,
+              27.823884113459076,
+              14.287368376964574,
+              30.055469604445825,
+              13.117548404526447,
+              8.841096294416612,
+              39.16419569729794
+            ],
+            "max_abs_prediction_difference": 1.4210854715202004e-14,
+            "unit_prediction_max_abs_difference": 0.0,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.27383598733428827,
+              "minimum_sampled_X": 0.7261640126657117,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.9999999999999993,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.04381375797348613,
+              "minimum_CDM_density_fraction": 0.23002222936080213,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.23002222936080213,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "raw_interacting_optimum",
+            "parameters": {
+              "Omega_m": 0.1625068265429359,
+              "Gamma_over_H0": 0.49619935042068697,
+              "alpha": 28.26425392302455
+            },
+            "independent_chi2": 11.890410808203063,
+            "stored_chi2": 11.89041080820293,
+            "chi2_difference_independent_minus_stored": 1.3322676295501878e-13,
+            "independent_prediction": [
+              7.7881088963419085,
+              13.116517416949373,
+              22.716079893000302,
+              17.333034014021518,
+              20.33288089245423,
+              21.675243415557297,
+              17.810871598779052,
+              27.85933114737912,
+              14.310937611372369,
+              30.092325923186678,
+              13.1125270715723,
+              8.77378738074455,
+              39.162833676528514
+            ],
+            "max_abs_prediction_difference": 1.7763568394002505e-14,
+            "unit_prediction_max_abs_difference": 6.661338147750939e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.1625068265429359,
+              "minimum_sampled_X": 0.5619523961855644,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 1.0,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.026001092246869747,
+              "minimum_CDM_density_fraction": 0.13650573429606616,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.13650573429606616,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "selected_interaction_candidate",
+            "parameters": {
+              "Omega_m": 0.1625068265429359,
+              "Gamma_over_H0": 0.49619935042068697,
+              "alpha": 28.26425392302455
+            },
+            "independent_chi2": 11.890410808203063,
+            "stored_chi2": 11.89041080820293,
+            "chi2_difference_independent_minus_stored": 1.3322676295501878e-13,
+            "independent_prediction": [
+              7.7881088963419085,
+              13.116517416949373,
+              22.716079893000302,
+              17.333034014021518,
+              20.33288089245423,
+              21.675243415557297,
+              17.810871598779052,
+              27.85933114737912,
+              14.310937611372369,
+              30.092325923186678,
+              13.1125270715723,
+              8.77378738074455,
+              39.162833676528514
+            ],
+            "max_abs_prediction_difference": 1.7763568394002505e-14,
+            "unit_prediction_max_abs_difference": 6.661338147750939e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.1625068265429359,
+              "minimum_sampled_X": 0.5619523961855644,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 1.0,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.026001092246869747,
+              "minimum_CDM_density_fraction": 0.13650573429606616,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.13650573429606616,
+              "split_monotonic_endpoint": "today"
+            }
+          }
+        ]
+      },
+      {
+        "seed": 20260924,
+        "index": 16,
+        "class": "exceedance",
+        "selected_delta_chi2": 3.1433587193786074,
+        "nested_flat_fallback_used": false,
+        "selected_source": "39-start bounded multistart",
+        "fit_reevaluations": [
+          {
+            "role": "flat_LCDM",
+            "parameters": {
+              "Omega_m": 0.3047750808896471,
+              "Gamma_over_H0": 0.0,
+              "alpha": 29.73604547236005
+            },
+            "independent_chi2": 20.77024595147099,
+            "stored_chi2": 20.770245951470613,
+            "chi2_difference_independent_minus_stored": 3.765876499528531e-13,
+            "independent_prediction": [
+              7.94234427436808,
+              13.317305370582087,
+              22.51341766459641,
+              17.480054795619065,
+              20.00944169934503,
+              21.744143115038543,
+              17.461842940260194,
+              27.800646151719334,
+              14.008485581330618,
+              29.986479127835956,
+              12.836250189255871,
+              8.602226517400158,
+              38.87191837547447
+            ],
+            "max_abs_prediction_difference": 2.4868995751603507e-14,
+            "unit_prediction_max_abs_difference": 0.0,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.3047750808896471,
+              "minimum_sampled_X": 0.6952249191103529,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.9999999999999988,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.04876401294234354,
+              "minimum_CDM_density_fraction": 0.25601106794730355,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.25601106794730355,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "raw_interacting_optimum",
+            "parameters": {
+              "Omega_m": 0.15412783818527084,
+              "Gamma_over_H0": 0.6880814009019606,
+              "alpha": 28.63486840426275
+            },
+            "independent_chi2": 17.626887232091946,
+            "stored_chi2": 17.626887232092006,
+            "chi2_difference_independent_minus_stored": -6.039613253960852e-14,
+            "independent_prediction": [
+              7.875393333180708,
+              13.24263659564062,
+              22.754716293833795,
+              17.451996208016816,
+              20.229114251645964,
+              21.757314441400624,
+              17.6010989172836,
+              27.842849123101633,
+              14.028366869069513,
+              30.029082377046414,
+              12.822878610201611,
+              8.520475451876802,
+              38.865358916033394
+            ],
+            "max_abs_prediction_difference": 3.552713678800501e-14,
+            "unit_prediction_max_abs_difference": 1.1102230246251565e-15,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.15412783818527084,
+              "minimum_sampled_X": 0.4906796155676678,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 1.0,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.024660454109643334,
+              "minimum_CDM_density_fraction": 0.12946738407562752,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.12946738407562752,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "selected_interaction_candidate",
+            "parameters": {
+              "Omega_m": 0.15412783818527084,
+              "Gamma_over_H0": 0.6880814009019606,
+              "alpha": 28.63486840426275
+            },
+            "independent_chi2": 17.626887232091946,
+            "stored_chi2": 17.626887232092006,
+            "chi2_difference_independent_minus_stored": -6.039613253960852e-14,
+            "independent_prediction": [
+              7.875393333180708,
+              13.24263659564062,
+              22.754716293833795,
+              17.451996208016816,
+              20.229114251645964,
+              21.757314441400624,
+              17.6010989172836,
+              27.842849123101633,
+              14.028366869069513,
+              30.029082377046414,
+              12.822878610201611,
+              8.520475451876802,
+              38.865358916033394
+            ],
+            "max_abs_prediction_difference": 3.552713678800501e-14,
+            "unit_prediction_max_abs_difference": 1.1102230246251565e-15,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.15412783818527084,
+              "minimum_sampled_X": 0.4906796155676678,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 1.0,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.024660454109643334,
+              "minimum_CDM_density_fraction": 0.12946738407562752,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.12946738407562752,
+              "split_monotonic_endpoint": "today"
+            }
+          }
+        ]
+      },
+      {
+        "seed": 20260924,
+        "index": 29,
+        "class": "exceedance",
+        "selected_delta_chi2": 5.840010022954276,
+        "nested_flat_fallback_used": false,
+        "selected_source": "39-start bounded multistart",
+        "fit_reevaluations": [
+          {
+            "role": "flat_LCDM",
+            "parameters": {
+              "Omega_m": 0.298437511980615,
+              "Gamma_over_H0": 0.0,
+              "alpha": 29.61771754390351
+            },
+            "independent_chi2": 20.96132144548815,
+            "stored_chi2": 20.96132144548783,
+            "chi2_difference_independent_minus_stored": 3.197442310920451e-13,
+            "independent_prediction": [
+              7.925146420990764,
+              13.293936828033338,
+              22.524000222894827,
+              17.461324829155277,
+              20.044183001366203,
+              21.735308063226935,
+              17.512055362184157,
+              27.813360382968092,
+              14.067003721544529,
+              30.008745933284057,
+              12.894722143687511,
+              8.650808739291309,
+              38.94000246035182
+            ],
+            "max_abs_prediction_difference": 1.0658141036401503e-14,
+            "unit_prediction_max_abs_difference": 0.0,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.298437511980615,
+              "minimum_sampled_X": 0.7015624880193849,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.999999999999999,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.047750001916898405,
+              "minimum_CDM_density_fraction": 0.2506875100637166,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.2506875100637166,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "raw_interacting_optimum",
+            "parameters": {
+              "Omega_m": 0.07798183391658971,
+              "Gamma_over_H0": 0.9652479978806047,
+              "alpha": 28.02680988160841
+            },
+            "independent_chi2": 15.121311422534053,
+            "stored_chi2": 15.121311422533553,
+            "chi2_difference_independent_minus_stored": 4.991562718714704e-13,
+            "independent_prediction": [
+              7.829002834393532,
+              13.187796741626522,
+              22.87849539134158,
+              17.423222777636223,
+              20.362682675849683,
+              21.756490149814134,
+              17.71007636265637,
+              27.874720361463876,
+              14.090648547863212,
+              30.069877004861606,
+              12.870634945642648,
+              8.530876802261783,
+              38.92734996888699
+            ],
+            "max_abs_prediction_difference": 1.7763568394002505e-14,
+            "unit_prediction_max_abs_difference": 6.661338147750939e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.07798183391658971,
+              "minimum_sampled_X": 0.42238315209713384,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 1.0,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.012477093426654354,
+              "minimum_CDM_density_fraction": 0.06550474048993535,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.06550474048993535,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "selected_interaction_candidate",
+            "parameters": {
+              "Omega_m": 0.07798183391658971,
+              "Gamma_over_H0": 0.9652479978806047,
+              "alpha": 28.02680988160841
+            },
+            "independent_chi2": 15.121311422534053,
+            "stored_chi2": 15.121311422533553,
+            "chi2_difference_independent_minus_stored": 4.991562718714704e-13,
+            "independent_prediction": [
+              7.829002834393532,
+              13.187796741626522,
+              22.87849539134158,
+              17.423222777636223,
+              20.362682675849683,
+              21.756490149814134,
+              17.71007636265637,
+              27.874720361463876,
+              14.090648547863212,
+              30.069877004861606,
+              12.870634945642648,
+              8.530876802261783,
+              38.92734996888699
+            ],
+            "max_abs_prediction_difference": 1.7763568394002505e-14,
+            "unit_prediction_max_abs_difference": 6.661338147750939e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.07798183391658971,
+              "minimum_sampled_X": 0.42238315209713384,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 1.0,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.012477093426654354,
+              "minimum_CDM_density_fraction": 0.06550474048993535,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.06550474048993535,
+              "split_monotonic_endpoint": "today"
+            }
+          }
+        ]
+      },
+      {
+        "seed": 20260924,
+        "index": 31,
+        "class": "exceedance",
+        "selected_delta_chi2": 2.7255089733270133,
+        "nested_flat_fallback_used": false,
+        "selected_source": "39-start bounded multistart",
+        "fit_reevaluations": [
+          {
+            "role": "flat_LCDM",
+            "parameters": {
+              "Omega_m": 0.29899845060207697,
+              "Gamma_over_H0": 0.0,
+              "alpha": 29.43151550340258
+            },
+            "independent_chi2": 16.630053063067436,
+            "stored_chi2": 16.630053063067134,
+            "chi2_difference_independent_minus_stored": 3.019806626980426e-13,
+            "independent_prediction": [
+              7.87405127119598,
+              13.207743626020077,
+              22.373531155970543,
+              17.347053872583995,
+              19.9080305387356,
+              21.591784029870148,
+              17.391332707015966,
+              27.627567801586483,
+              13.968404201563555,
+              29.80752766387952,
+              12.80390654534854,
+              8.58904231902968,
+              38.675405333809564
+            ],
+            "max_abs_prediction_difference": 1.0658141036401503e-14,
+            "unit_prediction_max_abs_difference": 0.0,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.29899845060207697,
+              "minimum_sampled_X": 0.701001549397923,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.9999999999999994,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.047839752096332316,
+              "minimum_CDM_density_fraction": 0.2511586985057447,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.2511586985057447,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "raw_interacting_optimum",
+            "parameters": {
+              "Omega_m": 0.42384379366550584,
+              "Gamma_over_H0": -0.6704917622620122,
+              "alpha": 30.39894639591959
+            },
+            "independent_chi2": 13.904544089740645,
+            "stored_chi2": 13.90454408974012,
+            "chi2_difference_independent_minus_stored": 5.240252676230739e-13,
+            "independent_prediction": [
+              7.936013162646198,
+              13.278366218137766,
+              22.163395781119075,
+              17.37558838761028,
+              19.702569506018165,
+              21.580279528524194,
+              17.249871374881884,
+              27.584036563610283,
+              13.938677936143435,
+              29.76207150056141,
+              12.80865027569911,
+              8.673852566627478,
+              38.67692445797798
+            ],
+            "max_abs_prediction_difference": 1.4210854715202004e-14,
+            "unit_prediction_max_abs_difference": 4.440892098500626e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.42384379366550584,
+              "minimum_sampled_X": 0.5761562063344942,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.7242147539901799,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.06781500698648094,
+              "minimum_CDM_density_fraction": 0.35602878667902493,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 8.83045267353906,
+              "split_monotonic_endpoint": "zmax"
+            }
+          },
+          {
+            "role": "selected_interaction_candidate",
+            "parameters": {
+              "Omega_m": 0.42384379366550584,
+              "Gamma_over_H0": -0.6704917622620122,
+              "alpha": 30.39894639591959
+            },
+            "independent_chi2": 13.904544089740645,
+            "stored_chi2": 13.90454408974012,
+            "chi2_difference_independent_minus_stored": 5.240252676230739e-13,
+            "independent_prediction": [
+              7.936013162646198,
+              13.278366218137766,
+              22.163395781119075,
+              17.37558838761028,
+              19.702569506018165,
+              21.580279528524194,
+              17.249871374881884,
+              27.584036563610283,
+              13.938677936143435,
+              29.76207150056141,
+              12.80865027569911,
+              8.673852566627478,
+              38.67692445797798
+            ],
+            "max_abs_prediction_difference": 1.4210854715202004e-14,
+            "unit_prediction_max_abs_difference": 4.440892098500626e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.42384379366550584,
+              "minimum_sampled_X": 0.5761562063344942,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.7242147539901799,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.06781500698648094,
+              "minimum_CDM_density_fraction": 0.35602878667902493,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 8.83045267353906,
+              "split_monotonic_endpoint": "zmax"
+            }
+          }
+        ]
+      },
+      {
+        "seed": 20260924,
+        "index": 0,
+        "class": "non_exceedance",
+        "selected_delta_chi2": 0.5200603495882685,
+        "nested_flat_fallback_used": false,
+        "selected_source": "39-start bounded multistart",
+        "fit_reevaluations": [
+          {
+            "role": "flat_LCDM",
+            "parameters": {
+              "Omega_m": 0.3055265858529228,
+              "Gamma_over_H0": 0.0,
+              "alpha": 29.651352604907668
+            },
+            "independent_chi2": 6.571820679538879,
+            "stored_chi2": 6.5718206795388,
+            "chi2_difference_independent_minus_stored": 7.904787935331115e-14,
+            "independent_prediction": [
+              7.918019261296545,
+              13.275876317403393,
+              22.437492940337872,
+              17.42427399603246,
+              19.939004628743376,
+              21.673062135897087,
+              17.398061457534304,
+              27.706964229650143,
+              13.955206839015993,
+              29.884435104023673,
+              12.786869878439035,
+              8.568052100492672,
+              38.73507706340832
+            ],
+            "max_abs_prediction_difference": 1.4210854715202004e-14,
+            "unit_prediction_max_abs_difference": 0.0,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.3055265858529228,
+              "minimum_sampled_X": 0.6944734141470772,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.9999999999999997,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.04888425373646765,
+              "minimum_CDM_density_fraction": 0.25664233211645515,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.25664233211645515,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "raw_interacting_optimum",
+            "parameters": {
+              "Omega_m": 0.36108746441979783,
+              "Gamma_over_H0": -0.2870697027496259,
+              "alpha": 30.07482598753119
+            },
+            "independent_chi2": 6.051760329950561,
+            "stored_chi2": 6.051760329950532,
+            "chi2_difference_independent_minus_stored": 2.930988785010413e-14,
+            "independent_prediction": [
+              7.944586316335397,
+              13.306023661342087,
+              22.34586968278172,
+              17.436287692086513,
+              19.851470541229556,
+              21.66821491609271,
+              17.339288997183473,
+              27.689113497225776,
+              13.943966162543365,
+              29.86595728178554,
+              12.78981604048872,
+              8.60270114041966,
+              38.736268660861285
+            ],
+            "max_abs_prediction_difference": 7.105427357601002e-15,
+            "unit_prediction_max_abs_difference": 2.220446049250313e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.36108746441979783,
+              "minimum_sampled_X": 0.6389125355802021,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.8571558412169576,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.057773994307167655,
+              "minimum_CDM_density_fraction": 0.30331347011263016,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 9.295547676163771,
+              "split_monotonic_endpoint": "zmax"
+            }
+          },
+          {
+            "role": "selected_interaction_candidate",
+            "parameters": {
+              "Omega_m": 0.36108746441979783,
+              "Gamma_over_H0": -0.2870697027496259,
+              "alpha": 30.07482598753119
+            },
+            "independent_chi2": 6.051760329950561,
+            "stored_chi2": 6.051760329950532,
+            "chi2_difference_independent_minus_stored": 2.930988785010413e-14,
+            "independent_prediction": [
+              7.944586316335397,
+              13.306023661342087,
+              22.34586968278172,
+              17.436287692086513,
+              19.851470541229556,
+              21.66821491609271,
+              17.339288997183473,
+              27.689113497225776,
+              13.943966162543365,
+              29.86595728178554,
+              12.78981604048872,
+              8.60270114041966,
+              38.736268660861285
+            ],
+            "max_abs_prediction_difference": 7.105427357601002e-15,
+            "unit_prediction_max_abs_difference": 2.220446049250313e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.36108746441979783,
+              "minimum_sampled_X": 0.6389125355802021,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.8571558412169576,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.057773994307167655,
+              "minimum_CDM_density_fraction": 0.30331347011263016,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 9.295547676163771,
+              "split_monotonic_endpoint": "zmax"
+            }
+          }
+        ]
+      },
+      {
+        "seed": 20260924,
+        "index": 1,
+        "class": "non_exceedance",
+        "selected_delta_chi2": 0.06568555004285281,
+        "nested_flat_fallback_used": false,
+        "selected_source": "39-start bounded multistart",
+        "fit_reevaluations": [
+          {
+            "role": "flat_LCDM",
+            "parameters": {
+              "Omega_m": 0.31193330701357247,
+              "Gamma_over_H0": 0.0,
+              "alpha": 29.876867849594543
+            },
+            "independent_chi2": 3.713507290292788,
+            "stored_chi2": 3.7135072902928608,
+            "chi2_difference_independent_minus_stored": -7.283063041541027e-14,
+            "independent_prediction": [
+              7.963657332349378,
+              13.346938277732761,
+              22.50751030448105,
+              17.505633128102854,
+              19.97624272925742,
+              21.75991584009884,
+              17.411090373530282,
+              27.794319085985514,
+              13.947957487009894,
+              29.97025163556235,
+              12.77554472304658,
+              8.551434994154116,
+              38.8079166500301
+            ],
+            "max_abs_prediction_difference": 2.1316282072803006e-14,
+            "unit_prediction_max_abs_difference": 0.0,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.31193330701357247,
+              "minimum_sampled_X": 0.6880666929864275,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.9999999999999998,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.049909329122171595,
+              "minimum_CDM_density_fraction": 0.26202397789140086,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.26202397789140086,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "raw_interacting_optimum",
+            "parameters": {
+              "Omega_m": 0.290641633909366,
+              "Gamma_over_H0": 0.10593244734875484,
+              "alpha": 29.718093780660983
+            },
+            "independent_chi2": 3.6478217402500097,
+            "stored_chi2": 3.647821740250008,
+            "chi2_difference_independent_minus_stored": 1.7763568394002505e-15,
+            "independent_prediction": [
+              7.954034109200015,
+              13.336134126047837,
+              22.54205539404719,
+              17.50155878428402,
+              20.008245717617132,
+              21.761908739742406,
+              17.43183271253801,
+              27.800723413389637,
+              13.951211174686291,
+              29.97675776315909,
+              12.773768237274878,
+              8.538906292982254,
+              38.80702632297615
+            ],
+            "max_abs_prediction_difference": 1.4210854715202004e-14,
+            "unit_prediction_max_abs_difference": 4.440892098500626e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.290641633909366,
+              "minimum_sampled_X": 0.6542794124521915,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 1.0,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.04650266142549856,
+              "minimum_CDM_density_fraction": 0.24413897248386743,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.24413897248386743,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "selected_interaction_candidate",
+            "parameters": {
+              "Omega_m": 0.290641633909366,
+              "Gamma_over_H0": 0.10593244734875484,
+              "alpha": 29.718093780660983
+            },
+            "independent_chi2": 3.6478217402500097,
+            "stored_chi2": 3.647821740250008,
+            "chi2_difference_independent_minus_stored": 1.7763568394002505e-15,
+            "independent_prediction": [
+              7.954034109200015,
+              13.336134126047837,
+              22.54205539404719,
+              17.50155878428402,
+              20.008245717617132,
+              21.761908739742406,
+              17.43183271253801,
+              27.800723413389637,
+              13.951211174686291,
+              29.97675776315909,
+              12.773768237274878,
+              8.538906292982254,
+              38.80702632297615
+            ],
+            "max_abs_prediction_difference": 1.4210854715202004e-14,
+            "unit_prediction_max_abs_difference": 4.440892098500626e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.290641633909366,
+              "minimum_sampled_X": 0.6542794124521915,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 1.0,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.04650266142549856,
+              "minimum_CDM_density_fraction": 0.24413897248386743,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.24413897248386743,
+              "split_monotonic_endpoint": "today"
+            }
+          }
+        ]
+      },
+      {
+        "seed": 20260924,
+        "index": 2,
+        "class": "non_exceedance",
+        "selected_delta_chi2": 0.01162088522345428,
+        "nested_flat_fallback_used": false,
+        "selected_source": "39-start bounded multistart",
+        "fit_reevaluations": [
+          {
+            "role": "flat_LCDM",
+            "parameters": {
+              "Omega_m": 0.2902471989880796,
+              "Gamma_over_H0": 0.0,
+              "alpha": 29.286460281020986
+            },
+            "independent_chi2": 24.972016289652885,
+            "stored_chi2": 24.972016289652576,
+            "chi2_difference_independent_minus_stored": 3.090860900556436e-13,
+            "independent_prediction": [
+              7.855059368378713,
+              13.183501534944218,
+              22.402076132145478,
+              17.33186029881759,
+              19.969070674606453,
+              21.59312992656739,
+              17.47283650035961,
+              27.66308912124059,
+              14.05988329459504,
+              29.857929491380425,
+              12.894710552925666,
+              8.66348381261903,
+              38.79637974999514
+            ],
+            "max_abs_prediction_difference": 4.263256414560601e-14,
+            "unit_prediction_max_abs_difference": 0.0,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.2902471989880796,
+              "minimum_sampled_X": 0.7097528010119204,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.9999999999999998,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.04643955183809274,
+              "minimum_CDM_density_fraction": 0.24380764714998687,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.24380764714998687,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "raw_interacting_optimum",
+            "parameters": {
+              "Omega_m": 0.2819287100568197,
+              "Gamma_over_H0": 0.04030005153918592,
+              "alpha": 29.22347131547933
+            },
+            "independent_chi2": 24.960395404429253,
+            "stored_chi2": 24.96039540442912,
+            "chi2_difference_independent_minus_stored": 1.3145040611561853e-13,
+            "independent_prediction": [
+              7.851005077389782,
+              13.17890951492257,
+              22.415854424044138,
+              17.330005140595663,
+              19.982313979473318,
+              21.59382860217066,
+              17.481746428802065,
+              27.665762801606732,
+              14.061608643270912,
+              29.860702829689806,
+              12.894299426261258,
+              8.65833806863931,
+              38.79623422858053
+            ],
+            "max_abs_prediction_difference": 2.1316282072803006e-14,
+            "unit_prediction_max_abs_difference": 6.661338147750939e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.2819287100568197,
+              "minimum_sampled_X": 0.6960417496785709,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 1.0,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.04510859360909115,
+              "minimum_CDM_density_fraction": 0.23682011644772855,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.23682011644772855,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "selected_interaction_candidate",
+            "parameters": {
+              "Omega_m": 0.2819287100568197,
+              "Gamma_over_H0": 0.04030005153918592,
+              "alpha": 29.22347131547933
+            },
+            "independent_chi2": 24.960395404429253,
+            "stored_chi2": 24.96039540442912,
+            "chi2_difference_independent_minus_stored": 1.3145040611561853e-13,
+            "independent_prediction": [
+              7.851005077389782,
+              13.17890951492257,
+              22.415854424044138,
+              17.330005140595663,
+              19.982313979473318,
+              21.59382860217066,
+              17.481746428802065,
+              27.665762801606732,
+              14.061608643270912,
+              29.860702829689806,
+              12.894299426261258,
+              8.65833806863931,
+              38.79623422858053
+            ],
+            "max_abs_prediction_difference": 2.1316282072803006e-14,
+            "unit_prediction_max_abs_difference": 6.661338147750939e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.2819287100568197,
+              "minimum_sampled_X": 0.6960417496785709,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 1.0,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.04510859360909115,
+              "minimum_CDM_density_fraction": 0.23682011644772855,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.23682011644772855,
+              "split_monotonic_endpoint": "today"
+            }
+          }
+        ]
+      },
+      {
+        "seed": 20260924,
+        "index": 4,
+        "class": "non_exceedance",
+        "selected_delta_chi2": 0.011052790313333283,
+        "nested_flat_fallback_used": false,
+        "selected_source": "39-start bounded multistart",
+        "fit_reevaluations": [
+          {
+            "role": "flat_LCDM",
+            "parameters": {
+              "Omega_m": 0.29462091965103393,
+              "Gamma_over_H0": 0.0,
+              "alpha": 29.311994406044857
+            },
+            "independent_chi2": 6.447435117244227,
+            "stored_chi2": 6.44743511724413,
+            "chi2_difference_independent_minus_stored": 9.681144774731365e-14,
+            "independent_prediction": [
+              7.851972927242509,
+              13.174496613774696,
+              22.35184660178127,
+              17.311661952001877,
+              19.906389376057543,
+              21.557784262818082,
+              17.40382156459572,
+              27.6008055213335,
+              13.991255055043116,
+              29.784628673910234,
+              12.828271486349735,
+              8.612030492672238,
+              38.67315539152061
+            ],
+            "max_abs_prediction_difference": 1.4210854715202004e-14,
+            "unit_prediction_max_abs_difference": 0.0,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.29462091965103393,
+              "minimum_sampled_X": 0.7053790803489661,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.9999999999999991,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.04713934714416543,
+              "minimum_CDM_density_fraction": 0.2474815725068685,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 0.2474815725068685,
+              "split_monotonic_endpoint": "today"
+            }
+          },
+          {
+            "role": "raw_interacting_optimum",
+            "parameters": {
+              "Omega_m": 0.3027615297015133,
+              "Gamma_over_H0": -0.040105728961139994,
+              "alpha": 29.373541601880447
+            },
+            "independent_chi2": 6.436382326930929,
+            "stored_chi2": 6.436382326930797,
+            "chi2_difference_independent_minus_stored": 1.3145040611561853e-13,
+            "independent_prediction": [
+              7.85590269846239,
+              13.17894902760609,
+              22.338425301895764,
+              17.31345216676386,
+              19.89352068845422,
+              21.557094577304312,
+              17.395175480640674,
+              27.598201873139935,
+              13.98959267558383,
+              29.781930567808402,
+              12.828686121745298,
+              8.617053759145826,
+              38.673309822192394
+            ],
+            "max_abs_prediction_difference": 7.105427357601002e-15,
+            "unit_prediction_max_abs_difference": 2.220446049250313e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.3027615297015133,
+              "minimum_sampled_X": 0.6972384702984866,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.9750341750947967,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.048441844752242134,
+              "minimum_CDM_density_fraction": 0.2543196849492712,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 9.111905580225905,
+              "split_monotonic_endpoint": "zmax"
+            }
+          },
+          {
+            "role": "selected_interaction_candidate",
+            "parameters": {
+              "Omega_m": 0.3027615297015133,
+              "Gamma_over_H0": -0.040105728961139994,
+              "alpha": 29.373541601880447
+            },
+            "independent_chi2": 6.436382326930929,
+            "stored_chi2": 6.436382326930797,
+            "chi2_difference_independent_minus_stored": 1.3145040611561853e-13,
+            "independent_prediction": [
+              7.85590269846239,
+              13.17894902760609,
+              22.338425301895764,
+              17.31345216676386,
+              19.89352068845422,
+              21.557094577304312,
+              17.395175480640674,
+              27.598201873139935,
+              13.98959267558383,
+              29.781930567808402,
+              12.828686121745298,
+              8.617053759145826,
+              38.673309822192394
+            ],
+            "max_abs_prediction_difference": 7.105427357601002e-15,
+            "unit_prediction_max_abs_difference": 2.220446049250313e-16,
+            "theory4_physicality": {
+              "minimum_sampled_M": 0.3027615297015133,
+              "minimum_sampled_X": 0.6972384702984866,
+              "minimum_sampled_E2": 1.0,
+              "fb_max_sampled": 0.9750341750947967,
+              "fb_fixed": 0.16,
+              "fixed_split_positive": true,
+              "minimum_baryon_density_fraction": 0.048441844752242134,
+              "minimum_CDM_density_fraction": 0.2543196849492712,
+              "minimum_CDM_redshift": 0.0,
+              "limiting_comoving_CDM_density_at_zmax_or_today": 9.111905580225905,
+              "split_monotonic_endpoint": "zmax"
+            }
+          }
+        ]
+      }
+    ],
+    "scalar_failures": [],
+    "maximum_absolute_score_difference": 5.240252676230739e-13,
+    "maximum_absolute_prediction_difference": 4.263256414560601e-14,
+    "acceptance_tolerances": {
+      "score": 2e-07,
+      "prediction_component": 2e-05
+    }
+  },
+  "checks": {
+    "pilot_exact_40_rows_and_expected_indices": true,
+    "extension_exact_1160_rows_and_expected_indices": true,
+    "pooled_exact_1200_unique_expected_keys_no_overlap": true,
+    "all_1200_recorded_vectors_exactly_regenerated_and_hash_matched": true,
+    "all_source_data_and_full_stream_hashes_match_prior_passing_provenance": true,
+    "pilot_output_hashes_unchanged_and_protected": true,
+    "extension_input_hashes_and_checkpoint_integrity_match": true,
+    "all_records_complete_scores_and_predictions_finite": true,
+    "saved_delta_formulas_and_nested_fallbacks_consistent": true,
+    "optimizer_endpoint_status_counts_reconcile": true,
+    "eight_deterministic_scalar_quad_rows_recomputed": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "status": "complete_background_physicality_screen",
+  "id": "interacting_vacuum_early_positivity_20260924",
+  "question": "Does the selected late-time interacting-vacuum BAO profile point retain positive CDM density when propagated to early times, under explicitly varied H0 and baryon/CDM splits?",
+  "hypothesis": "For the fitted negative g=Gamma/H0 point, the comoving-CDM transfer identity may imply a past positivity bound; evaluate it through z=1e10 without importing an H0 or baryon-fraction prior.",
+  "source_ids": ["interacting_de_desi_dr2_2026"],
+  "assumptions_and_units": [
+    "Flat FLRW; w_x=-1; Q=Gamma*rho_x; positive Gamma transfers CDM to vacuum per source-paper Eqs. (4)-(5),(8).",
+    "Omega_m0 is the BAO-screen baryon-plus-CDM density; f_b is a sensitivity coordinate, not inferred by BAO.",
+    "Flat closure includes photons and N_eff=3.044 massless neutrino radiation. This first screen approximates the paper's sum m_nu=0.06 eV as massless; see the separate thermal-massive-neutrino sensitivity record.",
+    "H0 in km/s/Mpc, densities normalized to today's critical density for that H0; a, E, g, and q_c are dimensionless."
+  ],
+  "data_files_and_sha256": {
+    "context/papers/interacting_de_desi_dr2_2026.pdf": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+    "experiments/interacting_vacuum_screen/result.json": "e347b8934b2afdc23d23ef7d39c70f963b73888d17137f55caf7e51af87d43ae",
+    "work/theory3/interacting_vacuum_contract.md": "20c7b6c7120f3078d38a527cc02fe629150dcccdf2996794a1f1b7053473e1d5"
+  },
+  "code_commit_or_sha256": "work/theory5/ivs_early_positivity.py SHA-256 004431c201daae6f638663502986068578e3289882545e0f8f2c53681392bba7",
+  "environment_lock": "Python 3.12.3, NumPy 2.5.3, SciPy 1.18.1; project .venv; one numerical thread",
+  "model_parameters_and_priors": {
+    "fixed_screen_point": {"Omega_m0": 0.3869710077, "g_Gamma_over_H0": -0.4666647299, "w_x": -1.0},
+    "H0_sensitivity_grid_km_s_Mpc": [55.0, 65.0, 75.0, 85.0],
+    "baryon_fraction_sensitivity_grid": [0.10, 0.15, 0.20, 0.25],
+    "prior": "none; H0 and f_b are sensitivity coordinates, not BAO constraints"
+  },
+  "nuisance_parameters": {"radiation": "Omega_gamma h^2=2.4728e-5 at Tcmb=2.7255 K; massless neutrinos with N_eff=3.044"},
+  "training_validation_holdout_definition": "No likelihood fit. Sixteen deterministic (H0,f_b) sensitivity cases; integrate from today to z=1e10.",
+  "covariance_order_and_overlap_treatment": "No covariance is used in this background-only continuation; the BAO profile point is imported from the same 13-row DESI DR2 full-covariance screen and is not refit.",
+  "random_seed": null,
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python work/theory5/ivs_early_positivity.py",
+  "start_utc": null,
+  "runtime_seconds": 3.128,
+  "hardware": "CPU-only, one numerical thread; no GPU",
+  "numerical_checks": {
+    "formulas": "q_c=a^3 u_c; dq_c/dn=-g a^3 u_v/E; q_c(n)=Omega_c0+g*integral_n^0 exp(3s)u_v/E ds. For g<0 q_c decreases monotonically into the past.",
+    "implementations": "Separately written DOP853 integrations in n=ln(a) and u=ln(1+z); adaptive quadrature of the comoving-CDM identity.",
+    "maximum_identity_residual": 3.747e-15,
+    "coordinate_integration_max_abs_difference": 0.0,
+    "tolerance_refinement_max_scaled_component_difference": 1.928e-14,
+    "sampled_E2_positive": true
+  },
+  "metric_definition": "Zero crossings of rho_c on 0<=z<=1e10; endpoint q_c(z=1e10); positivity follows throughout from monotonicity when g<0 and E,u_v stay positive.",
+  "results": {"cases": 16, "crossings": 0, "minimum_q_c_at_zmax": 0.206114, "maximum_q_c_at_zmax": 0.264177, "all_cases_positive_to_zmax": true},
+  "uncertainty": "Finite sensitivity grid only; no posterior or probability statement. Result is conditional on each declared H0/f_b pair and massless-neutrino approximation.",
+  "attempts_counted_in_search": 16,
+  "interpretation_and_limits": "This removes a simple CDM-negative background failure for the sampled split/H0 grid, but does not establish physicality outside it or validate perturbations, the sound horizon, CMB/growth, or exact paper CAMB settings.",
+  "artifacts": ["work/theory5/ivs_early_positivity.py", "work/theory5/ivs_early_positivity.json", "work/theory5/ivs_early_positivity.md"],
+  "independent_reviewer": "Root checked the transfer-identity signs, neutrino/radiation scope and stored source hashes; two coordinate formulations plus adaptive identity quadrature are implemented by the Luna Max theory worker.",
+  "review_disposition": "Checks are internally consistent and bounded; a separate thermal massive-neutrino sensitivity is recorded in experiments/interacting_vacuum_massive_neutrino/record.json.",
+  "next_test": "Thermal massive-neutrino background sensitivity followed by perturbation/solver source validation; do not promote to full cosmological inference without exact CAMB provenance/configuration."
+}

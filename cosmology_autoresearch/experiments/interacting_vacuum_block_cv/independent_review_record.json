@@ -1,0 +1,42 @@
+{
+  "id": "interacting_vacuum_block_cv_independent_review_20260924",
+  "objective": "Independently audit the seven-fold interacting-vacuum conditional predictive score, covariance handling, prediction provenance, and published arithmetic without refitting.",
+  "status": "independently_reviewed_pass",
+  "reviewer": "gpt-6-luna/high subagent /root/interaction_mock_stream_audit",
+  "reviewed_utc": "2026-09-24T21:22:30Z",
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --seconds 360 -- .venv/bin/python work/compute5/interacting_vacuum_cv_review.py",
+  "runtime_seconds": 0.14,
+  "cpu_threads": 1,
+  "gpu_used": false,
+  "refit_performed": false,
+  "source_ids": [
+    "desi_dr2_mean",
+    "desi_dr2_cov"
+  ],
+  "result": {
+    "flat_lcdm_conditional_chi2_sum": 12.96701832203225,
+    "ivs_conditional_chi2_sum": 35.71731794638079,
+    "delta_ivs_minus_lcdm": 22.75029962434854,
+    "z_2_33_fold_delta": 22.069812381804915,
+    "max_conditional_mean_absolute_difference": 2.13e-14,
+    "max_schur_covariance_absolute_difference": 0.0,
+    "max_conditional_chi2_absolute_difference": 9.42e-13,
+    "max_recomputed_training_prediction_absolute_difference": 2.84e-14,
+    "sha_claims_pass": true,
+    "data_leakage_or_arithmetic_defect_found": false
+  },
+  "interpretation": "The conditional-score arithmetic, full-covariance Schur calculations, row order, saved fold predictions, and input/output hash claims independently pass. This remains an overlapping-fold plug-in descriptive score from one survey, not a joint likelihood, posterior predictive calculation, evidence, independent-survey test, or physical exclusion. The aggregate is dominated by the z=2.33 two-row fold.",
+  "review_artifacts": {
+    "report": "work/compute5/interacting_vacuum_cv_review.md",
+    "result": "work/compute5/interacting_vacuum_cv_review.json",
+    "checker": "work/compute5/interacting_vacuum_cv_review.py"
+  },
+  "sha256": {
+    "work/compute5/interacting_vacuum_cv_review.md": "ad8ade4b1bd2e6192dce32cc2ef8576636e546c7d7dd277cd1d6ff2b024167ea",
+    "work/compute5/interacting_vacuum_cv_review.json": "e448a6e53c4c9a34a8b4088b30c4ef22e44a4bf1a3147d21e1a6f23c954bbd86",
+    "work/compute5/interacting_vacuum_cv_review.py": "f118995d103cd1a27763224c0e75928208e1c1f19867b862f5e0f1ebb108ea88",
+    "work/compute4/interacting_vacuum_block_cv.md": "2bea08327f663287b918e459a9e228463103d4e0ecfc4a80ac13d182cc2c94df",
+    "experiments/interacting_vacuum_block_cv/result.json": "9d1bf8ac6536328d36d5e26d3a1dd2e2a8ddf6c2761ad6472a1ac9adc9b69a55",
+    "experiments/interacting_vacuum_block_cv/leave_bin_out.py": "81c5ce44ab6ec27539290a9d3754e85d5dd809559dc04d8558a4a6d31cb3367c"
+  }
+}

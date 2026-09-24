@@ -1,0 +1,25 @@
+{
+  "id": "interacting_vacuum_null_timing_40_20260924",
+  "status": "complete_timing_pilot_only",
+  "started_utc": "2026-09-24T19:42:37Z",
+  "completed_utc": "2026-09-24T19:52:02Z",
+  "runtime_seconds": 35.827798024751246,
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python scripts/run_bounded.py --seconds 1800 -- .venv/bin/python experiments/interacting_vacuum_screen/interacting_vacuum_null_timing.py --workers 20 --checkpoint-every 25",
+  "result": "experiments/interacting_vacuum_screen/null_timing_40.json",
+  "result_sha256": "402ed8fe5c9864be6629aa0022f7e666d3a919674b8f75b3333951363cb27b97",
+  "rows": "experiments/interacting_vacuum_screen/null_timing_40.jsonl",
+  "rows_sha256": "a5138b807ff21baf776e389848177db617e08b6f59d9318b3ff1e421f9dab09e",
+  "report": "work/compute3/interacting_vacuum_null_timing_tranche.md",
+  "scope": "First 20 selected indices from each of two separately initialized, provenance-verified fitted-flat-LCDM PCG64 streams; CPU timing tranche only, not a stable null-tail calibration. Six of forty selected finite-search Delta-chi2 values meet/exceed the observed 1.517163; exact CP95 [0.0571,0.2984]. All selected endpoints were physically re-evaluated; raw optimizer statuses and invalid penalty endpoints are retained separately.",
+  "runtime_environment": {
+    "workers": 20,
+    "worker_cpu_seconds_sum": 570.156863484,
+    "cpu_affinity_count": 20,
+    "gpu_used": false,
+    "blas_threads_per_worker": 1,
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "next_step": "Review a separate resumable runner for remaining 1,160 indices before launch; any full result remains conditional on this finite DESI BAO background-search contract and says nothing about perturbation closure or full cosmology."
+}

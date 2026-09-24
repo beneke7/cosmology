@@ -1,0 +1,31 @@
+{
+  "checkpointed_invocation_count": 1,
+  "complete_unique_count": 1160,
+  "cumulative_wall_seconds_checkpointed_lower_bound": 892.4302004463971,
+  "existing_jsonl_attempt_rows_vector_reverified": 0,
+  "jsonl_ahead_of_prior_checkpoint_on_resume": false,
+  "jsonl_sha256": "caf01a78e711ede965f98b5e389e28affe74e1e292e888c1483fc8fcc85feed1",
+  "pilot_artifacts_unchanged": {
+    "experiments/interacting_vacuum_screen/interacting_vacuum_null_timing.py": {
+      "matches_reviewed_hash": true,
+      "sha256": "35f8edf052a7d76eaa63ea1e2390d79123c1111e7c605f8b2b49973f5b79d5d4"
+    },
+    "experiments/interacting_vacuum_screen/null_timing_40.json": {
+      "matches_reviewed_hash": true,
+      "sha256": "402ed8fe5c9864be6629aa0022f7e666d3a919674b8f75b3333951363cb27b97"
+    },
+    "experiments/interacting_vacuum_screen/null_timing_40.jsonl": {
+      "matches_reviewed_hash": true,
+      "sha256": "a5138b807ff21baf776e389848177db617e08b6f59d9318b3ff1e421f9dab09e"
+    },
+    "experiments/interacting_vacuum_screen/null_timing_40_checkpoint.json": {
+      "matches_reviewed_hash": true,
+      "sha256": "3f283ee1083f8353ebb8c00b8ae63695702174704afef8be97946d6bee5961ca"
+    }
+  },
+  "processed_this_invocation": 1160,
+  "requested_this_invocation": 1160,
+  "required_unique_count": 1160,
+  "status": "complete",
+  "summary_sha256": "8bcc93486846237f020b3178403518a8d7f668da5761c0bf7d4c4e83ec8c287a"
+}

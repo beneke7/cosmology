@@ -1,0 +1,61 @@
+{
+  "status": "complete_independently_audited_finite_search_null_extension",
+  "id": "desi_dr2_interacting_vacuum_null_extension_1160_20260924",
+  "question": "How often does the same finite interacting-vacuum profile search return an improvement at least as large as the observed Delta chi2 under the saved fitted-flat LCDM BAO null?",
+  "hypothesis": "A one-rate extension may improve a finite profile by chance under a fitted-flat null; repeat the complete model search on provenance-fixed correlated mock vectors to measure this procedure-specific frequency.",
+  "source_ids": ["interacting_de_desi_dr2_2026", "desi_dr2_mean", "desi_dr2_cov"],
+  "assumptions_and_units": [
+    "Fixed fitted-flat-LCDM mean and exact full-covariance Gaussian 13-vector null; generator is PCG64 standard normal followed by lower-Cholesky multiplication.",
+    "For each realization, rerun flat and interacting background profiles with finite search bounds and positive-component feasibility through z<=2.33.",
+    "Statistic is finite-search Delta chi2 = chi2_flat - chi2_selected_interaction, with nested-flat fallback in the selected score.",
+    "This is not a posterior p-value, model evidence, discovery significance, full search-across-models calibration, or physical/CMB validation."
+  ],
+  "data_files_and_sha256": {
+    "context/data/desi_dr2_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "context/data/desi_dr2_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+    "experiments/campaign_seed_bao/result.json": "92662f3ee42500d2be34d9f87b485fe56c82e9550fa674e42f4dec2bf2cab1f0",
+    "experiments/interacting_vacuum_screen/null_timing_40.jsonl": "a5138b807ff21baf776e389848177db617e08b6f59d9318b3ff1e421f9dab09e",
+    "experiments/interacting_vacuum_screen/null_extension_1160.jsonl": "caf01a78e711ede965f98b5e389e28affe74e1e292e888c1483fc8fcc85feed1",
+    "experiments/interacting_vacuum_screen/null_extension_1160_summary.json": "8bcc93486846237f020b3178403518a8d7f668da5761c0bf7d4c4e83ec8c287a",
+    "work/data_audit3/interaction_null_audit.json": "418bdad5321db200ee54bde121f7f8ef42c117b4a5dc9caf60ac502c1534723d"
+  },
+  "code_commit_or_sha256": {
+    "experiments/interacting_vacuum_screen/interacting_vacuum_null_extension.py": "26cdb4216af9e8bfed219115d5b35de86f03a806c6a76601693c561070e00534",
+    "experiments/interacting_vacuum_screen/interacting_vacuum_null_timing.py": "35f8edf052a7d76eaa63ea1e2390d79123c1111e7c605f8b2b49973f5b79d5d4",
+    "experiments/interacting_vacuum_screen/interacting_vacuum_profile.py": "ae99ae789aa02885667e27aa2cbbaa0b035323e69d1a4bf7bbd3848949fc5282"
+  },
+  "environment_lock": "Python 3.12.3, NumPy 2.5.3, SciPy 1.18.1; Linux x86_64; one BLAS/OpenMP thread per process",
+  "model_parameters_and_priors": {
+    "flat_shape_bounds": {"Omega_m0": [0.05, 0.60]},
+    "interacting_shape_bounds": {"Omega_m0": [0.05, 0.60], "g_Gamma_over_H0": [-3.0, 3.0]},
+    "profiled_alpha_bounds": [1e-6, 1e4],
+    "bounds_are": "finite search domains; not priors"
+  },
+  "nuisance_parameters": {"alpha": "analytically GLS-profiled; no separate H0/rd inference"},
+  "training_validation_holdout_definition": "Pilot indices: seeds 20260924 and 20260925, indices 0–19 each. Extension: seed 20260924 indices 20–199; seed 20260925 indices 20–999. The pooled audit verifies 1,200 unique nonoverlapping records and exact regenerated vectors.",
+  "covariance_order_and_overlap_treatment": "Exact released 13x13 covariance and source row order retained for mock generation and every refit; no overlapping new Ly-alpha likelihood is added.",
+  "random_seed": [20260924, 20260925],
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python scripts/run_bounded.py --seconds 3600 -- .venv/bin/python experiments/interacting_vacuum_screen/interacting_vacuum_null_extension.py --workers 20 --checkpoint-every 25",
+  "start_utc": "2026-09-24T20:12:35Z",
+  "runtime_seconds": 892.4302,
+  "hardware": "20 CPU worker processes, 20 CPUs in affinity, one numerical thread each; CPU-only, no GPU",
+  "numerical_checks": {
+    "pilot_hash_protection": "pilot JSONL/result/checkpoint unchanged; independently verified",
+    "complete_unique_records": 1200,
+    "regenerated_mock_vector_max_abs_difference": 0.0,
+    "full_normal_stream_hashes_verified": true,
+    "all_optimizer_statuses_and_physical_validity_retained": true,
+    "fit_exceptions": 0,
+    "independent_scalar_prediction_max_abs_difference": 4.27e-14,
+    "independent_scalar_score_max_abs_difference": 5.24e-13
+  },
+  "metric_definition": "Count pooled selected mock Delta chi2 >= observed Delta chi2=1.5171630696615157; report exact two-sided Clopper-Pearson interval and empirical linear quantiles.",
+  "results": {"n": 1200, "exceedances": 256, "fraction_descriptive_only": 0.2133333333, "exact_CP95": [0.1904634677, 0.2376169831], "q50_linear": 0.4704707, "q95_linear": 3.7860981, "q99_linear": 6.1513246, "observed_delta_chi2": 1.5171631},
+  "uncertainty": "Exact two-sided binomial interval quantifies Monte Carlo uncertainty in this one fitted-flat finite-search bootstrap; not a posterior interval or calibrated significance.",
+  "attempts_counted_in_search": "1,160 new records; each flat fit uses 16 deterministic starts, each interaction fit 39 deterministic starts, plus 41x41 grid/refinement and exact nested-flat selected-score fallback; the 40 disjoint pilot records add to n=1,200.",
+  "interpretation_and_limits": "The observed improvement is common under this particular fitted-flat, finite-search, late-time BAO background null. Calibration does not account for selecting among other cosmological models and is not full physical validation.",
+  "artifacts": ["experiments/interacting_vacuum_screen/null_extension_1160.jsonl", "experiments/interacting_vacuum_screen/null_extension_1160_checkpoint.json", "experiments/interacting_vacuum_screen/null_extension_1160_summary.json", "work/compute3/interacting_vacuum_null_extension_report.md", "work/data_audit3/interaction_null_audit.md"],
+  "independent_reviewer": "work/data_audit3/audit_interaction_null.py regenerated every mock vector and audited score/status/fallback calculations; eight saved fits were checked with the independent adaptive-scalar implementation in work/theory4/.",
+  "review_disposition": "PASS: full 1,200-row provenance/score/status audit and stratified independent numerical re-evaluations; no mock refits in audit.",
+  "next_test": "Do not increase this null ensemble; physical background and full-covariance held-out redshift-bin predictive checks are more informative next steps."
+}

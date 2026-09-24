@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-09-24",
+  "scope": "Advisory physical/perturbation closure audit only; no solver, fit, or change to campaign claims.",
+  "model": {
+    "name": "Interacting vacuum, w_x=-1, Q=Gamma*rho_x",
+    "background_sign_convention": "dot(rho_x)=+Q; dot(rho_c)+3H*rho_c=-Q; Gamma>0 transfers CDM to vacuum.",
+    "campaign_screen_scope": "Background BAO only; radiation/neutrinos/early sound horizon/perturbations omitted; z<=2.33.",
+    "source_paper": "S1"
+  },
+  "equations": [
+    {
+      "id": "E1_background_transfer",
+      "equations": ["dot(V)=Gamma*V", "dot(rho_c)+3H*rho_c=-Gamma*V"],
+      "source": "S1",
+      "locator": "PDF Eqs. (4), (5), (8), pp. 2-3",
+      "check": "Positive Gamma is CDM->vacuum; negative Gamma is vacuum->CDM. Gamma has inverse-time units."
+    },
+    {
+      "id": "E2_covariant_geodesic_completion",
+      "equations": ["T_V^{mu nu}=-V*g^{mu nu}", "nabla_mu T_c^{mu nu}=-Q*u_c^nu", "nabla_mu T_V^{mu nu}=+Q*u_c^nu", "Q=Gamma*V"],
+      "source": "S1 plus covariant interpretation checked against S2 and S3",
+      "locator": "S1 PDF pp. 4-5, Eqs. (19)-(20), and sentence 'no momentum transfer in the DM rest frame'; S2 sections 2.1-2.3",
+      "status": "Operational closure implied by source perturbation equations, not a printed standalone covariant law or a microphysical action. Source §II.A says no fundamental framework uniquely fixes Q generally. Sign convention here reproduces E1. The geodesic/potential-flow approximation is for linear scalar work, not a generic nonlinear halo model."
+    },
+    {
+      "id": "E3_vacuum_frame_constraint",
+      "equations": ["h_c^mu_nu*nabla^nu(V)=0", "delta_V_comoving_c=0", "if Q=Gamma*V locally: delta_Q_comoving_c=0"],
+      "source": "S2",
+      "locator": "arXiv:1902.10694v2, §2.3, especially Eqs. (15)-(19) and explanatory text",
+      "check": "Vacuum homogeneous only on the geodesic-CDM-comoving slicing; do not assert delta_V=0 in all gauges."
+    },
+    {
+      "id": "E4_linear_iv_equations",
+      "equations": ["delta_c' = -(theta_c+h'/2)+a*Gamma*(rho_x/rho_c)*delta_c", "theta_c'=-Hcal*theta_c", "Hcal=a'/a"],
+      "source": "S1",
+      "locator": "PDF Eqs. (14), (19), (20), pp. 4-5; metric and variables defined immediately there",
+      "check": "Use conformal-time prime; in CDM-comoving synchronous gauge theta_c=0 by residual gauge choice, leaving delta_c'=-h'/2+a*Gamma*(V/rho_c)*delta_c."
+    },
+    {
+      "id": "E5_comoving_density_identity",
+      "equations": ["V(t)=V0*exp(Gamma*(t-t0))", "d(a^3*rho_c)/dt=-Gamma*a^3*V", "a^3*rho_c(t)=rho_c0-Gamma*integral(t0,t)[a^3*V dt']"],
+      "source": "Derived exactly from S1 Eqs. (4), (5), (8)",
+      "check": "For t<t0 and Gamma<0, require rho_c0>|Gamma|*integral(t,t0)[a^3*V dt'] for strict CDM positivity. For t>t0 and Gamma>0, require rho_c0>Gamma*integral(t0,t)[a^3*V dt']. V stays positive for finite t if V0>0."
+    }
+  ],
+  "implementation_gates": [
+    {
+      "id": "G1_transfer_covariance",
+      "required": "Declare the CDM-frame energy-only transfer vector, the local scalar prescription Q=Gamma*V, total conservation, and explicit source signs.",
+      "paper_status": "Partly specified: no CDM-rest-frame momentum transfer and IVS equations given; standalone covariant form/action not shown."
+    },
+    {
+      "id": "G2_gauge_and_vacuum_mode",
+      "required": "Use synchronous CDM-comoving variables, fix residual theta_c=0, enforce delta_V(comoving_c)=0, and transform/report gauge-dependent outputs correctly.",
+      "paper_status": "Synchronous gauge and equations specified; residual-gauge/initialization detail should be explicit in reproducer."
+    },
+    {
+      "id": "G3_early_background_and_components",
+      "required": "Integrate full H(a) with conserved baryons, photons/radiation, and massive/massless neutrinos; document physical densities, T_CMB, neutrino hierarchy, recombination/helium and sound-horizon calculation.",
+      "paper_status": "Source Eq. (3) includes components; fixes sum_m_nu=0.06 eV and N_eff=3.044; modified CAMB and Planck likelihood named. Exact all-code configuration is not given in article prose."
+    },
+    {
+      "id": "G4_primordial_initial_conditions",
+      "required": "State regular adiabatic growing-mode conditions for photon, baryon, CDM and neutrino sectors, their consistency with the vacuum constraint, start redshift/k*tau, and whether isocurvature modes are excluded.",
+      "paper_status": "No explicit IVS initial-condition formula/prescription found in the source article text."
+    },
+    {
+      "id": "G5_physicality_and_numerics",
+      "required": "Require rho_c>0, V>0, H^2>0 and finite perturbation solutions over the complete early-to-late integration interval; test Gamma=0 recovery, both signs, ODE/solver tolerance, start epoch and k convergence.",
+      "paper_status": "Source paper scans Gamma/H0 in [-3,3] for IVS; a Gamma sign cut is stated only for w_x != -1 branches. No global IVS component-positivity guarantee is stated."
+    },
+    {
+      "id": "G6_cmb_and_growth_observables",
+      "required": "Retain Einstein metric constraints, photon/baryon tight coupling and recombination, neutrino free-streaming/shear hierarchy, primordial spectrum, lensing/reionization and exact Planck/growth likelihood configurations.",
+      "paper_status": "Source says modified CAMB and Cobaya; no versioned model patch or all initialization/config details identified in article prose."
+    }
+  ],
+  "stability_and_sign_findings": {
+    "gamma_positive": "CDM->vacuum for S1 convention; rho_c is guaranteed positive backwards in time from positive rho_c0 by the exact comoving-density identity, but may reach zero in the future.",
+    "gamma_negative": "Vacuum->CDM for S1 convention; rho_c grows forward from positive rho_c0, but can cross zero at sufficiently early times unless the explicit past integral bound holds.",
+    "vacuum_density": "If V0>0 and Gamma is finite/constant, V(t)>0 for every finite t.",
+    "perturbation_singularity": "The coefficient Gamma*rho_x/rho_c in S1's CDM density equation diverges as rho_c approaches zero; positivity is required, not merely H^2>0.",
+    "fluid_instability_caveat": "S1 gives the large-scale stability wedges w_x<-1,Gamma/H0<0 for phantom and w_x>-1,Gamma/H0>0 for quintessence. These are not a sign theorem for w_x=-1 IVS; no DE fluid sound speed exists in the chosen vacuum closure.",
+    "microphysical_stability": "No action is supplied, so ghost/gradient/UV stability of a fundamental completion cannot be inferred from this phenomenological system."
+  },
+  "source_manifest": [
+    {
+      "id": "S1",
+      "citation": "Yang et al., Do DESI-DR2 BAO data imply a coupling of dark matter and dark energy? arXiv:2609.05660v1 (2026-09-04), accepted PRD, DOI 10.1103/6kdf-vzq4",
+      "url": "https://arxiv.org/abs/2609.05660v1",
+      "local_artifact": "context/papers/interacting_de_desi_dr2_2026.pdf",
+      "sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+      "read_depth": "Full local PDF/text; pp. 4-5 perturbation equations visually inspected."
+    },
+    {
+      "id": "S2",
+      "citation": "Martinelli et al., Constraints on the interacting vacuum -- geodesic CDM scenario, arXiv:1902.10694v2 (2019)",
+      "url": "https://arxiv.org/abs/1902.10694v2",
+      "local_artifact": null,
+      "read_depth": "Relevant full-text HTML sections inspected: §§2.1-2.3 and §4.1 CAMB implementation; its background coupling Q proportional to H*V differs from S1."
+    },
+    {
+      "id": "S3",
+      "citation": "Yang et al., Metastable dark energy models in light of Planck 2018 data, arXiv:2001.04307 (2020)",
+      "url": "https://arxiv.org/abs/2001.04307",
+      "local_artifact": null,
+      "read_depth": "Perturbation/model-II passages read in arXiv PDF; positive Gamma convention is opposite S1."
+    },
+    {
+      "id": "S4",
+      "citation": "Zhai et al., Non-linear Structure Formation in Planck+DESI Favoured Interacting Dark Energy Cosmologies, arXiv:2606.11368v1 (2026-06-09)",
+      "url": "https://arxiv.org/abs/2606.11368v1",
+      "local_artifact": null,
+      "read_depth": "Abstract only; different Q=xi*Hcal*rho_x ansatz, included only as current nonlinear-method context."
+    }
+  ],
+  "campaign_reference": {
+    "background_result": "work/compute3/interacting_vacuum_screen_report.md",
+    "scope_limit": "Campaign screen checked component positivity only through z=2.33 under the declared low-z background contract; no early-time/CMB perturbation validation is implied."
+  }
+}
