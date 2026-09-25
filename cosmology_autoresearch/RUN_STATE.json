@@ -46,14 +46,23 @@
     "latest_ivs_literature": "gpt-6-luna/max",
     "dovekie_ivs_null_mocks": "gpt-6-luna/max",
     "ivs_mock_design_audit": "gpt-6-luna/max",
-    "dovekie_profile_identifiability": "gpt-6-luna/max"
+    "dovekie_profile_identifiability": "gpt-6-luna/max",
+    "compute26_lcdm_profile": "gpt-6-luna/max",
+    "literature7_solver_provenance": "gpt-6-luna/max",
+    "theory11_ivs_patch_contract": "gpt-6-luna/max",
+    "data7_planck_gate": "gpt-6-luna/max",
+    "compute30_boundary_gradient_review": "gpt-6-luna/max (complete)",
+    "bbn_prior_source_audit": "gpt-6-luna/max",
+    "bbn_bao_independent_globality": "gpt-6-luna/max",
+    "ivs_bbn_expansion_audit": "gpt-6-luna/max",
+    "primat_forward_feasibility": "gpt-6-luna/max"
   },
   "hardware": {
     "logical_and_affinity_cpus": 20,
     "physical_memory_bytes": 134292787200,
     "free_disk_bytes_at_start": 315594293248,
-    "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB total; preflight observed 5003 MiB free, latest post-run probe observed 32094 MiB free / 16 MiB used and 0% utilization (CPU-only ODE/likelihood batch; no GPU justified)",
-    "latest_resource_probe_utc": "2026-09-25T00:07:32Z",
+    "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB total; 2026-09-25T05:28Z probe: 16 MiB used, 0% utilization. Host affinity is CPUs 0-19; no campaign numerical process was active. Recent independent profile work used 13.35 average CPU cores measured over its 20-worker pool. GPU is not useful for the current scalar CAMB/BBN/background audits.",
+    "latest_resource_probe_utc": "2026-09-25T05:28:00Z",
     "allocation_note": "Host-visible CPUs/RAM/GPU are not established as exclusive allocations."
   },
   "environment": {
@@ -134,6 +143,18 @@
         "commit": "8f87561ea778e9275478b838185d8aed7a2238da",
         "report": "work/warden/push-8f87561.md",
         "recommendation": "Continue the bounded Dovekie-only IVS profile; preserve separate-probe, uncalibrated interpretation and retain executable independent-check code next time."
+      },
+      {
+        "event": "commit",
+        "commit": "78e6482bf96977264f60097916e38fb1f0aae89a",
+        "report": "work/warden/commit-78e6482.md",
+        "recommendation": "Continue with one bounded physical-implementation gate; do not extend SN-only fitting."
+      },
+      {
+        "event": "push",
+        "commit": "78e6482bf96977264f60097916e38fb1f0aae89a",
+        "report": "work/warden/push-78e6482.md",
+        "recommendation": "Continue into a bounded solver/provenance gate; preserve the finite-search null and physical limitations."
       }
     ]
   },
@@ -229,9 +250,9 @@
   ],
   "active_local_job": null,
   "latest_scientific_checkpoint": {
-    "utc": "2026-09-25T00:15:49+00:00",
+    "utc": "2026-09-25T05:29:00+00:00",
     "evidence": [
-      "Completed an exploratory Dovekie-only flat late-time IVS shape profile under the reviewed work/theory7 contract: chi2_SN=1629.999216924 at Omega_m0=0.39301742,g=Gamma/H0=-0.62938781, versus a profiled LCDM reference 1631.420535571 (LCDM-minus-IVS Delta chi2=+1.421319 for two extra shape parameters). The frozen BAO-selected IVS point is only +0.598982 higher than the SN-only minimum. Search bounds were Omega_m0=[0.05,0.60], g=[-3,3], with no best-point boundary hit; this is an exploratory finite-box profile, not posterior/evidence or a physical-model validation. Result, full-covariance likelihood contract, hashes, 41x41 surface, and plot are in experiments/dovekie_ivs_profile/.",
+      "Completed an exploratory Dovekie-only flat late-time IVS shape profile under the reviewed work/theory7 contract: chi2_SN=1629.999216924 at Omega_m0=0.39301742,g=Gamma/H0=-0.62938781, versus a profiled LCDM reference 1631.420535571 (LCDM-minus-IVS Delta chi2=+1.421319 for one additional shape parameter g beyond shared Omega_m0). The frozen BAO-selected IVS point is only +0.598982 higher than the SN-only minimum. Search bounds were Omega_m0=[0.05,0.60], g=[-3,3], with no best-point boundary hit; this is an exploratory finite-box profile, not posterior/evidence or a physical-model validation. Result, full-covariance likelihood contract, hashes, 41x41 surface, and plot are in experiments/dovekie_ivs_profile/.",
       "Numerical/physical checks for the Dovekie profile: 1820x1820 full STAT+SYS precision Cholesky passes; g=0 reproduces flat-LCDM distance moduli to 1.42e-14 mag; full GLS offset normal-equation residual is 4.30e-13; independent profile-algebra forms agree within 2.28e-13; adaptive scalar distance integration differs by <=3.34e-16; tightening DOP853 rtol 2e-10->2e-12 and halving max step changes chi2 by 4.55e-13 and max modulus by 1.42e-14 mag. Positivity and exact monotone baryon/CDM split check pass on the observed z<=1.14418 interval only. A matched CPU probe measured 3.11x speedup using 20 workers for grid points; the full task took 3.23 s. GPU was not justified/used. Six optimizer endpoints converged only to the invalid-objective penalty despite raw SciPy success flags; those were excluded, and the valid minimum is recovered from multiple starts. The first result-writing attempt failed at NumPy-array JSON serialization; it is preserved as attempt_001_failure.json and the corrected run is complete.",
       "Independent Luna Max reproduction PASS from a standalone SNANA parser, full packed-precision unpack, RK45 ODE, distance conversion and GLS scorer in work/compute10/dovekie_ivs_profile_independent.py. It imports none of the production profile/scoring/ODE. Against pinned result hash 4068353752350739921f77c20754d54c85ae5024e0439280fa98e93656598817 and profile hash 0dbc7acb0c4b5691e0d68144f86e82b2dcf0a1b17e8c07e8f49aa62a92a41f29, max score discrepancy is 4.55e-12; BAO-IVS and SN-LCDM delta discrepancies are 7.05e-12 and 2.50e-12. Independent g=0, sign, GLS, tight-RK45 and sampled positivity checks pass. It reproduces the selected coordinates, but does not prove global optimality or full physical viability. See work/compute10/dovekie_ivs_profile_independent_review.md/.json.",
       "Expanded-domain Dovekie profile stress check complete: 61x61 surface over Omega_m0=[0.005,0.95], g=[-5,5] finds chi2=1629.9992169240093 at (0.3930178132,-0.6293913025), only 5.68e-11 from the base-box score and with no expanded-box edge hit. It reuses the production scorer and does not prove global optimality; see experiments/dovekie_ivs_profile/domain_sensitivity_record.json.",
@@ -268,7 +289,20 @@
       "One-shot Astra Max Warden reports were written immediately after commit and push 38e9b72 (work/warden/commit-38e9b72.md and work/warden/push-38e9b72.md). Both recommend continuing the Dovekie frozen-shape test; the commit Warden specifically cautions that Dovekie supplies precision, so principal precision blocks cannot be mistaken for marginal training precision.",
       "A bounded Luna Max/max contract audit is running in work/data_audit4/: verify Dovekie provenance, row/covariance mapping and the precision-matrix conditional/training algebra before any comparative score. No cosmology refit is authorized in that task.",
       "Root independently checked both plug-in and flat-prior intercept-marginal precision-block identities on synthetic covariance data against an explicit covariance-domain reference. The exact predictive covariance includes the training-intercept rank-one variance term; maximum integrated predictive-covariance disagreement was 8.88e-16 and predictive-chi2 disagreement 2.84e-14. This is an algebra unit test, not evidence from Dovekie observations; see work/compute6/precision_block_algebra_check.py.",
-      "Completed the bounded Luna Max/max local identifiability audit (work/compute13). Standalone RK45 forward sensitivities and independent central differences show post-intercept whitened Omega_m/g response cosine +0.969389, condition 40.9428, and 6.0% of local g information remains after Omega_m projection. The 1.58e-7 residual cosine is consistent with first-order stationarity at the joint fitted minimum, not an independent null test. Full-precision GLS, intercept profiling, Schur/projector algebra, derivative convergence and pinned-score checks pass at <=1e-11. Local geometry only; with matched-null results, deprioritize additional SN-only shape freedom and prioritize physical-solver feasibility. Record: experiments/dovekie_ivs_profile/identifiability_record.json."
+      "Completed the bounded Luna Max/max local identifiability audit (work/compute13). Standalone RK45 forward sensitivities and independent central differences show post-intercept whitened Omega_m/g response cosine +0.969389, condition 40.9428, and 6.0% of local g information remains after Omega_m projection. The 1.58e-7 residual cosine is consistent with first-order stationarity at the joint fitted minimum, not an independent null test. Full-precision GLS, intercept profiling, Schur/projector algebra, derivative convergence and pinned-score checks pass at <=1e-11. Local geometry only; with matched-null results, deprioritize additional SN-only shape freedom and prioritize physical-solver feasibility. Record: experiments/dovekie_ivs_profile/identifiability_record.json.",
+      "Radiation-inclusive homogeneous IVS Gate 1 passes for the stated flat massless-neutrino benchmark through z=1e10: Gamma=0 recovery, both signs, positivity, two conservation identities and convergence are checked by independent implementations in work/compute15 and work/compute17. This is not the paper's exact massive-neutrino background or a CMB likelihood.",
+      "Fixed-metric two-component IVS Gate 2 passes in work/compute18 and independent work/compute20 for sign, conformal units, Gamma=0 recovery, theta_c gauge behavior, absolute-CDM continuity and integrating-factor/quadrature checks. Prescribed metric only; no Einstein feedback, radiation perturbation hierarchy, stability test or CMB spectra.",
+      "Benchmark-specific early-CDM threshold in work/compute19/fix and independent work/compute22 brackets g about -1.022557 for first a^3*rho_c zero by z=1e10, under fixed (Omega_m0,Omega_b0,H0)=(0.315,0.049,67.4) and massless neutrinos. The tangential event redshift is ill-conditioned; do not map this to the paper posterior or its physical-density/100theta_MC prior.",
+      "Source-level IDECAMB/CAMB adapter contract completed by Luna Max/max in work/theory11: beta=Gamma/H0 makes IDECAMB H0rde match the target background, but generic PPF stress/clxq feedback does not reproduce target delta-rho_v=0 and Eqs.19-20. Target vector choice and scalar IC remain not fully explicit. No source was modified or compiled; any future code is independent, not source-faithful.",
+      "Independent CAMB 2.0.4 flat-LCDM/DESI DR2 full-covariance profile and point audit in work/compute26-29: three new direct-H0 full-box seeds and reoptimized omega_b slices support chi2=10.2738863 at (H0,omega_bh2,omega_ch2)=(133.6134,0.1,0.4302724), constrained at the declared upper omega_bh2 bound. Score rechecks match and distance quadrature differs by <=9.1e-13 Mpc. Outside-box reoptimized profiles keep improving (chi2=10.2731939 at omega_bh2=0.12); this is a domain-sensitive BAO-only boundary diagnostic, not an accepted interior physical fit, H0 inference, CMB result or posterior.",
+      "Planck full-likelihood data gate in work/data7_planck_gate maps paper shorthand to Plik HM TTTEEE + Commander low-TT + SimAll lowE; no lensing. Official archive endpoint is public, but size is undisclosed and chunked. One-byte Range probe in work/data8_planck_size_probe read zero body bytes and yielded no Content-Range. No package/data was downloaded/installed. User decision on exceeding the 200 MiB bootstrap cap is pending; if allowed, enforce the BRIEF.md 20 GiB selected-cache limit and preserve CC BY-NC attribution.",
+      "Current probe 2026-09-25T03:28:14Z: affinity CPUs 0-19, ~124.8 GB RAM available, zero interIsoFoam processes, one CPU-bound scalar worker, RTX 5090 0% / 16 MiB used. GPU use remains unjustified for these small CAMB/source audits.",
+      "Compute30 independent full-covariance implementation reproduces the BAO-only CAMB candidate. Nine reoptimized omega_bh2 slices from 0.05 to 0.1 are lowest at the upper boundary; the nearest inward slice is higher by 4.05e-9. Same-edge polishing changes chi2 by -5.05e-11, below the 2e-5 optimizer agreement tolerance. This resolves the apparent slope discrepancy and supports a local tested boundary minimum, not global optimality or a physical baseline. See work/compute30/REPORT.md and its hash-pinned JSON/script.",
+      "Current probe 2026-09-25T05:28Z: RTX 5090 utilization 0% with 16 MiB of 32.6 GiB used; no campaign numerical process was active. The independent 20-process BBN/BAO stress test used 677.14 aggregate CPU-s in 50.74 seconds (13.35 average busy cores); PRIMAT forward checks used one CPU and completed in under 10 seconds per five-point run. GPU is not justified for these scalar calculations.",
+      "BBN source audit in work/bbn_prior_audit/: PDG 2025 recommends omega_b h^2=0.02205±0.00043 from D+4He under SBBN; it is independent of DESI BAO but not independent of the underlying abundance data and is invalid as a fixed prior if early expansion/thermal history changes. Poulin 2026's narrower updated D+He result is PRIMAT/rate-specific and its exact paper reproduction files remain restricted.",
+      "DESI DR2 CAMB/BAO with full 13x13 covariance and standard-BBN baryon domain: compute31 finds chi2=10.281461886 at omega_b h^2=0.024 upper edge; compute33's independent 25-slice/600-Powell/five-DE test matches within 5.51e-14 and finds no lower tested basin. The data-only score varies by <9.1e-4 across the scan; conditional BBN-center profiles are not posteriors or H0 constraints. Compute32 independently reproduces saved point predictions/scores to roundoff.",
+      "Generic public PRIMAT v0.3.2 (commit 21ff8f39fa18e3937e9fdf386cfa982361bfdfce) ran five standard-background omega_b points; a second full sweep matches D/H, Yp and Neff bit-for-bit. At omega_b h^2=0.02205, 10^5D/H=2.5032624 versus PDG 2.508±0.029 (-0.163 observation-only sigma); rate/lifetime uncertainty is omitted and the prior/data dependence prevents treating this as an independent likelihood validation. See work/data9_primat/REPORT.md.",
+      "At the selected late-time IVS screen point, theory13's independent radiation-inclusive comparison gives max |delta H/H|=7.27 ppm on 1e8<=z<=1e10 across 16 H0/f_b cases, with H_IVS slightly lower for Gamma<0. This supports standard-SBBN prior use for this homogeneous screen point only; no abundance network, full posterior or Einstein-Boltzmann/CMB result."
     ]
   },
   "tasks": [
@@ -608,14 +642,134 @@
       "budget_minutes": 15,
       "output": "work/compute13/dovekie_profile_identifiability.md/.json/.py; experiments/dovekie_ivs_profile/identifiability_record.json",
       "finding": "Independent RK45 forward-sensitivity/finite-difference local GLS audit at the selected IVS point. Omega_m/g response cosine +0.969389 after intercept; condition number 40.9428; only 6.0% of post-intercept g information remains after Omega_m projection. Residual cosine with nuisance-orthogonal g direction is 1.58e-7, consistent with fitted stationarity, not independent evidence. No optimizer or mocks; local geometry only, not posterior/significance."
+    },
+    {
+      "id": "ivs_radiation_background_gate1",
+      "owner": "Luna Max /root/compute15 plus independent /root/compute17",
+      "status": "complete_declared_massless_neutrino_background_benchmark",
+      "budget_seconds": 600,
+      "output": "work/compute15/background_gate_report.md; work/compute17/independent_background_report.md",
+      "finding": "Radiation-inclusive flat IVS background for Gamma/H0=0,+/-0.46666 through z=1e10 passes analytic Gamma=0, conservation identities, signs/units, sampled positivity and tolerance checks. Benchmark assumes massless neutrinos; not the exact paper massive-neutrino background or CMB result."
+    },
+    {
+      "id": "ivs_fixed_metric_perturbation_gate2",
+      "owner": "Luna Max /root/compute18 plus independent /root/compute20",
+      "status": "complete_fixed_metric_two_component_diagnostic",
+      "budget_seconds": 600,
+      "output": "work/compute18/perturbation_gate2_report.md; work/compute20/independent_gate2_audit_report.md",
+      "finding": "Fixed-metric CDM contrast/velocity equations pass source, sign, units, Gamma=0, integrating-factor/quadrature, theta_c gauge and absolute-CDM continuity checks. This is not an Einstein-feedback, full hierarchy, stability or CMB test."
+    },
+    {
+      "id": "ivs_early_cdm_event_threshold",
+      "owner": "root fix and Luna Max /root/compute22 independent audit",
+      "status": "complete_benchmark_specific_threshold_independently_reproduced",
+      "budget_seconds": 600,
+      "output": "work/compute19/fix/physicality_rerun_report.md; work/compute22/independent_threshold_audit_report.md",
+      "finding": "For fixed Omega_m0=0.315, Omega_b0=0.049, H0=67.4 with massless neutrinos, the g boundary for the first comoving-CDM zero by z=1e10 is bracketed near -1.022557. This is not the paper's full prior/posterior; the near-tangent event redshift is poorly conditioned. Original failed Simpson-resolution attempt remains preserved."
+    },
+    {
+      "id": "ivs_author_solver_artifact_audit",
+      "owner": "Luna Max /root/compute14, /root/compute16, /root/literature7",
+      "status": "complete_no_exact_author_patch_config_or_scalar_ic_found_in_checked_public_sources",
+      "budget_minutes": 20,
+      "output": "work/compute14/primary_source_artifact_audit.md; work/compute16/author_artifact_sweep.md; work/literature7/solver_provenance.md",
+      "finding": "Bounded primary-source/author-link sweep found no modified-CAMB patch/base commit, complete Cobaya run/nuisance config or explicit scalar IC. This is a bounded negative search, not proof private/unlinked code does not exist."
+    },
+    {
+      "id": "camb_2_0_4_ivs_source_feasibility",
+      "owner": "Luna Max /root/compute23",
+      "status": "complete_source_feasibility_only_compiler_and_forutils_missing",
+      "budget_minutes": 20,
+      "output": "work/compute23/camb_2_0_4_ivs_feasibility.md/.json",
+      "finding": "Pinned CAMB 2.0.4 source route requires a Fortran compiler and exact forutils submodule; neither is locally ready. Standard wheel is cached/platform-matched and compiler-free but cannot be patched. Joint dynamic-vacuum/CDM histories and perturbation-source changes are required; no compile/run performed."
+    },
+    {
+      "id": "ivs_early_ic_asymptotic_audit",
+      "owner": "Luna Max /root/theory10; independent /root/compute25",
+      "status": "complete_revised_asymptotic_algebra_and_independent_audit",
+      "budget_seconds": 600,
+      "output": "work/theory10/early_ic_report.md; work/compute25/theory10_independent_audit.md",
+      "finding": "Leading radiation-era CDM branch powers/signs and tuned D=0,g<0 edge solution pass independent algebra. Report was revised on series-remainder wording, closure attribution, and total-radiation-stress ambiguity. It is not full Einstein-Boltzmann IC or stability proof."
+    },
+    {
+      "id": "camb_lcdm_bao_direct_h0_profile_and_support",
+      "owner": "Luna Max /root/compute26 plus root /compute27-28",
+      "status": "complete_candidate_score_and_conditional_h0_support_independently_checked",
+      "budget_seconds": 1200,
+      "output": "work/compute26/independent_audit.md; work/compute27/REPORT.md; work/compute28/REPORT.md",
+      "finding": "Pinned CAMB 2.0.4 direct-H0 BAO candidate scores are independently rechecked; conditional fixed-density H0 profile recovers the theta-root candidate. Full 3-parameter point has omega_bh2=0.1 upper bound and no CMB likelihood; no H0 inference or accepted interior fit."
+    },
+    {
+      "id": "camb_lcdm_bao_boundary_profile_reproduction",
+      "owner": "Luna Max /root/compute26",
+      "status": "complete_boundary_minimum_supported_on_tested_box_outside_domain_continues_lower",
+      "budget_seconds": 1100,
+      "output": "work/compute29/local_boundary_audit.py/.json/.png; work/compute29/boundary_audit_report.md",
+      "finding": "Three full-box seeds and eight reoptimized omega_b slices support chi2=10.2738863 at H0=133.6134, omega_bh2=0.1, omega_ch2=0.43027. The edge is the constrained minimum in the declared box but outside-box profiles continue downward, so this is boundary/domain sensitive and not an accepted physical baseline."
+    },
+    {
+      "id": "planck_2018_full_likelihood_feasibility",
+      "owner": "Luna Max /root/data6",
+      "status": "complete_read_only_exact_component_mapping_archive_size_unknown",
+      "budget_minutes": 20,
+      "output": "work/data7_planck_gate/planck_2018_full_likelihood_gate.md/.json",
+      "finding": "Paper likelihood shorthand maps to public PR3 Plik HM TTTEEE + Commander TT + SimAll EE, no lensing. Standard CAMB/Cobaya project-local full likelihood is feasible in principle but not installed/staged. Archive size is unknown; CC BY-NC 3.0 IGO."
+    },
+    {
+      "id": "planck_pr3_archive_size_range_probe",
+      "owner": "Luna Max /root/data6",
+      "status": "complete_size_unknown_http_200_chunked_no_body_read",
+      "budget_minutes": 5,
+      "output": "work/data8_planck_size_probe/planck_likelihood_range_probe.md/.json",
+      "finding": "Single official Range request bytes=0-0 returned HTTP 200 with chunked transfer, no Content-Range/Length; zero response body bytes read, no retry. Archive size remains unknown."
+    },
+    {
+      "id": "camb_lcdm_boundary_gradient_independent_review",
+      "owner": "Luna Max /root/compute30_boundary_gradient_review",
+      "status": "complete_independent_score_and_in_box_boundary_profile_review",
+      "budget_seconds": 600,
+      "output": "work/compute30/",
+      "finding": "Standalone full-covariance implementation reproduces chi2=10.273886272857048. Nine reoptimized omega_bh2 slices from 0.05 to 0.1 are lowest at the boundary; nearest inward slice is +4.05e-9. A same-edge polish improves chi2 by 5.05e-11, below the 2e-5 optimizer agreement tolerance. Supports local boundary optimality in tested slices only; no global proof or physical inference. See work/compute30/REPORT.md, JSON and script."
+    },
+    {
+      "id": "bbn_prior_source_audit_20260925",
+      "owner": "Luna Max /root/bbn_prior_audit",
+      "status": "complete_full_text_bbn_abundance_and_prior_audit",
+      "budget_minutes": 20,
+      "output": "work/bbn_prior_audit/REPORT.md and audit.json",
+      "finding": "PDG 2025 D+4He SBBN mapping omega_b h^2=0.02205±0.00043 is a broad BAO-independent calibration conditional on standard BBN; Poulin 2026 updated D+He PRIMAT result is 0.022017(+0.000221/-0.000217), not D/H-only, and paper-specific bundle is restricted. Nuclear-rate alternatives are correlated/model-dependent and must not be averaged or double-counted."
+    },
+    {
+      "id": "desi_bao_sbbn_profile_and_independent_globality_20260925",
+      "owner": "Luna Max /root/compute31 and /root/bbn_bao_independent_search; root point audit",
+      "status": "complete_independent_profile_and_selected_score_audit_finite_globality_stress",
+      "budget_seconds": 900,
+      "output": "work/compute31/, work/compute32/, work/compute33/",
+      "finding": "CAMB 2.0.4/full DESI DR2 covariance profile over omega_b h^2=[0.0205,0.024] has chi2=10.281461886 at the 0.024 upper edge. Independent 25-slice, 600-Powell, five-DE search matches within 5.51e-14 and no lower tested basin; point-score audit agrees to roundoff. BAO score varies <9.1e-4 across the standard-BBN range, so conditional baryon-center H0 values are not constraints/posteriors."
+    },
+    {
+      "id": "ivs_selected_point_bbn_background_compatibility_20260925",
+      "owner": "Luna Max /root/vede_bbn_physics_critique",
+      "status": "complete_independent_radiation_era_background_comparison_only",
+      "budget_seconds": 300,
+      "output": "work/theory13/ivs_bbn_expansion_compare.md/.json/.py",
+      "finding": "For the screened IVS point Omega_m0=0.386971, Gamma/H0=-0.466665, the independent radiation-inclusive comparison finds max |delta H/H|=7.27 ppm across 16 H0/f_b cases and 1e8<=z<=1e10. The result supports standard SBBN prior applicability for this background point only; no abundance-network or full-posterior claim."
+    },
+    {
+      "id": "primat_v032_standard_sbbn_forward_repeat_20260925",
+      "owner": "Luna Max /root/primat_forward_run",
+      "status": "complete_forward_feasibility_and_bitwise_repeat_not_likelihood",
+      "budget_seconds": 900,
+      "output": "work/data9_primat/REPORT.md, forward_grid.py/.json, reproducibility_check.json, source_data_hashes.json",
+      "finding": "Pinned public PRIMAT v0.3.2 pure-Python five-point standard-background grid completed and was repeated with bit-identical D/H, Yp and Neff. At omega_b h^2=0.02205 it gives 10^5D/H=2.5032624 (-0.163 observation-only sigma from PDG); no nuclear-rate/lifetime error propagation or posterior, and exact Poulin paper patch/bundle not reproduced."
     }
   ],
   "next_commands": [
-    "The current checkpoint passes the project unittest suite (17/17). Revalidate JSON/JSONL, referenced hashes and plots after any further edits; stage reviewed campaign artifacts only.",
-    "Commit and push this checkpoint to the current tracking branch, invoking the configured one-shot Astra Max Warden immediately after each successful event. Record the Warden's evidence-based recommendation and continue unless no useful bounded work remains.",
-    "Next, run a bounded physical-solver feasibility/provenance gate: search for the exact author-modified CAMB patch/version, complete Cobaya configuration and initial conditions. Ask the user for these original artifacts if public sources do not contain them; if unavailable, cost a transparent independent implementation before full-likelihood work.",
-    "Do not expand the SN-only background model absent a distinct scientific question: matched full-covariance LCDM mocks routinely reach its small gain, and the local response is strongly Omega_m-degenerate. Treat residual orthogonality as fitted stationarity, not independent evidence.",
-    "Keep DESI BAO and Dovekie SN separate absent justified cross-covariance/conditional independence. Do not append the approximate Results IV Ly-alpha summary to the older overlapping vector.",
-    "Maintain the durable ledger, source provenance, negative results, plots, reproducible morning report and ranked next experiment. Continue only while a bounded, high-information task remains."
+    "Retain compute26/29/30's independently reviewed BAO-only LCDM point as a local, tested, domain-sensitive upper-bound diagnostic, not an accepted physical baseline or H0 constraint. Compute31-33 show that an SBBN-calibrated baryon range moves the profile to H0≈67-70 conditionally, but the score is nearly flat in omega_b and no posterior was computed.",
+    "The highest-information next baseline remains Planck PR3 Plik HM TTTEEE + Commander TT + SimAll EE, with no lensing. The archive size remains unknown and one official range probe transferred zero body bytes. The user has not explicitly replied to the bootstrap-cap question; if collection proceeds under BRIEF.md's justified selected-cache expansion (hard ceiling 20 GiB), stage only these exact public components, record CC BY-NC attribution/hashes, and build a hash-locked project-local standard CAMB/Cobaya environment. Validate standard LCDM before IVS; never substitute Plik-lite/chains/distance priors.",
+    "The exact author-modified CAMB patch, complete Cobaya nuisance/run configuration, and explicit scalar initial conditions remain unavailable in bounded public-source checks. The user has an outstanding question about whether they possess these files; if supplied, review their provenance before use. Do not repeat the same source search indefinitely.",
+    "After a standard CMB baseline is validated, decide whether to provision a project-local Fortran compiler and recursive pinned CAMB checkout with the exact forutils gitlink, then implement a separately labelled IVS branch. Required regression checks include Gamma=0, both signs, background energy conservation, delta-rho_v=0 perturbation closure, radiation shear, early-time IC, positivity, equality/r_drag, convergence and observational data ordering. No source-faithful claim without the author's artifacts.",
+    "Do not add arbitrary SN/BAO background flexibility or claim joint BAO-SN evidence. Keep the probes separate without justified cross-covariance; do not append the approximate Results IV Ly-alpha summary to the older overlapping BAO vector.",
+    "Before checkpoint publication validate JSON/JSONL, input/result hashes, plots and the prescribed 17-test unittest suite; stage only reviewed campaign outputs. After every successful commit and push invoke the one-shot Astra Max Warden immediately and record its advisory; continue only while high-information bounded work remains."
   ]
 }

@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "source_commit": "21ff8f39fa18e3937e9fdf386cfa982361bfdfce",
+  "source_data_manifest_sha256": "95398b44954a81bf4803efcca0a673578d461d958424353689151df0409b91ee",
+  "runs": [
+    {
+      "repeat": {
+        "Omegabh2": 0.0215,
+        "DoH": 2.6086843175329288e-05,
+        "10^5_DoH": 2.6086843175329286,
+        "YPBBN": 0.2465918396228737,
+        "Neff": 3.0439772985579183,
+        "seconds": 1.9591946033760905
+      },
+      "exact_matches": {
+        "DoH": true,
+        "10^5_DoH": true,
+        "YPBBN": true,
+        "Neff": true
+      }
+    },
+    {
+      "repeat": {
+        "Omegabh2": 0.02175,
+        "DoH": 2.559960431362774e-05,
+        "10^5_DoH": 2.559960431362774,
+        "YPBBN": 0.2467038827046342,
+        "Neff": 3.0439772985579183,
+        "seconds": 1.9758301582187414
+      },
+      "exact_matches": {
+        "DoH": true,
+        "10^5_DoH": true,
+        "YPBBN": true,
+        "Neff": true
+      }
+    },
+    {
+      "repeat": {
+        "Omegabh2": 0.02205,
+        "DoH": 2.5032623669797803e-05,
+        "10^5_DoH": 2.50326236697978,
+        "YPBBN": 0.24683663649733598,
+        "Neff": 3.0439772985579183,
+        "seconds": 1.9948484571650624
+      },
+      "exact_matches": {
+        "DoH": true,
+        "10^5_DoH": true,
+        "YPBBN": true,
+        "Neff": true
+      }
+    },
+    {
+      "repeat": {
+        "Omegabh2": 0.02225,
+        "DoH": 2.466507515938737e-05,
+        "10^5_DoH": 2.466507515938737,
+        "YPBBN": 0.2469237331270718,
+        "Neff": 3.0439772985579183,
+        "seconds": 1.9587268680334091
+      },
+      "exact_matches": {
+        "DoH": true,
+        "10^5_DoH": true,
+        "YPBBN": true,
+        "Neff": true
+      }
+    },
+    {
+      "repeat": {
+        "Omegabh2": 0.0225,
+        "DoH": 2.421692978694901e-05,
+        "10^5_DoH": 2.421692978694901,
+        "YPBBN": 0.24703141305830006,
+        "Neff": 3.0439772985579183,
+        "seconds": 1.9720127042382956
+      },
+      "exact_matches": {
+        "DoH": true,
+        "10^5_DoH": true,
+        "YPBBN": true,
+        "Neff": true
+      }
+    }
+  ]
+}

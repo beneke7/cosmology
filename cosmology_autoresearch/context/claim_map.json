@@ -154,14 +154,14 @@
     },
     {
       "claim_id": "dovekie_ivs_profile_gain_is_small_and_domain_stable",
-      "statement": "The flat late-time Q=Gamma rho_x Dovekie-only profile has a finite-box minimum 1.421 chi-square units below its LCDM reference for two additional shape parameters; an independent ODE/GLS implementation reproduces the score and a wider numerical search changes the minimum by less than 6e-11.",
+      "statement": "The flat late-time Q=Gamma rho_x Dovekie-only profile has a finite-box minimum 1.421 chi-square units below its LCDM reference with one additional shape parameter g beyond the shared Omega_m0; an independent ODE/GLS implementation reproduces the score and a wider numerical search changes the minimum by less than 6e-11.",
       "status": "exploratory local profile; independent numerical reproduction and wider-box sensitivity check pass",
       "confidence": "high for the pinned finite-domain numerical result; low for evidential or full physical interpretation",
       "primary_evidence": [
         {"source_id": "interacting_de_desi_dr2_2026", "locator": "Model definition Q=Gamma rho_x, w_x=-1 vacuum branch; local profile implements the late-time background only."}
       ],
       "local_evidence": ["experiments/dovekie_ivs_profile/result.json", "experiments/dovekie_ivs_profile/domain_sensitivity.json", "work/compute10/dovekie_ivs_profile_independent_review.md", "work/theory8/dovekie_profile_physics_critic.md"],
-      "counterevidence_or_limit": "The profile gain is small despite two extra shape parameters; it is not a posterior, evidence, null-calibrated statistic or global-optimum proof. The calculation omits BAO/CMB, radiation, perturbations, growth and author-modified CAMB; the positive baryon/CDM split is only existential over the observed SN interval.",
+      "counterevidence_or_limit": "The profile gain is small for one extra shape parameter; it is not a posterior, evidence, null-calibrated statistic or global-optimum proof. The calculation omits BAO/CMB, radiation, perturbations, growth and author-modified CAMB; the positive baryon/CDM split is only existential over the observed SN interval.",
       "experiment_implication": "Calibrate the exact adaptive finite search using matched full-covariance LCDM mock SNe before interpreting the observed gain; only then consider a physically complete joint solver comparison."
     },
     {
@@ -190,6 +190,57 @@
       ],
       "counterevidence_or_limit": "The condition number and conditional information depend on the chosen coordinates and are not posterior widths. This one-point late-time SN-only calculation does not rule out a signal in a complete physical likelihood.",
       "experiment_implication": "In combination with the separately calibrated null, deprioritize more flexible SN-only background curves. Prioritize a bounded provenance/feasibility check for a physical perturbation-level likelihood, keeping BAO and SN separate absent cross-covariance."
+    },
+    {
+      "claim_id": "ivs_full_paper_implementation_artifacts_not_found_in_checked_public_trail",
+      "statement": "The official arXiv v1/HTML, APS accepted-paper page, and paper-cited wgcosmo repository checked through 2026-09-25 00:42 UTC expose no version-pinned modified-CAMB patch, complete IVS Cobaya/Dovekie likelihood configuration, or explicit IVS perturbation initial-condition prescription.",
+      "status": "bounded primary-source artifact audit complete; exact source-run reproduction blocked on missing public implementation details",
+      "confidence": "high for the checked article-linked public trail; no claim about private code or unlinked personal/institutional repositories",
+      "primary_evidence": [
+        {"source_id": "interacting_de_desi_dr2_2026", "locator": "Method section identifies modified CAMB/Cobaya but no patch/version, full run configuration, Dovekie likelihood version, or perturbation initial conditions; Ref. [157] links wgcosmo for the Cobaya/MCEvidence interface."}
+      ],
+      "local_evidence": ["work/compute14/primary_source_artifact_audit.md", "work/compute14/primary_source_artifact_audit.json", "work/compute16/author_artifact_sweep.md", "work/compute16/author_artifact_sweep.json"],
+      "counterevidence_or_limit": "The audit did not exhaustively search unlinked personal/institutional sites; private or later-unpublished code may exist. The APS accepted-paper page says author supplements, if any, accompany the version of record.",
+      "experiment_implication": "Do not call the reduced profile a reproduction of the paper's full MCMC/CAMB results. Request any user-held author patch/config/IC artifacts; otherwise continue only as a declared independent implementation with explicit assumptions."
+    },
+    {
+      "claim_id": "idecamb_has_equation_level_ivacuum_rate_and_cdm_transfer_mapping",
+      "statement": "The public IDECAMB parameterization supports Q=beta*H0*rho_de with Q_mu=Q*u_mu,c; setting beta=Gamma/H0 matches the target IVS background rate and CDM-frame transfer direction. Its synchronous CDM equation reduces algebraically to the target density equation if delta_de=0. This is an equation-level mapping only, not proof that IDECAMB's coupled-fluid PPF closure or old CAMB patch is equivalent to the target paper's implementation.",
+      "status": "focused primary-paper and pinned-code inspection; not executed; solver-closure equivalence remains unverified",
+      "confidence": "high for the displayed parameterization and algebraic reduction; limited for whole-solver compatibility",
+      "primary_evidence": [
+        {"source_id": "idecamb_implementation_2023", "locator": "Secs. 3.2-3.3, Table 1, Eqs. (4.1) and (5.8): H0-scaled rho_de transfer, CDM-frame four-vector option, parametrized perturbation coefficients, and synchronous CDM equation."},
+        {"source_id": "idecamb_code_snapshot_20260925", "locator": "Pinned 2023-06-20 `camb/equations_ppfi.f90`: H0rde and uc branches; README and test_ide.ini inspected read-only."},
+        {"source_id": "interacting_de_desi_dr2_2026", "locator": "IVS definition and synchronous-gauge CDM perturbation closure, Eqs. (19)-(20)."}
+      ],
+      "local_evidence": ["work/literature6/idecamb_compatibility_card.md", "context/code/idecamb_4f1093d9efe46f28cf7e2acb4d07ae116ad5e075.tar.gz", "context/papers/idecamb_implementation_2023_v2.pdf"],
+      "counterevidence_or_limit": "IDECAMB uses an extended PPF treatment for coupled-fluid perturbations; the target specifies vacuum perturbations absent on CDM-comoving synchronous slices. Its example configuration uses Q=beta*H0*rho_c and w0=-1.05, not the target. The patch targets an older CosmoMC/CAMB tree; its GitHub repository supplied no license metadata.",
+      "experiment_implication": "Use IDECAMB as an equation/code reference to reduce implementation risk, but implement the target's explicit vacuum closure in a pinned current solver and compare only under shared assumptions. Do not call it a source-faithful reproduction."
+    },
+    {
+      "claim_id": "pdg_2025_sbbn_baryon_prior_is_independent_of_desi",
+      "statement": "The PDG 2025 recommended standard-BBN value omega_b h^2=0.02205±0.00043 is a D+4He abundance-based calibration independent of DESI BAO, but is conditional on the standard early thermal/expansion history and must not be multiplied by the same abundance likelihood again.",
+      "status": "full local source audit; appropriate only for models preserving standard BBN physics",
+      "confidence": "high for the source's stated inference and BAO independence; conditional on standard expansion and nuclear/weak physics",
+      "primary_evidence": [
+        {"source_id": "pdg_2025_big_bang_nucleosynthesis", "locator": "§24.3/Table 24.1 and §24.4 Eq. (24.6); PDF SHA-256 is recorded in SOURCE_INDEX.md."}
+      ],
+      "local_evidence": ["work/bbn_prior_audit/REPORT.md", "work/bbn_prior_audit/audit.json", "work/compute31/bbn_bao_profile.json", "work/compute33/independent_globality.json"],
+      "counterevidence_or_limit": "The PDG mapping is derived from light-element data under SBBN; it is not a raw independent abundance factor. Any model that changes H(T), weak freeze-out or nuclear burning must rerun BBN and fit abundances rather than inherit this Gaussian unchanged.",
+      "experiment_implication": "Use as the broad external baryon calibration for a standard-early-history DESI BAO baseline; keep it separate from the D/H/helium inputs that generated it and report posterior/H0 results only from a fully specified likelihood."
+    },
+    {
+      "claim_id": "pinned_primat_forward_grid_matches_pdgbbn_center_descriptively",
+      "statement": "A five-point standard-background run of generic PRIMAT v0.3.2 gives 10^5 D/H=2.5032624 at omega_b h^2=0.02205, 0.163 observational standard deviations below the PDG 2025 D/H mean using observation error alone; a second run reproduces all five D/H, Yp and Neff outputs bit-for-bit.",
+      "status": "forward feasibility and repeatability independently reproduced; not a likelihood or posterior",
+      "confidence": "high for the pinned source's central-rate forward outputs and repeatability; no uncertainty propagation or independent inference",
+      "primary_evidence": [
+        {"source_id": "primat_python_bbn_network_v0_3_2", "locator": "Pinned v0.3.2 commit and 460-file package/data tree; exact aggregate hash in sources.json and work/data9_primat/REPORT.md."},
+        {"source_id": "pdg_2025_big_bang_nucleosynthesis", "locator": "§24.3 Eq. (24.2) gives D/H=2.508±0.029 in units of 10^-5."}
+      ],
+      "local_evidence": ["work/data9_primat/forward_grid.py", "work/data9_primat/forward_grid.json", "work/data9_primat/reproducibility_check.json", "work/data9_primat/source_data_hashes.json"],
+      "counterevidence_or_limit": "The run uses central nuclear-rate tables, fixes tau_n=878.4 s and propagates no rate/lifetime uncertainty. The compared PDG omega_b value is itself inferred from abundance observations, so this residual is a descriptive consistency check, not an independent validation. The restricted paper-specific vEDE patch/wrapper was not accessed or reproduced.",
+      "experiment_implication": "The public standard-SBBN forward route is feasible; only build an abundance likelihood after pinning the wrapper, rate covariance and observations, and recompute H(T)-dependent abundances for modified early expansion."
     }
   ]
 }

@@ -1,0 +1,2311 @@
+{
+  "repository": "https://github.com/CyrilPitrou/primat",
+  "tag": "v0.3.2",
+  "commit": "21ff8f39fa18e3937e9fdf386cfa982361bfdfce",
+  "git_tree": "9ae225a109aacfe8534f4e5ff25bf81a40a08326",
+  "package_tree_sha256": "583f054b68c100b249126618f41620718ed800f9ddde9d9fa9d1c24aaee98413",
+  "package_file_count": 460,
+  "package_bytes": 21580336,
+  "files": [
+    {
+      "path": "primat/__init__.py",
+      "bytes": 1614,
+      "sha256": "b1d015b32736cb78b2eebd33b08244b15e5bf6ac69028462a7dd72335881493d"
+    },
+    {
+      "path": "primat/_primat_c_src/_wrapper.c",
+      "bytes": 35149,
+      "sha256": "eda39de43a442736bc3d4e564f067fc74e31d455ec2be0223e44e5aca0c0fdcb"
+    },
+    {
+      "path": "primat/backend.py",
+      "bytes": 37550,
+      "sha256": "307b25c9f407323105c773de7cc216f5e0fb295c06fe07319aba272f65e347e5"
+    },
+    {
+      "path": "primat/background.py",
+      "bytes": 67712,
+      "sha256": "72e833045f4c4158c5de0e4411c99913879f1af083822ad085ee4e1a4b05792c"
+    },
+    {
+      "path": "primat/cache_utils.py",
+      "bytes": 12102,
+      "sha256": "2ff1870feb4c752ccab831774a22d702e75b19a0e65c6fe9fd31d012732a7d6b"
+    },
+    {
+      "path": "primat/cli.py",
+      "bytes": 25979,
+      "sha256": "1eb5f60534fbb1502d367e3c3d4bf0fb148f866992f55aa0692dbce4f3a99557"
+    },
+    {
+      "path": "primat/config.py",
+      "bytes": 71178,
+      "sha256": "ec3f905975f98d90f976456e2d2827b93e933ba92b9fef16d5f6445421fd2ce2"
+    },
+    {
+      "path": "primat/constants.py",
+      "bytes": 10449,
+      "sha256": "f89325c6f85d4d141532faf258855f7aa9829866d1eefdb6af057b0472231b0f"
+    },
+    {
+      "path": "primat/credits.py",
+      "bytes": 3727,
+      "sha256": "5ba45ce403909befbf54bbac3378d85f6220b5ac3fff59d424b9e1f018156b0d"
+    },
+    {
+      "path": "primat/data/NEVO/NEVOGrid.csv",
+      "bytes": 2000,
+      "sha256": "3624b7038ebf4e7918b6415f555ea8ce8c738e7727f570ff53a8c9b9a9d040de"
+    },
+    {
+      "path": "primat/data/NEVO/NEVOPRIMAT.csv",
+      "bytes": 1296227,
+      "sha256": "8e3c1a7cfd9b7ce8d848521cccb90ef615b54c453944746a6a98b0678f8976c2"
+    },
+    {
+      "path": "primat/data/NEVO/NEVOPRIMAT_NoQED.csv",
+      "bytes": 1296226,
+      "sha256": "90235b798535d285e941bdcbccbcf166d5029e518f5779350ce2b7c5f4c9174a"
+    },
+    {
+      "path": "primat/data/NEVO/NEVOPRIMAT_NoQED_col_1_7.csv",
+      "bytes": 106246,
+      "sha256": "10f3bc87f66aee1f8e02ba79ce681b94873d34d29e25c164e8ec549498c7bb4d"
+    },
+    {
+      "path": "primat/data/NEVO/NEVOPRIMAT_col_1_7.csv",
+      "bytes": 106243,
+      "sha256": "5df90294a15118bc6815bfcb2f7f4134e7924e026798adf739e1b66a91531699"
+    },
+    {
+      "path": "primat/data/cache_plasma_weak/plasma/QED_pressure_correction_e2.txt",
+      "bytes": 27686,
+      "sha256": "d0fec61b5510c8190fb6688ab42482203e3a7d8a0fb9ca76090a9ee1565ffda5"
+    },
+    {
+      "path": "primat/data/cache_plasma_weak/plasma/QED_pressure_correction_e3.txt",
+      "bytes": 26392,
+      "sha256": "8bc38c5776aa7524eb4bf0491c40e1a5eb6936e4e319dcf6203a63b6f965a450"
+    },
+    {
+      "path": "primat/data/cache_plasma_weak/plasma/electron_thermo_cache.txt",
+      "bytes": 250157,
+      "sha256": "ad9cd65c2010f532d22b3c9da92aafd26a327ba1884581c1c16ff73b1b8323e5"
+    },
+    {
+      "path": "primat/data/cache_plasma_weak/weak/nTOp_2218248995f018af.txt",
+      "bytes": 24479,
+      "sha256": "b472c36efde1bb8da1df3cb0fcc4069f24470390e8c8437b1c93b8ca9265fad2"
+    },
+    {
+      "path": "primat/data/cache_plasma_weak/weak/nTOp_631e4ebd94ca4c87.txt",
+      "bytes": 24480,
+      "sha256": "29d4eecbde83d174024e3e95a2782b28d243464e49b4e542b63ec06fb447909a"
+    },
+    {
+      "path": "primat/data/cache_plasma_weak/weak/nTOp_6b32e444a6085fd8.txt",
+      "bytes": 24482,
+      "sha256": "3429c308a717f6d262e14147fdbe2358997052ce22561041fc0ef5483f43071d"
+    },
+    {
+      "path": "primat/data/cache_plasma_weak/weak/nTOp_b9f6714b054fa81c.txt",
+      "bytes": 24481,
+      "sha256": "273cd1324358cfb3f71e58c5a1d836fe01719a52ff59f93a69ec017115be2b0e"
+    },
+    {
+      "path": "primat/data/cache_plasma_weak/weak/nTOp_thermal_0eccbdd5dbb5dd93.txt",
+      "bytes": 4627,
+      "sha256": "e67ad24cd67a57e7f6b09e41a6f7c076b9acf7a8965dbdab68c21858196f8826"
+    },
+    {
+      "path": "primat/data/cache_plasma_weak/weak/nTOp_thermal_347acddd9ac84e46.txt",
+      "bytes": 4628,
+      "sha256": "05b96bc61f539f24d356e37744d461412e73378cfb52bbaeeb579bc091e6f5f0"
+    },
+    {
+      "path": "primat/data/cache_plasma_weak/weak/nTOp_thermal_a76b4e267077eae2.txt",
+      "bytes": 4628,
+      "sha256": "117c195b28bb9790599d0aa703beab90728c793957f7ae590ab0362bcf4e7f33"
+    },
+    {
+      "path": "primat/data/cache_plasma_weak/weak/nTOp_thermal_e87eaa48ded545f7.txt",
+      "bytes": 4630,
+      "sha256": "c8e5a2ebc2068c7917a76aa813c02ab39d418c96983e5f014c0be787bef14806"
+    },
+    {
+      "path": "primat/data/csv/detailed_balance.csv",
+      "bytes": 18390,
+      "sha256": "a1dc17ebf9f61a1f978e6b72dfb5bc80b592287ce55507110f962d6be581e4df"
+    },
+    {
+      "path": "primat/data/csv/nuclides.csv",
+      "bytes": 1740,
+      "sha256": "9ad9f58b155a004b0cacff376af5100067415b7fc0b30a08a86e8309acc1c94f"
+    },
+    {
+      "path": "primat/data/csv/reactions_large.csv",
+      "bytes": 18854,
+      "sha256": "eeb8268a9ff9cc8c9ed2c0122c9aa420ab3f558b5bdd0479fce9505d7be3689a"
+    },
+    {
+      "path": "primat/data/nuclear/networks/large.txt",
+      "bytes": 15678,
+      "sha256": "e172230a4cc611ca60b8ddb23795f868961cb27a9812abeb641863280752da8c"
+    },
+    {
+      "path": "primat/data/nuclear/networks/small.txt",
+      "bytes": 400,
+      "sha256": "358a6c141f281e75fda3bba0e2993f9f4b3f1c036b2621a2755e4281488a2981"
+    },
+    {
+      "path": "primat/data/nuclear/networks/small_parthenope.txt",
+      "bytes": 715,
+      "sha256": "72ba27a3e856b853453251c3ea86103ecc9a5421cb396a9a13f08197096d90ab"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_He3__C11_d/B10_He3__C11_d_primat.txt",
+      "bytes": 43186,
+      "sha256": "f71ddf3e99a03a90c6c539364ee72a54c4cf614d6a8543acb3fe06260833c7d4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_He3__C12_p/B10_He3__C12_p_primat.txt",
+      "bytes": 43187,
+      "sha256": "c634182e052f788afa36dd51f685ff2e4a8feeec72b2fab8e497e65726cb9505"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_He3__N12_n/B10_He3__N12_n_primat.txt",
+      "bytes": 43185,
+      "sha256": "782f10b1255510cf0c6a5adf61f34c23f1d0a938f592460a6fd532854b07dc50"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_He3__N13_g/B10_He3__N13_g_primat.txt",
+      "bytes": 43192,
+      "sha256": "3ece9776287886d4a4c2c6268964779b2a9867d2c4dd3a34d26f6473e8fce232"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_a__C12_d/B10_a__C12_d_primat.txt",
+      "bytes": 43182,
+      "sha256": "65e2a1b9a96d4bc6796c6e8cf0df6d238a1afd74a98e0ba6e6ffc53d391914ec"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_a__C13_p/B10_a__C13_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "98ed8d7d97b8ff1bb708ea51c00dae7d99bd7b6a446ae390d66e8a693a083e6f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_a__N13_n/B10_a__N13_n_primat.txt",
+      "bytes": 43258,
+      "sha256": "147c0aa2eee79fb8e4d14e01fa92f3065219e6319c83759017b61fe50690b57a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_a__N14_g/B10_a__N14_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "d587885b51f6c37e1ba52b70c29c6a9bd4de2123e2d4a840729b687dbd57618b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_d__B11_p/B10_d__B11_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "d15b55d99448ddb89981a999582ce39762f6161a1850b3a44d0b429edcd7280d"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_d__C11_n/B10_d__C11_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "eeab09eef3fd7a866d045dd59ee2543fea646fd26e2963b54dc2029c9a17a0d6"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_d__C12_g/B10_d__C12_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "a0dbb6588f2198681e7fb6eb6918d89868476b7940b47e945f7ebbeb26ad0d93"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_d__a_a_a/B10_d__a_a_a_primat.txt",
+      "bytes": 43192,
+      "sha256": "69e7fe6043b7c5310666257a58b2f8b84ed3763326b8e214ec689df6573eb58c"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_n__B11_g/B10_n__B11_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "c43607be4a5cb2f8ef10c09ce11efebf65f5a33eb824d04ba300c70aa42a3822"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_n__Be10_p/B10_n__Be10_p_primat.txt",
+      "bytes": 43183,
+      "sha256": "7a59e9d333696e43e02ace040da11d89ffa85dccec986bdc28b7c21e70e06bed"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_n__a_a_t/B10_n__a_a_t_primat.txt",
+      "bytes": 43190,
+      "sha256": "adb041193e7833ba478dcc88ef995de3c68f9d173ae35ded5f60900898a71793"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_p__Be7_a/B10_p__Be7_a_primat.txt",
+      "bytes": 43182,
+      "sha256": "dee6ceb1b6cdfaf8bc99ddb5c7aff82b5616e86d680cc3ad017d9114e518697e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_p__C11_g/B10_p__C11_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "42f6e8982b89cb20c74ee460f3f3af5aa1677c9c33bcea18f2ae599e3fb7df31"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_p__a_a_He3/B10_p__a_a_He3_primat.txt",
+      "bytes": 43193,
+      "sha256": "434210e2347e3df7bd861d019351c6d0162f779d1c304123e1bb234726f214f5"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_t__B11_d/B10_t__B11_d_primat.txt",
+      "bytes": 43182,
+      "sha256": "105ecf77c14ce16ccb33a4cd6f151b1d9e08102fc6b90d0e534aa10f418b2f96"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_t__B12_p/B10_t__B12_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "27c203cdb2d2c6ba12d825b718a3bd6fef4f4db6bf3cb2ec2f60521a042f2771"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_t__Be9_a/B10_t__Be9_a_primat.txt",
+      "bytes": 43182,
+      "sha256": "bc75b3bdf795f1e35a0aec5b3dabf690ebd1d2e425752290a6d4168a3610dddc"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_t__C12_n/B10_t__C12_n_primat.txt",
+      "bytes": 43183,
+      "sha256": "ad6245616da55b85ef7260faf99d43d84a5e4b38e48ef7e8eb6f84ab54382498"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B10_t__C13_g/B10_t__C13_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "15ad693b3d84751eac1282b803e5c3f3b4b2679e799aab05f518958010d16e8f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_He3__B10_a/B11_He3__B10_a_primat.txt",
+      "bytes": 43187,
+      "sha256": "a3faba08b28cdbf40511401f58cd1570e4f7c9fead9d03fa992ac783b81fbc08"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_He3__C12_d/B11_He3__C12_d_primat.txt",
+      "bytes": 43187,
+      "sha256": "3d0ff4d8b1c2c43c066cb69b37e5afd2913dfdfdb904eee7c65ba2f5fcd0b772"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_He3__C13_p/B11_He3__C13_p_primat.txt",
+      "bytes": 43187,
+      "sha256": "2c77c1f7ade30334b28402a5105f9b4462329a5abcee71eb8473e678438083b1"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_He3__N13_n/B11_He3__N13_n_primat.txt",
+      "bytes": 43187,
+      "sha256": "02f6e3a4d8f0868a1a2bdd1290953aa6159e177e30bc79dc8b069b94f66981fb"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_He3__N14_g/B11_He3__N14_g_primat.txt",
+      "bytes": 43192,
+      "sha256": "b5d11809c16e8bf6a190812bfd19fe52ee1f6cfcf98070cb2ae53e4b4e7d99ef"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_a__C14_p/B11_a__C14_p_primat.txt",
+      "bytes": 43513,
+      "sha256": "56b45e2c4f1113f655d79d4d721344deed7f482aee4ab7f809c0311fc28a487b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_a__N14_n/B11_a__N14_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "0a691e1909bc71ca3b6b97e6ed0bceb0202c50fbe7f74fe6a4309aa2db65c344"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_a__N15_g/B11_a__N15_g_primat.txt",
+      "bytes": 43324,
+      "sha256": "a1a60c17fedebc8de41aafcba0c1d90f561ffd7b91d6001ad351d9a6f915cd94"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_d__B12_p/B11_d__B12_p_primat.txt",
+      "bytes": 43170,
+      "sha256": "b2ca6726a4d605e222ced9b5b1e5619d556a3e2c40fb889d6733ec4db9389c86"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_d__Be9_a/B11_d__Be9_a_primat.txt",
+      "bytes": 43181,
+      "sha256": "c987f7d9eb9c2aa4493fed1cef8a450ede198c9181c75fa2a7136773cfd799e6"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_d__C12_n/B11_d__C12_n_primat.txt",
+      "bytes": 43172,
+      "sha256": "7b35d3b56c8202bd5909985466bb8d98a938ccc48182f48932395627ba1f481b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_d__C13_g/B11_d__C13_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "57ab8701cdf8f9f8144d8cc898bd6d36528a9b0c92b8633d2c5f869768b2c520"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_n__B12_g/B11_n__B12_g_primat.txt",
+      "bytes": 43177,
+      "sha256": "920a2f2a34478efdb428c9cddde6be03ffdba00c7b108e8096f2fccc5b9db558"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_p__C11_n/B11_p__C11_n_primat.txt",
+      "bytes": 43357,
+      "sha256": "9d14e480d9a020d89118bf504e76cf993fae7258f4577c85dfe07f60c807c5b9"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_p__C12_g/B11_p__C12_g_primat.txt",
+      "bytes": 43190,
+      "sha256": "71815d1d6eff3664c9e4442b9b29248212e78a0c1f8b5cc5d4dbea3a5161c685"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_p__a_a_a/B11_p__a_a_a_primat.txt",
+      "bytes": 43192,
+      "sha256": "1dcf7b64b6df5a83c11bac9fa374b0af33c754390d7b655c51f30c301daba39a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_t__B13_p/B11_t__B13_p_primat.txt",
+      "bytes": 43181,
+      "sha256": "3ff4b74ab4973cf552c2ff632c5445dd86b5ab68c83fc8e5ff6746a90dc3f95a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_t__Be10_a/B11_t__Be10_a_primat.txt",
+      "bytes": 43184,
+      "sha256": "6d9e3153fa9ca9ae7f54580f74707ab13ead363f1a6cc5f9065c1d937f1c2f0b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_t__C13_n/B11_t__C13_n_primat.txt",
+      "bytes": 43183,
+      "sha256": "fa0eb06d3791571b4ddb55153e2374cfcb0d17aa3a6e2eb416946d39ea1aa992"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B11_t__C14_g/B11_t__C14_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "37eae90f35eb53bbd644706223edeb8cb9135c0a6bd8e8aeef747e4a5466ab4b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_He3__B11_a/B12_He3__B11_a_primat.txt",
+      "bytes": 43187,
+      "sha256": "60dfcfbe0867f12b4395f1b8bf5d5386c7c0fe3a0f8784d0e516de02015211c1"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_He3__C14_p/B12_He3__C14_p_primat.txt",
+      "bytes": 43186,
+      "sha256": "f848aa7abe1d61c9d4587f517fa7f25c883d1bc461ff9fed3bc26ffe2822ca05"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_He3__N14_n/B12_He3__N14_n_primat.txt",
+      "bytes": 43187,
+      "sha256": "c67ee8483bc2e54de539897fb4debd421d54ce8193841841b438e05ae561aec4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_He3__N15_g/B12_He3__N15_g_primat.txt",
+      "bytes": 43193,
+      "sha256": "b01f4933b0604c858471cb29179dbc8daeaabf748fd2fd298e728c7de3900096"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_a__N15_n/B12_a__N15_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "5bead1ae8927b37e4ab93b7c488a94fb38d96f386b0e7557dc164cf600e88c93"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_a__N16_g/B12_a__N16_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "fde3e6f6a929559d197f2cdc8daaf710e5b75ebdf488f6344d1fd24036cd4d03"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_d__B13_p/B12_d__B13_p_primat.txt",
+      "bytes": 43180,
+      "sha256": "c71a0886bc6880343d8b2823fe7a1e1bfb71ec529a287d36b69469cc613c3ac4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_d__Be10_a/B12_d__Be10_a_primat.txt",
+      "bytes": 43183,
+      "sha256": "30d8424a4a9b9e5852848dd197c192ae776982c6250487a03f2b37911a9a6bca"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_d__C13_n/B12_d__C13_n_primat.txt",
+      "bytes": 43183,
+      "sha256": "5c52b61110d84feb495f623884f533ca280a4d8419f625945b8c76e84b4de495"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_d__C14_g/B12_d__C14_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "2d50fdeace04ba41bd7073a739877cec0b71fc8db980cddb0a7698bdaafe75bd"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_n__B13_g/B12_n__B13_g_primat.txt",
+      "bytes": 43186,
+      "sha256": "b92fe0b5d0cef9b7d4be5d99be3fabc58b632ea5b0444e0bdd03a5737091900b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_p__Be9_a/B12_p__Be9_a_primat.txt",
+      "bytes": 43183,
+      "sha256": "e4d3e931aa49be4ddcb37bf1ffaa2b9915cf7f0e67e0ab7659421065caedceb9"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_p__C12_n/B12_p__C12_n_primat.txt",
+      "bytes": 43183,
+      "sha256": "e4b4304d2bc6e323a6aee888cc7cfe3066732550aa2b14b67cee0004c6a4114f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_p__C13_g/B12_p__C13_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "7ec5ee118f328d4089e551025903cb0337720926ba13feedd34ca6c0b98c5c59"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_t__Be11_a/B12_t__Be11_a_primat.txt",
+      "bytes": 43183,
+      "sha256": "108bcec02b256a1e3fc876c2f8153070b72a8fe7f3cc2ee03d7f478271b7be24"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_t__C14_n/B12_t__C14_n_primat.txt",
+      "bytes": 43183,
+      "sha256": "a830e4649ea708a33f714490fca151ea38cd4872d1c7fe2204926d895e1832da"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B12_t__C15_g/B12_t__C15_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "ffcc169300abb5b5fb38be12d839f290264b86d51d12c0ad801441db9f30dabe"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_He3__C10_p/B8_He3__C10_p_primat.txt",
+      "bytes": 43183,
+      "sha256": "18b083f64ea58afbdae2f0f601ad2466b0ebdded09b26f699db2849a73643e90"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_a__C11_p/B8_a__C11_p_primat.txt",
+      "bytes": 43180,
+      "sha256": "8384e446821360809833175218ec95026a86660856146aec881431a911ce3cb3"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_a__N12_g/B8_a__N12_g_primat.txt",
+      "bytes": 43186,
+      "sha256": "980d539c8fd9d1ee7402840d2633490c7792ca2fa8b4457cf2d71e31490ef02c"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_d__Be7_He3/B8_d__Be7_He3_primat.txt",
+      "bytes": 43183,
+      "sha256": "b04862d6b0ca45124fecb991ee2816902cd0d0916081583b8b18fcb7e6c89ea4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_d__C10_g/B8_d__C10_g_primat.txt",
+      "bytes": 43187,
+      "sha256": "d4250a89d2aab7b4650c8118ae79b7f091cfc36edc260f2580300c099bbfed60"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_n__Be7_d/B8_n__Be7_d_primat.txt",
+      "bytes": 43181,
+      "sha256": "0ab5d5f03e19309de577af079bd35df4b4fc6fc0421999b9a4382e987af0d153"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_n__Li6_He3/B8_n__Li6_He3_primat.txt",
+      "bytes": 43185,
+      "sha256": "f60d3300e973d0ab6c62e9c7246644c713604546884c3243a7ca56079f950898"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_n__a_a_p/B8_n__a_a_p_primat.txt",
+      "bytes": 43189,
+      "sha256": "7c6f28aa45d5ec5edc8acd0e51dc059bc654e5d2274c73f867afa55095b4b90e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_p__C9_g/B8_p__C9_g_primat.txt",
+      "bytes": 43271,
+      "sha256": "c59a2939bcce5ed93befdd43aa4fd67543e27d1bbd59a218365d77c1daaadc1f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_t__B10_p/B8_t__B10_p_primat.txt",
+      "bytes": 43179,
+      "sha256": "909c7e7ec807c7e9cd33bfa84d19504e2a23ccfe4da8897b50dd1b5967e11a00"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_t__Be7_a/B8_t__Be7_a_primat.txt",
+      "bytes": 43181,
+      "sha256": "1f1e45810512de06605cb83aeaa9dade268d626ebb449fa1a817217164ea8de3"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_t__C10_n/B8_t__C10_n_primat.txt",
+      "bytes": 43181,
+      "sha256": "960fdb1fe037d6e46c09fe484f7ae1850f89a14f108a4dc9cd5a2cd0c5e6a152"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_t__C11_g/B8_t__C11_g_primat.txt",
+      "bytes": 43186,
+      "sha256": "c52c6eeffff80d2b7225eca29d550f04d8b9be559f7e4973f87a7e4dea9212df"
+    },
+    {
+      "path": "primat/data/nuclear/tables/B8_t__a_a_He3/B8_t__a_a_He3_primat.txt",
+      "bytes": 43194,
+      "sha256": "543e50415caee201198c756a0b87209a57463f1c2954c2d8c47cc05c48961d43"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_He3__B10_t/Be10_He3__B10_t_primat.txt",
+      "bytes": 43188,
+      "sha256": "e8bfcb7ec2ca6890fc95411706fdd8f9d4e0b1375e03432854ebd1c3d263ca0e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_He3__B11_d/Be10_He3__B11_d_primat.txt",
+      "bytes": 43189,
+      "sha256": "c4a14d4bfb35e9e3865d42d0ebb8c35cc611a0bf64d806b3157b5ff1fe5f076c"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_He3__B12_p/Be10_He3__B12_p_primat.txt",
+      "bytes": 43186,
+      "sha256": "298ded78da3fdb399ca243c6d027973b822d71f85ddcdb628c82a2e2d1087462"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_He3__Be9_a/Be10_He3__Be9_a_primat.txt",
+      "bytes": 43190,
+      "sha256": "9c20dddeee869bfd97c0dcd450635fdb69206494168b1b8ea37200d4cbf69688"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_He3__C12_n/Be10_He3__C12_n_primat.txt",
+      "bytes": 43187,
+      "sha256": "056a1cae7045801979e7a518df6795695d05e620bd6147180852a6ca431e3465"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_He3__C13_g/Be10_He3__C13_g_primat.txt",
+      "bytes": 43192,
+      "sha256": "196ab47484169f1c6da17e15de890fb629427e0e710e686a4aef3289cc351978"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_a__C13_n/Be10_a__C13_n_primat.txt",
+      "bytes": 43184,
+      "sha256": "dfe235641822a54fae87802b52dbc9d144c22a16b9593c0e9a6cd627cb3875e1"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_a__C14_g/Be10_a__C14_g_primat.txt",
+      "bytes": 43190,
+      "sha256": "073e365a7fa8c25c7060688154cac1d85a88267e5184cfd631dc9a0629e65195"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_d__B11_n/Be10_d__B11_n_primat.txt",
+      "bytes": 43185,
+      "sha256": "c363baee18eb02d52e9a1ba65a70c94bd576f761b02d4d1fb98ada3b981a3238"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_d__B12_g/Be10_d__B12_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "19c7075da9d694af5a57b197f6ec5b8e72d744cf099416e2c9488b25fc4563e0"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_d__Li8_a/Be10_d__Li8_a_primat.txt",
+      "bytes": 43185,
+      "sha256": "64960611a2288fa11ef6b98516b4a97e363ebfaa453fb8f74a7c20a9bc430d96"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_n__Be11_g/Be10_n__Be11_g_primat.txt",
+      "bytes": 43220,
+      "sha256": "8b57e2edd41f01f19b9f37a1ea9d0b2ea905b9581ec4db471c813bb39bc845be"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_p__B11_g/Be10_p__B11_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "1446059ea161ce6f2b85d721abd9b986c4c207309e14c034b9840c561a800e55"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_p__Li7_a/Be10_p__Li7_a_primat.txt",
+      "bytes": 43185,
+      "sha256": "c10d4d31e021c76307a18a1e7d1972c60c35b83647ff18ef67e9e89a8325812b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_p__a_a_t/Be10_p__a_a_t_primat.txt",
+      "bytes": 43191,
+      "sha256": "ba334ce3d2e32839cda5556ad1ec29ac848e8f30debc12ea03b73f2b351b0324"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_t__B12_n/Be10_t__B12_n_primat.txt",
+      "bytes": 43184,
+      "sha256": "30eb65594b82967c274e12a528dac89c1cb621c2f47dda179b90c10bacb27c5f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_t__B13_g/Be10_t__B13_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "da3e6f2172426fb6f7983525b905be524e95a79117a22289e40c955e37c5de14"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be10_t__Li9_a/Be10_t__Li9_a_primat.txt",
+      "bytes": 43184,
+      "sha256": "e26b328aed6930255c6e56efc100e21715feac2da099ea3bed9809028c0626c8"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_He3__B13_p/Be11_He3__B13_p_primat.txt",
+      "bytes": 43188,
+      "sha256": "3a239e4843b0bb1beafd41ad6ecff482a127fe35a6b04dbd149ce40f2ed61f6e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_He3__Be10_a/Be11_He3__Be10_a_primat.txt",
+      "bytes": 43191,
+      "sha256": "02de234513e13be2584b6dddef2d752ead99690b89e572c9505bf70bbf66c07f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_He3__C13_n/Be11_He3__C13_n_primat.txt",
+      "bytes": 43189,
+      "sha256": "42455a784bceecca6707b4bc4f591aa6b0a00f6afffd8fa6d20d8287d91289f4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_He3__C14_g/Be11_He3__C14_g_primat.txt",
+      "bytes": 43195,
+      "sha256": "40cbd615539799d8e97d4557dbe688636d6da9e171ce3243067ccd55aeb1d22a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_a__C14_n/Be11_a__C14_n_primat.txt",
+      "bytes": 43185,
+      "sha256": "5a8dd043813926dd0556bcfede6ad04324b1c3f25a53ee352f90ae8d75b5ece6"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_a__C15_g/Be11_a__C15_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "cc881a78674f615cc46c7f0894a0bfe4881136fc29dc5c7ba80978370661e024"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_d__B12_n/Be11_d__B12_n_primat.txt",
+      "bytes": 43184,
+      "sha256": "f12646e9b3356111a47aa10dd2dd1f7ee6b6b876c06b7ffaa9cea3e0e2fb26cc"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_d__B13_g/Be11_d__B13_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "952b810e7b8a3818936ad677a56ea8371f61aec4930abb8e40a915e3ccb1c16b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_d__Be12_p/Be11_d__Be12_p_primat.txt",
+      "bytes": 43186,
+      "sha256": "ebc4970c635c80b5560e8ae4cde81492a551f76609d18cc5555a0e14993b7cc6"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_d__Li9_a/Be11_d__Li9_a_primat.txt",
+      "bytes": 43185,
+      "sha256": "ffcf19095cf3ba56772efdd90a6f2b82dd1052923d2b72eb8c76268fbbc86c87"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_n__Be12_g/Be11_n__Be12_g_primat.txt",
+      "bytes": 43190,
+      "sha256": "7786e002a7e933be7c8395bf10461260262b6731f43470307c5c5ab177109c74"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_p__B11_n/Be11_p__B11_n_primat.txt",
+      "bytes": 43186,
+      "sha256": "3b8d9086e910b3a369f2a79ac02743ecca109c3ea9a76f4622e7bc476ee0035e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_p__B12_g/Be11_p__B12_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "94b0b58eee1a7297deec44330e4a77b01409b2e78c66a8161671b98154e431d8"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_p__Be10_d/Be11_p__Be10_d_primat.txt",
+      "bytes": 43187,
+      "sha256": "b75d96b7a7c17b261542709efb26e4ea6c509bf659efce3750e865d55fb25cb8"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_p__Be9_t/Be11_p__Be9_t_primat.txt",
+      "bytes": 43185,
+      "sha256": "392e8f872775a7c02e768dbecaa904e5c53f3ef573c1e023d1b9b60a72d6ea7b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_p__Li8_a/Be11_p__Li8_a_primat.txt",
+      "bytes": 43185,
+      "sha256": "b7ff52dbfe9a1fc438aaf274870ce948116d40aa51089cd4bd354689b8ec5451"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_t__B13_n/Be11_t__B13_n_primat.txt",
+      "bytes": 43185,
+      "sha256": "1891ece79797e203d1d80dc87dbfa881373038d899c0916e65eebe700122f52f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be11_t__B14_g/Be11_t__B14_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "23b0cb8632c3bb254213c6a82882ca924f47b6b52ef05af44df65f71e8a2c13a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_He3__B14_p/Be12_He3__B14_p_primat.txt",
+      "bytes": 43189,
+      "sha256": "a4b04f72a918845ccc4c5eaad16e1c94962924c5dcf161c0f687ee76b786fb60"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_He3__Be11_a/Be12_He3__Be11_a_primat.txt",
+      "bytes": 43192,
+      "sha256": "8d395bb4796bc6c0a961e27375028f4b1fddd10af862da5337c6d57f21b628e7"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_He3__C14_n/Be12_He3__C14_n_primat.txt",
+      "bytes": 43188,
+      "sha256": "10771ffdf602b2b2d93f2e1ef06041c90d3d0be5dfc1e8a97efb7a2bb01b1b02"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_He3__C15_g/Be12_He3__C15_g_primat.txt",
+      "bytes": 43195,
+      "sha256": "264836479fe4924a25c7298526c5889f6cdeb6027b24ecb55d99cc619a48e81e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_a__C15_n/Be12_a__C15_n_primat.txt",
+      "bytes": 43183,
+      "sha256": "5da629aae59eb9c6ca11d6cda891e25c1fa1c49688d194f96abf7a16b2b67b27"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_a__C16_g/Be12_a__C16_g_primat.txt",
+      "bytes": 43190,
+      "sha256": "151c28914cb9effc0c39a3bd950671e89071e67a3c204d4acc78501168059236"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_d__B13_n/Be12_d__B13_n_primat.txt",
+      "bytes": 43185,
+      "sha256": "bd05db30bbbbb15a01d66b9d9c5b16de57c7af265cea9274c8382bbea86eb5d3"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_d__B14_g/Be12_d__B14_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "0a0949d339645eb58b2d127ec4386e41679c57fe99b2b5b943fbad10ad59431a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_p__B12_n/Be12_p__B12_n_primat.txt",
+      "bytes": 43186,
+      "sha256": "90f3979628c0f9c4f4b6b31c894a57cae89fb218797e9d6fdf9b059e8505a548"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_p__B13_g/Be12_p__B13_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "7e5e6c6769e7b41bc5e6bd9fff4b72b29ba9b77dd995d04271e97fffa7e617fa"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_p__Be10_t/Be12_p__Be10_t_primat.txt",
+      "bytes": 43187,
+      "sha256": "ea9ec9b155559b3210042d68052565845f5dd7580949925672acdd9ac9f4eb48"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_p__Li9_a/Be12_p__Li9_a_primat.txt",
+      "bytes": 43186,
+      "sha256": "6507bb18ac6463727f092f5de16a131453a9245a6221fa81dadb099505626a55"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_t__B14_n/Be12_t__B14_n_primat.txt",
+      "bytes": 43185,
+      "sha256": "9523b56be978cf14fdcf3e91532f8553430ab86d973a6cc88bef470eaa4d7c04"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be12_t__B15_g/Be12_t__B15_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "b2968b1305bf3dbc8a67dda44225de7b3c62cc196a7fe3cb63143be5e2c382c1"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_He3__C10_g/Be7_He3__C10_g_primat.txt",
+      "bytes": 43193,
+      "sha256": "6879a22d039edc7658ecb8828652b1e15aba83056a1fc75c5698c4933feee9d3"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_He3__a_a_p_p/Be7_He3__a_a_p_p_primat.txt",
+      "bytes": 43259,
+      "sha256": "ec00b5260816428425aea32bd64a7704bc3788c0ab933b239c84ec84489bcfd7"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_He3__p_p_a_a/Be7_He3__p_p_a_a_primat.txt",
+      "bytes": 43201,
+      "sha256": "616f058f33e139d2a3f3cd413bbf3b81e3ccab865a60dc87f6942f796a1130cb"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_a__C11_g/Be7_a__C11_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "4c5fc2bfa396c0e3d130094968d2ecb8a680b20996d0e484382ec673c60b2fa8"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_d__a_a_p/Be7_d__a_a_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "50bfe6739eb1a2de0c6aa739e63daa6d5f179248cb034a535c116768cb89445f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_n__Li7_p/Be7_n__Li7_p_parthenope3.0.txt",
+      "bytes": 39391,
+      "sha256": "920304befba8056df4ed3fd51cad6035d58e1b01f1048cf432df73c29b6cc465"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_n__Li7_p/Be7_n__Li7_p_primat.txt",
+      "bytes": 43178,
+      "sha256": "21bddada9e476870ebf0dce0e3462726819c6a148341db8f283cdadcd8fcac3a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_n__a_a/Be7_n__a_a_primat.txt",
+      "bytes": 43175,
+      "sha256": "d78aa8b729e93fae23aad568188a2761ebb15006ea90411ca0dab05231f24fe8"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_p__B8_g/Be7_p__B8_g_primat.txt",
+      "bytes": 43186,
+      "sha256": "5ffde12b9833c4c228040ebc0164bd5c834678fd70b0d7ec13cd1f1cbe2d730f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_t__B10_g/Be7_t__B10_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "27360ac5a0f335957aab518c8a9c32b77dfa55e2439edac57b9fe5c337d8e132"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_t__Be9_p/Be7_t__Be9_p_primat.txt",
+      "bytes": 43171,
+      "sha256": "fe91b449ff4d013fa8df3818e57bf98b55cb5e487d62831920d94beedb1ec555"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_t__Li6_a/Be7_t__Li6_a_primat.txt",
+      "bytes": 43183,
+      "sha256": "7dc14de4dfa9f0049a222f0b7fa564b53e99f9dce266354e71c9da5be9f358be"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_t__Li7_He3/Be7_t__Li7_He3_primat.txt",
+      "bytes": 43186,
+      "sha256": "78074f1ca07bec80a1481ccc1cdd038186863963b2e3356b22b12acfe348ffe0"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_t__a_a_d/Be7_t__a_a_d_primat.txt",
+      "bytes": 43192,
+      "sha256": "4dc5cd3916b715c6b3cfcb1598b15840017f2d6ce840db93d05231b88fbe1437"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be7_t__a_a_n_p/Be7_t__a_a_n_p_primat.txt",
+      "bytes": 43255,
+      "sha256": "614f22e0745f358cab0d43c5f6363948566e60ba17f3ffee1df903894097bc13"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_He3__B10_d/Be9_He3__B10_d_primat.txt",
+      "bytes": 43187,
+      "sha256": "b08aea736137b981853eb8d53fc71f06c499a349432222789361976529ccdbb7"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_He3__B11_p/Be9_He3__B11_p_primat.txt",
+      "bytes": 43187,
+      "sha256": "74bbc8956989560ee8f509a90b477d00cb8bc116f977be35719e3cc32cd32a15"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_He3__C11_n/Be9_He3__C11_n_primat.txt",
+      "bytes": 43186,
+      "sha256": "2948aecaccbdf3eca0d606faff7e1bdea6621581863550d33aa7dc7cebbd0699"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_He3__C12_g/Be9_He3__C12_g_primat.txt",
+      "bytes": 43193,
+      "sha256": "eec5977dbf9f53ad8567ef1bb5d2fb2594720ebe64cf602aeb0fa8ce54f013a3"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_He3__a_a_a/Be9_He3__a_a_a_primat.txt",
+      "bytes": 43196,
+      "sha256": "2c3c12a240d47ace02d4cf55812cf2ea856cbc9e143187955d3321808fce25b8"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_a__C12_n/Be9_a__C12_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "3101d60955c493c5b9f1f005c7f60b822d3774a6968750cbfe6993737c08d0c2"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_a__C13_g/Be9_a__C13_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "b25edf9272c066a118b9b086dde4a5339e656b6c95f8c9f0b5a660af5e78ba3d"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_d__B10_n/Be9_d__B10_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "85fff7e17039aec3fa9e08a68e1f95fc79f1bb13a2d9a8d0590c45af2e49a80b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_d__B11_g/Be9_d__B11_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "a45fca77c9b4e9f7f6e21e1dd2c53a3b186ec48912d7ffc0b8f714d1c68fc59d"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_d__Be10_p/Be9_d__Be10_p_primat.txt",
+      "bytes": 43184,
+      "sha256": "18ed7b7b4919e0d098a39a8c923685538ffc93854f6bedc6ae48cc1af46d243a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_d__Li7_a/Be9_d__Li7_a_primat.txt",
+      "bytes": 43181,
+      "sha256": "df6f3ab2ad2e1543552c032871cd020c3301cc633cb62e841286168703b7065d"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_d__a_a_t/Be9_d__a_a_t_primat.txt",
+      "bytes": 43191,
+      "sha256": "482bdc63c6a26e61342d32efc36bd4f2ce307acc80ea406b85af9b46e5c330e0"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_n__Be10_g/Be9_n__Be10_g_primat.txt",
+      "bytes": 43273,
+      "sha256": "d38ea0c7206ead0f1aebb5a6e4c80c88a7c59ea900c294c323c4662817ff5007"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_p__B10_g/Be9_p__B10_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "35d4b3009624f69123e55e90f1cbef87d58017dca8ed5b1f394fbe9997c3e1ae"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_p__Li6_a/Be9_p__Li6_a_primat.txt",
+      "bytes": 43183,
+      "sha256": "4fd87a7dc0d52e14e4c1d47d4378a7da46dfdfd4afb42f8c6cd5ab14248d9ecb"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_p__a_a_d/Be9_p__a_a_d_primat.txt",
+      "bytes": 43190,
+      "sha256": "3cc1896f11b53cf4986a1b3f9c7a87845accaab8cb5e28b190ed50eec0d8df6c"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_p__a_a_p_n/Be9_p__a_a_p_n_primat.txt",
+      "bytes": 43339,
+      "sha256": "f81fb07971e68753eb26e4dd3dbff4d900b22d85fc9071387e35fc2c36f54a41"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_t__B11_n/Be9_t__B11_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "616e2947aa28018fd142ef64e19a22a1f323bbe9c33bc0d5987554b58a0533cf"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_t__B12_g/Be9_t__B12_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "c34d71565aaed7a51930944efd72d8440b6a51bbb23805054d86156b9b80f3db"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_t__Be10_d/Be9_t__Be10_d_primat.txt",
+      "bytes": 43182,
+      "sha256": "31c64a7db83ca730cd59ef9d45b4f4a7bcdafe0d2e3f4cdb451846f53a474508"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Be9_t__Li8_a/Be9_t__Li8_a_primat.txt",
+      "bytes": 43182,
+      "sha256": "5f63f5416eb1f1176d500eca472b046850a0e1492930e2ad15542a4ad1ba29e1"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_He3__C10_a/C11_He3__C10_a_primat.txt",
+      "bytes": 43186,
+      "sha256": "371dff6aeaf10dc7684e2e709debf29e26e762abd117f12f08c4f5d2491f7ff4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_He3__N13_p/C11_He3__N13_p_primat.txt",
+      "bytes": 43187,
+      "sha256": "180e5d56cf41fa97e60340286730f2be51ccb5fdcb882d817e18a0a1de0b5f6a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_He3__O14_g/C11_He3__O14_g_primat.txt",
+      "bytes": 43193,
+      "sha256": "1413acca4ca8d06c30dc1988e0406a347a8941597960ad38437c2586bbc735ae"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_a__N14_p/C11_a__N14_p_primat.txt",
+      "bytes": 43375,
+      "sha256": "f42d4ecd0d892e40b024069240f54a8a4646b78beae782d8c20af7a17cc036de"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_a__O15_g/C11_a__O15_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "13cf0b4e8db1debf2852a3dbd079c69a2d4791d35df0dab322965c634ba22452"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_d__C12_p/C11_d__C12_p_primat.txt",
+      "bytes": 43169,
+      "sha256": "5da96d361f2494114c76af25699416b6337af6fbfebda54e61be61efa80730f3"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_d__N13_g/C11_d__N13_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "b2c9d7d1c3a293cd693608ec983846482b0c2f1fe54940df5dd97bef2fc13aa7"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_n__C12_g/C11_n__C12_g_primat.txt",
+      "bytes": 43242,
+      "sha256": "294de6acba1e84b4f47a93eaf4f17360d80029e4228a2dcf2598d35dea5c5f93"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_n__a_a_a/C11_n__a_a_a_primat.txt",
+      "bytes": 43181,
+      "sha256": "87e8a8aa389a1435e42f22f6a814ea6309ee426bb26795f10be9b117e0ea1de5"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_p__N12_g/C11_p__N12_g_primat.txt",
+      "bytes": 43350,
+      "sha256": "9d5eb0f095f2ab8c22cd50d2c5a59098ff9c584f40b922ecf6a452a2616e835a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_t__B10_a/C11_t__B10_a_primat.txt",
+      "bytes": 43183,
+      "sha256": "23084119ed8b32d3689ca25e12f7491e222fa7470203e4fcc55142718e497f3b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_t__B11_He3/C11_t__B11_He3_primat.txt",
+      "bytes": 43185,
+      "sha256": "46eefe8043ba237bb537121732c467e5cd9d486cbd93fba206824a57d55e7d6b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_t__C12_d/C11_t__C12_d_primat.txt",
+      "bytes": 43183,
+      "sha256": "9d2e41171995d43d6c628d4e7795ac3a222048ee7df791f14e6207641868dac2"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_t__C13_p/C11_t__C13_p_primat.txt",
+      "bytes": 43183,
+      "sha256": "a26738367abc9966a0e1c3eaf1722c0374b6483c4253ab57e264f623ccc30589"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_t__N13_n/C11_t__N13_n_primat.txt",
+      "bytes": 43183,
+      "sha256": "d15faad1d7f8484e04cf4b70af4c81b74424e6842cef4cb16ebc3e93a122ab8a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C11_t__N14_g/C11_t__N14_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "3a8a0434b51a3b826af36665d3b79247caa99454476ad81e919d688ebc6c8951"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_He3__C11_a/C12_He3__C11_a_primat.txt",
+      "bytes": 43186,
+      "sha256": "a06462446ff25453acf6b7b6795449de7168ddca3e42079bc8935626f91b97fb"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_He3__N14_p/C12_He3__N14_p_primat.txt",
+      "bytes": 43185,
+      "sha256": "6e0a7e4558db554d878692d1a6dedddc24b00d5dd4186ff3bce17780cff0a42e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_He3__O15_g/C12_He3__O15_g_primat.txt",
+      "bytes": 43193,
+      "sha256": "bc955a1d2d635f1d4e38ed08e04c2c076d71a7689fa3db62bac0841d9edbac39"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_a__O16_g/C12_a__O16_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "7383dd2b0db446d73515ddec7091c22721b859a56e4d986474aa25c54754dc4a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_d__C13_p/C12_d__C13_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "5772f378737f4b895b1ba1fcb5c318438dd5447adbc7e2de9bc2797db820afb6"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_d__N14_g/C12_d__N14_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "95c93501165fb1a49261d4305f2b3d5f13b356f877876ca47b1b01cfd539cb13"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_n__C13_g/C12_n__C13_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "8a79e7c597aca9e4ebe458a5ac3f11f1dac8a6725139ea2ba23a6af8bd9beaba"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_p__N13_g/C12_p__N13_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "d9ea34c50bb7b0649f269078aaf852698b253b050be937812574473c4d398fe0"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_t__B11_a/C12_t__B11_a_primat.txt",
+      "bytes": 43182,
+      "sha256": "5502a92f70c569c968a4972cf251af6ee84b21b94247aed31c6d164bb1a6b55a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_t__C14_p/C12_t__C14_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "46787f17aafa8fb1e4a85c1a59a2fb236ba893de3835a2b75ff8d66858abfec4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_t__N14_n/C12_t__N14_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "c7bb6860405a0764a058a65861fff4cfd4e312823a85bb05a7610b8f62e0b96b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C12_t__N15_g/C12_t__N15_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "83887f944d9a2d2661c2cd0d99f537ca598a7df2d56f93646751c8d903b3da63"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_He3__C12_a/C13_He3__C12_a_primat.txt",
+      "bytes": 43187,
+      "sha256": "991e3ef2a154bced16bfb3f51924b3f1aa25760b17d15a99fe1d59aaaf86fdd4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_He3__N15_p/C13_He3__N15_p_primat.txt",
+      "bytes": 43187,
+      "sha256": "4321b0abb54dc35ed94913774dbdfeb941f76f5fd7e5ed22096185872af9934f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_He3__O15_n/C13_He3__O15_n_primat.txt",
+      "bytes": 43185,
+      "sha256": "1dd1ef9bebddb9df239c7c039506825062692e5310d1b60938e438171bdf921c"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_He3__O16_g/C13_He3__O16_g_primat.txt",
+      "bytes": 43193,
+      "sha256": "3d85eae8e6b081deb630545ac3e287012e6cb78cca9d8153e2da342188bebf8e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_a__O16_n/C13_a__O16_n_primat.txt",
+      "bytes": 43183,
+      "sha256": "9a11761dfd6942883ee4d10a9b4c5f648079b5cad5fdd6c286c5be136a33e3ce"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_a__O17_g/C13_a__O17_g_primat.txt",
+      "bytes": 43186,
+      "sha256": "6772ba50a3d4c9427ccac33f1842f517da117efe4cbba098529e7dae5a88c016"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_d__B11_a/C13_d__B11_a_primat.txt",
+      "bytes": 43183,
+      "sha256": "c393f0d606dc634232f9732ae901fbfed01bfab41cdadde24d1bfaddec72ce71"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_d__C14_p/C13_d__C14_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "2fec06920c531f98ef8193e0fb23bbc06614449f80f051548339712a15e5f97d"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_d__N14_n/C13_d__N14_n_primat.txt",
+      "bytes": 43181,
+      "sha256": "fac60946e939da6a0bccf8fa6eea8908ac104ed6978abe1f55d4999a233a6431"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_d__N15_g/C13_d__N15_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "912dd711fca1933878607dc99fea30145cf4aa89ae8a63ec0575d2c94d18e366"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_n__C14_g/C13_n__C14_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "e18157a18df8d07b45a14df27ca22d4e124d73e350387f9075290d93b5d167ee"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_p__N14_g/C13_p__N14_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "bc5619f81eb37fad74be8992bc9527d8d9d8e61de36e1c565a2a95dd21823b05"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_t__B12_a/C13_t__B12_a_primat.txt",
+      "bytes": 43182,
+      "sha256": "bfa72bf263ea9b4814074a804ebabdbe56129dedcb8a5e122adb02051a5494b2"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_t__C15_p/C13_t__C15_p_primat.txt",
+      "bytes": 43181,
+      "sha256": "e0889fa06419e7de8db08c1f8a5fe0725a5eea680ab2c00c229d8c99540c3154"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_t__N15_n/C13_t__N15_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "64666ef81865596dd83c7f2b377060ca534d205016af1384c22fad7fa0d20db5"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C13_t__N16_g/C13_t__N16_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "1889025b7c117ddcffecc738283db0d29ddb6aa7b6ea6744c631e1316f60c928"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_He3__C13_a/C14_He3__C13_a_primat.txt",
+      "bytes": 43187,
+      "sha256": "1d3a2bca4f31316d8e4b3439b0750020de972f486ab1ac7e4c39e75bde61ede6"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_He3__N16_p/C14_He3__N16_p_primat.txt",
+      "bytes": 43187,
+      "sha256": "8bb9e5fa24b56e831ebcba8e9e0b20c1cfc1c4a0279ed53e99c9a8df5261c980"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_He3__O16_n/C14_He3__O16_n_primat.txt",
+      "bytes": 43187,
+      "sha256": "75fa746b45e1a377bd916f7c265ba55b6cd96b5836a3c1fa7ac82a3a9be564ce"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_He3__O17_g/C14_He3__O17_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "62c276b9179f91053840e2ac661a3bace517cf78172a2830e90657412f659d88"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_a__O18_g/C14_a__O18_g_primat.txt",
+      "bytes": 43181,
+      "sha256": "6516fc9ced5dc79ef9787eea42870e162fb735ecf1db85ec264eb7b3fbd7c42f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_d__B12_a/C14_d__B12_a_primat.txt",
+      "bytes": 43182,
+      "sha256": "a6b8d68718442f2a47dcb9a6735d101318c75c253b48fe9215793a17117dcedf"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_d__N15_n/C14_d__N15_n_primat.txt",
+      "bytes": 43203,
+      "sha256": "431d637ad893ac403596dbd974265ac2d2eeb44aa6fd4525acf7c6950d90b797"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_d__N16_g/C14_d__N16_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "d2bee5aa565fe712055d985c2c70c60e3e9791ac69a5a4643e9b5894a4df4148"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_n__C15_g/C14_n__C15_g_primat.txt",
+      "bytes": 43165,
+      "sha256": "b85eb5b2e045f986f27e3a65d5846101a7a51386de88e7008cb21a1bc40d23b6"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_p__N15_g/C14_p__N15_g_primat.txt",
+      "bytes": 43182,
+      "sha256": "7015c9b57ef07fc43b450e4e80e6caac731492f8d106a06f286c86804b8e5ca4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_t__N16_n/C14_t__N16_n_primat.txt",
+      "bytes": 43183,
+      "sha256": "7f25a5418e9c5cf7a76acca154e0f830a9c81f7b0e2f3d81bacb3e45493fbf3f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C14_t__N17_g/C14_t__N17_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "d0c862a57386f7335de69d5abce05d99bdb88cd95a4506ea6e84a98046195167"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C15_a__O18_n/C15_a__O18_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "cea5142ae8258f33f6077f41e1cf58389b41f1039171870c05ceb6b7fbba591a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C15_a__O19_g/C15_a__O19_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "eb334111500016189ed013336efcec04c9601ad7c79aa46c81d228c7cd7cfaf8"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C15_n__C16_g/C15_n__C16_g_primat.txt",
+      "bytes": 43187,
+      "sha256": "fc0489dd7ff134b01b5481faf32308dfc38d0395c75c87e58040986e0ffdf0cc"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C15_p__B12_a/C15_p__B12_a_primat.txt",
+      "bytes": 43183,
+      "sha256": "eefb2c67c6b47f761b2d52e575e36d918fe8ee5f4e183b46201811ceddc17b28"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C15_p__C14_d/C15_p__C14_d_primat.txt",
+      "bytes": 43183,
+      "sha256": "76c97647691b5742fe5807b4111caaaceb7f4eb16451ae80cc4bc90f2f15b918"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C15_p__N15_n/C15_p__N15_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "5e6eefcd3039eb09291517b709c2985c2af3b21e01f070c2cc05b4ffac403b2b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C15_p__N16_g/C15_p__N16_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "4c6c09137c06125daa8c31cd0ee2886f231276c43e7b7d114a3081010e6ae1c1"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C9_a__N12_p/C9_a__N12_p_primat.txt",
+      "bytes": 43469,
+      "sha256": "61438dbf38482e96ad97f5e2e525019aced05442b7ab4f78b87ccd5356ff8f7d"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C9_a__O13_g/C9_a__O13_g_primat.txt",
+      "bytes": 43186,
+      "sha256": "f9a7f5565ba3d8679c0c0d13384e321dddab1f9c0ad137c8ab185f3216292c6c"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C9_d__C10_p/C9_d__C10_p_primat.txt",
+      "bytes": 43181,
+      "sha256": "9430aab8f10b3bc7899bd1a5dc5e58df6f8c46f82706d2f1959d99b309ae7a02"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C9_n__B8_d/C9_n__B8_d_primat.txt",
+      "bytes": 43179,
+      "sha256": "0f8ebb8f2df60870b7101f092b603944de06f75b5e3732b29234b6b091359df4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C9_n__Be7_He3/C9_n__Be7_He3_primat.txt",
+      "bytes": 43185,
+      "sha256": "573956a8c46c9ffd9337aa0a9c4fe0b92538d761875615066c2d2aa93f86d754"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C9_n__C10_g/C9_n__C10_g_primat.txt",
+      "bytes": 43186,
+      "sha256": "ec6e5cc36fed1b415ea49121aa707846eaee3e41b508cc3e85af616affe17a75"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C9_t__B8_a/C9_t__B8_a_primat.txt",
+      "bytes": 43179,
+      "sha256": "1bb0c5c680701ae007a9b014e77c7074bc00697a0c18997a993d5b07d1174640"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C9_t__C11_p/C9_t__C11_p_primat.txt",
+      "bytes": 43180,
+      "sha256": "4e96c18fa51a063ac49121553eeb83e9ed4af6a769aea3886600016cca81a0a2"
+    },
+    {
+      "path": "primat/data/nuclear/tables/C9_t__N12_g/C9_t__N12_g_primat.txt",
+      "bytes": 43187,
+      "sha256": "95e57e9a5751d7e27366a40ed322590c9a7cdfeafe4c0f71dc551d23afe24405"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F17_a__Na21_g/F17_a__Na21_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "91d66aaa06aa6f32a99af457738cc5372c76aa5ee96a2bce42146927b60b5104"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F17_a__Ne20_p/F17_a__Ne20_p_primat.txt",
+      "bytes": 43184,
+      "sha256": "75104bf2a4158a82bb0d44f4d114e64fa8faf6eea500fa4468906bf1299349a5"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F17_n__F18_g/F17_n__F18_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "0d73e09e780018aca134181916c553d2e8770d65f2631940556ecf6ea6bad776"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F17_n__N14_a/F17_n__N14_a_primat.txt",
+      "bytes": 43244,
+      "sha256": "c28570eb9b73e4b3f4dcc3b6761b34d2344769ce9e8846b0e90f1f6959b37143"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F17_n__O17_p/F17_n__O17_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "c6685567e8ba3129f0c393bca797ea267736e64753785a69b9a32883552df15e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F17_p__Ne18_g/F17_p__Ne18_g_primat.txt",
+      "bytes": 43183,
+      "sha256": "4636be1bb9dbb0e320e904344d85d073bebc34b64d786097077a7fe7136dea4a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F18_a__Na22_g/F18_a__Na22_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "b6f43a1bb0d2782fd37459c1cbaf831f9c29f6473da997d11576b2158392f19a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F18_a__Ne21_p/F18_a__Ne21_p_primat.txt",
+      "bytes": 43184,
+      "sha256": "527625f88ae3641b3b349826077bc48e5dbdc373bf31e961287824226e477115"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F18_n__F19_g/F18_n__F19_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "bb97de676156ca84c896d18975d29ac2b793cc61726b7b98952ea6053122b2fb"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F18_n__N15_a/F18_n__N15_a_primat.txt",
+      "bytes": 43216,
+      "sha256": "22ac799f094185798717b0ed6b2b273461df6832602accd64e90d82095663fda"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F18_n__O18_p/F18_n__O18_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "83df5af19ce846de996b08be4e7275c756a587595f2312e97d8d939a6ec2ed83"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F18_p__Ne19_g/F18_p__Ne19_g_primat.txt",
+      "bytes": 43183,
+      "sha256": "57a18542d7f5d50d86e2b1ce3b673bb1084f9bd37ef0cd0294e24df2365f8077"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F18_p__O15_a/F18_p__O15_a_primat.txt",
+      "bytes": 43175,
+      "sha256": "ea90f802c3912471e6b3c5c43c340c1ec94f1ebd0bff2d328784027af6a75aff"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F19_a__Na23_g/F19_a__Na23_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "85e3d0a18fa08f1afd2752cb9e2cbfcd5ca3ba903a561f8dac82baa4eba4fa24"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F19_a__Ne22_p/F19_a__Ne22_p_primat.txt",
+      "bytes": 43184,
+      "sha256": "73b072c3e9ee0300fac9881aa553b63f3114aa6a681c418f4065aedb7e67f548"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F19_n__F20_g/F19_n__F20_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "bc56f6020f26a4e77480c94d13d7dd5c7a14340cd7584b6a1b9905d11ee1acff"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F19_p__Ne20_g/F19_p__Ne20_g_primat.txt",
+      "bytes": 43366,
+      "sha256": "bbdd2c2a6f48a95b97bc093787557ff294a973637861548a021ee232d4cbed21"
+    },
+    {
+      "path": "primat/data/nuclear/tables/F19_p__O16_a/F19_p__O16_a_primat.txt",
+      "bytes": 43323,
+      "sha256": "c811bdf4746c1d5aad87a4cd99b72ada6d120397e396ae8452bd1cf683a563dc"
+    },
+    {
+      "path": "primat/data/nuclear/tables/He3_He3__a_p_p/He3_He3__a_p_p_primat.txt",
+      "bytes": 43197,
+      "sha256": "b2bdacb1cbcd9633ff61d38f0d8269a214c30ca1f93b11ee6e3443b7613bc449"
+    },
+    {
+      "path": "primat/data/nuclear/tables/He3_a__Be7_g/He3_a__Be7_g_parthenope3.0.txt",
+      "bytes": 39598,
+      "sha256": "817124a083f86e1c066e7e78107c59f26605cfe8ab126364130ece114a583a89"
+    },
+    {
+      "path": "primat/data/nuclear/tables/He3_a__Be7_g/He3_a__Be7_g_primat.txt",
+      "bytes": 43183,
+      "sha256": "a246c801c100eab76d03ef42c3efea5c06b55db05393f74659355e5d7e545d67"
+    },
+    {
+      "path": "primat/data/nuclear/tables/He3_d__a_p/He3_d__a_p_parthenope3.0.txt",
+      "bytes": 39595,
+      "sha256": "701edcfc594dabe5284edf0db3691028e9870d470cc0bfa237e50955332becb8"
+    },
+    {
+      "path": "primat/data/nuclear/tables/He3_d__a_p/He3_d__a_p_primat.txt",
+      "bytes": 43171,
+      "sha256": "f4156e2efa318ea9f9b09d2f3e5847ad3bd47c4953c107ae2e5636687b2d0a43"
+    },
+    {
+      "path": "primat/data/nuclear/tables/He3_n__a_g/He3_n__a_g_primat.txt",
+      "bytes": 43160,
+      "sha256": "986ee93ddf77758e33da639950779ced5e0069706d3ef78296b366d76546cc20"
+    },
+    {
+      "path": "primat/data/nuclear/tables/He3_n__t_p/He3_n__t_p_parthenope3.0.txt",
+      "bytes": 39387,
+      "sha256": "55c53e3d9c259db7d55bba7b3d985e42b3de67fc1f292e6103ff2275e066ae92"
+    },
+    {
+      "path": "primat/data/nuclear/tables/He3_n__t_p/He3_n__t_p_primat.txt",
+      "bytes": 43177,
+      "sha256": "c219d27c70e788c6c7137ad12a90894428735f500ee53929870a1ec91aed3e98"
+    },
+    {
+      "path": "primat/data/nuclear/tables/He3_t__Li6_g/He3_t__Li6_g_primat.txt",
+      "bytes": 43329,
+      "sha256": "b65a4c3db614a348e773e2a90dfe089b8b5009eb2763f5b2a4f35919c0bc02e8"
+    },
+    {
+      "path": "primat/data/nuclear/tables/He3_t__a_d/He3_t__a_d_primat.txt",
+      "bytes": 43279,
+      "sha256": "94844bdb43a81a02f4c39b04fd765892e25336c543e80138a6ebfd49e7278564"
+    },
+    {
+      "path": "primat/data/nuclear/tables/He3_t__a_n_p/He3_t__a_n_p_primat.txt",
+      "bytes": 43286,
+      "sha256": "8a96e250b56b23daf582be2b57a6af7cbfb0389e1e3f4446c2ed2de7d45c627a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_He3__Be7_d/Li6_He3__Be7_d_primat.txt",
+      "bytes": 43186,
+      "sha256": "f5a9a9ac7613aecca21530dac4dcca8502ce0738e4ce13f37bf3965ba39e1e7c"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_He3__a_a_p/Li6_He3__a_a_p_primat.txt",
+      "bytes": 43196,
+      "sha256": "0464a168e5b4771b24350928c6713e72ee8f964efa19921561e6fed47b486d70"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_a__B10_g/Li6_a__B10_g_primat.txt",
+      "bytes": 43390,
+      "sha256": "a4ea7005b3708612a5747f0bb69d68ef4ff500f9a2371e5782b0daa0be531e5b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_d__Be7_n/Li6_d__Be7_n_primat.txt",
+      "bytes": 43223,
+      "sha256": "62436aa6000941593401603700d2b70fcd0564a2719efdddff61ec64746acb23"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_d__Li7_p/Li6_d__Li7_p_primat.txt",
+      "bytes": 43223,
+      "sha256": "b9ca64d02360c1f305e4e1359927ef1e1bb958bf037cf97dd4f3b97698f4ddd9"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_n__Li7_g/Li6_n__Li7_g_primat.txt",
+      "bytes": 43162,
+      "sha256": "e02e2b4323dccddbf86522eda0d43b919327193310cbac1dc62fa6f8bdbef1c4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_n__t_a/Li6_n__t_a_primat.txt",
+      "bytes": 43302,
+      "sha256": "e9491cd1d29108ee211f8ebadd952c512fb9ad40bc850eb0f5c205cfd288524e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_p__Be7_g/Li6_p__Be7_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "8888d234c957e505d4e7eb49fa3eabe5b39760d097ef4bee0bda634500bb7132"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_p__He3_a/Li6_p__He3_a_primat.txt",
+      "bytes": 43185,
+      "sha256": "d76e80915b30e9389dfa5352d12c2234c747007131c0d14e222cba26d0c351bd"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_t__Be9_g/Li6_t__Be9_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "535c9150db1a0cf529ea6a968c5322dd9e1f77d8c049b209d6255b0a253d1ac0"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_t__Li7_d/Li6_t__Li7_d_primat.txt",
+      "bytes": 43183,
+      "sha256": "63db58d88674d1287b2e587b8bc38abfa8708f936582cf6f6a339219329e30e6"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_t__Li8_p/Li6_t__Li8_p_primat.txt",
+      "bytes": 43180,
+      "sha256": "4e20f0f73a1ac15ac163bef403866427d9204945dd190c27367f11ca60bdfcf5"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li6_t__a_a_n/Li6_t__a_a_n_primat.txt",
+      "bytes": 43192,
+      "sha256": "89cbd2a1bb24063127d67624eb730d8a9577c99d9dcd5eb2e1e116721b1b9dbf"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_He3__B10_g/Li7_He3__B10_g_primat.txt",
+      "bytes": 43193,
+      "sha256": "18e63c6767de827157f0a003662542e2979af070c26fbe9f29c5350f8708fae5"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_He3__Be9_p/Li7_He3__Be9_p_primat.txt",
+      "bytes": 43186,
+      "sha256": "f4f9f83af1984f034e0f4353328fb48e8423abc364440e6722855f1e6c703dc2"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_He3__Li6_a/Li7_He3__Li6_a_primat.txt",
+      "bytes": 43187,
+      "sha256": "7b1ea4be5bda47a53c0bc9fc3c3258760a6ea5ca78202f753c8eae3154a40569"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_He3__a_a_d/Li7_He3__a_a_d_primat.txt",
+      "bytes": 43194,
+      "sha256": "3b9e234db6b46b1448d86520443e135c1e5b3cb6799803f4ac419d417ed8b770"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_He3__a_a_n_p/Li7_He3__a_a_n_p_primat.txt",
+      "bytes": 43259,
+      "sha256": "015b2dce4d8754f734814ddb00c9314c3f796376e84422dcd01a4e93e13bcaa0"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_a__B10_n/Li7_a__B10_n_primat.txt",
+      "bytes": 43336,
+      "sha256": "cacdb9c394705a3fbafe72f4444116814e47618dc3d14493466c231ef5f5f8d6"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_a__B11_g/Li7_a__B11_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "fef2fccec3645132254bf1b552624ae9399397bbdc013d815d99f774777737e9"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_d__Be9_g/Li7_d__Be9_g_primat.txt",
+      "bytes": 43178,
+      "sha256": "9e93f9fdcad4f96f52ce117891dedef0bcc777bc5dae169e86cce981937afac5"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_d__Li8_p/Li7_d__Li8_p_primat.txt",
+      "bytes": 43322,
+      "sha256": "54f6b02edc9916021db96f14f8ea18a5c66cb8574e24738e431c136fd0b7fb70"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_d__a_a_n/Li7_d__a_a_n_primat.txt",
+      "bytes": 43181,
+      "sha256": "e81c8c9bf28535a9847bc6ed6ada36e9a38b5b017747cafa6a60c04ecda882da"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_n__Li8_g/Li7_n__Li8_g_primat.txt",
+      "bytes": 43236,
+      "sha256": "71dc20e19e4ff0c9f2fc6bed22907334816eade91ac11c574fb556ff94d87a3e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_p__a_a/Li7_p__a_a_parthenope3.0.txt",
+      "bytes": 39595,
+      "sha256": "6d08e92d1eb631b296f81db06f05f1c7bf4a18b8eaf25ed2561649978b0d95c1"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_p__a_a/Li7_p__a_a_primat.txt",
+      "bytes": 43177,
+      "sha256": "fb8b6c5d39e5400cb261d2380418dad3eadf1ce6bb2089916c8a555c19252d17"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_p__a_a_g/Li7_p__a_a_g_primat.txt",
+      "bytes": 43186,
+      "sha256": "2a239691f71291b2432afed9cc16961dd046a4c14c1706bf7960df631c7e4346"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_t__Be10_g/Li7_t__Be10_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "e7fa421359d3af6c3d086e3b97dd1fa2d9f32b55fb92e864ee7721c1cc724cc1"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_t__Be9_n/Li7_t__Be9_n_primat.txt",
+      "bytes": 43170,
+      "sha256": "879da3b06bb2d645ec885c0264611558bf5178d8ac9dbdf38e49189824b5399c"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li7_t__a_a_n_n/Li7_t__a_a_n_n_primat.txt",
+      "bytes": 43255,
+      "sha256": "2cfb58d5e669c44f1e7c5e5948596c9e100097705a435687d4cc59d85851c5ae"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_He3__B10_n/Li8_He3__B10_n_primat.txt",
+      "bytes": 43186,
+      "sha256": "cd73547cc56e0c96032a809950cb86180eea671aad7955455e09051e58da8275"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_He3__B11_g/Li8_He3__B11_g_primat.txt",
+      "bytes": 43192,
+      "sha256": "24856e814f64e2d7c086fd06cc606397050accfefee50ed508b4f9121144f28b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_He3__Be10_p/Li8_He3__Be10_p_primat.txt",
+      "bytes": 43189,
+      "sha256": "db893476aaff7cfc0bb7ccb279b273e974e92fd7e4a83e5fad69a7eec5052ce2"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_He3__Be9_d/Li8_He3__Be9_d_primat.txt",
+      "bytes": 43186,
+      "sha256": "69d13e0cd17ec2a118cdce0f8c4882658a1b79ca882b1874be5645dbc0f90ca2"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_He3__Li7_a/Li8_He3__Li7_a_primat.txt",
+      "bytes": 43186,
+      "sha256": "7cb11210a4a75bd098b35cfc1478fe50296ccef78c0a6663114d40bb57841a13"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_He3__a_a_t/Li8_He3__a_a_t_primat.txt",
+      "bytes": 43196,
+      "sha256": "46b169ec52c53faa0170fa984ce53c04c242b66f5a267dfc43f4aaae03618680"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_a__B11_n/Li8_a__B11_n_primat.txt",
+      "bytes": 43171,
+      "sha256": "a56682c791b36032b5fa4476caf236ca1643b65903d66eb006b383350d99d680"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_a__B12_g/Li8_a__B12_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "e07f0975d18b83bf78d15819e3f0f28059b7be2a66817a870f2e0339e6a7d15c"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_d__Be10_g/Li8_d__Be10_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "c4e075da1dc13c8152b6ff4a80d413c80e3b411423deec34ac8330d4050e6210"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_d__Be9_n/Li8_d__Be9_n_primat.txt",
+      "bytes": 43240,
+      "sha256": "3835d20c6aa4bb3d18ae019a5db9c6b637704b62bad44b74475959fc215282ab"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_d__Li7_t/Li8_d__Li7_t_primat.txt",
+      "bytes": 43272,
+      "sha256": "ba8f261e0a2dc3c09e9035a2ee08a85f6e00ceaca2efc2980da272614c44a528"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_d__Li9_p/Li8_d__Li9_p_primat.txt",
+      "bytes": 43239,
+      "sha256": "029acbacd51d218f789377c6fb739741f6429ab5430a169ded35ae2fc04c3fd3"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_n__Li9_g/Li8_n__Li9_g_primat.txt",
+      "bytes": 43217,
+      "sha256": "788b9d6a48f8f0a9e7bbebb06c3b400a831d9851d9d7aeed550fa2d7704e6d8a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_p__Be9_g/Li8_p__Be9_g_primat.txt",
+      "bytes": 43275,
+      "sha256": "aae5b7d9c6dc42908cf07a05cd2a0ddb6099eccc21c38cc2c45ff66146524c96"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_p__a_a_n/Li8_p__a_a_n_primat.txt",
+      "bytes": 43407,
+      "sha256": "ffd198beafd464cc3e368001d8109c48e648aac7b07f0411b5bc83c2f864f196"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_t__Be10_n/Li8_t__Be10_n_primat.txt",
+      "bytes": 43185,
+      "sha256": "50fd620b120afebaa0546f573b3aa7deb34792192db0446c98b3c017b82239c2"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li8_t__Be11_g/Li8_t__Be11_g_primat.txt",
+      "bytes": 43190,
+      "sha256": "41eef797835f46e563d13b4504052aa2160c9af946e20975f2334bff63d025ed"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_He3__B11_n/Li9_He3__B11_n_primat.txt",
+      "bytes": 43187,
+      "sha256": "cebcd344189096fef1c48a8a931331adf6c78fbfb739b1140db24d682a250064"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_He3__B12_g/Li9_He3__B12_g_primat.txt",
+      "bytes": 43193,
+      "sha256": "eba01bce324517e8795daab8a5f4dcad48df26a411fab4a94bcd03c79e71801f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_He3__Be10_d/Li9_He3__Be10_d_primat.txt",
+      "bytes": 43189,
+      "sha256": "087b277d200dc94f2d961b1061151bb1f90ffd39666b6de54290b0bc45a95bfe"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_He3__Be11_p/Li9_He3__Be11_p_primat.txt",
+      "bytes": 43189,
+      "sha256": "cea7262e7fa283cbc1be0cbe25d0d7a1312777535500f52394501b8f9f61fc23"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_He3__Be9_t/Li9_He3__Be9_t_primat.txt",
+      "bytes": 43187,
+      "sha256": "ff20e563bc3f9c9e956ea7a5ea34fe716c361ca8888b19855fcce85e8b09d569"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_He3__Li8_a/Li9_He3__Li8_a_primat.txt",
+      "bytes": 43187,
+      "sha256": "0a3d336606f4873e2277638369dee24472fca6ba0f7bd62c3d70f5fe39f09294"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_a__B12_n/Li9_a__B12_n_primat.txt",
+      "bytes": 43169,
+      "sha256": "90bb6feedb24769edb98fb4069adfa9fe5274606f38583e5746350c80114b5f4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_a__B13_g/Li9_a__B13_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "3df542d08ac945cbf9e85013b687c17ba05b9f864f8186b48d8e52510a5c87fe"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_d__Be10_n/Li9_d__Be10_n_primat.txt",
+      "bytes": 43183,
+      "sha256": "d4c0eee652a747f15861a12463eefd95823f1e9c10a8d7d9df4b3d1867050aa0"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_d__Be11_g/Li9_d__Be11_g_primat.txt",
+      "bytes": 43190,
+      "sha256": "da7d6a7562d8fdb1241d798f7e53b39d76ce972bc1f4d14c9580e0fa0be1f9a2"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_d__Li8_t/Li9_d__Li8_t_primat.txt",
+      "bytes": 43181,
+      "sha256": "1964bf6db34515d9fcbca8d1f8885b359b1735eda3e02d0096655d77ccc3bfdd"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_p__Be10_g/Li9_p__Be10_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "0eaa355df1a976ec5cb6bbfc3b99fac26f918ea45740e4c373711922a6412c76"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_p__Be9_n/Li9_p__Be9_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "0fce55fd1428987a4c04d89726a424c97fd34f9c3555d8676659bffb38e426d7"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_p__He6_a/Li9_p__He6_a_primat.txt",
+      "bytes": 43163,
+      "sha256": "9a98da01d3e1a81f846bd9957bef2cbe236304a515ad0a0c8b8fe738108c8cc9"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_p__Li7_t/Li9_p__Li7_t_primat.txt",
+      "bytes": 43183,
+      "sha256": "e8d31ac0e817aa10f53b583a2dc4e04fcddf979f465c57377142d6664b4ac5c2"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_t__Be11_n/Li9_t__Be11_n_primat.txt",
+      "bytes": 43185,
+      "sha256": "8f3c32be2c0f778f63e565bc0225d6c4bfecacce77c9c339a8c2d1abaa7154e7"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Li9_t__Be12_g/Li9_t__Be12_g_primat.txt",
+      "bytes": 43191,
+      "sha256": "6285b5ff85c1d92bb21e5951c22d6bf4b08c4bd15b01ead19b758f88f064ae5c"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N12_a__O15_p/N12_a__O15_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "b52d88df060d2ea1e12694a558aea67a0296641733e47d4d0ce622dba6e4b261"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N12_n__C11_d/N12_n__C11_d_primat.txt",
+      "bytes": 43183,
+      "sha256": "639001e914466eadf475af75c6ee83ec816d1db4ec39bffff67657a45c349bb4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N12_n__C12_p/N12_n__C12_p_primat.txt",
+      "bytes": 43183,
+      "sha256": "f3aa946a2e5065c5c3f4600d2841bcecd1c3de7a41ad1cff649ca57d177a4147"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N12_n__N13_g/N12_n__N13_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "b114b64a2afac0b0d389b92c893ec6313ff0e202821b5b92343c4b8c674d2f51"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N12_p__O13_g/N12_p__O13_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "39e89985b35efb64ad0984449798a3df82b611b7d067f030ee1a699dc301ec1b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N13_a__F17_g/N13_a__F17_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "9e096dd4489bcc9abc1ea9ef51a8dbf1a61ca03d5caf70c72b8328ffd5c16738"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N13_n__C12_d/N13_n__C12_d_primat.txt",
+      "bytes": 43182,
+      "sha256": "ce93eeea9760a058edab5daeacc1847f2fa752be3e927727d76a86e94b628094"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N13_n__C13_p/N13_n__C13_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "bf323fd13aa73301ca5739482846d2a970c824c154826c633649bac44060e95a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N13_n__N14_g/N13_n__N14_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "e2e20de007df76eda4d41cd2a152158844aa4cce93fd6a5c99b992415b0a5575"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N13_p__O14_g/N13_p__O14_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "7007445fcf4514315e1d8f635ea984ed8908fca0b7c39c74b8c9cd731c1b377d"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N14_a__F18_g/N14_a__F18_g_primat.txt",
+      "bytes": 43180,
+      "sha256": "83b562d6d2e6ac34b83448703bf2730d7e1d89217d2957f7e9eda493e144e1b0"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N14_n__C14_p/N14_n__C14_p_primat.txt",
+      "bytes": 43244,
+      "sha256": "23f2069656283aae4ee1fa1de370cf455fe834986fc2bc550e762183c338efca"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N14_n__N15_g/N14_n__N15_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "638de5af57a8142013e9d53a12ea4ec5518010c0515078171e292770851b2acf"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N14_p__O15_g/N14_p__O15_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "c84063aacf1022d0072e29ff054c65d027d6ac7acfa96a1236073341cf31b71e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N15_a__F19_g/N15_a__F19_g_primat.txt",
+      "bytes": 43181,
+      "sha256": "73181eb24c41a1da57a18aa0e312bbd7b5bc35a66552c2f9a9433b796434ac9c"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N15_n__N16_g/N15_n__N16_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "bf0e6db000215ba8a064e35e8d231535916fcbb0f94ba9e5c9b73710b79d8c46"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N15_p__C12_a/N15_p__C12_a_primat.txt",
+      "bytes": 43184,
+      "sha256": "ab326d4bf062c201a5062f90d948f8265df9004f09ef74a5c7e3829a577e06f7"
+    },
+    {
+      "path": "primat/data/nuclear/tables/N15_p__O16_g/N15_p__O16_g_primat.txt",
+      "bytes": 43190,
+      "sha256": "5ed49dccbde4f944f4a3bbbc87c63a2c36714a8d09292abf6f595d75750549fe"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Na20_n__F17_a/Na20_n__F17_a_primat.txt",
+      "bytes": 43186,
+      "sha256": "033dcb2f3151e4ad3f105f9425e4d167f6d4b94fd2c6724d705e88c0722ee04f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Ne18_n__F18_p/Ne18_n__F18_p_primat.txt",
+      "bytes": 43184,
+      "sha256": "b49c843d6dd2fd7747d77b30867c3808f36e09e62f51da418324b5e3d6f5f7ba"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Ne18_n__O15_a/Ne18_n__O15_a_primat.txt",
+      "bytes": 43183,
+      "sha256": "9f4a6c1e3d4bc88bad55f7e92b3b5cf0082d8bb952d8202a2ccdd2d5b6de169e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Ne19_n__F19_p/Ne19_n__F19_p_primat.txt",
+      "bytes": 43184,
+      "sha256": "67b5f6d25670f5efe880533db41abe11d076f8e5ac8debea17ac74245a5a8a0a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Ne19_n__O16_a/Ne19_n__O16_a_primat.txt",
+      "bytes": 43186,
+      "sha256": "525761702a58b3f5101161bb78c5c6b1b3e2fc8eb925df8043a176bd4e6cbe11"
+    },
+    {
+      "path": "primat/data/nuclear/tables/Ne19_p__Na20_g/Ne19_p__Na20_g_primat.txt",
+      "bytes": 43185,
+      "sha256": "1280a07ebbc6d3855c53101b85c2121aca5fc365088f84a0fbb8390397ed12d5"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O14_a__F17_p/O14_a__F17_p_primat.txt",
+      "bytes": 43651,
+      "sha256": "19610e634272e7e1ae1d727ae3a77448b55af58d4e9417dd204caeb0a068e024"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O14_a__Ne18_g/O14_a__Ne18_g_primat.txt",
+      "bytes": 43265,
+      "sha256": "1f2c5d9676737a76b9ac9ccb379b26aa715e88a0bbe731eb27156cac87ee0eb4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O14_n__C11_a/O14_n__C11_a_primat.txt",
+      "bytes": 43184,
+      "sha256": "758ddd76455f17b2fc1f48e6a64c08a33346d164e61026f63faef6c5c8cc57de"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O14_n__C12_He3/O14_n__C12_He3_primat.txt",
+      "bytes": 43187,
+      "sha256": "82fb2cb7da684f8a816d74920ce101da49311888c4b0c8be16bd28f919a85d7e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O14_n__N14_p/O14_n__N14_p_primat.txt",
+      "bytes": 43218,
+      "sha256": "1d57c21237ef0310ce8c2ebfedded12281a5bd02032e0e5c8c5e1cd5e1cfe992"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O14_n__O15_g/O14_n__O15_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "9dff7b8d19ad9a4dc90204f5f7cb15ffe284e947c5cae6c1d3c12f8862c3a5a5"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O15_a__Ne19_g/O15_a__Ne19_g_primat.txt",
+      "bytes": 43183,
+      "sha256": "f292322237b597eabaeb9a504cc8ff7c7c7d5a921254b7269acae5e0a25bc3db"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O15_n__C12_a/O15_n__C12_a_primat.txt",
+      "bytes": 43181,
+      "sha256": "1a08932a3d665b481ba5524ae0406df85d23cd91c9e96b7f2338a39546a16689"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O15_n__N15_p/O15_n__N15_p_primat.txt",
+      "bytes": 43182,
+      "sha256": "56e7c6e6d04d161faa603066cbbe64a4acd16296df1f37a9f4236a127176ceaf"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O15_n__O16_g/O15_n__O16_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "6921b1e74e233f982dc1cbcfde27290fd7fd2ee460da8c4291f49c84783db28a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O16_a__Ne20_g/O16_a__Ne20_g_primat.txt",
+      "bytes": 43183,
+      "sha256": "6d1279e4bbf5dbc438f28f57dd1e5435e4e935323e909fafd744690a6cafeb73"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O16_n__O17_g/O16_n__O17_g_primat.txt",
+      "bytes": 43176,
+      "sha256": "6be58f940ac0321dd3e862afa76058191377c7318e67806f8428ad807a1fa36b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O16_p__F17_g/O16_p__F17_g_primat.txt",
+      "bytes": 43180,
+      "sha256": "3edc9b25a0c1ff6b4939a789ebe5bf57625beaba471650034618025429da5f47"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O16_p__N13_a/O16_p__N13_a_primat.txt",
+      "bytes": 43556,
+      "sha256": "2a6cce8a6f84504684c1ba780c616e5915a55a618766b2e7d4d68b8f3cf542da"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O17_a__Ne20_n/O17_a__Ne20_n_primat.txt",
+      "bytes": 43574,
+      "sha256": "a58eb8b45d25ed8f08c46efbb4f71e5a8a0cd261c81af3f4eb221b4c3c76abae"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O17_a__Ne21_g/O17_a__Ne21_g_primat.txt",
+      "bytes": 43285,
+      "sha256": "2d52fcfbc07b7ebf5f17100ce84c1043eb23a78bad5f593647be4f00691e2e33"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O17_n__C14_a/O17_n__C14_a_primat.txt",
+      "bytes": 43243,
+      "sha256": "6d7954410138fc9b9eec1712858e9fa10ff38c7751a0350fdf248a5aa2af2164"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O17_n__O18_g/O17_n__O18_g_primat.txt",
+      "bytes": 43187,
+      "sha256": "b3cc7b44621bea2c494b1cc282143af0bc351d58293b56f580788b00e7db0268"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O17_p__F18_g/O17_p__F18_g_primat.txt",
+      "bytes": 43181,
+      "sha256": "b770864a3998185c598ad7c8ac84f5431b636bc05d24586a64a2f5a8e3971100"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O17_p__N14_a/O17_p__N14_a_primat.txt",
+      "bytes": 43176,
+      "sha256": "8fc91db760f37989206c31298d45105e508ec46acf5f06fd58f2463d99294101"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O18_a__Ne22_g/O18_a__Ne22_g_primat.txt",
+      "bytes": 43183,
+      "sha256": "ce798a95ed54ae731cb3811790a95df3ecc9ed6f2d5a790f0157013eb190556f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O18_n__O19_g/O18_n__O19_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "31a14a88db3962b28e994a5de0498a1ce444b73e8cbb26c3ea2e53655ef413c8"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O18_p__F19_g/O18_p__F19_g_primat.txt",
+      "bytes": 43181,
+      "sha256": "580c10c5584e6da9861992a38285e326bb3440da7d76a0b8e6a41b748806fa19"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O18_p__N15_a/O18_p__N15_a_primat.txt",
+      "bytes": 43176,
+      "sha256": "7836c5c5ca8b34da981338e5c4196428c2c85af9f55f22123cc1352763757334"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O19_a__Ne22_n/O19_a__Ne22_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "9a3a47fa1c88fab6c7fb17bda67fe65545987a41b8af1ae9427608dc789f9540"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O19_a__Ne23_g/O19_a__Ne23_g_primat.txt",
+      "bytes": 43190,
+      "sha256": "44d3fe0278d584d3adbaf8c7784da066c9b09f4cf3d103e5e7dab8054abc59bf"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O19_n__O20_g/O19_n__O20_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "5290f10e8737aacf23a6b98dc72c0769467cea3e7dc43610982fe5aae04ac3d6"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O19_p__F19_n/O19_p__F19_n_primat.txt",
+      "bytes": 43182,
+      "sha256": "44ebc1b51f83cc2fe43ea350fc5f2ebf06c5aa5a950ec8c158dad6f37fcb8d80"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O19_p__F20_g/O19_p__F20_g_primat.txt",
+      "bytes": 43189,
+      "sha256": "9cf37b7ec053cade3443e5d35f8b0cdffe26643acf142deb2d19d120c3031dce"
+    },
+    {
+      "path": "primat/data/nuclear/tables/O19_p__N16_a/O19_p__N16_a_primat.txt",
+      "bytes": 43183,
+      "sha256": "bc89ba8c23e7eaa59a6dfb0db76a2cb6994a5d304a1c5a3f9bc8fbe87dccb3a6"
+    },
+    {
+      "path": "primat/data/nuclear/tables/a_a_a__C12_g_g/a_a_a__C12_g_g_primat.txt",
+      "bytes": 43706,
+      "sha256": "f1930332fe9460274419ef68139abdb16e4984d496ad506399a6edd300858c56"
+    },
+    {
+      "path": "primat/data/nuclear/tables/a_a_n__Be9_g/a_a_n__Be9_g_primat.txt",
+      "bytes": 43496,
+      "sha256": "5ff6d47c4b6265c8ff654441496966c79f344d6b1e37077d07cf9789072b0146"
+    },
+    {
+      "path": "primat/data/nuclear/tables/a_n_n__He6_g/a_n_n__He6_g_primat.txt",
+      "bytes": 43248,
+      "sha256": "3e4acb568f240ae4e505aa21f1cba890c6a5a2380dfb56f55114e1a5d575e0de"
+    },
+    {
+      "path": "primat/data/nuclear/tables/a_n_p__Li6_g/a_n_p__Li6_g_primat.txt",
+      "bytes": 43213,
+      "sha256": "95df1a29462308119771ad6aeeee6385708b793e9869d121fc5c1e60da03ae2a"
+    },
+    {
+      "path": "primat/data/nuclear/tables/d_a__Li6_g/d_a__Li6_g_primat.txt",
+      "bytes": 43185,
+      "sha256": "15f6f6835f158b46d3b7ec8934bdfa37b0cfe6b0f032e65f245146d17f00b529"
+    },
+    {
+      "path": "primat/data/nuclear/tables/d_d__He3_n/d_d__He3_n_parthenope3.0.txt",
+      "bytes": 39613,
+      "sha256": "f99110cc1a46bd8f51c4f2aef277a318ae2a1cf3f6ed35a7e02a2033c49d0195"
+    },
+    {
+      "path": "primat/data/nuclear/tables/d_d__He3_n/d_d__He3_n_primat.txt",
+      "bytes": 43171,
+      "sha256": "bef7f3a63fc39b4a89d24c71a0d60b18bbf7321a6b19f4f5e010d97590b93ebb"
+    },
+    {
+      "path": "primat/data/nuclear/tables/d_d__a_g/d_d__a_g_primat.txt",
+      "bytes": 43181,
+      "sha256": "51bec4219a12b722c317e8ee11775e445a1592e6faeff5d140eb8fb2d2c88078"
+    },
+    {
+      "path": "primat/data/nuclear/tables/d_d__t_p/d_d__t_p_parthenope3.0.txt",
+      "bytes": 39609,
+      "sha256": "b96ce119f7f30ca003dafbd51e5b46a00687e427654fb92012e027bafd837d94"
+    },
+    {
+      "path": "primat/data/nuclear/tables/d_d__t_p/d_d__t_p_primat.txt",
+      "bytes": 43168,
+      "sha256": "2c532f0018f51ba124313107eb25fdf35a088ef7a2b81c6c892b775a250c18d4"
+    },
+    {
+      "path": "primat/data/nuclear/tables/d_n__t_g/d_n__t_g_primat.txt",
+      "bytes": 43188,
+      "sha256": "025b239c98cca148de2312db9bfc0d42dc8bfb51468491a2b0028967c5e910c3"
+    },
+    {
+      "path": "primat/data/nuclear/tables/d_p__He3_g/d_p__He3_g_parthenope3.0.txt",
+      "bytes": 39613,
+      "sha256": "44a6c1722eece235c410d6469611b262ee54b4d957023cfe2379ceb4f16d657e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/d_p__He3_g/d_p__He3_g_primat.txt",
+      "bytes": 43176,
+      "sha256": "90e2ca25dd9b4f801432678203aad21a02a3d09b6746096639becf04ab2cad55"
+    },
+    {
+      "path": "primat/data/nuclear/tables/decays.txt",
+      "bytes": 3481,
+      "sha256": "16d3c3595d5d32e25734f03308706cc0d7ead6f98447d5a0025fe8f7104d86a0"
+    },
+    {
+      "path": "primat/data/nuclear/tables/n_p__d_g/n_p__d_g_parthenope3.0.txt",
+      "bytes": 39383,
+      "sha256": "ead7bd713149080ff4bdbcb18fcf553abd85f08398a522d3748550764840010f"
+    },
+    {
+      "path": "primat/data/nuclear/tables/n_p__d_g/n_p__d_g_primat.txt",
+      "bytes": 43171,
+      "sha256": "ca6bd1bbd3f03722c7d9a8319e4a8f6e07b5a9ce9fd67f235941b4fc1da6bd87"
+    },
+    {
+      "path": "primat/data/nuclear/tables/p_p_n__d_p/p_p_n__d_p_primat.txt",
+      "bytes": 43262,
+      "sha256": "f884b7deddd8c2813f1bdaa882ad11b6d382cbf1617f13f11c4a66a47dd3e66e"
+    },
+    {
+      "path": "primat/data/nuclear/tables/t_a__Li7_g/t_a__Li7_g_parthenope3.0.txt",
+      "bytes": 39593,
+      "sha256": "e20684d2beea0adf1e3519053f628292ab5403f00ba9ef64a068b78f188e17bc"
+    },
+    {
+      "path": "primat/data/nuclear/tables/t_a__Li7_g/t_a__Li7_g_primat.txt",
+      "bytes": 43183,
+      "sha256": "2d1a7ae2530bc1f945af7363f8a28f6666095c20c54c9f9856b7abb0e3d4b9f3"
+    },
+    {
+      "path": "primat/data/nuclear/tables/t_d__a_n/t_d__a_n_parthenope3.0.txt",
+      "bytes": 39591,
+      "sha256": "12be2a53ac95a8a80459ea317e26e78ccd30db6cc0c72a84caea89a31eab498b"
+    },
+    {
+      "path": "primat/data/nuclear/tables/t_d__a_n/t_d__a_n_primat.txt",
+      "bytes": 43168,
+      "sha256": "0c382c9e1c4cdaa54d07f23afcb521b8932034f91fba1b6ffac145708992e437"
+    },
+    {
+      "path": "primat/data/nuclear/tables/t_p__a_g/t_p__a_g_parthenope3.0.txt",
+      "bytes": 39385,
+      "sha256": "5e353f205a0a0ea88d9cb9bfb6c8a9d5ab378a30e4801b66c443efc40e7c0ab8"
+    },
+    {
+      "path": "primat/data/nuclear/tables/t_p__a_g/t_p__a_g_primat.txt",
+      "bytes": 43174,
+      "sha256": "4a683978a6b1e60429bf0590f03bfb69d51de610aaa18d4ace03df4f09501415"
+    },
+    {
+      "path": "primat/data/nuclear/tables/t_t__a_n_n/t_t__a_n_n_primat.txt",
+      "bytes": 43305,
+      "sha256": "bb3ee3693e2dee66dbc00ad438fc923aee381ffed44b1c2c8945273852e907fd"
+    },
+    {
+      "path": "primat/evolution.py",
+      "bytes": 11673,
+      "sha256": "fc4da157bf68743950059cbca518dcb6f9ccb65dca9727deff59fa8f47c05ea7"
+    },
+    {
+      "path": "primat/gui/.streamlit/config.toml",
+      "bytes": 662,
+      "sha256": "ed374f32c0645f332b061db75b94aea9c071ccdb5cb488343623f37e36da19bb"
+    },
+    {
+      "path": "primat/gui/__init__.py",
+      "bytes": 629,
+      "sha256": "6cb4e3194c646bb7a9e10f192b530c9c3ff70aa52d00be660eb048043e90a0b8"
+    },
+    {
+      "path": "primat/gui/app.py",
+      "bytes": 29893,
+      "sha256": "8fb82845a80383157edc93db26c06e388e5684f27f8622df0abfe2acd21e3da7"
+    },
+    {
+      "path": "primat/gui/custom_rates.py",
+      "bytes": 31254,
+      "sha256": "fc324f4c4ccb4a864cac1d9677b44b8d396ac487df39c1b28c5506b3e8314bd1"
+    },
+    {
+      "path": "primat/gui/export_params.py",
+      "bytes": 16189,
+      "sha256": "d19f0c7d1136c28b37961b3454849425b6b7f623e9af8b2bd3727d96c76a0530"
+    },
+    {
+      "path": "primat/gui/launcher.py",
+      "bytes": 3672,
+      "sha256": "558c719d167f7d35c81dbbafe0bc44db4341606ebfb701aed7923cd8bcc29776"
+    },
+    {
+      "path": "primat/gui/panels.py",
+      "bytes": 31937,
+      "sha256": "825553cfd0ca430a55fcb01b0d1451ce0bfdcbcc31cb0b0128e6c9deed81f6e9"
+    },
+    {
+      "path": "primat/gui/params_form.py",
+      "bytes": 87490,
+      "sha256": "5e8912acfb6e8311d5227d3334d77f8023749a0d220da6ba859ddd64cd91f7e0"
+    },
+    {
+      "path": "primat/gui/run_view.py",
+      "bytes": 4824,
+      "sha256": "fe5d868c7543b1b7baf4400a3f09e831d877628b7e436653daafc77e66d95c06"
+    },
+    {
+      "path": "primat/gui/session_keys.py",
+      "bytes": 6805,
+      "sha256": "efe2d582f1af1dca53d0536b064de690e2f74e6db657c5a9ce9e994c21c86078"
+    },
+    {
+      "path": "primat/main.py",
+      "bytes": 66982,
+      "sha256": "5d0a3d5fb68759bfb3346ac07a8d28da3078bc0595db2a4b4d2e71f10f1c5779"
+    },
+    {
+      "path": "primat/network_builder.py",
+      "bytes": 22084,
+      "sha256": "130720d38703a97c675d28af77becfb16b3a58decee7072d81b6254a4aa7df53"
+    },
+    {
+      "path": "primat/network_data.py",
+      "bytes": 97994,
+      "sha256": "96a771b2e6c23b9d17500740f8ffc9bfecb41d89c23904de4f1a356ca677e1ec"
+    },
+    {
+      "path": "primat/neutrino_history.py",
+      "bytes": 43970,
+      "sha256": "b2bf5d9f108d2960be3db222bc2e857584801e8e846e0edc15bc4d7b4983533b"
+    },
+    {
+      "path": "primat/nuclear_network.py",
+      "bytes": 46513,
+      "sha256": "df922a711fc60b5bfd23783d8bacdf3b716803d2eace62f0cb10e8206b874fea"
+    },
+    {
+      "path": "primat/plasma.py",
+      "bytes": 45980,
+      "sha256": "f85388371683e6f2c9cfeaa3b123857ad54458f29c0bfd8e2bd51fd8462134fa"
+    },
+    {
+      "path": "primat/plotting.py",
+      "bytes": 10324,
+      "sha256": "e58e050cc5ce404fb7ce26dfe618e342d1d3dd57944222a980abe9ab78bc5441"
+    },
+    {
+      "path": "primat/py.typed",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "primat/qed_pressure.py",
+      "bytes": 17458,
+      "sha256": "8de108dbafddd33ea1e0cbf4c9f334e3177eab1616689f7387971b1e0ae197f4"
+    },
+    {
+      "path": "primat/sensitivity.py",
+      "bytes": 17869,
+      "sha256": "6179947602092fa658fcd0abd7bf8849cb880c15718ccd984fc1b72b460a4d6d"
+    },
+    {
+      "path": "primat/weak_rates/__init__.py",
+      "bytes": 3584,
+      "sha256": "e0ebc21482549a47cf898c344829daed203ee6ceb8c866fadad3ca265abe6681"
+    },
+    {
+      "path": "primat/weak_rates/api.py",
+      "bytes": 18406,
+      "sha256": "fefa9ad1bdc19deb5644ac5b30086507b50ed11c2aaf1ffc74964776874da87c"
+    },
+    {
+      "path": "primat/weak_rates/cache.py",
+      "bytes": 9410,
+      "sha256": "f99bfe9480fce03c25e49398b99bee0d48906c917303a3096d59ebb2db3a5f3b"
+    },
+    {
+      "path": "primat/weak_rates/corrections.py",
+      "bytes": 70677,
+      "sha256": "191e95ae91b903c26e63d9b476f8b5b684b7dcd9c88348d66ae1d16f01a265f6"
+    },
+    {
+      "path": "primat/weak_rates/integrands.py",
+      "bytes": 8406,
+      "sha256": "17f033778065868b3c7461628d0c96b7dd69f2dd3a3c0bd09577e1db08702685"
+    }
+  ]
+}

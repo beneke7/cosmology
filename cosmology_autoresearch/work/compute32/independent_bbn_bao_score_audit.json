@@ -1,0 +1,92 @@
+{
+  "audits": [
+    {
+      "100theta_star_CAMB": 1.0457197553076882,
+      "Omega_de0": 0.7027257221503117,
+      "Omega_m0": 0.2972005346799283,
+      "absolute_chi2_delta": 0.0,
+      "independent_chi2_cholesky": 10.281461886073513,
+      "independent_chi2_dense": 10.281461886073513,
+      "label": "pure_BAO_best_valid_fit",
+      "maximum_prediction_delta": 0.0,
+      "point": {
+        "H0_km_s_Mpc": 69.99318159887905,
+        "omega_b_h2": 0.024,
+        "omega_c_h2": 0.12095499394502415
+      },
+      "r_drag_Mpc": 145.08167288261546,
+      "saved_chi2": 10.281461886073513
+    },
+    {
+      "100theta_star_CAMB": 1.0413080164278972,
+      "Omega_de0": 0.702734616771513,
+      "Omega_m0": 0.29718815057671805,
+      "absolute_chi2_delta": 0.0,
+      "independent_chi2_cholesky": 10.281958580582815,
+      "independent_chi2_dense": 10.281958580582813,
+      "label": "poulin_2026_arxiv_v1_BBN_LCDM",
+      "maximum_prediction_delta": 0.0,
+      "point": {
+        "H0_km_s_Mpc": 68.39371000000415,
+        "omega_b_h2": 0.02201700634753818,
+        "omega_c_h2": 0.11635378262084722
+      },
+      "r_drag_Mpc": 148.47510869920907,
+      "saved_chi2": 10.281958580582813
+    },
+    {
+      "100theta_star_CAMB": 1.0413856185075998,
+      "Omega_de0": 0.702734466660199,
+      "Omega_m0": 0.2971883609692159,
+      "absolute_chi2_delta": 0.0,
+      "independent_chi2_cholesky": 10.281949997355543,
+      "independent_chi2_dense": 10.281949997355545,
+      "label": "PDG_2025_SBBN",
+      "maximum_prediction_delta": 0.0,
+      "point": {
+        "H0_km_s_Mpc": 68.42041676674037,
+        "omega_b_h2": 0.02205002400967025,
+        "omega_c_h2": 0.1164294519287243
+      },
+      "r_drag_Mpc": 148.41714528561474,
+      "saved_chi2": 10.281949997355545
+    },
+    {
+      "100theta_star_CAMB": 1.041738051571879,
+      "Omega_de0": 0.7027337619867702,
+      "Omega_m0": 0.29718933905974815,
+      "absolute_chi2_delta": 0.0,
+      "independent_chi2_cholesky": 10.281911067857157,
+      "independent_chi2_dense": 10.281911067857155,
+      "label": "provisional_conservative_BBN",
+      "maximum_prediction_delta": 0.0,
+      "point": {
+        "H0_km_s_Mpc": 68.54194451308263,
+        "omega_b_h2": 0.022200032393659,
+        "omega_c_h2": 0.11677456496805175
+      },
+      "r_drag_Mpc": 148.15395399065318,
+      "saved_chi2": 10.281911067857155
+    }
+  ],
+  "elapsed_seconds": 0.017742480151355267,
+  "hashes": {
+    "compute31_result_sha256": "790250c7948afec861c8d9aef1c2c5ef1028e11b8c3144b246fc4485fc6b3326",
+    "compute31_script_sha256": "59ab4c845eea78dbca00db3a77380321f71bab5a9c03c53095883bb249ab3212",
+    "covariance_sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+    "mean_vector_sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "this_script_sha256": "aaca0fc8319b6e682487dfa93aeb42fe91bde14689175e5a6ee992cb2b3f9018"
+  },
+  "implementation": "Standalone parser, CAMB prediction assembly, dense covariance solve and Cholesky whitening; imports no compute31 or other BAO scoring module.",
+  "scope": "Four saved CAMB points re-evaluated from DESI DR2 mean/covariance; not an independent optimizer/globality audit.",
+  "status": "independent_one_point_full_covariance_score_audit_pass",
+  "tolerances": {
+    "max_chi2_abs": 2e-10,
+    "max_prediction_abs": 2e-12
+  },
+  "versions": {
+    "CAMB": "2.0.4",
+    "NumPy": "2.5.3",
+    "Python": "3.12.3"
+  }
+}

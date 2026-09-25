@@ -1,0 +1,148 @@
+{
+  "audit_date": "2026-09-25",
+  "scope": "Primary observational primordial D/H determinations and their standard-BBN mapping to physical baryon density omega_b h^2; audit current through 2026-09-25.",
+  "status": "literature-only; full PDFs reviewed; no local BBN likelihood run",
+  "recommendation": {
+    "use_gaussian_prior": true,
+    "baseline": {
+      "label": "official PDG 2025 SBBN D+He concordance",
+      "mean_omega_b_h2": 0.02205,
+      "sigma_1s": 0.00043,
+      "source": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-bbang-nucleosynthesis.pdf",
+      "locator": "§24.4, Eq. 24.6 (PDF p. 6); Eq. 24.5 gives eta10=6.040±0.118",
+      "independent_of_desi_dr2_bao": true,
+      "condition": "Use only when the model leaves standard BBN expansion and thermodynamics intact; do not also use the D/H and helium likelihoods from which this prior was derived."
+    },
+    "sensitivity_cases": [
+      {
+        "label": "Poulin et al. PRIMAT, updated PDG D/H plus LBT helium",
+        "mean_omega_b_h2": 0.022017,
+        "sigma_minus": 0.000217,
+        "sigma_plus": 0.000221,
+        "source": "https://arxiv.org/pdf/2607.20635v1",
+        "locator": "Appendix A, Eq. 29 and Table II; joint D/H+Yp posterior, not D/H-only",
+        "status": "arXiv v1, not peer-reviewed at cutoff; rate-specific narrow comparison"
+      },
+      {
+        "label": "Schöneberg PRyMordial/NACRE-II, broad rate-marginalized alternative with latest then-available D/H",
+        "mean_omega_b_h2": 0.02231,
+        "sigma_1s": 0.00055,
+        "source": "https://arxiv.org/pdf/2401.15054v3",
+        "locator": "§5, Eq. 5.2; early-2024 abundance compilation with Kislitsyn D/H",
+        "status": "broader nuclear-rate sensitivity, not current-PDG-data posterior"
+      },
+      {
+        "label": "Schöneberg PRyMordial with PRIMAT rates, PDG-input comparison",
+        "mean_omega_b_h2": 0.02166,
+        "sigma_1s": 0.00039,
+        "source": "https://arxiv.org/pdf/2401.15054v3",
+        "locator": "Table 2, PDG row / PRyMordial (PRIMAT) column",
+        "status": "rate-choice comparison; do not average with the NACRE-II result"
+      }
+    ],
+    "do_not_use_if": "The IVS model changes H(T), weak freeze-out, neutron abundance, or deuterium-burning time during BBN. In that case use observed abundance likelihood(s) and recompute BBN under IVS rather than applying an SBBN omega_b Gaussian.",
+    "combination_rule": "Alternative SBBN posteriors reuse the same abundance observations and different nuclear-rate assumptions; they are sensitivity models, not statistically independent likelihood factors."
+  },
+  "observations": {
+    "pdg_2025_12_absorber_summary": {
+      "n_systems": 12,
+      "mean_1e6_D_over_H": 25.08,
+      "formal_sigma": 0.27,
+      "recommended_sigma_after_scale_factor": 0.29,
+      "reduced_chi_square": 1.16,
+      "scale_factor": 1.08,
+      "source": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-bbang-nucleosynthesis.pdf",
+      "locator": "§24.3, Eq. 24.2, Table 24.1 (PDF p. 5)",
+      "cross_absorber_covariance_published": false,
+      "reported_trend_with_metallicity_redshift_or_NHI": false
+    },
+    "cutoff_search": "Targeted arXiv/publisher search found no individual high-redshift absorber measurement later than the 2024 results listed below; PDG 2025 remains the latest broad official compilation identified.",
+    "latest_precision_measurements_found": [
+      {
+        "source": "https://arxiv.org/pdf/2401.12797v1",
+        "version": "arXiv:2401.12797v1; accepted 2024-01-18; MNRAS 528 (2024) 4068",
+        "absorber": "SDSS J1332+0052, z_abs=3.42",
+        "D_over_H_1e5": 2.388,
+        "sigma_1e5": 0.078,
+        "log10_D_over_H": -4.622,
+        "sigma_log10_dex": 0.014,
+        "stat_log10_dex": 0.008,
+        "systematic_log10_dex": 0.012,
+        "locators": "Abstract; §3.3/Fig. 6 for model systematic checks; Table 4/§5 for sample means"
+      },
+      {
+        "source": "https://arxiv.org/pdf/2402.05586v1",
+        "version": "arXiv:2402.05586v1; MNRAS 529 (2024) 839",
+        "absorber": "PKS1937-101, z_abs=3.572",
+        "adopted_espresso_uves_D_over_H_1e5": 2.608,
+        "adopted_espresso_uves_sigma_1e5": 0.102,
+        "espresso_only_D_over_H_1e5": 2.638,
+        "espresso_only_sigma_1e5": 0.128,
+        "espresso_hires_D_over_H_1e5": 2.770,
+        "espresso_hires_sigma_1e5": 0.094,
+        "all_instruments_D_over_H_1e5": 2.595,
+        "all_instruments_sigma_1e5": 0.152,
+        "locator": "§3.2, Table 3"
+      }
+    ],
+    "historical_homogeneous_measurement": {
+      "source": "https://arxiv.org/pdf/1710.11129v3",
+      "version": "arXiv:1710.11129v3; ApJ 855 (2018) 102",
+      "D_over_H_1e5": 2.527,
+      "sigma_1e5": 0.030,
+      "locator": "§4.3 and Eqs. 9-10; Eq. 11-12 old BBN mapping"
+    }
+  },
+  "uncertainty_assessment": {
+    "pdg_prior_component_split": "not separately reported; 0.00043 is combined SBBN error",
+    "primat_d_only_total_sigma_omega": 0.00022,
+    "primat_reconstructed_observation_sigma_omega_approx": 0.00016,
+    "primat_reconstructed_rate_and_neutron_lifetime_sigma_omega_approx": 0.00015,
+    "reconstruction_method": "Linearize D/H proportional to omega_b^-1.65 around omega_b≈0.0220 and D/H=2.508±0.030; subtract observation variance in quadrature from total 0.00022. Approximate, not a source-published split.",
+    "baseline_convention_difference": "PDG §24.4 describes SBBN with N_nu=3; Poulin et al. use N_eff^SM=3.044. Treat results as related standard-physics implementations, not exactly identical calculations.",
+    "rate_network_comparison_at_planck_omega": {
+      "source": "https://arxiv.org/pdf/2604.16600v1",
+      "locator": "Table 2; LINX; uncertainty includes rate, neutron lifetime, and omega_b",
+      "primat_D_over_H_1e5": [2.444, 0.037],
+      "parthenope_D_over_H_1e5": [2.512, 0.042],
+      "prymordial_yof_D_over_H_1e5": [2.520, 0.104],
+      "gp_D_over_H_1e5": [2.442, 0.040]
+    }
+  },
+  "source_access_and_integrity": {
+    "primat_repo_public": "https://github.com/CyrilPitrou/primat",
+    "primat_tools_repo_public": "https://github.com/CyrilPitrou/primat_tools",
+    "exact_2607_repro_bundle": {
+      "record": "https://zenodo.org/records/21494819",
+      "record_public": true,
+      "files_publicly_downloadable_at_cutoff": false,
+      "observed_status": "Restricted files; Zenodo page reports 0-byte data at audit cutoff.",
+      "paper_statement": "Conclusion says figure-reproduction code/data/notebooks will be released upon acceptance."
+    },
+    "launders_2604_table1_warning": {
+      "source": "https://arxiv.org/pdf/2604.16600v1",
+      "locator": "Table 1, PDF p. 6 vs Eq. 3, PDF p. 1",
+      "printed_table_value_100omega_b": "2.337±0.015",
+      "paper_equation_omega_b": "0.02237±0.00015",
+      "implied_100omega_b": "2.237±0.015",
+      "assessment": "Visually verified internal inconsistency; likely Table 1 typo. Do not use the Table 1 Planck row as a prior."
+    },
+    "local_pdf_cache_mib": 24,
+    "local_pdf_hashes_sha256": {
+      "cooke2018_v3.pdf": "1a6ec19d6568b8854a40e9dd587906f99a8ea94ecd2d5c712ad86aa506b93f4a",
+      "guarneri2024_v1.pdf": "fd470e36e46eb1f655c447df519aca0de51f5e4af75ac6954e7cbe57f033fd66",
+      "kislitsyn2024_v1.pdf": "a518317d4ea77b3d7ca40225b1aed35f50c54d5d0beb9440f72d51b450247e9d",
+      "launders2026_v1.pdf": "9e0698135beb4fb626a220544232371c6f28720ca4f11a2842cc7e4d07bed5e1",
+      "pdg2025_bbn.pdf": "1843c1d9025aa33c059700708f1041c4462364cdb582325f0c685a6ba1b38484",
+      "poulin2026_v1.pdf": "fb39363d2db3d7f296808fdfa414d568ba1cf5241d2f801bc24ba1f86c33e4d2",
+      "schoeneberg2024_v3.pdf": "3d699644677e2f53482818d364a00eb905916508356fda640a6edc9a2a0e63d6"
+    }
+  },
+  "checks": [
+    "Converted PDG eta10 central value and uncertainty with omega_b≈eta10/274; agrees with Eq. 24.6 to rounding.",
+    "Checked PDG 12-sightline table and weighted mean/chi-square inflation against printed values.",
+    "Visually inspected Launders 2026 PDF page 6 and compared Table I Planck entry with page 1 Eq. 3.",
+    "Verified observational and nuclear-rate evidence using full open PDFs; no local BBN computation or posterior reproduction claimed."
+  ],
+  "stop_condition": "Stop at the 2026-09-25 cutoff. Reopen only for a new high-quality absorber determination/compilation, material low-energy D+D rate update, change in exact reproduction bundle access or journal/version status, or application to a model that changes BBN-era expansion/thermodynamics."
+}

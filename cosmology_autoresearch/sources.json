@@ -418,6 +418,43 @@
       "note": "Catalog entry only. Inspect and pin a repository revision if the selected experiment needs it. Respect model-domain restrictions."
     },
     {
+      "id": "idecamb_code_snapshot_20260925",
+      "kind": "code",
+      "title": "IDECAMB interacting-dark-energy CAMB/CosmoMC patch snapshot",
+      "url": "https://github.com/liaocrane/IDECAMB",
+      "download_url": "https://api.github.com/repos/liaocrane/IDECAMB/tarball/4f1093d9efe46f28cf7e2acb4d07ae116ad5e075",
+      "priority": "core",
+      "fetch": true,
+      "filename": "code/idecamb_4f1093d9efe46f28cf7e2acb4d07ae116ad5e075.tar.gz",
+      "max_bytes": 5242880,
+      "note": "Pinned master snapshot at commit 4f1093d9efe46f28cf7e2acb4d07ae116ad5e075, observed 2026-09-25. Paper-linked independent IDE implementation; README says copy/overwrite files in CosmoMC-planck2018. GitHub API returned no license metadata. Download for read-only compatibility audit; do not execute or treat as the target paper's exact code."
+    },
+    {
+      "id": "camb_source_2_0_4",
+      "kind": "code",
+      "title": "Official CAMB source snapshot 2.0.4",
+      "url": "https://github.com/cmbant/CAMB/tree/2.0.4",
+      "download_url": "https://api.github.com/repos/cmbant/CAMB/tarball/a6de8cc59124c8bbe3924f1c546f96cef73dcabb",
+      "priority": "core",
+      "fetch": true,
+      "filename": "code/CAMB_2.0.4_a6de8cc59124c8bbe3924f1c546f96cef73dcabb.tar.gz",
+      "max_bytes": 104857600,
+      "note": "Official cmbant/CAMB tag 2.0.4 pinned to commit a6de8cc59124c8bbe3924f1c546f96cef73dcabb (verified by GitHub refs 2026-09-25). Acquire source for a current Gamma=0 baseline and independent IVS implementation feasibility. Verify submodule completeness and license before building/modifying; archive is never assumed to contain recursive submodules."
+    },
+    {
+      "id": "camb_wheel_2_0_4_linux_x86_64",
+      "kind": "code",
+      "title": "Official CAMB 2.0.4 manylinux x86-64 wheel",
+      "url": "https://pypi.org/project/camb/2.0.4/",
+      "download_url": "https://files.pythonhosted.org/packages/7d/4b/3a999a7a500d8a4aef4fa3e3efc94fb00e59cec5e3e0a61973f1cad5b69b/camb-2.0.4-py3-none-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "priority": "core",
+      "fetch": true,
+      "filename": "code/camb-2.0.4-py3-none-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "9b7e6558b2049757e96496b8a33461d8ff11acd79017cfbd00a573dbc8d1e366",
+      "max_bytes": 4000000,
+      "note": "Official PyPI wheel uploaded 2026-08-25; SHA-256 independently checked against PyPI JSON. PyPI attestation identifies the CAMB repository commit a6de8cc59124c8bbe3924f1c546f96cef73dcabb. LGPLv3 license reported by PyPI; used only in an isolated project environment for the standard Gamma=0 baseline, not as a modified IVS implementation."
+    },
+    {
       "id": "cosmopower_jax_code",
       "kind": "code",
       "title": "CosmoPower-JAX",
@@ -576,6 +613,18 @@
       "note": "Current v1, submitted 2026-09-04; arXiv page reports acceptance by PRD. Explicit Q=Gamma rho_x interaction motivates checking conservation/sign convention and perturbation closure; uses overlapping Planck/DESI DR2/SN compilations and abstract reports Bayesian evidence still favors LambdaCDM."
     },
     {
+      "id": "idecamb_implementation_2023",
+      "kind": "paper",
+      "title": "IDECAMB: an implementation of interacting dark energy cosmology in CAMB",
+      "url": "https://arxiv.org/abs/2306.01593",
+      "priority": "core",
+      "fetch": true,
+      "filename": "papers/idecamb_implementation_2023_v2.pdf",
+      "download_url": "https://arxiv.org/pdf/2306.01593v2",
+      "arxiv_id": "2306.01593",
+      "note": "Exact v2 (2023-09-13), JCAP 09 (2023) 046. Relevant existing interacting-dark-energy CAMB patch; its parameterized interactions/PPF closure must be checked against Q=Gamma rho_x with geodesic CDM before any reuse."
+    },
+    {
       "id": "metastable_de_desi_dr2_2026",
       "kind": "paper",
       "title": "Revisiting Metastable Dark Energy in Light of DESI DR2 BAO and DESI DR1 Full-Shape Measurements",
@@ -610,6 +659,64 @@
       "download_url": "https://arxiv.org/pdf/2609.03062v1",
       "arxiv_id": "2609.03062",
       "note": "Exact v1 PDF and searchable text read locally; SHA-256 0e2b97a2fd988a6657e0c563bbbde7843529dea9c9ab8ac63dff88fefde356e5. Submitted 2026-09-02. With Planck+ACT, DESI DR2 and DES-Dovekie, the added interaction provides essentially no best-fit improvement in interacting CPL (reported MAP Delta-chi-square 0.03); its role changes across assumed dynamical-DE trajectories. Literature context only, not a reproduction."
+    },
+    {
+      "id": "bbn_emerging_deuterium_tension_2026",
+      "kind": "paper",
+      "title": "What could an emerging Big Bang Nucleosynthesis discrepancy be hinting at?",
+      "url": "https://arxiv.org/abs/2607.20635v1",
+      "priority": "core",
+      "fetch": true,
+      "filename": "papers/bbn_emerging_deuterium_tension_2026v1.pdf",
+      "download_url": "https://arxiv.org/pdf/2607.20635v1",
+      "arxiv_id": "2607.20635v1",
+      "note": "Exact v1 (2026-07-22), current as of the campaign date. PRIMAT-based BBN likelihood investigates the D/H–CMB baryon discrepancy and a very-early transient expansion component; include to audit nuclear-rate dependence and avoid treating a D/H-derived omega_b prior as unproblematic. Preprint, not a campaign result."
+    },
+    {
+      "id": "bbn_data_driven_deuterium_prediction_2026",
+      "kind": "paper",
+      "title": "A data-driven prediction for the primordial deuterium abundance",
+      "url": "https://arxiv.org/abs/2604.16600v1",
+      "priority": "core",
+      "fetch": true,
+      "filename": "papers/bbn_data_driven_deuterium_prediction_2026v1.pdf",
+      "download_url": "https://arxiv.org/pdf/2604.16600v1",
+      "arxiv_id": "2604.16600v1",
+      "note": "Exact v1 (2026-04-17), current as of the campaign date. Gaussian-process fits to correlated nuclear cross-section data challenge polynomial fits and report nuclear-input dependence in predicted D/H; include to assess whether standard-BBN baryon calibration is robust. Preprint."
+    },
+    {
+      "id": "bbn_j1332_deuterium_measurement_2024",
+      "kind": "paper",
+      "title": "A New Precise Determination of the Primordial Abundance of Deuterium: Measurement in the metal-poor sub-DLA system at z=3.42 towards quasar J1332+0052",
+      "url": "https://arxiv.org/abs/2401.12797v1",
+      "priority": "core",
+      "fetch": true,
+      "filename": "papers/bbn_j1332_deuterium_measurement_2024v1.pdf",
+      "download_url": "https://arxiv.org/pdf/2401.12797v1",
+      "arxiv_id": "2401.12797v1",
+      "note": "Exact v1 of a 2024 peer-reviewed high-z sub-DLA abundance measurement; reports statistical and systematic errors separately and reanalyzes the weighted mean across absorbers. Include for the observational side of a D/H-to-baryon calibration."
+    },
+    {
+      "id": "pdg_2025_big_bang_nucleosynthesis",
+      "kind": "documentation",
+      "title": "Review of Particle Physics 2025: Big Bang Nucleosynthesis",
+      "url": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-bbang-nucleosynthesis.pdf",
+      "priority": "core",
+      "fetch": true,
+      "filename": "papers/pdg_2025_big_bang_nucleosynthesis.pdf",
+      "download_url": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-bbang-nucleosynthesis.pdf",
+      "note": "Official 2025 PDG review, including Table 24.1's D/H measurements, uncertainty inflation for between-system scatter, and the cited SBBN-only baryon density inference; use as a cross-check, not as a primary-data likelihood."
+    },
+    {
+      "id": "primat_python_bbn_network_v0_3_2",
+      "kind": "code",
+      "title": "PRIMAT Python Big Bang Nucleosynthesis network",
+      "url": "https://github.com/CyrilPitrou/primat/tree/v0.3.2",
+      "priority": "core",
+      "fetch": false,
+      "filename": "work/data9_primat/repo/primat",
+      "repository_commit": "21ff8f39fa18e3937e9fdf386cfa982361bfdfce",
+      "note": "Public GPL-3.0-or-later source, checked out at exact v0.3.2 tag; 460 package/data files, 21,580,336 bytes, aggregate tree SHA-256 583f054b68c100b249126618f41620718ed800f9ddde9d9fa9d1c24aaee98413. Source commit/tree provenance and independent point-for-point repeated standard-background run are in work/data9_primat/REPORT.md. Generic upstream code only; not the restricted paper-specific vEDE patch/likelihood."
     }
   ]
 }
