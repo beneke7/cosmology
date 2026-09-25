@@ -1,0 +1,231 @@
+{
+  "task": "tg_holdout_target_audit",
+  "retrieved_at": "2026-09-25",
+  "status": "availability_and_preregistration_contract_complete",
+  "selection": {
+    "primary": "NGC4559",
+    "fallback": "NGC7793",
+    "basis": [
+      "SPARC catalogue quality flag, distance and inclination metadata",
+      "local SPARC Rotmod radial coverage and point counts only",
+      "official S4G P5 inclusion, quality flag and analysis aperture",
+      "official resolved-HI source product availability and release metadata",
+      "coarse catalog luminosity-plus-HI baryonic-mass contrast to NGC3198"
+    ],
+    "rotation_curve_values_or_residuals_used_for_ranking": false,
+    "gravity_fit_or_parameter_tuning_performed": false,
+    "holdout_scope": "whole galaxy; prediction remains conditional on a scaling calibrated outside target velocities",
+    "selection_conditioning": "quality, coverage and baryonic-mass predictor are selection criteria; the target curve outcome was not scored",
+    "strict_statistical_independence": false,
+    "independence_caveat": "No joint covariance is supplied for shared distances, inclination/geometry, HI flux calibration, or HI mass versus HI kinematics. A single held-out galaxy cannot independently establish the K-Mb exponent."
+  },
+  "local_project_inputs": [
+    {
+      "name": "Pszota-Van 2024 exact user-provided paper",
+      "doi": "10.1016/j.dark.2024.101660",
+      "url": "https://doi.org/10.1016/j.dark.2024.101660",
+      "local_path": "context/user_provided/pszota_van_2024.pdf",
+      "sha256": "55cbfbbb0a916ea2ce0b70523334ee301897695860fb4bdb5fd2278ab47b62e",
+      "reading_card": "context/reading_cards/pszota_van_2024.md",
+      "use": "Equation, source prescription, and endpoint boundary-condition caveat; no new fit."
+    },
+    {
+      "name": "SPARC Rotmod archive",
+      "url": "https://astroweb.case.edu/SPARC/",
+      "local_path": "context/data/Rotmod_LTG.zip",
+      "sha256": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+      "note": "Pre-existing local archive; no survey archive acquired for this audit. Candidate-member hashes/radii are recorded below."
+    },
+    {
+      "name": "SPARC Table 1 galaxy metadata",
+      "url": "https://astroweb.case.edu/SPARC/SPARC_Lelli2016c.mrt",
+      "access": "official live MRT catalogue checked 2026-09-25",
+      "definitions_url": "https://arxiv.org/abs/1606.09251"
+    }
+  ],
+  "products": [
+    {
+      "survey": "S4G",
+      "release": "Pipeline 5 (P5); summary table dated September 2014",
+      "product": "NGC4559.stellar.fits (cleaned old-stellar 3.6 micron map)",
+      "official_summary": "https://irsa.ipac.caltech.edu/data/SPITZER/S4G/docs/P5_table.txt",
+      "official_url": "https://irsa.ipac.caltech.edu/data/SPITZER/S4G/galaxies/NGC4559/P5/NGC4559.stellar.fits",
+      "retrieved": true,
+      "http_status": 200,
+      "last_modified": "2014-09-02",
+      "content_length_bytes": 5022720,
+      "local_path": "work/tg_holdout_target_audit/NGC4559.stellar.fits",
+      "sha256": "9fe33f187f10db079c360de29c80de727c16a4932e275362ef5b90c272bd9405",
+      "p5_table_entry": {
+        "excluded": 0,
+        "ica_iteration": 2,
+        "quality_flag": 1,
+        "stellar_fraction_in_analysis_area": 0.729626,
+        "analysis_ellipse_semimajor_axis_arcsec": 278.1,
+        "ellipticity": 0.579,
+        "position_angle_deg": -37.0
+      },
+      "license_and_citation": "IRSA data-use terms say most public-hosted products have no use restrictions; cite S4G papers and DOI 10.26131/IRSA425. Exact terms: https://irsa.ipac.caltech.edu/data_use_terms.html ; DOI: https://doi.org/10.26131/IRSA425",
+      "map_mass_caveats": "Requires a declared 3.6 micron stellar M/L and vertical profile. P5 analysis ellipse is not full RC support; outer stellar tail needs a predeclared continuation or bracket."
+    },
+    {
+      "survey": "HALOGAS",
+      "release": "Data Release 1, version 2, published 2020-03-20",
+      "doi": "10.5281/zenodo.3715549",
+      "record_url": "https://zenodo.org/records/3715549",
+      "product": "NGC4559-HR_coldens.fits (1024x1024 H I column-density map; 4-arcsec pixels; FITS beam 28.379x13.104 arcsec)",
+      "record_product_size_bytes": 4245120,
+      "record_md5": "e2c57a3f8a4cca5f76ffeffde0bedbb9",
+      "retrieved": true,
+      "local_path": "work/tg_holdout_target_audit/NGC4559-HR_coldens.fits",
+      "local_size_bytes": 4245120,
+      "local_sha256": "320d2de1e29adbfdc7bd9023d58ed6dec78bf7d8b1ba326ffdc064150e252bba",
+      "verified_md5": "e2c57a3f8a4cca5f76ffeffde0bedbb9",
+      "fits_header_unit_warning": "BUNIT says JY/BEAM.km/s, but HISTORY records a conversion from moment-0 Jy/beam km/s to N_HI using 1.823e18*606*1e3/(28.37887*13.10430); use HISTORY and validate the released column-density convention before modeling.",
+      "local_path": "work/tg_holdout_target_audit/NGC4559-HR_coldens.fits",
+      "local_size_bytes": 4245120,
+      "local_sha256": "320d2de1e29adbfdc7bd9023d58ed6dec78bf7d8b1ba326ffdc064150e252bba",
+      "verified_md5": "e2c57a3f8a4cca5f76ffeffde0bedbb9",
+      "version_note": "Version 2 corrects NGC4448 cubes and moment-1 products only; NGC4559 products are unchanged from version 1.",
+      "license": "CC BY 4.0",
+      "required_citation": "Heald et al. (2011), HALOGAS-DR1; include the record acknowledgement.",
+      "record_description": "https://research.rug.nl/en/datasets/the-westerbork-halogas-survey-data-release-1/"
+    },
+    {
+      "survey": "THINGS",
+      "release": "Public final survey products; no numbered release version identified",
+      "product": "NGC_7793_NA_MOM0_THINGS.FITS (natural-weighted integrated HI moment-0 map)",
+      "official_data_page": "https://things.www3.mpia.de/Data.html",
+      "official_url": "https://things.www3.mpia.de/Data_files/NGC_7793_NA_MOM0_THINGS.FITS",
+      "retrieved": false,
+      "http_status_head": 200,
+      "content_length_bytes": 4242240,
+      "license": "No separate product license identified on the official data page; cite Walter et al. 2008 and THINGS data release."
+    }
+  ],
+  "candidate_comparison": [
+    {
+      "name": "NGC4559",
+      "sparc_table1": {
+        "distance_catalog_mpc": 9.0,
+        "distance_catalog_error_mpc": 2.7,
+        "distance_method": "Hubble flow",
+        "inclination_deg": 67.0,
+        "inclination_error_deg": 1.0,
+        "luminosity_3p6_1e9_lsun": 19.377,
+        "mhi_1e9_msun": 5.811,
+        "rhi_kpc_at_catalog_distance": 21.16,
+        "quality_flag": 1,
+        "hi_curve_reference": "Barbieri et al. 2005 (Ba05)"
+      },
+      "independent_trgb": {
+        "source": "McQuinn et al. 2017, arXiv:1706.06586",
+        "url": "https://arxiv.org/abs/1706.06586",
+        "distance_mpc": 8.91,
+        "stat_error_mpc": 0.19,
+        "systematic_error_mpc": 0.29
+      },
+      "rotmod_member": {
+        "member": "NGC4559_rotmod.dat",
+        "sha256": "84bd735a9b4966738aac5c209e1e9ae1a9ec5718726edef8a46279d6b603cd51",
+        "data_points": 32,
+        "radius_min_kpc_at_header_distance": 0.67,
+        "radius_max_kpc_at_header_distance": 20.97,
+        "header_distance_mpc": 9.0,
+        "radius_max_kpc_rescaled_to_trgb": 20.76
+      },
+      "coarse_mass_proxy": {
+        "formula": "0.5*L[3.6] + 1.33*MHI",
+        "mass_at_catalog_distance_1e9_msun": 17.41713,
+        "mass_rescaled_to_trgb_1e9_msun": 17.0708,
+        "ratio_to_ngc3198": 0.5081,
+        "conditional_K_ratio_for_exponent_minus_half": 1.4025
+      },
+      "selection_assessment": "Primary: strongest joint data quality and geometry, with approximately factor-two mass contrast. The P5 aperture covers only about 12 kpc; extension to the outer curve is unresolved source modeling."
+    },
+    {
+      "name": "NGC7793",
+      "sparc_table1": {
+        "distance_mpc": 3.61,
+        "distance_error_mpc": 0.18,
+        "distance_method": "TRGB",
+        "inclination_deg": 47.0,
+        "inclination_error_deg": 9.0,
+        "luminosity_3p6_1e9_lsun": 7.05,
+        "mhi_1e9_msun": 0.861,
+        "rhi_kpc": 7.35,
+        "quality_flag": 1,
+        "hi_curve_references": "Di08, Sa96, CP90"
+      },
+      "rotmod_member": {
+        "member": "NGC7793_rotmod.dat",
+        "sha256": "2f39a5ca966dbe82c9fc3679b0ca7404e9c34fb169f34ce4ed1a0bcbcfd9808",
+        "data_points": 46,
+        "radius_min_kpc": 0.11,
+        "radius_max_kpc": 7.87
+      },
+      "p5_summary": {
+        "excluded": 0,
+        "ica_iteration": 2,
+        "quality_flag": 2,
+        "analysis_ellipse_semimajor_axis_arcsec": 303.9,
+        "ellipticity": 0.386,
+        "position_angle_deg": -81.9,
+        "semimajor_axis_kpc": 5.32
+      },
+      "coarse_mass_proxy": {
+        "formula": "0.5*L[3.6] + 1.33*MHI",
+        "mass_1e9_msun": 4.67013,
+        "ratio_to_ngc3198": 0.1390,
+        "conditional_K_ratio_for_exponent_minus_half": 2.681
+      },
+      "selection_assessment": "Fallback: strong independent mass leverage and verified THINGS map access, but the SPARC inclination uncertainty is much larger and P5 quality is acceptable rather than excellent."
+    },
+    {
+      "name": "NGC3198 training reference",
+      "sparc_table1": {
+        "distance_mpc": 13.8,
+        "distance_error_mpc": 1.4,
+        "distance_method": "Cepheids",
+        "inclination_deg": 73.0,
+        "inclination_error_deg": 3.0,
+        "luminosity_3p6_1e9_lsun": 38.279,
+        "mhi_1e9_msun": 10.869,
+        "quality_flag": 1
+      },
+      "coarse_mass_proxy": {
+        "formula": "0.5*L[3.6] + 1.33*MHI",
+        "mass_1e9_msun": 33.59527
+      }
+    }
+  ],
+  "scaling_contract": {
+    "equation": "stationary Laplacian(phi) - K*|grad(phi)|^2 = 4*pi*G*rho",
+    "dimension": "K has units of velocity^-2",
+    "conditional_derivation": "Assume comparable dimensionless TG response in homologous source/branch/boundary families so K*Vflat^2 is common, and a common flat-regime baryonic Tully-Fisher law Vflat^4=A*Mb. Then K proportional to (A*Mb)^-1/2.",
+    "not_implied_by_pde": true,
+    "required_preregistered_choices": [
+      "training sample and normalization/calibration procedure",
+      "exponent fixed at -1/2 before target curve access",
+      "common baryonic mass, distance and helium conventions",
+      "uncertainty on M/L, BTFR normalization, geometry and K calibration",
+      "flat-curve applicability, source-profile homology and physical exterior boundary"
+    ],
+    "one_train_galaxy_limitation": "NGC3198 can calibrate a declared normalization, not validate the exponent; one target tests only one conditional prediction."
+  },
+  "acquisition_summary": {
+    "target_products_downloaded": 2,
+    "downloaded_bytes": 9267840,
+    "downloaded_products": ["NGC4559 S4G P5 stellar map", "NGC4559 HALOGAS DR1 v2 high-resolution H I column map"],
+    "resolved_hi_products_downloaded": 1,
+    "survey_archives_or_cubes_downloaded": 0,
+    "fit_or_curve_scoring": false
+  },
+  "references": {
+    "brief_lane_b": "BRIEF.md",
+    "current_tg_report": "work/tg_axisymmetric_pilot/REPORT.md",
+    "alternative_contract": "work/tg_alternatives_contract/REPORT.md",
+    "resolved_source_audit": "work/tg_resolved_source_audit/REPORT.md",
+    "exact_2024_reading_card": "context/reading_cards/pszota_van_2024.md"
+  }
+}

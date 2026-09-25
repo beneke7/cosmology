@@ -1,0 +1,86 @@
+{
+  "status": "geometry_transform_pilot_complete",
+  "transform_derivation": {
+    "radius_kpc": "D_Mpc*1000*ARCSEC_RAD*sqrt(major_arcsec^2+(minor_arcsec/cos(i))^2)",
+    "HI_faceon_surface_density": "N_HI/1.25e20*1.36*cos(i) M_sun pc^-2",
+    "stars_faceon_surface_density": "I_nu(MJy/sr) -> Lsun pc^-2 times Upsilon*cos(i)",
+    "mass_jacobian": "Sigma_faceon*cos^-1(i)*D^2*dOmega = Sigma_los*D^2*dOmega",
+    "mass_distance_scaling": "D^2 at fixed map; independent of inclination",
+    "sparc_velocity_transform": "Vobs(i)=Vobs(73)*sin(73)/sin(i); errV scales identically",
+    "fixed_physical_vertical_scale": "h is held in kpc; source radii scale with D, so h/R changes with D"
+  },
+  "base_profile_reconstruction_i72": {
+    "gas": {
+      "n_matched": 70,
+      "max_abs_surface_density_difference_Msun_pc2": 2.6645352591003757e-13,
+      "max_relative_surface_density_difference": 1.6707386476121293e-13
+    },
+    "things": {
+      "n_matched": 70,
+      "max_abs_surface_density_difference_Msun_pc2": 3.6859404417555197e-13,
+      "max_relative_surface_density_difference": 1.8419683882407183e-13
+    },
+    "stars": {
+      "n_matched": 28,
+      "max_abs_surface_density_difference_Msun_pc2": 1.595168441781425e-12,
+      "max_relative_surface_density_difference": 9.908312099962525e-14
+    }
+  },
+  "jacobian_checks": [
+    {
+      "D_Mpc": 13.8,
+      "i_deg": 72.0,
+      "faceon_projected_mass_ratio": {
+        "HI": 1.0,
+        "stars": 1.0000000000000002
+      },
+      "expected_mass_ratio_vs_reference": 1.0
+    },
+    {
+      "D_Mpc": 12.4,
+      "i_deg": 70.0,
+      "faceon_projected_mass_ratio": {
+        "HI": 1.0,
+        "stars": 1.0
+      },
+      "expected_mass_ratio_vs_reference": 0.8073934047469019
+    },
+    {
+      "D_Mpc": 15.2,
+      "i_deg": 76.0,
+      "faceon_projected_mass_ratio": {
+        "HI": 1.0,
+        "stars": 1.0
+      },
+      "expected_mass_ratio_vs_reference": 1.2131905061961767
+    }
+  ],
+  "coarse_tg_pilot_i72": {
+    "grid_shape": [
+      160,
+      240
+    ],
+    "kcrit_km_s_minus2": 6.748653442560979e-05,
+    "upsilon": 0.6,
+    "eigen_residual": 1.4031335566904756e-12,
+    "minimum_edge_v2": 800.7482069895215,
+    "chi2_diagonal_against_Vobs_redeprojected_to_i72": 10700.180759025423,
+    "catalog_i73_chi2_for_pipeline_smoke_test_only": 10336.71460709179,
+    "wall_seconds": 0.17923223040997982,
+    "cpu_seconds": 0.17922580899999996
+  },
+  "inputs_sha256": {
+    "work/tg_axisymmetric_pilot/data/NGC3198.stellar.fits": "db2db49b15858e3bda491cb7657e5cadeeb7be2dbce29a1bbe48c66dbfc82478",
+    "work/tg_axisymmetric_pilot/data/NGC3198.ICAmask.fits": "5f2c6804ed76ea44709aeb7e6a4245334dfac2d81f6b526963b6a620b6d6fc38",
+    "work/tg_resolved_source_audit/NGC3198-HR_coldens.fits": "9e8070c2a2586a3eb9a5933c2814b18ab6f17c71054ff4051da1db7982485d90",
+    "work/tg_resolved_source_audit/NGC_3198_NA_MOM0_THINGS.FITS": "6d98f314fa8b03bc2c048c84bdc629eccfa3f97b1f06ca4d52ce05162386448e",
+    "work/tg_axisymmetric_pilot/source_profiles.csv": "2dffddbcd53854b2f8baf810c7500a753f9a2939f23d6b5deb11fdf9683f10b5",
+    "context/data/Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "work/tg_axisymmetric_pilot/solve_tg_axisymmetric.py": "ee8f24d57954b304bdd524f3f62fd27f12a6f95e1e7ddc4b1e293911fa25f7bc"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.5.3"
+  },
+  "decision": "The map-to-disk transformation is coherent; proceed to the bounded D/i and vertical nuisance envelope."
+}

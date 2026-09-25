@@ -1,0 +1,85 @@
+{
+  "status": "complete",
+  "node_count_expected": 450,
+  "node_count_verified": 450,
+  "starts_per_node": 3,
+  "total_start_fits": 1350,
+  "selected_fit_success_count": 450,
+  "total_successful_start_fits": 1350,
+  "all_selected_fits_successful": true,
+  "all_450_node_scores_match_existing": true,
+  "max_abs_delta_chi2_data": 0.0,
+  "max_abs_delta_total_objective": 0.0,
+  "max_abs_delta_log10_M200": 0.0,
+  "max_abs_delta_log10_c200": 0.0,
+  "selected_start_selection": "minimum objective across the same three deterministic starts; bounds [9,14] log10(M200/Msun), [0,log10(50)] log10(c200)",
+  "optimizer": {
+    "method": "scipy.optimize.least_squares",
+    "x_scale": [
+      1.0,
+      0.5
+    ],
+    "ftol": 1e-10,
+    "xtol": 1e-10,
+    "gtol": 1e-10,
+    "max_nfev": 1500,
+    "processes": 1,
+    "BLAS_threads": 1
+  },
+  "best_verified_global_NFW_node": {
+    "vertical_case": "gas_mix_hstar0p3",
+    "distance_Mpc": 13.8,
+    "inclination_deg": 73.0,
+    "D_sigma": 0.0,
+    "i_sigma": 0.0,
+    "upsilon": 0.762,
+    "q_log10_ML": 0.10380372095595687,
+    "prior_D": 0.0,
+    "prior_i": 0.0,
+    "prior_ML": 1.077521248430216,
+    "stored_chi2_data": 59.307002138842044,
+    "verified_chi2_data": 59.307002138842044,
+    "delta_chi2_data": 0.0,
+    "stored_objective_chi2_plus_priors": 60.38452338727226,
+    "verified_objective_chi2_plus_priors": 60.38452338727226,
+    "delta_objective": 0.0,
+    "stored_log10_M200": 11.569301984796484,
+    "verified_log10_M200": 11.569301984796484,
+    "delta_log10_M200": 0.0,
+    "stored_log10_c200": 1.039703267687963,
+    "verified_log10_c200": 1.039703267687963,
+    "delta_log10_c200": 0.0,
+    "selected_start_index": 0,
+    "selected_fit_success": true,
+    "selected_fit_message": "`ftol` termination condition is satisfied.",
+    "selected_fit_nfev": 6,
+    "source_fit": {
+      "stars_tail": {
+        "measured_last_center_kpc": 13.75,
+        "tail": "exponential",
+        "tail_Rd_kpc": 4.212596134600839,
+        "tail_fit_max_kpc": 12.75,
+        "tail_fit_n": 16,
+        "tail_fit_rms_log": 0.05665886210882144
+      },
+      "gas_tail": {
+        "measured_last_center_kpc": 34.75,
+        "tail": "linear_5kpc_taper",
+        "tail_width_kpc": 5.0
+      }
+    },
+    "obs_velocity_factor_from_i73": 1.0
+  },
+  "runtime": {
+    "cpu_seconds": 13.609095828,
+    "wall_seconds": 13.626652578823268,
+    "cpu_cap_seconds": 120.0
+  },
+  "inputs_sha256": {
+    "work/tg_axisymmetric_nuisance_envelope/nuisance_envelope.py": "992f743ca525c97f126e1b603d0a2ba4f06ff3b92ebb459ecd9ef53d8a8c130d",
+    "work/tg_axisymmetric_nuisance_envelope/envelope_progress.jsonl": "f41fc7ea315897c6707c176e29243b65355058ce4f1e3e566b7a662be3cee48f",
+    "work/tg_axisymmetric_pilot/newtonian_k0_predictions.csv": "5090562be95b6b757cbb9cb7e623d1e42510f7319a9b35e1ddc13e15fa849eff",
+    "context/data/Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588"
+  },
+  "unchanged_original_results": "results.json and envelope_progress.jsonl are read-only inputs; this verifier writes separate nfw_verification* artifacts"
+}
