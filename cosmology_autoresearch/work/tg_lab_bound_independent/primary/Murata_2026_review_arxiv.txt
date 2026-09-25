@@ -1,0 +1,1136 @@
+                                             Short-Range Tests of the Gravitational Inverse-Square Law
+
+                                                               Jiro Murata1*, Takuhiro Fujiie1,2 and Sae Suzuki1
+                                                       1 Department of Physics, Rikkyo University, Tokyo, 171-8501, Japan.
+                                             2 Present address: Department of Physics, Konan University, Kobe, 658-8501, Japan.
+
+
+
+
+                                                               *Corresponding author(s). E-mail(s): jiro@rikkyo.ac.jp;
+arXiv:2605.18212v2 [gr-qc] 8 Sep 2026
+
+
+
+
+                                                                                            Abstract
+                                             Experimental constraints on the gravitational inverse-square law at short range are presented, employ-
+                                             ing a consistent formalism across a wide range of length scales. We provide comprehensive updates
+                                             incorporating new experimental data from the past decade—spanning tabletop forces, Casimir mea-
+                                             surements, slow neutron scattering, and collider searches—building upon our previous review. This
+                                             work facilitates the direct comparison of experimental results with theoretical models that extend
+                                             general relativity. Furthermore, a comparison between various model parametrizations, including
+                                             extra-dimensional models, is introduced. Finally, results from tabletop experiments are compared with
+                                             those from high-energy collider experiments for both Yukawa and power-law potentials.
+
+                                             Keywords: short-range gravity, extra-dimensions, inverse-square law
+
+
+
+
+                                        1 Introduction                                               multiple frontiers, including high-precision table-
+                                                                                                     top force measurements, slow neutron scatter-
+                                        Testing gravity is testing spacetime. Newton’s               ing, atomic spectroscopy, and high-energy collider
+                                        gravitational inverse-square law stands as the               experiments.
+                                        founding monument of modern science; it remains                  Since the end of the last century, search-
+                                        valid for most gravitational phenomena in our                ing for deviations from the inverse-square law
+                                        universe, except in extreme conditions where mod-            at microscales has attracted signiﬁcant inter-
+                                        iﬁcations from general relativity are necessary.             est, especially in light of the possible hypoth-
+                                        The inverse-square law has been tested with great            esis of extra spatial dimensions beyond our
+                                        precision, to be sure, but such high-precision               four-dimensional spacetime. Before then, several
+                                        tests have been performed only on planetary                  claims, such as the ﬁfth-force hypothesis, also
+                                        scales. On the other hand, precision in short-range          prompted numerous experimental searches for vio-
+                                        tests at sub-laboratory scales remains poor. To              lations of the inverse-square law from the 1970s
+                                        address this, the primary objective of this paper            to today. A wide variety of experimental reports
+                                        is to provide a comprehensive, updated review                can be found in such attempts, from the geophys-
+                                        of short-range gravity experiments, building upon            ical scale down to the quark scale. It is not always
+                                        our previous review from a decade ago [1]. This              straightforward to compare their results with the-
+                                        update incorporates the remarkable experimen-                oretical models, as each experiment reports its
+                                        tal progress achieved over this past decade across           results using diﬀerent parametrizations. In this
+                                                                                                     paper, we aim to summarize the wide variety of
+                                                                                                     experimental results within the same parameter
+
+
+                                                                                                 1
+spaces and using the same criteria, while dis-             gravitational laws, VN (r) or FN (r):
+tinguishing directly published constraints in the
+literature from our reconstructed or reinterpreted                                    m1 m2
+                                                                         VN (r) = −GN        ,
+limits.                                                                                  r
+                                                                                     m1 m2
+    Speciﬁcally, we examine the current bounds                           FN (r) = GN       ,               (1)
+and sensitivities of the Yukawa-type coupling                                         r2
+strength over each relevant length scale—ranging           where GN is Newton’s gravitational constant. To
+from high-precision tabletop torsion balances that         characterize potential deviations, we introduce the
+constrain the dimensionless coupling strength in           following parameters in our work [1]:
+the micrometer-to-millimeter regime, to Casimir
+force measurements at sub-micrometer scales, and                           V (r)
+slow neutron scattering and high-energy collider                       Γ≡         ,    ∆ ≡ Γ − 1,
+                                                                           VN (r)
+experiments probing the sub-atomic regime. This
+                                                                           F (r)
+systematic comparison is motivated by the hierar-                      γ ≡        ,    δ ≡ γ − 1.          (2)
+chy problem in extra-dimensional scenarios [2–4].                          FN (r)
+These theoretical frameworks have driven out-
+                                                           Observing ∆ 6= 0 or δ 6= 0 indicates that the
+standing progress not only in high-energy collider
+                                                           Newtonian gravitational law is violated at the
+experiments [5, 6] but also in recent tabletop
+                                                           experimental distance r. In the following, we basi-
+experiments, spanning high-precision torsion bal-
+                                                           cally use ∆ for theoretical formulations and δ
+ances [7, 8], Casimir force measurements [9], and
+                                                           for experimental analyses. Although ∆ and δ are
+slow neutron scattering [10].
+                                                           closely related, they diﬀer slightly due to the spa-
+    The remainder of this paper is organized as fol-
+                                                           tial derivative: δ = ∆ − r d∆   dr . Therefore, this
+lows. Section 2 establishes the model-independent
+                                                           second term must be included when analyzing
+parameters used to characterize potential devia-
+                                                           experimental data from force measurements.
+tions from Newtonian gravity. Section 3 provides
+                                                               Experiments test whether δ = 0, while the-
+the theoretical framework for extra-dimensional
+                                                           oretical models predict non-zero values based
+scenarios, discussing power-law, Kaluza–Klein,
+                                                           on their speciﬁc parameters. In practice, actual
+and Yukawa potentials. Section 4 outlines the gen-
+                                                           experiments cannot employ ideal point masses;
+eral properties of the Yukawa parametrization and
+                                                           therefore, the net force must be estimated via
+the mechanics of absolute versus relative measure-
+                                                           volume integrations. Because a single value of
+ments. Section 5 presents the uniﬁed experimental
+                                                           δ(r) can represent only point-mass conﬁgura-
+constraints and explicitly details the dual transla-
+                                                           tions, most experimental works report their
+tion workﬂows used to map various experimental
+                                                           boundaries using theoretical model parameters
+results into consistent parameter spaces represent-
+                                                           rather than the model-independent parameter
+ing Yukawa-type forces, power-law modiﬁcations,
+                                                           δ(r). This parametrization diﬀerence is precisely
+and higher-dimensional Planck scales. Section 6
+                                                           why direct comparison and physical interpretation
+provides a comparative discussion of these bound-
+                                                           can become confusing when diﬀerent models are
+aries, Section 7 reviews the key updated experi-
+                                                           used.
+ments, and Section 8 concludes the paper.
+                                                               Note that there is no theoretically known value
+                                                           of GN . Its determination was ﬁrst made possible
+2 Observables and                                          by Cavendish in 1798 by directly measuring F (r)
+  Parametrization                                          with known m1 , m2 , and r ∼ rN ≡ 0.1 m values,
+                                                           using a torsion balance bar [11]. To this day, GN =
+If an experiment measures a gravitational poten-           6.708 83(15)× 10−39 ~c (GeV/c2 )−2 is measured in
+tial V (r) or a force F (r) between two point              similar Cavendish-type experiments, improving its
+masses m1 and m2 at a separation distance r,               relative precision to ∼ 10−5 [12].
+these quantities are compared with the Newtonian               There are two representative parametrizations
+                                                           for testing the inverse-square law experimentally.
+                                                           The ﬁrst one is a power-law parametrization
+
+
+
+                                                       2
+expressed as                                                violate the universality of free fall can be expected
+                                 n                      [13].
+                                  Λ                             As we see here, testing the inverse-square law is
+         Vpower (r) = VN (r) 1 +
+                                  r                         closely related to the search for extra dimensions,
+             (n, Λ : model parameters),          (3)        new bosons, and violations of the equivalence prin-
+                                                            ciple. High-energy collider experiments align with
+the other one is a Yukawa parametrization,                  the power-law parametrization, whereas other
+                                                            short-range laboratory experiments usually pre-
+                                    r i
+                                                            fer using the Yukawa parametrization. However,
+                         h
+     VYukawa (r) = VN (r) 1 + α exp −
+                                      λ                     it should be quite simple to compare their results
+          (α, λ : model parameters).             (4)        with each other if all of them can be expressed
+                                                            in δ(r) as model-independent parameters. In this
+These models suppose possible new short-range               work, we relate the power-law parameters n–Λ and
+potentials, which are eﬀective only at r . Λ                the Yukawa parameters α–λ to each other based
+or λ, in addition to the Newtonian gravitational            on this idea, following the approach in Ref. [1]. We
+potential VN . Here, Λ and λ are the scale param-           provide updated constraints on these parameter
+eters where the modiﬁcation from VN is going                spaces by incorporating recent short-range experi-
+to be signiﬁcant. n and α represent the power               mental data. It should be noted that astrophysical
+and strength of the additional potentials, respec-          constraints are beyond the scope of this study. For
+tively. For example, the constraint curves in the           detailed reviews and comprehensive discussions
+α–λ parameter space are shown from the plane-               on these indirect astrophysical and stellar con-
+tary scale to the quark scale in Fig. 1. This α–λ           straints, we refer the reader to the classic work [14]
+plot is the most commonly used expression for the           and recent literature [15].
+experimental results, showing α’s excluded region
+for supposing values of λ. In this paper, we restrict       3 Interpretation in the
+our scope to attractive interactions with positive
+α, which directly correspond to extra-dimensional             Context of Extra
+scenarios. While constraints on repulsive interac-            Dimensions
+tions (α < 0) can be derived similarly and exhibit
+qualitatively analogous experimental sensitivities,         Most experimental attempts over the past quar-
+they are omitted in our ﬁgures to maintain visual           ter of a century have been motivated by
+clarity.                                                    theoretical predictions of deviations from the
+    The inverse-square law is based on the                  gravitational inverse-square law in brane-world
+assumption that our world is an isotropic three-            scenarios. Therefore, it is instructive to dis-
+dimensional space, as implied by Gauss’s law. On            cuss these parametrizations in the context of
+the other hand, if our space contains isotropic             extra-dimensional models. Among these, the
+n-extra dimensions, the potential shape must be             large extra-dimension model (the Arkani-Hamed–
+modiﬁed as 1/r → 1/r1+n . Equation (3) repre-               Dimopoulos–Dvali, or ADD, model) [2] and the
+sents such extra-dimension models.                          warped extra-dimension model (the Randall–
+    The Yukawa potential (4) represents more                Sundrum, or RS, model) [3, 4] represent two
+conservative models, which predict new boson-               notable predictions. Indeed, both the ADD and
+exchange forces with the reduced Compton wave-              RS-II models predict power-law-type deviations
+length λ = m~b c , where mb is the mass of the              from Newtonian gravity at short distances. His-
+exchanging boson. This new interaction needs to             torically, the concept of a compactiﬁed extra
+couple to the masses m1 and m2 in the same way              dimension was proposed in Kaluza–Klein (KK)
+as gravity does. Or, other quantities q ∼ m, such           theory a century ago [16]. Since then, the com-
+as baryon number B, can be the corresponding                pactiﬁcation scale had traditionally been assumed
+“charge” for this additional Yukawa interaction. If         to be the Planck length,
+we do not distinguish between this charge q and                                        r
+mass m, gravitational phenomena that seem to                                               ~GN
+                                                                               LPl =           ,              (5)
+                                                                                            c3
+
+
+                                                        3
+Fig. 1 α–λ plot in the Yukawa parametrization as deﬁned in Eq. (4). Experimental constraints are shown as shaded areas
+at the 95% conﬁdence level, with dark-shaded regions representing the improved constraints obtained over the last decade,
+following Ref. [1]. Solid lines denote direct experimental results, while dashed lines indicate estimates from our work.
+
+
+making it far too small to be probed experimen-                represented by the power-law parametrization.
+tally.                                                         Speciﬁcally, the modiﬁed gravitational potential
+    However, it is important to note that the grav-            VADD (r) is expressed in terms of the higher-
+itational constant used to estimate the Planck                 dimensional gravitational constant G4+n and the
+length is the experimental value GN measured                   phenomenological transition scale Λ in the short-
+at laboratory scales rN , which is conventionally              range limit (r ≪ Λ) as
+assumed to remain constant down to LPl . The cen-
+tral concept of the ADD model is that the eﬀective                                         m1 m2
+                                                                         VADD (r) = −G4+n
+gravitational coupling varies signiﬁcantly with the                                         r1+n 
+                                                                                                    n
+length scale. In this framework, the fundamental                                          m1 m2 Λ
+                                                                                    = −GN             ,              (6)
+higher-dimensional Planck scale is dramatically                                             r    r
+reduced from the four-dimensional Planck mass
+MPl down to the TeV scale, where gravity and the               which yields
+Standard Model interactions can share a compa-
+rable energy scale, thereby naturally resolving the                            G4+n = GN Λn
+hierarchy problem.                                                         ⇒      2
+                                                                                 MPl = MD2+n Λn (c/~)n ,             (7)
+    It is useful to interpret the power-law
+parametrization in Eq. (3) and the Yukawa                      where MPl and MD are the Planck masses cor-
+parametrization in Eq. (4) in the context of                   responding to GN and G4+n , respectively. This
+extra-dimensional theories. Here, we discuss these             algebraic relation can be determined by dimen-
+formulations speciﬁcally within the framework of               sional analysis; thus, Eq. (7) serves as the funda-
+the ADD model, which posits the existence of n                 mental deﬁnition of the higher-dimensional Planck
+additional compactiﬁed spatial dimensions whose                mass MD for a given phenomenological transition
+characteristic scale is signiﬁcantly larger than the           scale Λ, independent of speciﬁc extra-dimensional
+Planck length LPl . If all the extra dimensions                geometries.
+are isotropic and share a common characteristic                    The strong power-law dependence of 1/r1+n
+scale, the gravitational potential obeys the 1/r1+n            leads to a much stronger gravitational interaction
+power law at distances shorter than this scale,                at r ≪ Λ compared to the standard Newtonian
+whereas the standard Newtonian inverse-square                  potential VN . The original motivation for the ADD
+law holds at larger distances, as qualitatively                model is that the fundamental higher-dimensional
+
+
+                                                           4
+Planck scale MD can be signiﬁcantly lower than            given by
+the four-dimensional Planck mass MPl , poten-
+                                                                  E 2 = (p1 c)2 + (p2 c)2 + (p3 c)2
+                                                                                                   
+tially reaching the TeV scale and thereby naturally
+resolving the hierarchy problem. Using the rela-                         + (p4 c)2 + (p5 c)2 + · · · .
+                                                                                                     
+                                                                                                              (8)
+tion in Eq. (7), the power-law parametrization
+conventionally expressed in the n–Λ plane can be          If the particle has momentum components along
+mapped directly onto the n–MD parameter space.            the extra dimensions, such as the “missing
+Consequently, constraints from high-energy col-           momentum” invisible from our four-dimensional
+lider experiments expressed in n–MD and results           spacetime, it is observed as an eﬀective non-zero
+from tabletop force measurements expressed in             mass M satisfying (M c2 )2 = (p4 c)2 + (p5 c)2 + · · · .
+n–Λ can be directly compared within a uniﬁed              Here, pi denotes the momentum component along
+framework.                                                the i-th spatial dimension. The corresponding de
+    It should be noted that the transition scale          Broglie wavelength along the fourth dimension is
+parameter Λ in Eq. (3) is deﬁned phenomenolog-            l4 = h/p4 , for example. Considering a compact-
+ically as the scale where the potential deviates          iﬁed extra dimension with radius R, a periodic
+from Newtonian gravity; thus, it does not a pri-          boundary condition can be applied along this
+ori require a speciﬁc geometric interpretation of         dimension. Analogous to Bohr’s atomic model, the
+the extra-dimensional space. However, when phys-          de Broglie wavelength along the extra-dimensional
+ically interpreting this transition parameter Λ           circumference 2πR must be quantized as l4 =
+as the geometric size of the compactiﬁed extra            2πR/m, where m = 0, 1, 2, 3, . . . is the quantum
+dimensions, two diﬀerent conventions coexist in           number. This boundary condition directly trans-
+the literature: the compactiﬁcation radius deﬁni-         lates to the quantization of the momentum com-
+tion (Λ ≡ R) [2] and the torus circumference              ponent as p4 = mh/(2πR) = m~/R. Assuming
+deﬁnition (Λ ≡ 2πR) commonly adopted in                   this particle is a graviton, a quantum of graviton
+high-energy collider publications to represent the        mass is naturally deﬁned as M0 = Rc  ~
+                                                                                                 . In this com-
+volume of the extra dimensions [12].                      pactiﬁed extra-dimensional model, the graviton
+    To avoid model-dependent ambiguities, we              mass Mm can be expressed as an integer multi-
+consistently plot all constraints in the subse-           ple of this unit mass, Mm = mM0 . These modes,
+quent ﬁgures using the phenomenological transi-           Mm = 0, M0 , 2M0 , 3M0 , . . . , are referred to as
+tion scale Λ directly, as deﬁned in Eqs. (3) and          the Kaluza–Klein (KK) tower. Each graviton with
+(7).                                                      mass Mm behaves as a massive boson mediating
+    On the other hand, to facilitate convenient           a gravitational-like force. Their interaction ranges
+and direct comparisons with diﬀerent conventions          are naturally expressed as Yukawa potentials with
+in the existing literature, we explicitly discuss         their reduced Compton wavelength λm ≡ M~m c =
+the physical implications under both the radius           λ/m, where we identify the Yukawa scale parame-
+and circumference interpretations when present-           ter λ with the compactiﬁcation radius R (λ = R).
+ing speciﬁc numerical limits in the text.                 This mechanism is of particular interest regarding
+    The next point to consider is the relation-           the dynamical origin of mass [17].
+ship between the power-law and the Yukawa                     By employing the Yukawa scale parameter λ
+parametrizations, which represent fundamentally           deﬁned above, the total gravitational potential
+diﬀerent physical models.                                 VKK (r), representing the sum over all KK modes,
+    Nevertheless, laboratory experiments conven-          can be phenomenologically expressed in terms
+tionally report their results in the α–Λ parame-          of the individual coupling strengths αm of each
+ter space, even when motivated by searches for            massive mode as
+extra dimensions. To resolve this apparent con-
+tradiction, the conceptual framework of extra-                                           ∞
+                                                                                         X
+dimensional models can be utilized as follows.                   VKK (r)/VN (r) = 1 +          αm e−mr/λ ,    (9)
+Below, we present a simple illustrative discussion                                       m=1
+
+as a representative example.
+                                                          where the parameter λ consistently corresponds to
+    The energy-momentum relation for a massless
+                                                          the compactiﬁcation radius R.
+particle in a spacetime with extra dimensions is
+
+
+                                                      5
+    In speciﬁc extra-dimensional models, these             4 Properties of Yukawa
+coupling coeﬃcients αm are not arbitrary free                Parametrization
+parameters but can be calculated based on the
+geometric conﬁgurations and dimensions of the              Before discussing the experimental results, the
+compactiﬁed space. For example, in a simple                general properties of the Yukawa parametriza-
+isotropic torus-compactiﬁed scheme with n extra            tion should be outlined. If we use the Yukawa
+dimensions, the leading Yukawa coeﬃcient is pre-           parametrization in Eq. (4) to analyze the exper-
+dicted to be α1 = 2n, which accounts for both              imental data ∆(r), α can be experimentally
+the spatial degeneracy of the extra dimensions and         obtained for a given setting parameter λ using
+the two-directional degrees of freedom (clockwise
+and counter-clockwise propagation) along each                                 V (r)
+                                                                       ∆=            − 1 = α e−r/λ ,              (10)
+compactiﬁed dimension [18].                                                   VN (r)
+    This multi-mode summation yields two dis-
+tinct physical regimes depending on the scale of           which leads to
+the measurement:
+                                                                                α = ∆ er/λ .                      (11)
+– Long-range regime (r ≫ λ): All massive KK
+  modes (m ≥ 1) are exponentially suppressed
+                                                           If the result on ∆ is consistent with zero, the upper
+  (e−mr/λ → 0). Consequently, only the mass-
+                                                           limit of ∆ primarily determines the upper limit on
+  less graviton mode (m = 0) survives, and the
+                                                           α. Experimental uncertainty of r also contributes
+  standard four-dimensional Newtonian potential
+                                                           to that of α, but it is usually relatively small. In
+  VN (r) is naturally recovered. In this regime, the
+                                                           the case of force measurements,
+  single Yukawa parametrization (Eq. (4)) serves
+  as a good ﬁrst-order approximation by keeping                          F (r)         r  −r/λ
+  only the lightest massive mode (m = 1) and                          δ =       −1=α 1+    e
+                                                                         FN (r)         λ
+  neglecting the heavily suppressed higher-mass
+                                                                            δ
+  modes (m ≥ 2).                                                ⇒    α =         er/λ
+– Short-range regime (r ≪ λ): The exponen-                               1 + r/λ
+  tial suppression of the higher-mass KK modes                          ∼ δ er/λ    (r ≪ λ),                      (12)
+  is lifted, and a vast number of these modes
+  contribute coherently to the force. This collec-         which gives approximately the same functional
+  tive summation of Yukawa potentials eﬀectively           shape of α(λ) as Eq. (11). The functional shape
+  smooths out into the higher-dimensional power-           of the constraint curve on the α–λ plot should
+  law potential, behaving as VKK (r) ∝ r−(1+n) .           be dominated by the simple exponential shape of
+                                                           er/λ with its bottom at α = δ. Fig. 2(a) shows an
+    This dual behavior highlights a critical lim-
+                                                           example of the functional shape.
+itation of the single Yukawa parametrization
+                                                              The above discussion assumes the simplest
+(Eq. (4)) when testing extra-dimensional theories.
+                                                           case of point-mass calculation using the known
+Because a single Yukawa term with a constant
+                                                           value of GN , which we call “absolute measure-
+α cannot capture the rapid, multi-mode alge-
+                                                           ments” [1]. In this case, the uncertainty of GN or
+braic growth that occurs at r ≪ λ, interpreting
+                                                           FN also contributes to the total uncertainty of δ as
+experimental data at a distance scale r far below
+the target interaction range λ using a simple                         σ 2        σ 2                2
+                                                                        δ           F              σFN
+Yukawa approximation will artiﬁcially distort the                             =            +                  ,   (13)
+reconstructed coupling strength.                                        δ          F               FN
+    Therefore, to compare tabletop experiments
+                                                           where, here and in the following, σX denotes the
+and high-energy collider results in a consistent and
+                                                           uncertainty of a quantity X in general. Then, if
+model-independent manner across vastly diﬀerent
+                                                           the experimental relative precision of F , σFF , is
+distance scales, we recommend directly utilizing                                                         σ
+the n–Λ or n–MD power-law parameter spaces,                expected to be smaller than that of FN , FFNN ,
+which naturally encompass the multi-mode char-             one should avoid employing this absolute mea-
+acteristics of extra-dimensional models.                   surement based on the literature value of GN .
+
+
+                                                       6
+Otherwise, the total precision will be dominated                  Regardless of the type of measurement, the
+by the uncertainty of GN .                                    small-λ region shows the same exponential char-
+    Instead, “relative measurements” do not rely              acteristics as the absolute measurement. This is
+on the absolute value of GN to avoid its relatively           straightforward to understand because, at a dis-
+poor precision. They perform measurements at a                tance below the minimum experimental distance,
+minimum of two diﬀerent distances r = rnear and               there is no experimental data δ(r). Consequently,
+rfar to cancel GN . As described in detail in Ref. [1],       sensitivity to test the Yukawa potential is rapidly
+the relative measurements combine the results                 lost because only its exponential tail can be mea-
+δ(rnear ) and δ(rfar ) to cancel GN ; the resulting           sured.
+functional shapes are shown in Figs. 2(b) and (c).                In this section, we saw that there should be
+    A feature of these relative measurements is the           the following key features expected in the α–λ
+re-rising of α at large λ (λ > rfar ). The constraint         parameter plots:
+curve has a minimum point, unlike the simple
+                                                              – Feature 1: α’s bottom line represents the exper-
+exponential curve in Eq. (12) for absolute mea-
+                                                                imental precision of δ.
+surements. Most short-range laboratory experi-
+                                                              – Feature 2: Simple exponential rising towards
+ments employ this technique and typically report
+                                                                smaller λ at λ < r.
+asymmetric, convex constraint curves. Now, the
+                                                              – Feature 3: Convex shape around the measure-
+simple exponential curve for absolute measure-
+                                                                ment distances r for relative measurements,
+ments in Eq. (12) can be understood as the case of
+                                                                which shows a re-rising behavior towards large
+rfar = rN relative measurements using GN as the
+                                                                λ at λ > rfar .
+far-position data.
+                                                              – Feature 4: α ∝ λ−2 constraint arising from the
+    It is also useful to discuss the ﬁnite-size eﬀects
+                                                                ﬁnite sizes of the objects.
+of the test and source masses. In such cases, the
+total potential must be integrated over the vol-
+ume elements of each object. As detailed in the               5 Experimental Constraints
+calculations of Ref. [1], there are two character-
+                                                              To facilitate a uniﬁed and direct comparison,
+istic length scales: the distance r between the
+                                                              the constraint curves and data points plotted
+centers of mass and the gap distance d between
+                                                              in our ﬁgures are categorized into three distinct
+the nearest surfaces. Examples of these calcula-
+                                                              types, which are visually distinguished by diﬀerent
+tions for parallel-plate geometries are shown in
+                                                              line styles: (i) original limits taken directly from
+Fig. 2. In the region where λ < d, we observe
+                                                              the respective experimental publications, (ii) our
+a simple exponential increase at small λ, similar
+                                                              own phenomenological estimations reconstructed
+to the behavior in absolute measurements (12).
+                                                              from published experimental uncertainties where
+However, a key feature emerges in the intermedi-
+                                                              explicit parameterized curves were unavailable,
+ate region, d < λ < r: the constraint curve is no
+                                                              and (iii) translated limits converted from high-
+longer exponential but follows a power-law behav-
+                                                              energy collider results using the theoretical rela-
+ior, appearing as a straight line on a logarithmic
+                                                              tions of the ADD model (7).
+scale with α ∝ λ−2 , as seen in Figs. 2(d) and (e).
+                                                                  While we plot these constraints on the same
+    A measurement involving ﬁnite-sized objects
+                                                              axes to facilitate a uniﬁed comparison, we caution
+can be treated as a superposition of contributions
+                                                              the reader that the directly published limits and
+from microscopic volume elements at various sep-
+                                                              our reinterpreted estimates have diﬀerent statis-
+aration distances. While the volume elements near
+                                                              tical origins. The former represent the conﬁdence
+the gap surface provide an exponential constraint
+                                                              boundaries at a 95% conﬁdence level reported
+for λ < d, elements deeper within the objects con-
+                                                              by the experimental collaborations, whereas the
+tribute to the force at relatively larger distances.
+                                                              latter are illustrative reconstructions based on
+This extends the eﬀectiveness of the constraint
+                                                              reported experimental uncertainties and point-
+into the d < λ region, up to the limit where
+                                                              mass approximations.
+λ ∼ rnear . Consequently, the characteristic behav-
+                                                                  In the following, we present the α–λ con-
+ior α ∝ λ−2 can be interpreted as a “dilution
+                                                              straints using the published results from the
+eﬀect” arising from the spatial extension of the
+                                                              original literature wherever they are available.
+objects.
+
+
+                                                          7
+Fig. 2 Typical examples of the α–λ plot in the Yukawa parametrization for model cases. (a) Absolute measurement:
+point-mass calculation, where rN can be regarded as rfar in relative measurements. The bottom line corresponds to the
+experimental precision on δ. The exponential rise er/λ toward small λ is signiﬁcant at λ < rnear . (b) and (c): Results of
+relative measurements for point masses at rnear = 10−2 m and 10−4 m with rfar = 10−1 m. In addition to the exponential
+rise at small λ, a re-rising feature at λ > rfar toward large λ is conﬁrmed in relative measurements. (d) and (e): Results
+for ﬁnite-sized, parallel-plate masses, where the gap distance dnear and the center-to-center distance rnear , rfar are deﬁned
+as in the inset ﬁgure. They exhibit the exponential rise er/λ at λ < dnear toward small λ. The intermediate region at
+dnear < λ < rnear shows straight-line features, exhibiting an α ∝ λ−2 dependence.
+
+
+When direct results are unavailable, we evalu-                    the theoretical relation in Eq. (7). Finally, the cor-
+ate the characteristic parameters δ(r) for typical                responding collider limits in the α–λ plane are
+experiments and plot them as our own estimates                    reconstructed by employing the δ(r) values that
+based on Eq. (12). Since most experiments do                      best reproduce these n–Λ results.
+not report their results in terms of power-law
+parameters, we derive the corresponding power-                    5.1 Yukawa Potential
+law constraints by determining a representative
+δ(r) for each experiment that reproduces the pub-                 We are now ready to examine the experimen-
+lished α–λ exclusion curve, assuming the relation                 tal results. Figure 3 presents the α–λ plot for
+in Eq. (12). Using these extracted δ(r) param-                    the short-range region, spanning from 10−6 m
+eters, the n–Λ and n–MD plots are constructed                     to 100 m. All experiments shown here were per-
+as phenomenological constraints for the tabletop                  formed using mechanical measurement techniques.
+experiments, as described in Section 5.2. We clar-                The best precision of α < 10−4 was obtained
+ify that these conversions are based on a simpliﬁed               at centimeter scales [20], implying a measure-
+point-mass framework using the extracted eﬀec-                    ment precision of δ < 10−4 (Feature 1). Most
+tive δ(r) parameters. While the original exper-                   experiments conducted at scales larger than one
+imental exclusion curves inherently account for                   millimeter exhibit the characteristic re-rising of
+ﬁnite-size eﬀects in their analyses, these detailed               α typical of relative measurements at large λ
+physical corrections are not explicitly modeled or                (Feature 3). In contrast, smaller-scale experiments
+individually recalculated in our algebraic transla-               report simple exponential constraints (Feature 2).
+tions.                                                            This behavior arises because their precision δ is
+    For the high-energy collider constraints, we                  lower than the known precision of GN ; in such
+directly adopt the published lower limits on MD                   cases, the uncertainty in GN is relatively small
+to place the data points in the n–MD plot. These                  compared to that of the measured force F .
+limits are then converted into the n–Λ plot using
+
+
+                                                              8
+Fig. 3 α–λ plot in the Yukawa parametrization for geophysics at 100 m to short-range laboratory experiments at microme-
+ters. The dark shaded area shows the improved constraints obtained over the last decade, following Ref. [1]. New constraints
+are given by the UW (Washington 2020 [7]) and the HUST groups (HUST 2016 [19], HUST 2020 [8], HUST 2021 [20]). New
+measurements are reported using conventional torsion balance bars from the Vienna [21] and the Rikkyo groups (R 2015 [1],
+R 2017 [13]) and using atomic interferometry (Atom [22]). Solid and dotted lines represent direct experimental results and
+our phenomenological estimations reconstructed using the experimental spatial resolutions, respectively. All other results
+shown in this ﬁgure are summarized in Ref. [1] and the references therein.
+
+
+    Most results obtained at scales below 1 cm                   extra-dimensional interpretation across the entire
+were reported following the proposal of the ADD                  α–λ plot, where higher KK modes dominate the
+model, with the primary objective of searching for               short-range limit (r ≪ λ). As discussed, interpret-
+α 6= 0. In particular, numerous experiments have                 ing the results of the extra-dimension model in
+been conducted at the micrometer-to-millimeter                   this α–λ plot can be misleading; therefore, we will
+scale, motivated by the ADD prediction of λ ∼                    examine them in more detail using the power-law
+0.1 mm for n = 2 and MD ∼ 1 TeV. This region                     parametrization in the next section.
+has remained of signiﬁcant interest for explor-                      Figure 4 shows the α–λ plot in the microme-
+ing large extra-dimension models. Figure 3 also                  ter range, down to the quark scale. Many of the
+includes recent updates from the decade since                    experiments contributing to this plot were not
+Ref. [1]. Sophisticated torsion balance experiments              intended to test gravity. Some results in the region
+by the University of Washington (UW) and the                     λ > 10 nm are derived by interpreting the corre-
+Huazhong University of Science and Technology                    sponding results from Casimir force experiments
+(HUST) groups have spearheaded exploration in                    using mechanical apparatuses.
+this regime. Both groups have continued to report                    In contrast to short-range laboratory exper-
+steady progress throughout this decade. Detailed                 iments, implementing an electromagnetic shield
+descriptions of their experimental setups are pro-               between the test and source masses becomes
+vided in Section 7.                                              increasingly challenging. Consequently, experi-
+    Considering that the KK theory predicts α ∼                  mental uncertainties are often dominated by
+O(1) or α = 2n with n = 2 as a particular                        electromagnetic couplings. Neutron experiments,
+case [18], we can roughly exclude this model at                  which have seen signiﬁcant improvements in sen-
+λ > 10−5 m based on these results from the UW                    sitivity over the past decade, aim to suppress
+data. However, since the prediction α = 2n is the-               these couplings by employing a neutral probe. At
+oretically valid only in the regime where the KK                 scales below those accessible by neutron scatter-
+potential is well-represented by a single, leading               ing, gravity tests must rely on systems consisting
+Yukawa term (i.e., λ ∼ r), we do not apply this                  of charged particles.
+
+
+
+                                                             9
+Fig. 4 α–λ plot in the Yukawa parametrization for sub-micrometer scales. The dark shaded area shows the improved
+constraints obtained over the last decade, following Ref. [1]. New constraints are provided by a Casimir force experiment
+(Decca 2016 [9]), neutron scattering experiments (NIST [10], J-PARC [23], and Kamiya 1 [24]–2 [25]), and LHC experi-
+ments (LHC 2013 [26]–2021 [5]). Additional new constraints are reported from atomic spectroscopy (isotope shifts [27–29]).
+Solid, dotted, and dashed lines denote direct experimental results, phenomenological estimations reconstructed from the
+experimental spatial resolutions, and estimations converted from high-energy collider results based on the ADD model,
+respectively. All other results shown in this ﬁgure are summarized in Ref. [1] and the references therein.
+
+
+    In atomic systems, where electromagnetic                    Figure 1 additionally presents constraints at plan-
+forces dominate, any potential gravitational con-               etary scales.
+tribution must be estimated within the bounds                       While observations of gravitational waves from
+of theoretical uncertainty. High-energy collider                binary neutron stars and black holes can, in princi-
+experiments attempt to detect gravity-related                   ple, provide quantitative constraints on deviations
+phenomena more directly; however, these events                  from the inverse-square law, current published
+are also dominated by the vast Standard Model                   analyses do not yet oﬀer competitive constraints
+background. Thus, the precision of Standard                     at shorter scales [30, 31].
+Model predictions dictates the overall sensitivity,                 In summary, the most stringent constraints in
+a situation analogous to that found in atomic                   the α–λ plane across the vast range of length
+systems.                                                        scales are dominated by the following speciﬁc
+    Since many previous studies did not report                  experimental frontiers:
+their results in terms of the α–λ parametrization,
+                                                                – λ < 10 pm (sub-atomic scale): LHC collider
+several curves in these ﬁgures are derived in the
+                                                                  experiments (e.g., ATLAS monojet results [5]);
+present work and are indicated by dotted lines
+                                                                – 10 pm < λ < 10 nm (nanometer scale): slow
+in Figs. 3–4. In particular, interpreting the high-
+                                                                  neutron scattering experiments, spearheaded by
+energy collider data requires a speciﬁc analysis
+                                                                  the NIST group [10];
+within the power-law framework, and the result-
+                                                                – 10 nm < λ < 1 µm (sub-micrometer scale):
+ing converted constraints are indicated by dashed
+                                                                  Casimir force measurements, with the strongest
+lines.
+                                                                  limits set by Decca et al. [9];
+    As shown in these ﬁgures, signiﬁcant improve-
+                                                                – 1 µm < λ < 1 mm (micrometer-to-millimeter
+ments have been achieved in Casimir force mea-
+                                                                  scale): high-precision tabletop torsion balance
+surements, neutron scattering, and high-energy
+                                                                  experiments by the UW [7] and HUST [8]
+collider experiments over the past decade. These
+                                                                  groups;
+will be further discussed within the context of
+the power-law parametrization in the next section.
+
+
+                                                           10
+– 1 mm < λ < 1 m (millimeter-to-meter scale):                  into Λ values as
+  classical torsion balance measurements by the
+  new HUST result [20];                                                            (MPl c2 )2/n
+                                                                             Λ=                   ~c.          (17)
+– λ > 1 m (large scale): geophysical and astro-                                   (MD c2 )1+(2/n)
+  nomical observations [1].
+                                                               Here, we use Einstein’s reduced gravitational con-
+5.2 Power-Law Potential                                        stant κ = 8πGN /c4 to numericallyp     estimate the
+                                                               reduced Planck mass MPl =          ~/κc3 = 2.43 ×
+The power-law parametrization can directly rep-                1015 TeV in this work. The collider data points
+resent the extra-dimension models. However, most               in the n–Λ plot shown in Fig. 5 were directly
+of the experimental results have been reported                 estimated using Eq. (17). We also estimated the
+in the Yukawa parametrization. In this study,                  corresponding δ(r) for the collider results to repro-
+we estimated the eﬀective δ(r) for the reported                duce the experimental Λ(n) data points using
+experiments to approximate their results in the                the functional form in Eq. (16), shown as the
+power-law parametrization. For simplicity, we use              dashed lines in Fig. 5. We can see good agreement
+the point-like framework to estimate the values of             between the data points and the model functions
+δ(rnear ) and δ(rfar ) that approximately reproduce            of Eq. (16). These estimated δ(r) parameters are
+the reported α–λ curves for short-range laboratory             then used to reconstruct the α–λ curves for the
+experiments [1]. Similar to the Yukawa coupling                collider results.
+range α(λ) in Eq. (12), the relation Λ(n) can be                   Conversely, Λ can be converted into MD using
+estimated for the power-law potential using δ for              Eq. (7) as
+absolute measurements at r as
+                                                                                               1
+                               n
+                               Λ                                                             ~c 1+2/n
+                δ = (1 + n)         .          (14)                     MD c2 = (MPl c2 )2/n          .        (18)
+                                r                                                            Λ
+
+For relative measurements, the relationship                    The n–Λ curves for the short-range laboratory
+between n and Λ can be obtained as                             experiments shown in Fig. 5 are also translated
+                                                               into MD limits using Eq. (18), which are rep-
+           
+                    δ/(1 + n)
+                                        1/n                   resented as dotted lines in the n–MD plot in
+     Λ =                                     rnear (15)        Fig. 6. The n–Λ curves for the high-energy col-
+             1 − (δ + 1)(rnear /rfar )n
+                  1/n                                        lider data are similarly converted into the n–MD
+               δ                                               limits, shown as dashed lines in Fig. 6 along with
+    →                   r (r ≡ rnear ≪ rfar ). (16)
+             1+n                                               the oﬃcially reported MD data points [1]. Here,
+                                                               we again observe good agreement between the col-
+Equation (15) represents the relationship for rel-             lider data points MD (n) and the model functions.
+ative measurements as discussed in Ref. [1], and               This agreement demonstrates that the rough esti-
+Eq. (16) corresponds to the limit for absolute                 mation using Eq. (16) well represents the oﬃcial
+measurements, consistent with Eq. (14). We use                 ADD analysis results.
+this simpliﬁed Eq. (16) to illustrate the constraint               The n–Λ (Fig. 5) and n–MD (Fig. 6) plots pro-
+curves.                                                        vide direct representations of the constraints on
+    For short-range laboratory experiments, we                 the large extra-dimension model [2]. These ﬁgures
+estimated the characteristic parameters δ(r) from              demonstrate that recent LHC and HUST experi-
+the α–λ curves of each experiment, which set the               ments have signiﬁcantly advanced the upper limits
+tightest constraints on α at the corresponding λ.              at the forefront of the search for extra dimensions.
+The results are shown in Fig. 5 for several typi-              For the case of n = 2, the upper limit on Λ has
+cal experiments, which are updated from the same               been tightened to 4 µm, while the lower limit on
+ﬁgure in Ref. [1]. In Fig. 5, results from high-               MD has been pushed up to 11.2 TeV [5]. This
+energy collider experiments are also shown as Λ(n)             progress is notable when compared to the previous
+data points, obtained by interpreting the reported             benchmarks of Λ < 23 µm and MD > 4.6 TeV [1].
+MD values. We can use Eq. (7) to convert MD data
+
+
+
+                                                          11
+Fig. 5 n–Λ plot in the power-law parametrization as deﬁned in Eq. (3). We estimated the values of δ(r) that reproduce the
+reported results in the α–λ plots of the representative laboratory experiments to obtain these n–Λ constraints. The dark
+shaded area shows the improved constraints obtained over the last decade, following Ref. [1]. Results for the UW group
+(Washington 2007 [32]–2020 [7]) and the HUST group (HUST 2020 [8]) give the tightest constraints for n = 2 among all
+short-range laboratory experiments (Casimir: Decca 2016 [9], neutron: NIST [10]). Results for high-energy collider exper-
+iments (LHC 2021 [5] and [1]) are obtained by interpreting the reported MD into Λ using the ADD model Eq. (17). The
+lines represent the power-law functional forms in Eq. (16). Dotted and dashed lines denote phenomenological estimations
+reconstructed from point-mass calculations with estimated δ(r) parameters for typical tabletop experiments, and limits con-
+verted from high-energy collider results based on the ADD model, respectively. Parameters δ(r) for the collider experiments
+(LHC 2013–2021, TEVATRON, LEP) are estimated in this plot to reproduce the Λ(n) data points using Eq. (16). All data
+points and limits are plotted using the phenomenological transition scale parameter Λ of Eq. (3) without model-dependent
+geometric assumptions. Under this consistent parameter space, the HUST limit is at 11 µm and the LHC limit is at 4 µm. If
+these are physically interpreted under the torus compactiﬁcation scheme where Λ represents the circumference (2πR), the
+corresponding physical compactiﬁcation radius limits are R ≈ 1.75 µm and 0.64 µm, respectively.
+
+
+6 Discussion                                                     of these have successfully imposed new constraints
+                                                                 on the α–λ plane, further excluding the exchange
+The α–λ plots (Figs. 3 and 4), along with the                    of hypothetical new bosons in these regimes. Sev-
+n–Λ (Fig. 5) and n–MD (Fig. 6) plots, clearly                    eral novel experimental eﬀorts [13, 21, 22, 27–29]
+demonstrate the signiﬁcant progress achieved over                are also underway; although they do not yet
+the past decade. Both micrometer-scale preci-                    establish the most stringent limits, they represent
+sion experiments and high-energy collider studies                promising technologies for future exploration.
+provide stringent constraints on the large extra-                    Regarding gravitational wave observations,
+dimension hypothesis. In particular, the increased               while the ﬁnite size of stellar objects may eventu-
+statistics and upgraded energies at the LHC have                 ally allow for constraints at sub-planetary scales,
+substantially improved the limits on the Yukawa                  current reports remain relatively weak [30, 31].
+coupling strength α at sub-atomic scales.                        In general, gravitational wave observations are
+    Figures 5 and 6 illustrate that for the spe-                 unlikely to achieve the precision required to test
+ciﬁc case of n = 2, micrometer-scale laboratory                  short-range gravity at or below the laboratory
+experiments can eﬀectively compete with high-                    scale.
+energy searches. For n > 2, however, high-energy
+collider experiments remain the only eﬀective
+approach to exploring deviations from the grav-
+                                                                 7 List of Experiments
+itational inverse-square law. Beyond these estab-                Recent experiments, whose results are shown in
+lished methods, numerous experimental advance-                   the constraint plots, are introduced in this section.
+ments have emerged over this past decade. Many
+
+
+                                                            12
+Fig. 6 n–MD plot expressing the ADD model parameters corresponding to Fig. 5. The dark shaded area shows the
+improved constraints obtained over the last decade, following Ref. [1]. MD data points for the collider experiments are their
+reported values. Dotted lines denote phenomenological estimations of MD reconstructed via Eq. (18) using the functional
+form of Eq. (16) for representative laboratory experiments. Dashed lines denote the n–MD curves estimated for the collider
+experiments. The limits are consistently plotted using the phenomenological relation of Eq. (16) directly from the transition
+scale parameter Λ shown in Fig. 5, independent of speciﬁc model-dependent geometric assumptions. Under this uniﬁed
+deﬁnition, HUST and the LHC set competitive limits of MD > 6.6 TeV and MD > 11.2 TeV for n = 2, respectively.
+
+
+7.1 Torsion Balance Experiments                                   test the composition dependence of G, providing
+                                                                  the most stringent constraints on the universality
+Since Cavendish’s era, the torsion balance has
+                                                                  of free fall at the shortest ranges. Furthermore,
+remained the most promising instrument for mea-
+                                                                  a novel experiment by the University of Califor-
+suring extremely weak forces in short-range grav-
+                                                                  nia, Berkeley group utilized atom interferometry
+ity experiments. As illustrated in Figs. 5 and
+                                                                  [22] at this scale; although its current sensitivity
+6, results from the UW and HUST groups are
+                                                                  does not yet surpass existing limits (Fig. 3), it
+uniquely competitive with the LHC constraints in
+                                                                  represents a promising new approach.
+the n = 2 case.
+                                                                      While UW, HUST, Rikkyo, and Berkeley pro-
+    The UW group has led this ﬁeld for decades,
+                                                                  vided their results in the α–λ parametrization,
+with their latest results [7] obtained using the
+                                                                  many other studies did not. Consequently, the dot-
+apparatus shown in Fig. 7. They achieved mea-
+                                                                  ted curves in Figs. 3 and 4 represent our own
+surements with a minimum gap distance of d =
+                                                                  estimations derived from published experimental
+52 µm. Similarly, the HUST group has consistently
+                                                                  data. For the Vienna group, we converted their
+tested the inverse-square law using centimeter-
+                                                                  reported precision of δ ∼ 0.1 [21] into the corre-
+scale torsion balances. Their most recent result
+                                                                  sponding constraint. Notably, at the 10 µm scale,
+[8], shown in Fig. 8, utilized a gap distance of
+                                                                  the Stanford group’s result [33] was the sole exper-
+d = 210 µm — an improvement from their previ-
+                                                                  imental eﬀort until the latest UW result. Below
+ous setup at d = 295 µm [19]. Both groups employ
+                                                                  the micrometer scale, implementing electrostatic
+electrostatic shields between the test and source
+                                                                  shielding becomes increasingly prohibitive, while
+masses to mitigate systematic couplings.
+                                                                  the Casimir force begins to emerge as a dominant
+    The University of Vienna [21] and Rikkyo Uni-
+                                                                  and challenging background.
+versity [13] groups have also reported millimeter-
+scale results using similar torsion balance conﬁgu-
+rations equipped with electrostatic shields. While
+these did not establish the most stringent con-
+straints at their target scales (Fig. 3), the 2017
+Rikkyo experiment was speciﬁcally designed to
+
+
+                                                             13
+ UW 2020                                                                 7.2 Casimir Force Experiments
+           torsion balance
+                                                                         At the sub-micrometer scale, Casimir force mea-
+                                                                         surements are primarily conducted to verify QED
+                                                                         calculations. By re-analyzing these results, we can
+                                                                         estimate the maximum allowable strength of grav-
+                                            shield                       itational couplings, even though the sensitivity
+                                                                         is often limited by the theoretical uncertainties
+      test mass
+                                                                         of the Casimir force itself. The Decca group at
+                                                10 mm                    Indiana-Purdue University [9] has been speciﬁ-
+                                            source mass                  cally testing gravitational couplings using dedi-
+     gap 52 mm
+                                                                         cated devices designed to minimize the Casimir
+                                                                         contributions. Their latest result, obtained with
+                                                                         the setup shown in Fig. 9, provides the most
+Fig. 7 Experiment of the UW group [7], following their                   stringent constraint at around the 100 nm scale
+previous works [32, 34, 35]. Test mass (18- and 120-fold,
+54 µm thick, 5.5 cm diameter platinum disks) suspended                   (Fig. 4), representing a three-order-of-magnitude
+by an 83 cm long wire; source masses (18- and 120-fold,                  improvement over their previous study [38].
+99 µm thick, 5.5 cm diameter platinum disks) are placed                      The α–λ exclusion curves for Casimir-type
+at a dnear = 52 µm–3.0 mm (surface-to-surface) gap. An
+                                                                         experiments exhibit a characteristic power-law
+electrostatic shield (10 µm gold-coated beryllium-copper
+membrane) is set between the test and source masses. The                 behavior, α ∝ λ−2 . This feature, previously iden-
+source mass rotates around the vertical axis.                            tiﬁed as Feature 4 in Fig. 2, can be attributed to
+                                                                         the ﬁnite-size eﬀects of the test and source masses.
+                                                                         Indeed, while the minimum gap distance in the
+                                                                         setup of Fig. 9 is d = 200 nm, the radius of the
+  HUST 2020
+                                                                         test mass is 149.3 µm, which is much larger than
+                                                                         d. Thus, ﬁnite-size eﬀects are substantial in this
+                                                                         conﬁguration.
+source mass                               wire                               Mechanical fabrication at the micrometer scale
+                                                                         and below is increasingly challenging with current
+                                                                         technologies, making Casimir-type measurements
+                                                                         the practical limit for mechanical gravity tests.
+                                                        test mass
+                                                                         Below the 10 nm scale, experimental eﬀorts must
+                                                                         shift to atomic, molecular, and sub-atomic sys-
+                             gap 210 mm
+                                                                         tems, despite the dominance of electromagnetic
+                                                                         interactions in these regimes.
+                                             torsion balance
+                           test mass
+  10 mm
+
+                  shield
+
+Fig. 8 Experiment of the HUST group [8], following their
+previous works [19, 36, 37]. Test mass (two 0.2 mm thick,
+14.6 mm × 12.0 mm wide tungsten plates) attached to a
+torsion pendulum using a wire (tungsten, 25 µm diameter,
+70 cm long). Source near mass: 1.8 mm thick, 20.8 mm ×
+20.8 mm wide tungsten plate at a dnear = 210 µm (surface-
+to-surface) gap. The source mass (eight 0.2 mm thick,
+17.6 mm × 11.4 mm wide tungsten plates attached to a
+100 mm diameter disk) rotates around the horizontal axis.
+The torsion balance position is stabilized using feedback
+from capacitive actuators. An electrostatic shield (30 µm
+beryllium-copper membrane) is set between the test and
+source masses.
+
+
+
+
+                                                                    14
+ Decca 2016                                                        such mechanical means to suppress electromag-
+                                                                   netic couplings, the sensitivity for gravity tests
+                                                                   inevitably degrades exponentially, as previously
+                                  tosional oscillator
+                                                                   discussed. Figure 4 presents estimated constraints
+               100 mm                                              for several atomic systems. It should be noted that
+                                                                   most of these are not direct experimental reports
+                                                                   but are instead our own estimations derived from
+                                                                   combining experimental and theoretical uncer-
+                                    test mass
+                                                                   tainties (represented by δ), including those of the
+                                gap 200 nm                         relevant physical constants [1].
+                                     source mass
+                                                                        At the nanometer scale, a series of neutron
+                                                                   scattering experiments has established constraints
+                                                                   on the α–λ plane [10, 23–25]; these results are
+                                                                   summarized in Fig. 4. In contrast to atomic
+                                                                   spectroscopy, these studies measure the neutron-
+Fig. 9 Experiment of Decca et al. (Indiana-Purdue                  scattering cross sections of atomic targets. Utiliz-
+group) [9] following their previous works [38, 39]. Test           ing the neutron as a probe allows for signiﬁcant
+mass: 149.3 µm radius sapphire sphere (chromium and gold           suppression of electric interactions, which would
+coated) attached to a microelectromechanical torsional
+oscillator (500 µm × 500 µm). Source masses (2.1 µm thick,
+                                                                   otherwise dominate the signals in atomic sys-
+150 µm wide gold or silicon layer with a common 150 nm             tems. Within a wave-mechanical framework, these
+thick gold layer coating) on a disk rotate around the axis.        experiments probe potential mass-coupling inter-
+The gap was set at d = 200–1000 nm (surface-to-surface).           actions, such as non-Newtonian gravity. In this
+No shielding is applied between the test and source masses.
+This experiment is designed to cancel the Casimir force            context, the impact parameter b corresponds to
+ambiguity by measuring the force diﬀerence between silicon         the characteristic distance r used in mechani-
+and gold to search for strong gravity.                             cal measurements, while the spatial resolution is
+                                                                   fundamentally limited by the de Broglie wave-
+                                                                   length of the incident neutron beam. The coupling
+7.3 Atomic and Sub-Atomic                                          strength α is thus derived from the observed
+    Experiments                                                    scattering cross sections. Notably, the constraint
+Atomic systems serve as “micro-laboratories” for                   reported by the NIST group provides the most
+testing interactions between nuclei and orbital                    stringent limit in this regime [10]. In Figure. 4,
+electrons. Due to the extraordinary precision with                 instead of utilizing the classical real-space expo-
+which atomic energy levels can be measured, cou-                   nential growth, we extrapolate their constraint
+pled with the ability to perform rigorous QED                      (indicated by the dotted line) by applying a λ−4
+calculations of the electromagnetic interactions,                  algebraic power-law dependence as described in
+these systems provide a unique platform for grav-                  Ref. [10].
+ity tests. The sensitivity to gravitational contri-                     This power-law scaling is grounded in quan-
+butions is determined by the interplay between                     tum scattering theory: neutron scattering probes
+experimental precision and theoretical accuracy.                   the Fourier transform of the potential, where
+However, despite this remarkable precision, the                    a Yukawa interaction yields a momentum-
+immense ratio of the Coulomb force to the gravita-                 dependent amplitude proportional to λ2 /(1 +
+tional force limits the sensitivity to approximately               q 2 λ2 ). In the short-range limit (qλ ≪ 1), the dif-
+α < 1030 .                                                         ference in scattering amplitudes across diﬀerent
+    As demonstrated in torsion-balance exper-                      momentum transfers decreases algebraically as λ4 .
+iments, suppressing electromagnetic forces sig-                    Consequently, the experimental sensitivity to the
+niﬁcantly enhances sensitivity to α. While the                     coupling constant scales as α ∝ λ−4 rather than
+Casimir force cannot be shielded in experiments,                   exhibiting a simple exponential growth. Quali-
+the gravitational signal can still be extracted by                 tatively, this physical boundary corresponds to
+designing sophisticated apparatuses that eﬀec-                     the wave-mechanical resolution limit (analogous
+tively cancel the Casimir contributions. Without                   to the resolution limit in optics). In this regime,
+                                                                   an interaction with a range signiﬁcantly shorter
+
+
+                                                              15
+than the neutron’s de Broglie wavelength fails to           express α in terms of ye and yn . This yields
+induce any angularly varying phase shift and thus           α = ye yn /(4πGN mn me ), where me denotes the
+cannot be resolved. By employing this algebraic             electron mass.
+λ−4 extrapolation, the NIST constraint naturally                 At sub-atomic scales, nuclear or hadronic sys-
+extends to the picometer regime where it smoothly           tems can be used to estimate potential gravita-
+overlaps with other exotic-atom and high-energy             tional contributions [40]; however, the achievable
+limits.                                                     precision is fundamentally limited by the theo-
+    Consistent with Casimir force experiments, the          retical uncertainties inherent in hadronic physics.
+neutron-derived constraints exhibit a power-law             While this precision is diﬃcult to improve signiﬁ-
+behavior reﬂecting ﬁnite-size eﬀects (Feature 4).           cantly, the accessible length scale can be extended
+In the scattering process, the distribution of              by increasing the energy. Indeed, high-energy col-
+impact parameters b can be interpreted as a dis-            lider data enable the estimation of gravitational
+tribution of distances r between the source and             couplings between elementary particles at scales
+probe masses. Although the reported constraints             as small as 10−19 m. Although the high-energy
+were derived using the Born approximation within            collider constraints are typically reported in the
+a wave-mechanical formalization, the emergence              n–MD parameter space, they can be converted
+of this common power-law feature across diﬀer-              into the α–λ parameters. We estimated the eﬀec-
+ent experimental platforms supports this physical           tive parameters δ(r) by ﬁtting the model function
+interpretation.                                             to the converted Λ(n) data points in Fig. 5 using
+    A series of experiments measuring isotope-              the relation in Eq. (16), and subsequently plotted
+dependent eﬀects in atomic spectroscopy (isotope            the corresponding α–λ curves in Fig. 4 using the
+shifts) has recently been conducted to search for           exponential growth function from Eq. (12).
+new bosons [27–29]. We have interpreted these                    For the LHC constraints, we employ the sys-
+results in terms of the coupling α, as shown in             tematic results from the ATLAS Collaboration [5],
+Fig. 4. Their current sensitivity to α remains rela-        which reported an ADD model analysis for n =
+tively limited (α < 1029 ), primarily due to uncer-         2, . . . , 6 (although the n = 2 case is currently
+tainties in nuclear structure and the small mass of         unavailable under equivalent parameter settings
+the electron. However, applying this technique to           from the CMS Collaboration [6]). The ATLAS
+muonic or antiprotonic atoms, particularly those            results were derived in a search for large extra
+with simpler nuclear structures, may signiﬁcantly           dimensions in monojet events, characterized by
+enhance gravitational sensitivity in the future.            a single high-energy jet accompanied by large
+    These studies typically report their results as         missing transverse momentum    √ from undetected
+the coupling strengths of a potential new boson             gravitons, in pp collisions at s = 13 TeV.
+to the electron (ye ) and to the neutron (yn ) [27].             The LHC results can be compared with other
+To directly compare these microscopic atomic                experimental systems across the α–λ (Fig. 4), n–Λ
+limits with macroscopic gravity constraints, we             (Fig. 5), and n–MD (Fig. 6) plots. In the α–
+interpret this hypothetical boson exchange as a             λ parametrization used to search for new boson
+mass-proportional force that satisﬁes the equiva-           exchange forces, the LHC provides the most strin-
+lence principle. Under the assumption of identical          gent constraints for λ < 10 pm, a regime where
+coupling strengths of the boson to the neutron              atomic and nuclear tests are attempted. Regarding
+and proton (yn = yp ), the coupling to a nucleus            the large extra-dimension model, Fig. 5 allows for
+with atomic number Z and neutron number N                   a direct comparison of the results. For most values
+(mass number A = Z + N ) behaves coherently                 of n, the LHC establishes the strongest constraints
+as ynuclei = Zyp + N yn = Ayn . We also neglect             on Λ.
+the nuclear mass defect and the mass diﬀerence                   For the speciﬁc case of n = 2, the constraints
+between proton and neutron, approximating the               from high-energy collider experiments and short-
+nuclear mass as mnuclei ≈ Amn , where mn denotes            range tabletop experiments are highly competitive
+the neutron mass. By equating the total new                 when compared using the consistent phenomeno-
+boson-exchange potential (the sum of electron-              logical scale parameter Λ deﬁned in Eq. (3). The
+proton and electron-neutron interactions) to the            HUST tabletop experiment provides a lower limit
+eﬀective gravitational Yukawa potential, we can
+
+
+                                                       16
+of Λ < 11 µm [8], which represents the charac-                   Importantly, laboratory tests of the gravita-
+teristic transition scale where the inverse-square           tional inverse-square law remain uniquely compet-
+law begins to be violated. Using the direct con-             itive and complementary to high-energy collider
+version relation in Eq. (17), the LHC 2021 limit             constraints at around the micrometer scale for
+of MD > 11.2 TeV [5] yields an equivalent scale              the n = 2 case. Looking forward, the develop-
+limit of Λ < 4 µm, which is plotted directly in              ment of novel experimental techniques, alongside
+Fig. 5. In our previous review [1], the UW con-              signiﬁcant advancements in the theoretical calcu-
+straint stood at Λ < 23 µm, while the LHC limit              lation of background electromagnetic couplings,
+was Λ < 130 µm. It is worth noting that while                will pave the way for high-precision gravity tests
+these parameters are plotted consistently as the             at sub-micrometer scales.
+phenomenological transition scale Λ, a geometric
+                                                             Acknowledgements. The authors are grateful
+interpretation of Λ as the physical size of the extra
+                                                             to S. Mukohyama for encouraging this research
+dimension depends on the choice of compactiﬁca-
+                                                             and for providing insightful theoretical discus-
+tion conventions. If Λ is interpreted as the torus
+                                                             sions. We also thank Y. Kamiya for valuable
+circumference (Λ ≡ 2πR), the physical compacti-
+                                                             discussions regarding the interpretation of neutron
+ﬁcation radius corresponds to R ≈ 0.64 µm for the
+                                                             scattering data. Finally, we thank the members
+LHC and R ≈ 1.75 µm for HUST.
+                                                             of the Rikkyo group—K. Ninomiya, S. Zeidler, N.
+    A similar comparison is presented in the n–
+                                                             Kobayashi, M. Yokomizo, Y. Ishikawa, S. Aka-
+MD plane (Fig. 6), where the limits are plotted
+                                                             matsu, T. Ito, and H. Sato—for their contribu-
+consistently using the algebraic relation in Eq. (7)
+                                                             tions to the discussions on gravity physics.
+directly from the transition scale parameter Λ.
+Under this uniﬁed phenomenological parameter                 Author Contributions. T. Fujiie and S.
+space, HUST and the LHC provide lower lim-                   Suzuki contributed to the literature search and
+its of MD > 6.6 TeV and MD > 11.2 TeV for                    the interpretation of the experimental data. J.
+n = 2, respectively. By contrast, in our previous            Murata supervised the research, performed the
+review [1], the UW tabletop limit was reported               data analysis, synthesized the results, and drafted
+as MD > 4.6 TeV, while the LHC limit was                     the manuscript as the corresponding author.
+MD > 1.9 TeV. Nevertheless, under any consistent
+                                                             Declarations.
+parameter deﬁnition, both experimental frontiers
+remain highly competitive and complementary to               Funding. This work was supported by
+each other in the search for extra dimensions.               JSPS KAKENHI Grant-in-Aid for Scientiﬁc
+                                                             Research (B), Grant Numbers JP23K20851 and
+8 Conclusion                                                 JP26K00713.
+                                                             Availability of data and materials. The
+We have performed a comprehensive and uni-                   source graphical ﬁles for the constraint curves
+ﬁed analysis comparing short-range gravity con-              presented in this study are available from the
+straints across the α–λ, n–Λ, and n–MD param-                corresponding author upon reasonable request.
+eter spaces. This consistent framework suc-
+cessfully demonstrates how diverse experimental              Competing interests. The authors declare
+data—ranging from high-energy collider searches              that they have no competing interests.
+to tabletop precision force measurements—can be
+mapped and compared within the context of large              References
+extra-dimension models. Our analysis shows that
+in the uniﬁed phenomenological parameter space                [1] J. Murata, S. Tanaka, A review of short-
+for n = 2, the latest LHC results set a con-                      range gravity experiments in the LHC
+straint on the transition scale of Λ < 4 µm, while                era. Class. Quantum Grav. 32(3), 033001
+the micrometer-scale torsion-balance experiment                   (2015). https://doi.org/10.1088/0264-9381/
+by the HUST group establishes an exceptionally                    32/3/033001
+competitive limit of Λ < 11 µm.
+                                                              [2] N. Arkani-Hamed, S. Dimopoulos, G. Dvali,
+                                                                  The hierarchy problem and new dimensions
+
+
+                                                        17
+    at a millimeter. Phys. Lett. B 429(3–4), 263          [11] H. Cavendish, XXI. Experiments to deter-
+    – 272 (1998). https://doi.org/10.1016/S0370-               mine the density of the earth. Phil. Trans. R.
+    2693(98)00466-3                                            Soc. Lond. (88), 469–526 (1798). https://doi.
+                                                               org/10.1098/rstl.1798.0022
+ [3] L. Randall, R. Sundrum, Large Mass Hier-
+     archy from a Small Extra Dimension. Phys.            [12] Particle Data Group, Review of particle
+     Rev. Lett. 83, 3370–3373 (1999). https://doi.             physics.   Phys. Rev. D 110(3), 030001
+     org/10.1103/PhysRevLett.83.3370                           (2024). https://doi.org/10.1103/PhysRevD.
+                                                               110.030001
+ [4] L. Randall, R. Sundrum, An Alternative
+     to Compactiﬁcation. Phys. Rev. Lett. 83,             [13] K. Ninomiya, et al., Short-range test of the
+     4690–4693 (1999). https://doi.org/10.1103/                universality of gravitational constant G at the
+     PhysRevLett.83.4690                                       millimeter scale using a digital image sensor.
+                                                               Class. Quantum Grav. 34(18), 185005 (2017).
+ [5] ATLAS Collaboration, Search for new phe-                  https://doi.org/10.1088/1361-6382/aa837f
+     nomena in events with an energetic jet and
+     missing
+        √ transverse momentum in pp collisions            [14] G.G. Raﬀelt, Stars as Laboratories for Fun-
+     at s = 13 TeV with the atlas detector.                    damental Physics: The Astrophysics of Neu-
+     Phys. Rev. D 103, 112006 (2021). https://                 trinos, Axions, and Other Weakly Interacting
+     doi.org/10.1103/PhysRevD.103.112006                       Particles. Theoretical Astrophysics (Univer-
+                                                               sity of Chicago Press, Chicago, 1996)
+ [6] CMS collaboration, Search for new physics
+     in high-mass diphoton
+                         √ events from proton-            [15] D.F.G. Fiorillo, A. Lella, C.A.J. O’Hare,
+     proton collisions at s = 13 TeV. J. High                  E. Vitagliano, Leading bounds on microme-
+     Energy Phys. p. 215 (2024). https://doi.org/              ter to picometer ﬁfth forces from neutron star
+     10.1007/JHEP08(2024)215                                   cooling. Phys. Rev. Lett. 135, 211003 (2025).
+                                                               https://doi.org/10.1103/tlqz-713s
+ [7] J.G. Lee, E.G. Adelberger, T.S. Cook,
+     S.M. Fleischer, B.R. Heckel, New Test of             [16] O.      Klein,     Quantentheorie       und
+     the Gravitational 1/r2 Law at Separations                 fünfdimensionale Relativitätstheorie.  Z.
+     down to 52 µm. Phys. Rev. Lett. 124,                      Physik 37, 895–906 (1926). https://doi.org/
+     101101 (2020).     https://doi.org/10.1103/               10.1007/BF01397481
+     PhysRevLett.124.101101
+                                                          [17] Y. Hosotani, Dynamical mass generation by
+ [8] W.H. Tan, et al., Improvement for Test-                   compact extra dimensions. Phys. Lett. B
+     ing the Gravitational Inverse-Square Law                  126(5), 309–313 (1983). https://doi.org/10.
+     at the Submillimeter Range. Phys. Rev.                    1016/0370-2693(83)90170-3
+     Lett. 124, 051301 (2020). https://doi.org/10.
+     1103/PhysRevLett.124.051301                          [18] A. Kehagias, K. Sfetsos, Deviations from
+                                                               the 1/r2 Newton law due to extra dimen-
+ [9] Y.J. Chen, et al., Stronger Limits on Hypo-               sions.   Phys. Lett. B 472(1–2), 39 –
+     thetical Yukawa Interactions in the 30–                   44 (2000). https://doi.org/10.1016/S0370-
+     8000 nm Range. Phys. Rev. Lett. 116,                      2693(99)01421-5
+     221102 (2016).      https://doi.org/10.1103/
+     PhysRevLett.116.221102                               [19] W.H. Tan, et al., New Test of the Grav-
+                                                               itational Inverse-Square Law at the Sub-
+[10] B. Heacock, et al., Pendellösung interfer-               millimeter Range with Dual Modulation
+     ometry probes the neutron charge radius,                  and Compensation. Phys. Rev. Lett. 116,
+     lattice dynamics, and ﬁfth forces. Science                131101 (2016).      https://doi.org/10.1103/
+     373(6560), 1239–1243 (2021). https://doi.                 PhysRevLett.116.131101
+     org/10.1126/science.abc2794
+
+
+
+                                                     18
+[20] J. Ke, et al., Combined Test of the Grav-                  063002 (2025).    https://doi.org/10.1103/
+     itational Inverse-Square Law at the Cen-                   PhysRevLett.134.063002
+     timeter Range.      Phys. Rev. Lett. 126,
+     211101 (2021).      https://doi.org/10.1103/          [29] T. Ishiyama, et al., Orders-of-magnitude
+     PhysRevLett.126.211101                                     improvement in precision spectroscopy of an
+                                                                inner-shell orbital clock transition in neutral
+[21] J.P. Tobias Westphal, Hans Hepach,                         ytterbium. Nat. Photonics (2026). https://
+     M. Aspelmeyer, Measurement of gravita-                     doi.org/10.1038/s41566-026-01857-8
+     tional coupling between millimetre-sized
+     masses.     Nature 591, 225–228 (2021).               [30] M. Corman, et al., Constraining cosmologi-
+     https://doi.org/10.1038/s41586-021-03250-7                 cal extra dimensions with gravitational wave
+                                                                standard sirens: From theory to current and
+[22] C.D. Panda, et al., Measuring gravitational                future multimessenger observations. Phys.
+     attraction with a lattice atom interferometer.             Rev. D 105, 064061 (2022). https://doi.org/
+     Nature 631, 515–520 (2024). https://doi.org/               10.1103/PhysRevD.105.064061
+     10.1038/s41586-024-07561-3
+                                                           [31] L. Visinelli, N. Bolis, S. Vagnozzi, Brane-
+[23] C.C. Haddock, et al., Search for deviations                world extra dimensions in light of GW170817.
+     from the inverse square law of gravity at nm               Phys. Rev. D 97, 064039 (2018). https://doi.
+     range using a pulsed neutron beam. Phys.                   org/10.1103/PhysRevD.97.064039
+     Rev. D 97, 062002 (2018). https://doi.org/
+     10.1103/PhysRevD.97.062002                            [32] D.J. Kapner, et al., Tests of the gravita-
+                                                                tional inverse-square law below the dark-
+[24] Y. Kamiya, K. Itagaki, M. Tani, G.N. Kim,                  energy length scale.     Phys. Rev. Lett.
+     S. Komamiya, Constraints on New Gravity-                   98, 021101 (2007). https://doi.org/10.1103/
+     like Forces in the Nanometer Range. Phys.                  PhysRevLett.98.021101
+     Rev. Lett. 114, 161101 (2015). https://doi.
+     org/10.1103/PhysRevLett.114.161101                    [33] A.A. Geraci, S.J. Smullin, D.M. Weld, J. Chi-
+                                                                averini, A. Kapitulnik, Improved constraints
+[25] Y. Kamiya, et al., Experimental search                     on non-Newtonian forces at 10 microns. Phys.
+     for Non-Newtonian forces in the nanometer                  Rev. D 78, 022002 (2008). https://doi.org/
+     scale with slow neutrons. AIP Conf. Proc.                  10.1103/PhysRevD.78.022002
+     2319(1), 040017 (2021). https://doi.org/10.
+     1063/5.0036985                                        [34] C.D. Hoyle, et al., Submillimeter test of the
+                                                                gravitational inverse-square law: A search for
+[26] ATLAS Collaboration, Search for Dark Mat-                  “large” extra dimensions. Phys. Rev. Lett.
+     ter Candidates and Large Extra Dimensions                  86, 1418–1421 (2001). https://doi.org/10.
+     in Events with a Photon and Missing Trans-                 1103/PhysRevLett.86.1418
+     verse
+     √     Momentum in pp Collision Data at
+       s=7 TeV with the ATLAS Detector. Phys.              [35] C.D. Hoyle, et al., Submillimeter tests of the
+     Rev. Lett. 110, 011802 (2013). https://doi.                gravitational inverse-square law. Phys. Rev.
+     org/10.1103/PhysRevLett.110.011802                         D 70, 042004 (2004). https://doi.org/10.
+                                                                1103/PhysRevD.70.042004
+[27] A. Wilzewski, et al., Nonlinear Calcium
+     King Plot Constrains New Bosons and                   [36] S.Q. Yang, et al., Test of the gravitational
+     Nuclear Properties. Phys. Rev. Lett. 134,                  inverse square law at millimeter ranges. Phys.
+     233002 (2025).     https://doi.org/10.1103/                Rev. Lett. 108, 081101 (2012). https://doi.
+     PhysRevLett.134.233002                                     org/10.1103/PhysRevLett.108.081101
+
+[28] M. Door, et al., Probing New Bosons                   [37] L.C. Tu, et al., Null test of newtonian inverse-
+     and Nuclear Structure with Ytterbium Iso-                  square law at submillimeter range with a
+     tope Shifts.     Phys. Rev. Lett. 134,                     dual-modulation torsion pendulum. Phys.
+
+
+                                                      19
+    Rev. Lett. 98, 201101 (2007). https://doi.
+    org/10.1103/PhysRevLett.98.201101
+
+[38] R.S. Decca, et al., Constraining New Forces
+     in the Casimir Regime Using the Isoelec-
+     tronic Technique.     Phys. Rev. Lett. 94,
+     240401 (2005).      https://doi.org/10.1103/
+     PhysRevLett.94.240401
+
+[39] R.S. Decca, et al., Tests of new physics from
+     precise measurements of the Casimir pressure
+     between two gold-coated plates. Phys. Rev. D
+     75, 077101 (2007). https://doi.org/10.1103/
+     PhysRevD.75.077101
+
+[40] J. Xu, B.A. Li, L.W. Chen, H. Zheng, Nuclear
+     constraints on non-Newtonian gravity at fem-
+     tometer scale. J. Phys. G: Nucl. Part. Phys.
+     40(3), 035107 (2013). https://doi.org/10.
+     1088/0954-3899/40/3/035107
+
+
+
+
+                                                     20
+

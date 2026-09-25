@@ -1,0 +1,98 @@
+{"cpu_seconds": 0.15567386499999997, "single_thread_env": {"MKL_NUM_THREADS": "1", "NUMEXPR_NUM_THREADS": "1", "OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1"}, "wall_seconds": 0.1557897562161088}
+{
+  "models": [
+    {
+      "name": "Resolved-map Newtonian baryons only",
+      "n_free": 1,
+      "upsilon": 0.762,
+      "chi2_diag": 30397.957141242532,
+      "rms_km_s": 53.34183021385478,
+      "fixed_ML_sensitivity": {
+        "0.6": {
+          "upsilon": 0.6,
+          "chi2_diag": 39286.29749549701,
+          "rms_km_s": 60.15173583494084
+        },
+        "0.762": {
+          "upsilon": 0.762,
+          "chi2_diag": 30397.957141242532,
+          "rms_km_s": 53.34183021385478
+        }
+      }
+    },
+    {
+      "name": "Newtonian baryons + NFW halo",
+      "n_free": 3,
+      "upsilon": 0.7619999999999999,
+      "log10_M200_Msun": 11.581179638771172,
+      "M200_Msun": 381223477608.90015,
+      "concentration_c200": 10.492536122773581,
+      "log10_c200": 1.0208804730366592,
+      "chi2_diag": 58.49141564415777,
+      "rms_km_s": 7.682882621106594,
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_starts": 6,
+      "fixed_ML_sensitivity": {}
+    },
+    {
+      "name": "Isolated simple-MOND, fixed a0",
+      "n_free": 1,
+      "upsilon": 0.6566257131508266,
+      "chi2_diag": 1032.2329630219547,
+      "rms_km_s": 10.589486837015498,
+      "fixed_ML_sensitivity": {
+        "0.6": {
+          "upsilon": 0.6,
+          "chi2_diag": 1131.8983038215322,
+          "rms_km_s": 10.433067012844852
+        },
+        "0.762": {
+          "upsilon": 0.762,
+          "chi2_diag": 1334.7353393966928,
+          "rms_km_s": 12.664838282353102
+        }
+      }
+    }
+  ],
+  "nfw_fixed": [
+    {
+      "upsilon_fixed": 0.6,
+      "n_free": 2,
+      "log10_M200_Msun": 11.560809263432795,
+      "M200_Msun": 363755244401.871,
+      "log10_c200": 1.1003332422812013,
+      "concentration_c200": 12.598917795245397,
+      "chi2_diag": 74.56583760998025,
+      "rms_km_s": 8.440422487648052
+    },
+    {
+      "upsilon_fixed": 0.762,
+      "n_free": 2,
+      "log10_M200_Msun": 11.581179639689887,
+      "M200_Msun": 381223478415.3484,
+      "log10_c200": 1.020880472231344,
+      "concentration_c200": 10.492536103317201,
+      "chi2_diag": 58.49141564415786,
+      "rms_km_s": 7.68288260339077
+    }
+  ],
+  "edge": {
+    "name": "TG branch edge limit",
+    "upsilon": 0.762,
+    "curve_column": "edge_Upsilon_0.762000_km_s",
+    "n_free_fit_parameters": 0,
+    "chi2_diag": 3585.8533265529627,
+    "rms_km_s": 17.202703055585914
+  },
+  "mond_check": {
+    "minimum_net_inward_gN_over_full_U_domain_km2_s2_kpc": 71.5021717178093,
+    "minimum_gN_at_U_lower_km2_s2_kpc": 71.5021717178093,
+    "minimum_gN_at_U_upper_km2_s2_kpc": 91.02811243140347,
+    "all_positive_for_entire_domain": true,
+    "signed_gas_acceleration_negative_point_count": 16,
+    "minimum_signed_gas_g_km2_s2_kpc": -25.5589049455109,
+    "maximum_signed_gas_g_km2_s2_kpc": 87.35789501724244
+  },
+  "map_scaling_max": 0.0
+}

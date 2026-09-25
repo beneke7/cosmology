@@ -1,0 +1,200 @@
+{
+  "task": "tg_resolved_source_audit",
+  "status": "feasible_for_resolved_HI_surface_density_conditionally_feasible_for_parameterized_3D_source",
+  "retrieved_at": "2026-09-25",
+  "scope": {
+    "target": "NGC 3198",
+    "question": "Whether public primary-source resolved gas maps can ground a physical axisymmetric baryon source independently of spherical inversion of SPARC velocities",
+    "modeling_or_fit_performed": false,
+    "shared_catalog_or_state_modified": false,
+    "broad_cubes_or_survey_archives_acquired": false
+  },
+  "cache": {
+    "selected_limit_bytes": 21474836480,
+    "remaining_before_task_bytes": 21305342268,
+    "downloaded_target_products_bytes": 8519040,
+    "remaining_after_task_bytes": 21296823228,
+    "arithmetic_basis": "Documented existing selected cache 169494212 bytes plus two targeted FITS products; cap calculation counts no unacquired products."
+  },
+  "products": [
+    {
+      "survey": "THINGS",
+      "release_or_version": "Public final THINGS release; no numbered release version stated",
+      "product": "NGC 3198 natural-weighted integrated H I intensity (moment 0)",
+      "filename": "NGC_3198_NA_MOM0_THINGS.FITS",
+      "official_product_page": "https://things.www3.mpia.de/Data.html",
+      "url": "https://things.www3.mpia.de/Data_files/NGC_3198_NA_MOM0_THINGS.FITS",
+      "local_path": "cosmology_autoresearch/work/tg_resolved_source_audit/NGC_3198_NA_MOM0_THINGS.FITS",
+      "retrieved": true,
+      "http_status": 200,
+      "content_length_bytes": 4282560,
+      "sha256": "6d98f314fa8b03bc2c048c84bdc629eccfa3f97b1f06ca4d52ce05162386448e",
+      "fits": {
+        "object": "NGC3198",
+        "date_obs": "2003-04-28",
+        "date_map": "2007-06-04",
+        "shape": [1024, 1024, 1, 1],
+        "pixel_scale_arcsec": 1.5,
+        "bunit": "JY/B*M/S",
+        "weighting": "natural",
+        "beam_fwhm_arcsec": [13.01, 11.56],
+        "beam_metadata_source": "Walter et al. 2008 Table 3, NGC 3198 NA row",
+        "source_cube_channels": 72,
+        "source_cube_channel_width_km_s": 5.2,
+        "source_cube_rms_mjy_beam": 0.33
+      },
+      "assumptions_and_calibration": {
+        "absolute_flux_scale_uncertainty": "about 5 percent",
+        "primary_beam_corrected": true,
+        "hi_column_conversion": "N_HI=1.823e18*sum(T_B*dv), T_B=6.07e5*S/(beam_major_arcsec*beam_minor_arcsec); FITS intensity unit is Jy/beam*m/s and requires the m/s to km/s conversion.",
+        "optical_depth_correction_applied": false,
+        "short_spacing_note": "THINGS includes D-array data; paper reports sensitivity to scales up to 15 arcmin and broadly consistent total fluxes with single-dish data, but does not correct map for potentially missing short spacings."
+      },
+      "license": "No separate reuse license found on the official product page/paper; product is publicly accessible. Cite Walter et al. 2008 and the THINGS data release.",
+      "primary_references": [
+        "https://arxiv.org/abs/0810.2125",
+        "https://doi.org/10.1088/0004-6256/136/6/2563"
+      ]
+    },
+    {
+      "survey": "HALOGAS",
+      "release_or_version": "HALOGAS Data Release 1 (Zenodo record 2552349; record modified 2020-03-20)",
+      "product": "NGC 3198 high-resolution H I column-density map",
+      "filename": "NGC3198-HR_coldens.fits",
+      "record_url": "https://zenodo.org/records/2552349",
+      "url": "https://zenodo.org/records/2552349/files/NGC3198-HR_coldens.fits?download=1",
+      "local_path": "cosmology_autoresearch/work/tg_resolved_source_audit/NGC3198-HR_coldens.fits",
+      "retrieved": true,
+      "http_status": 200,
+      "content_length_bytes": 4236480,
+      "sha256": "9e8070c2a2586a3eb9a5933c2814b18ab6f17c71054ff4051da1db7982485d90",
+      "record_md5": "1ecc5c4703de97abfb3033c7fad6fe83",
+      "record_md5_verified": true,
+      "fits": {
+        "object": "ngc3198",
+        "telescope": "WSRT",
+        "date_obs": "2009-11-08T01:17:51.3",
+        "shape": [1024, 1024],
+        "pixel_scale_arcsec": 4.0,
+        "beam_fwhm_arcsec": [18.89215, 13.55767],
+        "beam_position_angle_deg": -0.8679726,
+        "header_bunit": "JY/BEAM.km/s",
+        "data_unit_provenance": "HISTORY documents MIRIAD conversion exp=mom0mskzlm*1.823e18*606*1e3/1.889215D+01/1.355767D+01 to coldenslm, so pixel values are converted N_HI in cm^-2 despite stale BUNIT.",
+        "processing_history_date": "2019-02-01"
+      },
+      "survey_paper_constraints": {
+        "adopted_distance_mpc": "13.8 +/- 1.5",
+        "inclination_description": "about 70 degrees; map comparison becomes marginal for approximately +/-2 degree variation",
+        "position_angle_deg": 213,
+        "high_resolution_cube_beam_arcsec": [18.9, 13.6],
+        "diffuse_gas_model_cube_beam_arcsec": [35.2, 33.5],
+        "velocity_resolution_km_s": 4.12,
+        "diffuse_map_sensitivity_at_30_arcsec_cm2": "about 1e19",
+        "total_hi_flux_jy_km_s": 239.9,
+        "total_hi_mass_msun": 10800000000,
+        "thick_component_model": {
+          "mass_fraction": 0.15,
+          "scale_height_kpc": 3.0,
+          "uncertainty": "large; inferred by modeling the full spectral cube, not identified from the moment map alone"
+        },
+        "thin_initial_model": "sech^2 vertical profile with 0.2 kpc scale height was an initial modeling assumption, not a measured final thin-disk scale height"
+      },
+      "license": "Zenodo record's license field is blank; no explicit reuse license identified. Record requests citation of Heald et al. 2011 and the HALOGAS acknowledgement; also cite Gentile et al. 2013 for the NGC 3198 analysis.",
+      "required_acknowledgement": "This research made use of data from WSRT HALOGAS-DR1. The Westerbork Synthesis Radio Telescope is operated by ASTRON (Netherlands Institute for Radio Astronomy) with support from the Netherlands Foundation for Scientific Research NWO.",
+      "primary_references": [
+        "https://arxiv.org/abs/1012.0816",
+        "https://arxiv.org/html/1304.4232v1",
+        "https://doi.org/10.1051/0004-6361/201321116"
+      ],
+      "identified_companion_products_not_downloaded": [
+        {
+          "filename": "NGC3198-HR_mom0m.fits",
+          "reported_size": "4.2 MB",
+          "zenodo_md5": "f4037301cc9d334c9d488a4d9f0992e8"
+        },
+        {
+          "filename": "NGC3198-LR_coldens.fits",
+          "reported_size": "4.2 MB",
+          "zenodo_md5": "93d9882c698cba3717d6fb0fb99f891c"
+        },
+        {
+          "filename": "NGC3198-LR_mom0m.fits",
+          "reported_size": "4.2 MB",
+          "zenodo_md5": "be16711535e16814475210250bf2c470"
+        },
+        {
+          "filename": "NGC3198-HR-cube.fits",
+          "reported_size": "415.3 MB",
+          "acquired": false
+        },
+        {
+          "filename": "NGC3198-LR-cube.fits",
+          "reported_size": "415.3 MB",
+          "acquired": false
+        }
+      ]
+    },
+    {
+      "survey": "S4G",
+      "release_or_version": "S4G Pipeline 5 (P5); per-galaxy product is not numbered separately",
+      "product": "NGC 3198 cleaned old-stellar 3.6 micron flux map",
+      "filename": "NGC3198.stellar.fits",
+      "summary_page": "https://irsa.ipac.caltech.edu/data/SPITZER/S4G/galaxies/NGC3198.html",
+      "url": "https://irsa.ipac.caltech.edu/data/SPITZER/S4G/galaxies/NGC3198/P5/NGC3198.stellar.fits",
+      "retrieved": false,
+      "http_status_head": 200,
+      "content_length_bytes": 2580480,
+      "last_modified": "2014-09-02",
+      "pixel_scale_arcsec": 0.75,
+      "typical_psf_fwhm_arcsec": 1.7,
+      "purpose": "P5 ICA separates old-stellar flux from dust emission; flux map is convertible to stellar mass using a stated or color-dependent M/L. The separate P5 color map can support a color-dependent M/L.",
+      "license": "IRSA terms state that most public-hosted data have no use restrictions; cite Sheth et al. 2010, Munoz-Mateos et al. 2013, Querejeta et al. 2015, Watkins et al. 2022, and S4G data DOI 10.26131/IRSA425.",
+      "references": [
+        "https://irsa.ipac.caltech.edu/data/SPITZER/S4G/docs/P5_README.html",
+        "https://irsa.ipac.caltech.edu/data/SPITZER/S4G/docs/pipelines_readme.html",
+        "https://doi.org/10.1088/0067-0049/219/1/5",
+        "https://irsa.ipac.caltech.edu/data_use_terms.html",
+        "https://doi.org/10.26131/IRSA425"
+      ]
+    }
+  ],
+  "geometry": {
+    "things_distance_mpc": 13.8,
+    "things_inclination_deg": 72,
+    "things_position_angle_deg": 215,
+    "halogas_distance_mpc": "13.8 +/- 1.5",
+    "halogas_inclination_deg_approx": 70,
+    "halogas_position_angle_deg": 213,
+    "recommended_nominal": {
+      "inclination_deg": 71,
+      "position_angle_deg": 214,
+      "sensitivity": "at least +/-2 degrees in inclination; propagate D uncertainty with mass proportional to D^2"
+    },
+    "angular_scale_pc_per_arcsec_at_13_8_mpc": 66.9
+  },
+  "recommended_minimal_source": {
+    "axisymmetric_gas": "deproject map to disk plane, azimuthally average in annuli to form Sigma_HI(R), convert N_HI_LOS to thin-disk face-on surface density with cos(i), multiply by 1.36 for helium/metals, and assign a normalized vertical profile",
+    "vertical_gas_alternatives": [
+      "Thin-only disk with declared scale height",
+      "Thin plus HALOGAS-motivated thick component: about 85/15 percent of H I mass and h_thick about 3 kpc; the thin 0.2 kpc value was only an initial model assumption"
+    ],
+    "stellar_component": "Use S4G P5 cleaned old-stellar flux and an explicit M/L (e.g. 0.6 at 3.6 micron or a color-dependent relation), then an explicit stellar vertical profile.",
+    "incomplete_components": ["molecular H2", "ionized gas", "stellar M/L uncertainty", "stellar vertical scale height"],
+    "spatial_treatment": "Mask companions and off-disk features; convolve/rebin stellar map to gas resolution; azimuthal averaging deliberately discards non-axisymmetric structure."
+  },
+  "limitations": [
+    "Moment-0/column-density maps measure projected H I column and cannot uniquely determine the vertical distribution.",
+    "Optically thin 21-cm conversion is assumed; neither retrieved map corrects unknown self-absorption.",
+    "Distance uncertainty impacts inferred physical radii and masses; M scales as D squared.",
+    "Neither H I product is a complete baryon census; H2, ionized gas, and stellar mass-to-light ratio require explicit data or nuisance assumptions.",
+    "The HALOGAS HR coldens FITS BUNIT is stale; its HISTORY records the N_HI conversion and should be used for interpretation."
+  ],
+  "primary_source_urls": [
+    "https://things.www3.mpia.de/Data.html",
+    "https://arxiv.org/abs/0810.2125",
+    "https://zenodo.org/records/2552349",
+    "https://arxiv.org/html/1304.4232v1",
+    "https://irsa.ipac.caltech.edu/data/SPITZER/S4G/galaxies/NGC3198.html",
+    "https://irsa.ipac.caltech.edu/data/SPITZER/S4G/docs/P5_README.html"
+  ]
+}

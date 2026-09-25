@@ -1,0 +1,210 @@
+{
+  "status": "completed_same_resolved_source_diagonal_error_descriptive_comparison_no_preference_claim",
+  "n_observations": 43,
+  "inputs": {
+    "rotmod_zip": "context/data/Rotmod_LTG.zip",
+    "rotmod_sha256": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "k0_predictions_csv": "work/tg_axisymmetric_pilot/newtonian_k0_predictions.csv",
+    "k0_predictions_sha256": "5090562be95b6b757cbb9cb7e623d1e42510f7319a9b35e1ddc13e15fa849eff",
+    "branch_edge_csv": "work/tg_axisymmetric_pilot/axisymmetric_branch_edge_curves.csv",
+    "branch_edge_csv_sha256": "3a7ced618b539180d0f50b4ab4fd6f26f30e234bdb247d97fb6de43b31c568dd",
+    "branch_edge_summary_sha256": "566f95a36fe993f9c02ebba6a6c8faf4bac69f3cc1c2ed94126395349ce596b2"
+  },
+  "source_recovery": {
+    "stellar_reference_upsilon": 0.6,
+    "gas_v2_equation": "Vgas_signed^2 = Vbar_map_HALOGAS_K0^2 - Vstar_map_K0^2",
+    "gas_v2_negative_count": 16,
+    "gas_v2_min_km2_s2": -85.75427560909338,
+    "gas_v2_max_km2_s2": 2608.043297800508,
+    "second_ML_scaling_check_max_abs_km_s": 0.0,
+    "reference_profile": "same resolved HALOGAS map-derived K=0 stellar+gas field for all; stellar term scales linearly in Upsilon"
+  },
+  "likelihood": {
+    "form": "chi2=sum(((Vobs-Vmodel)/errV)^2)",
+    "error_model": "diagonal SPARC errV only; no full covariance",
+    "dof_not_used_for_claim": true,
+    "radii_kpc_min": 0.32,
+    "radii_kpc_max": 44.08
+  },
+  "units_and_constants": {
+    "r": "kpc",
+    "velocity": "km/s",
+    "g": "(km/s)^2/kpc",
+    "G": 4.30091e-06,
+    "H0_km_s_Mpc": 73.0,
+    "rho_critical_Msun_kpc3": 147.8995186605934,
+    "MOND_a0_m_s2": 1.2e-10,
+    "MOND_a0_km2_s2_kpc": 3702.8130977896403
+  },
+  "domains": {
+    "upsilon_Msun_Lsun_3p6": [
+      0.4765969408345689,
+      0.762
+    ],
+    "fixed_upsilon_values": [
+      0.6,
+      0.762
+    ],
+    "NFW_log10_M200_Msun": [
+      9.0,
+      14.0
+    ],
+    "NFW_c200": [
+      1.0,
+      50.0
+    ],
+    "NFW_nuisance_counts": {
+      "profile_upsilon": 3,
+      "fixed_upsilon": 2
+    },
+    "Newtonian_baryons_nuisance_count": 1,
+    "isolated_simple_MOND_nuisance_count": 1
+  },
+  "equations": {
+    "Newtonian_baryons": "V^2 = r*(U/0.6*gstar_0.6 + ggas_signed)",
+    "NFW": "V^2 = Vbar^2 + G*M200*f(r/rs)/(r*f(c)); r200=(3M200/(800*pi*rho_crit))^(1/3), rs=r200/c; f(x)=ln(1+x)-x/(1+x)",
+    "MOND": "gN=(U/0.6*gstar_0.6+ggas_signed)>0; mu=x/(1+x), x=g/a0; g=(gN+sqrt(gN^2+4*a0*gN))/2; V^2=r*g"
+  },
+  "models": [
+    {
+      "name": "Resolved-map Newtonian baryons only",
+      "n_free": 1,
+      "upsilon": 0.762,
+      "chi2_diag": 30397.957141242532,
+      "rms_km_s": 53.34183021385478,
+      "fixed_ML_sensitivity": {
+        "0.6": {
+          "upsilon": 0.6,
+          "chi2_diag": 39286.29749549701,
+          "rms_km_s": 60.15173583494084
+        },
+        "0.762": {
+          "upsilon": 0.762,
+          "chi2_diag": 30397.957141242532,
+          "rms_km_s": 53.34183021385478
+        }
+      }
+    },
+    {
+      "name": "Newtonian baryons + NFW halo",
+      "n_free": 3,
+      "upsilon": 0.7619999999999999,
+      "log10_M200_Msun": 11.581179638771172,
+      "M200_Msun": 381223477608.90015,
+      "concentration_c200": 10.492536122773581,
+      "log10_c200": 1.0208804730366592,
+      "chi2_diag": 58.49141564415777,
+      "rms_km_s": 7.682882621106594,
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "optimizer_starts": 6,
+      "fixed_ML_sensitivity": {}
+    },
+    {
+      "name": "Isolated simple-MOND, fixed a0",
+      "n_free": 1,
+      "upsilon": 0.6566257131508266,
+      "chi2_diag": 1032.2329630219547,
+      "rms_km_s": 10.589486837015498,
+      "fixed_ML_sensitivity": {
+        "0.6": {
+          "upsilon": 0.6,
+          "chi2_diag": 1131.8983038215322,
+          "rms_km_s": 10.433067012844852
+        },
+        "0.762": {
+          "upsilon": 0.762,
+          "chi2_diag": 1334.7353393966928,
+          "rms_km_s": 12.664838282353102
+        }
+      }
+    }
+  ],
+  "nfw_fixed_ML_sensitivity": [
+    {
+      "upsilon_fixed": 0.6,
+      "n_free": 2,
+      "log10_M200_Msun": 11.560809263432795,
+      "M200_Msun": 363755244401.871,
+      "log10_c200": 1.1003332422812013,
+      "concentration_c200": 12.598917795245397,
+      "chi2_diag": 74.56583760998025,
+      "rms_km_s": 8.440422487648052
+    },
+    {
+      "upsilon_fixed": 0.762,
+      "n_free": 2,
+      "log10_M200_Msun": 11.581179639689887,
+      "M200_Msun": 381223478415.3484,
+      "log10_c200": 1.020880472231344,
+      "concentration_c200": 10.492536103317201,
+      "chi2_diag": 58.49141564415786,
+      "rms_km_s": 7.68288260339077
+    }
+  ],
+  "tg_branch_edge_limit_only": {
+    "name": "TG branch edge limit",
+    "upsilon": 0.762,
+    "curve_column": "edge_Upsilon_0.762000_km_s",
+    "chi2_diag": 3585.8533265529627,
+    "rms_km_s": 17.202703055585914,
+    "upsilon_selected_from_grid_points": 4,
+    "K_treatment": "fixed to Kcrit; eigenmode limiting curve, not fitted"
+  },
+  "all_fine_grid_branch_edges": [
+    {
+      "name": "TG branch edge limit",
+      "upsilon": 0.476597,
+      "curve_column": "edge_Upsilon_0.476597_km_s",
+      "chi2_diag": 17757.614926719863,
+      "rms_km_s": 39.052355458823534
+    },
+    {
+      "name": "TG branch edge limit",
+      "upsilon": 0.6,
+      "curve_column": "edge_Upsilon_0.600000_km_s",
+      "chi2_diag": 9820.392556864272,
+      "rms_km_s": 28.835779033549883
+    },
+    {
+      "name": "TG branch edge limit",
+      "upsilon": 0.755355,
+      "curve_column": "edge_Upsilon_0.755355_km_s",
+      "chi2_diag": 3765.720560054252,
+      "rms_km_s": 17.63785798909815
+    },
+    {
+      "name": "TG branch edge limit",
+      "upsilon": 0.762,
+      "curve_column": "edge_Upsilon_0.762000_km_s",
+      "chi2_diag": 3585.8533265529627,
+      "rms_km_s": 17.202703055585914
+    }
+  ],
+  "mond_net_inward_check": {
+    "minimum_net_inward_gN_over_full_U_domain_km2_s2_kpc": 71.5021717178093,
+    "minimum_gN_at_U_lower_km2_s2_kpc": 71.5021717178093,
+    "minimum_gN_at_U_upper_km2_s2_kpc": 91.02811243140347,
+    "all_positive_for_entire_domain": true,
+    "signed_gas_acceleration_negative_point_count": 16,
+    "minimum_signed_gas_g_km2_s2_kpc": -25.5589049455109,
+    "maximum_signed_gas_g_km2_s2_kpc": 87.35789501724244
+  },
+  "runtime": {
+    "cpu_seconds": 0.15490119700000005,
+    "wall_seconds": 0.15474718064069748,
+    "single_thread_env": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    }
+  },
+  "limitations": [
+    "diagonal velocity errors only; no full SPARC covariance",
+    "the map-derived source is an axisymmetric pilot source, not a unique 3D baryon density",
+    "MOND is the isolated one-dimensional algebraic simple-mu relation; no EFE",
+    "TG edge is a non-finite-normalization branch limit, shown as a limiting curve only",
+    "scores are descriptive; no statistical model preference or detection claim"
+  ]
+}

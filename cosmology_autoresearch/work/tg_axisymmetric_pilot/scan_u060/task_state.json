@@ -1,0 +1,6 @@
+{
+  "deadline_utc": null,
+  "task": "NGC3198 thermodynamic-gravity axisymmetric scan at Upsilon*=0.6",
+  "wall_limit_seconds": 1800,
+  "cpu_limit_seconds": 300
+}

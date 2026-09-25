@@ -1,0 +1,93 @@
+{
+  "status": "complete_source_derived_Newtonian_K0_baseline; no TG fit and no halo_or_MOND_fit",
+  "interpretation": "Exploratory conditional forward-force comparison. The SPARC error column is treated diagonally because the release supplies no per-galaxy covariance here.",
+  "inputs": {
+    "source_profiles_csv_sha256": "2dffddbcd53854b2f8baf810c7500a753f9a2939f23d6b5deb11fdf9683f10b5",
+    "rotmod_archive_sha256": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "rotmod_member": "NGC3198_rotmod.dat",
+    "rotmod_member_sha256": "17b774ad11e7dd745a067073b76f1909d4de32fa87616df12b64da3f225cf953",
+    "n_source_profile_bins": 70,
+    "n_sparc_points": 43
+  },
+  "model": {
+    "surface_density_units": "Msun/pc^2 face-on",
+    "axisymmetric_assumption": "azimuthally averaged resolved 2D maps",
+    "stars": "S4G measured to its 14.4-kpc ICA ellipse, M/L=0.6; use only complete rings through 13.75 kpc (the 14.25-kpc ring is partial); exponential tail beyond last full ring, fitted Rd from 5-12.75 kpc",
+    "stellar_full_ring_support_kpc": 13.75,
+    "star_scale_length_kpc": 4.055333117362469,
+    "star_outer_fit_rms_ln_sigma": 0.055169659493738664,
+    "star_outer_fit_bins": 16,
+    "gas": "HALOGAS primary, 1.36 helium factor already included; 5-kpc linear taper beyond R=34.75 kpc",
+    "gas_vertical": "85% exp(|z|/h=0.2 kpc) + 15% exp(|z|/h=3 kpc); thin-only is separately tested",
+    "stellar_vertical_scale_kpc": 0.3,
+    "gravity": "Newtonian Poisson equation, K=0; no halo and no non-baryonic component",
+    "velocity_kernel": "V^2=2*pi*G*R*integral dk*k*J1(kR)*SigmaTilde(k)/(1+k*h), SigmaTilde=integral dRprime*Rprime*Sigma(Rprime)*J0(kRprime)"
+  },
+  "numerics": {
+    "G_kpc_km2_s2_Msun": 4.30091e-06,
+    "R_source_step_kpc": 0.01,
+    "R_source_max_kpc": 50.0,
+    "k_max_kpc_inverse": 80.0,
+    "n_k": 8001,
+    "freeman_exponential_disk_test_max_relative_v2_error": 0.00021175592524435747,
+    "freeman_test_radii_kpc": [
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      15.0
+    ],
+    "freeman_relative_errors": [
+      0.00016534603260099173,
+      0.00021175592524435747,
+      4.47669916636983e-05,
+      7.298621252373233e-06,
+      2.6321656567752883e-06,
+      1.2104296743344821e-05
+    ],
+    "k_spectral_convergence_max_fractional_speed_change": 0.00021068533322875409,
+    "no_random_seed": true
+  },
+  "results": {
+    "chi2_resolved_baryons_vs_SPARC_diagonal": 39286.29749549701,
+    "chi2_THINGS_gas_thin_vs_SPARC_diagonal": 39309.87737700241,
+    "chi2_SPARC_baryons_Upsilon0p6_vs_SPARC_diagonal": 26377.89266580237,
+    "component_comparisons": {
+      "stars_R_le_13p75_kpc_full_rings": {
+        "n": 27,
+        "rms_km_s_map_minus_sparc_Upsilon0p6": 18.392349258105295
+      },
+      "gas_R_le_44p08_kpc": {
+        "n": 43,
+        "rms_km_s_signed_map_minus_sparc_gas": 4.954100238851585
+      },
+      "baryon_total_R_le_44p08_kpc": {
+        "rms_km_s_map_minus_sparc_Upsilon0p6": 15.08296852609193,
+        "max_abs_km_s_map_minus_sparc_Upsilon0p6": 26.493568812229224
+      }
+    },
+    "mean_abs_residual_km_s": 55.307308598933865,
+    "max_abs_residual_km_s": 89.63697990168896,
+    "source_tail_sensitivity_max_speed_delta_km_s": 3.760048059326749,
+    "source_tail_sensitivity": {
+      "star_Rd_x0p75_max_delta_km_s": 1.144892554933108,
+      "star_Rd_x1p25_max_delta_km_s": 1.0205747315800409,
+      "star_2kpc_taper_max_delta_km_s": 3.760048059326749,
+      "gas_thin_only_max_delta_km_s": 0.45271642196767914,
+      "THINGS_gas_thin_max_delta_km_s": 0.4801171344606132
+    }
+  },
+  "runtime": {
+    "wall_seconds": 6.729475125670433,
+    "process_cpu_seconds": 6.728052139,
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "files": {
+    "code_sha256": "85159bc98ed8d415f087d9768315b5d2b50029e5a851c931bd187e28418fcd6f",
+    "result_csv": "work/tg_axisymmetric_pilot/newtonian_k0_predictions.csv",
+    "plot": "work/tg_axisymmetric_pilot/newtonian_k0_baseline.png"
+  }
+}

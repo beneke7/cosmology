@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "description": "Single-source retrieval for the current thermodynamic-gravity short-range literature check.",
+  "sources": [
+    {
+      "id": "short_range_gravity_tests_2026_v2",
+      "kind": "paper",
+      "title": "Short-Range Tests of the Gravitational Inverse-Square Law",
+      "url": "https://arxiv.org/abs/2605.18212v2",
+      "priority": "core",
+      "fetch": true,
+      "required": true,
+      "filename": "short_range_tests_2026_v2.pdf",
+      "download_url": "https://arxiv.org/pdf/2605.18212v2",
+      "arxiv_id": "2605.18212v2",
+      "max_bytes": 10000000,
+      "note": "Exact arXiv v2 reviewed version, posted 2026-09-08. Context review only; not an original experimental detection."
+    }
+  ]
+}

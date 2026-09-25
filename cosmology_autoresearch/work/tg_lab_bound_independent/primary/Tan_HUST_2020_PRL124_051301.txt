@@ -1,0 +1,330 @@
+                               PHYSICAL REVIEW LETTERS 124, 051301 (2020)
+
+
+
+                    Improvement for Testing the Gravitational Inverse-Square Law
+                                    at the Submillimeter Range
+   Wen-Hai Tan ,1 An-Bin Du,1 Wen-Can Dong ,1 Shan-Qing Yang,1,2,* Cheng-Gang Shao,1 Sheng-Guo Guan ,3
+              Qing-Lan Wang,4 Bi-Fu Zhan,5 Peng-Shun Luo,1 Liang-Cheng Tu ,1,2 and Jun Luo1,2,†
+       1
+        MOE Key Laboratory of Fundamental Physical Quantities Measurement & Hubei Key Laboratory of Gravitation
+           and Quantum Physics, PGMF and School of Physics, Huazhong University of Science and Technology,
+                                        Wuhan 430074, People’s Republic of China
+                2
+                 TianQin Research Center for Gravitational Physics and School of Physics and Astronomy,
+                   Sun Yat-sen University (Zhuhai Campus), Zhuhai 519082, People’s Republic of China
+                     3
+                       College of Physics and Communication Electronics, Jiangxi Normal University,
+                                      Nanchang 330022, People’s Republic of China
+                  4
+                   School of Science, Hubei University of Automotive Technology, Shiyan 442002, China
+                     5
+                      School of Electrical and Electronic Engineering, Wuhan Polytechnic University,
+                                        Wuhan 430023, People’s Republic of China
+    (Received 19 November 2019; revised manuscript received 5 January 2020; accepted 21 January 2020; published 5 February 2020)
+
+                We improve the test of the gravitational inverse-square law at the submillimeter range by suppressing the
+             vibration of the electrostatic shielding membrane to reduce the disturbance coupled from the residual
+             surface potential. The result shows that, at a 95% confidence level, the gravitational inverse-square law
+             holds (jαj ≤ 1) down to a length scale λ ¼ 48 μm. This work establishes the strongest bound on the
+             magnitude α of the Yukawa violation in the range of 40–350 μm, and improves the previous bounds by up
+             to a factor of 3 at the length scale λ ≈ 70 μm. Furthermore, the constraints on the power-law potentials are
+             improved by about a factor of 2 for k ¼ 4 and 5.
+
+             DOI: 10.1103/PhysRevLett.124.051301
+
+
+
+   Gravity is well described by the general relativity, which           In this Letter, we report a new constraint on the Yukawa
+is verified by all the experiments and observations to date,         type violation. The setup was based on our previous
+and consistent with the Newtonian inverse-square law (ISL)           experiment, that tested the ISL using a torsion balance
+in the nonrelativistic limit in a weak gravitational field.          with dual modulation and compensation at the separation
+However, the general relativity has not been quantized               of 295 μm [24], as shown in Fig. 1, but the driving unit of
+successfully, and the gravity is poorly characterized in the         the attractor was improved for reducing the electrostatic
+short range. For unifying the gravity and the other three            disturbance caused by the vibration of the shielding
+fundamental interactions, a number of speculations have              membrane between the pendulum and the attractor. With
+been proposed and predict a deviation from the gravita-              the improvement, the separation between the test and
+tional inverse-square law in a short-range regime [1–8], as          source masses was shortened down to 210 μm, in which
+well as some new light bosons predicted by the extension to          the pendulum-membrane separation was 90 μm. The vio-
+the standard model [9]. The deviations from the ISL are              lation parameters were estimated by the maximum like-
+usually parametrized by a Yukawa potential                           lihood method with the data taken at several separations.
+                                                                        The schematic of the experiment is shown in Fig. 1. The
+                           m1 m2
+              VðrÞ ¼ −G          ð1 þ αe−r=λ Þ;             ð1Þ      attractor was eightfold azimuthal symmetric, and rotated
+                             r                                       about a horizontal axis which allowed the Yukawa force to be
+where G is the Newtonian gravitational constant, α is the            detected in the most sensitive direction of the torsion balance.
+strength of any new interaction, which is assumed to be              The driving frequency was set to ωd ¼ 1.634 mrad=s,
+a universal constant and insensitive to the compositions,            and the signal frequency was put at 8ωd , to separate the
+λ is the length scale, and r is the separation between two           disturbances at the fundamental frequency, and located at
+masses. For searching the new interactions, a large number           the low noise frequency band. The I-shaped pendulum with
+of experiments have been performed [10–27]. The detailed             the 14.610 × 0.200 × 12.003 mm3 tungsten test masses and
+and comprehensive reviews about the predictions and                  14.610 × 0.289 × 12.003 mm3 gravitational compensation
+experiments are available in Refs. [28–32]. Setting strin-           masses attached on the side of two ends, was suspended by a
+gent limits on α for small λ requires small separations,             70-cm-long, 25-μm-diameter tungsten fiber. The attractor
+r ≲ λ, in order for test bodies to interact significantly.           consisted of eight 17.597 × 0.200 × 11.403 mm3 tungsten
+
+0031-9007=20=124(5)=051301(6)                                051301-1                         © 2020 American Physical Society
+                                       PHYSICAL REVIEW LETTERS 124, 051301 (2020)
+
+                                                         ω                      (a)                                (b)
+
+
+
+
+                                                                         FIG. 2. (a) The feedback voltage U PID of the closed-loop
+                                                                         torsion balance is a minimum when the potential U m applied
+                                                                         on the shielding membrane equals to the surface potential
+                                                                         difference between the pendulum and the membrane. The solid
+                                                                         line is the parabolic fit to the experiment data. (b) The potential
+FIG. 1. Schematic drawing of the experimental setup (not to              difference varies with time obviously after the chamber vacu-
+scale). Compared with our previous experiment [24], the rotary           umized, and the drift slows down as time increased. The results
+stage was replaced by a smaller and vacuum compatible one, and           for the other membrane are similar.
+installed at the end of the rotary shaft. The attractor and the rotary
+stage, as well as the alignment glass, are supported on a 6-degree-
+of-freedom stage to adjust the position (not shown here). The            torque to the feedback voltage U, which depends on the
+electrostatic shielding membrane was placed on a translation             sizes, the separations, and the bias voltage of the control
+stage to adjust the separation between the pendulum.                     electrodes. τ is the torque exerted on the pendulum,
+                                                                         including the Yukawa signal to be detected, the calibration
+source masses and eight 17.597 × 0.219 × 11.403 mm3                      signal, the residual Newtonian torque, the thermal noise,
+compensation masses, which arrayed alternatively on a                    etc., ke ¼ ∂τe =∂θ was the negative spring constant of the
+100-mm-diameter, 3-mm-thick glass disk. The relative posi-               electrostatic interaction between the pendulum and the
+tion of the attractor and the alignment glass was measured by a          shielding membrane, where τe ¼ ð−1=2Þð∂C=∂θÞΔU 2 was
+coordinate measuring machine during the assembly, and the                the electrostatic torque between the pendulum and the
+attractor was aligned with the pendulum by the 6-degree-of-              shielding membrane, with the capacity C and the residual
+freedom stage in vacuum. Using the dual compensation                     surface potential difference ΔU.
+design, a null experiment was realized with the 8ωd                          The surface potential differences between the pendulum
+Newtonian torque of ð0.4  0.5Þ × 10−17 N m at the sepa-                 and the membrane were due to the contact potential for
+ration of 210 μm. The sensitivity of the closed-loop pendu-              different metals and the patch effect from the imperfect
+lum was calibrated by the gravitational signal from a rotating           surfaces of the conductors. It was determined by applying a
+copper cylinder, which had a weight of 1140 g, the rotation              stair-changed voltage on each shielding membrane and
+frequency of ωc ¼ 15.7079 mrad=s, and located outside                    found the extremum of the control voltage of the closed-
+the vacuum chamber. More details about the setup can be                  loop torsion balance. The typical result for one membrane
+found in Ref. [24].                                                      was shown in Fig. 2(a), and the surface potential for
+   In the short range, the electrostatic disturbance is                  different data runs during about 2 years were shown in
+dominant. Two 30-μm-thick electrostatic shielding mem-                   Fig. 2(b), which approximately decays exponentially. For
+branes were inserted between two ends of the pendulum                    reducing the electrostatic disturbances, the surface potential
+and the attractor. As the electrostatic disturbance made                 of each membrane was compensated to equipotential with
+the pendulum unstable, a proportional-integral-differential              the pendulum by a voltage source meter with accuracy of
+(PID) electrostatic feedback control system was used to                  0.6 mV for each data run.
+maintain the pendulum at the stable position. Considering                    To evaluate if there is potential variation on the shielding
+the internal damping [33], the equation of motion of the                 membrane that induced by the rotating attractor, we used a
+closed-loop torsion pendulum is                                          7 12-digit high performance multimeter to measure the voltage
+                                                                         on the membrane, while the compensation voltage had been
+             I θ̈ þ kð1 þ i=QÞθ − ke θ ¼ τ − βU;                  ð2Þ    applied, and the attractor was rotating. No signals appeared
+                                                                         at any harmonic of the drivingpﬃﬃﬃﬃﬃﬃ frequency, and the noise
+where the moment of inertia of the pendulum                              floor is less than 10 μV= Hz around several millihertz.
+I ¼ ð6.977  0.002Þ × 10−5 kg m2 , the spring constant                   The corresponding torque noise is δτeu ¼ ½∂τe =∂ðΔUÞδU,
+k ¼ ð8.05  0.06Þ × 10−9 N m=rad, the quality factor                     where ½∂τe =∂ðΔUÞ ¼ ð8.4  0.5Þ × 10−12 N m=V was
+Q ≈ 2500. The feedback voltage U was calculated from                     determined by measuring the torques responded to the
+the twist of the pendulum θ with PID algorithm. β ¼                      modulated voltages applied on a shielding membrane, with
+ð4.7  0.3Þ × 10−13 N m=V is the ratio of the control                    the pendulum-membrane separation of 90 μm. The voltage
+
+                                                                  051301-2
+                                     PHYSICAL REVIEW LETTERS 124, 051301 (2020)
+                                                          pﬃﬃﬃﬃﬃﬃ
+noise introduces a torque noise of 9 × 10−17 N m=       p ﬃﬃﬃﬃﬃﬃHz,                  Measured
+which is far below the thermal noise 2 × 10−15 N m= Hz of
+the torsion balance with Q ≈ 2500. The four-day data show
+that δU at the 8ωd is less than 17 nV, which introduces a
+torque noise less than 2 × 10−19 N m, and can be ignored.
+   Considering the parallel-plate capacitor model, the
+residual electrostatic torque should be zero when the
+potential of the membrane was compensated to the minimum
+shown in Fig. 2(a). However, due to the spatial variations of
+the patch potentials on the pendulum and the shielding
+membrane, some residual electrostatic torque still exists                                                    0
+[34–38], and increases in a shorter range. Furthermore, the
+spacial distribution of the surface potential is difficult to be
+determined. As a result, the variation of the separation would        FIG. 3. “Non-null” experiment of the 8ωd component as the
+introduce the torque noise or systemic errors, and must be            attractor’s position changed along the x direction, with the
+considered more carefully in shorter range.                           separation between the test and the source masses fixed to
+   For the tiny vibration δθm of the shielding membrane               210 μm. The solid points are the measured values, and the shaded
+                                                                      belt represents the theoretical calculations, both with the 2σ error.
+around the vertical direction, the variation of the electro-
+static torque is δτeθ ¼ ke δθm , where ke ¼ ð2.6  0.4Þ ×
+10−8 N m=rad with the pendulum-membrane separation of                    The torque signal is deduced from the feedback voltage
+90 μm as in the most data runs of this work. ke were                  in the Rfrequency domain. The voltage signal is Uðωs Þ ¼
+deduced from the response of the feedback voltage to the              ð2=TÞ 0T UðtÞ expðiωs tÞdt with ωs ¼ 8ωd , and so does the
+known gravitational calibration signal for each data run,             calibration signal Uðωc Þ. The measured torque is τðωs Þ ¼
+according to Eq. (2).                                                 ½Uðωs Þ=Uðωc Þ½HU ðωc Þ=H U ðωs Þτc ðωc Þ; where HU ðωÞ ≡
+   In our previous experiment, a rotary stage was employed            UðωÞ=τðωÞ is the transfer function according to Eq. (2),
+to drive the attractor from outside the vacuum chamber to             τc ðωc Þ is the calibration torque. Refer to Ref. [24] for more
+reduce the temperature and electromagnetic disturbances.              detail. The results of the non-null experiments are shown in
+However, due to the uncoaxiality between the rotary stage,            Fig. 3, which shows the consistency of the measured
+the feedthrough of the vacuum chamber, and the attractor,             torques and the theoretical Newtonian torques calculated
+the stability of the shielding membrane became worse                  from the geometric parameters.
+while the rotary was working. For reducing this disturb-                 Considering that the possible Yukawa signal should
+ance, the rotary was replaced by a smaller and vacuum                 increase quickly as the separation between the test and source
+compatible version, which is mounted through a flexible               masses decreases, we tested the Newtonian inverse-square
+connector directly at the end of the rotation shaft that fixed        law at several separations for comparison, including 210, 230,
+to the attractor. The stability of the shielding membrane was         295, and 1095 μm. The 8ωd torques are shown in Fig. 4, with
+improved by more than an order of magnitude, that the                 the collected data length from about six to nine weeks. The
+rotation δθm around the vertical direction was reduced from           tiny residual Newtonian torques are subtracted individually
+ð1.8  0.1Þ nrad to ð0.1  0.1Þ nrad. The disturbance of the          for each separation, which are not more than 1.5 × 10−17 N m
+torque from δθm was estimated as < 0.4 × 10−17 N m at the             for all the experiments above. All the results are consistent
+pendulum-membrane separation of 90 μm. This improve-                  with zero at the 1σ level, indicating that no violation of the
+ment allowed us to shorten the separation between the test            Newtonian inverse-square law was observed.
+and the source masses down to 210 μm, where the possible                 To make full use of the data at different separations for
+Yukawa torque with smaller λ was increased compared with              setting a stronger bound on the Yukawa effect, the
+our previous experiment with 295-μm separation.                       maximum likelihood estimate method was used to deter-
+   To increase the accuracy of the experiment, we used a              mine the violation parameters [25], using the in-phase
+“null” experiment to test the Yukawa effect, in which the             components of the residual torques at the four separations
+Newtonian torque at 8ωd is well compensated when the                  shown in Fig. 4. Considering the measured results are
+attractor is aligned with the pendulum. In another case,              normal distributions, the likelihood function is defined as
+when the attractor is misaligned, the 8ωd Newtonian torque
+increases significantly, namely the “non-null” experiment,                                           Y   1                   2    2
+which can verify the instruments further. Non-null experi-                     Pðτm ; τt ; α; λÞ ¼     pﬃﬃﬃﬃﬃﬃ e−½ðτmi −τti Þ =2σ i  ;   ð3Þ
+ments were performed with the attractor move 250 and                                                 i  2π σ i
+500 μm along the x direction, while keeping the separation
+at 210 μm between the test and the source masses, and                 where i ¼ 1, 2, 3, 4, denotes the different test-source
+90 μm between the test mass and the shielding membrane.               masses separations of di ¼ 210; 230; 295; 1095 μm, τm
+
+                                                               051301-3
+                                      PHYSICAL REVIEW LETTERS 124, 051301 (2020)
+
+       (a)                            (b)
+
+
+
+
+       (c)                            (d)
+
+
+
+
+                                                                        FIG. 5. Example of the probability density of α, considering
+                                                                        λ ¼ 100 μm. The shaded area represents the region of α with
+                                                                        95% probability. αe ¼ −0.004 at the maximum is the best
+                                                                        estimate of α. The constraint of jαj < 0.027 is set by the max
+                                                                        one of the absolute values of the lower limit ðαe − δαÞ ¼ −0.027
+                                                                        and the upper limit ðαe þ δαÞ ¼ 0.019. The constraints of jαj for
+                                                                        other values of λ are calculated similarly.
+FIG. 4. The 8ωd measured torques at 210, 230, 295, and
+1095-μm separations, respectively. Each solid dot represents a
+value obtained from a 10-rotation-period data segment, and the            The power-law potentials can arise from the higher-order
+squares represent the mean values (shown in brackets) with the 1σ       exchange processes with a simultaneous exchange of
+error of about 1 × 10−17 N m.
+                                                                        multiple massless bosons [8], which is parametrized as
+                                                                                                                
+are the in-phase component of the measured torques, τt are                                      ma mb      1 mm k−1
+                                                                                  V ab ðrÞ ¼ −G
+                                                                                    k
+                                                                                                      βk              ;        ð4Þ
+the possible 8ωd Yukawa torques τY that calculated from                                           r           r
+the violation parameters α, λ, and the geometric parameters.
+It is obtained by numerical integration τY ðdi ; ϕÞ ¼                   where βk are the power-law parameters for k ¼ 2, 3, 4
+R
+  ð∂=∂θÞ½ðGρj ρk =rÞαe−r=λ dV j dV k for different rotation            and 5. Using the similar analysis method as the Yukawa
+angle ϕ of the attractor at the separation di , where V j is            violation, we obtain the better constraints on βk , which are
+the volume of the pendulum’s components with density ρj,                listed in Table I.
+and the similar notation with subscript k denotes the
+parameter     of theﬃ attractor’s components. The total error
+      pﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+σ i ¼ σ mi þ σ 2ti , where σ mi is the error of τmi , and σ ti is the
+            2
+
+error of τti that caused by the geometric parameters.
+    By searching α to maximize the likelihood function
+Pðτm ; τt ; α; λÞ for each value of λ, the best estimate αe is
+determined, and the bound with 95% confidence level is
+                      R þδα
+found by ð1=AÞ ααee−δα      Pðτm ; τt ; α; λÞdα ¼ 95%, where A is
+the normalization coefficient that ensures the total probability
+is 100% over all the α, and the constraint of jαj is set by the
+max one of jαe − δαj and jαe þ δαj, as shown in Fig. 5 with
+λ ¼ 100 μm, for example. The constraints of jαj for other
+values of λ are calculated similarly, which are summarized in
+Fig. 6. It is the strongest bound on α in the range of
+40–350 μm. At the length scale of λ ≈ 70 μm, we improve
+the previous bounds by up to a factor of 3, and the inverse-
+                                                                        FIG. 6. Constraints on Yukawa violation of the Newtonian 1=r2
+square law holds (jαj ≤ 1) down to a length scale λ ¼ 48 μm.            law. The shaded region is excluded at a 95% confidence level
+For the two large extra-dimension scenarios with α ¼ 16=3               by this work, and the previous experiments from Refs. [10–14,
+[29], the experiment requires the unification mass M ≥                 22–24], respectively. Light lines show various theoretical pre-
+3.2 TeV=c2 with the extra-dimension size R ≤ 37 μm.                    dictions summarized in Refs. [29,39].
+
+
+                                                                 051301-4
+                                     PHYSICAL REVIEW LETTERS 124, 051301 (2020)
+
+TABLE I. Constraints on the power-law potentials with                     Geraci, S. J. Smullin, D. M. Weld, J. Chiaverini, and A.
+68% confidence from this work and from previous result of                 Kapitulnik, Phys. Rev. D 78, 022002 (2008).
+Ref. [8].                                                            [14] J. C. Long, H. W. Chan, A. B. Churnside, E. A. Gulbis,
+                                                                          M. C. M. Varney, and J. C. Price, Nature (London) 421, 922
+k                jβk j (this work)                jβk j (Ref. [8])        (2003).
+                            −4                                       [15] M. Masuda and M.Sasaki, Phys. Rev. Lett. 102, 171101
+2                   3.7 × 10                       4.5 × 10−4
+                                                                          (2009).
+3                   7.5 × 10−5                     1.3 × 10−4
+                                                                     [16] S. K. Lamoreaux, Phys. Rev. Lett. 78, 5 (1997); A. O.
+4                   2.2 × 10−5                     4.9 × 10−5
+5                   6.7 × 10−6                     1.5 × 10−5             Sushkov, W. J. Kim, D. A. R. Dalvit, and S. K. Lamoreaux,
+                                                                          Phys. Rev. Lett. 107, 171101 (2011).
+                                                                     [17] M. Bordag, U. Mohideen, and V. M. Mostepanenko,
+                                                                          Phys. Rep. 353, 1 (2001); G. L. Klimchitskaya, U.
+   The main uncertainty of the measured torque at the short               Mohideen, and V. M. Mostepanenko, Phys. Rev. D 87,
+range is the random noise, which increases quickly at the                 125031 (2013).
+shorter range, indicating that the coupling of the vibration         [18] Y. Kamiya, K. Itagaki, M. Tani, G. N. Kim, and S.
+to the residual surface potential is still an important noise             Komamiya, Phys. Rev. Lett. 114, 161101 (2015).
+source. Improving the vibration isolation of the torsion             [19] M. V. Moody and H. J. Paik, Phys. Rev. Lett. 70, 1195
+pendulum and the shielding membrane should reduce this                    (1993).
+noise further.                                                       [20] J. C. Long and V. A. Kostelecký, Phys. Rev. D 91, 092003
+                                                                          (2015).
+  This work was supported by the National Natural Science            [21] C.-G. Shao, Y.-J. Tan, W.-H. Tan, S.-Q. Yang, J. Luo, M. E.
+Foundation of China under Grants No. 11705061,                            Tobar, Q. G. Bailey, J. C. Long, E. Weisman, R. Xu, and V.
+No. 11722542, No. 91736312, and No. 91436212.                             A. Kostelecky, Phys. Rev. Lett. 117, 071102 (2016); C.-G.
+                                                                          Shao, Y.-F. Chen, Y.-J. Tan, S.-Q. Yang, J. Luo, M. E. Tobar,
+    A.-B. D. and W.-H. T. contributed equally to this work.               J. C. Long, E. Weisman, and V. A. Kostelecky, Phys. Rev.
+                                                                          Lett. 122, 011102 (2019).
+                                                                     [22] L.-C. Tu, S.-G. Guan, J. Luo, C.-G. Shao, and L.-X. Liu,
+     *
+      yshq@sysu.edu.cn                                                    Phys. Rev. Lett. 98, 201101 (2007).
+     †
+      junluo@sysu.edu.cn                                             [23] S.-Q. Yang, B.-F. Zhan, Q.-L. Wang, C.-G. Shao, L.-C.
+ [1] N. Arkani-Hamed, S. Dimopoulos, and G. Dvali, Phys. Lett.            Tu, W.-H. Tan, and J. Luo, Phys. Rev. Lett. 108, 081101
+     B 429, 263 (1998); Phys. Rev. D 59, 086004 (1999).                   (2012).
+ [2] S. Dimopoulos and G. F. Giudice, Phys. Lett. B 379, 105         [24] W.-H. Tan, S.-Q. Yang, C.-G. Shao, J. Li, A.-B. Du, B.-F.
+     (1996).                                                              Zhan, Q.-L. Wang, P.-S. Luo, L.-C. Tu, and J. Luo, Phys.
+ [3] S. R. Beane, Gen. Relativ. Gravit. 29, 945 (1997).                   Rev. Lett. 116, 131101 (2016).
+ [4] R. Sundrum, J. High Energy Phys. 07 (1999) 001; Phys.           [25] J. Wang, S. Guan, K. Chen, W. Wu, Z. Tian, P. Luo, A. Jin,
+     Rev. D 69, 044014 (2004).                                            S. Yang, C. Shao, and J. Luo, Phys. Rev. D 94, 122005
+ [5] D. B. Kaplan and M. B. Wise, J. High Energy Phys. 08                 (2016).
+     (2000) 037.                                                     [26] C. C. Haddock, N. Oi, K. Hirota, T. Ino, M. Kitaguchi,
+ [6] N. Arkani-Hamed, S. Dimopoulos, G. Dvali, and N.                     S. Matsumoto, K. Mishima, T. Shima, H. M. Shimizu,
+     Kaloper, Phys. Rev. Lett. 84, 586 (2000).                            W. M. Snow, and T. Yoshioka, Phys. Rev. D 97, 062002
+ [7] L. Randall and R. Sundrum, Phys. Rev. Lett. 83, 4690                 (2018).
+     (1999).                                                         [27] J. Liu and K.-D. Zhu, Eur. Phys. J. C 79, 18 (2019).
+ [8] E. G. Adelberger, B. R. Heckel, S. Hoedl, C. D. Hoyle,          [28] E. Fischbach and C. L. Talmadge, The Search for Non-
+     D. J. Kapner, and A. Upadhye, Phys. Rev. Lett. 98, 131104            Newtonian Gravity (Springer, New York, 1999).
+     (2007).                                                         [29] E. G. Adelberger, B. R. Heckel, and A. E. Nelson, Annu.
+ [9] J. E. Moody and F. Wilczek, Phys. Rev. D 30, 130 (1984).             Rev. Nucl. Part. Sci. 53, 77 (2003); E. G. Adelberger, J. H.
+[10] C. D. Hoyle, D. J. Kapner, B. R. Heckel, E. G. Adelberger,           Gundlach, B. R. Heckel, S. Hoedl, and S. Schlamminger,
+     J. H. Gundlach, U. Schmidt, and H. E. Swanson, Phys. Rev.            Prog. Part. Nucl. Phys. 62, 102 (2009).
+     D 70, 042004 (2004); D. J. Kapner, T. S. Cook, E. G.            [30] R. D. Newman, E. C. Berg, and P. E. Boynton, Space Sci.
+     Adelberger, J. H. Gundlach, B. R. Heckel, C. D. Hoyle,               Rev. 148, 175 (2009).
+     and H. E. Swanson, Phys. Rev. Lett. 98, 021101 (2007).          [31] J. Murata and S. Tanaka, Classical Quantum Gravity 32,
+[11] J. K. Hoskins, R. D. Newman, R. Spero, and J. Schultz,               033001 (2015).
+     Phys. Rev. D 32, 3084 (1985).                                   [32] M. S. Safronova, D. Budker, D. DeMille, D. F. J. Kimball,
+[12] R. S. Decca, D. López, H. B. Chan, E. Fischbach, D. E.               A. Derevianko, and C. W. Clark, Rev. Mod. Phys. 90,
+     Krause, and C. R. Jamell, Phys. Rev. Lett. 94, 240401                025008 (2018).
+     (2005); Y.-J. Chen, W. K. Tham, D. E. Krause, D. López,         [33] P. R. Saulson, Phys. Rev. D 42, 2437 (1990).
+     E. Fischbach, and R. S. Decca, Phys. Rev. Lett. 116, 221102     [34] C. C. Speake and C. Trenkel, Phys. Rev. Lett. 90, 160403
+     (2016).                                                              (2003).
+[13] J. Chiaverini, S. J. Smullin, A. A. Geraci, D. M. Weld, and     [35] R. O. Behunin, D. A. R. Dalvit, R. S. Decca, and C. C.
+     A. Kapitulnik, Phys. Rev. Lett. 90, 151101 (2003); A. A.             Speake, Phys. Rev. D 89, 051301(R) (2014).
+
+
+                                                              051301-5
+                                PHYSICAL REVIEW LETTERS 124, 051301 (2020)
+
+[36] W. J. Kim, A. O. Sushkov, D. A. R. Dalvit, and S. K.    [38] H. Yin, Y.-Z. Bai, M. Hu, L. Liu, J. Luo, D.-Y. Tan,
+     Lamoreaux, Phys. Rev. A 81, 022505 (2010).                   H.-C. Yeh, and Z.-B. Zhou, Phys. Rev. D 90, 122001
+[37] F. Antonucci, A. Cavalleri, R. Dolesi, M. Hueller, D.        (2014).
+     Nicolodi, H. B. Tu, S. Vitale, and W. J. Weber, Phys.   [39] J. C. Long, H. W. Chan, and J. C. Price, Nucl. Phys. B539,
+     Rev. Lett. 108, 181101 (2012).                               23 (1999).
+
+
+
+
+                                                       051301-6
+

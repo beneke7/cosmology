@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-09-25T10:58:34Z",
+  "priority": "core",
+  "schema_version": 1,
+  "sources": [
+    {
+      "attempts": 1,
+      "bytes": 1248339,
+      "content_type": "application/pdf",
+      "error": null,
+      "extractor_error": null,
+      "extractor_status": "completed",
+      "fetch": true,
+      "file_sha256": "4b69e60159db4cc6ef3c0e84490f0f3b42bcaa5d743c6e1e8bdd878a56d47506",
+      "http_status": 200,
+      "id": "short_range_gravity_tests_2026_v2",
+      "kind": "paper",
+      "manifest_index": 0,
+      "manifest_sha256": null,
+      "max_bytes": 10000000,
+      "note": "Exact arXiv v2 reviewed version, posted 2026-09-08. Context review only; not an original experimental detection.",
+      "origin_url": "https://arxiv.org/abs/2605.18212v2",
+      "path": "short_range_tests_2026_v2.pdf",
+      "priority": "core",
+      "requested_url": "https://arxiv.org/pdf/2605.18212v2",
+      "required": true,
+      "resolved_url": "https://arxiv.org/pdf/2605.18212v2",
+      "retrieved_at": "2026-09-25T10:58:34Z",
+      "selected": true,
+      "started_at": "2026-09-25T10:58:34Z",
+      "status": "downloaded",
+      "text_path": "short_range_tests_2026_v2.txt"
+    }
+  ],
+  "total_limit_bytes": 12582912
+}

@@ -1,0 +1,196 @@
+{
+  "status": "source-construction and closure only; no TG solution or parameter fit",
+  "data": {
+    "work/tg_resolved_source_audit/NGC_3198_NA_MOM0_THINGS.FITS": {
+      "bytes": 4282560,
+      "sha256": "6d98f314fa8b03bc2c048c84bdc629eccfa3f97b1f06ca4d52ce05162386448e"
+    },
+    "work/tg_resolved_source_audit/NGC3198-HR_coldens.fits": {
+      "bytes": 4236480,
+      "sha256": "9e8070c2a2586a3eb9a5933c2814b18ab6f17c71054ff4051da1db7982485d90"
+    },
+    "work/tg_axisymmetric_pilot/data/NGC3198.stellar.fits": {
+      "bytes": 2580480,
+      "sha256": "db2db49b15858e3bda491cb7657e5cadeeb7be2dbce29a1bbe48c66dbfc82478"
+    },
+    "work/tg_axisymmetric_pilot/data/NGC3198.ICAmask.fits": {
+      "bytes": 2580480,
+      "sha256": "5f2c6804ed76ea44709aeb7e6a4245334dfac2d81f6b526963b6a620b6d6fc38"
+    }
+  },
+  "geometry": {
+    "distance_Mpc": 13.8,
+    "inclination_deg": 72.0,
+    "position_angle_deg": 215.0,
+    "R_max_kpc": 35.0,
+    "ring_width_kpc": 0.5
+  },
+  "THINGS_conversion": {
+    "BUNIT": "JY/B*M/S",
+    "moment0_to_Tb": "M0[Jy/beam m/s]/1000 * 606000/(11.43108*9.36252) K per Jy/beam",
+    "column": "N_HI[cm^-2]=1.823e18 * integral(Tb dv)[K km/s]",
+    "selected_FITS_AIPS_CLEAN_beam_arcsec": [
+      11.43108,
+      9.36252
+    ],
+    "Walter_2008_Table_2_NA_beam_arcsec": [
+      13.01,
+      11.56
+    ],
+    "beam_area_arcsec2": 121.26750516185204,
+    "integrated_flux_Jy_km_s_using_FITS_CLEAN_beam": 218.7693834085504,
+    "integrated_flux_Jy_km_s_using_Table_2_beam_sensitivity": 155.6795023740374,
+    "published_Walter_2008_flux_Jy_km_s": 227.0,
+    "metadata_note": "The selected MOM0 FITS HISTORY says AIPS CLEAN BMAJ=3.1753e-3 deg, BMIN=2.6007e-3 deg (11.43x9.36 arcsec), whereas Walter et al. Table 2 lists the nominal NA cube beam as 13.01x11.56 arcsec. The product-history beam makes integrated flux/mass close to the published total; table-beam-only conversion is retained as sensitivity, not silently substituted."
+  },
+  "HALOGAS_conversion": {
+    "header_BUNIT": "JY/BEAM.km/s",
+    "used_data_as": "N_HI [cm^-2], as recorded in FITS HISTORY conversion",
+    "caveat": "BUNIT is stale Jy/beam km/s; HISTORY documents the column-density conversion"
+  },
+  "HI_mass_method": "m_H * sum(N_HI * D^2 * pixel_solid_angle) / M_sun; no cos(i) in total mass because projected area and LOS column cancel for a thin disk",
+  "gas_source": "face-on Sigma=(N_HI/1.25e20)*1.36*cos(i); thin exponential vertical profile h=0.2 kpc is a later explicit pilot assumption; HALOGAS thick component sensitivity is separate",
+  "stellar_conversion": {
+    "BUNIT": "MJy/sr",
+    "ICA_mask_BUNIT": "MJy/sr",
+    "ICA_mask_rule": "Use mask<=0 for baseline: positive labels are inherited P4 excluded contaminants; negative labels mark the recursive second-ICA treatment and are retained because P5 recommends interpolation across those regions. Strict mask==0 and unmasked-map alternatives are reported as sensitivities.",
+    "P5_quality": {
+      "excluded_from_pipeline": 0,
+      "ICA_iteration": 2,
+      "quality_flag": 2,
+      "s1_over_total_flux_fraction": 0.727999,
+      "analysis_semimajor_arcsec": 215.4,
+      "analysis_ellipticity": 0.621,
+      "analysis_position_angle_deg": 33.7,
+      "analysis_semimajor_kpc_at_adopted_distance": 14.411183633717181
+    },
+    "ICA_mask_pixel_counts": {
+      "negative_recursive_ICA": 3029,
+      "zero_unmasked": 596974,
+      "positive_inherited_P4": 24588
+    },
+    "flux": "F_nu[pixel]=I[MJy/sr]*1e6*pixel_solid_angle[sr] Jy",
+    "luminosity": "L/Lsun=(Fnu/Fnu_sun_at_10pc)*(D/10pc)^2, Fnu_sun=280.9 Jy*10^(-0.4*3.24)",
+    "mass_to_light": 0.6,
+    "face_on_correction": "Sigma_faceon=Sigma_los*cos(i)",
+    "radial_profile_smoothing_FWHM_arcsec": 19.0,
+    "aperture_rule": "Limit baseline stellar source to the published P5 analysis ellipse; pixels outside that P3-defined ellipse are not claimed as ICA-cleaned photometry. Any stellar tail beyond it must be an explicit model/extrapolation.",
+    "caveat": "S4G P5 is a quality-2 cleaned old-stellar-light map; total mass still depends on M/L, the finite analysis aperture and outer-disk extrapolation"
+  },
+  "aperture_masses_and_fluxes": {
+    "R_lt_5_kpc": {
+      "THINGS_MHI_Msun": 294020838.54562366,
+      "HALOGAS_MHI_Msun": 303201539.2437949,
+      "S4G_flux_density_signed_Jy": 0.08302110341907841,
+      "S4G_flux_density_positive_only_Jy": 0.08302110341907841,
+      "S4G_luminosity_signed_Lsun36": 11127431637.079794,
+      "S4G_luminosity_positive_only_Lsun36": 11127431637.079794,
+      "S4G_mass_signed_Msun_at_Upsilon_0p6": 6676458982.247876,
+      "S4G_mass_positive_only_Msun_at_Upsilon_0p6": 6676458982.247876
+    },
+    "R_lt_10_kpc": {
+      "THINGS_MHI_Msun": 1451896856.1815133,
+      "HALOGAS_MHI_Msun": 1482222175.6316915,
+      "S4G_flux_density_signed_Jy": 0.1619524341619022,
+      "S4G_flux_density_positive_only_Jy": 0.16195318049326624,
+      "S4G_luminosity_signed_Lsun36": 21706705468.58937,
+      "S4G_luminosity_positive_only_Lsun36": 21706805500.399235,
+      "S4G_mass_signed_Msun_at_Upsilon_0p6": 13024023281.153622,
+      "S4G_mass_positive_only_Msun_at_Upsilon_0p6": 13024083300.23954
+    },
+    "R_lt_15_kpc": {
+      "THINGS_MHI_Msun": 3146895538.324287,
+      "HALOGAS_MHI_Msun": 3209326882.468758,
+      "S4G_flux_density_signed_Jy": 0.19912773212598267,
+      "S4G_flux_density_positive_only_Jy": 0.1991312145839896,
+      "S4G_luminosity_signed_Lsun36": 26689361319.298237,
+      "S4G_luminosity_positive_only_Lsun36": 26689828077.891,
+      "S4G_mass_signed_Msun_at_Upsilon_0p6": 16013616791.578941,
+      "S4G_mass_positive_only_Msun_at_Upsilon_0p6": 16013896846.734598
+    },
+    "R_lt_20_kpc": {
+      "THINGS_MHI_Msun": 4847829902.050569,
+      "HALOGAS_MHI_Msun": 4934366986.50867,
+      "S4G_flux_density_signed_Jy": 0.20291705282010264,
+      "S4G_flux_density_positive_only_Jy": 0.20292130020923685,
+      "S4G_luminosity_signed_Lsun36": 27197249136.23012,
+      "S4G_luminosity_positive_only_Lsun36": 27197818419.58436,
+      "S4G_mass_signed_Msun_at_Upsilon_0p6": 16318349481.738071,
+      "S4G_mass_positive_only_Msun_at_Upsilon_0p6": 16318691051.750614
+    },
+    "R_lt_25_kpc": {
+      "THINGS_MHI_Msun": 6521651351.764275,
+      "HALOGAS_MHI_Msun": 6618474700.917732,
+      "S4G_flux_density_signed_Jy": 0.20291705282010264,
+      "S4G_flux_density_positive_only_Jy": 0.20292130020923685,
+      "S4G_luminosity_signed_Lsun36": 27197249136.23012,
+      "S4G_luminosity_positive_only_Lsun36": 27197818419.58436,
+      "S4G_mass_signed_Msun_at_Upsilon_0p6": 16318349481.738071,
+      "S4G_mass_positive_only_Msun_at_Upsilon_0p6": 16318691051.750614
+    },
+    "R_lt_30_kpc": {
+      "THINGS_MHI_Msun": 8118311793.047921,
+      "HALOGAS_MHI_Msun": 8243925262.699531,
+      "S4G_flux_density_signed_Jy": 0.20291705282010264,
+      "S4G_flux_density_positive_only_Jy": 0.20292130020923685,
+      "S4G_luminosity_signed_Lsun36": 27197249136.23012,
+      "S4G_luminosity_positive_only_Lsun36": 27197818419.58436,
+      "S4G_mass_signed_Msun_at_Upsilon_0p6": 16318349481.738071,
+      "S4G_mass_positive_only_Msun_at_Upsilon_0p6": 16318691051.750614
+    },
+    "R_lt_35_kpc": {
+      "THINGS_MHI_Msun": 9216201470.276363,
+      "HALOGAS_MHI_Msun": 9378177009.636047,
+      "S4G_flux_density_signed_Jy": 0.20291705282010264,
+      "S4G_flux_density_positive_only_Jy": 0.20292130020923685,
+      "S4G_luminosity_signed_Lsun36": 27197249136.23012,
+      "S4G_luminosity_positive_only_Lsun36": 27197818419.58436,
+      "S4G_mass_signed_Msun_at_Upsilon_0p6": 16318349481.738071,
+      "S4G_mass_positive_only_Msun_at_Upsilon_0p6": 16318691051.750614
+    }
+  },
+  "S4G_mask_sensitivity_R_lt_35_kpc": {
+    "mask_le_0_inside_P5_analysis_ellipse_baseline": {
+      "flux_density_signed_Jy": 0.20291705282010264,
+      "flux_density_positive_only_Jy": 0.20292130020923685,
+      "luminosity_signed_Lsun36": 27197249136.23012,
+      "luminosity_positive_only_Lsun36": 27197818419.58436,
+      "mass_signed_Msun_at_Upsilon_0p6": 16318349481.738071,
+      "mass_positive_only_Msun_at_Upsilon_0p6": 16318691051.750614
+    },
+    "mask_eq_0_inside_P5_analysis_ellipse_strict": {
+      "flux_density_signed_Jy": 0.19944361181288192,
+      "flux_density_positive_only_Jy": 0.19944688451699077,
+      "luminosity_signed_Lsun36": 26731699104.231915,
+      "luminosity_positive_only_Lsun36": 26732137749.22385,
+      "mass_signed_Msun_at_Upsilon_0p6": 16039019462.539148,
+      "mass_positive_only_Msun_at_Upsilon_0p6": 16039282649.53431
+    },
+    "all_finite_inside_P5_analysis_ellipse_mask_sensitivity_only": {
+      "flux_density_signed_Jy": 0.2067255852865704,
+      "flux_density_positive_only_Jy": 0.2067302947361057,
+      "luminosity_signed_Lsun36": 27707711933.192657,
+      "luminosity_positive_only_Lsun36": 27708343147.13218,
+      "mass_signed_Msun_at_Upsilon_0p6": 16624627159.915594,
+      "mass_positive_only_Msun_at_Upsilon_0p6": 16625005888.279306
+    }
+  },
+  "full_map_HI_mass_Msun": {
+    "THINGS_from_NHI_map": 9822925450.196531,
+    "THINGS_from_integrated_flux": 9815671188.262016,
+    "THINGS_using_Walter_Table_2_beam": 6984975604.205514,
+    "HALOGAS_from_NHI_map": 9968259033.016993
+  },
+  "profile_sample_counts": {
+    "THINGS_HIplusHe_faceon_Msun_pc2": 118081,
+    "HALOGAS_HIplusHe_faceon_Msun_pc2": 16595,
+    "S4G_stars_native_faceon_Msun_pc2_Upsilon0p6": 96193,
+    "S4G_stars_smoothed_faceon_Msun_pc2_Upsilon0p6": 96193
+  },
+  "profile_complete_to_kpc_coverage_ge_0p8": {
+    "THINGS_HIplusHe_faceon_Msun_pc2": 34.75,
+    "HALOGAS_HIplusHe_faceon_Msun_pc2": 34.75,
+    "S4G_stars_native_faceon_Msun_pc2_Upsilon0p6": 14.25,
+    "S4G_stars_smoothed_faceon_Msun_pc2_Upsilon0p6": 14.25
+  }
+}
