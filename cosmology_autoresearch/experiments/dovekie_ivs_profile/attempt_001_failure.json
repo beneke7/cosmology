@@ -1,0 +1,9 @@
+{
+  "attempt": 1,
+  "status": "failed_after_calculation_during_final_serialization",
+  "failure": "TypeError: Object of type ndarray is not JSON serializable",
+  "failure_stage": "json.dumps(result, allow_nan=False), before result/record write",
+  "comparison_scores_persisted": false,
+  "scientific_interpretation": "None; the completed in-memory calculations are not treated as a result. The compact LCDM helper record now omits its two row-level NumPy diagnostic arrays, which are not required by this experiment.",
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --seconds 1200 -- .venv/bin/python experiments/dovekie_ivs_profile/profile.py"
+}

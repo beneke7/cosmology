@@ -1,0 +1,98 @@
+{
+  "id": "dovekie_ivs_profile_null_calibration_20260925",
+  "status": "complete_finite_search_null_calibration_independently_audited",
+  "objective": "Calibrate the finite-search Dovekie-only IVS profile improvement under Gaussian LCDM mocks with the exact released full STAT+SYS precision and the same bounded search procedure.",
+  "null_model": {
+    "Omega_m0": 0.3303167905483107,
+    "g": 0.0,
+    "common_magnitude_offset_mag": 0.007449125568204219,
+    "offset_treatment": "Added to the mock mean and analytically reprofiled as one unbounded GLS intercept in both model fits.",
+    "covariance": "C=P^-1 from the full released 1820x1820 STAT+SYS precision, unpacked in release row order; no separate MUERR diagonal added.",
+    "sampling_transform": "For P=L L^T, each mock noise is epsilon=solve(L^T,z), z~N(0,I), so Cov(epsilon)=L^-T L^-1=P^-1=C."
+  },
+  "statistic": {
+    "definition": "T=chi2_LCDM-chi2_IVS",
+    "observed_threshold": 1.4213186471747576,
+    "comparison_rule": "Inclusive T_mock >= observed threshold",
+    "replicates": 200,
+    "master_seed": 20260925,
+    "seed_rule": "SeedSequence(master_seed).spawn(200); each child yields one uint64 passed to default_rng."
+  },
+  "empirical_finite_search_null_exceedance": {
+    "exceedances": 50,
+    "valid_mocks": 200,
+    "fraction": 0.25,
+    "interval": [0.1916071696225875, 0.3159628333298691],
+    "interval_method": "Two-sided exact Clopper-Pearson 95% binomial interval",
+    "interpretation": "A coarse fitted-LCDM parametric-null calibration rate for this exact finite search only; not a universal or posterior probability, model evidence, or discovery claim."
+  },
+  "search": {
+    "LCDM": {"Omega_m0_bounds": [0.05, 0.6], "starts": 8},
+    "IVS": {
+      "Omega_m0_bounds": [0.05, 0.6],
+      "g_bounds": [-3.0, 3.0],
+      "coarse_grid_shape": [41, 41],
+      "optimizer_starts": 16,
+      "grid_minimum_included_as_start": true,
+      "optimizer": "L-BFGS-B",
+      "invalid_score_penalty": 1e80,
+      "endpoint_independent_recheck": true,
+      "physicality": "Positive m, x and E^2 sampled over the observed SN redshift range plus an exact positive baryon/CDM split ceiling and positive interior witness."
+    },
+    "pool": "One 20-process pool across mocks; searches inside each mock serial; numerical-library threads requested=1; no GPU."
+  },
+  "diagnostics": {
+    "completed": 200,
+    "failed": 0,
+    "unique_replicate_ids_0_through_199": true,
+    "largest_per_mock_whitened_recovery_abs_error": 5.995204332975845e-15,
+    "invalid_ivs_grid_points_total": 91600,
+    "invalid_ivs_optimizer_endpoints_total": 1400,
+    "raw_unsuccessful_ivs_starts_total": 2,
+    "raw_unsuccessful_lcdm_starts_total": 9,
+    "best_point_boundary_hits": 0
+  },
+  "independent_review": {
+    "status": "pass",
+    "report": "work/compute12/dovekie_ivs_null_mock_audit.md",
+    "sampler_checker": "work/compute12/check_dovekie_precision_sampler.py",
+    "full_precision_draws_checked": 4096,
+    "max_relative_whitening_error": 2.49e-15,
+    "sampled_contrast_variance_ratios": [0.979, 1.017],
+    "max_standardized_contrast_covariance_error": 0.027,
+    "all_200_accepted_ivs_endpoints_passed_4001_point_physicality_check": true,
+    "minimum_matter_across_checked_points": 0.1872,
+    "minimum_vacuum_across_checked_points": 0.3962,
+    "minimum_E2_across_checked_points": 1.0,
+    "minimum_positive_cdm_witness": 0.0936,
+    "maximum_independent_distance_integral_discrepancy": 6.7e-16,
+    "review_scope_limit": "The reviewer audited the sampler, protocol, saved per-mock outputs and accepted-point physicality; this does not prove the global optimality of each finite search or validate full cosmological perturbations."
+  },
+  "runtime_seconds": 127.98423054721206,
+  "started_utc": null,
+  "command": "env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --seconds 1470 -- .venv/bin/python work/compute11/dovekie_ivs_null_calibration.py --target 200 --pilot 10 --master-seed 20260925 --cap-seconds 1440",
+  "code_and_input_hashes": {
+    "calibration_script_sha256": "d34c6ac2bdcac7c167e2dcae1c9c217d508d01d2331bf7816d6f7eacffa1773d",
+    "hubble_diagram_sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+    "packed_precision_sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+    "source_profile_result_sha256": "4068353752350739921f77c20754d54c85ae5024e0439280fa98e93656598817",
+    "independent_sampler_checker_sha256": "e4bc0269de4eb5e403b7f8be55fe3a6714b971f47ab94dd1007d2844747d6d37"
+  },
+  "artifact_hashes": {
+    "work/compute11/mock_results.jsonl": "d2c60e5a4dbf7ce03a716e25e7635e42d645b32e78d70004b5588a1aea800fe2",
+    "work/compute11/result.json": "ec71778f8e4f9dc18501eb9ec0a279722d2228670dd6e015e7a4996a49f803e8",
+    "work/compute11/REPORT.md": "4701bb48d9946013609620549f6d5b162ab73e83ff873a0c397021de9cfde6b9",
+    "work/compute12/dovekie_ivs_null_mock_audit.md": "021a6cceb6424e87b6e1b99f425483b74a81b6c0a1102b975aa4b389db88c104",
+    "work/compute12/check_dovekie_precision_sampler.py": "e4bc0269de4eb5e403b7f8be55fe3a6714b971f47ab94dd1007d2844747d6d37",
+    "experiments/dovekie_ivs_profile/plot_null_calibration.py": "7d679e68ff95dcd0de64c0ab9d8b3543bc10116d5bc809d0362ba243957b33a8",
+    "experiments/dovekie_ivs_profile/null_calibration.png": "d0c7fae685ec07ab422f92200edc940c6d55789d61b43e250e27b0601701d09c",
+    "experiments/dovekie_ivs_profile/null_calibration.svg": "cdf977ced0e5bc5ba25a1a73a6c89948cbf43918e210243db7a50bacc50dbdc1"
+  },
+  "limits": [
+    "The finite null is conditional on the fitted LCDM shape and common-intercept treatment.",
+    "The same finite parameter bounds, grid, multistart budget and local optimizer are repeated; unsearched parameter space is not covered.",
+    "The 200-mock interval quantifies Monte Carlo binomial uncertainty only, not model uncertainty or physical-systematic uncertainty.",
+    "No BAO, CMB, radiation, perturbations, growth, posterior inference, Bayesian evidence or exact author-modified CAMB reproduction is included.",
+    "The physicality checks cover only the observed SN redshift interval and do not calibrate the baryon fraction or prove continuous/global physical viability."
+  ]
+}

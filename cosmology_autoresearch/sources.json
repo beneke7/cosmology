@@ -598,6 +598,18 @@
       "download_url": "https://arxiv.org/pdf/2609.25090",
       "arxiv_id": "2609.25090",
       "note": "Current v1, submitted 2026-09-19; conformal neutrino-mass coupling, including an adiabatic minimum-tracking case. Inspect whether perturbative stability and neutrino-sector assumptions are treated; evidence is reported as dataset/prior dependent and not uniformly favoring coupling."
+    },
+    {
+      "id": "dynamical_de_interaction_reassessment_2026",
+      "kind": "paper",
+      "title": "Reassessing Evidence for Dark-Sector Interactions with Dynamical Dark Energy and DESI DR2",
+      "url": "https://arxiv.org/abs/2609.03062",
+      "priority": "core",
+      "fetch": false,
+      "filename": "work/literature5/arXiv_2609.03062v1.pdf",
+      "download_url": "https://arxiv.org/pdf/2609.03062v1",
+      "arxiv_id": "2609.03062",
+      "note": "Exact v1 PDF and searchable text read locally; SHA-256 0e2b97a2fd988a6657e0c563bbbde7843529dea9c9ab8ac63dff88fefde356e5. Submitted 2026-09-02. With Planck+ACT, DESI DR2 and DES-Dovekie, the added interaction provides essentially no best-fit improvement in interacting CPL (reported MAP Delta-chi-square 0.03); its role changes across assumed dynamical-DE trajectories. Literature context only, not a reproduction."
     }
   ]
 }

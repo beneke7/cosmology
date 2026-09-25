@@ -1,0 +1,2042 @@
+                                                      Do DESI-DR2 BAO data imply a coupling of dark matter and dark energy?
+                                                                            Weiqiang Yang,1, ∗ Sibo Zhang,1, † Dinorah Barbosa,2, ‡ Marco
+                                                                             Antonio Alvarez,2, § Supriya Pan,3, 4, ¶ and Leila Graef2, ∗∗
+                                                            1
+                                                             Department of Physics, Liaoning Normal University, Dalian, 116029, People’s Republic of China
+                                                                    2
+                                                                      Instituto de Fisica, Universidade Federal Fluminense, 24210-346 Niteroi, RJ, Brazil
+                                                             3
+                                                               Department of Mathematics, Presidency University, 86/1 College Street, Kolkata 700073, India
+                                                         4
+                                                           Institute of Systems Science, Durban University of Technology, Durban 4000, Republic of South Africa
+                                                               We revisit an interacting dark matter (DM) – dark energy (DE) model characterized by the
+                                                            interaction function Q = Γρx , where Γ is a constant coupling parameter and ρx is the energy density
+                                                            of DE. This type of interaction is independent of the Hubble rate or other external parameters, but
+                                                            depends only on the fundamental properties of DE, such as its equation of state (EoS), wx . We pay
+                                                            special attention to wx and study three distinct interacting scenarios distinguished by the nature
+                                                            of wx , i.e. wx = −1 (when DE corresponds to the vacuum energy), wx < −1 (when DE has a
+                                                            phantom behavior), and wx > −1 (quintessential DE). We constrain all of them using the most
+                                                            recent cosmological datasets, including CMB from Planck 2018, BAO from DESI DR2, and three
+arXiv:2609.05660v1 [astro-ph.CO] 4 Sep 2026
+
+
+
+
+                                                            compilations of SNIa (PantheonPlus, Union3, and DESY5). Our analyses reveal that evidence of
+                                                            interaction is supported in scenarios with wx = −1 and wx < −1 when all three datasets are
+                                                            combined, but from the Bayesian evidence analysis, ΛCDM remains favored over these interacting
+                                                            scenarios. Regarding the S8 parameter, when wx > −1, this interacting scenario leads to mildly
+                                                            lower estimates across all datasets.
+
+
+                                                   © 2026 American Physical Society. Accepted for                  Recently, the quest for understanding dynamical dark
+                                               publication in Physical Review D. DOI: 10.1103/6kdf-vzq4         energy scenarios became unprecedentedly interesting. In
+                                                                                                                March 2025, the Dark Energy Spectroscopic Instrument
+                                                                                                                (DESI) Data Release 2 (DR2) results were released [10],
+                                                                I.   INTRODUCTION                               marking the start of the Stage IV DE era. These results,
+                                                                                                                when combined with other external probes, provide indi-
+                                                 Modern cosmology, grounded in Einstein’s General               cations of a dynamic DE component. These signs were
+                                              Relativity, reflects the interdependence between the con-         already present in the DR1 release [11]. However, the sta-
+                                              stituents of the universe and its dynamical evolution.            tistical improvement and extended redshift range of DESI
+                                              While the properties of baryons and radiation can be              DR2 yielded a level of statistical significance comparable
+                                              independently constrained by observational data, dark             to or greater than that reported with DESI DR1 in favor
+                                              matter (DM) and dark energy (DE) are accessible only              of a dynamical dark energy. Dynamical dark energy mod-
+                                              through their gravitational effects. In the standard              els parameterized by w0 and wa were shown to be pre-
+                                              cosmological model, ΛCDM, DM is treated as non-                   ferred over ΛCDM at 3.1σ for the combination of DESI
+                                              relativistic (“cold”) matter and DE as a cosmological con-        BAO and CMB data and over 2.8σ to 4.2σ when also
+                                              stant Λ. Despite its predictive success, ΛCDM faces               including SNe [10]. An extended analysis was also per-
+                                              conceptual difficulties and emerging observational chal-          formed, including more general dark energy parametriza-
+                                              lenges [1–4]. Besides the well-known cosmological con-            tion [12, 13] showing that "the evidence for dynamical
+                                              stant problem [5] and cosmic coincidence problem [6], the         dark energy, particularly at low redshift (z ≲ 0.3), is
+                                              H0 tension [1, 2, 7–9] has been an intriguing and persis-         robust and stable under different modeling choices" [12].
+                                              tent issue. Hence, alternative cosmological models often          Also, a diverse set of model-independent approaches aim-
+                                              attempt to avoid or at least alleviate the aforementioned         ing at reconstructing the dark energy properties using
+                                              difficulties while also aiming to accurately describe the         DESI BAO data in combination with CMB data and dif-
+                                              cosmological observations associated with the dark sec-           ferent Supernovae compilations, support an evolving dark
+                                              tor. A cosmological model that seeks to go beyond the             energy behavior [14–17].
+                                              standard framework should ideally not only address these             After the new results, models with a modified dark
+                                              open problems but also explore alternative dynamical be-          sector, initially proposed to handle the inconsistencies of
+                                              haviors within the dark sector.                                   the standard model [18, 19], have attracted even more
+                                                                                                                attention. In particular, coupled dark energy models, are
+                                                                                                                among the models that stand out in the literature [20–
+                                              ∗ d11102004@163.com
+                                                                                                                102], since they are not only capable of softening the
+                                               † sbzhang02@163.com                                              coincidence problem [21, 22, 103], but in some cases, they
+                                               ‡ dinorahbarbosaft@gmail.com                                     also provide a reduction of the H0 tension [58, 63, 104,
+                                               § marcocardoso@id.uff.br                                         105]. Furthermore, interactions in the dark sector can
+                                               ¶ supriya.maths@presiuniv.ac.in                                  also naturally occur in running vacuum models [106–111].
+                                              ∗∗ leilagraef@id.uff.br
+                                                                                                                Moreover, from the field theory perspective, it is natural
+                                                                                                                                          2
+
+to consider an interaction between DM and DE if they                                   A.    Background Equations
+are fundamental fields.
+   In the present article, we consider coupled scenarios in               In the interacting scenarios analyzed here, the uni-
+which DE interacts with DM through Q = Γρx , where                     verse is well approximated by the Friedmann-Lemaître-
+Γ is a constant, known as the coupling parameter of the                Robertson-Walker (FLRW) geometry, as usual, with the
+interaction, and ρx is the energy density of DE.1 This                 line element assuming the form
+interaction does not depend on external factors, such as
+the curvature or expansion rate of the universe, rather on
+                                                                                                     dr2
+                                                                                                                                     
+intrinsic properties of the dark sector components. This                ds2 = −dt2 + a2 (t)                + r 2
+                                                                                                                 (dθ 2
+                                                                                                                       + sin 2
+                                                                                                                               θdϕ2
+                                                                                                                                    )   .
+compelling feature distinguishes this class of models from                                         1 − Kr2
+interacting scenarios in which external parameters are in-                                                                             (1)
+volved. Interaction functions such as the one above have
+been studied in Ref. [112, 113]. In order to assess the role           Above, a(t) is the expansion scale factor of the universe,
+of the equation of state (EoS) of the DE in our coupled                (t, r, θ, ϕ) are the comoving coordinates, and K corre-
+models, we considered three distinct scenarios: (i) an in-             sponds to the spatial geometry of the universe. Assum-
+teracting vacuum (wx = −1) scenario (IVS); (ii) a phan-                ing a flat FLRW universe which corresponds to K = 0,
+tom (wx < −1) interacting DE (IDEphan); and (iii) a                    the Friedmann equations are,
+quintessential (wx > −1) IDE (IDEquin). Since these
+models can encompass distinct underlying mechanisms,                                      3H 2                   2Ḣ + 3H 2
+                                                                                 ρtot =        ,      ptot = −              ,           (2)
+the sound speed is not uniquely determined. Therefore,                                     κ2                        κ2
+we also tested different values for the speed of sound
+                                                                       as usual. Above, κ2 = 8πG is Einstein’s gravitational
+to analyze whether our results remain consistent under
+                                                                       constant (G is Newton’s gravitational constant), and ρtot
+modifications in the value of c2s , or if they are noticeably
+                                                                       and ptot are the sum of the energy density and pressure of
+sensitive to this quantity. We constrained these models
+                                                                       the individual fluid present in the universe, respectively.
+using the most recent cosmological probes, including the
+                                                                       Also, H is the Hubble parameter and following (2), it can
+cosmic microwave background from Planck 2018, baryon
+                                                                       be written as
+acoustic oscillations from DESI DR2, and three different
+compilations of Type Ia Supernovae.
+                                                                                 "                                               #1
+   The remainder of this paper is organized as follows.                 H(a)         ρr0 a−4 ρb0 a−3 ρc (a) ρx (a) ρν (a)
+                                                                                                                                   2
+
+                                                                             =              +       +       +       +                  . (3)
+In Section II we present the coupled dark energy models                  H0           ρcr,0   ρcr,0   ρcr,0   ρcr,0   ρcr,0
+considered and derive their background and perturba-
+tion equations. In Section III we describe the datasets                   Above, the indices (b, r, c, x, ν) stand for baryons, ra-
+and methodology used. In Section IV we report our re-                  diation, CDM, DE and neutrinos, respectively. The sub-
+sults. Finally, Section V summarizes our conclusions and               script 0 indicates quantities evaluated today (a = 1) and
+outlines prospects for future work. Additional plots and               ρcr refers to the critical density. Since the models consid-
+tables are presented in Appendix A.                                    ered in this work contemplate interactions between DE
+                                                                       and DM, we separate above the density parameter of dark
+                                                                       matter from the baryonic density parameter. The latter,
+                                                                       as well as the radiation density parameter, follows the
+                                                                       standard evolution. We can also see that, unlike in the
+              II.   COUPLED DE: SET-UP
+                                                                       ΛCDM model, the density parameter of the DE com-
+                                                                       ponent evolves with the scale factor, implying also in a
+  We consider a scenario in which DM and DE inter-                     non-standard evolution of the DM.
+act with each other, whereas the remaining components                     The evolution of the DM and DE energy densities can
+(baryons, radiation, and neutrinos) are conserved sepa-                be obtained from the conservation equations, which, in
+rately.2 We assume that the matter sector is minimally                 the presence of a coupling Q(t) can be written respec-
+coupled to gravity, as in the standard case.                           tively as
+  We begin by introducing the background equations for
+the models considered in this work.
+                                                                                          ρ̇x + 3H(1 + wx )ρx = Q(t),                   (4)
+                                                                                          ρ̇c + 3Hρc = −Q(t),                           (5)
+
+                                                                       where wx is a constant barotropic EoS of DE. Note that
+1 In this work, we restrict ourselves to cases where the interac-      for Q(t) > 0 the energy transfer occurs from DM to
+  tion occurs within the dark sector, while baryons, radiation and     DE, while Q(t) < 0 indicates the reverse scenario (DE
+  neutrinos remain unaffected. P                                       to DM).
+2 The sum of neutrino masses,        mν , and the number of neutrino     To illustrate this possibility, we shift the interaction
+  species, Neff , are fixed to 0.06 eV and 3.044.                      term Q(t) to the left-hand side of each equation and
+                                                                                                                          3
+
+rewrite the resulting expressions as follows,                  behavior of DM may indicate the presence of an interac-
+                                                               tion in the dark sector. It can be further noticed that the
+                                                               sign of wceff could be either positive or negative depend-
+             (
+               ρ̇x + 3H(1 + wxeff )ρx = 0,
+                                                        (6)    ing on the sign of Q(t). On the other hand, the nature of
+                ρ̇c + 3H(1 + wceff )ρc = 0.
+                                                               effective DE could alter with the sign of Q and one can
+                                                               expect more from this interacting mechanism:
+Above wxeff and wceff are defined as,
+                                                                  1. If wx mimics the cosmological constant (i.e. wx =
+                                                                     −1), then phantom behavior will happen for Q >
+                         Q(t)               Q(t)                     0 (transfer of energy from DM to DE), whereas,
+         wxeff = wx −         ,   wceff =        ,      (7)
+                        3Hρx                3Hρc                     for Q < 0 (transfer of energy from DE to DM),
+                                                                     wxeff could behave like a quintessential DE along
+and they are respectively termed as the effective EoS                with a dynamical DM with negative effective EoS
+parameters of DE and DM. Thus, one can see that a                    parameter.
+coupling between DE and DM is equivalent to a non-
+interacting scenario between DE and DM with "non-                 2. A phantom (wx < −1) in this interacting frame-
+constant" (or dynamical) effective EoS parameters as                 work may lead to an effective DE EoS which could
+shown in (7). This has also been observed in several                 be quintessential if Q < 0 or more phantom if
+articles, for instance in Refs. [114–116].                           Q > 0.
+   Allowing both interpretations of these models creates          3. A quintessential DE (wx > −1) may lead to an ef-
+room for a wider range of new-physics mechanisms that                fective DE EoS which could be phantom if Q > 0
+could account for the underlying dynamics. On one hand,              (transfer of energy from DM to DE). On the other
+a coupling within the dark sector is a natural expecta-              hand, for Q < 0 (transfer of energy from DE
+tion in the context of quantum field theory. Such in-                to DM), wx deviates significantly from −1 in the
+teractions help alleviate the coincidence problem and in-            quintessential direction.
+corporate the benefits of interacting dark energy models,
+which have been extensively explored in the literature.           4. Mathematically, it is possible to realize a scenario
+On the other hand, the notion of a dynamical dark en-                with wxeff = 0 which leads to Q = 3Hwx ρx . In
+ergy with a dynamical EoS has garnered support from                  this case, ρx evolves as a−3 , and consequently, since
+various theoretical frameworks. Instabilities associated             wceff = wx ρx /ρc < 0 (as wx < 0), the roles of DE
+with a cosmological constant, Λ, have been suggested for             and DM are reversed. This possibility is interest-
+a long time ago in different contexts [117–123]. By con-             ing and could have many future implications. The
+sidering time-dependent DE equations of state coming                 strength of the coupling plays a critical role in this
+from Eq.(7), we contemplate a broader range of parame-               case because if the decay rate from DE to DM in-
+terizations than those typically explored in the literature          creases significantly, this scenario could be realized.
+[12], encompassing variations of vacuum decay, phantom            Once the coupling function Q(t) is given, using the con-
+and quintessence behaviors. Furthermore, we extend the         servation equations (4) and (5), it is possible to obtain the
+analysis commonly considered by also allowing a varia-         energy density evolution of the individual dark fluids ei-
+tion in the dark matter equation of state, as described        ther analytically or numerically. Consequently, using the
+in Eq. (7). The interplay between these two interpreta-        Hubble equation in (2), the evolution of the scale factor
+tions – dark sector coupling and dynamical dark energy         can be determined. The choice of the coupling expression
+– may offer a broader stage for model builders exploring       in coupled DE–DM scenarios is a particularly delicate is-
+the fundamental physics behind these phenomena.                sue, as no fundamental theoretical framework currently
+   The nature of the effective EoS parameters depends          exists to uniquely determine the interaction function in
+on the type of interaction function used. For the local        a general setting. In this work, we consider the following
+interaction rates which do not involve H or other exter-       model, [112, 140, 141]
+nal time-dependent quantities, as in the case of this work,
+both the effective EoS parameters are time-dependent, ir-                            Q(t) = Γρx ,                       (8)
+respective of the choice of the interaction function. More-    where Γ is the coupling parameter, which has a constant
+over, if Q(t) exhibits oscillating behavior, this character-   value and dimension of the Hubble parameter. This par-
+istic will be reflected in the effective EoS parameters as     ticular form represents a local interaction rate which de-
+well. Alternatively, if the equation of state is treated as    pends only on the energy density of DE, i.e., the intrinsic
+a dynamical variable with oscillating nature [124, 125],       nature of DE. Following the direction of energy transfer,
+then this can be interpreted as an oscillating interaction     Γ > 0 indicates the transfer of energy from DM to DE,
+in the dark sector. Concerning DM, a possible dynami-          and Γ < 0 denotes the opposite. Now, for the present
+cal behavior, or alternatively the presence of a non-zero      interaction function, one can now see the explicit expres-
+EoS of DM (abbreviated as "non-cold" DM following Ref.         sions of the effective EoS parameters as,
+[126]), has recently received significant attention in the
+cosmology community [115, 126–139]. Such a non-cold               wxeff = wx − Γ/3H,       wceff = (Γ/3H) × ρx ρ−1
+                                                                                                                c .     (9)
+                                                                                                                             4
+
+   Before discussing the impact of the present interacting      where τ denotes the conformal time, δij denotes the un-
+model at the perturbative level, we present a formalism         perturbed metric tensor and hij is the perturbed metric
+discussing the challenges in obtaining analytical solutions     tensor. Following [143], assuming zero anisotropic stress,
+for such local interaction rates. In order to do so, let us     and no momentum transfer in the DM rest frame, the
+denote ρt ≡ ρc +ρx , and with this notation, the conserva-      linear perturbation equations in Fourier space in the syn-
+tion equations (4) and (5) lead to, ρ̇t +3H(ρt +wx ρx ) = 0     chronous gauge for the case wx ̸= −1, corresponding to
+and it allows us to express ρx and ρc as [142, 143]             the phantom (IDEphan) and quintessential (IDEquin)
+                                                                scenarios are described by:
+                                      
+                         1     dρt
+                ρx = −             + ρt ,               (10)                                                      "
+                                                                                             h′
+                                                                                               
+                        wx dN
+                                                                   δx′ =    −(1 + wx ) θx +              2
+                                                                                                  − 3H(cs,x − wx ) δx
+                                                                                             2
+                                        
+                           1    dρt
+               ρc = ρt +            + ρt                (11)
+                          wx dN
+                                                                                           #
+                                                                                        θx            θx
+                                                                            +3H(1 + wx ) 2 − 3Hwx′ 2
+where N = 3 ln a. Now, using the above expression for                                   k             k
+ρx in Eqn. (4) one arrives at the following equation,                                         θx
+                                                                            +3HΓa(c2s,x − wx ) 2 ,                        (15)
+                                                                                              k
+     d2 ρt             dρt                   Qwx                                                     c2s,x
+           + (2 + wx )     + (1 + wx )ρt = −     ,      (12)       θx′ =    −H(1 − 3c2s,x )θx +             k 2 δx
+     dN 2              dN                    3H                                                   (1 + wx )
+                                                                                "                      #
+                                                                                   θc − (1 + c2s,x )θx
+which for the present interaction model (8) assumes the                     +Γa                          ,                (16)
+form,                                                                                    1 + wx
+                                                                                      h′
+                                                                                        
+                                                                                                 ρx
+                                                                    δc′ =   − θc +         + Γa (δc − δx ) ,              (17)
+              2
+             d ρt
+                    
+                                 Γ
+                                       
+                                         dρt                                          2          ρc
+                  +  2 + w x −                                      θc′ =   −Hθc .                                        (18)
+             dN 2              3H(N ) dN
+                                   
+                               Γ
+               + 1 + wx −             ρt = 0.           (13)
+                             3H(N )                               While, for the interacting vacuum scenario (IVS) wx =
+                                                                −1, the DE has no contribution at the perturbative level
+From the above equation, we can see that finding the an-        and the equivalent equations for this case are [141]:
+alytical solutions for the dark components is complicated,
+and a numerical method is convenient for this purpose.
+                                                                                             h′
+                                                                                               
+We can also see that if the coupling between DE and DM                          δc′ = − θc +
+                                                                                                      ρx
+                                                                                                  + Γa δc ,               (19)
+was described by Q  e ≡ (Γ × H)ρx , instead of Eq.(8), then                                  2        ρc
+one could easily solve the above equation for constant                          θc′ = −Hθc .                              (20)
+Γ. However, in this case, the interaction function would
+correspond to a global one, which is not our focus for
+the present article (we refer to Refs. [142, 143] for more         Here, δi = δρi /ρi and θi ≡ i k j vj(i) are respectively the
+details).                                                       density contrast and the divergence of the fluid velocity
+  We now turn to the perturbative level, where we intro-        for the i-th component i = {c, x}. The trace part of the
+duce the remaining equations to be employed in testing          metric perturbations is denoted by h, while k character-
+the models against the observational data.                      izes the respective scalar mode. Prime denotes derivative
+                                                                with respect to the conformal time τ , and H ≡ a′ /a is
+                                                                the conformal Hubble factor. Lastly, the propagation
+                  B.   Perturbed Equations                      of pressure fluctuations, or rather, the comoving sound
+                                                                speed squared, in the DE reference frame is
+   The evolution of perturbations on the dark sector is
+fundamental to understanding if a model can accurately                                           δp 
+                                                                                                   x
+describe the observable universe. When dealing with cou-                              c2s,x ≡                  .          (21)
+                                                                                                 δρx     ref
+pled models, one has to be particularly careful to check
+for stability conditions on larger scales. It is well-known        Early time instabilities that arise from pressure den-
+that interactions on the dark sector can introduce insta-       sity fluctuations can be associated to a constant EoS pa-
+bilities that arise at perturbative level [24, 37, 143], even   rameter, wx [24]. We separate the phantom (IDEphan)
+for a weak dark sector coupling [24]. We consider the per-      and quintessential (IDEquin) regimes, as well as treat-
+turbed line element in the synchronous gauge, given by          ing IVS as a special case, since perturbation equations
+                                                                in IVS (Eqs. 19, 20) vanish for DE. Likewise, such in-
+        ds2 = a2 (τ ) −dτ 2 + (δij + hij )dxi dxj ,      (14)   stabilities are also related to c2s,x . The sound horizon for
+                                                
+                                                                                                                                 5
+
+DE can be described as                                                               C.    CMB Spectrum
+
+
+                                                                     We now focus on the effects of the interaction on the
+                           Z z
+                               cs,x (z ′ )dz ′
+                rs (z) =          ′            ′
+                                                 .        (22)    CMB TT spectrum and the matter power spectrum. This
+                            ∞ H(z )(1 + z )
+                                                                  analysis is important for understanding how the presence
+                                                                  of an interaction between DE and DM could affect the
+A sound speed close to zero means the DE agglomerates             large-scale structure of the universe. Before describing
+similar to matter, while for c2s,x ≃ 1 the pressure pertur-       the effects on the CMB TT and matter power spectra,
+bations do not allow DE to cluster at sub-horizon scales.         we recall the sound horizon
+                                                                                         Rz     at the time of photon-baryon
+In a standard non-interactive vacuum scenario, the defi-          decoupling rs (z⋆ ) ≡ ∞⋆ cs (z ′ )dz ′ /[H(z ′ )(1 + z ′ )], with
+nition of the sound speed would lead to a negative value          z⋆ the redshift at photon decoupling and cs is the sound
+of c2s,x , therefore we impose c2s,x > 0 to avoid instabilities   speed of the photon-baryon fluid. An interacting dark
+and nonphysical properties. Most of the time, it is con-          sector changes the background evolution of the universe,
+venient to set c2s,x = 1, a value motivated by scalar field       altering the time at which matter-radiation equality hap-
+DE. While the perturbation equations in IVS are inde-             pens. Since this epoch is related to the sound horizon rs ,
+pendent of c2s,x , variations in the DE sound speed could         we should expect IDE to impact the CMB power spec-
+directly impact the growth of structures for IDEphan              trum as well. To illustrate this effect, we plot the (to-
+and IDEquin scenarios. For instance, the growth rate              tal) matter-radiation ratio evolution for all three mod-
+f ≡ ddlnlnδam depends on the DM density contrast, which           els considered in this work in Figures 4 and 5. In the
+aside from the changes introduced by an interacting dark          IVS scenario (Fig. 4), variations in Γ/H0 can slightly
+sector [144], it will also be modified in the presence of a       alter the matter-radiation equality. Because of the direc-
+clustering DE [145]. As mentioned, for c2s,x close to zero,       tion of energy flow between the dark components, quan-
+DE perturbations may contribute to the gravitational po-          tified through the sign of Γ/H0 , their standard evolu-
+tentials and can in principle affect structure-growth ob-         tion is modified. As a consequence, the epoch of matter-
+servables such as f σ8 . However, in this work, we limit          radiation equality differs from that in the non-interacting
+ourselves to the general case c2s,x ̸= 1. A careful analysis      scenario. The top and bottom of Fig. 5 present, re-
+                                                                  spectively, the IDEphan and IDEquin models. In
+of the regime c2s,x → 0 will be left for future work. In Fig.
+                                                                  these cases, we notice that the choice of wx (left) is not
+1, we present how the choice of c2s,x could affect our model      pivotal to determining matter-radiation equality, while
+in the IDEphan case at k = 0.1/Mpc. We rescale our in-            increasing values of interaction strength (right) signifi-
+teraction parameter, defining Γ/H0 as the dimensionless           cantly shift the curves down (up), leading to later (ear-
+interacting parameter, and set wx = −1.01, Γ/H0 = −0.1            lier) matter-radiation equality for the IDEphan (IDE-
+for this plot. On the left, we notice that higher values of       quin) scenario.
+c2s,x aggravate instabilities in the early universe, causing
+them to happen at earlier times. On the right panel of                We begin discussing the CMB and matter power spec-
+Fig. 1, we calculate the growth of structures f σ8 , where        tra by giving special attention to c2s,x , which is usually
+σ8 is the amplitude of mass fluctuations in a 8Mpc/h              fixed to c2s,x = 1 in perturbative analyses. In the present
+scale. We show that, in this case, the choice of c2s,x for        article, we seek an answer to how different values of c2s,x
+fixed wx and Γ/H0 do not affect the growth rate. We               could affect the observables. As mentioned in Sec. II B,
+compare these curves with f σ8 measurements found in              the IVS case is insensitive to the DE sound speed, there-
+Table V, adapted from [146].                                      fore, no changes in CMB and P (k) are expected. Alter-
+                                                                  natively, we analyzed both spectra in the other two inter-
+   Additionally, we study variations for both wx and
+                                                                  acting scenarios for different values of c2s,x , namely, IDE-
+Γ/H0 in Figures 2 and 3. This time, in Fig. 2, we can
+                                                                  phan and IDEquin. In Fig. 6, we first plot CMB TT
+observe that increasing wx values shift the curves down-
+                                                                  spectrum and matter power spectrum for varying c2s,x in
+wards, and the evolution of f σ8 changes significantly. As
+                                                                  the IDEphan case, where we use, as an example, a typi-
+for Γ/H0 (Fig. 3), we notice that Γ/H0 values mainly
+                                                                  cal value of Γ/H0 = −0.1. This figure evidences that even
+affect the density contrast δx at later times, when DE
+                                                                  if we take different choices of c2s,x , CMB TT and matter
+becomes more relevant, while f σ8 is sensitive to the inter-
+action strength at high redshifts. We find somewhat sim-          power spectra are unaffected. Hence, constraints in c2s,x
+ilar results, now with wx and Γ/H0 behaviors inverted,            are insensitive to the cosmic microwave background data,
+for the IDEquin case, in Figs. A16, A18, A19. Lastly,             and setting c2s,x to 1 is justified in order to understand
+the IVS scenario is displayed in A17, with positive Γ/H0          how the coupling affects other cosmological parameters.
+values leading to higher f σ8 and negative Γ/H0 reaching          We find identical results for the IDEquin scenario, which
+lower values in comparison to ΛCDM (Γ/H0 = 0).                    can be visualized in Fig. A20, in Appendix A. Consider-
+                                                                  ing this, we fix c2s,x = 1 in the next analyses, including
+  Let us now discuss the spectra of CMB temperature               the statistical simulations. All the conclusions obtained
+anisotropies (CMB TT) and the matter power spectra of             in this work will remain robust regardless of the value of
+the interacting model considered in this study.                   c2s,x = 1.      We analyze the effect of different positive
+                                                                                                                                             6
+
+
+                  2                          k = 0.1/Mpc
+                          cs,2 x = 0.6                                             1.0
+                          cs,2 x = 0.8                                                     cs,2 x = 0.6
+                  0       cs,2 x = 1.0                                                     cs,2 x = 0.8
+                          cs,2 x = 1.2                                             0.8     cs,2 x = 1.0
+                  2       cs,2 x = 1.4
+                                                                                           cs,2 x = 1.2
+  log10 (| x|)
+
+
+
+                                                                                   0.6     cs,2 x = 1.4
+                  4
+
+
+
+
+                                                                                  f8
+                                                                                   0.4
+                  6
+                  8                                                                0.2
+
+                 10                                                                0.0
+                      5                  4    3             2     1           0      0.0   0.2            0.4   0.6 0.8 1.0    1.2    1.4
+                                                  log10 a                                                         Redshift z
+
+Figure 1. (IDEphan) DE density contrast fluctuations δx at k = 0.1/Mpc (left) and f σ8 curves (right) for variations of
+DE sound speed c2s,x . The f σ8 measurements (black) can be found at Appendix A, in Table V. For constructing δx , we set
+wx = −1.01, Γ/H0 = −0.1, H0 = 67.5 km/s/Mpc, Ωb h2 = 0.022 and Ωc h2 = 0.122, and for the f σ8 plot we fix ns = 0.965.
+
+
+                  2                          k = 0.1/Mpc
+                                                                                   1.0
+                                                                                                                               wx =   1.6
+                  0                                                                                                            wx =   1.4
+                                                                                   0.8                                         wx =   1.2
+                  2                                                                                                            wx =   1.01
+  log10 (| x|)
+
+
+
+
+                                                                                   0.6
+                  4
+                                                                                  f8
+
+
+
+                                                                                   0.4
+                  6                                             wx =   1.6
+                                                                wx =   1.4
+                  8                                             wx =   1.2         0.2
+                                                                wx =   1.01
+                 10                                                                0.0
+                      5                  4    3             2      1          0      0.0   0.2            0.4   0.6 0.8 1.0    1.2    1.4
+                                                  log10 a                                                         Redshift z
+
+Figure 2. (IDEphan) DE density contrast fluctuations δx at k = 0.1/Mpc (left) and f σ8 curves (right) for variations of
+EoS parameter wx . The f σ8 measurements (black) can be found at Appendix A, in Table V. For constructing δx , we set
+Γ/H0 = −0.1, c2s,x = 1, H0 = 67.5 km/s/Mpc, Ωb h2 = 0.022 and Ωc h2 = 0.122, and for the f σ8 plot we fix ns = 0.965.
+
+
+                 2                           k = 0.1/Mpc
+                               /H0 = 0.3                                           1.0
+                               /H0 = 0.2                                                                                       /H0 = 0.3
+                 0             /H0 = 0.1                                                                                       /H0 = 0.2
+                                                                                   0.8                                         /H0 = 0.1
+                               /H0 = 0                                                                                         /H0 = 0
+                 2
+  log10 (| x|)
+
+
+
+
+                                                                                   0.6
+                                                                                  f8
+
+
+
+
+                 4                                                                 0.4
+                 6                                                                 0.2
+
+                 8                                                                 0.0
+                     5              4         3             2     1           0      0.0   0.2            0.4   0.6 0.8 1.0    1.2    1.4
+                                                  log10 a                                                         Redshift z
+
+Figure 3. (IDEphan) DE density contrast fluctuations δx at k = 0.1/Mpc (left) and f σ8 curves (right) for variations of Γ/H0 .
+The f σ8 measurements (black) can be found at Appendix A, in Table V. For constructing δx , we set wx = −1.01, c2s,x = 1,
+H0 = 67.5 km/s/Mpc, Ωb h2 = 0.022 and Ωc h2 = 0.122, and for the f σ8 plot we fix ns = 0.965.
+                                                                                                                             7
+
+               5                                                  this consequently affects the matter power spectrum. On
+                                              Γ/H0 = -0.2
+                                                                  the other hand, considering the CMB TT spectrum, we
+               4                              Γ/H0 = -0.1         notice that in the low multipole region, mild changes ap-
+                                              Γ/H0 = 0            pear when we deviate from the non-interacting phantom
+               3                                                  scenario (Γ/H0 = 0). This is caused by the late-time
+ Ωₘ(z)/Ωᵣ(z)
+
+
+
+                                              Γ/H0 = 0.1
+                                                                  integrated Sachs-Wolfe effect. Overall, we see that the
+                                              Γ/H0 = 0.2
+               2                                                  coupling parameter is the main ingredient that leaves its
+                                                                  imprint on the CMB TT and matter power spectra.
+               1                                                     Finally, in Fig. 9 we show the CMB TT spectra and
+                                                                  matter power spectra for IDEquin considering again two
+               0                                                  cases, namely a fixed Γ/H0 but varying wx , and a fixed
+                                                                  wx but varying Γ/H0 . In the former case (see the upper
+               0   2000      4000         6000             8000   and lower left graphs of Fig. 9), we see that varying
+                               z                                  wx significantly affects the low multipole region of the
+                                                                  CMB spectra (late-time integrated Sachs-Wolfe effect)
+Figure 4. (IVS) Evolution of (total) matter over radiation,       and the matter power spectrum gets mildly suppressed
+Ωm (z)/Ωr (z) for variations of dimensionless interacting pa-     for increasing wx . A similar feature is also observed in the
+rameter Γ/H0 . The radiation-matter equality is indicated         matter power spectrum when we consider a fixed wx but
+with a solid black line. Γ/H0 = 0 corresponds to the ΛCDM         vary Γ/H0 (see the lower right graph of Fig. 9), however,
+model. While drawing the curves, we have fixed H0 = 67.5
+                                                                  in the CMB TT spectra, very mild changes appear in the
+km/s/Mpc, Ωb h2 = 0.022 and Ωc h2 = 0.122.
+                                                                  low ℓ region.
+                                                                     Overall, we see that varying wx or Γ/H0 significantly
+                                                                  affects the low multipole region of the CMB spectra.
+and negative values of the dimensionless coupling param-
+                                                                  Since this feature is associated to the late-time integrated
+eter Γ/H0 on the CMB TT and matter power spectra.
+                                                                  Sachs-Wolfe effect, we expect it to be predominantly sen-
+In Fig. 7 we show the results for the IVS. Our first im-
+                                                                  sitive to the combination of these parameters, i.e., wxef f .
+pression is that the interaction in the dark sector affects
+                                                                  In contrast, the more direct dependence of the matter
+both spectra. In particular, for Γ/H0 > 0 we observe the
+                                                                  power spectrum on Γ/H0 illustrates one of the avenues
+suppression of the matter power spectra compared to the
+                                                                  that breaks the degeneracy between wx and Γ/H0 .
+non-interacting scenario (Γ/H0 = 0). This is evident be-
+                                                                     In the following section, we introduce the dataset and
+cause Γ/H0 > 0 indicates the flow of energy from DM
+                                                                  the numerical methodology used to test the prediction of
+to DE, and hence, this affects the amplitude of the mat-
+                                                                  these models with the most recent observations.
+ter density fluctuations, resulting in a suppressed matter
+power spectrum. The reverse scenario is observed for
+Γ/H0 < 0 because in this case DE decays to DM. Now
+regarding the CMB TT spectra, we find that only at large
+angular scales (i.e., the low multipole region), effects of
+interaction are observed. These effects correspond to the
+late-time integrated Sachs-Wolfe effect. Additionally, we
+notice that such effects are pronounced when Γ/H0 in-                  III.   DATASETS AND METHODOLOGY
+creases either in the positive or negative direction, which
+means that they depend on the strength of the interac-
+tion.                                                                In this section, we describe the datasets used in our
+   In Fig. 8 we show the CMB TT spectra and matter                analysis, the adopted methodology, and the priors im-
+power spectra for IDEphan, considering two separate               posed on the free parameters of the model under consid-
+cases: fixed Γ/H0 but varying wx and fixed wx but vary-           eration.
+ing Γ/H0 . In the upper left and lower left graphs of Fig. 8         We begin by presenting the dataset used in our analy-
+we show the first case, where wx varies with a fixed Γ/H0 .       sis, which comprises the following observables:
+In this case, we do not observe any changes in the mat-              1. Cosmic      Microwave     Background       (CMB)
+ter power spectrum; however, in the CMB TT spectrum,                    anisotropies from Planck 2018 [147, 148]. In this
+we notice some changes, particularly in the large angular               work, we employed the plikTTTEEE+lowl+lowE
+scales. This again corresponds to the late-time integrated              likelihood combination, which contains information
+Sachs-Wolfe effect. In the second scenario (upper right                 on the angular power spectra for the tempera-
+and lower right graphs of Fig. 8) where we fix wx but vary              ture and E-mode polarization on low and high
+Γ/H0 , we can clearly see that the matter power spectrum                multipoles.
+gets enhanced compared to the non-interacting scenario.
+This can be related to the increased density of DM ob-               2. Baryon Acoustic Oscillations (BAO) data obtained
+tained from decaying DE, as a result of which the am-                   from the DESI DR2 [10] survey. This dataset con-
+plitude of the matter density fluctuations increases, and               sists of cosmic distance measurements from various
+                                                                                                                                                                               8
+
+                           5                                                                            5
+                                                                            wₓ = -1.6                                                                   Γ/H0 = -0.3
+                           4                                                wₓ = -1.4                   4                                               Γ/H0 = -0.2
+                                                                            wₓ = -1.2                                                                   Γ/H0 = -0.1
+                           3                                                wₓ = -1.01                  3                                               Γ/H0 = 0
+       Ωₘ/Ωᵣ
+
+
+
+
+                                                                                                Ωₘ/Ωᵣ
+                           2                                                                            2
+
+                           1                                                                            1
+
+                           0                                                                            0
+
+                             0             2000         4000         6000               8000              0                     2000    4000        6000               8000
+                                                          z                                                                               z
+                           5                                                                            5
+                                                                            wₓ = -0.99                                                                      Γ/H0 = 0
+                           4                                                wₓ = -0.8                   4                                                   Γ/H0 = 0.1
+                                                                            wₓ = -0.6                                                                       Γ/H0 = 0.2
+                           3                                                wₓ = -0.4                   3                                                   Γ/H0 = 0.3
+       Ωₘ/Ωᵣ
+
+
+
+
+                                                                                                Ωₘ/Ωᵣ
+                           2                                                                            2
+
+                           1                                                                            1
+
+                           0                                                                            0
+
+                             0             2000         4000         6000               8000              0                     2000    4000        6000               8000
+                                                          z                                                                               z
+
+Figure 5. (IDEphan and IDEquin) Evolution of (total) matter over radiation, Ωm (z)/Ωr (z) for variations of EoS parameter
+wx and dimensionless interaction parameter Γ/H0 in the IDEphan (top) and IDEquin (bottom) models. Higher absolute
+values of Γ/H0 are equivalent to stronger coupling in both scenarios. The radiation-matter equality is indicated with a solid
+black line. Γ/H0 = 0 corresponds to the ΛCDM model. While drawing the curves, we have fixed H0 = 67.5 km/s/Mpc,
+Ωb h2 = 0.022 and Ωc h2 = 0.122.
+
+                           6000
+                                   cs,2 x = 0.6                                                         105
+
+                           5000    cs,2 x = 0.8
+                                   cs,2 x = 1.0                                                         104
+                                   cs,2 x = 1.2
+                           4000
+   ( + 1)C TT (2 )[ K 2]
+
+
+
+
+                                   cs,2 x = 1.4                                                         103
+
+                           3000                                                                         102
+                                                                                               P(k)
+
+
+
+
+                           2000                                                                         101      cs,2 x = 0.6
+                                                                                                                 cs,2 x = 0.8
+                           1000                                                                                  cs,2 x = 1.0
+                                                                                                        100
+                                                                                                                 cs,2 x = 1.2
+                                                                                                                 cs,2 x = 1.4
+                               0                                                                      10 1 4
+                                                  101          102               103                     10                      10 3      10 2      10 1                100
+                                                                                                                                        k [h/Mpc]
+
+
+Figure 6. (IDEphan) CMB TT spectrum (left) and matter power spectrum (right) for different values of c2s,x . We have fixed
+Γ/H0 = −0.1 and wx = −1.01. The mean values of the other parameters, e.g. Ωb h2 , Ωc h2 and H0 required to generate the
+plots are taken from the combined analysis CMB+DESI+PantheonPlus (Table III).
+
+
+                           large-scale structure tracers: (i) the bright galaxy                                 correlation with QSO, are also considered in this
+                           sample (BGS); (ii) emission line galaxies (ELG);                                     analysis [149]. As specified in [149], there is no de-
+                           (iii) luminous red galaxies (LRG) and (iv) quasi-                                    pendence between catalogs.
+                           stellar objects (QSO). Lastly, the auto-correlations
+                           of Ly-α forest spectra, as well as their cross-                                    3. A set of three wide Type Ia Supernovae (SNIa)
+                                                                                                                                                                                                            9
+
+                           6000
+                                       /H0 = 0.4                                                                                    105
+                                       /H0 = 0.2
+                           5000        /H0 = 0                                                                                      104
+                                       /H0 = 0.2
+                           4000        /H0 = 0.4
+   ( + 1)C TT (2 )[ K 2]
+
+
+                                                                                                                                    103
+
+                           3000                                                                                                     102
+
+
+
+
+                                                                                                            P(k)
+                           2000                                                                                                     101
+                                                                                                                                              /H0 = 0.4
+                                                                                                                                              /H0 = 0.2
+                           1000                                                                                                     100       /H0 = 0
+                                                                                                                                              /H0 = 0.2
+                                                                                                                                              /H0 = 0.4
+                                 0                                                                                            10 1 4
+                                                 101                               102          103                              10                       10 3            10 2           10 1         100
+                                                                                                                                                                       k [h/Mpc]
+
+
+Figure 7. (IVS) The left graph corresponds to CMB TT spectrum and the right graph corresponds to matter power spectrum
+for different values of Γ/H0 in the IVS. The mean values of the other parameters, e.g. Ωb h2 , Ωc h2 and H0 required to generate
+the plots are taken from the combined analysis CMB+DESI+PantheonPlus (Table II).
+
+                           6000                                                                                                     6000
+                                       /H0 =     0.1, wx =      1.6                                                                             /H0 = 0.3, wx = 1.01
+                                       /H0 =     0.1, wx =      1.4                                                                             /H0 = 0.2, wx = 1.01
+                           5000        /H0 =     0.1, wx =      1.2                                                                 5000        /H0 = 0.1, wx = 1.01
+                                       /H0 =     0.1, wx =      1.01                                                                            /H0 = 0, wx = 1.01
+                           4000                                                                                                     4000
+   ( + 1)C TT (2 )[ K 2]
+
+
+
+
+                                                                                                            ( + 1)C TT (2 )[ K 2]
+                           3000                                                                                                     3000
+
+                           2000                                                                                                     2000
+
+                           1000                                                                                                     1000
+
+                                 0                                                                                                        0
+                                                 101                               102          103                                                       101                      102          103
+
+                           105                                                                                                      105
+
+                           104                                                                                                      104
+
+                           103                                                                                                      103
+
+                           102                                                                                                      102
+   P(k)
+
+
+
+
+                                                                                                            P(k)
+
+
+
+
+                           101                                                                                                      101
+                                     /H0 =   0.1, wx =   1.6                                                                                  /H0 = 0.3, wx = 1.01
+                           100       /H0 =   0.1, wx =   1.4                                                                        100       /H0 = 0.2, wx = 1.01
+                                     /H0 =   0.1, wx =   1.2                                                                                  /H0 = 0.1, wx = 1.01
+                                     /H0 =   0.1, wx =   1.01                                                                                 /H0 = 0, wx = 1.01
+                     10 1 4                                                                                                   10 1 4
+                        10                      10 3                      10 2           10 1         100                        10                       10 3            10 2           10 1         100
+                                                                       k [h/Mpc]                                                                                       k [h/Mpc]
+
+
+Figure 8. (IDEphan) The upper panel corresponds to CMB TT spectrum and the lower panel corresponds to matter power
+spectrum for different values of Γ/H0 and wx in the IDEphan scenario. In the figures on the l.h.s. Γ/H0 is fixed, whereas wx
+assumes different values. In the figures on the r.h.s. the parameter wx is fixed while Γ/H0 assumes different values. The mean
+values of the other parameters, e.g. Ωb h2 , Ωc h2 and H0 required to generate the plots are taken from the combined analysis
+CMB+DESI+PantheonPlus (Table IV).
+
+
+                           compilations: (i) PantheonPlus sample [150] with                                                 modified version of the cosmology code CAMB [153] in com-
+                           1701 light curves from 1550 supernovae; (ii) the                                                 bination with the sampler Cobaya [154]. The latter was
+                           Union3 catalog [151], incorporating 2087 SNIa                                                    used to run the Markov Chain Monte Carlo (MCMC)
+                           from 24 datasets; and (iii) a new re-analysis of 5-                                              chains, with the Gelman-Rubin statistic as the conver-
+                           year supernova survey data of the Dark Energy                                                    gence diagnosis. Lastly, GetDist [155] was used to an-
+                           Survey (labeled as DES-Dovekie) [152].                                                           alyze the chains. Table I describes the uniform priors
+                                                                                                                            employed for the free parameters of each cosmological
+In order to conduct our statistical analysis, we utilized a
+                                                                                                                                                                                                                       10
+
+                           6000                                                                                                            6000
+                                       /H0 = 0.1, wx =      0.99                                                                                       /H0 = 0, wx = 0.99
+                                       /H0 = 0.1, wx =      0.8                                                                                        /H0 = 0.1, wx = 0.99
+                           5000        /H0 = 0.1, wx =      0.6                                                                            5000        /H0 = 0.2, wx = 0.99
+                                       /H0 = 0.1, wx =      0.4                                                                                        /H0 = 0.3, wx = 0.99
+                           4000                                                                                                            4000
+   ( + 1)C TT (2 )[ K 2]
+
+
+
+
+                                                                                                                   ( + 1)C TT (2 )[ K 2]
+                           3000                                                                                                            3000
+
+                           2000                                                                                                            2000
+
+                           1000                                                                                                            1000
+
+                                 0                                                                                                               0
+                                                101                              102                  103                                                       101                           102          103
+
+                           105                                                                                                             105
+
+                           104                                                                                                             104
+
+                           103                                                                                                             103
+
+                           102                                                                                                             102
+   P(k)
+
+
+
+
+                                                                                                                  P(k)
+                           101                                                                                                             101
+                                     /H0 = 0.1, wx = 0.99                                                                                            /H0 = 0, wx = 0.99
+                           100       /H0 = 0.1, wx = 0.8                                                                                   100       /H0 = 0.1, wx = 0.99
+                                     /H0 = 0.1, wx = 0.6                                                                                             /H0 = 0.2, wx = 0.99
+                                     /H0 = 0.1, wx = 0.4                                                                                             /H0 = 0.3, wx = 0.99
+                     10 1 4                                                                                                          10 1 4
+                        10                       10 3                   10 2              10 1              100                         10                       10 3                10 2           10 1         100
+                                                                     k [h/Mpc]                                                                                                    k [h/Mpc]
+
+
+Figure 9. (IDEquin) The upper panel corresponds to CMB TT spectrum and the lower panel corresponds to matter power
+spectrum for different values of Γ/H0 and wx in the IDEquin scenario. In the figures on the l.h.s. Γ/H0 is fixed while wx
+assumes different values. In the figures on the r.h.s. the parameter wx is fixed while Γ/H0 assumes different values. The mean
+values of the other parameters, e.g. Ωb h2 , Ωc h2 and H0 required to generate the plots are taken from the combined analysis
+CMB+DESI+PantheonPlus (Table IV).
+
+                                                               Parameter Prior (IVS) Prior (IDEphan) Prior (IDEquin)
+                                                                      Ωb h2            [0.005, 0.1]           [0.005, 0.1]                                       [0.005, 0.1]
+                                                                             2
+                                                                      Ωc h             [0.001, 0.99]         [0.001, 0.99]                                      [0.001, 0.99]
+                                                                         τ              [0.01, 0.8]               [0.01, 0.8]                                     [0.01, 0.8]
+                                                                        ns              [0.8, 1.2]                [0.8, 1.2]                                       [0.8, 1.2]
+                                                                           10
+                                                                   log[10 As ]         [1.61, 3.91]           [1.61, 3.91]                                       [1.61, 3.91]
+                                                                    100θM C              [0.5, 10]                 [0.5, 10]                                          [0.5, 10]
+                                                                      Γ/H0               [−3, 3]                       [−3, 0]                                         [0, 3]
+                                                                        wx                   −                    [−3, −1]                                            [−1, 0]
+
+
+ Table I. Uniform priors imposed on the free parameters of the proposed cosmological scenarios for the statistical analysis.
+
+
+model considered.                                                                                                                  interacting scenario, we performed five analyses, e.g.
+                                                                                                                                   CMB, CMB+DESI, and three distinct combined analyses
+                                                                                                                                   CMB+DESI+SNIa are characterized by different vari-
+                                                IV.          RESULTS                                                               ants of SNIa (PantheonPlus, Union3, and DESY5).
+                                                                                                                                      Moreover, to appraise these competing cosmological
+   In this section, we present the results of our sta-                                                                             scenarios, we calculate the logarithm of the Bayesian ev-
+tistical analysis, that is, the constraints on the inter-                                                                          idence, ln Z, with the MCEvidence methodology devel-
+acting scenarios, and examine whether they are pre-                                                                                oped in [156]. This calculation was executed using the
+ferred with respect to the standard ΛCDM cosmologi-                                                                                Cobaya interface bundled in the wgcosmo repository [157].
+cal model using various observational surveys. For each                                                                               Bayes’ rule relates the posterior density for the param-
+                                                                                                                                          11
+
+  Parameters             CMB                   CMB+DESI          CMB+DESI+PantheonPlus CMB+DESI+Union3 CMB+DESI+DES-Dovekie
+     Ωb h2     0.02228+0.00015+0.00029          +0.00013+0.00026
+                       −0.00015−0.00029 0.02250−0.00013−0.00026   0.02254+0.00013+0.00025
+                                                                          −0.00013−0.00025 0.02255+0.00013+0.00026
+                                                                                                   −0.00013−0.00025 0.02255+0.00013+0.00026
+                                                                                                                            −0.00013−0.00026
+     Ωc h2     0.07840+0.04833+0.05734          +0.02096+0.03349
+                       −0.03336−0.07516 0.10626−0.01488−0.03675   0.12789+0.00934+0.01389
+                                                                          −0.00641−0.01574 0.12954+0.01104+0.01408
+                                                                                                   −0.00524−0.01757 0.13016+0.00845+0.01230
+                                                                                                                            −0.00556−0.01390
+                       +0.00174+0.00527         +0.00079+0.00220          +0.00047+0.00106         +0.00046+0.00112
+    100θMC     1.04333−0.00340−0.00409 1.04167−0.00123−0.00196    1.04041−0.00054−0.00095  1.04035−0.00061−0.00101  1.04033+0.00042+0.00092
+                                                                                                                            −0.00050−0.00088
+       τ         0.0550+0.0076+0.0159
+                        −0.0075−0.0161    0.0590+0.0071+0.0165
+                                                 −0.0084−0.0148     0.0593+0.0072+0.0166
+                                                                           −0.0082−0.0147    0.0595+0.0072+0.0165
+                                                                                                    −0.0084−0.0146    0.0589+0.0077+0.0158
+                                                                                                                             −0.0077−0.0157
+                        +0.0043+0.0084           +0.0036+0.0070            +0.0033+0.0065           +0.0035+0.0065
+       ns        0.9716−0.0044−0.0085     0.9788−0.0035−0.0070      0.9801−0.0034−0.0068     0.9803−0.0034−0.0067     0.9802+0.0034+0.0067
+                                                                                                                             −0.0034−0.0070
+  ln(1010 As )     3.057+0.016+0.033
+                        −0.015−0.032        3.058+0.015+0.033
+                                                 −0.017−0.031         3.057+0.015+0.035
+                                                                           −0.017−0.031        3.057+0.015+0.034
+                                                                                                    −0.018−0.030        3.056+0.016+0.033
+                                                                                                                             −0.016−0.032
+                        +0.144+0.197             +0.062+0.127               +0.030+0.065             +0.025+0.074
+     Γ/H0          0.134−0.106−0.211        0.038−0.070−0.125        −0.044−0.038−0.060       −0.051−0.047−0.061       −0.053+0.026+0.059
+                                                                                                                              −0.036−0.054
+                        +0.1023+0.1627           +0.0513+0.0872            +0.0254+0.0385           +0.0300+0.0404           +0.0228+0.0352
+      Ωm         0.2162−0.1060−0.1610     0.2738−0.0415−0.0914      0.3305−0.0183−0.0429     0.3352−0.0162−0.0485     0.3367−0.0166−0.0387
+       σ8          0.958+0.081+0.265
+                        −0.190−0.201        0.839+0.038+0.119
+                                                 −0.068−0.100         0.775+0.018+0.046
+                                                                           −0.027−0.039        0.771+0.016+0.051
+                                                                                                    −0.030−0.041        0.769+0.016+0.040
+                                                                                                                             −0.024−0.036
+H0 [Km/s/Mpc]       69.39+2.31+4.21
+                         −2.59−4.08          68.93+0.95+2.11
+                                                  −1.17−2.01           67.64+0.46+1.02
+                                                                            −0.58−0.95          67.54+0.47+1.16
+                                                                                                     −0.65−1.04          67.51+0.43+1.00
+                                                                                                                              −0.52−0.89
+       S8          0.766+0.094+0.117
+                        −0.028−0.194        0.793+0.022+0.038
+                                                 −0.014−0.042         0.812+0.011+0.020
+                                                                           −0.011−0.021        0.813+0.011+0.020
+                                                                                                    −0.010−0.022        0.813+0.010+0.020
+                                                                                                                             −0.010−0.019
+                         +0.29+0.57                +0.22+0.42                +0.20+0.41               +0.21+0.40
+  rdrag [Mpc]      147.06−0.29−0.58         147.63−0.21−0.43          147.74−0.21−0.41         147.74−0.21−0.42         147.76+0.21+0.41
+                                                                                                                              −0.21−0.41
+     lnBij               −2.7                      −4.8                      −5.2                     −4.6                    −4.4
+
+Table II. (IVS) 68% and 95% CL constraints on cosmological parameters for CMB, CMB+DESI, CMB+DESI+PantheonPlus,
+CMB+DESI+Union3 and CMB+DESI+DES-Dovekie data combinations.
+
+                                                               IVS:CMB
+                                                               IVS:CMB+DESI
+                                                               IVS:CMB+DESI+PantheonPlus
+                                                               IVS:CMB+DESI+Union3
+                                                               IVS:CMB+DESI+DES-Dovekie
+
+
+                      75
+
+                      70
+               H0
+
+
+
+
+                      65
+
+                      0.4
+                      0.3
+                m
+
+
+
+
+                      0.2
+                      0.1
+                      0.0
+
+                      0.8
+                      0.7
+              S8
+
+
+
+
+                      0.6
+                      0.5
+
+                    148.0
+                    147.5
+            rdrag
+
+
+
+
+                    147.0
+                    146.5
+                            0.0      0.2   0.4   65   70   75 0.0 0.1 0.2 0.3 0.4          0.5 0.6 0.7 0.8                147      148
+                                   /H0                H0                 m                       S8                        rdrag
+
+Figure 10. (IVS) One dimensional posterior distributions and two dimensional joint contours for the most relevant parameters
+using CMB from Planck 2018 and its combination with several cosmological datasets.
+
+
+eter vector Θ of a given model Mi to the data D via
+                                  L(D|Θ, Mi )π(Θ|Mi )                                                                Bi
+          P (Θ|D, Mi ) =                              ,      (23)                                            Bij =                       (25)
+                                          Zi                                                                         Bj
+where L is the maximum likelihood function, π the prior                or, equivalently, by the difference in their log–Bayes fac-
+probability density, and the evidence Zi reads                         tors,
+                 Z
+            Bi = L(D|Θ, Mi )π(Θ|Mi )dΘ.            (24)                                           ln Bij ≡ ln Bi − ln Bj .               (26)
+
+   The relative performance of two models i and j is quan-             We adopt i for the interacting model (IVS, IDEphan,
+tified by the Bayes factor                                             IDEquin) and let j denote the baseline ΛCDM model;
+                                                                                                                                                12
+
+   Parameters            CMB                   CMB+DESI            CMB+DESI+PantheonPlus CMB+DESI+Union3 CMB+DESI+DES-Dovekie
+      Ωb h2    0.02233+0.00015+0.00030            +0.00013+0.00027
+                        −0.00015−0.00029 0.02249−0.00014−0.00025     0.02252+0.00013+0.00026
+                                                                              −0.00013−0.00025 0.02252+0.00013+0.00026
+                                                                                                        −0.00013−0.00025 0.02253+0.00013+0.00025
+                                                                                                                                  −0.00013−0.00025
+      Ω c h2   0.13200+0.00587+0.01333            +0.01087+0.01225
+                        −0.01009−0.01188 0.13219−0.00596−0.01320     0.13552+0.00822+0.00927
+                                                                              −0.00324−0.01273 0.13530+0.00843+0.00946
+                                                                                                        −0.00334−0.01320 0.13597+0.00754+0.00870
+                                                                                                                                  −0.00290−0.01196
+                        +0.00052+0.00093          +0.00050+0.00096            +0.00036+0.00091          +0.00037+0.00089
+     100θMC    1.03998−0.00052−0.00092 1.04016−0.00055−0.00091       1.04000−0.00049−0.00076   1.04003−0.00051−0.00079   1.03999+0.00036+0.00087
+                                                                                                                                  −0.00046−0.00073
+         τ       0.0541+0.0075+0.0155
+                        −0.0075−0.0150     0.0577+0.0079+0.0164
+                                                  −0.0078−0.0154       0.0585+0.0073+0.0164
+                                                                              −0.0082−0.0150     0.0585+0.0074+0.0164
+                                                                                                        −0.0081−0.0153     0.0583+0.0079+0.0170
+                                                                                                                                  −0.0079−0.0161
+                        +0.0042+0.0085            +0.0035+0.0068              +0.0035+0.0069            +0.0034+0.0066
+        ns       0.9731−0.0042−0.0085      0.9781−0.0035−0.0068        0.9794−0.0035−0.0066      0.9794−0.0035−0.0068      0.9794+0.0034+0.0067
+                                                                                                                                  −0.0034−0.0068
+                        +0.015+0.031              +0.016+0.034                +0.016+0.033              +0.016+0.033
+         10
+   ln(10 As )      3.054−0.015−0.030         3.056−0.016−0.032           3.056−0.016−0.032         3.056−0.016−0.032         3.056+0.016+0.035
+                                                                                                                                  −0.017−0.033
+      Γ/H0       > −0.061 > −0.098         > −0.076 > −0.104            −0.073+0.013+0.053
+                                                                               −0.036−0.038       −0.072+0.013+0.055
+                                                                                                         −0.037−0.039       −0.075+0.012+0.050
+                                                                                                                                   −0.033−0.036
+                                                 +0.045
+        wx        > −1.22 > −1.43        −1.067−0.030 > −1.132         > −1.042 > −1.073         > −1.040 > −1.076         > −1.036 > −1.062
+                        +0.0421+0.0698            +0.0226+0.0351              +0.0201+0.0255            +0.0216+0.0275            +0.0185+0.0240
+        Ωm       0.3112−0.0329−0.0751      0.3261−0.0205−0.0357        0.3438−0.0101−0.0328      0.3435−0.0111−0.0351      0.3464−0.0093−0.0311
+        σ8         0.812+0.024+0.064
+                        −0.036−0.057         0.782+0.020+0.039
+                                                  −0.023−0.036           0.765+0.012+0.034
+                                                                              −0.019−0.028         0.765+0.013+0.035
+                                                                                                        −0.021−0.030         0.762+0.012+0.033
+                                                                                                                                  −0.018−0.028
+ H0 [Km/s/Mpc]      70.91+1.76+8.30
+                         −4.83−5.87           69.04+0.83+1.77
+                                                   −0.98−1.72             67.95+0.49+1.06
+                                                                               −0.55−0.99           67.93+0.55+1.19
+                                                                                                         −0.65−1.13           67.79+0.47+0.96
+                                                                                                                                   −0.47−0.88
+                        +0.029+0.049              +0.011+0.022                +0.010+0.020              +0.011+0.021
+        S8         0.824−0.023−0.053         0.815−0.011−0.022           0.818−0.010−0.019         0.818−0.011−0.021         0.818+0.010+0.020
+                                                                                                                                  −0.010−0.020
+   rdrag [Mpc]     147.13+0.30+0.57
+                          −0.29−0.58         147.56+0.22+0.45
+                                                    −0.22−0.44           147.66+0.21+0.40
+                                                                                −0.20−0.40         147.66+0.22+0.42
+                                                                                                          −0.21−0.42         147.67+0.21+0.39
+                                                                                                                                    −0.20−0.40
+       lnBij             −6.3                      −7.5                        −8.0                      −7.4                      −7.5
+
+Table III. (IDEphan) 68% and 95% CL constraints are presented for CMB, CMB+DESI, CMB+DESI+PantheonPlus,
+CMB+DESI+Union3 and CMB+DESI+DES-Dovekie datasets.
+
+   Parameters            CMB                   CMB+DESI            CMB+DESI+PantheonPlus CMB+DESI+Union3 CMB+DESI+DES-Dovekie
+      Ωb h2    0.02226+0.00015+0.00029            +0.00013+0.00026
+                        −0.00015−0.00029 0.02249−0.00014−0.00027     0.02255+0.00013+0.00026
+                                                                              −0.00013−0.00026 0.02254+0.00013+0.00026
+                                                                                                        −0.00013−0.00025 0.02255+0.00013+0.00026
+                                                                                                                                  −0.00013−0.00025
+                        +0.04674+0.04443          +0.03022+0.03600            +0.01241+0.01417          +0.01401+0.01541
+      Ωc h 2
+               0.07286−0.01946−0.07186 0.08212−0.01264−0.04806       0.10451−0.00324−0.02365   0.10307−0.00281−0.02767   0.10589+0.01110+0.01247
+                                                                                                                                  −0.00273−0.02110
+                        +0.00124+0.00502          +0.00080+0.00340            +0.00037+0.00154          +0.00032+0.00180
+     100θMC    1.04366−0.00314−0.00341 1.04315−0.00192−0.00245       1.04178−0.00082−0.00118   1.04187−0.00091−0.00125   1.04170+0.00032+0.00140
+                                                                                                                                  −0.00073−0.00108
+                        +0.0072+0.0162            +0.0074+0.0167              +0.0074+0.0169            +0.0077+0.0174
+         τ       0.0551−0.0082−0.0150      0.0599−0.0087−0.0151        0.0601−0.0088−0.0152      0.0606−0.0088−0.0157      0.0605+0.0077+0.0169
+                                                                                                                                  −0.0085−0.0157
+        ns       0.9705+0.0043+0.0085
+                        −0.0043−0.0086     0.9786+0.0035+0.0070
+                                                  −0.0035−0.0069       0.9802+0.0034+0.0069
+                                                                              −0.0034−0.0067     0.9799+0.0035+0.0070
+                                                                                                        −0.0034−0.0070     0.9803+0.0035+0.0066
+                                                                                                                                  −0.0034−0.0068
+                        +0.015+0.033              +0.016+0.034                +0.016+0.035              +0.016+0.035
+         10
+   ln(10 As )      3.058−0.017−0.031         3.060−0.018−0.032           3.059−0.018−0.032         3.060−0.018−0.032         3.060+0.017+0.034
+                                                                                                                                  −0.017−0.033
+                                                 +0.044
+      Γ/H0         < 0.231 < 0.343         0.118−0.101 < 0.251           < 0.054 < 0.123           < 0.059 < 0.142           < 0.048 < 0.111
+        wx       < −0.813 < −0.620         < −0.951 < −0.901        −0.953+0.019
+                                                                             −0.036 < −0.901   −0.951+0.018
+                                                                                                       −0.040 < −0.893   −0.951+0.022
+                                                                                                                                 −0.032 < −0.903
+        Ωm       0.2333+0.1082+0.1714
+                        −0.1037−0.1818     0.2209+0.0683+0.0863
+                                                  −0.0341−0.1077       0.2777+0.0290+0.0365
+                                                                              −0.0098−0.0539     0.2745+0.0334+0.0406
+                                                                                                        −0.0096−0.0650     0.2816+0.0261+0.0321
+                                                                                                                                  −0.0081−0.0485
+        σ8         0.944+0.077+0.257
+                        −0.175−0.186         0.909+0.036+0.186
+                                                  −0.102−0.123           0.828+0.012+0.064
+                                                                              −0.034−0.045         0.833+0.011+0.081
+                                                                                                        −0.039−0.052         0.823+0.011+0.059
+                                                                                                                                  −0.030−0.042
+ H0 [Km/s/Mpc]      65.28+4.84+7.30
+                         −3.11−8.36           69.21+0.86+2.02
+                                                   −1.13−1.84             67.82+0.54+1.04
+                                                                               −0.56−1.06           67.85+0.63+1.28
+                                                                                                         −0.65−1.26           67.72+0.52+1.00
+                                                                                                                                   −0.52−1.00
+                        +0.101+0.149              +0.041+0.055                +0.016+0.027              +0.018+0.030
+        S8         0.786−0.041−0.215         0.764−0.013−0.082           0.794−0.010−0.031         0.793−0.010−0.037         0.796+0.015+0.027
+                                                                                                                                  −0.011−0.028
+   rdrag [Mpc]            +0.30+0.59
+                   147.01−0.30−0.60                 +0.22+0.43
+                                             147.65−0.22−0.42                   +0.22+0.40
+                                                                         147.75−0.21−0.44                 +0.22+0.44
+                                                                                                   147.74−0.22−0.43          147.76+0.22+0.43
+                                                                                                                                    −0.21−0.42
+       lnBij             −4.0                      −7.5                        −8.4                      −7.6                      −8.1
+
+Table IV. (IDEquin) 68% and 95% CL constraints on cosmological parameters for CMB,                                                 CMB+DESI,
+CMB+DESI+PantheonPlus, CMB+DESI+Union3 and CMB+DESI+DES-Dovekie data combinations.
+
+
+therefore ln Bij > 0 favors the interaction and ln Bij < 0                 68% CL), which indicates that no evidence of interac-
+indicates the reverse (i.e. ΛCDM is preferred)                             tion in the dark sector is preferred by CMB. We find
+   To interpret the magnitude of ln Bij , we follow the re-                a higher Hubble constant, H0 = 69.39+2.31 −2.59 , in com-
+vised Jeffreys’ scale [158]: [0, 1] (inconclusive), [1, 2.5]               parison to ΛCDM from Planck [147]. However, the es-
+(weak ), [2.5, 5] (moderate), [5, 10] (strong), and > 10                   timated value of Ωc h2 within this interacting scenario,
+(very strong) support for the model with the higher evi-                                  −0.03336 at 68% CL, is significantly lower
+                                                                           Ωc h2 = 0.07840+0.04833
+dence.                                                                     than ΛCDM, while σ8 (σ8 = 0.958+0.081
+                                                                                                              −0.190 ) is higher. As
+   In Tables III and IV we present the observational con-                  a result, Ωm and S8 also lead to lower values than those
+straints on the free and derived parameters of the inter-                  reported in [147].
+acting scenarios, and in Figs. 10, 12, 14 we show the one                     When DESI is combined with CMB, the coupling pa-
+dimensional posterior distributions of some of the model                   rameter shifts to lower values, while maintaining a null
+parameters together with their joint contours at 68% and                   interaction at 68% CL (Γ/H0 = 0.038+0.062−0.070 ). More-
+95% CL. In what follows, we summarize the main results.                    over, as Γ/H0 remains positive, this suggests a flow
+We split our analysis into three parts corresponding to                    of energy from CDM to vacuum, which results in a
+IVS, IDEphan, and IDEquin.                                                 mildly lower value of Ωm = 0.2738+0.0513
+                                                                                                                −0.0415 at 68% CL
+                                                                           (Planck yields Ωm = 0.3153 ± 0.0073 at 68% CL for
+                                                                           Planck TT,TE,EE+lowE+lensing [147]). This results in
+                            A.     IVS                                     a mild increase in the Hubble constant (H0 = 68.93+0.95
+                                                                                                                               −1.17
+                                                                           km/s/Mpc at 68% CL). In addition to that, S8 takes sig-
+   Table II and Fig. 10 summarize the constraints on                       nificantly higher values in comparison with the previous
+IVS considering various observational datasets. This is                    case, alleviating the S8 tension.
+the simplest scenario in this series, where the EoS of DE                     For the next three analyses, we notice the preference
+is −1. Beginning with the CMB alone case, one can no-                      of a negative coupling (Γ/H0 < 0); hence, a flow of en-
+tice that the dimensionless coupling parameter includes                    ergy from DE to CDM is suggested at slightly more than
+its null value within 68% CL (Γ/H0 = 0.134+0.144 −0.106 at                 68% CL. Therefore, Ωm is mildly increased, which in turn
+                                                                                                                                      13
+
+        1.10                                                                 From the continuity equation of CDM, d ln ρc /d ln a =
+                   CMB
+                   CMB+DESI                                                  −3(1 + wceff ), one can understand that a positive wceff ,
+                   CMB+DESI+PantheonPlus                                     henceforth, d ln ρc /d ln a < 0, causes the DM energy den-
+                   CMB+DESI+Union3
+        1.05       CMB+DESI+DES-Dovekie                                      sity to decrease more rapidly than the standard a−3 evo-
+                                                                             lution (i.e. without the presence of the interaction). This
+                                                                             behavior can be explained by analyzing the direction
+                                                                             of the energy transfer. Since Γ/H0 > 0 for CMB and
+wxeff
+
+
+
+
+        1.00
+                                                                             CMB+DESI, the transfer of energy occurs from CDM
+                                                                             to DE, thereby leading to a continuous dilution of the
+                                                                             CDM density. Now since the interaction function is pro-
+        0.95                                                                 portional to the DE density, while the effective equation
+                                                                             of state satisfies wceff = 3H   ρc , therefore, with the de-
+                                                                                                           Γ ρx
+
+                                                                             crease of ρc , the ratio ρx /ρc increases. Consequently, a
+        0.90                                                                 rapid growth of wceff is observed. In the asymptotic fu-
+            0.0        0.2        0.4           0.6        0.8   1.0   1.2
+                                          Scale factor a                     ture, as ρc → 0, the ratio ρx /ρc diverges, leading to the
+                                                                             divergence of wceff .
+        0.3                                                                     In contrast,        for the last three combined
+                  CMB
+                  CMB+DESI                                                   analyses,       namely,        CMB+DESI+PantheonPlus,
+                  CMB+DESI+PantheonPlus
+                  CMB+DESI+Union3                                            CMB+DESI+Union3 and CMB+DESI+DES-Dovekie,
+        0.2       CMB+DESI+DES-Dovekie                                       the preferred values of the interaction parameter are
+                                                                             negative. In this case, the energy transfer is reversed,
+                                                                             occurring from DE to CDM. Consequently, wceff becomes
+                                                                             negative, implying that the DM component acquires a
+wceff
+
+
+
+
+        0.1
+                                                                             small effective negative pressure. Although the continu-
+                                                                             ous transfer of energy from DE to DM tends to reduce
+                                                                             the ratio ρx /ρc , the expansion of the Universe eventually
+        0.0                                                                  drives this ratio upward again, resulting in a gradual
+                                                                             increase of wceff in the far future while remaining finite
+                                                                             over the observationally relevant epoch.
+        0.1                                                                     Finally, in terms of the Bayesian evidence analysis, we
+           0.0        0.2        0.4           0.6         0.8   1.0   1.2
+                                          Scale factor a                     notice that, irrespective of the datasets, ΛCDM is favored
+                                                                             over this interacting scenario. However, according to the
+                                                                             revised Jeffrey’s, this evidence is moderate, being slightly
+Figure 11. (IVS) Evolution of wxeff (upper graph) and wceff
+(lower graph) in terms of their mean curves considering sev-                 strong (−5.2) for the CMB+DESI+PantheonPlus combi-
+eral observational datasets.                                                 nation. In summary, considering the observational con-
+                                                                             straints and the model comparison analysis, this inter-
+                                                                             acting model can be considered an alternative scenario
+slightly decreases the estimated value of the Hubble con-                    to the ΛCDM model for the description of our universe.
+stant. Furthermore, S8 takes higher values in all three                         For     the      next     three     analyses,     namely,
+cases, indicating consistency with recent measurements                       CMB+DESI+PantheonPlus,                 CMB+DESI+Union3
+by Kilo-Degree Survey (KiDS) [159, 160], Dark Energy                         and CMB+DESI+DES-Dovekie, we find that evidence
+Survey Year 3 (DES-Y3) [161] and Planck [147].                               of interaction at slightly more than 68% CL is suggested
+   Fig. 11 displays the evolution of wxeff and wceff for the                 by all of them. However, within 95% CL, one can recover
+IVS. Since the mean value of Γ/H0 is positive for CMB                        the non-interacting ΛCDM model.
+and CMB+DESI, (see Table II), deviation from wxeff =
+−1 in the phantom direction is found where at the present
+epoch, wxeff assumes −1.05 (for CMB-only) and −1.01 for                                  B.    Phantom IDE (IDEphan)
+CMB+DESI. For the other datasets, the mean values of
+Γ/H0 are negative, and therefore the deviation of wxeff                         Table III and Fig. 12 summarize the constraints
+in the the quintessence direction is suggested, yielding                     on this interacting scenario considering various obser-
+wxeff ∼ −0.982 at the present epoch for all three combined                   vational datasets. The large-scale stability within this
+datasets.                                                                    model scenario requires wx < −1 and Γ/H0 < 0.
+   For CDM, we find that (wceff ) increases rapidly with the                    We start with the constraints from CMB alone and
+expansion scale factor for both CMB and CMB+DESI                             then gradually move on to the next set of analyses, com-
+analyses where at the present epoch, maximum value of                        bining CMB with other datasets. For CMB alone, Γ/H0
+wceff is attained for the CMB case (wceff ∼ 0.3). This                       attains a lower limit; thus, no evidence of interaction is
+implies that, due to the interaction, CDM component                          reported in this case. However, this scenario predicts a
+acquires a positive effective equation of state (wceff > 0).                 slightly high value of H0 (H0 = 70.91+1.76
+                                                                                                                   −4.83 km/s/Mpc at
+                                                                                                                                  14
+
+                                                             IDEphan:CMB
+                                                             IDEphan:CMB+DESI
+                                                             IDEphan:CMB+DESI+PantheonPlus
+                                                             IDEphan:CMB+DESI+Union3
+                                                             IDEphan:CMB+DESI+DES-Dovekie
+
+                     1.2
+                     1.4
+           wx
+
+                     1.6
+
+
+                     80
+             H0
+
+
+
+
+                     70
+                     0.4
+                     0.3
+              m
+
+
+
+
+                     0.2
+
+                    0.85
+           S8
+
+
+
+
+                    0.80
+                    0.75
+                    148
+            rdrag
+
+
+
+
+                    147
+
+                           0.10   0.05   1.6 1.4 1.2    70       80       0.2    0.3    0.4 0.74 0.80 0.86   147      148
+                                            wx                H0                  m               S8          rdrag
+
+Figure 12. (IDEphan) One dimensional posterior distributions and two dimensional joint contours for the most relevant
+parameters using different combinations of cosmological measurements.
+
+
+68% CL) compared to the ΛCDM model [147]. While                         CMB+DESI+PantheonPlus,             CMB+DESI+Union3
+Ωm and S8 estimates are similar to the ΛCDM predicted                   and CMB+DESI+DES-Dovekie.            According to the
+values [147]. In light of the Bayesian evidence analysis,               results, an evidence for a non-vanishing Γ/H0 is found
+moderate evidence for this model (∆ ln Bij = −6.3) was                  at more than 2σ across all three combined datasets.
+noted, while ΛCDM remained favored.                                     The constraints on H0 and S8 are similar to the
+   When DESI is combined with CMB, a mild phan-                         Planck-ΛCDM model [147], however, all three combined
+tom nature of wx is found (wx = −1.067+0.045                            datasets report a high value of Ωm ∼ 0.34. This is driven
+                                            −0.030 at 68%
+CL for CMB+DESI) but Γ/H0 again attains an upper                        by the strong anti-correlation between Ωm and Γ/H0
+limit. Thus, similar to the CMB alone case, CMB+DESI                    as shown in Fig. 12. A Bayesian evidence analysis does
+does not predict any evidence of a non-zero coupling be-                not support this interacting scenario over the reference
+tween DE and DM. The mean value of H0 is slightly                       model.     According to the results, ln Bij = −8.0
+reduced (∼ 1.87 km/s/Mpc) but its uncertainties are sig-                for CMB+DESI+PantheonPlus, ln Bij             =     −7.4
+nificantly reduced, leading to H0 = 69.04+0.83                          for CMB+DESI+Union3 and ∆ ln Bij = −7.5 for
+                                          −0.98 km/s/Mpc
+at 68% CL. On the other hand, as wx now comes close                     CMB+DESI+DES-Dovekie.
+to −1, the expansion rate is slightly decreased compared                   Figure 13 describes the evolution of wxeff and wceff , for
+to the CMB alone case, and as a result, H0 decreases                    the IDEphan model. For all dataset combinations, wxeff
+(see Fig. 12 showing an anti-correlation between wx and                 remains in the phantom regime, exhibiting only a mild
+H0 ). The matter density parameter therefore takes a                    evolution with the scale factor. In the CMB-only anal-
+slightly higher value (Ωm = 0.3261+0.0226
+                                     −0.0205 at 68% CL),                ysis, wxeff is more deeply confined within the phantom
+however, S8 parameter takes similar value to that of                    region than other cases, leading to a more pronounced
+Planck-ΛCDM [147]. However, according to the Bayesian                   effective phantom behavior. On the other hand, wceff
+evidence analysis, this dataset shows very strong evidence              evolves monotonically toward negative values with the
+(∆ ln Bij = −7.5) against this interacting scenario with                expansion of the universe. For the CMB-only analysis,
+respect to the ΛCDM model.                                              it reaches wceff ≃ −0.05 at the present epoch, while the
+ We now discuss the constraints for                    the re-          combined datasets predict a slightly less negative value
+maining three  combined  analyses,                      namely,         wceff ≃ −0.045. Thus, the interaction induces a small
+                                                                                                                                         15
+
+        1.350                                                                  eter, (Ωm = 0.2333+0.1082 −0.1037), and the clustering
+                        CMB
+                        CMB+DESI                                               parameter, (S8 = 0.786+0.101 −0.041), all quoted at the
+                        CMB+DESI+PantheonPlus                                  68% CL. The preference for a lower matter density is
+        1.275           CMB+DESI+Union3
+                        CMB+DESI+DES-Dovekie                                   qualitatively consistent with the positive coupling, which
+                                                                               corresponds to a transfer of energy from the DM sector
+        1.200                                                                  to the DE sector. However, the relatively low values of
+                                                                               (H0 ) and (Ωm ) inferred from the CMB alone should be
+wxeff
+
+
+
+
+                                                                               interpreted with caution, as they are influenced by the
+        1.125
+                                                                               well-known geometrical degeneracies among (H0 ), (Ωm ),
+                                                                               (wx ), and the coupling parameter. However, according
+        1.050                                                                  to the Bayesian evidence analysis, ΛCDM model is still
+                                                                               favored over this model (ln Bij = −4.0).
+        0.975
+                                                                                  When DESI BAO is combined with CMB, we find
+                                                                               that Γ/H0 = 0.118+0.044 −0.101 at 68% CL, thereby indicat-
+             0.0           0.2        0.4        0.6         0.8   1.0   1.2   ing a mild evidence of interaction. However, wx attains
+                                            Scale factor a
+                                                                               an upper bound (wx < −0.901 at 95% CL) but H0 as-
+        0.025                                                                  sumes a higher value (H0 = 69.21+0.86    −1.13 Km/s/Mpc at
+                                                                               68% CL). Interestingly, similar to the CMB alone case,
+        0.000                                                                  S8 assumes a low value (S8 = 0.764+0.041  −0.013 at 68% CL)
+                                                                               compared to Planck-based ΛCDM paradigm [147]. More-
+        0.025                                                                  over, this combined dataset also leads to a lower value of
+                                                                               Ωm (= 0.2209+0.0683
+                                                                                                −0.0341 at 68% CL) compared to the non-
+                                                                               interacting scenario, where DM density evolves as a−3 .
+wceff
+
+
+
+
+        0.050
+                                                                               However, Bayesian evidence analysis showed strong ev-
+                                                                               idence (ln Bij = −7.5) for this model when considering
+        0.075
+                                                                               this dataset.
+                        CMB                                                       For the last three combined datasets with CMB, DESI,
+                        CMB+DESI
+        0.100           CMB+DESI+PantheonPlus                                  and SNIa (PantheonPlus, Union3, and DES-Dovekie), we
+                        CMB+DESI+Union3                                        see that Γ/H0 attains an upper limit across all datasets.
+                        CMB+DESI+DES-Dovekie
+        0.125                                                                  On the other hand, 68% CL constraints on wx are avail-
+             0.0           0.2        0.4        0.6         0.8   1.0   1.2
+                                            Scale factor a                     able and they are close to −1, but within 95% CL, wx
+                                                                               attains its upper limit. The constraints on H0 are almost
+Figure 13. (IDEphan) Evolution of wxeff (upper graph) and
+                                                                               similar to those of the non-interacting ΛCDM model by
+wceff (lower graph) in terms of their mean curves considering                  Planck [147], however, S8 measurements are still slightly
+several observational datasets.                                                low: S8 ∼ 0.79 for all three combined datasets.
+                                                                                  Figure 15 shows the evolution of wxeff and wceff for
+                                                                               the IDEquin model. We notice that for the CMB-only
+but non-zero effective negative pressure for the DM com-                       analysis, wxeff attains a higher value (wxeff ∼ −0.9) at
+ponent. Overall, we find that for the present interaction                      the present epoch, whereas the combined datasets fa-
+function, phantom wx does not lead to a competitive sce-                       vor values in the range wxeff ∼ −0.96 – −0.98. In all
+nario for describing the present universe.                                     cases wxeff exhibits only a very mild evolution toward the
+                                                                               cosmological-constant boundary.
+                                                                                  For the DM component, wceff increases rapidly with
+                   C.     Quintessential IDE (IDEquin)                         the scale factor, reaching very large values already in
+                                                                               the recent past. This behavior is qualitatively similar
+   Table IV and Fig. 14 summarize the constraints on                           to that found for the IVS model shown in Fig. 11. Since
+this model scenario using the same datasets. The allowed                       the interaction transfers energy from CDM to DE (as
+region for this scenario in terms of the large-scale stability                 Γ/H0 > 0), the DM density is continuously decreases. As
+of the interacting model is wx > −1 and Γ/H0 > 0.                              a consequence, the ratio ρx /ρc grows rapidly, and accord-
+   As before, we first discuss the constraints from the                        ing to wceff = 3H  ρc , the effective EoS of DM increases ac-
+                                                                                                Γ ρx
+
+CMB alone and then examine how they are modified                               cordingly. This establishes a self-reinforcing mechanism:
+by the inclusion of low-redshift observations. Using                           the reduction of DM density increases the ratio ρx /ρc ,
+only the CMB data, neither the interaction strength nor                        which results in higher values of wceff . In the asymptotic
+the dark-energy equation of state is well constrained,                         future, as ρc → 0, the ratio ρx /ρc diverges, and so does
+yielding the 95% CL upper limits (Γ/H0 < 0.343)                                wceff .
+and (wx < −0.620), respectively. The model predicts                               In light of the Bayesian evidence analysis, ΛCDM
+relatively low values of the Hubble constant (H0 =                             remains in the preferred place compared to ID-
+65.28+4.84 −3.11 km/s/Mpc), the matter density param-                          Equin:       ln Bij = −8.4,             −7.6,       −8.1 for
+                                                                                                                           16
+
+                                                         IDEquin:CMB
+                                                         IDEquin:CMB+DESI
+                                                         IDEquin:CMB+DESI+PantheonPlus
+                                                         IDEquin:CMB+DESI+Union3
+                                                         IDEquin:CMB+DESI+DES-Dovekie
+
+
+                     0.6
+           wde, 0
+
+                     0.8
+
+                     70
+              H0
+
+
+
+
+                     60
+
+                    0.55
+
+                    0.30
+             m
+
+
+
+
+                    0.05
+                    0.95
+
+                    0.70
+           S8
+
+
+
+
+                    0.45
+                    148
+            rdrag
+
+
+
+
+                    147
+
+                           0.1 0.2 0.3 0.4   0.8   0.6   60    70         0.2       0.4   0.6    0.8   147      148
+                                              wde, 0      H0                    m           S8          rdrag
+
+Figure 14. (IDEquin) One dimensional posterior distributions and two dimensional joint contours for the most relevant
+parameters using different combinations of cosmological measurements.
+
+
+CMB+DESI+PantheonPlus, CMB+DESI+Union3 and                          where the coupling function Q is proportional to the en-
+CMB+DESI+DES-Dovekie, respectively.                                 ergy density of DE as, Q = Γρx , where Γ is a constant
+                                                                    coupling parameter and its dimension is equal to the di-
+                                                                    mension of the Hubble rate (therefore, in the statistical
+      V.   CONCLUSIONS AND PROSPECTS
+                                                                    simulations we have considered the dimensionless param-
+                                                                    eter Γ/H0 ). Because this interaction function does not
+                                                                    involve external parameters such as the expansion rate
+   Cosmological probes from a variety of astronomical               and scale factor, the mechanism of interaction depends
+surveys have consistently argued that our universe is               on the intrinsic nature of DE. This model is usually re-
+mainly dominated by two dark fluids, namely DM and                  ferred to as the local interaction rate because of the ab-
+DE, which occupy nearly 96% of the total energy bud-                sence of such external parameters. One of the impor-
+get of the universe. Many theoretical models have been              tant observations in the interacting cosmologies is that
+developed to reveal their nature, but they remain mys-              any interacting scenario between DE and DM is equiv-
+terious so far. Existing models focusing on DE and DM               alent to a non-interacting prescription between DE and
+can be divided into two distinct categories: models in              DM, in which the EoS parameters of these dark fluids are
+which DE and DM evolve independently and models in                  time-dependent. This allows us to extract more qualities
+which DM and DM interact. This later class of models                of the interacting scenarios on theoretical and observa-
+represent a general construction of cosmological scenar-            tional grounds. As the nature of DE plays a crucial role
+ios and they are promising in the cosmological domain               in the large-scale structure of the universe and the DE
+because, according to the existing records, interacting             EoS could influence the stability of the underlying inter-
+cosmological models can alleviate several longstanding              acting model, we considered three separate regions of wx
+cosmic puzzles, such as the cosmic coincidence problem              where the interacting model is stable, and we label these
+and cosmological tensions. Interestingly, issues related to         scenarios as IVS, IDEphan, and IDEquin. The ob-
+the cosmological constant problem do not appear in this             servational constraints are summarized in various tables
+framework.                                                          and figures: Table II and Fig. 10 (for IVS); Table III
+   In the present article, we considered a coupled DE-DM            and Fig. 12 (for IDEphan); Table IV and Fig. 14 (for
+scenario (DM is pressureless and DE has a constant EoS)
+                                                                                                                                      17
+
+                     CMB                                                            CMB+DESI+Union3 and CMB+DESI+DES-
+                     CMB+DESI                                                       Dovekie; IDEquin did not show any evidence
+        1.05         CMB+DESI+PantheonPlus
+                     CMB+DESI+Union3                                                of interaction. These findings suggest that the
+                     CMB+DESI+DES-Dovekie                                           indication of an interaction in the dark sector
+        0.98
+                                                                                    depends on many factors, such as the nature of
+                                                                                    DE, interaction model and the underlying datasets.
+                                                                                  • S8 : In IVS S8 values for CMB alone (S8 ∼ 0.766)
+wxeff
+
+
+
+
+        0.91
+                                                                                    and CMB+DESI (S8 ∼ 0.793) are low compared to
+                                                                                    the ΛCDM-based Planck [147] but for the remain-
+        0.84                                                                        ing three combined datasets in presence of SNIa,
+                                                                                    S8 values are almost identical with Planck [147]
+                                                                                    and other measurements [159–161]; in IDEphan,
+        0.77                                                                        S8 values are similar to Planck [147] and other
+              0.0        0.2        0.4           0.6        0.8   1.0   1.2        measurements [159–161] across all datasets. Only
+                                            Scale factor a                          IDEquin scenario leads to mildly smaller values of
+        0.3                                                                         S8 for all datasets. The estimated values lie in the
+                    CMB                                                             range S8 ∼ 0.764 − 0.796. This is an interesting
+                    CMB+DESI
+                    CMB+DESI+PantheonPlus                                           outcome of this scenario.
+                    CMB+DESI+Union3
+        0.2         CMB+DESI+DES-Dovekie                                          • H0 (km/s/Mpc): For the combined datasets with
+                                                                                    CMB, DESI and SNIa, all three scenarios yield
+                                                                                    H0 ∼ 67 km/s/Mpc, however, for CMB alone and
+                                                                                    CMB+DESI, IVS and IDEphan report slightly
+wceff
+
+
+
+
+        0.1
+                                                                                    higher values. Maximum value of H0 is attained in
+                                                                                    the IDEphan scenario leading to H0 = 70.91+1.76
+                                                                                                                                −4.83
+                                                                                    (CMB alone). For CMB+DESI, all three scenarios
+        0.0                                                                         yield H0 ∼ 69 km/s/Mpc.
+                                                                                  • ln Bij : According to the Bayesian evidence anal-
+                                                                                    ysis, ΛCDM remains preferred over all the inter-
+        0.1
+           0.0          0.2        0.4           0.6         0.8   1.0   1.2        acting scenarios across all the datasets. Specifi-
+                                            Scale factor a
+                                                                                    cally, moderate evidence is observed for IVS ex-
+                                                                                    cept for the dataset CMB+DESI+PantheonPlus;
+Figure 15. (IDEquin) Evolution of wxeff (upper graph) and                           IDEphan shows strong evidence; and consider-
+wceff (lower graph) in terms of their mean curves considering                       ing IDEquin, we see the transition from moderate
+several observational datasets.                                                     (CMB alone) to strong (for remaining datasets) ev-
+                                                                                    idence.
+IDEquin). Our main results are the following:                                     In summary, in this article we showed that the present
+                                                                               interacting model has appealing features in different
+    • The interaction between DE-DM could offer a rea-                         regimes of the DE EoS. Although we observed that for
+      sonable justification for the dynamical DM. The                          this local interaction rate, alleviation of the H0 tension
+      mechanism of energy transfer between the dark sec-                       is not homogeneously valid across all the datasets, and
+      tors allows us to realize a phantom crossing without                     the EoS of DE also plays a crucial role in this direction,
+      invoking any phantom scalar field. Thus, phan-                           and additionally, estimated values of S8 are different in
+      tom −→ quintessence or quintessence −→ phan-                             different interacting scenarios, however, we strongly ar-
+      tom regimes are just two different outcomes en-                          gue here that these results could be influenced by the
+      abled by the direction of energy transfer between                        choice of the interaction model. Furthermore, relaxing
+      the dark sectors. It has also been observed that                         the constancy of the coupling, and a different choice of
+      for wx = Γ/3H, wxeff vanishes, and as a result of                        the coupling function other than Q ∝ ρx could also offer
+      which DE evolves as a−3 and DM evolves with an                           interesting outcomes.
+      effective dynamical EoS wceff = (Γ/3H) × ρx ρ−1c .
+
+    • Coupling parameter (Γ/H0 ): In IVS, except                                             ACKNOWLEDGMENTS
+      for CMB alone and CMB+DESI, all other
+      datasets indicate an evidence of interaction                               We thank the referee for some useful comments that
+      at slightly more than 68% CL; IDEphan                                    helped us improve the overall quality of the manuscript.
+      shows evidence of interaction at more than                               WY has been supported by the National Natural Sci-
+      95%     CL    for  CMB+DESI+PantheonPlus,                                ence Foundation of China under Grant Nos. 12547110
+                                                                                                                                            18
+
+and 12175096. L.G is supported by research grants from                          2                            k = 0.1/Mpc
+Conselho Nacional de Desenvolvimento Cientıfico e Tec-                                  cs,2 x = 0.6
+                                                                                        cs,2 x = 0.8
+nologico (CNPq), Grant No. 307636/2023-2 and from                               0       cs,2 x = 1.0
+the Fundacao Carlos Chagas Filho de Amparo a Pesquisa                                   cs,2 x = 1.2
+do Estado do Rio de Janeiro (FAPERJ), Grant No. E-                              2       cs,2 x = 1.4
+26/204.598/2024.
+
+
+
+
+                                                               log10 (| x|)
+                                                                                4
+             Appendix A: Additional plots                                       6
+  In this section, we show the DE density contrast fluc-                        8
+tuations δx at k = 0.1/Mpc and f σ8 curves for the IDE-
+quin scenario for different values of c2s,x (A16), wx (A18)                   10
+and Γ/H0 (A19). The f σ8 curves for different values of
+                                                                                    5                  4      3             2    1          0
+                                                                                                                  log10 a
+Γ/H0 are also shown for IVS (Fig. A17). We see that                       1.0
+the nature of the quantities as depicted in Figs. A16,                                  cs,2 x = 0.6
+A18, A19 are almost identical with IDEphan. Finally,                                    cs,2 x = 0.8
+considering IDEquin, in Fig. A20, we show the CMB                         0.8           cs,2 x = 1.0
+TT and matter power spectra for different values of c2s,x                               cs,2 x = 1.2
+assuming Γ/H0 = 0.1 and wx = −0.99. Fig. A20 clearly                      0.6           cs,2 x = 1.4
+shows that the CMB and matter power spectra remain
+
+
+                                                               f8
+insensitive to c2s,x . This is what we have observed in the               0.4
+case with IDEphan. This motivated us to constrain the
+present interacting cosmological scenarios fixing c2s,x = 1.
+                                                                          0.2
+
+                                                                          0.0
+                                                                            0.0         0.2            0.4   0.6 0.8 1.0        1.2   1.4
+                                                                                                               Redshift z
+
+                                                               Figure A16. (IDEquin) DE density contrast fluctuations δx
+                                                               at k = 0.1/Mpc (left) and f σ8 curves (right) for variations
+                                                               of DE sound speed c2s,x . The f σ8 measurements (black) can
+                                                               be found in Table V. For plotting δx , we set wx = −0.99,
+                                                               Γ/H0 = 0.1, H0 = 67.5 km/s/Mpc, Ωb h2 = 0.022, Ωc h2 =
+      Survey             z        f σ8       Reference         0.122, and for the f σ8 plot we fix ns = 0.965.
+      ALFALFA          0.013 0.46 ± 0.06       [162]
+      6dFGS+SDSS       0.035 0.338 ± 0.027     [163]
+                        0.18   0.29 ± 0.10     [164]
+      GAMA
+                        0.38   0.44 ± 0.06     [165]                      1.0
+                                                                                           /H0 = 0.4
+                        0.22   0.42 ± 0.07
+                                                                                           /H0 = 0.2
+                        0.41   0.45 ± 0.04                                0.8              /H0 = 0
+      WiggleZ                                  [166]
+                        0.60   0.43 ± 0.04                                                 /H0 = 0.2
+                                                                          0.6              /H0 = 0.4
+                        0.78   0.38 ± 0.04
+                                                               f8
+
+
+
+
+      DR12 BOSS
+                        0.32 0.427 ± 0.056
+                                               [167]                      0.4
+                        0.57 0.426 ± 0.029
+                        0.60   0.49 ± 0.12                                0.2
+      VIPERS                                   [168]
+                        0.86   0.46 ± 0.09
+      VVDS                     0.49 ± 0.18 [169, 170]                     0.0
+                        0.77                                                0.0         0.2            0.4   0.6 0.8 1.0        1.2   1.4
+      FastSound         1.36 0.482 ± 0.116     [171]                                                           Redshift z
+      eBOSS Quasar      1.48 0.462 ± 0.045     [172]
+                                                               Figure A17. (IVS) f σ8 for different values of Γ/H0 . The f σ8
+                                                               measurements (black) can be found in Table V. Here we have
+                                                               fixed ns = 0.965.
+Table V. Summary of f σ8 values at different redshifts taken
+from Ref. [173].
+                                                                                                                                                                               19
+
+
+                               2                            k = 0.1/Mpc
+                                                                                                         1.0
+                                                                                                                                                               wx =   0.99
+                               0                                                                                                                               wx =   0.8
+                                                                                                         0.8                                                   wx =   0.6
+                               2                                                                                                                               wx =   0.4
+  log10 (| x|)
+
+
+
+                                                                                                         0.6
+                               4
+
+
+
+
+                                                                                                  f8
+                                                                                                         0.4
+                               6                                                wx =   0.99
+                                                                                wx =   0.8
+                               8                                                wx =   0.6               0.2
+                                                                                wx =   0.4
+                              10                                                                         0.0
+                                   5                  4      3              2      1          0            0.0        0.2          0.4   0.6 0.8 1.0           1.2    1.4
+                                                                 log10 a                                                                   Redshift z
+
+Figure A18. (IDEquin) DE density contrast fluctuations δx at k = 0.1/Mpc (left) and f σ8 curves (right) for variations of EoS
+parameter wx . The f σ8 measurements (black) can be found in Table V. For plotting δx , we set Γ/H0 = 0.1, c2s,x = 1, H0 = 67.5
+km/s/Mpc, Ωb h2 = 0.022, Ωc h2 = 0.122, and for the f σ8 plot we fix ns = 0.965.
+
+
+
+                              2                             k = 0.1/Mpc
+                                             /H0 = 0                                                     1.0
+                                             /H0 = 0.1                                                                                                           /H0 = 0
+                              0              /H0 = 0.2                                                                                                           /H0 = 0.1
+                                                                                                         0.8                                                     /H0 = 0.2
+                                             /H0 = 0.3                                                                                                           /H0 = 0.3
+                              2
+  log10 (| x|)
+
+
+
+
+                                                                                                         0.6
+                                                                                                  f8
+
+
+
+
+                              4                                                                          0.4
+                              6                                                                          0.2
+
+                              8                                                                          0.0
+                                   5              4          3              2     1           0            0.0        0.2          0.4   0.6 0.8 1.0           1.2    1.4
+                                                                 log10 a                                                                   Redshift z
+
+Figure A19. (IDEquin) DE density contrast fluctuations δx at k = 0.1/Mpc (left) and f σ8 curves (right) for variations of
+Γ/H0 . The f σ8 measurements (black) can be found in Table V. For plotting δx , we set wx = −0.99, c2s,x = 1, H0 = 67.5
+km/s/Mpc, Ωb h2 = 0.022, Ωc h2 = 0.122, and for the f σ8 plot we fix ns = 0.965.
+
+
+                            6000
+                                       cs,2 x = 0.6                                                      105
+
+                            5000       cs,2 x = 0.8
+                                       cs,2 x = 1.0                                                      104
+                                       cs,2 x = 1.2
+                            4000
+    ( + 1)C TT (2 )[ K 2]
+
+
+
+
+                                       cs,2 x = 1.4                                                      103
+
+                            3000                                                                         102
+                                                                                                  P(k)
+
+
+
+
+                            2000                                                                         101      cs,2 x = 0.6
+                                                                                                                  cs,2 x = 0.8
+                            1000                                                                                  cs,2 x = 1.0
+                                                                                                         100
+                                                                                                                  cs,2 x = 1.2
+                                                                                                                  cs,2 x = 1.4
+                               0                                                                         10 1 4
+                                                      101             102              103                  10                   10 3         10 2      10 1             100
+                                                                                                                                           k [h/Mpc]
+
+
+Figure A20. (IDEquin) CMB TT spectrum (left) and matter power spectrum (right) for different values of c2s,x referring to
+IDEquin. We have fixed Γ/H0 = 0.1 and wx = −0.99. The mean values of the other parameters, e.g. Ωb h2 , Ωc h2 and H0
+required to generate the plots are taken from the combined analysis CMB+DESI+PantheonPlus (Table IV).
+                                                                                                                            20
+
+
+
+
+ [1] E. Di Valentino, O. Mena, S. Pan, L. Visinelli,              [16] M. Berti, E. Bellini, C. Bonvin, M. Kunz, M. Viel,
+     W. Yang, A. Melchiorri, D. F. Mota, A. G. Riess, and              and M. Zumalacarregui, Reconstructing the dark energy
+     J. Silk, In the realm of the Hubble tension—a review              density in light of DESI BAO observations, Phys. Rev.
+     of solutions, Class. Quant. Grav. 38, 153001 (2021),              D 112, 023518 (2025), arXiv:2503.13198 [astro-ph.CO].
+     arXiv:2103.01183 [astro-ph.CO].                              [17] A. González-Fuentes and A. Gómez-Valent, Reconstruc-
+ [2] L. Perivolaropoulos and F. Skara, Challenges for                  tion of dark energy and late-time cosmic expansion us-
+     ΛCDM: An update, New Astron. Rev. 95, 101659                      ing the Weighted Function Regression method, JCAP
+     (2022), arXiv:2105.05208 [astro-ph.CO].                           12, 049, arXiv:2506.11758 [astro-ph.CO].
+ [3] L. A. Anchordoqui, E. Di Valentino, S. Pan, and              [18] E. J. Copeland, M. Sami, and S. Tsujikawa, Dynamics
+     W. Yang, Dissecting the H0 and S8 tensions with                   of dark energy, Int. J. Mod. Phys. D 15, 1753 (2006),
+     Planck + BAO + supernova type Ia in multi-parameter               arXiv:hep-th/0603057.
+     cosmologies, JHEAp 32, 28 (2021), arXiv:2107.13932           [19] K. Bamba, S. Capozziello, S. Nojiri, and S. D. Odintsov,
+     [astro-ph.CO].                                                    Dark energy cosmology: the equivalent description via
+ [4] E. Abdalla et al., Cosmology intertwined: A review of             different theoretical models and cosmography tests, As-
+     the particle physics, astrophysics, and cosmology asso-           trophys. Space Sci. 342, 155 (2012), arXiv:1205.3421
+     ciated with the cosmological tensions and anomalies,              [gr-qc].
+     JHEAp 34, 49 (2022), arXiv:2203.06142 [astro-ph.CO].         [20] L. Amendola, Coupled quintessence, Phys. Rev. D 62,
+ [5] S. Weinberg, The Cosmological Constant Problem, Rev.              043511 (2000), arXiv:astro-ph/9908023.
+     Mod. Phys. 61, 1 (1989).                                     [21] R.-G. Cai and A. Wang, Cosmology with interaction
+ [6] I. Zlatev, L.-M. Wang, and P. J. Steinhardt,                      between phantom dark energy and dark matter and the
+     Quintessence, cosmic coincidence, and the cosmological            coincidence problem, JCAP 03, 002 (2005), arXiv:hep-
+     constant, Phys. Rev. Lett. 82, 896 (1999), arXiv:astro-           th/0411025.
+     ph/9807002.                                                  [22] G. Huey and B. D. Wandelt, Interacting quintessence.
+ [7] N. Schöneberg, G. Franco Abellán, A. Pérez Sánchez,               The Coincidence problem and cosmic acceleration,
+     S. J. Witte, V. Poulin, and J. Lesgourgues, The H0                Phys. Rev. D 74, 023519 (2006), arXiv:astro-
+     Olympics: A fair ranking of proposed models, Phys.                ph/0407196.
+     Rept. 984, 1 (2022), arXiv:2107.10291 [astro-ph.CO].         [23] J. D. Barrow and T. Clifton, Cosmologies with energy
+ [8] E. Di Valentino, A combined analysis of the H0 late               exchange, Phys. Rev. D 73, 103520 (2006), arXiv:gr-
+     time direct measurements and the impact on the Dark               qc/0604063.
+     Energy sector, Mon. Not. Roy. Astron. Soc. 502, 2065         [24] J. Valiviita, E. Majerotto, and R. Maartens, Instability
+     (2021), arXiv:2011.00246 [astro-ph.CO].                           in interacting dark energy and dark matter fluids, JCAP
+ [9] K. C. Wong et al. (H0LiCOW), H0LiCOW – XIII.                      07, 020, arXiv:0804.0232 [astro-ph].
+     A 2.4 per cent measurement of H0 from lensed                 [25] C. G. Boehmer, G. Caldera-Cabral, R. Lazkoz, and
+     quasars: 5.3σ tension between early- and late-Universe            R. Maartens, Dynamics of dark energy with a cou-
+     probes, Mon. Not. Roy. Astron. Soc. 498, 1420 (2020),             pling to dark matter, Phys. Rev. D 78, 023505 (2008),
+     arXiv:1907.04869 [astro-ph.CO].                                   arXiv:0801.1565 [gr-qc].
+[10] M. Abdul Karim et al. (DESI), DESI DR2 Results II:           [26] M. Quartin, M. O. Calvao, S. E. Joras, R. R. R. Reis,
+     Measurements of Baryon Acoustic Oscillations and Cos-             and I. Waga, Dark Interactions and Cosmological Fine-
+     mological Constraints (2025), arXiv:2503.14738 [astro-            Tuning, JCAP 05, 007 (2008), arXiv:0802.0546 [astro-
+     ph.CO].                                                           ph].
+[11] A. G. Adame et al. (DESI), DESI 2024 VI: cosmologi-          [27] C. Quercellini, M. Bruni, A. Balbi, and D. Pietrobon,
+     cal constraints from the measurements of baryon acous-            Late universe dynamics with scale-independent linear
+     tic oscillations, JCAP 02, 021 (2025), arXiv:2404.03002           couplings in the dark sector, Phys. Rev. D 78, 063527
+     [astro-ph.CO].                                                    (2008), arXiv:0803.1976 [astro-ph].
+[12] K. Lodha et al. (DESI), Extended Dark Energy anal-           [28] M. Cataldo, P. Mella, P. Minning, and J. Saave-
+     ysis using DESI DR2 BAO measurements (2025),                      dra, Interacting cosmic fluids in power-law Friedmann-
+     arXiv:2503.14743 [astro-ph.CO].                                   Robertson-Walker cosmological models, Phys. Lett. B
+[13] W. Giarè, M. Najafi, S. Pan, E. Di Valentino, and J. T.           662, 314 (2008), arXiv:0803.1086 [hep-th].
+     Firouzjaee, Robust preference for Dynamical Dark En-         [29] K. Y. Kim, H. W. Lee, and Y. S. Myung, Density per-
+     ergy in DESI BAO and SN measurements, JCAP 10,                    turbations in decaying holographic dark energy models,
+     035 (2024), arXiv:2407.16689 [astro-ph.CO].                       Mod. Phys. Lett. A 24, 1267 (2009), arXiv:0805.3941
+[14] R. Calderon et al. (DESI), DESI 2024: reconstructing              [gr-qc].
+     dark energy using crossing statistics with DESI DR1          [30] H. Mohseni Sadjadi and N. Vadood, Notes on interact-
+     BAO data, JCAP 10, 048, arXiv:2405.04216 [astro-                  ing holographic dark energy model in a closed universe,
+     ph.CO].                                                           JCAP 08, 036 (2008), arXiv:0806.2767 [gr-qc].
+[15] J.-Q. Jiang, D. Pedrotti, S. S. da Costa, and S. Vagnozzi,   [31] J. F. Jesus, R. C. Santos, J. S. Alcaniz, and J. A. S.
+     Nonparametric late-time expansion history reconstruc-             Lima, New coupled quintessence cosmology, Phys. Rev.
+     tion and implications for the Hubble tension in light of          D 78, 063514 (2008), arXiv:0806.1366 [astro-ph].
+     recent DESI and type Ia supernovae data, Phys. Rev. D        [32] H. A. Borges, S. Carneiro, and J. C. Fabris, Evolution
+     110, 123519 (2024), arXiv:2408.02365 [astro-ph.CO].               of density perturbations in decaying vacuum cosmology:
+                                                                       The case of non-zero perturbations in the cosmological
+                                                                                                                           21
+
+     term, Phys. Rev. D 78, 123522 (2008), arXiv:0809.4939           ter Planck data, Phys. Rev. D 89, 083517 (2014),
+     [astro-ph].                                                     arXiv:1401.1286 [astro-ph.CO].
+[33] X.-m. Chen and Y. Gong, Fixed points in interact-          [51] W. Yang and L. Xu, Testing coupled dark energy with
+     ing dark energy models, Phys. Lett. B 675, 9 (2009),            large scale structure observation, JCAP 08, 034 (2014),
+     arXiv:0811.1698 [gr-qc].                                        arXiv:1401.5177 [astro-ph.CO].
+[34] G. Caldera-Cabral, R. Maartens, and L. A. Urena-           [52] V. Faraoni, J. B. Dent, and E. N. Saridakis, Covariantiz-
+     Lopez, Dynamics of interacting dark energy, Phys. Rev.          ing the interaction between dark energy and dark mat-
+     D 79, 063518 (2009), arXiv:0812.1827 [gr-qc].                   ter, Phys. Rev. D 90, 063510 (2014), arXiv:1405.7288
+[35] X.-m. Chen, Y.-g. Gong, and E. N. Saridakis, Phase-             [gr-qc].
+     space analysis of interacting phantom cosmology, JCAP      [53] W. Yang and L. Xu, Coupled dark energy with per-
+     04, 001 (2009), arXiv:0812.1117 [gr-qc].                        turbed Hubble expansion rate, Phys. Rev. D 90, 083532
+[36] M. B. Gavela, D. Hernandez, L. Lopez Honorez,                   (2014), arXiv:1409.5533 [astro-ph.CO].
+     O. Mena, and S. Rigolin, Dark coupling, JCAP               [54] C. van de Bruck and J. Morrice, Disformal couplings
+     07, 034 (2009), [Erratum: JCAP 05, E01 (2010)],                 and the dark sector of the universe, JCAP 04, 036,
+     arXiv:0901.1611 [astro-ph.CO].                                  arXiv:1501.03073 [gr-qc].
+[37] B. M. Jackson, A. Taylor, and A. Berera, On the            [55] Y.-H. Li, J.-F. Zhang, and X. Zhang, Testing mod-
+     large-scale instability in interacting dark energy and          els of vacuum energy interacting with cold dark mat-
+     dark matter fluids, Phys. Rev. D 79, 043526 (2009),             ter, Phys. Rev. D 93, 023002 (2016), arXiv:1506.06349
+     arXiv:0901.3272 [astro-ph.CO].                                  [astro-ph.CO].
+[38] F. E. M. Costa, E. M. Barboza, Jr., and J. S. Al-          [56] L. Feng and X. Zhang, Revisit of the interacting holo-
+     caniz, Cosmology with interaction in the dark sector,           graphic dark energy model after Planck 2015, JCAP 08,
+     Phys. Rev. D 79, 127302 (2009), arXiv:0905.0672 [astro-         072 (2016), arXiv:1607.05567 [astro-ph.CO].
+     ph.CO].                                                    [57] W. Yang, H. Li, Y. Wu, and J. Lu, Cosmological con-
+[39] L. P. Chimento, Linear and nonlinear interactions in            straints on coupled dark energy, JCAP 10, 007 (2016),
+     the dark sector, Phys. Rev. D 81, 043525 (2010),                arXiv:1608.07039 [astro-ph.CO].
+     arXiv:0911.5687 [astro-ph.CO].                             [58] S. Kumar and R. C. Nunes, Probing the interaction
+[40] M. Cataldo, F. Arevalo, and P. Minning, On a class              between dark matter and dark energy in the presence
+     of scaling FRW cosmological models, JCAP 02, 024                of massive neutrinos, Phys. Rev. D 94, 123511 (2016),
+     (2010), arXiv:1002.3415 [astro-ph.CO].                          arXiv:1608.02454 [astro-ph.CO].
+[41] M. B. Gavela, L. Lopez Honorez, O. Mena, and               [59] B. Wang, E. Abdalla, F. Atrio-Barandela, and
+     S. Rigolin, Dark Coupling and Gauge Invariance, JCAP            D. Pavon, Dark Matter and Dark Energy Interactions:
+     11, 044 (2010), arXiv:1005.0295 [astro-ph.CO].                  Theoretical Challenges, Cosmological Implications and
+[42] M. Baldi, Time dependent couplings in the dark sector:          Observational Signatures, Rept. Prog. Phys. 79, 096901
+     from background evolution to nonlinear structure for-           (2016), arXiv:1603.08299 [astro-ph.CO].
+     mation, Mon. Not. Roy. Astron. Soc. 411, 1077 (2011),      [60] C. van de Bruck, J. Mifsud, J. P. Mimoso, and N. J.
+     arXiv:1005.2188 [astro-ph.CO].                                  Nunes, Generalized dark energy interactions with mul-
+[43] S. Z. W. Lip, Interacting Cosmological Fluids and the           tiple fluids, JCAP 11, 031, arXiv:1605.03834 [gr-qc].
+     Coincidence Problem, Phys. Rev. D 83, 023528 (2011),       [61] A. Pourtsidou and T. Tram, Reconciling CMB
+     arXiv:1009.4942 [gr-qc].                                        and structure growth measurements with dark en-
+[44] E. R. M. Tarrant, C. van de Bruck, E. J. Copeland,              ergy interactions, Phys. Rev. D 94, 043518 (2016),
+     and A. M. Green, Coupled Quintessence and the                   arXiv:1604.04222 [astro-ph.CO].
+     Halo Mass Function, Phys. Rev. D 85, 023503 (2012),        [62] C. van de Bruck, J. Mifsud, and J. Morrice, Testing
+     arXiv:1103.0694 [astro-ph.CO].                                  coupled dark energy models with their cosmological
+[45] F. C. Solano and U. Nucamendi, Reconstruction of the            background evolution, Phys. Rev. D 95, 043513 (2017),
+     interaction term between dark matter and dark energy            arXiv:1609.09855 [astro-ph.CO].
+     using SNe Ia, JCAP 04, 011 (2012), arXiv:1109.1303         [63] E. Di Valentino, A. Melchiorri, and O. Mena, Can in-
+     [astro-ph.CO].                                                  teracting dark energy solve the H0 tension?, Phys. Rev.
+[46] S. Cotsakis and G. Kittou, Singularities in cosmologies         D 96, 043503 (2017), arXiv:1704.08342 [astro-ph.CO].
+     with interacting fluids, Phys. Lett. B 712, 16 (2012),     [64] J. Mifsud and C. van de Bruck, Probing the imprints
+     arXiv:1202.1407 [gr-qc].                                        of generalized interacting dark energy on the growth of
+[47] C. van de Bruck, J. Morrice, and S. Vu, Constraints on          perturbations, JCAP 11, 001, arXiv:1707.07667 [astro-
+     Nonconformal Couplings from the Properties of the Cos-          ph.CO].
+     mic Microwave Background Radiation, Phys. Rev. Lett.       [65] C. van de Bruck and J. Mifsud, Searching for dark
+     111, 161302 (2013), arXiv:1303.1773 [astro-ph.CO].              matter - dark energy interactions: going beyond the
+[48] F. Shojai, R. Moti, and F. Najdat, Tracker cou-                 conformal case, Phys. Rev. D 97, 023506 (2018),
+     pled quintessence, Phys. Rev. D 87, 043007 (2013),              arXiv:1709.04882 [astro-ph.CO].
+     arXiv:1305.5984 [gr-qc].                                   [66] A. Paliathanasis, S. Pan, and W. Yang, Dynamics of
+[49] Y. L. Bolotin, A. Kostenko, O. A. Lemets, and D. A.             nonlinear interacting dark energy models, Int. J. Mod.
+     Yerokhin, Cosmological Evolution With Interaction Be-           Phys. D 28, 1950161 (2019), arXiv:1903.02370 [gr-qc].
+     tween Dark Energy And Dark Matter, Int. J. Mod.            [67] W. Yang, O. Mena, S. Pan, and E. Di Valentino, Dark
+     Phys. D 24, 1530007 (2015), arXiv:1310.0085 [astro-             sectors with dynamical coupling, Phys. Rev. D 100,
+     ph.CO].                                                         083509 (2019), arXiv:1906.11697 [astro-ph.CO].
+[50] W. Yang and L. Xu, Cosmological constraints on in-         [68] J. Mifsud and C. van de Bruck, An interacting dark
+     teracting dark energy with redshift-space distortion af-        sector and the implications of the first gravitational-
+                                                                                                                          22
+
+     wave standard siren detection on current constraints,      [84] W. Giarè, M. A. Sabogal, R. C. Nunes, and
+     Mon. Not. Roy. Astron. Soc. 487, 900 (2019).                    E. Di Valentino, Interacting Dark Energy after DESI
+[69] J. D. Barrow and G. Kittou, Non-linear interactions in          Baryon Acoustic Oscillation Measurements, Phys. Rev.
+     cosmologies with energy exchange, Eur. Phys. J. C 80,           Lett. 133, 251003 (2024), arXiv:2404.15232 [astro-
+     120 (2020), arXiv:1907.06410 [gr-qc].                           ph.CO].
+[70] H.-L. Li, D.-Z. He, J.-F. Zhang, and X. Zhang, Quan-       [85] T.-N. Li, P.-J. Wu, G.-H. Du, S.-J. Jin, H.-L. Li, J.-F.
+     tifying the impacts of future gravitational-wave data           Zhang, and X. Zhang, Constraints on Interacting Dark
+     on constraining interacting dark energy, JCAP 06, 038           Energy Models from the DESI Baryon Acoustic Oscil-
+     (2020), arXiv:1908.03098 [astro-ph.CO].                         lation and DES Supernovae Data, Astrophys. J. 976, 1
+[71] E. Di Valentino, A. Melchiorri, O. Mena, and                    (2024), arXiv:2407.14934 [astro-ph.CO].
+     S. Vagnozzi, Nonminimal dark sector physics and cos-       [86] P. Ghedini, R. Hajjar, and O. Mena, Redshift-space
+     mological tensions, Phys. Rev. D 101, 063502 (2020),            distortions corner interacting dark energy, Phys. Dark
+     arXiv:1910.09853 [astro-ph.CO].                                 Univ. 46, 101671 (2024), arXiv:2409.02700 [astro-
+[72] P. M. Sá, Late-time evolution of the Universe within a          ph.CO].
+     two-scalar-field cosmological model, Phys. Rev. D 103,     [87] S. Halder, S. D. Odintsov, S. Pan, T. Saha, and E. N.
+     123517 (2021), arXiv:2103.01693 [gr-qc].                        Saridakis, Interacting phantom dark energy: New ac-
+[73] M. Zhang, B. Wang, P.-J. Wu, J.-Z. Qi, Y. Xu, J.-F.             celerating scaling attractors, Phys. Rev. D 112, 023519
+     Zhang, and X. Zhang, Prospects for Constraining In-             (2025), arXiv:2411.18300 [gr-qc].
+     teracting Dark Energy Models with 21 cm Intensity          [88] Y. Zhai, M. de Cesare, C. van de Bruck, E. Di Valentino,
+     Mapping Experiments, Astrophys. J. 918, 56 (2021),              and E. Wilson-Ewing, A low-redshift preference for
+     arXiv:2102.03979 [astro-ph.CO].                                 an interacting dark energy model, JCAP 11, 010,
+[74] R. Potting and P. M. Sá, Coupled quintessence with a            arXiv:2503.15659 [astro-ph.CO].
+     generalized interaction term, Int. J. Mod. Phys. D 31,     [89] T.-N. Li, G.-H. Du, Y.-H. Li, P.-J. Wu, S.-J. Jin, J.-
+     2250111 (2022), arXiv:2112.07608 [gr-qc].                       F. Zhang, and X. Zhang, Probing the sign-changeable
+[75] E. Di Valentino, A. Melchiorri, O. Mena, S. Pan, and            interaction between dark energy and dark matter with
+     W. Yang, Interacting Dark Energy in a closed uni-               DESI baryon acoustic oscillations and DES supernovae
+     verse, Mon. Not. Roy. Astron. Soc. 502, L23 (2021),             data, Sci. China Phys. Mech. Astron. 69, 210413 (2026),
+     arXiv:2011.00283 [astro-ph.CO].                                 arXiv:2501.07361 [astro-ph.CO].
+[76] A. Paliathanasis, G. Leon, W. Khyllep, J. Dutta,           [90] K. Liu, X. Fu, B. Xu, C. Ding, Y. Huang, and X. Qing,
+     and S. Pan, Interacting quintessence in light of gen-           The growth of linear perturbations in the interact-
+     eralized uncertainty principle: cosmological perturba-          ing dark energy models and observational constraints
+     tions and dynamics, Eur. Phys. J. C 81, 607 (2021),             (2025), arXiv:2503.05208 [astro-ph.CO].
+     arXiv:2104.06097 [gr-qc].                                  [91] S. Pan, S. Paul, E. N. Saridakis, and W. Yang, Inter-
+[77] S. Chatzidakis, A. Giacomini, P. G. L. Leach, G. Leon,          acting dark energy after DESI DR2: A challenge for the
+     A. Paliathanasis, and S. Pan, Interacting dark energy in        ΛCDM paradigm?, Phys. Rev. D 113, 023515 (2026),
+     curved FLRW spacetime from Weyl Integrable Space-               arXiv:2504.00994 [astro-ph.CO].
+     time, JHEAp 36, 141 (2022), arXiv:2206.06639 [gr-qc].      [92] M. van der Westhuizen, D. Figueruelo, R. Thubisi,
+[78] W. Yang, S. Pan, O. Mena, and E. Di Valentino, On               S. Sahlu, A. Abebe, and A. Paliathanasis, Compartmen-
+     the dynamics of a dark sector coupling, JHEAp 40, 19            talization in the dark sector of the universe after DESI
+     (2023), arXiv:2209.14816 [astro-ph.CO].                         DR2 BAO data, Phys. Dark Univ. 50, 102107 (2025),
+[79] R. C. Nunes, S. Vagnozzi, S. Kumar, E. Di Valentino,            arXiv:2505.23306 [astro-ph.CO].
+     and O. Mena, New tests of dark sector interactions from    [93] Y.-H. Li and X. Zhang, Cosmic sign-reversal: non-
+     the full-shape galaxy power spectrum, Phys. Rev. D              parametric reconstruction of interacting dark energy
+     105, 123506 (2022), arXiv:2203.08093 [astro-ph.CO].             with DESI DR2, JCAP 12, 018, arXiv:2506.18477
+[80] Y. Zhai, W. Giarè, C. van de Bruck, E. Di Valentino,            [astro-ph.CO].
+     O. Mena, and R. C. Nunes, A consistent view of inter-      [94] W. Liu, Y. Wu, S. Pan, and W. Yang, Solving an inter-
+     acting dark energy from multiple CMB probes, JCAP               acting quintessence model with a sound horizon initial
+     07, 032 (2023), arXiv:2303.08201 [astro-ph.CO].                 condition and its observational constraints, JHEAp 47,
+[81] E. M. Teixeira, R. Daniel, N. Frusciante, and C. van de         100403 (2025), arXiv:2507.09258 [gr-qc].
+     Bruck, Forecasts on interacting dark energy with           [95] S. L. Guedezounme, B. R. Dinda, and R. Maartens,
+     standard sirens, Phys. Rev. D 108, 084070 (2023),               Phantom crossing or dark interaction?, JCAP 01, 062,
+     arXiv:2309.06544 [astro-ph.CO].                                 arXiv:2507.18274 [astro-ph.CO].
+[82] B. Wang, E. Abdalla, F. Atrio-Barandela, and               [96] P.-J. Wu, M. Zhang, and S.-J. Jin, How dark sector
+     D. Pavón, Further understanding the interaction be-             equations of state govern interaction signatures, Phys.
+     tween dark energy and dark matter: current status and           Rev. D 113, L081302 (2026), arXiv:2512.05548 [astro-
+     future directions, Rept. Prog. Phys. 87, 036901 (2024),         ph.CO].
+     arXiv:2402.00819 [astro-ph.CO].                            [97] D. Figueruelo, M. van der Westhuizen, A. Abebe,
+[83] W. Giarè, Y. Zhai, S. Pan, E. Di Valentino, R. C. Nunes,        and E. Di Valentino, Late-time background constraints
+     and C. van de Bruck, Tightening the reins on nonmin-            on linear and non-linear interacting dark energy af-
+     imal dark sector physics: Interacting dark energy with          ter DESI DR2, Phys. Dark Univ. 52, 102238 (2026),
+     dynamical and nondynamical equation of state, Phys.             arXiv:2601.03122 [astro-ph.CO].
+     Rev. D 110, 063527 (2024), arXiv:2404.02110 [astro-        [98] T.-N. Li, W. Giarè, G.-H. Du, Y.-H. Li, E. Di Valentino,
+     ph.CO].                                                         J.-F. Zhang, and X. Zhang, Robust Preference for Dark
+                                                                     Sector Interactions (2026), arXiv:2601.07361 [astro-
+                                                                                                                            23
+
+      ph.CO].                                                          release and the H0 tension, Mon. Not. Roy. Astron. Soc.
+ [99] A. Paliathanasis, Indications of a Late-Time Transi-             493, 3114 (2020), arXiv:2002.03408 [astro-ph.CO].
+      tion to a Strongly Interacting Dark Sector (2026),         [115] W. Yang, S. Pan, E. Di Valentino, O. Mena, D. F.
+      arXiv:2601.02789 [astro-ph.CO].                                  Mota, and S. Chakraborty, Probing the cold nature
+[100] J.-Q. Wang, R.-G. Cai, Z.-K. Guo, Y.-H. Li, S.-                  of dark matter, Phys. Rev. D 111, 103509 (2025),
+      J. Wang, and X. Zhang, Non-minimally coupled                     arXiv:2504.11973 [astro-ph.CO].
+      quintessence with sign-switching interaction (2026),       [116] C. You, D. Wang, and T. Yang, Dynamical Dark
+      arXiv:2604.02204 [astro-ph.CO].                                  Energy Implies a Coupled Dark Sector: Insights
+[101] A. Paliathanasis and K. J. Duffy, Saturation Mech-               from DESI DR2 via a Data-Driven Approach (2025),
+      anisms in the Interacting Dark Sector (2026),                    arXiv:2504.00985 [astro-ph.CO].
+      arXiv:2604.21671 [astro-ph.CO].                            [117] E. Mottola, THERMODYNAMIC INSTABILITY OF
+[102] Y. Zhai, C. van de Bruck, E. Di Valentino, B. Li,                DE SITTER SPACE, Phys. Rev. D 33, 1616 (1986).
+      and R. C. Nunes, Non-linear Structure Formation in         [118] P. Mazur and E. Mottola, Spontaneous Breaking of De
+      Planck+DESI Favoured Interacting Dark Energy Cos-                Sitter Symmetry by Radiative Effects, Nucl. Phys. B
+      mologies (2026), arXiv:2606.11368 [astro-ph.CO].                 278, 694 (1986).
+[103] S. del Campo, R. Herrera, and D. Pavon, Interacting        [119] N. C. Tsamis and R. P. Woodard, Relaxing the cosmo-
+      models may be key to solve the cosmic coincidence prob-          logical constant, Phys. Lett. B 301, 351 (1993).
+      lem, JCAP 01, 020 (2009), arXiv:0812.2210 [gr-qc].         [120] N. C. Tsamis and R. P. Woodard, Strong infrared effects
+[104] W. Yang, S. Pan, E. Di Valentino, R. C. Nunes,                   in quantum gravity, Annals Phys. 238, 1 (1995).
+      S. Vagnozzi, and D. F. Mota, Tale of stable interact-      [121] A. M. Polyakov, Infrared instability of the de Sitter
+      ing dark energy, observational signatures, and the H0            space (2012), arXiv:1209.4135 [hep-th].
+      tension, JCAP 09, 019 (2018), arXiv:1805.08252 [astro-     [122] G. Obied, H. Ooguri, L. Spodyneiko, and C. Vafa,
+      ph.CO].                                                          De Sitter Space and the Swampland (2018),
+[105] S. Pan, W. Yang, E. Di Valentino, E. N. Saridakis, and           arXiv:1806.08362 [hep-th].
+      S. Chakraborty, Interacting scenarios with dynamical       [123] R. Brandenberger, L. L. Graef, G. Marozzi, and G. P.
+      dark energy: Observational constraints and alleviation           Vacca, Backreaction of super-Hubble cosmological per-
+      of the H0 tension, Phys. Rev. D 100, 103520 (2019),              turbations beyond perturbation theory, Phys. Rev. D
+      arXiv:1907.07540 [astro-ph.CO].                                  98, 103523 (2018), arXiv:1807.07494 [hep-th].
+[106] J. Sola, A. Gomez-Valent, and J. de Cruz Pérez, Hints      [124] L. A. Escamilla, S. Pan, E. Di Valentino, A. Paliathana-
+      of dynamical vacuum energy in the expanding Universe,            sis, J. A. Vázquez, and W. Yang, Testing an oscilla-
+      Astrophys. J. Lett. 811, L14 (2015), arXiv:1506.05793            tory behavior of dark energy, Phys. Rev. D 111, 023531
+      [gr-qc].                                                         (2025), arXiv:2404.00181 [astro-ph.CO].
+[107] J. Solà, A. Gómez-Valent, and J. de Cruz Pérez,            [125] M. A. C. Alvarez, L. Graef, and R. Brandenberger,
+      First evidence of running cosmic vacuum: challenging             Back-Reaction of Super-Hubble Fluctuations, Late
+      the concordance model, Astrophys. J. 836, 43 (2017),             Time Tracking and Recent Observational Results,
+      arXiv:1602.02103 [astro-ph.CO].                                  (2025), arXiv:2502.17395 [astro-ph.CO].
+[108] J. Solà Peracaula, J. de Cruz Pérez, and A. Gomez-         [126] S. Pan, W. Yang, E. Di Valentino, D. F. Mota, and
+      Valent, Possible signals of vacuum dynamics in the Uni-          J. Silk, IWDM: the fate of an interacting non-cold
+      verse, Mon. Not. Roy. Astron. Soc. 478, 4357 (2018),             dark matter — vacuum scenario, JCAP 07, 064 (2023),
+      arXiv:1703.08218 [astro-ph.CO].                                  arXiv:2211.11047 [astro-ph.CO].
+[109] J. Solà, A. Gómez-Valent, and J. de Cruz Pérez, The        [127] K. Naidoo, M. Jaber, W. A. Hellwing, and M. Bilicki,
+      H0 tension in light of vacuum dynamics in the Universe,          Dark matter solution to the H0 and S8 tensions, and
+      Phys. Lett. B 774, 317 (2017), arXiv:1705.06723 [astro-          the integrated Sachs-Wolfe void anomaly, Phys. Rev. D
+      ph.CO].                                                          109, 083511 (2024), arXiv:2209.08102 [astro-ph.CO].
+[110] J. Sola Peracaula, A. Gomez-Valent, J. de Cruz Perez,      [128] Y.-H. Yao, J.-C. Wang, and X.-H. Meng, Observational
+      and C. Moreno-Pulido, Running Vacuum in the Uni-                 constraints on noncold dark matter and phenomenolog-
+      verse: Phenomenological Status in Light of the Latest            ical emergent dark energy, Phys. Rev. D 109, 063502
+      Observations, and Its Impact on the σ 8 and H0 Ten-              (2024), arXiv:2303.00961 [astro-ph.CO].
+      sions, Universe 9, 262 (2023), arXiv:2304.11157 [astro-    [129] G. Sardar and S. Chakraborty, Observational con-
+      ph.CO].                                                          straints on modified CPL models considering non-cold
+[111] J. de Cruz Pérez, A. Gómez-Valent, and J. Solà Per-              dark matter, New Astron. 112, 102259 (2024).
+      acaula, Dynamical Dark Energy models in light              [130] U. Kumar, A. Ajith, and A. Verma, Evidence for non-
+      of the latest observations 10.1103/xchk-xlk1 (2025),             cold dark matter from DESI DR2 measurements (2025),
+      arXiv:2512.20616 [astro-ph.CO].                                  arXiv:2504.14419 [astro-ph.CO].
+[112] T. Clemson, K. Koyama, G.-B. Zhao, R. Maartens,            [131] X. Chen and A. Loeb, Evolving dark energy or dark
+      and J. Valiviita, Interacting Dark Energy – constraints          matter with an evolving equation-of-state?, JCAP 07,
+      and degeneracies, Phys. Rev. D 85, 043007 (2012),                059 (2025), arXiv:2505.02645 [astro-ph.CO].
+      arXiv:1109.6234 [astro-ph.CO].                             [132] L. Giani, R. Von Marttens, and O. F. Piattella, The
+[113] A. Shafieloo, D. K. Hazra, V. Sahni, and A. A. Starobin-         matter with(in) CPL (2025), arXiv:2505.08467 [astro-
+      sky, Metastable Dark Energy with Radioactive-like De-            ph.CO].
+      cay, Mon. Not. Roy. Astron. Soc. 473, 2760 (2018),         [133] M. Abedin, L. A. Escamilla, S. Pan, E. Di Valentino,
+      arXiv:1610.05192 [astro-ph.CO].                                  and W. Yang, When dark matter heats up: A model-
+[114] S. Pan, W. Yang, and A. Paliathanasis, Non-linear in-            independent search for noncold behavior, Phys. Rev. D
+      teracting cosmological models after Planck 2018 legacy           112, 123537 (2025), arXiv:2505.09470 [astro-ph.CO].
+                                                                                                                                24
+
+[134] T.-N. Li, Y.-M. Zhang, Y.-H. Yao, G.-H. Du, P.-J. Wu,            113 (2022), arXiv:2112.03863 [astro-ph.CO].
+      J.-F. Zhang, and X. Zhang, Revisiting the phenomeno-       [151] D. Rubin et al., Union Through UNITY: Cosmology
+      logically emergent dark energy model: is non-zero equa-          with 2,000 SNe Using a Unified Bayesian Framework
+      tion of state of dark matter favored by DESI DR2?,               (2023), arXiv:2311.12098 [astro-ph.CO].
+      JCAP 12, 048, arXiv:2506.09819 [astro-ph.CO].              [152] T. M. C. Abbott et al. (DES), The Dark Energy Sur-
+[135] T.-N. Li, P.-J. Wu, G.-H. Du, Y.-H. Yao, J.-F. Zhang,            vey: Cosmology Results with ∼1500 New High-redshift
+      and X. Zhang, Exploring non-cold dark matter in the              Type Ia Supernovae Using the Full 5 yr Data Set, Astro-
+      scenario of dynamical dark energy with DESI DR2 data,            phys. J. Lett. 973, L14 (2024), arXiv:2401.02929 [astro-
+      Phys. Dark Univ. 50, 102068 (2025), arXiv:2507.07798             ph.CO].
+      [astro-ph.CO].                                             [153] A. Lewis and S. Bridle, Cosmological parameters from
+[136] D. Wang and K. Bamba, ACT DR6 Leads to                           cmb and other data: A monte carlo approach, Physical
+      Stronger Evidence for Dynamical Dark Matter (2025),              Review D 66, 10.1103/physrevd.66.103511 (2002).
+      arXiv:2506.23029 [astro-ph.CO].                            [154] J. Torrado and A. Lewis, Cobaya: Code for bayesian
+[137] Y.-H. Yao, Y.-H. Shen, T.-N. Li, G.-H. Du, and                   analysis of hierarchical physical models, Journal of Cos-
+      Y. Gong, Examining a new form of non-standard dark               mology and Astroparticle Physics 2021 (05), 057.
+      matter using DESI DR2 data (2025), arXiv:2510.13436        [155] A. Lewis, Getdist: a python package for analysing
+      [astro-ph.CO].                                                   monte carlo samples (2025), arXiv:1910.13970 [astro-
+[138] M. Braglia, X. Chen, and A. Loeb, Exotic Dark Matter             ph.IM].
+      and the DESI Anomaly (2025), arXiv:2507.13925 [astro-      [156] A. Heavens, Y. Fantaye, A. Mootoovaloo, H. Eggers,
+      ph.CO].                                                          Z. Hosenie, S. Kroon, and E. Sellentin, Marginal Like-
+[139] G. Poulot, E. M. Teixeira, C. van de Bruck, and N. J.            lihoods from Monte Carlo Markov Chains, (2017),
+      Nunes, Scalar field dark matter with time-varying equa-          arXiv:1704.03472 [stat.CO].
+      tion of state, JCAP 11, 005, arXiv:2404.10524 [astro-      [157] W.       Giare,       wgcosmo,         https://github.com/
+      ph.CO].                                                          williamgiare/wgcosmo (2025 / 2025).
+[140] X. Li, A. Shafieloo, V. Sahni, and A. A. Starobinsky,      [158] R. E. Kass and A. E. Raftery, Bayes Factors, J. Am.
+      Revisiting Metastable Dark Energy and Tensions in the            Statist. Assoc. 90, 773 (1995).
+      Estimation of Cosmological Parameters, Astrophys. J.       [159] A. H. Wright et al., KiDS-Legacy: Cosmological con-
+      887, 153 (2019), arXiv:1904.03790 [astro-ph.CO].                 straints from cosmic shear with the complete Kilo-
+[141] W. Yang, E. Di Valentino, S. Pan, S. Basilakos, and              Degree Survey (2025), arXiv:2503.19441 [astro-ph.CO].
+      A. Paliathanasis, Metastable dark energy models in         [160] B. Stölzner et al., KiDS-Legacy: Consistency of cosmic
+      light of P lanck 2018 data: Alleviating the H0 tension,          shear measurements and joint cosmological constraints
+      Phys. Rev. D 102, 063503 (2020), arXiv:2001.04307                with external probes (2025), arXiv:2503.19442 [astro-
+      [astro-ph.CO].                                                   ph.CO].
+[142] S. Pan and G. S. Sharov, A model with interac-             [161] T. M. C. Abbott et al. (DES), Dark Energy Survey
+      tion of dark components and recent observational                 Year 3 Results: Cosmological Constraints from Clus-
+      data, Mon. Not. Roy. Astron. Soc. 472, 4736 (2017),              ter Abundances, Weak Lensing, and Galaxy Clustering
+      arXiv:1609.02287 [gr-qc].                                        (2025), arXiv:2503.13632 [astro-ph.CO].
+[143] W. Yang, S. Pan, R. Herrera, and S. Chakraborty,           [162] F. Avila, A. Bernui, E. de Carvalho, and C. P. Novaes,
+      Large-scale (in) stability analysis of an exactly solved         The growth rate of cosmic structures in the local uni-
+      coupled dark-energy model, Phys. Rev. D 98, 043517               verse with the alfalfa survey, Monthly Notices of the
+      (2018), arXiv:1808.01669 [gr-qc].                                Royal Astronomical Society 505, 3404–3413 (2021).
+[144] G. Caldera-Cabral, R. Maartens, and B. M. Schaefer,        [163] K. Said, M. Colless, C. Magoulas, J. R. Lucey, and M. J.
+      The Growth of Structure in Interacting Dark Energy               Hudson, Joint analysis of 6dfgs and sdss peculiar veloc-
+      Models, JCAP 07, 027, arXiv:0905.0492 [astro-ph.CO].             ities for the growth rate of cosmic structure and tests
+[145] A. Mehrabi, S. Basilakos, and F. Pace, How cluster-              of gravity, Monthly Notices of the Royal Astronomical
+      ing dark energy affects matter perturbations, Mon. Not.          Society 497, 1275–1293 (2020).
+      Roy. Astron. Soc. 452, 2930 (2015), arXiv:1504.01262       [164] F. Simpson, C. Blake, J. Peacock, I. Baldry, J. Bland-
+      [astro-ph.CO].                                                   Hawthorn, A. Heavens, C. Heymans, J. Loveday, and
+[146] Y. Toda, A. Gómez-Valent, and K. Koyama, Effi-                   P. Norberg, Galaxy and mass assembly: Redshift space
+      cient compression of redshift-space distortion data for          distortions from the clipped galaxy field, Physical Re-
+      late-time modified gravity models, JCAP 12, 033,                 view D 93, 10.1103/physrevd.93.023525 (2016).
+      arXiv:2408.16388 [astro-ph.CO].                            [165] C. Blake, I. K. Baldry, J. Bland-Hawthorn,
+[147] N. Aghanim et al. (Planck), Planck 2018 results. VI.             L. Christodoulou, M. Colless, C. Conselice, S. P.
+      Cosmological parameters, Astron. Astrophys. 641, A6              Driver, A. M. Hopkins, J. Liske, J. Loveday, P. Nor-
+      (2020), [Erratum: Astron.Astrophys. 652, C4 (2021)],             berg, J. A. Peacock, G. B. Poole, and A. S. G.
+      arXiv:1807.06209 [astro-ph.CO].                                  Robotham, Galaxy and mass assembly (gama): im-
+[148] N. Aghanim et al. (Planck), Planck 2018 results. V.              proved cosmic growth measurements using multiple
+      CMB power spectra and likelihoods, Astron. Astrophys.            tracers of large-scale structure, Monthly Notices of the
+      641, A5 (2020), arXiv:1907.12875 [astro-ph.CO].                  Royal Astronomical Society 436, 3089–3105 (2013).
+[149] M. Abdul Karim et al. (DESI), DESI DR2 Results I:          [166] C. Blake, S. Brough, M. Colless, C. Contreras,
+      Baryon Acoustic Oscillations from the Lyman Alpha                W. Couch, S. Croom, T. Davis, M. J. Drinkwater,
+      Forest (2025), arXiv:2503.14739 [astro-ph.CO].                   K. Forster, D. Gilbank, M. Gladders, K. Glazebrook,
+[150] D. Scolnic et al., The Pantheon+ Analysis: The Full              B. Jelliffe, R. J. Jurek, I.-h. Li, B. Madore, D. C. Martin,
+      Data Set and Light-curve Release, Astrophys. J. 938,             K. Pimbblet, G. B. Poole, M. Pracy, R. Sharp, E. Wis-
+                                                                                                                               25
+
+      nioski, D. Woods, T. K. Wyder, and H. K. C. Yee, The                Journal of Cosmology and Astroparticle Physics 2009
+      wigglez dark energy survey: the growth rate of cosmic               (10), 004.
+      structure since redshift z=0.9: Wigglez survey: growth        [171] T. Okumura, C. Hikage, T. Totani, M. Tonegawa,
+      of structure, Monthly Notices of the Royal Astronomical             H. Okada, K. Glazebrook, C. Blake, P. G. Ferreira,
+      Society 415, 2876–2891 (2011).                                      S. More, A. Taruya, et al., The subaru fmos galaxy red-
+[167] H. Gil-Marín, W. J. Percival, L. Verde, J. R. Brown-                shift survey (fastsound). iv. new constraint on gravity
+      stein, C.-H. Chuang, F.-S. Kitaura, S. A. Rodríguez-                theory from redshift space distortions at z 1.4, Pub-
+      Torres, and M. D. Olmstead, The clustering of galaxies              lications of the Astronomical Society of Japan 68, 38
+      in the sdss-iii baryon oscillation spectroscopic survey:            (2016).
+      Rsd measurement from the power spectrum and bispec-           [172] J. Hou, A. G. Sánchez, A. J. Ross, A. Smith, R. Neveux,
+      trum of the dr12 boss galaxies, Monthly Notices of the              J. Bautista, E. Burtin, C. Zhao, R. Scoccimarro, K. S.
+      Royal Astronomical Society , stw2679 (2016).                        Dawson, et al., The completed sdss-iv extended baryon
+[168] F. Mohammad, D. Bianchi, W. Percival, S. de La Torre,               oscillation spectroscopic survey: Bao and rsd measure-
+      L. Guzzo, B. Granett, E. Branchini, M. Bolzonella,                  ments from anisotropic clustering analysis of the quasar
+      B. Garilli, M. Scodeggio, et al., The vimos public ex-              sample in configuration space between redshift 0.8 and
+      tragalactic redshift survey (vipers)-unbiased clustering            2.2, Monthly Notices of the Royal Astronomical Society
+      estimate with vipers slit assignment, Astronomy & As-               500, 1201 (2021).
+      trophysics 619, A17 (2018).                                   [173] Y. Toda, A. Gómez-Valent, and K. Koyama, Efficient
+[169] L. Guzzo, M. Pierleoni, B. Meneux, E. Branchini,                    compression of redshift-space distortion data for late-
+      O. Le Fèvre, C. Marinoni, B. Garilli, J. Blaizot,                   time modified gravity models, Journal of Cosmology and
+      G. De Lucia, A. Pollo, et al., A test of the nature of cos-         Astroparticle Physics 2024 (12), 033.
+      mic acceleration using galaxy redshift distortions, Na-
+      ture 451, 541 (2008).
+[170] Y.-S. Song and W. J. Percival, Reconstructing the his-
+      tory of structure formation using redshift distortions,
+

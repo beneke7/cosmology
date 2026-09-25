@@ -1,0 +1,39 @@
+{
+  "id": "dovekie_ivs_profile_wider_domain_20260925",
+  "status": "complete_wider_domain_denser_grid_stress_check",
+  "objective": "Stress-test the no-boundary-contact Dovekie-only IVS profile on a wider finite search box and denser grid.",
+  "domain": {
+    "Omega_m0": [0.005, 0.95],
+    "g": [-5.0, 5.0],
+    "grid_shape": [61, 61],
+    "role": "Numerical sensitivity domain only, not a prior."
+  },
+  "result": {
+    "best_parameters": {"Omega_m0": 0.3930178132033934, "g": -0.629391302531886},
+    "chi2": 1629.9992169240093,
+    "base_box_parameters": {"Omega_m0": 0.39301742026988545, "g": -0.6293878145169555},
+    "expanded_minus_base_best_score_abs_difference": 5.6843418860808015e-11,
+    "expanded_box_boundary_hits": [],
+    "endpoint_recheck_abs_difference": 0.0,
+    "physicality_refinement_points": 4001,
+    "observed_redshift_interval": [0.0, 1.14418],
+    "minimum_matter": 0.3930178132033934,
+    "minimum_vacuum": 0.6069821867966065,
+    "minimum_E2": 1.0,
+    "minimum_positive_cdm_witness": 0.25153096738662134,
+    "maximum_adaptive_distance_integral_difference": 2.220446049250313e-16
+  },
+  "interpretation": "The wider-box, denser-grid minimum is numerically indistinguishable from the base-box solution and touches no new boundary. This reuses the production scorer; it is not independent verification, a proof of global optimality, or physical viability beyond the observed SN redshift range.",
+  "runtime_seconds": 2.4236007826402783,
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --seconds 1200 -- .venv/bin/python experiments/dovekie_ivs_profile/domain_sensitivity.py",
+  "input_hashes": {
+    "hubble_diagram_sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+    "packed_precision_sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+    "base_profile_result_sha256": "4068353752350739921f77c20754d54c85ae5024e0439280fa98e93656598817"
+  },
+  "code_hashes": {
+    "domain_sensitivity_script_sha256": "2b5209071c94dd5967dbe668d7d6e56435f93d45aaee0d3f7a476de71ebf23e2",
+    "profile_script_sha256": "0dbc7acb0c4b5691e0d68144f86e82b2dcf0a1b17e8c07e8f49aa62a92a41f29"
+  },
+  "surface_sha256": "db743bdbf0c06154ea27847307ff839a2df46500c4e7a60cd53cf9cdce53cc87"
+}

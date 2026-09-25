@@ -151,6 +151,45 @@
       "local_evidence": ["context/papers/desi_lya_ap.pdf", "context/papers/desi_lya_bao_results_i.pdf", "context/papers/desi_lya_ap_validation.pdf", "work/literature/physical_model_update.md", "context/reading_cards/desi_lya_ap.md"],
       "counterevidence_or_limit": "An exact public replacement/joint likelihood covariance was not identified; the current 13-row vector still includes the earlier Ly-alpha BAO block.",
       "experiment_implication": "Do not combine the Results IV product independently with the old Ly-alpha rows; require an audited joint/replacement likelihood. Do not use this release as a growth or perturbation-stability constraint."
+    },
+    {
+      "claim_id": "dovekie_ivs_profile_gain_is_small_and_domain_stable",
+      "statement": "The flat late-time Q=Gamma rho_x Dovekie-only profile has a finite-box minimum 1.421 chi-square units below its LCDM reference for two additional shape parameters; an independent ODE/GLS implementation reproduces the score and a wider numerical search changes the minimum by less than 6e-11.",
+      "status": "exploratory local profile; independent numerical reproduction and wider-box sensitivity check pass",
+      "confidence": "high for the pinned finite-domain numerical result; low for evidential or full physical interpretation",
+      "primary_evidence": [
+        {"source_id": "interacting_de_desi_dr2_2026", "locator": "Model definition Q=Gamma rho_x, w_x=-1 vacuum branch; local profile implements the late-time background only."}
+      ],
+      "local_evidence": ["experiments/dovekie_ivs_profile/result.json", "experiments/dovekie_ivs_profile/domain_sensitivity.json", "work/compute10/dovekie_ivs_profile_independent_review.md", "work/theory8/dovekie_profile_physics_critic.md"],
+      "counterevidence_or_limit": "The profile gain is small despite two extra shape parameters; it is not a posterior, evidence, null-calibrated statistic or global-optimum proof. The calculation omits BAO/CMB, radiation, perturbations, growth and author-modified CAMB; the positive baryon/CDM split is only existential over the observed SN interval.",
+      "experiment_implication": "Calibrate the exact adaptive finite search using matched full-covariance LCDM mock SNe before interpreting the observed gain; only then consider a physically complete joint solver comparison."
+    },
+    {
+      "claim_id": "interaction_increment_depends_on_dark_energy_trajectory",
+      "statement": "Recent Planck/ACT+DESI DR2+Dovekie analyses report that interaction preference depends on the assumed dynamical-dark-energy trajectory; in an interacting CPL fit the coupling adds essentially no best-fit improvement, while a separate Q=Gamma rho_x study reports that Bayesian evidence still favors LCDM.",
+      "status": "full-text literature cross-check; not a local numerical reproduction or independent-data synthesis",
+      "confidence": "moderate for the stated paper-specific findings; model, priors and likelihoods differ",
+      "primary_evidence": [
+        {"source_id": "dynamical_de_interaction_reassessment_2026", "locator": "Abstract and full-text results for interacting w0waCDM and three one-parameter DE trajectories; local exact v1 PDF/text."},
+        {"source_id": "interacting_de_desi_dr2_2026", "locator": "Abstract and full-text IVS model-selection comparison; local exact v1 PDF/text. These analyses use different likelihood/model implementations."}
+      ],
+      "local_evidence": ["work/literature5/reading_card.md", "work/literature5/crosscheck.json"],
+      "counterevidence_or_limit": "Both papers reuse overlapping public BAO/CMB/SN data. Their model parameterizations and inference choices differ from the reduced Dovekie-only profile, so their numerical scores are not directly comparable.",
+      "experiment_implication": "Prioritize matched null calibration and then a consistent physically complete likelihood/perturbation implementation; do not infer a model-independent interaction from a restricted distance fit."
+    },
+    {
+      "claim_id": "dovekie_ivs_local_response_is_omega_m_degenerate",
+      "statement": "At the selected Dovekie-only IVS profile point, the intercept-projected whitened Omega_m and g response vectors have cosine +0.9694, with only 6.0% of post-intercept g information retained after projecting out Omega_m. The near-zero residual projection onto the conditional g direction is consistent with first-order stationarity at the joint profile minimum.",
+      "status": "independent local response-geometry audit; the residual orthogonality is a fit-consistency check, not independent evidence",
+      "confidence": "high for the pinned-point numerical geometry; limited to the local linear SN-only background response",
+      "primary_evidence": [],
+      "local_evidence": [
+        "experiments/dovekie_ivs_profile/identifiability_record.json",
+        "work/compute13/dovekie_profile_identifiability.md",
+        "work/compute13/dovekie_profile_identifiability.json"
+      ],
+      "counterevidence_or_limit": "The condition number and conditional information depend on the chosen coordinates and are not posterior widths. This one-point late-time SN-only calculation does not rule out a signal in a complete physical likelihood.",
+      "experiment_implication": "In combination with the separately calibrated null, deprioritize more flexible SN-only background curves. Prioritize a bounded provenance/feasibility check for a physical perturbation-level likelihood, keeping BAO and SN separate absent cross-covariance."
     }
   ]
 }

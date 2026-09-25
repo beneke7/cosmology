@@ -1,0 +1,45 @@
+{
+  "id": "des_dovekie_ivs_profile_screen_20260925",
+  "status": "exploratory_profile_screen_independently_reproduced_pass",
+  "objective": "Full STAT+SYS DES-Dovekie profile chi-square for flat late-time IVS background with an analytically profiled common magnitude intercept.",
+  "contract": "work/theory7/dovekie_ivs_profile_contract.md/.json",
+  "independent_physics_review": "work/theory8/dovekie_profile_physics_critic.md/.json",
+  "independent_numerical_review": {
+    "status": "pass",
+    "markdown": "work/compute10/dovekie_ivs_profile_independent_review.md",
+    "json": "work/compute10/dovekie_ivs_profile_independent_review.json",
+    "checker": "work/compute10/dovekie_ivs_profile_independent.py",
+    "max_absolute_score_difference": 4.547473508864641e-12,
+    "reviewed_production_result_sha256": "4068353752350739921f77c20754d54c85ae5024e0439280fa98e93656598817",
+    "reviewed_profile_source_sha256": "0dbc7acb0c4b5691e0d68144f86e82b2dcf0a1b17e8c07e8f49aa62a92a41f29"
+  },
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --seconds 1200 -- .venv/bin/python experiments/dovekie_ivs_profile/profile.py",
+  "runtime_seconds": 3.226404372602701,
+  "result": "experiments/dovekie_ivs_profile/result.json",
+  "source_hashes": {
+    "profile_script": "0dbc7acb0c4b5691e0d68144f86e82b2dcf0a1b17e8c07e8f49aa62a92a41f29",
+    "dovekie_profile_helper": "f796afccedf91b61af5b0cfc18281a4638a96d9abcfa9618f3ea79b672b10ce1",
+    "bao_ivs_reference_adapter": "ae99ae789aa02885667e27aa2cbbaa0b035323e69d1a4bf7bbd3848949fc5282",
+    "physicality_contract": "ed8e16fc3e26f31b9141902b8482340339c48ae9120bd5b297314e94bd38d764",
+    "independent_physics_review": "d1807b372a7d5e760b214e468a278578cece0931dc2933b77e28e2cc6fbf4633"
+  },
+  "output_hashes": {
+    "result": "4068353752350739921f77c20754d54c85ae5024e0439280fa98e93656598817",
+    "surface_npz": "e3220d78993db645ac9124fd2cb3548caedb9a04546aea6a83240590863eefb0",
+    "plot": "e1ce11bab995a8d7dd6fd0f0043db2d92a0b4869498c5211ce064f087dfb9b30"
+  },
+  "domain_sensitivity_record": "experiments/dovekie_ivs_profile/domain_sensitivity_record.json",
+  "null_calibration_record": "experiments/dovekie_ivs_profile/null_calibration_record.json",
+  "identifiability_record": "experiments/dovekie_ivs_profile/identifiability_record.json",
+  "null_calibration_plot": [
+    "experiments/dovekie_ivs_profile/null_calibration.png",
+    "experiments/dovekie_ivs_profile/null_calibration.svg"
+  ],
+  "limits": [
+    "SN-only reduced background; no BAO likelihood is multiplied in and no exact independence is asserted.",
+    "No H0 or dimensional Gamma inference; H0=70 km/s/Mpc is only an absorbed distance-modulus gauge.",
+    "Finite-search profile minima are not posterior/evidence, p-value, sigma, Wilks interval, or discovery evidence.",
+    "Positive baryon/CDM split is existential and uncalibrated; no fb estimate. Physical checks cover only the observed Dovekie redshift range.",
+    "Radiation, perturbations, CMB/BBN, early-time viability and the paper's modified-CAMB pipeline are not reproduced."
+  ]
+}

@@ -1,0 +1,1004 @@
+{
+  "status": "complete_exploratory_dovekie_only_ivs_profile",
+  "objective": "Full STAT+SYS DES-Dovekie profile chi-square for flat late-time IVS background with an analytically profiled common magnitude intercept.",
+  "scope_and_limits": [
+    "SN-only reduced background; no BAO likelihood is multiplied in and no exact independence is asserted.",
+    "No H0 or dimensional Gamma inference; H0=70 km/s/Mpc is only an absorbed distance-modulus gauge.",
+    "Finite-search profile minima are not posterior/evidence, p-value, sigma, Wilks interval, or discovery evidence.",
+    "Positive baryon/CDM split is existential and uncalibrated; no fb estimate. Physical checks cover only the observed Dovekie redshift range.",
+    "Radiation, perturbations, CMB/BBN, early-time viability and the paper's modified-CAMB pipeline are not reproduced."
+  ],
+  "likelihood_contract": {
+    "row_count": 1820,
+    "sample_order": "Pinned upstream release order, unchanged; no CID sorting or metadata join.",
+    "covariance": "Full released STAT+SYS covariance represented by packed float32 upper-triangle precision P=C^-1; no separate MUERR addition.",
+    "magnitude_intercept": "One unbounded common additive magnitude, profiled analytically by full-covariance GLS.",
+    "distance": "DL=(1+zHEL)*(c/H0_gauge)*integral_0^zHD dz/E(z); zHD enters expansion and zHEL the prefactor.",
+    "normalization": "Only profile chi-square differences are reported; fixed covariance logdet and Gaussian constant omitted from minima differences.",
+    "H0_gauge_km_s_mpc": 70.0
+  },
+  "background_model": {
+    "source_convention": "Q=Gamma*rho_x>0 transfers CDM to vacuum; baryons separately conserved.",
+    "u": "ln(1+z)=-ln(a)",
+    "variables": "m=(rho_b+rho_c)/rho_crit0, x=rho_x/rho_crit0, E^2=m+x, g=Gamma/H0.",
+    "ode": [
+      "dx/du=-g*x/E",
+      "dm/du=3*m+g*x/E",
+      "dD/du=exp(u)/E"
+    ],
+    "initial_conditions": [
+      "m(0)=Omega_m0",
+      "x(0)=1-Omega_m0",
+      "D(0)=0"
+    ],
+    "scope": "Flat late-time matter plus vacuum; radiation/neutrinos/perturbations omitted."
+  },
+  "search": {
+    "initial_bounds": {
+      "Omega_m0": [
+        0.05,
+        0.6
+      ],
+      "g": [
+        -3.0,
+        3.0
+      ]
+    },
+    "bounds_role": "Finite numerical search box; Omega_m bounds inherited from BAO code and are not a paper prior. g box matches paper Table I but no SN posterior measure is applied.",
+    "final_bounds": {
+      "Omega_m0": [
+        0.05,
+        0.6
+      ],
+      "g": [
+        -3.0,
+        3.0
+      ]
+    },
+    "bound_history": [
+      {
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "best_parameters": [
+          0.39301742026988545,
+          -0.6293878145169555
+        ],
+        "boundary_hits": []
+      }
+    ],
+    "grid_shape": [
+      41,
+      41
+    ],
+    "grid_scale_records": [
+      {
+        "expansion_index": 0,
+        "grid_point_count": 1681,
+        "probe_point_count": 40,
+        "probe_serial_seconds": 0.14414197951555252,
+        "probe_parallel_seconds": 0.04630408342927694,
+        "probe_parallel_speedup": 3.1129431540462167,
+        "probe_workers": 20,
+        "grid_workers": 20,
+        "parallel_grid_used": true,
+        "surface_seconds": 0.4390293210744858,
+        "physical_or_numeric_rejection_count": 458,
+        "rejection_reasons": {
+          "DomainError: nonpositive/nonfinite E^2 in ODE RHS": 324,
+          "DomainError: nonpositive/nonfinite m, x or E^2 on observed interval": 134
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ]
+      }
+    ],
+    "optimizer_method": "L-BFGS-B; deterministic reference/corner starts plus seeded uniform starts; every endpoint independently reevaluated.",
+    "coarse_grid_minimum_included_as_optimizer_start": true,
+    "optimizer_start_count_per_box": 16,
+    "optimizer_attempts": [
+      {
+        "start_index": 0,
+        "start": [
+          0.39374999999999993,
+          -0.6000000000000001
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 9,
+        "nit": 1,
+        "endpoint_parameters": [
+          0.39374999999999993,
+          -0.6000000000000001
+        ],
+        "reported_chi2": 1630.0725470004782,
+        "independent_endpoint_recheck_chi2": 1630.0725470004782,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": true,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite E^2 in ODE RHS": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 1,
+        "start": [
+          0.3,
+          0.0
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 60,
+        "nit": 12,
+        "endpoint_parameters": [
+          0.3930194282310379,
+          -0.6294076608446686
+        ],
+        "reported_chi2": 1629.9992169250618,
+        "independent_endpoint_recheck_chi2": 1629.9992169250618,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": true,
+        "objective_rejection_counts": {},
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 2,
+        "start": [
+          0.38697100769747017,
+          -0.4666647299169934
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 9,
+        "nit": 1,
+        "endpoint_parameters": [
+          0.38697100769747017,
+          -0.4666647299169934
+        ],
+        "reported_chi2": 1630.5981991341557,
+        "independent_endpoint_recheck_chi2": 1630.5981991341557,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": true,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite E^2 in ODE RHS": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 3,
+        "start": [
+          0.05,
+          0.0
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 48,
+        "nit": 13,
+        "endpoint_parameters": [
+          0.3930163790253682,
+          -0.629376936145042
+        ],
+        "reported_chi2": 1629.9992169247598,
+        "independent_endpoint_recheck_chi2": 1629.9992169247598,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": true,
+        "objective_rejection_counts": {},
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 4,
+        "start": [
+          0.6,
+          0.0
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 9,
+        "nit": 1,
+        "endpoint_parameters": [
+          0.6,
+          0.0
+        ],
+        "reported_chi2": 1851.7419379576909,
+        "independent_endpoint_recheck_chi2": 1851.7419379576909,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": true,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite E^2 in ODE RHS": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 5,
+        "start": [
+          0.05,
+          -3.0
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "nfev": 3,
+        "nit": 0,
+        "endpoint_parameters": [
+          0.05,
+          -3.0
+        ],
+        "reported_chi2": 1e+80,
+        "independent_endpoint_recheck_chi2": 1e+80,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": false,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite E^2 in ODE RHS": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 6,
+        "start": [
+          0.05,
+          3.0
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 9,
+        "nit": 1,
+        "endpoint_parameters": [
+          0.05,
+          3.0
+        ],
+        "reported_chi2": 1669.0473420655007,
+        "independent_endpoint_recheck_chi2": 1669.0473420655007,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": true,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite E^2 in ODE RHS": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 7,
+        "start": [
+          0.6,
+          -3.0
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "nfev": 3,
+        "nit": 0,
+        "endpoint_parameters": [
+          0.6,
+          -3.0
+        ],
+        "reported_chi2": 1e+80,
+        "independent_endpoint_recheck_chi2": 1e+80,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": false,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite m, x or E^2 on observed interval": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 8,
+        "start": [
+          0.6,
+          3.0
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 9,
+        "nit": 1,
+        "endpoint_parameters": [
+          0.6,
+          3.0
+        ],
+        "reported_chi2": 2056.007432892322,
+        "independent_endpoint_recheck_chi2": 2056.007432892322,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": true,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite E^2 in ODE RHS": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 9,
+        "start": [
+          0.13758148387223837,
+          -1.827755027520738
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "nfev": 3,
+        "nit": 0,
+        "endpoint_parameters": [
+          0.13758148387223837,
+          -1.827755027520738
+        ],
+        "reported_chi2": 1e+80,
+        "independent_endpoint_recheck_chi2": 1e+80,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": false,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite E^2 in ODE RHS": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 10,
+        "start": [
+          0.3100647885821869,
+          -0.4585466624981209
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 105,
+        "nit": 13,
+        "endpoint_parameters": [
+          0.3930184047168845,
+          -0.6293973439716871
+        ],
+        "reported_chi2": 1629.9992169241639,
+        "independent_endpoint_recheck_chi2": 1629.9992169241639,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": true,
+        "objective_rejection_counts": {},
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 11,
+        "start": [
+          0.3307175379032978,
+          -1.039932160836458
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 66,
+        "nit": 15,
+        "endpoint_parameters": [
+          0.39301742026988545,
+          -0.6293878145169555
+        ],
+        "reported_chi2": 1629.999216924066,
+        "independent_endpoint_recheck_chi2": 1629.999216924066,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": true,
+        "objective_rejection_counts": {},
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 12,
+        "start": [
+          0.14563991375029872,
+          2.5721134614389616
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 9,
+        "nit": 1,
+        "endpoint_parameters": [
+          0.14563991375029872,
+          2.5721134614389616
+        ],
+        "reported_chi2": 1673.0327827895974,
+        "independent_endpoint_recheck_chi2": 1673.0327827895974,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": true,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite E^2 in ODE RHS": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 13,
+        "start": [
+          0.2995312516459657,
+          -2.938055507403397
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "nfev": 3,
+        "nit": 0,
+        "endpoint_parameters": [
+          0.2995312516459657,
+          -2.938055507403397
+        ],
+        "reported_chi2": 1e+80,
+        "independent_endpoint_recheck_chi2": 1e+80,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": false,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite E^2 in ODE RHS": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 14,
+        "start": [
+          0.30056762919447594,
+          -1.4440339198759942
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "nfev": 3,
+        "nit": 0,
+        "endpoint_parameters": [
+          0.30056762919447594,
+          -1.4440339198759942
+        ],
+        "reported_chi2": 1e+80,
+        "independent_endpoint_recheck_chi2": 1e+80,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": false,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite m, x or E^2 on observed interval": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      },
+      {
+        "start_index": 15,
+        "start": [
+          0.204830493887126,
+          -1.7481348828845589
+        ],
+        "raw_success": true,
+        "status": 0,
+        "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "nfev": 3,
+        "nit": 0,
+        "endpoint_parameters": [
+          0.204830493887126,
+          -1.7481348828845589
+        ],
+        "reported_chi2": 1e+80,
+        "independent_endpoint_recheck_chi2": 1e+80,
+        "endpoint_recheck_difference": 0.0,
+        "endpoint_valid_physical": false,
+        "objective_rejection_counts": {
+          "DomainError: nonpositive/nonfinite E^2 in ODE RHS": 3
+        },
+        "bounds": [
+          [
+            0.05,
+            0.6
+          ],
+          [
+            -3.0,
+            3.0
+          ]
+        ],
+        "expansion_index": 0
+      }
+    ],
+    "final_best_point_boundary_hits": [],
+    "profile_is_domain_limited": false,
+    "flat_g0_multistarts": [
+      {
+        "start_omega_m": 0.05,
+        "success": true,
+        "status": 0,
+        "chi2": 1631.420535571238,
+        "omega_m": 0.3303168064039817
+      },
+      {
+        "start_omega_m": 0.12857142857142856,
+        "success": true,
+        "status": 0,
+        "chi2": 1631.4205355712393,
+        "omega_m": 0.3303168079628325
+      },
+      {
+        "start_omega_m": 0.20714285714285713,
+        "success": true,
+        "status": 0,
+        "chi2": 1631.4205355712422,
+        "omega_m": 0.330316777629343
+      },
+      {
+        "start_omega_m": 0.28571428571428564,
+        "success": true,
+        "status": 0,
+        "chi2": 1631.4205355712384,
+        "omega_m": 0.330316799586719
+      },
+      {
+        "start_omega_m": 0.3642857142857142,
+        "success": true,
+        "status": 0,
+        "chi2": 1631.42053557124,
+        "omega_m": 0.33031680667473384
+      },
+      {
+        "start_omega_m": 0.4428571428571428,
+        "success": true,
+        "status": 0,
+        "chi2": 1631.4205355712375,
+        "omega_m": 0.3303167809100941
+      },
+      {
+        "start_omega_m": 0.5214285714285714,
+        "success": true,
+        "status": 0,
+        "chi2": 1631.4205355712384,
+        "omega_m": 0.3303168112043366
+      },
+      {
+        "start_omega_m": 0.6,
+        "success": true,
+        "status": 0,
+        "chi2": 1631.4205355712418,
+        "omega_m": 0.33031683276935375
+      }
+    ]
+  },
+  "results": {
+    "ivs_sn_only_minimum": {
+      "parameters": {
+        "Omega_m0": 0.39301742026988545,
+        "g": -0.6293878145169555
+      },
+      "profile": {
+        "chi2": 1629.999216924066,
+        "magnitude_intercept": 0.017690168607403706,
+        "normal_equation_abs_residual": 4.303224443447107e-13,
+        "independent_algebra": {
+          "direct_residual_quadratic": 1629.999216924066,
+          "schur_profile_quadratic": 1629.9992169240659,
+          "whitened_residual_quadratic": 1629.9992169240659,
+          "max_absolute_disagreement": 2.2737367544323206e-13,
+          "offset_normal_equation_abs_residual": 5.382361223382759e-13
+        }
+      },
+      "physicality": {
+        "guard_z_interval": [
+          0.0,
+          1.14418
+        ],
+        "refined_u_grid_points": 4001,
+        "fb_max_exact": 0.7200034861568771,
+        "fb_witness": 0.3600017430784386,
+        "minimum_matter": 0.39301742026988545,
+        "minimum_vacuum": 0.6069825797301145,
+        "minimum_e2": 1.0,
+        "minimum_cdm_witness": 0.2515304639125354
+      },
+      "distance_quadrature_check": {
+        "points": [
+          {
+            "z": 0.1,
+            "ode_distance": 0.09712135440857586,
+            "adaptive_scalar_distance": 0.0971213544085758,
+            "absolute_difference": 5.551115123125783e-17,
+            "quadrature_reported_error": 1.078263638471808e-15
+          },
+          {
+            "z": 0.5,
+            "ode_distance": 0.4337782974699237,
+            "adaptive_scalar_distance": 0.4337782974699237,
+            "absolute_difference": 0.0,
+            "quadrature_reported_error": 4.815906534338096e-15
+          },
+          {
+            "z": 1.14418,
+            "ode_distance": 0.8377107012370326,
+            "adaptive_scalar_distance": 0.8377107012370325,
+            "absolute_difference": 1.1102230246251565e-16,
+            "quadrature_reported_error": 9.300457084882391e-15
+          }
+        ],
+        "max_abs_difference": 1.1102230246251565e-16
+      }
+    },
+    "bao_selected_ivs_reference_on_sn_profile": {
+      "parameters": {
+        "Omega_m0": 0.38697100769747017,
+        "g": -0.4666647299169934
+      },
+      "profile": {
+        "chi2": 1630.5981991341557,
+        "magnitude_intercept": 0.021365435254812326,
+        "normal_equation_abs_residual": 9.103828801926284e-14,
+        "independent_algebra": {
+          "direct_residual_quadratic": 1630.5981991341557,
+          "schur_profile_quadratic": 1630.5981991341562,
+          "whitened_residual_quadratic": 1630.5981991341555,
+          "max_absolute_disagreement": 4.547473508864641e-13,
+          "offset_normal_equation_abs_residual": 2.3714363805993344e-13
+        }
+      },
+      "physicality": {
+        "guard_z_interval": [
+          0.0,
+          1.14418
+        ],
+        "refined_u_grid_points": 4001,
+        "fb_max_exact": 0.7947893544758697,
+        "fb_witness": 0.39739467723793487,
+        "minimum_matter": 0.38697100769747017,
+        "minimum_vacuum": 0.6130289923025298,
+        "minimum_e2": 1.0,
+        "minimum_cdm_witness": 0.23319078899309562
+      },
+      "distance_quadrature_check": {
+        "points": [
+          {
+            "z": 0.1,
+            "ode_distance": 0.0971431505836111,
+            "adaptive_scalar_distance": 0.09714315058361114,
+            "absolute_difference": 4.163336342344337e-17,
+            "quadrature_reported_error": 1.078505624625538e-15
+          },
+          {
+            "z": 0.5,
+            "ode_distance": 0.4329811156045117,
+            "adaptive_scalar_distance": 0.43298111560451147,
+            "absolute_difference": 2.220446049250313e-16,
+            "quadrature_reported_error": 4.807056037720153e-15
+          },
+          {
+            "z": 1.14418,
+            "ode_distance": 0.831080237067219,
+            "adaptive_scalar_distance": 0.8310802370672187,
+            "absolute_difference": 3.3306690738754696e-16,
+            "quadrature_reported_error": 9.226844145029596e-15
+          }
+        ],
+        "max_abs_difference": 3.3306690738754696e-16
+      }
+    },
+    "delta_chi2_bao_point_minus_sn_minimum": 0.5989822100896163,
+    "dovekie_lcdm_reference": {
+      "parameters": {
+        "Omega_m0": 0.3303167905483107,
+        "g": 0.0
+      },
+      "chi2": 1631.4205355712409,
+      "source_flat_profile_fit": {
+        "model": "LCDM",
+        "parameter_names": [
+          "Omega_m"
+        ],
+        "parameters": {
+          "Omega_m": 0.3303167905483107
+        },
+        "parameter_bounds": {
+          "Omega_m": [
+            0.05,
+            0.6
+          ]
+        },
+        "profiled_additive_magnitude_offset_mag": 0.007449125568204219,
+        "chi2_profile": 1631.4205355712377,
+        "n_data": 1820,
+        "n_shape_parameters": 1,
+        "n_profiled_parameters": 1,
+        "ndof_screening": 1818,
+        "chi2_per_ndof_screening": 0.8973710316673474,
+        "bound_hits": [],
+        "optimizer_best_start": 3,
+        "optimizer_best_success": true,
+        "optimizer_best_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "optimizer_total_starts": 8,
+        "optimizer_runs": [
+          {
+            "start_index": 0,
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "chi2": 1631.4205355712402,
+            "parameters": [
+              0.33031681006850483
+            ],
+            "nfev": 12,
+            "nit": 4
+          },
+          {
+            "start_index": 1,
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "chi2": 1631.420535571242,
+            "parameters": [
+              0.33031682549840663
+            ],
+            "nfev": 16,
+            "nit": 5
+          },
+          {
+            "start_index": 2,
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "chi2": 1631.4205355712406,
+            "parameters": [
+              0.33031680608794994
+            ],
+            "nfev": 22,
+            "nit": 8
+          },
+          {
+            "start_index": 3,
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "chi2": 1631.4205355712377,
+            "parameters": [
+              0.3303167905483107
+            ],
+            "nfev": 110,
+            "nit": 8
+          },
+          {
+            "start_index": 4,
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "chi2": 1631.4205355712402,
+            "parameters": [
+              0.33031677840921236
+            ],
+            "nfev": 30,
+            "nit": 5
+          },
+          {
+            "start_index": 5,
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "chi2": 1631.4205355712413,
+            "parameters": [
+              0.3303167980026753
+            ],
+            "nfev": 12,
+            "nit": 4
+          },
+          {
+            "start_index": 6,
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "chi2": 1631.4205355712395,
+            "parameters": [
+              0.33031678653097735
+            ],
+            "nfev": 20,
+            "nit": 8
+          },
+          {
+            "start_index": 7,
+            "success": true,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "chi2": 1631.4205355712404,
+            "parameters": [
+              0.33031679296409117
+            ],
+            "nfev": 14,
+            "nit": 5
+          }
+        ],
+        "independent_algebra_check": {
+          "direct_residual_quadratic": 1631.4205355712377,
+          "schur_profile_quadratic": 1631.4205355712381,
+          "whitened_residual_quadratic": 1631.4205355712381,
+          "max_absolute_disagreement": 4.547473508864641e-13,
+          "offset_normal_equation_abs_residual": 4.4853010194856324e-14
+        }
+      }
+    },
+    "delta_chi2_lcdm_minimum_minus_ivs_minimum": 1.4213186471747576,
+    "interpretation_delta_sign": "Positive delta means the listed reference point has a higher SN-only profiled chi-square than the IVS SN-only minimum."
+  },
+  "numerical_checks": {
+    "precision_cholesky_pass": true,
+    "precision_symmetric": true,
+    "precision_min_cholesky_diagonal": 0.0021367027730887656,
+    "g0_vs_flat_lcdm_max_distance_modulus_difference_mag": 1.4210854715202004e-14,
+    "best_point_and_references_refined_physicality_pass": true,
+    "best_point_tight_ode_recheck": {
+      "default_rtol": 2e-10,
+      "default_atol": 2e-12,
+      "default_max_step_u": 0.025,
+      "tight_rtol": 2e-12,
+      "tight_atol": 2e-14,
+      "tight_max_step_u": 0.0125,
+      "absolute_profile_chi2_difference": 4.547473508864641e-13,
+      "maximum_distance_modulus_difference_mag": 1.4210854715202004e-14,
+      "pass_threshold_chi2": 1e-05,
+      "pass_threshold_mu_mag": 1e-07
+    },
+    "max_adaptive_distance_quadrature_difference": 3.3306690738754696e-16,
+    "physicality_grid_step_u_max": 0.0019967465835298262,
+    "refined_physicality_grid_points": 4001
+  },
+  "artifacts": {
+    "result": "experiments/dovekie_ivs_profile/result.json",
+    "surface_npz": "experiments/dovekie_ivs_profile/profile_surface.npz",
+    "plot": "experiments/dovekie_ivs_profile/profile_surface.png"
+  },
+  "inputs": {
+    "hubble_diagram_sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+    "packed_precision_sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+    "cid_order_sha256": "b7d5c6ad8dfdadf1e12443852b14006c0d9d0ceb4bcb46efb378f058ce5aa5a3"
+  },
+  "runtime_seconds": 3.226404372602701,
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "cpu_count_visible": 20,
+    "blas_threads_requested": 1,
+    "gpu_used": false
+  },
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --seconds 1200 -- .venv/bin/python experiments/dovekie_ivs_profile/profile.py"
+}

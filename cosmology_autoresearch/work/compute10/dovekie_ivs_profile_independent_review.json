@@ -1,0 +1,233 @@
+{
+  "status": "independent_reproduction_passed",
+  "method": "Standalone SNANA parser, independent full-precision unpack, contract-sign IVS ODE integrated with RK45, and independent full-covariance one-offset GLS profile.",
+  "nonreuse_statement": "This checker imports none of profile.py, fit_dovekie.py, or their scoring/ODE/distance functions. Its parser, matrix unpacking, integration, distance conversion, intercept profile, and quadratic checks are implemented locally.",
+  "source_contract": {
+    "paper_convention": "Q=Gamma*rho_x>0 transfers CDM to vacuum; baryons are separately conserved.",
+    "u": "ln(1+z)=-ln(a)",
+    "ode": [
+      "dx/du=-g*x/E",
+      "dm/du=3*m+g*x/E",
+      "E^2=m+x",
+      "dD/du=exp(u)/E"
+    ],
+    "rate_units": "g=Gamma/H0 is dimensionless and Gamma/H=g/E; c/H0_gauge is in Mpc.",
+    "distance": "DL=(1+zHEL)*(c/H0_gauge)*D(zHD), H0_gauge=70 km/s/Mpc."
+  },
+  "inputs": {
+    "rows": 1820,
+    "precision_representation": "Full released STAT+SYS inverse covariance P, unpacked from packed upper float32 values into float64 in original release order.",
+    "precision_archive_keys": [
+      "nsn",
+      "cov",
+      "allow_pickle"
+    ],
+    "precision_cholesky_pass": true,
+    "precision_q_one_p_one": 43938.33706138445,
+    "zHD_range": [
+      0.02509,
+      1.14418
+    ],
+    "zHEL_range": [
+      0.02385,
+      1.14501
+    ],
+    "official_zHD_positive_cut_keeps_all_rows": true,
+    "cid_order_sha256_lf_joined_trailing_lf": "b7d5c6ad8dfdadf1e12443852b14006c0d9d0ceb4bcb46efb378f058ce5aa5a3",
+    "muerr_or_muerr_sys_added": false
+  },
+  "hashes": {
+    "hubble_diagram_sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+    "packed_stat_sys_precision_sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+    "production_profile_sha256": "0dbc7acb0c4b5691e0d68144f86e82b2dcf0a1b17e8c07e8f49aa62a92a41f29",
+    "production_result_sha256": "4068353752350739921f77c20754d54c85ae5024e0439280fa98e93656598817",
+    "profile_contract_json_sha256": "ed8e16fc3e26f31b9141902b8482340339c48ae9120bd5b297314e94bd38d764",
+    "profile_contract_markdown_sha256": "73d62541f11f7d033b4e61982d4440e98babfd4d55cc4dd819c4d00650652365",
+    "frozen_bao_result_sha256": "e347b8934b2afdc23d23ef7d39c70f963b73888d17137f55caf7e51af87d43ae",
+    "bao_profile_source_sha256": "ae99ae789aa02885667e27aa2cbbaa0b035323e69d1a4bf7bbd3848949fc5282",
+    "production_sn_helper_sha256": "f796afccedf91b61af5b0cfc18281a4638a96d9abcfa9618f3ea79b672b10ce1",
+    "independent_checker_sha256": "39c02f0f8e1472fcea377ddf0d843343167e345e4bcdd13f929b9d90fdd0589a"
+  },
+  "exact_command_from_project_root": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python work/compute10/dovekie_ivs_profile_independent.py",
+  "score_tolerance_absolute": 0.0001,
+  "g0_lcdm_limit": {
+    "test_Omega_m0": 0.3,
+    "max_abs_distance_modulus_difference_mag_vs_analytic_LCDM_quadrature": 7.105427357601002e-14,
+    "tolerance_mag": 2e-08,
+    "passed": true
+  },
+  "source_sign_check": {
+    "reference_g": -0.4666647299169934,
+    "dimensionless_rate_definition": "g=Gamma/H0; Gamma/H=g/E",
+    "dx_du_at_today": 0.28607900912414674,
+    "dm_du_minus_3m_at_today": -0.28607900912414674,
+    "expected_x_source_sign": "opposite sign of g for x>0",
+    "expected_m_source_sign": "same sign as g for x>0",
+    "passed": true
+  },
+  "scores": [
+    {
+      "name": "ivs_minimum",
+      "parameters": {
+        "Omega_m0": 0.39301742026988545,
+        "g": -0.6293878145169555
+      },
+      "independent_chi2": 1629.9992169240707,
+      "reported_chi2": 1629.999216924066,
+      "absolute_score_difference": 4.547473508864641e-12,
+      "independent_profile_offset_mag": 0.017690168607424846,
+      "normal_equation_abs_residual": 1.5853984791647235e-13,
+      "max_gls_algebra_disagreement": 2.2737367544323206e-13,
+      "independent_delta_from_ivs_minimum": 0.0
+    },
+    {
+      "name": "bao_ivs_reference",
+      "parameters": {
+        "Omega_m0": 0.38697100769747017,
+        "g": -0.4666647299169934
+      },
+      "independent_chi2": 1630.5981991341532,
+      "reported_chi2": 1630.5981991341557,
+      "absolute_score_difference": 2.5011104298755527e-12,
+      "independent_profile_offset_mag": 0.021365435254834617,
+      "normal_equation_abs_residual": 6.439293542825908e-14,
+      "max_gls_algebra_disagreement": 4.547473508864641e-13,
+      "reported_delta_from_ivs_minimum": 0.5989822100896163,
+      "independent_delta_from_ivs_minimum": 0.5989822100825677
+    },
+    {
+      "name": "sn_lcdm_reference",
+      "parameters": {
+        "Omega_m0": 0.3303167905483107,
+        "g": 0.0
+      },
+      "independent_chi2": 1631.420535571243,
+      "reported_chi2": 1631.4205355712409,
+      "absolute_score_difference": 2.0463630789890885e-12,
+      "independent_profile_offset_mag": 0.007449125568226338,
+      "normal_equation_abs_residual": 2.220446049250313e-14,
+      "max_gls_algebra_disagreement": 2.2737367544323206e-13,
+      "reported_delta_from_ivs_minimum": 1.4213186471747576,
+      "independent_delta_from_ivs_minimum": 1.4213186471722565
+    },
+    {
+      "name": "bao_lcdm_reference",
+      "parameters": {
+        "Omega_m0": 0.2974618149542753,
+        "g": 0.0
+      },
+      "independent_chi2": 1636.2960753233224,
+      "reported_chi2": null,
+      "absolute_score_difference": null,
+      "independent_profile_offset_mag": -0.013089381334091162,
+      "normal_equation_abs_residual": 2.682298827494378e-13,
+      "max_gls_algebra_disagreement": 4.547473508864641e-13,
+      "independent_delta_from_ivs_minimum": 6.296858399251732
+    }
+  ],
+  "physicality": {
+    "ivs_minimum": {
+      "guard_z_range": [
+        0.0,
+        1.14418
+      ],
+      "guard_grid_points": 4001,
+      "minimum_matter": 0.39301742026988545,
+      "minimum_vacuum": 0.6069825797301145,
+      "minimum_e2": 1.0,
+      "fb_max_exact_from_monotone_ratio": 0.7200034861569087,
+      "fb_witness": 0.36000174307845434,
+      "minimum_cdm_witness": 0.2515304639125292,
+      "all_positive_on_sampled_guard": true
+    },
+    "bao_ivs_reference": {
+      "guard_z_range": [
+        0.0,
+        1.14418
+      ],
+      "guard_grid_points": 4001,
+      "minimum_matter": 0.38697100769747017,
+      "minimum_vacuum": 0.6130289923025298,
+      "minimum_e2": 1.0,
+      "fb_max_exact_from_monotone_ratio": 0.794789354475904,
+      "fb_witness": 0.397394677237952,
+      "minimum_cdm_witness": 0.23319078899308895,
+      "all_positive_on_sampled_guard": true
+    },
+    "sn_lcdm_reference": {
+      "guard_z_range": [
+        0.0,
+        1.14418
+      ],
+      "guard_grid_points": 4001,
+      "minimum_matter": 0.3303167905483107,
+      "minimum_vacuum": 0.6696832094516894,
+      "minimum_e2": 1.0,
+      "fb_max_exact_from_monotone_ratio": 1.0,
+      "fb_witness": 0.5,
+      "minimum_cdm_witness": 0.16515839527415535,
+      "all_positive_on_sampled_guard": true
+    },
+    "bao_lcdm_reference": {
+      "guard_z_range": [
+        0.0,
+        1.14418
+      ],
+      "guard_grid_points": 4001,
+      "minimum_matter": 0.2974618149542753,
+      "minimum_vacuum": 0.7025381850457246,
+      "minimum_e2": 1.0,
+      "fb_max_exact_from_monotone_ratio": 1.0,
+      "fb_witness": 0.5,
+      "minimum_cdm_witness": 0.14873090747713766,
+      "all_positive_on_sampled_guard": true
+    }
+  },
+  "rk45_tolerance_refinement": {
+    "standard": "rtol=2e-11, atol=2e-13, max_step=0.003",
+    "tight": "rtol=2e-13, atol=2e-15, max_step=0.001",
+    "points": [
+      {
+        "name": "ivs_minimum",
+        "standard_rk45_chi2": 1629.9992169240707,
+        "tight_rk45_chi2": 1629.9992169240682,
+        "absolute_chi2_difference": 2.5011104298755527e-12,
+        "max_distance_modulus_difference_mag": 5.684341886080802e-14
+      },
+      {
+        "name": "bao_ivs_reference",
+        "standard_rk45_chi2": 1630.5981991341532,
+        "tight_rk45_chi2": 1630.5981991341553,
+        "absolute_chi2_difference": 2.0463630789890885e-12,
+        "max_distance_modulus_difference_mag": 6.394884621840902e-14
+      },
+      {
+        "name": "sn_lcdm_reference",
+        "standard_rk45_chi2": 1631.420535571243,
+        "tight_rk45_chi2": 1631.4205355712422,
+        "absolute_chi2_difference": 6.821210263296962e-13,
+        "max_distance_modulus_difference_mag": 7.105427357601002e-14
+      },
+      {
+        "name": "bao_lcdm_reference",
+        "standard_rk45_chi2": 1636.2960753233224,
+        "tight_rk45_chi2": 1636.2960753233206,
+        "absolute_chi2_difference": 1.8189894035458565e-12,
+        "max_distance_modulus_difference_mag": 7.105427357601002e-14
+      }
+    ],
+    "passed": true
+  },
+  "interpretation_caveats": [
+    "The checker reproduces finite-search profile scores at the reported minimum and fixed reference coordinates; it does not establish global optimality.",
+    "The physicality check samples 4,001 points across the observed interval and checks the exact monotonic-ratio endpoint for f_b,max; it is not a formal continuous-ODE positivity proof.",
+    "The BAO IVS and BAO LCDM coordinates are frozen external reference points. These are SN-only scores/differences, not a BAO\u00d7SN combined likelihood, calibrated interval, or model evidence.",
+    "The H0 value is a common distance gauge absorbed by the profiled magnitude intercept; Dovekie alone does not identify dimensional Gamma."
+  ],
+  "runtime_seconds": 0.2623935379087925,
+  "exact_root_result_hash_after_check": "4068353752350739921f77c20754d54c85ae5024e0439280fa98e93656598817",
+  "production_delta_reproduction": {
+    "bao_reference_delta_difference": 7.048583938740194e-12,
+    "sn_lcdm_reference_delta_difference": 2.5011104298755527e-12
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "des_dovekie_ivs_local_identifiability_20260925",
+  "status": "complete_independent_local_response_geometry_audit",
+  "scope": "Local whitened GLS response geometry at the pinned exploratory SN-only IVS profile point. This is not a posterior, uncertainty, significance, evidence, or full physical-model calculation.",
+  "recorded_utc": "2026-09-25T00:15:49Z",
+  "pinned_point": {
+    "Omega_m0": 0.39301742026988545,
+    "g": -0.6293878145169555,
+    "H0_gauge_km_s_Mpc": 70.0
+  },
+  "data": {
+    "hubble_diagram": "context/data/des_dovekie_hd.csv",
+    "hubble_diagram_sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+    "precision_archive": "context/data/des_dovekie_stat_sys.npz",
+    "precision_archive_sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+    "rows": 1820,
+    "precision_factorization": "P=L L^T; whitening by L^T"
+  },
+  "implementation": {
+    "worker": "Luna Max /root/dovekie_profile_identifiability",
+    "forward_model": "Standalone SciPy RK45 ODE with analytic forward sensitivities; no production scorer/ODE imports.",
+    "cross_check": "Separately written base-only ODE central differences over parameter steps 1e-2 to 1e-6.",
+    "intercept": "One common magnitude intercept removed by rank-aware SVD projection.",
+    "code": "work/compute13/dovekie_profile_identifiability.py",
+    "code_sha256": "f756cce875b29f3e09cd4aececbb2efcfe615f933fcae796278ad7c3a8be5b01",
+    "result": "work/compute13/dovekie_profile_identifiability.json",
+    "result_sha256": "95e2b85ebe11dc0b79c125a0b1cc58a06e6968aa440d63f45021672441357c4b",
+    "report": "work/compute13/dovekie_profile_identifiability.md",
+    "report_sha256": "fd91c6f02aa9badce494737cf63aa2584fddfc65f53891a3479bbff34910f1a2"
+  },
+  "results": {
+    "Omega_m_g_whitened_response_cosine_after_intercept": 0.969389192321551,
+    "projected_shape_singular_values": [
+      74.18007698435126,
+      1.8117980281065105
+    ],
+    "projected_shape_condition_number": 40.94279595936862,
+    "efficient_local_information_for_g_after_intercept_and_Omega_m": 3.3137373721874543,
+    "efficient_information_fraction_retained_after_Omega_m_projection": 0.06028459381017254,
+    "conditional_residual_cosine_with_g": 1.5818056396267304e-7,
+    "conditional_residual_projection_on_unit_g_direction": 6.38626326077553e-6,
+    "best_central_difference_relative_errors_whitened": {
+      "Omega_m0": 3.5024789439853747e-10,
+      "g": 6.860533720188777e-10
+    },
+    "max_direct_vs_whitened_gram_discrepancy": 7.275957614183426e-12,
+    "max_direct_schur_vs_projected_shape_gram_discrepancy": 6.366462912410498e-12,
+    "projector_vs_schur_conditional_information_discrepancy": 2.7977620220553945e-14,
+    "intercept_normal_equation_abs_residual": 1.0240697179142444e-12,
+    "pinned_score_abs_difference_from_profile_record": 6.821210263296962e-13
+  },
+  "interpretation": "At this point the SN-only interaction response is strongly aligned with the Omega_m response, so these parameters are locally degenerate in this probe and coordinate system. The near-zero residual projection onto the nuisance-projected interaction direction is consistent with first-order stationarity at the jointly fitted minimum; it is a fit-consistency diagnostic, not independent evidence against IVS. Combined with the separately reported matched-null calibration, this makes further flexible SN-only background fitting low priority; it does not rule out or validate the full physical model.",
+  "limits": [
+    "Local derivative geometry at one selected point; condition number and local information depend on parameter coordinates and are not posterior widths.",
+    "No optimization, mocks, posterior, calibrated interval, significance, or evidence calculation was performed in this audit.",
+    "The calculation is a late-time SN-only background response; it does not test perturbations, CMB, growth, early-time stability, or combine BAO and SN."
+  ]
+}

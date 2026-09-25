@@ -1,0 +1,196 @@
+{
+  "as_of": "2026-09-25",
+  "status": "literature-only; both public arXiv v1 full texts read; no fitting or independent reproduction",
+  "scope": "Current-literature cross-check of interaction versus dynamical-DE degeneracy and Q=Gamma rho_x with DESI DR2, compared to the reduced Dovekie-only SN profile.",
+  "papers": [
+    {
+      "arxiv_id": "2609.03062",
+      "version": "v1",
+      "title": "Reassessing Evidence for Dark-Sector Interactions with Dynamical Dark Energy and DESI DR2",
+      "authors": ["Jincheng Wang", "Hongwei Yu", "Puxun Wu"],
+      "submitted": "2026-09-02",
+      "source": {
+        "abs_url": "https://arxiv.org/abs/2609.03062",
+        "version_url": "https://arxiv.org/abs/2609.03062v1",
+        "pdf_url": "https://arxiv.org/pdf/2609.03062v1",
+        "abstract_access": "Public arXiv abstract/version page checked",
+        "access_level": "Public arXiv v1 full text; downloaded locally and read",
+        "local_pdf": "work/literature5/arXiv_2609.03062v1.pdf",
+        "local_text": "work/literature5/arXiv_2609.03062v1.txt",
+        "sha256": "0e2b97a2fd988a6657e0c563bbbde7843529dea9c9ab8ac63dff88fefde356e5",
+        "bytes": 1690567,
+        "pages": 17
+      },
+      "locators": {
+        "model_and_perturbation": "Printed pp. 3-4, Eqs. (1)-(10)",
+        "datasets_and_inference": "Printed pp. 4-5, Eqs. (11)-(12)",
+        "CPL_results": "Printed p. 5, Table 1; discussion through pp. 6-7",
+        "trajectory_dependence": "Printed pp. 8-13, Table 5 on p. 13",
+        "limits_and_conclusions": "Printed pp. 6-15"
+      },
+      "model": {
+        "geometry": "Spatially flat",
+        "interaction": "Q = beta H rho_de",
+        "continuity": [
+          "rho_c_dot + 3 H rho_c = -Q",
+          "rho_de_dot + 3 H (1+w) rho_de = Q"
+        ],
+        "transfer_four_vector": "Q^nu = Q u_c^nu; momentum transfer vanishes in the CDM rest frame",
+        "sign": "beta > 0 transfers energy from CDM to DE; beta < 0 transfers DE to CDM",
+        "perturbations": "Interacting generalized PPF, stable through w=-1 crossing"
+      },
+      "datasets": [
+        "Planck low-multipole temperature and polarization",
+        "Planck high-multipole Plik-lite TT restricted to ell <= 1000 and TE/EE to ell <= 600",
+        "Compressed ACT DR6 CMB bandpowers",
+        "ACT DR6 plus Planck CMB lensing",
+        "DESI DR2 BAO",
+        "DES-Dovekie SNIa"
+      ],
+      "sn_treatment": "Identifies DES-Dovekie as the recalibrated DES five-year SN compilation with photometric cross-calibration, updated light-curve training and low-z SNe; paper does not specify its SN intercept or nuisance/covariance treatment.",
+      "inference": {
+        "software": "Modified CAMB, Cobaya MCMC, GetDist",
+        "comparison": "MAP delta-chi-square and AIC relative to LCDM; no Bayes evidence reported"
+      },
+      "results": {
+        "combined_dataset": "Planck+ACT, DESI DR2, DES-Dovekie",
+        "interacting_cpl": {
+          "beta": {"central": -0.35, "plus_68": 0.77, "minus_68": 0.62, "interpretation": "consistent with zero"},
+          "w0": {"central": -0.93, "plus_68": 0.24, "minus_68": 0.19},
+          "wa": {"central": -0.60, "sigma_68": 0.21},
+          "delta_chi2_map_vs_lcdm": -10.75,
+          "delta_aic_vs_lcdm": -4.75
+        },
+        "noninteracting_cpl": {
+          "delta_chi2_map_vs_lcdm": -10.72,
+          "delta_aic_vs_lcdm": -6.72
+        },
+        "incremental_map_chi2_gain_from_interaction": 0.03,
+        "trajectory_delta_chi2_from_adding_interaction": {
+          "thawing": -6.07,
+          "mirage": -0.25,
+          "GEDE": -8.86
+        }
+      },
+      "limits": [
+        "No Bayes factor reported; comparison uses MAP likelihood and AIC.",
+        "Growth spectra use representative parameter sets rather than posterior propagation.",
+        "Conclusions depend on Q proportional to H rho_de and selected w(z) trajectories.",
+        "SN nuisance and covariance treatment is not described in detail."
+      ]
+    },
+    {
+      "arxiv_id": "2609.05660",
+      "version": "v1",
+      "title": "Do DESI-DR2 BAO data imply a coupling of dark matter and dark energy?",
+      "authors": ["Weiqiang Yang", "Sibo Zhang", "Dinorah Barbosa", "Marco Antonio Alvarez", "Supriya Pan", "Leila Graef"],
+      "submitted": "2026-09-04",
+      "publication_status": "Accepted for Physical Review D; DOI 10.1103/6kdf-vzq4",
+      "source": {
+        "abs_url": "https://arxiv.org/abs/2609.05660",
+        "version_url": "https://arxiv.org/abs/2609.05660v1",
+        "pdf_url": "https://arxiv.org/pdf/2609.05660v1",
+        "abstract_access": "Public arXiv abstract/version page checked",
+        "access_level": "Public arXiv v1 full text; downloaded locally and read",
+        "local_pdf": "work/literature5/arXiv_2609.05660v1.pdf",
+        "local_text": "work/literature5/arXiv_2609.05660v1.txt",
+        "sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+        "bytes": 4524530,
+        "pages": 25
+      },
+      "locators": {
+        "background_model": "Printed pp. 2-3, Eqs. (2)-(13)",
+        "perturbations": "Printed pp. 4-5, Eqs. (14)-(21)",
+        "datasets_priors_inference": "Printed pp. 8-11, Table I on p. 10",
+        "ivs_results_and_bayes_factor": "Printed p. 11, Table II",
+        "phantom_and_quintessence_results": "Printed p. 12, Tables III-IV",
+        "summary_and_limits": "Printed pp. 16-17"
+      },
+      "model": {
+        "geometry": "Flat FLRW",
+        "interaction": "Q = Gamma rho_x",
+        "continuity": [
+          "rho_x_dot + 3 H (1+w_x) rho_x = Q",
+          "rho_c_dot + 3 H rho_c = -Q"
+        ],
+        "sign": "Gamma > 0 transfers energy from CDM to DE; Gamma < 0 transfers DE to CDM",
+        "branches": {
+          "IVS": {"w_x": -1, "gamma_over_H0_prior": [-3, 3]},
+          "phantom": {"w_x_prior": [-3, -1], "gamma_over_H0_prior": [-3, 0]},
+          "quintessence": {"w_x_prior": [-1, 0], "gamma_over_H0_prior": [0, 3]}
+        },
+        "background_assumptions": "Baryons, radiation, and neutrinos separately conserved; sum m_nu=0.06 eV and N_eff=3.044 fixed.",
+        "perturbations": "Synchronous gauge; zero anisotropic stress; no momentum transfer in DM frame; c_s^2=1 in inference for w_x != -1; IVS has no DE perturbation contribution."
+      },
+      "datasets": {
+        "cmb": "Planck 2018 plikTTTEEE+lowl+lowE",
+        "bao": "DESI DR2 BGS, ELG, LRG, QSO, and Ly-alpha auto/cross measurements",
+        "supernova_runs": [
+          "PantheonPlus: 1701 light curves from 1550 SNe",
+          "Union3: 2087 SNe from 24 datasets",
+          "DES-Dovekie: DES five-year SN reanalysis; sample count not specified in this article"
+        ],
+        "combinations": "CMB; CMB+DESI; CMB+DESI+one SN compilation"
+      },
+      "sn_treatment": "Names DES-Dovekie as the DES five-year reanalysis but does not detail SN intercept, covariance, or calibration nuisance handling.",
+      "inference": {
+        "software": "Modified CAMB, Cobaya MCMC, Gelman-Rubin convergence check, GetDist",
+        "bayesian_evidence": "MCEvidence; ln B_iLambda = ln Z_interacting - ln Z_LCDM; negative values favor LCDM",
+        "evidence_scale": "Paper treats absolute ln B of 2.5-5 as moderate and 5-10 as strong"
+      },
+      "results": {
+        "cmb_desi_des_dovekie_ivs": {
+          "gamma_over_H0_central": -0.053,
+          "zero_in_68_interval": false,
+          "zero_in_95_interval": true,
+          "ln_bayes_factor_vs_lcdm": -4.4,
+          "interpretation": "Posterior leans to a negative coupling at 68%, but Bayes evidence moderately favors LCDM."
+        },
+        "cmb_desi_des_dovekie_phantom": {
+          "gamma_over_H0_central_approx": -0.075,
+          "ln_bayes_factor_vs_lcdm": -7.5,
+          "interpretation": "Posterior interaction indication reported; strong Bayes evidence favors LCDM."
+        },
+        "cmb_desi_des_dovekie_quintessence": {
+          "gamma_over_H0": "upper limit; null allowed",
+          "ln_bayes_factor_vs_lcdm": -8.1,
+          "interpretation": "No interaction detection; strong Bayes evidence favors LCDM."
+        },
+        "ivs_bayes_factors_for_sn_variants": {
+          "PantheonPlus": -5.2,
+          "Union3": -4.6,
+          "DES-Dovekie": -4.4
+        }
+      },
+      "limits": [
+        "Constant-w_x branches; does not test CPL dynamical w(z).",
+        "The compared models use sign-restricted priors for phantom and quintessence branches.",
+        "Listed likelihoods do not include low-redshift RSD or weak-lensing data.",
+        "Dovekie SN nuisance and covariance treatment is not specified in detail.",
+        "Bayesian evidence depends on the stated parameter priors."
+      ]
+    }
+  ],
+  "current_profile_comparison": {
+    "local_result_path": "experiments/dovekie_ivs_profile/result.json",
+    "local_model": "Reduced flat late-time IVS with Q=Gamma rho_vac, g=Gamma/H0, full 1820-row Dovekie STAT+SYS covariance, and one profiled unbounded common magnitude intercept.",
+    "local_minimum": {
+      "Omega_m0": 0.39301742026988545,
+      "g": -0.6293878145169555,
+      "profile_chi2": 1629.999216924066
+    },
+    "best_g_zero_reference": {
+      "Omega_m0": 0.3303167905483107,
+      "profile_chi2": 1631.4205355712409
+    },
+    "descriptive_profile_delta_chi2": 1.4213186471747576,
+    "interpretation_limits": [
+      "Exploratory finite-domain profile, not a posterior, evidence, p-value, sigma, or Wilks interval.",
+      "No CMB or BAO likelihood; no radiation, perturbations, or early-time viability test.",
+      "No H0 or dimensional Gamma inference; the common SN intercept absorbs the H0 gauge."
+    ],
+    "comparison": "The local vacuum model has the same Q=Gamma rho_x law and sign convention as the IVS branch in 2609.05660, but uses a reduced SN-only likelihood rather than Planck+DESI+SN full cosmology. 2609.03062 instead uses Q=beta H rho_de and CPL freedom. The differing coupling estimates and model preferences are not contradictory because both the likelihood and model assumptions differ."
+  },
+  "current_verdict": "The literature supports model- and dataset-dependent interaction indications. The local Dovekie-only result is a shallow exploratory shape preference and is not literature-confirmed evidence; neither paper is a like-for-like validation.",
+  "next_test_implication": "First reproduce the closest published case: a full Planck 2018 + DESI DR2 + DES-Dovekie IVS inference with Q=Gamma rho_x, the paper's Gamma/H0 prior [-3,3], and matched Dovekie likelihood, reporting posterior constraints and ln Bayes evidence. This tests how the reduced SN-only optimum moves when CMB and BAO are added."
+}

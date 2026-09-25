@@ -1,0 +1,9 @@
+{
+  "status": "failed_plot_generation_only",
+  "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python experiments/dovekie_ivs_profile/plot_null_calibration.py",
+  "error_type": "TypeError",
+  "error": "NumPy histogram auto-bin estimation is not supported for weighted data.",
+  "scientific_computation_changed": false,
+  "resolution": "Compute Freedman-Diaconis bin edges from the unweighted mock statistic values, then pass those explicit edges to the weighted histogram.",
+  "fixed_source": "experiments/dovekie_ivs_profile/plot_null_calibration.py"
+}

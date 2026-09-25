@@ -1,5 +1,5 @@
 {
-  "status": "started",
+  "status": "active_research",
   "start_utc": "2026-09-24T15:12:19.075004+00:00",
   "deadline_utc": null,
   "original_planned_deadline_utc": "2026-09-24T23:12:19.075004+00:00",
@@ -39,13 +39,21 @@
     "dovekie_contract_audit": "gpt-6-luna/max",
     "dovekie_cv_preflight_and_independent_result_review": "gpt-6-luna/max",
     "ivs_author_artifacts": "gpt-6-luna/max",
-    "dovekie_ivs_profile_contract": "gpt-6-luna/max"
+    "dovekie_ivs_profile_contract": "gpt-6-luna/max",
+    "dovekie_ivs_profile_compute": "gpt-6-luna/max; delegated follow-up interrupted before output, root completed implementation and run",
+    "dovekie_profile_physics_critic": "gpt-6-luna/max",
+    "dovekie_ivs_profile_independent": "gpt-6-luna/max",
+    "latest_ivs_literature": "gpt-6-luna/max",
+    "dovekie_ivs_null_mocks": "gpt-6-luna/max",
+    "ivs_mock_design_audit": "gpt-6-luna/max",
+    "dovekie_profile_identifiability": "gpt-6-luna/max"
   },
   "hardware": {
     "logical_and_affinity_cpus": 20,
     "physical_memory_bytes": 134292787200,
     "free_disk_bytes_at_start": 315594293248,
-    "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB total, 5003 MiB free at preflight; 0% utilization",
+    "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB total; preflight observed 5003 MiB free, latest post-run probe observed 32094 MiB free / 16 MiB used and 0% utilization (CPU-only ODE/likelihood batch; no GPU justified)",
+    "latest_resource_probe_utc": "2026-09-25T00:07:32Z",
     "allocation_note": "Host-visible CPUs/RAM/GPU are not established as exclusive allocations."
   },
   "environment": {
@@ -62,7 +70,7 @@
     "push_target": "current tracking branch after staged-file review",
     "resource_contract": "Use visible CPU affinity and currently free GPU memory; one GPU owner; no cloud/purchases/publication or unrelated process termination.",
     "physicalness_and_literature": "Review whether departures correspond to physically specified models, including conservation, perturbation/stability and data-overlap assumptions; check current primary papers and obtain exact public PDFs when possible.",
-    "native_goal_tracker": "At 2026-09-24T18:12:54Z the native goal still pointed only to the one-time attachment-read prerequisite and was marked paused, without a recorded reason; the user said this is no longer relevant and will set a broader goal. Continue this campaign under the user's prior explicit continue instruction; do not change native goal status from this session."
+    "native_goal_tracker": "At this checkpoint the native goal objective is the continuing cosmology research campaign and status is active. Earlier paused state referred to a one-time attachment-read prerequisite; user said that was no longer relevant and would set a broader goal."
   },
   "parallel_team_policy": {
     "user_authorizes_additional_distinct_orchestration_compute_and_theory_lanes": true,
@@ -114,6 +122,18 @@
         "commit": "38e9b72ac174257f949dea8694664f609c8609d3",
         "report": "work/warden/push-38e9b72.md",
         "recommendation": "Continue the frozen-shape Dovekie test; retain the caveat that BAO holdout loss is dominated by one high-z pair."
+      },
+      {
+        "event": "commit",
+        "commit": "8f87561ea778e9275478b838185d8aed7a2238da",
+        "report": "work/warden/commit-8f87561.md",
+        "recommendation": "Continue the bounded Dovekie-only IVS profile unchanged; obtain the SN-profile geometry and BAO-point displacement with contracted physicality and independent-distance checks."
+      },
+      {
+        "event": "push",
+        "commit": "8f87561ea778e9275478b838185d8aed7a2238da",
+        "report": "work/warden/push-8f87561.md",
+        "recommendation": "Continue the bounded Dovekie-only IVS profile; preserve separate-probe, uncalibrated interpretation and retain executable independent-check code next time."
       }
     ]
   },
@@ -199,13 +219,27 @@
       "status": "complete_root_reviewed_pre_fit_gate",
       "utc": "2026-09-24T23:00:00Z",
       "evidence": "work/theory7/dovekie_ivs_profile_contract.md/.json. No fit or comparative score was run. Root review confirms the paper sign convention and u=ln(1+z) equations, analytic full-covariance intercept profile, distinction between g and Omega_m search domains vs priors, and an explicit positive baryon/CDM split existence guard over the observed Dovekie range. Remaining numerical checks and domain-extension rule are recorded; proceed only as an exploratory SN-only profile, never combined with BAO."
+    },
+    {
+      "id": "dovekie_ivs_local_identifiability",
+      "status": "complete_independent_local_response_geometry_audit",
+      "utc": "2026-09-25T00:15:49Z",
+      "evidence": "Standalone Luna Max forward-sensitivity ODE and separate central-difference audit in work/compute13; post-intercept whitened Omega_m/g response cosine +0.969389 and projected response condition 40.9428; only 6.0% of post-intercept g information remains after Omega_m projection. The residual cosine 1.58e-7 is consistent with first-order stationarity at the joint fitted minimum, not independent evidence against IVS. Finite-difference errors fall to <=6.87e-10; direct/whitened Gram discrepancy <=7.28e-12; Schur/projector checks <=6.37e-12. Local geometry only. Durable record experiments/dovekie_ivs_profile/identifiability_record.json."
     }
   ],
   "active_local_job": null,
   "latest_scientific_checkpoint": {
-    "utc": "2026-09-24T23:00:00+00:00",
+    "utc": "2026-09-25T00:15:49+00:00",
     "evidence": [
-      "Latest checkpoint 2026-09-24 23:00 UTC: Dovekie frozen-shape prediction independently reproduced PASS. The dense covariance-domain reviewer did not import production scoring code or refit; maximum primary fold-score discrepancy 9.1e-13 and six-edge variant delta discrepancy 3.1e-12. Result remains an overlapping-fold descriptive score, not joint BAO-SN evidence. See experiments/dovekie_frozen_shape_cv/independent_review_record.json and work/compute8/dovekie_result_independent_review.md.",
+      "Completed an exploratory Dovekie-only flat late-time IVS shape profile under the reviewed work/theory7 contract: chi2_SN=1629.999216924 at Omega_m0=0.39301742,g=Gamma/H0=-0.62938781, versus a profiled LCDM reference 1631.420535571 (LCDM-minus-IVS Delta chi2=+1.421319 for two extra shape parameters). The frozen BAO-selected IVS point is only +0.598982 higher than the SN-only minimum. Search bounds were Omega_m0=[0.05,0.60], g=[-3,3], with no best-point boundary hit; this is an exploratory finite-box profile, not posterior/evidence or a physical-model validation. Result, full-covariance likelihood contract, hashes, 41x41 surface, and plot are in experiments/dovekie_ivs_profile/.",
+      "Numerical/physical checks for the Dovekie profile: 1820x1820 full STAT+SYS precision Cholesky passes; g=0 reproduces flat-LCDM distance moduli to 1.42e-14 mag; full GLS offset normal-equation residual is 4.30e-13; independent profile-algebra forms agree within 2.28e-13; adaptive scalar distance integration differs by <=3.34e-16; tightening DOP853 rtol 2e-10->2e-12 and halving max step changes chi2 by 4.55e-13 and max modulus by 1.42e-14 mag. Positivity and exact monotone baryon/CDM split check pass on the observed z<=1.14418 interval only. A matched CPU probe measured 3.11x speedup using 20 workers for grid points; the full task took 3.23 s. GPU was not justified/used. Six optimizer endpoints converged only to the invalid-objective penalty despite raw SciPy success flags; those were excluded, and the valid minimum is recovered from multiple starts. The first result-writing attempt failed at NumPy-array JSON serialization; it is preserved as attempt_001_failure.json and the corrected run is complete.",
+      "Independent Luna Max reproduction PASS from a standalone SNANA parser, full packed-precision unpack, RK45 ODE, distance conversion and GLS scorer in work/compute10/dovekie_ivs_profile_independent.py. It imports none of the production profile/scoring/ODE. Against pinned result hash 4068353752350739921f77c20754d54c85ae5024e0439280fa98e93656598817 and profile hash 0dbc7acb0c4b5691e0d68144f86e82b2dcf0a1b17e8c07e8f49aa62a92a41f29, max score discrepancy is 4.55e-12; BAO-IVS and SN-LCDM delta discrepancies are 7.05e-12 and 2.50e-12. Independent g=0, sign, GLS, tight-RK45 and sampled positivity checks pass. It reproduces the selected coordinates, but does not prove global optimality or full physical viability. See work/compute10/dovekie_ivs_profile_independent_review.md/.json.",
+      "Expanded-domain Dovekie profile stress check complete: 61x61 surface over Omega_m0=[0.005,0.95], g=[-5,5] finds chi2=1629.9992169240093 at (0.3930178132,-0.6293913025), only 5.68e-11 from the base-box score and with no expanded-box edge hit. It reuses the production scorer and does not prove global optimality; see experiments/dovekie_ivs_profile/domain_sensitivity_record.json.",
+      "Matched Dovekie LCDM null calibration complete: 200/200 full-covariance mocks, no failed fits; 50 have T=chi2_LCDM-chi2_IVS >= 1.4213186472, empirical finite-search exceedance fraction 0.25 and exact CP95 [0.19161,0.31596]. Runtime 127.984 s under a 1,440 s task cap, one 20-worker outer pool, one BLAS thread each, GPU unused. This coarse fitted-null calibration is not a universal p-value, Bayesian evidence or physical-model test. See work/compute11 and experiments/dovekie_ivs_profile/null_calibration_record.json.",
+      "Independent Luna Max/max sampler/protocol review PASS in work/compute12: exact 1820-row precision sampler whitening error 2.49e-15 over 4096 draws, sampled contrast variance ratios [0.979,1.017], and independent 4001-point physicality validation passed for all 200 selected IVS endpoints; maximum distance-integral discrepancy 6.7e-16. The driver itself does not store the finer check; it is preserved as a separate audit.",
+      "Primary-source cross-check complete for exact full-text PDFs arXiv:2609.03062v1 and 2609.05660v1 under work/literature5; the former reports essentially no added interaction best-fit gain in its interacting-CPL comparison (MAP Delta-chi2=0.03) and trajectory dependence, while the latter's Bayesian evidence favors LCDM. These are literature comparisons, not local reproductions.",
+      "Independent physics critic completed PASS for the scoped model in work/theory8/dovekie_profile_physics_critic.md/.json. It independently verifies the sign equations and derives the exact split ceiling fb_max=1 for g>=0 and m(U)/(Omega_m0 exp(3U)) for g<0; this is not an early-time, perturbation, CMB/BBN, or calibrated-fb certificate.",
+      "Latest earlier checkpoint 2026-09-24 23:00 UTC: Dovekie frozen-shape prediction independently reproduced PASS. The dense covariance-domain reviewer did not import production scoring code or refit; maximum primary fold-score discrepancy 9.1e-13 and six-edge variant delta discrepancy 3.1e-12. Result remains an overlapping-fold descriptive score, not joint BAO-SN evidence. See experiments/dovekie_frozen_shape_cv/independent_review_record.json and work/compute8/dovekie_result_independent_review.md.",
       "experiments/bao_robustness/result.json: 200 full-covariance null mocks; 16/64-start tail estimate agrees at 17/200 with exact 95% interval [0.0503,0.1326]. scripts/recheck_bao_optimizer.py independently retried all 52 nonconverged candidates: original χ² recomputation max error 8.0e-14, no alternative improved any fit by >1e-7, and reported selected tail statistic remains stable.",
       "work/inference/REPORT.md and experiments/dovekie_screen/: independently checked exploratory 1820-row DES-Dovekie full-precision profile fit; wider CPL bound moves from wa=-3 edge to wa≈-6.78 interior, not a posterior/significance result.",
       "work/critic/REPORT.md: independent parser, likelihood and differential-evolution searches reproduce four Dovekie profile points; full-covariance algebra paths agree within 1.4e-12 and minima within 3.5e-8.",
@@ -233,7 +267,8 @@
       "Root consolidated campaign findings in MORNING_REPORT.md and NEXT.md. The frozen BAO-fit-shape conditional prediction on DES-Dovekie is complete and independently reproduced. The next high-value screen is a separate Dovekie-only two-parameter IVS background profile after review of its no-score physical/domain contract; no joint likelihood, H0, evidence or posterior claim.",
       "One-shot Astra Max Warden reports were written immediately after commit and push 38e9b72 (work/warden/commit-38e9b72.md and work/warden/push-38e9b72.md). Both recommend continuing the Dovekie frozen-shape test; the commit Warden specifically cautions that Dovekie supplies precision, so principal precision blocks cannot be mistaken for marginal training precision.",
       "A bounded Luna Max/max contract audit is running in work/data_audit4/: verify Dovekie provenance, row/covariance mapping and the precision-matrix conditional/training algebra before any comparative score. No cosmology refit is authorized in that task.",
-      "Root independently checked both plug-in and flat-prior intercept-marginal precision-block identities on synthetic covariance data against an explicit covariance-domain reference. The exact predictive covariance includes the training-intercept rank-one variance term; maximum integrated predictive-covariance disagreement was 8.88e-16 and predictive-chi2 disagreement 2.84e-14. This is an algebra unit test, not evidence from Dovekie observations; see work/compute6/precision_block_algebra_check.py."
+      "Root independently checked both plug-in and flat-prior intercept-marginal precision-block identities on synthetic covariance data against an explicit covariance-domain reference. The exact predictive covariance includes the training-intercept rank-one variance term; maximum integrated predictive-covariance disagreement was 8.88e-16 and predictive-chi2 disagreement 2.84e-14. This is an algebra unit test, not evidence from Dovekie observations; see work/compute6/precision_block_algebra_check.py.",
+      "Completed the bounded Luna Max/max local identifiability audit (work/compute13). Standalone RK45 forward sensitivities and independent central differences show post-intercept whitened Omega_m/g response cosine +0.969389, condition 40.9428, and 6.0% of local g information remains after Omega_m projection. The 1.58e-7 residual cosine is consistent with first-order stationarity at the joint fitted minimum, not an independent null test. Full-precision GLS, intercept profiling, Schur/projector algebra, derivative convergence and pinned-score checks pass at <=1e-11. Local geometry only; with matched-null results, deprioritize additional SN-only shape freedom and prioritize physical-solver feasibility. Record: experiments/dovekie_ivs_profile/identifiability_record.json."
     ]
   },
   "tasks": [
@@ -509,15 +544,78 @@
       "budget_minutes": 10,
       "output": "work/theory7/dovekie_ivs_profile_contract.md and .json",
       "finding": "Pre-fit contract complete and root-reviewed. Specifies source sign/ODE, profiled full-covariance intercept, finite search box explicitly not an Omega_m prior, and existential baryon/CDM feasibility over the SN redshift interval. No optimizer or observed score run. Gate passes for an exploratory Dovekie-only profile with its own convergence, domain-sensitivity, and independent distance/physicality checks."
+    },
+    {
+      "id": "dovekie_ivs_profile_screen",
+      "owner": "root implementation; Luna Max /root/dovekie_ivs_profile_independent reviewer",
+      "status": "complete_exploratory_profile_independently_reproduced_pass",
+      "budget_seconds": 1200,
+      "output": "experiments/dovekie_ivs_profile/ and work/compute10/",
+      "finding": "Exploratory fit completed in 3.226 s and independently reproduced PASS. IVS chi2=1629.999216924 at (Omega_m0,g)=(0.39301742,-0.62938781); LCDM reference is higher by Delta chi2=1.421319 and the fixed BAO-selected IVS reference by 0.598982. Full covariance, analytic offset, g=0, ODE-tolerance, scalar-distance and observed-range physicality checks pass; no search boundary hit. Sixteen starts include six penalty endpoints despite raw optimizer success; ten valid endpoints include repeated minima. Independent RK45/parser/precision/GLS scorer agrees within 4.55e-12. No joint BAO-SN or discovery claim."
+    },
+    {
+      "id": "dovekie_profile_physics_critic",
+      "owner": "Luna Max /root/dovekie_profile_physics_critic",
+      "status": "complete_independent_physics_review_pass",
+      "budget_minutes": 10,
+      "output": "work/theory8/dovekie_profile_physics_critic.md and .json",
+      "finding": "Independent review PASS for continuity/sign, g=0 limit, H0/intercept degeneracy and observed-range positive baryon/CDM split. Derives exact monotone split ceiling fb_max=1 for g>=0 or m(U)/(Omega_m0 exp(3U)) for g<0. This is conditional on a regular positive low-z trajectory, not calibrated fb or full physical viability."
+    },
+    {
+      "id": "dovekie_ivs_profile_independent_review",
+      "owner": "Luna Max /root/dovekie_ivs_profile_independent",
+      "status": "complete_independent_reproduction_pass",
+      "budget_minutes": 15,
+      "output": "work/compute10/",
+      "finding": "Saved independent IVS ODE/distance/full-covariance GLS scorer in work/compute10; imports no production profile, SN helper, scoring or ODE. Reproduces selected and fixed-point/reference scores within 4.55e-12 and passes sign, g=0, covariance, GLS, RK45-refinement and observed-range sampled positivity checks. Global optimality and continuous positivity remain limited."
+    },
+    {
+      "id": "latest_ivs_literature_crosscheck",
+      "owner": "Luna Max /root/latest_ivs_literature",
+      "status": "complete_full_text_primary_source_crosscheck",
+      "budget_minutes": 12,
+      "output": "work/literature5/",
+      "finding": "Read and SHA-256 verify exact public v1 PDFs/text for arXiv:2609.03062 and 2609.05660; 2609.03062 reports interaction adds MAP Delta-chi2=0.03 in interacting CPL and varies across DE trajectories; 2609.05660's same Q=Gamma rho_x model retains a LambdaCDM Bayesian evidence preference. Full reading card and caveats in work/literature5/; no local fit."
+    },
+    {
+      "id": "dovekie_ivs_profile_wider_domain_20260925",
+      "owner": "root implementation",
+      "status": "complete_wider_domain_denser_grid_stress_check",
+      "budget_seconds": 1200,
+      "output": "experiments/dovekie_ivs_profile/domain_sensitivity_record.json and domain_sensitivity.json",
+      "finding": "61x61 search over Omega_m0=[0.005,0.95], g=[-5,5] returns a score within 5.68e-11 of the base-box solution, no edge hit; reuses production scorer, not a global proof."
+    },
+    {
+      "id": "dovekie_ivs_profile_null_calibration_20260925",
+      "owner": "Luna Max /root/dovekie_ivs_null_mocks",
+      "status": "complete_finite_search_null_calibration_independently_audited",
+      "budget_seconds": 1500,
+      "output": "work/compute11/ and experiments/dovekie_ivs_profile/null_calibration_record.json",
+      "finding": "200 full-covariance fitted-LCDM mocks; 50 exceed observed T=1.4213186472 (empirical fraction 0.25, exact CP95 [0.19161,0.31596]), zero fit failures, runtime 127.984 s, 20-worker outer pool, no GPU. Not model evidence or a universal significance calibration."
+    },
+    {
+      "id": "dovekie_ivs_null_mock_independent_sampler_and_physicality_audit",
+      "owner": "Luna Max /root/ivs_mock_design_audit",
+      "status": "complete_independent_review_pass",
+      "budget_minutes": 15,
+      "output": "work/compute12/dovekie_ivs_null_mock_audit.md and check_dovekie_precision_sampler.py",
+      "finding": "Independent 1820-dimensional sampler audit verifies P=LL^T, epsilon=L^-T z; 4096 draws pass whitening and contrast covariance checks. All 200 selected IVS endpoints pass a 4001-point physicality recheck; maximum independent distance-integral discrepancy 6.7e-16."
+    },
+    {
+      "id": "dovekie_profile_identifiability",
+      "owner": "Luna Max /root/dovekie_profile_identifiability",
+      "status": "complete_independent_local_response_geometry_audit",
+      "budget_minutes": 15,
+      "output": "work/compute13/dovekie_profile_identifiability.md/.json/.py; experiments/dovekie_ivs_profile/identifiability_record.json",
+      "finding": "Independent RK45 forward-sensitivity/finite-difference local GLS audit at the selected IVS point. Omega_m/g response cosine +0.969389 after intercept; condition number 40.9428; only 6.0% of post-intercept g information remains after Omega_m projection. Residual cosine with nuisance-orthogonal g direction is 1.58e-7, consistent with fitted stationarity, not independent evidence. No optimizer or mocks; local geometry only, not posterior/significance."
     }
   ],
   "next_commands": [
-    "Run a bounded exploratory Dovekie-only two-parameter IVS background profile under the reviewed no-score contract in work/theory7; use full STAT+SYS covariance, an analytic common magnitude intercept, the declared positive-density/split guard, and report all convergence and boundary diagnostics.",
-    "Independently reproduce the Dovekie-only profile's selected point and distance/physicality diagnostics; keep the SN-only profile separate from BAO and uncalibrated by posterior/evidence language.",
-    "Request from the user, if available, the exact IVS authors' modified-CAMB patch/source, base commit, complete Cobaya configuration and initial-condition settings; otherwise retain the explicit independent-implementation limitation.",
-    "Treat the Results IV replacement likelihood as blocked pending an official machine-readable file/cross-covariance; do not substitute the approximate Eq. (26) pair or unrelated unified-tracer supplement.",
-    "Validate every experiment record and ledger row, source/claim-map references, all code/data/PDF hashes, and repeat the full test suite plus current plots.",
-    "Checkpoint only reviewed campaign files to the current branch; invoke an Astra Max warden immediately after the commit and again after the push, then keep researching.",
-    "Maintain a reproducible morning report and NEXT.md at a scientifically useful checkpoint; include negative findings, plots, provenance, commands, and a ranked next experiment. Continue only while a bounded high-value test remains."
+    "The current checkpoint passes the project unittest suite (17/17). Revalidate JSON/JSONL, referenced hashes and plots after any further edits; stage reviewed campaign artifacts only.",
+    "Commit and push this checkpoint to the current tracking branch, invoking the configured one-shot Astra Max Warden immediately after each successful event. Record the Warden's evidence-based recommendation and continue unless no useful bounded work remains.",
+    "Next, run a bounded physical-solver feasibility/provenance gate: search for the exact author-modified CAMB patch/version, complete Cobaya configuration and initial conditions. Ask the user for these original artifacts if public sources do not contain them; if unavailable, cost a transparent independent implementation before full-likelihood work.",
+    "Do not expand the SN-only background model absent a distinct scientific question: matched full-covariance LCDM mocks routinely reach its small gain, and the local response is strongly Omega_m-degenerate. Treat residual orthogonality as fitted stationarity, not independent evidence.",
+    "Keep DESI BAO and Dovekie SN separate absent justified cross-covariance/conditional independence. Do not append the approximate Results IV Ly-alpha summary to the older overlapping vector.",
+    "Maintain the durable ledger, source provenance, negative results, plots, reproducible morning report and ranked next experiment. Continue only while a bounded, high-information task remains."
   ]
 }

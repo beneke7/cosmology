@@ -1,0 +1,336 @@
+{
+  "status": "completed_no_fit_local_identifiability_audit",
+  "scope": "Local response geometry at the pinned exploratory Dovekie-only IVS profile coordinate; not a posterior, uncertainty, significance, or evidence calculation.",
+  "pinned_point": {
+    "Omega_m0": 0.39301742026988545,
+    "g": -0.6293878145169555,
+    "H0_gauge_km_s_Mpc": 70.0
+  },
+  "inputs": {
+    "hubble_diagram": "context/data/des_dovekie_hd.csv",
+    "hubble_diagram_sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf",
+    "precision_archive": "context/data/des_dovekie_stat_sys.npz",
+    "precision_archive_sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b",
+    "rows": 1820,
+    "cid_order_sha256": "b7d5c6ad8dfdadf1e12443852b14006c0d9d0ceb4bcb46efb378f058ce5aa5a3",
+    "precision_archive_keys": [
+      "nsn",
+      "cov",
+      "allow_pickle"
+    ],
+    "zHD_range": [
+      0.02509,
+      1.14418
+    ],
+    "zHEL_range": [
+      0.02385,
+      1.14501
+    ],
+    "MUERR_or_MUERR_SYS_added": false
+  },
+  "independent_model": {
+    "integrator": "SciPy solve_ivp RK45; standalone implementation, no production profile/scorer imports",
+    "background": [
+      "dm/du=3m+g*x/E",
+      "dx/du=-g*x/E",
+      "dD/du=exp(u)/E",
+      "E^2=m+x"
+    ],
+    "sensitivity": "Analytic forward sensitivities integrated in the same ODE, with dE/du dependence differentiated explicitly.",
+    "mu_definition": "5 log10((1+zHEL)*(c/H0_gauge)*D(zHD)/Mpc)+25",
+    "derivative_units": "mag per unit dimensionless Omega_m0 or g; H0 and zHEL prefactors are common and parameter-independent."
+  },
+  "profiled_intercept_check": {
+    "Mhat_mag": 0.017690168607418757,
+    "chi2_at_pinned_point_independently_recomputed": 1629.9992169240668,
+    "reference_profile_chi2_if_read": 1629.999216924066,
+    "abs_difference_from_reference_profile_chi2": 6.821210263296962e-13,
+    "normal_equation_abs_1TP_r": 1.0240697179142444e-12,
+    "normal_equation_abs_after_whitening": 5.622169396701793e-13,
+    "residual_chi2_whitened": 1629.9992169240668
+  },
+  "gls_algebra": {
+    "precision_factorization": "P=L L^T, with L lower Cholesky",
+    "whitening_map": "v -> L^T v, since ||L^T v||^2=v^T P v",
+    "max_abs_direct_vs_whitened_3x3_gram": 7.275957614183426e-12,
+    "intercept_projector_rank": 1,
+    "intercept_rank_tolerance": 8.470975419026837e-11,
+    "intercept_whitened_singular_values": [
+      209.61473483842798
+    ],
+    "max_abs_direct_schur_vs_whitened_projected_shape_gram": 6.366462912410498e-12
+  },
+  "derivative_alignment": {
+    "raw_whitened_norms_before_intercept_projection": [
+      157.06137754486699,
+      12.439306837461114
+    ],
+    "cosine_before_intercept_projection": 0.9803205129515417,
+    "whitened_norms_after_intercept_projection": [
+      73.83087568395152,
+      7.414056193463033
+    ],
+    "cosine_after_intercept_projection": 0.969389192321551,
+    "absolute_cosine_after_intercept_projection": 0.969389192321551,
+    "interpretation": "Signed cosine near +1/-1 means local response vectors are nearly parallel after removing the common magnitude direction; it is descriptive local shape geometry."
+  },
+  "local_shape_information": {
+    "parameters": [
+      "Omega_m0",
+      "g"
+    ],
+    "projected_response_singular_values": [
+      74.18007698435126,
+      1.8117980281065105
+    ],
+    "projected_response_condition_number": 40.94279595936862,
+    "precision_weighted_information_matrix_after_intercept": [
+      [
+        5450.998204259105,
+        530.6303255680198
+      ],
+      [
+        530.6303255680198,
+        54.96822923982757
+      ]
+    ],
+    "information_units": "inverse squared parameter units; both shape coordinates are dimensionless."
+  },
+  "g_conditional_information": {
+    "nuisance_columns_projected_out": [
+      "common magnitude intercept",
+      "Omega_m0 response"
+    ],
+    "nuisance_design_rank": 2,
+    "nuisance_design_singular_values": [
+      254.78849457217717,
+      60.7407310733034
+    ],
+    "nuisance_rank_tolerance": 1.0296542732243507e-10,
+    "efficient_local_information_for_g": 3.3137373721874543,
+    "schur_complement_information_for_g": 3.3137373721874823,
+    "abs_projector_vs_schur_difference": 2.7977620220553945e-14,
+    "raw_g_information_after_intercept_before_Omega_projection": 54.96822923982757,
+    "fraction_of_after_intercept_g_information_retained_after_Omega_projection": 0.06028459381017254
+  },
+  "finite_difference_convergence": {
+    "method": "Central differences of independently integrated base-only distance-modulus vectors; same tight RK45 tolerance, max step 0.003 in u.",
+    "sensitivity_reference": "Analytic forward-sensitivity ODE at the pinned point.",
+    "parameter_step_values": [
+      0.01,
+      0.003,
+      0.001,
+      0.0003,
+      0.0001,
+      3e-05,
+      1e-05,
+      3e-06,
+      1e-06
+    ],
+    "rows": [
+      {
+        "step_both_parameters": 0.01,
+        "whitened_relative_derivative_error": [
+          8.544325759792672e-05,
+          5.561043701135101e-06
+        ],
+        "raw_relative_derivative_error": [
+          8.592998079488075e-05,
+          5.443650089702302e-06
+        ],
+        "whitened_derivative_cosine_with_sensitivity": [
+          0.9999999991618703,
+          0.9999999999963681
+        ],
+        "intercept_rank": 1,
+        "projected_shape_singular_values": [
+          74.18844425319932,
+          1.811324978803363
+        ],
+        "projected_shape_condition": 40.95810808185912
+      },
+      {
+        "step_both_parameters": 0.003,
+        "whitened_relative_derivative_error": [
+          7.688077311541612e-06,
+          5.004852531138995e-07
+        ],
+        "raw_relative_derivative_error": [
+          7.731922080705162e-06,
+          4.899199736776673e-07
+        ],
+        "whitened_derivative_cosine_with_sensitivity": [
+          0.9999999999932154,
+          0.9999999999999708
+        ],
+        "intercept_rank": 1,
+        "projected_shape_singular_values": [
+          74.18082985215507,
+          1.8117554657775636
+        ],
+        "projected_shape_condition": 40.944173346439094
+      },
+      {
+        "step_both_parameters": 0.001,
+        "whitened_relative_derivative_error": [
+          8.54213622749315e-07,
+          5.560572632753177e-08
+        ],
+        "raw_relative_derivative_error": [
+          8.590856365811737e-07,
+          5.443231736726135e-08
+        ],
+        "whitened_derivative_cosine_with_sensitivity": [
+          0.999999999999917,
+          0.9999999999999992
+        ],
+        "intercept_rank": 1,
+        "projected_shape_singular_values": [
+          74.18016063452997,
+          1.811793299044424
+        ],
+        "projected_shape_condition": 40.942948996253634
+      },
+      {
+        "step_both_parameters": 0.0003,
+        "whitened_relative_derivative_error": [
+          7.687755993571425e-08,
+          5.008259813404641e-09
+        ],
+        "raw_relative_derivative_error": [
+          7.731607610662715e-08,
+          4.902163474119023e-09
+        ],
+        "whitened_derivative_cosine_with_sensitivity": [
+          0.9999999999999994,
+          1.0000000000000002
+        ],
+        "intercept_rank": 1,
+        "projected_shape_singular_values": [
+          74.18008451269361,
+          1.8117976024537832
+        ],
+        "projected_shape_condition": 40.94280973339894
+      },
+      {
+        "step_both_parameters": 0.0001,
+        "whitened_relative_derivative_error": [
+          8.545365487689798e-09,
+          6.860533720188777e-10
+        ],
+        "raw_relative_derivative_error": [
+          8.593572779784136e-09,
+          6.065364294274447e-10
+        ],
+        "whitened_derivative_cosine_with_sensitivity": [
+          0.9999999999999997,
+          0.9999999999999994
+        ],
+        "intercept_rank": 1,
+        "projected_shape_singular_values": [
+          74.18007782127506,
+          1.8117979810426703
+        ],
+        "projected_shape_condition": 40.94279748484167
+      },
+      {
+        "step_both_parameters": 3e-05,
+        "whitened_relative_derivative_error": [
+          7.819219653536567e-10,
+          1.4060542792704171e-09
+        ],
+        "raw_relative_derivative_error": [
+          7.865110327135581e-10,
+          9.884527374771302e-10
+        ],
+        "whitened_derivative_cosine_with_sensitivity": [
+          1.0000000000000002,
+          1.0
+        ],
+        "intercept_rank": 1,
+        "projected_shape_singular_values": [
+          74.18007706004819,
+          1.8117980234543138
+        ],
+        "projected_shape_condition": 40.94279610627841
+      },
+      {
+        "step_both_parameters": 1e-05,
+        "whitened_relative_derivative_error": [
+          3.5024789439853747e-10,
+          4.190487461480633e-09
+        ],
+        "raw_relative_derivative_error": [
+          2.620618486981544e-10,
+          3.0161794111973202e-09
+        ],
+        "whitened_derivative_cosine_with_sensitivity": [
+          1.0,
+          1.0000000000000002
+        ],
+        "intercept_rank": 1,
+        "projected_shape_singular_values": [
+          74.18007699613032,
+          1.8117980247032943
+        ],
+        "projected_shape_condition": 40.9427960427754
+      },
+      {
+        "step_both_parameters": 3e-06,
+        "whitened_relative_derivative_error": [
+          1.0819930518596789e-09,
+          1.3636871775465223e-08
+        ],
+        "raw_relative_derivative_error": [
+          7.660531001131931e-10,
+          9.688407492909899e-09
+        ],
+        "whitened_derivative_cosine_with_sensitivity": [
+          0.9999999999999999,
+          1.0000000000000004
+        ],
+        "intercept_rank": 1,
+        "projected_shape_singular_values": [
+          74.18007697970859,
+          1.8117980301973065
+        ],
+        "projected_shape_condition": 40.94279590955859
+      },
+      {
+        "step_both_parameters": 1e-06,
+        "whitened_relative_derivative_error": [
+          3.1397713751728533e-09,
+          4.302094274951153e-08
+        ],
+        "raw_relative_derivative_error": [
+          2.2912238530090658e-09,
+          3.027218093047321e-08
+        ],
+        "whitened_derivative_cosine_with_sensitivity": [
+          0.9999999999999997,
+          0.9999999999999987
+        ],
+        "intercept_rank": 1,
+        "projected_shape_singular_values": [
+          74.18007699790294,
+          1.8117980577059674
+        ],
+        "projected_shape_condition": 40.942795297963315
+      }
+    ],
+    "best_whitened_relative_error_by_parameter": [
+      3.5024789439853747e-10,
+      6.860533720188777e-10
+    ]
+  },
+  "optional_residual_alignment": {
+    "scope": "Descriptive diagnostic only; it is not a significance or evidence calculation.",
+    "residual_cosine_with_g_after_intercept_and_Omega_projection": 1.5818056396267304e-07,
+    "signed_whitened_residual_projection_on_unit_conditional_g_direction": 6.38626326077553e-06
+  },
+  "interpretation_limits": [
+    "Local derivative geometry at one fixed fitted coordinate; no optimization, mocks, posterior, calibrated interval, significance, or evidence.",
+    "The condition number depends on the stated dimensionless parameter coordinates and is not by itself an uncertainty.",
+    "This SN-only late-time background diagnostic does not establish early-time or perturbation viability and does not combine BAO with SN."
+  ]
+}

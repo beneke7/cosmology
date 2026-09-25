@@ -1,0 +1,75 @@
+{
+  "review": "Independent physicality critique of DES-Dovekie-only interacting-vacuum profile contract",
+  "as_of": "2026-09-25",
+  "recommendation": "PASS",
+  "scope": {
+    "contract_reviewed": "work/theory7/dovekie_ivs_profile_contract.md and .json",
+    "profile_fit_run": false,
+    "observed_sn_scores_inspected": false,
+    "author_reproduction_claim": false
+  },
+  "sources": {
+    "local_paper": {
+      "path": "context/papers/interacting_de_desi_dr2_2026.pdf",
+      "text_path": "context/papers/interacting_de_desi_dr2_2026.txt",
+      "citations": "Eqs. (4)-(5), printed p. 2; Eq. (8), printed p. 3"
+    },
+    "contract": "work/theory7/dovekie_ivs_profile_contract.md",
+    "profile_adapter": "experiments/interacting_vacuum_screen/interacting_vacuum_profile.py",
+    "prior_positivity_reports": [
+      "work/theory5/ivs_early_positivity.md",
+      "work/theory6/ivs_massive_nu_sensitivity.md"
+    ]
+  },
+  "independent_derivation": {
+    "coordinate": "u=ln(1+z)=-ln(a), so du/dt=-H",
+    "paper_convention": "Q=Gamma*rho_x; Q>0 transfers energy from CDM to vacuum",
+    "gamma_over_H": "Gamma/H=g/E where g=Gamma/H0 and E=H/H0",
+    "ode": {
+      "dx_du": "-g*x/E",
+      "dc_du": "3*c+g*x/E",
+      "db_du": "3*b",
+      "dm_du_for_m=b+c": "3*m+g*x/E",
+      "flat_late_time_closure": "E^2=m+x",
+      "distance": "dD/du=exp(u)/E"
+    },
+    "g_zero_limit": "x=1-Omega_m0 and m=Omega_m0*exp(3u), exactly flat LCDM in the stated radiation-free reduction",
+    "sign_check": "For g>0, vacuum decreases and total matter gains source relative to uncoupled past evolution as u increases."
+  },
+  "positive_split": {
+    "interval": "u in [0,U], U=ln(1+1.14418)",
+    "definition": "r(u)=m(u)/(Omega_m0*exp(3u)); c>0 iff f_b<r(u), with b>0 iff f_b>0",
+    "derivative": "r'=g*x/(E*Omega_m0*exp(3u))",
+    "conditions": "Conditional on Omega_m0>0 and a regular trajectory with x>0 and E>0, r is increasing for g>0, constant for g=0, decreasing for g<0; r(0)=1.",
+    "exact_fb_max": {
+      "g_ge_0": "1",
+      "g_lt_0": "m(U)/(Omega_m0*exp(3U))"
+    },
+    "existence": "There exists a constant 0<f_b<1 producing positive baryons and CDM throughout the interval iff f_b_max>0; allowed open interval is (0,f_b_max).",
+    "assessment": "Contract condition is mathematically correct. Dense-grid minimization is unnecessary for f_b_max; endpoint evaluation is exact under stated regularity conditions.",
+    "separation_from_trajectory_check": "The endpoint result is conditional and only proves the split bound. It does not replace numerical checks that the ODE solution remains finite with positive m, x, and E^2 over the full interval."
+  },
+  "parameter_and_scope_critique": {
+    "Omega_m0": "Present baryon-plus-CDM fraction, not CDM-only density.",
+    "g": "Dimensionless Gamma/H0; shape information could constrain g, but dimensional Gamma requires H0 calibration.",
+    "H0_intercept": "Changing H0 makes a common additive shift in all distance moduli; the free common SN intercept absorbs it. The H0=70 gauge fixes convention, not an H0 measurement.",
+    "search_box": "Omega_m0 [0.05,0.60] is an inherited finite search range, not a prior. g [-3,3] matches the paper's IVS prior range but is only an SN profile domain absent an explicitly applied probability measure.",
+    "sn_guard_sufficient_for": "Late-time expansion/split feasibility on the Dovekie distance redshift interval, under the reduced model.",
+    "sn_guard_does_not_establish": [
+      "an externally calibrated or measured baryon fraction",
+      "physicality beyond z=1.14418",
+      "early-universe radiation/neutrino consistency",
+      "perturbation stability or CMB/BBN viability",
+      "reproduction of the paper's full CMB+BAO+SN analysis"
+    ]
+  },
+  "prior_sensitivity_context": {
+    "theory5_theory6": "Both checked the supplied BAO IVS point through z=1e10 across 16 H0, f_b cases, with no CDM crossing; theory6 found maximum endpoint q_c shift 3.729e-4 versus the massless-neutrino treatment.",
+    "limitation": "These are point-specific sensitivities, not validation across the new SN profile box and not constraints on f_b."
+  },
+  "must_fix_before_profile": [],
+  "recommended_refinement": "Use the exact piecewise endpoint formula for f_b_max; retain separate full-interval finite/positive ODE trajectory checks and accepted-point refinement.",
+  "validation": {
+    "json_parse": "passed with python3 -m json.tool"
+  }
+}

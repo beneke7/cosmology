@@ -1,0 +1,1188 @@
+                                                Draft version September 4, 2026
+                                                Typeset using LATEX twocolumn style in AASTeX7.0.1
+
+
+
+
+                                                 Reassessing Evidence for Dark-Sector Interactions with Dynamical Dark Energy and DESI DR2
+                                                                                  Jincheng Wang,1 Hongwei Yu,1 and Puxun Wu1
+                                              1 Department of Physics, Key Laboratory of Low Dimensional Quantum Structures and Quantum Control of Ministry of Education, and
+
+                                              Hunan Research Center of the Basic Discipline for Quantum Effects and Quantum Technologies, Hunan Normal University, Changsha,
+                                                                                                    Hunan 410081, China
+
+
+                                                                                                      ABSTRACT
+                                                         Recent baryon acoustic oscillation measurements from DESI Data Release 2, when combined with
+arXiv:2609.03062v1 [astro-ph.CO] 2 Sep 2026
+
+
+
+
+                                                      CMB and supernova data, strengthen the motivation for exploring departures from ΛCDM in the
+                                                      late-time expansion history. Because an evolving dark-energy equation of state and an interaction
+                                                      within the dark sector can produce partially degenerate effects on the background expansion, their
+                                                      observational signatures should be assessed simultaneously. We first consider an interacting w0 wa CDM
+                                                      model with Q = βHρde , using Planck and ACT CMB data, DESI DR2, and DES-Dovekie supernovae.
+                                                      Allowing the dark-energy equation of state to evolve substantially weakens the preference for a nonzero
+                                                      coupling, while the preference for dynamical dark energy persists. The interaction provides essentially
+                                                      no additional improvement in the best fit, suggesting that part of the coupling preference found in more
+                                                      restricted interacting models may reflect a degeneracy with dark-energy dynamics. We then examine
+                                                      the same interaction for three one-parameter dynamical dark-energy trajectories: thawing, mirage, and
+                                                      generalized emergent dark energy (GEDE). The role of the interaction depends strongly on the assumed
+                                                      trajectory. The thawing and GEDE models favor sizable couplings of opposite signs, whereas the
+                                                      mirage trajectory already closely follows the dark-energy evolution preferred by the data and provides
+                                                      little support for an additional interaction. These models also predict markedly different signatures in
+                                                      structure growth, ranging from enhanced matter clustering in the interacting thawing model to strong
+                                                      suppression in interacting GEDE. These contrasting growth signatures, despite substantial degeneracies
+                                                      at the background level, highlight late-time large-scale-structure observations as a promising avenue
+                                                      for distinguishing dark-energy dynamics from dark-sector interactions.
+
+
+                                                      Keywords: Dark energy (351) — Cosmological parameters (339) — Observational cosmology (1146)
+
+                                                                1. INTRODUCTION                                  (DESI) Data Release 2 (DR2) have strengthened the
+                                                The cosmological constant Λ, characterized by an                 motivation for considering a time-dependent dark en-
+                                              equation of state w = −1, provides the simplest expla-             ergy component ( DESI Collaboration 2025a; J. Wang
+                                              nation for the observed late-time acceleration of the Uni-         et al. 2025; T.-N. Li et al. 2026a).
+                                              verse. Together with cold dark matter (CDM), it forms                 In the framework of the w0 wa CDM cosmological
+                                              the standard ΛCDM cosmological model, which success-               model, in which the dark energy equation of state
+                                              fully accounts for a wide range of observations, such              is described by the Chevallier-Polarski-Linder (CPL)
+                                              as cosmic microwave background (CMB) anisotropies (                parametrization w(a) = w0 + wa (1 − a) (M. Cheval-
+                                              Planck Collaboration 2020a), baryon acoustic oscillation           lier & D. Polarski 2001; E. V. Linder 2003), the DESI
+                                              (BAO) measurements (D. J. Eisenstein et al. 2005; S.               BAO+CMB combination favors an extension beyond
+                                              Alam et al. 2021), and type Ia supernova (SNIa) dis-               ΛCDM at about 3.1σ, with the preference changing to
+                                              tances (A. G. Riess et al. 1998; S. Perlmutter et al. 1999;        2.8–4.2σ when SNIa data are included ( DESI Collabo-
+                                              D. Brout et al. 2022). However, the latest BAO measure-            ration 2025a). Here w0 is the present-day value of w(a),
+                                              ments from the Dark Energy Spectroscopic Instrument                wa characterizes the time evolution of w(a), and a is
+                                                                                                                 the cosmic scale factor. The preferred parameter region
+                                                                                                                 generally has w0 > −1 and w0 + wa < −1, which cor-
+                                              Corresponding author: Hongwei Yu and Puxun Wu                      responds to an equation of state that evolves across the
+                                              hwyu@hunnu.edu.cn, pxwu@hunnu.edu.cn                               phantom divide, w = −1 ( DESI Collaboration 2025b).
+2                                                       Wang et al.
+
+Motivated by these results, several alternative parame-        teraction obtained within a restricted framework, such
+terizations have also been confronted with DESI BAO            as IΛCDM or IwCDM, may partly absorb an under-
+measurements, including the Barboza–Alcaniz (BA) (J.           lying time dependence of the dark-energy equation of
+E. M. Barboza & J. S. Alcaniz 2008), the Jassal–Bagla–         state. A central question is therefore whether evidence
+Padmanabhan (JBP) (H. K. Jassal et al. 2005), the ex-          for a dark-sector interaction persists when the interac-
+ponential (EXP) (N. Dimakis et al. 2016; S. Pan et al.         tion and dark-energy dynamics are varied simultane-
+2020), and the logarithmic (LOG) (G. Efstathiou 1999)          ously (W. Yang et al. 2026), and how the answer de-
+forms.                                                         pends on the assumed form of the dark-energy evolu-
+   A dynamical dark-energy component can arise nat-            tion.
+urally from a scalar field. The simplest example is               Several recent studies have considered interactions of
+quintessence (B. Ratra & P. J. E. Peebles 1988; R. R.          the form Q ∝ Hρde , where H is the Hubble param-
+Caldwell & E. V. Linder 2005; A. Vikman 2005), for             eter and ρde is the dark-energy density, together with
+which a canonical kinetic term implies w ≥ −1. Scalar-         phenomenological parametrizations of the dark-energy
+field models with w < −1, commonly referred to as              equation of state, including CPL, JBP, and modified
+phantom dark energy (R. R. Caldwell 2002), generally           emergent dark energy. However, M. Artola et al. (2026);
+require a negative kinetic term and are consequently sus-      G. Neumann et al. (2026) use only CMB distance pri-
+ceptible to quantum instabilities (S. M. Carroll et al.        ors, which primarily constrain the background geome-
+2003; J. M. Cline et al. 2004).                                try without directly incorporating the perturbation-level
+   An alternative mechanism capable of producing an ef-        signatures of the interaction. Other analyses include
+fective phantom-like expansion history is an interaction       the full CMB spectra and dark-sector perturbations (W.
+between dark energy and dark matter (C. Wetterich              Giarè et al. 2024b; R. Shah et al. 2025a,b), but restrict
+1995; L. Amendola 2000; B. Wang et al. 2016, 2024).            the dark-energy equation of state to either the phan-
+Such an interaction is conventionally described by an          tom or nonphantom regime. It is important to revisit
+energy-transfer term Q entering the continuity equa-           interacting dynamical dark-energy models using the full
+tions of CDM and dark energy. By modifying the evolu-          CMB spectra while allowing w to evolve continuously
+tion of their energy densities, the interaction changes the    across −1.
+Hubble expansion rate H and can generate an effective             In this work, we combine CMB temperature, polar-
+dark-energy equation of state that crosses w = −1 even         ization, and lensing measurements with DESI DR2 BAO
+when the intrinsic dark-energy equation of state does not      and DES-Dovekie SNIa data to constrain interacting dy-
+(P. P. Avelino & H. M. R. da Silva 2012; R. von Mart-          namical dark-energy models that allow phantom-divide
+tens et al. 2020; A. Chakraborty et al. 2025; S. Antusch       crossing. We adopt an interaction of the form Q =
+et al. 2026). Interacting models involving either vacuum       βHρde and treat dark-energy perturbations using the
+energy (IΛCDM) or dark energy with a constant equa-            generalized parameterized post-Friedmann framework,
+tion of state (IwCDM) have therefore received renewed          which permits stable evolution through w = −1. We
+attention following the DESI measurements (W. Giarè           first consider the interacting CPL model, Iw0 wa CDM.
+et al. 2024a; T.-N. Li et al. 2024; E. Silva et al. 2025; S.   We find that allowing w to evolve substantially weakens
+Pan et al. 2026; T.-N. Li et al. 2025; Z. Zhu et al. 2026;     the preference for a nonzero coupling, whereas the pref-
+T.-N. Li et al. 2026b). Coupled quintessence scenar-           erence for dynamical dark energy persists, in contrast to
+ios have likewise been extensively investigated (C. Wet-       the trend reported in previous analyses (M. Artola et al.
+terich 1995; L. Amendola 2000; J. Wang et al. 2026a,b;         2026; G. Neumann et al. 2026; R. Shah et al. 2025a).
+A. Gómez-Valent et al. 2026; J.-Q. Wang et al. 2026; A.       Moreover, introducing the interaction provides essen-
+Chakraborty et al. 2026).                                      tially no additional improvement in the best-fit likeli-
+   An important complication is that a time-dependent          hood.
+dark-energy equation of state and a dark-sector inter-            We then investigate whether this conclusion de-
+action can produce partially degenerate effects on the         pends on the assumed dark-energy trajectory by con-
+late-time expansion history (M. Kunz 2009; A. Aviles           sidering three one-parameter models motivated by the
+& J. L. Cervantes-Cota 2011; V. Petri et al. 2026; S. L.       DESI extended dark-energy analyses: thawing dark en-
+Guedezounme et al. 2026). Cosmological distance mea-           ergy (R. R. Caldwell & E. V. Linder 2005; R. J. Scher-
+surements constrain the total expansion history but do         rer & A. A. Sen 2008; T. Chiba 2009), mirage dark
+not uniquely determine how the dark sector is decom-           energy (E. V. Linder 2007), and generalized emergent
+posed into interacting dark matter and dark energy.            dark energy (GEDE) (X. Li & A. Shafieloo 2020; W.
+Consequently, an apparent preference for a nonzero in-         Yang et al. 2021). We compare each model with its in-
+                                     Interacting dark energy after DESI DR2                                                 3
+
+teracting counterpart and assess their relative statistical   Clemson et al. 2012; Y.-H. Li et al. 2014a; Y.-H. Li &
+support using differences in the likelihood at the maxi-      X. Zhang 2023)
+mum a posteriori points and the Akaike information cri-
+                                                                                       Q = βHρde ,                         (5)
+terion (AIC). We further examine their predictions for
+the matter power spectrum, which provides a means of          where β is a dimensionless coupling parameter. To il-
+distinguishing models that remain partially degenerate        lustrate the background-level degeneracy between the
+at the level of the background expansion.                     interaction and dark-energy dynamics, we define an ef-
+  The remainder of this paper is organized as follows. In     fective dark-energy density
+Sec. 2, we introduce the interacting dark-sector frame-                                              −3
+work and describe the observational data. In Sec. 3, we                       ρeff
+                                                                               de = ρde + ρc − ρc,0 a   ,                  (6)
+present the parameter constraints, model comparisons,         where ρc,0 is the present-day CDM density. Using
+and implications for structure growth. We summarize           Eqs. (4) and (6), one finds that ρeff
+                                                                                                de satisfies the standard
+our conclusions in Sec. 4.                                    noninteracting conservation equation
+               2. MODELS AND DATA                                            ρ̇eff          eff eff
+                                                                               de + 3H(1 + wde )ρde = 0                    (7)
+      2.1. Framework of interacting dark sectors                     eff
+                                                              with wde   ≡ ρpeff
+                                                                             de
+                                                                                 . Thus, at the background level, an inter-
+                                                                             de
+  We consider a spatially flat universe in which baryons      acting dark sector can be mapped onto a noninteracting
+and radiation are separately conserved, while energy and      model with an effective dark-energy equation of state.
+momentum exchanges are allowed between CDM and                This illustrates why background distance measurements
+dark energy (J. Valiviita et al. 2008; T. Clemson et al.      alone may have difficulty distinguishing dark-sector in-
+2012; B. Wang et al. 2016, 2024). The total energy-           teractions from intrinsic dark-energy dynamics.
+momentum tensor satisfies the conservation equation              However, this equivalence does not generally extend
+                                                              to cosmological perturbations. The energy-momentum
+                      ∇µ T µν = 0.                     (1)    transfer directly modifies the evolution of the CDM den-
+                                                              sity contrast, δc ≡ δρc /ρc (J. Valiviita et al. 2008; T.
+For the interacting dark sector, the individual conserva-
+                                                              Clemson et al. 2012; Y.-H. Li et al. 2014a; Y.-H. Li &
+tion equations can be written as
+                                                              X. Zhang 2023), which satisfies
+                                   µν
+            ∇µ Tcµν = −Qν ,    ∇µ Tde = Qν ,           (2)                           h′      ρde
+                                                                           δc′ = −      + βH     (δc − δde ) ,             (8)
+                                                                                     2       ρc
+where the subscripts ‘c’ and ‘de’ denote CDM and dark
+energy, respectively, and Qν characterizes the energy-        where a prime denotes a derivative with respect to con-
+momentum transfer between them. We take the transfer          formal time, h is the trace of the scalar metric pertur-
+four-vector Qν to be parallel to the CDM four-velocity,       bation in the synchronous gauge, δde ≡ δρde /ρde , and
+                                                              H = aH . The term proportional to β explicitly mod-
+                       Qν = Quνc ,                     (3)    ifies the growth of CDM perturbations and vanishes in
+                                                              the noninteracting limit.
+such that the momentum transfer vanishes in the CDM              Since Eq. (8) explicitly depends on δde , dark-energy
+rest frame.                                                   perturbations must also be evolved consistently. In the
+  At the homogeneous and isotropic background level,          conventional fluid description, the dark-energy density
+Eq. (2) reduces to                                            contrast obeys (J. Valiviita et al. 2008; T. Clemson et al.
+                                                              2012; Y.-H. Li & X. Zhang 2023)
+   ρ̇c + 3Hρc = −Q,        ρ̇de + 3H(1 + w)ρde = Q, (4)
+                                                                                             ′
+                                                                                                
+                                                                    ′
+                                                                   δde = −(1 + w) kvde + h2 − 3H(c2s,de − w)δde
+where an overdot denotes a derivative with respect to
+cosmic time, ρc and ρde are the CDM and dark-energy                       −3H2 (c2s,de − c2a,de ) [3(1 + w) − β] vkde ,    (9)
+densities, respectively, and w ≡ pde /ρde is the intrinsic
+                                                              where c2s,de and c2a,de are the rest-frame and adiabatic
+dark-energy equation of state. With this sign conven-
+                                                              sound speeds squared, respectively, k is the comoving
+tion, Q > 0 corresponds to energy transfer from CDM
+                                                              wavenumber, and vde is the dark-energy velocity poten-
+to dark energy, whereas Q < 0 corresponds to transfer
+                                                              tial, which satisfies the Euler equation
+from dark energy to CDM. The noninteracting limit is
+recovered for Q = 0.                                                     ′                                  c2
+                                                                        vde = −H(1 − 3c2s,de )vde + 1+w
+                                                                                                     s,de
+                                                                                                          kδde
+  In this paper, we focus on an interaction proportional
+                                                                                            βH(1+c2s,de )
+to the dark-energy density (J. Valiviita et al. 2008; T.                                −      1+w        vde .           (10)
+4                                                     Wang et al.
+
+The factors of 1/(1 + w) in Eq. (10) render the con-                These measurements combine galaxy, quasar, and
+ventional fluid description singular when w crosses the             Lyα forest tracers and constrain the distance-
+phantom divide. Consequently, some previous analyses                redshift relation over a broad range of redshifts.
+of interacting CPL- and JBP-type models treated the
+                                                                • DES-Dovekie SNIa: We use the DES-Dovekie
+purely phantom and nonphantom regions separately (W.
+                                                                  SNIa sample (B. Popovic et al. 2026), a re-
+Giarè et al. 2024b; R. Shah et al. 2025b,a).
+                                                                  calibrated analysis of the Dark Energy Survey
+   This restriction is particularly relevant in light of
+                                                                  five-year supernova sample ( DES Collaboration
+the DESI results, which favor regions of the w0 –wa
+                                                                  2024). The DES-Dovekie compilation incorporates
+plane in which the dark-energy equation of state can
+                                                                  improved photometric cross-calibration, updated
+cross w = −1. To evolve the perturbations consis-
+                                                                  light-curve training, and low-redshift supernova
+tently through this crossing, we employ the parameter-
+                                                                  data.
+ized post-Friedmann (PPF) framework, generalized to
+interacting dark-energy models (W. Fang et al. 2008;           Unless otherwise stated, the parameter constraints
+Y.-H. Li et al. 2014a,b; X. Zhang 2017; Y.-H. Li & X.        and model comparisons presented below are obtained
+Zhang 2023). Rather than evolving the conventional           from the combined P-ACT+DESI DR2+DES-Dovekie
+dark-energy fluid variables through the singular point,      data set.
+the PPF approach provides a stable prescription for
+the large-scale relation between dark energy and the                    3. RESULTS AND DISCUSSION
+other cosmological components and smoothly connects             We compute the CMB power spectra with a modi-
+it to the appropriate small-scale behavior. This allows      fied version of CAMB (A. Lewis et al. 2000; Y.-H. Li
+us to explore interacting dynamical dark-energy models       & X. Zhang 2023). Cosmological parameter constraints
+across the full parameter region, including trajectories     are obtained with MCMC sampling using Cobaya (J.
+that cross the phantom divide, while consistently incor-     Torrado & A. Lewis 2021), and the resulting posterior
+porating their perturbation-level effects into the CMB       distributions are analyzed with GetDist (A. Lewis 2025).
+observables.                                                    To quantify the statistical performance of the models,
+                                                             we first consider the difference in χ2 evaluated at the
+                2.2. Observational data                      maximum a posteriori (MAP) points,
+  We constrain the cosmological models with a combi-
+nation of CMB, BAO, and SNIa observations. The data             ∆χ2MAP ≡ −2 ln [LMAP (model)/LMAP (ΛCDM)] ,(11)
+sets are summarized below.                                   where LMAP denotes the likelihood evaluated at the
+                                                             MAP point. Negative values therefore indicate an im-
+    • CMB: We use the combined Planck and Ata-
+                                                             provement in the best fit relative to ΛCDM. To account
+      cama Cosmology Telescope data set, hereafter de-
+                                                             for differences in the number of free parameters, we also
+      noted as P-ACT. Following the ACT DR6 likeli-
+                                                             use the Akaike information criterion (AIC) (H. Akaike
+      hood construction, the primary CMB spectra con-
+                                                             1974)
+      sist of the Planck low-multipole temperature and
+      polarization likelihoods, the Planck high-multipole                    ∆AIC = ∆χ2MAP + 2∆k,                (12)
+      Plik lite likelihood restricted to ℓTmax
+                                            T
+                                               = 1000 and
+       TE       EE
+      ℓmax = ℓmax = 600 ( Planck Collaboration 2020b),       where ∆k is the number of additional parameters rel-
+      and the compressed ACT DR6 CMB bandpower               ative to ΛCDM. Thus, ∆AIC < 0 favors the extended
+      likelihood (T. Louis et al. 2025). This combina-       model, whereas ∆AIC > 0 favors ΛCDM. As a com-
+      tion uses the large-angular-scale information from     monly used rule of thumb, |∆AIC| ≤ 2 provides lit-
+      Planck together with the high-resolution ACT           tle evidence for distinguishing the models, while 2 <
+      measurements of the small-angular-scale damping        |∆AIC| < 6, 6 < |∆AIC| < 10, and |∆AIC| > 10
+      tail. We also include the ACT+Planck baseline          are often interpreted as moderate, strong, and very
+      CMB lensing likelihood, which combines the ACT         strong support, respectively, for the model with the
+      DR6 lensing reconstruction with Planck lensing         lower AIC (K. P. Burnham & D. R. Anderson 2002).
+      band powers (F. J. Qu et al. 2024; M. S. Mad-          These thresholds are used here only as qualitative guides
+      havacheril et al. 2024; J. Carron et al. 2022).        for model comparison.
+
+    • DESI BAO: We use the BAO measurements                                 3.1. Interacting w0 wa CDM
+      from DESI DR2 ( DESI Collaboration 2025c,a),             We begin with an interacting extension of w0 wa CDM,
+      based on the first three years of DESI observations.   hereafter denoted as Iw0 wa CDM, with the dark-sector
+                                      Interacting dark energy after DESI DR2                                               5
+
+interaction specified by Eq. (5). This model allows            at late times, crossing w = −1 during the evolution.
+both the intrinsic dark-energy equation of state and           This behavior is consistent with the qualitative trend
+the interaction strength to vary and therefore pro-            reported by DESI ( DESI Collaboration 2025a). Rela-
+vides a direct test of whether evidence for a dark-            tive to ΛCDM, the model improves the best-fit statistic
+sector interaction persists once dynamical dark en-            by ∆χ2MAP = −10.72. After accounting for its two ad-
+ergy is simultaneously included. For comparison, we            ditional parameters, ∆AIC = −6.72, corresponding to
+also investigate the standard noninteracting w0 wa CDM         strong support for w0 wa CDM over ΛCDM according to
+model. The marginalized parameter constraints from             the conventional AIC criterion.
+the P-ACT+DESI DR2+DES-Dovekie are summarized                     We next allow for a simultaneous dark-sector interac-
+in Tab. 1, and the posterior distributions of w0 , wa and      tion. The coupling is constrained to β = −0.35+0.77    −0.62 ,
+β are shown in Fig. 1.                                         and is therefore consistent with zero at 1σ. The poste-
+                                                               rior provides no compelling evidence for a nonzero inter-
+                                                               action. This result contrasts with the coupling prefer-
+                                                               ence reported in some more restricted interacting models
+                                                               (W. Giarè et al. 2024a; T.-N. Li et al. 2024; S. Pan et al.
+                                                               2026; T.-N. Li et al. 2025), suggesting that part of the
+                                                               apparent interaction signal in such models may be ab-
+                                                               sorbed by allowing additional freedom in the intrinsic
+                                                               dark-energy evolution.
+                                                                  An important consequence of introducing the interac-
+                                                               tion is the substantial broadening of the matter-density
+                                                               constraint. We obtain Ωm0 = 0.361+0.170   −0.098 , compared
+                                                               with Ωm0 = 0.3117 ± 0.0053 in the noninteracting
+Figure 1. Posterior distributions of the model parameters
+for the w0 wa CDM (left) and Iw0 wa CDM (right) models.        w0 wa CDM model. Although the posterior mean shifts
+                                                               upward, the two determinations remain statistically con-
+Table 1. Marginalized parameter constraints (posterior
+                                                               sistent because of the much larger uncertainty in the
+means and 68% credible intervals) from P-ACT+DESI              interacting model. This broadening reflects a strong
+DR2+DES-Dovekie. The last two rows give the differences        degeneracy in the decomposition of the dark sector:
+in the MAP χ2 and AIC relative to ΛCDM.                        changes in the present-day matter abundance can be
+                                                               partially compensated by changes in the coupling and
+            Parameter    w0 wa CDM    Iw0 wa CDM
+                                                               in the dark-energy equation of state while preserving a
+            w0        −0.829 ± 0.054 −0.93+0.24
+                                             −0.19             similar expansion history.
+            wa           −0.60+0.23
+                               −0.18  −0.60 ± 0.21                By contrast, H0 and wa remain remarkably stable:
+            β                −         −0.35+0.77
+                                             −0.62             H0 = 67.40±0.54 km s−1 Mpc−1 and wa = −0.60±0.21.
+            H0          67.46 ± 0.55  67.40 ± 0.54             The interaction therefore neither appreciably changes
+            Ωm0       0.3117 ± 0.0053 0.361+0.170
+                                            −0.098             the inferred Hubble constant nor removes the prefer-
+            ∆χ2MAP           −10.72          −10.75            ence for an evolving dark-energy equation of state. The
+            ∆AIC             −6.72           −4.75             central value of w0 also remains statistically consistent
+                                                               with the noninteracting result, although its uncertainty
+   For the noninteracting w0 wa CDM model, we ob-
+                                                               increases considerably. As shown in Figure 1, this loss
+tain w0 = −0.829 ± 0.054 and wa = −0.60+0.23     −0.18 , to-   of constraining power is associated in part with a pro-
+gether with Ωm0 = 0.3117 ± 0.0053 and H0 = 67.46 ±
+                                                               nounced correlation between w0 and β.
+0.55 km s−1 Mpc−1 . The inferred H0 remains sub-
+                                                                  Figure 2 compares the intrinsic equation of state w(z)
+stantially below the Cepheid-calibrated SNIa distance-                                                 eff
+                                                               with the effective equation of state wde    (z). For the pos-
+ladder determination of H0 = 73.04±1.04 km s−1 Mpc−1                                                                      eff
+                                                               terior mean parameters of the interacting model, wde
+reported by the SH0ES collaboration (A. G. Riess et al.
+                                                               develops a pole at z ≃ 1.20, where the reconstructed
+2022); thus, allowing CPL-type dark-energy evolution
+                                                               effective density ρeff
+                                                                                  de crosses zero. This behavior follows
+does not alleviate the Hubble tension for the data com-
+                                                               directly from the modified CDM dilution history. For
+bination considered here.
+                                                               the central value β < 0, energy is transferred from dark
+   The preferred dark-energy parameters correspond to
+                                                               energy to CDM, causing the CDM density to dilute more
+w0 > −1 and w0 + wa < −1. As illustrated in Figure 2,
+                                                               slowly than a−3 as the Universe expands. Equivalently,
+the resulting equation of state evolves from a phantom-
+                                                               after normalizing the interacting and reference nonin-
+like regime at earlier times to a quintessence-like regime
+6                                                            Wang et al.
+
+
+
+
+Figure 2. Evolutions of the intrinsic dark-energy equa-
+tion of state w(z) in w0 wa CDM and Iw0 wa CDM, together
+                                      eff
+with the effective equation of state wde  (z) for the interacting
+model. The vertical dashed line marks the redshift at which
+                                                                    Figure 3. Present-day matter power spectra for w0 wa CDM
+ρeff           eff
+ de = 0 and wde develops a pole.                                    and Iw0 wa CDM. The lower panel shows the ratio to the
+                                                                    corresponding ΛCDM spectrum.
+teracting histories to the same present-day CDM den-
+sity ρc,0 , the interacting CDM density at earlier times            model, dark energy affects matter clustering primar-
+satisfies ρc < ρc,0 a−3 . The second and third terms in             ily through the background expansion and, depending
+Eq. (6) therefore give a negative contribution to ρeff
+                                                     de . At        on its clustering properties, through its own perturba-
+z ≃ 1.20, this contribution cancels the intrinsic dark-             tions. An interaction additionally modifies the back-
+energy density, ρde = ρc,0 a−3 − ρc , so that ρeff
+                                                de = 0 and          ground evolution of CDM and directly enters its pertur-
+  eff
+wde   = pde /ρeff
+              de diverges.                                          bation equation. Measurements of structure growth can
+   The pole should not be interpreted as a physical sin-            therefore provide information complementary to that
+gularity. Both ρde and ρc , as well as the underlying ex-           contained in distance observables. The matter power
+pansion history, remain regular. Rather, the divergence             spectrum characterizes the variance of the total matter
+signals a breakdown of the effective single-fluid equation-         density contrast in Fourier space,
+of-state description when its reconstructed energy den-
+sity passes through zero. The associated phantom-like                                Pm (k) ∝ |δm,k |2 ,                (13)
+                                                      eff
+excursion at lower redshift and positive values of wde    on
+                                                                    where
+the high-redshift side of the pole are therefore proper-
+ties of the effective noninteracting representation rather                              ρb δb,k + ρc δc,k + ρν δν,k
+                                                                               δm,k =                               .   (14)
+than pathologies of the underlying interacting model.                                          ρb + ρc + ρν
+   Most importantly, introducing the coupling produces              Here k is the comoving wave vector, k = |k|, and δb,k ,
+essentially no improvement in the maximum likelihood.               δc,k , and δν,k denote the Fourier modes of the baryon,
+We find ∆χ2MAP = −10.75 for Iw0 wa CDM, compared                    CDM, and massive-neutrino density contrasts, respec-
+with −10.72 for w0 wa CDM. The additional interaction               tively. This expression makes clear that CDM enters
+parameter therefore improves χ2MAP by only 0.03. Once               Pm (k) through both its weight, ρc /(ρb + ρc + ρν ), and
+the extra degree of freedom is penalized, ∆AIC changes              its density contrast mode δc,k .
+from −6.72 to −4.75. Thus, for the data considered                     Fig. 3 shows the present-day matter power spectra
+here, the improvement over ΛCDM is driven primar-                   and their ratios to ΛCDM (A. J. Mead et al. 2021).
+ily by the freedom to evolve the dark-energy equation               The noninteracting w0 wa CDM spectrum is close to that
+of state rather than by the dark-sector interaction. In             of ΛCDM, indicating that the preferred noninteracting
+this sense, allowing dynamical dark energy substantially            dynamical-dark-energy history produces only a modest
+reduces the statistical motivation for an additional cou-           change in present-day matter clustering. By contrast,
+pling.                                                              the Iw0 wa CDM spectrum is substantially suppressed
+   The preceding results demonstrate that dark-                     over the plotted range of scales. Thus, models that pro-
+energy dynamics and dark-sector interactions can be                 vide very similar fits to the background expansion can
+strongly degenerate in background observables. Their                nevertheless predict appreciably different growth histo-
+perturbation-level effects, however, need not be degen-             ries.
+erate (A. Pourtsidou & T. Tram 2016; E. D. Valentino                   This behavior can be understood from the evolution of
+et al. 2020; Y. Zhai et al. 2023). In a non-interacting             the CDM density perturbation. Eq. (8) can be expressed
+                                     Interacting dark energy after DESI DR2                                               7
+
+in Fourier space as                                              lensing information are included, the preferred wa re-
+         ′       ′               ρde                             mains nearly unchanged after introducing the interac-
+        δc,k = (δc,k )β=0 + βH       (δc,k − δde,k ) ,   (15)    tion, while β remains consistent with zero and the uncer-
+                                 ρc
+          ′
+                                                                 tainties in w0 and Ωm0 increase substantially. We there-
+where (δc,k  )β=0 denotes the standard noninteracting
+                                                                 fore find that the additional freedom associated with
+contribution to the CDM perturbation evolution. On
+                                                                 the interaction is expressed primarily through broad-
+subhorizon scales, dark-energy perturbations are typi-
+                                                                 ened parameter degeneracies rather than through a shift
+cally negligible compared with matter perturbations (W.
+                                                                 of the preferred dark-energy evolution toward wa = 0.
+Fang et al. 2008; Y.-H. Li et al. 2014a; Planck Col-
+                                                                    A complementary comparison can be made with R.
+laboration 2020a), so that the interaction term approx-
+                                                                 Shah et al. (2025a), who analyzed the phantom and non-
+imately reduces to βH ρρde    (δc,k − δde,k ) ≃ βH ρρde δc,k .
+                            c                        c           phantom CPL regimes separately using Planck, DESI
+For the negative central value of β in the Iw0 wa CDM fit,
+                                                                 DR2, and Pantheon+. In the phantom branch, energy
+this contribution acts to reduce the growth of δc,k . To-
+                                                                 transfer from dark energy to CDM is accompanied by a
+gether with the interaction-induced modification of the
+                                                                 higher matter density and substantially suppressed clus-
+CDM background density, this leads to a suppression of
+                                                                 tering, while the equation of state approached −1 from
+δm and hence of Pm (k).
+                                                                 below at late times. The non-phantom branch exhibits
+  Because β is only weakly constrained in Iw0 wa CDM,
+                                                                 the opposite direction of energy transfer and enhanced
+however, the spectrum shown in Figure 3 should be in-
+                                                                 structure growth. Our analysis instead permits the in-
+terpreted with some care. It illustrates the growth his-
+                                                                 trinsic equation of state to evolve continuously across
+tory associated with the representative parameter set
+                                                                 w = −1. Within this enlarged parameter space, the
+used to generate the figure rather than establishing a
+                                                                 data retain a preference for dynamical dark energy but
+precisely determined prediction for the entire interact-
+                                                                 do not require a nonzero interaction. Both analyses nev-
+ing posterior. A full assessment of the allowed range
+                                                                 ertheless find that introducing the interaction has little
+of structure-growth histories would require propagat-
+                                                                 effect on the inferred value of H0 .
+ing the posterior distribution into observables such as
+                                                                    Taken together, these results indicate that the inferred
+Pm (k), f σ8 (z), or weak-lensing statistics.
+                                                                 evidence for a dark-sector interaction depends sensi-
+  Although the representative interacting model pro-
+                                                                 tively on the freedom allowed in the dark-energy sec-
+duces a visible change in the present-day matter power
+                                                                 tor and on the treatment of cosmological perturbations.
+spectrum, its impact on the CMB lensing spectrum is
+                                                                 The persistence of the dynamical-dark-energy prefer-
+comparatively modest for the data combination consid-
+                                                                 ence in Iw0 wa CDM motivates us to ask whether the
+ered here. Low-redshift large-scale-structure measure-
+                                                                 conclusion changes when the dark-energy evolution is
+ments that probe the matter distribution more directly
+                                                                 restricted to theoretically or phenomenologically moti-
+may therefore provide substantially greater discrimina-
+                                                                 vated trajectories. We therefore turn next to three one-
+tory power. Galaxy clustering, redshift-space distor-
+                                                                 parameter models considered in DESI extended dark-
+tions, and weak gravitational lensing are particularly
+                                                                 energy analyses—thawing, mirage, and GEDE—and ex-
+promising for determining whether the growth histories
+                                                                 amine how their cosmological constraints and structure-
+permitted by the background data remain observation-
+                                                                 growth predictions change when the same dark-sector
+ally viable.
+                                                                 interaction is introduced (K. Lodha et al. 2025; DESI
+  It is useful to compare these results with previous
+                                                                 Collaboration 2025b).
+analyses of interacting CPL models. M. Artola et al.
+(2026) considered the same background interaction, Q ∝
+Hρde , within the CPL framework using compressed                                3.2. Thawing dark energy
+Planck+ACT CMB information, DESI DR2, and Pan-                      We next consider the thawing class of dark-energy
+theon+. Despite the different SNIa sample, their nonin-          models. In canonical thawing scenarios, the scalar field
+teracting CPL constraints closely agree with ours, pro-          is initially frozen by Hubble friction and begins to evolve
+viding a useful common baseline. When the interac-               only at relatively late times (R. R. Caldwell & E. V.
+tion was included, however, their preferred value of wa          Linder 2005; R. J. Scherrer & A. A. Sen 2008; T. Chiba
+shifted markedly toward zero, accompanied by a mild              2009). Following the calibrated trajectory adopted in
+preference for energy transfer from dark energy to CDM,          the DESI extended dark energy analyses (K. Lodha et al.
+thereby weakening the inferred evidence of the dark-             2025; DESI Collaboration 2025b), we describe this class
+energy evolution.                                                in the w0 -wa plane by
+  Our result differs in an important respect. When the
+CMB temperature and polarization spectra and CMB                                   wa = −1.58(1 + w0 ).                (16)
+8                                                       Wang et al.
+
+The dark-energy equation of state is therefore specified          The situation changes substantially when the dark-
+by the single independent parameter w0 . We emphasize          sector interaction is introduced. We obtain that β =
+that Eq. (16) is used here as a phenomenological one-          0.53+0.24
+                                                                    −0.13 , with the posterior favoring a positive cou-
+parameter trajectory in the w0 –wa plane rather than as        pling. Under our sign convention, β > 0 corresponds
+a complete microscopic scalar-field model. In particular,      to energy transfer from CDM to dark energy. At the
+depending on the value of w0 , its CPL continuation can        same time, the preferred present-day equation of state
+extend into the phantom regime. The interacting ex-            shifts from w0 = −0.923 ± 0.036 to w0 = −0.692+0.100−0.060 .
+tension introduces the additional coupling parameter β         Because wa = −1.58(1+w0 ), this shift implies a substan-
+through Eq. (5). The posterior distributions are shown         tially more negative wa and hence a stronger evolution
+in Fig. 4, and the marginalized constraints are listed in      of the intrinsic equation of state than in the noninter-
+Tab. 2.                                                        acting thawing model.
+                                                                  Figure 5 illustrates the corresponding evolution. Al-
+                                                               though the intrinsic w(z) evolves strongly and crosses
+                                                               the phantom divide, the reconstructed effective equation
+                                                                            eff
+                                                               of state wde     remains above −1 over the redshift range
+                                                               shown. The interaction therefore changes not only the
+                                                               preferred parameters but also the effective interpretation
+                                                               of the dark-energy evolution. This provides a concrete
+                                                               example of the background-level degeneracy discussed in
+                                                               Sec. 2.1: a strongly evolving intrinsic equation of state
+                                                               combined with energy transfer between the dark sectors
+                                                               can generate an effective expansion history whose ap-
+                                                               parent dark-energy behavior differs substantially from
+Figure 4. Posterior distributions of selected parameters for
+                                                               that of the underlying fluid.
+the thawing model and its interacting extension.
+                                                                  A particularly notable consequence of the interaction
+                                                               is the large shift in the inferred present-day matter den-
+Table 2. Constraints for the thawing model and its inter-      sity, Ωm0 = 0.156+0.050
+                                                                                   −0.077 , compared with 0.3093 ± 0.0055
+acting extension.                                              in the noninteracting thawing model. By contrast, the
+         Parameter    Thawing      Interacting thawing         Hubble constant remains essentially unchanged, H0 =
+         w0        −0.923 ± 0.036      −0.692+0.100            67.43 ± 0.56 km s−1 Mpc−1 . The low value of Ωm0 re-
+                                              −0.060
+         β                −              0.53+0.24
+                                                               flects the strong degeneracy among the present-day mat-
+                                             −0.13
+                                                               ter abundance, the interaction strength, and the dark-
+         H0          67.33 ± 0.56      67.43 ± 0.56
+                                                               energy evolution. Because the data combination consid-
+         Ωm0       0.3093 ± 0.0055      0.156+0.050
+                                             −0.077
+                                                               ered here does not include the full range of low-redshift
+         ∆χ2MAP           −3.93              −10.00            structure-growth information, the viability of this region
+         ∆AIC             −1.93              −6.00             should be tested against additional large-scale-structure
+                                                               observables.
+  For the noninteracting thawing model, we obtain w0 =
+                                                                  The statistical improvement produced by the interac-
+−0.923±0.036, together with Ωm0 = 0.3093±0.0055 and
+                                                               tion is substantial. The interacting thawing model gives
+H0 = 67.33 ± 0.56 km s−1 Mpc−1 . Through Eq. (16),
+                                                               ∆χ2MAP = −10.00, compared with −3.93 in the nonin-
+the preferred value of w0 corresponds to wa < 0. As
+                                                               teracting case. Thus, introducing β improves the MAP
+shown in Figure 5, the resulting equation of state there-
+                                                               χ2 by approximately 6.1. Even after penalizing the addi-
+fore evolves from a phantom-like regime at earlier times
+                                                               tional parameter, the AIC changes from ∆AIC = −1.93
+toward w0 > −1 at the present epoch, qualitatively re-
+                                                               to ∆AIC = −6.00. According to the conventional AIC
+sembling the evolution preferred in the full w0 wa CDM
+                                                               criterion, the interacting thawing model therefore re-
+model but with its time dependence restricted to the
+                                                               ceives substantially greater support than its noninteract-
+one-dimensional thawing trajectory.
+                                                               ing counterpart and strong support relative to ΛCDM.
+  Relative to ΛCDM, the noninteracting thawing model
+                                                               This result demonstrates that, although the general
+gives ∆χ2MAP = −3.93 and ∆AIC = −1.93. The im-
+                                                               Iw0 wa CDM model does not require a nonzero coupling,
+provement in the best fit is therefore insufficient to pro-
+                                                               an interaction can become statistically important when
+vide meaningful evidence for the thawing trajectory over
+                                                               the intrinsic dark-energy evolution is restricted to a par-
+ΛCDM once the additional parameter is taken into ac-
+                                                               ticular trajectory.
+count.
+                                     Interacting dark energy after DESI DR2                                              9
+
+                                                                  This large growth enhancement is particularly im-
+                                                                portant for assessing the model. The same interac-
+                                                                tion that improves the fit to the CMB+BAO+SNIa
+                                                                data also drives the cosmological parameters into a re-
+                                                                gion characterized by a low present-day matter frac-
+                                                                tion and unusually strong matter clustering. The in-
+                                                                teracting thawing solution should therefore be regarded
+                                                                as a sharply testable prediction of the restricted model
+                                                                rather than as evidence that this parameter region is al-
+                                                                ready favored by all cosmological observations. Incorpo-
+                                                                rating low-redshift probes of structure growth, such as
+Figure 5. Evolutions of the intrinsic dark-energy equation
+                                                                redshift-space distortions, galaxy clustering, and weak
+of state for the thawing model and its interacting extension.
+                                                                gravitational lensing, will be important for determining
+                                                                whether the improved fit to the data considered here
+  The interacting thawing solution also produces a dis-         survives once growth information is included.
+tinctive signature in structure growth. Figure 6 shows            As in the Iw0 wa CDM case, the power spectrum dis-
+the present-day matter power spectrum. The nonin-               played in Figure 6 corresponds to the representative pa-
+teracting thawing prediction remains close to that of           rameter set adopted for the calculation. A more com-
+ΛCDM, consistent with the relatively modest departure           plete assessment would propagate the cosmological pos-
+of its expansion history from the standard model. In            terior into the predicted distribution of Pm (k) or related
+contrast, the interacting thawing model exhibits a pro-         growth observables. Nevertheless, the contrast between
+nounced enhancement of matter power over the scales             Figures 3 and 6 already demonstrates an important fea-
+shown.                                                          ture of interacting dynamical-dark-energy models: the
+                                                                direction and magnitude of the modification to struc-
+                                                                ture growth depend sensitively on both the dark-energy
+                                                                trajectory and the sign of the preferred interaction.
+
+
+
+
+                                                                                3.3. Mirage dark energy
+                                                                  We now examine the mirage trajectory, which de-
+                                                                scribes evolving equations of state that can closely mimic
+                                                                the distance-redshift relation of ΛCDM over an extended
+                                                                redshift range (E. V. Linder 2007). Following the DESI
+                                                                extended dark-energy analyses (K. Lodha et al. 2025;
+Figure 6. Present-day matter power spectra for the thawing      DESI Collaboration 2025b), we approximate this trajec-
+model and its interacting extension.                            tory in the w0 -wa plane as
+
+
+  The sign of this effect is consistent with the positive
+coupling preferred by the interacting thawing fit. From
+Eq. (15), the interaction-dependent contribution to the                           wa = −3.66(1 + w0 ).                (17)
+CDM perturbation equation is approximately βH ρρde     c
+                                                         δc,k
+on subhorizon scales. For β > 0, this term acts in the di-
+rection of enhanced CDM perturbation growth. The in-
+teraction simultaneously modifies the background evolu-         As in the thawing case, the intrinsic dark-energy equa-
+tion of ρc , so the resulting change in Pm (k) reflects both    tion of state is therefore described by a single inde-
+the altered CDM abundance and the modified growth               pendent parameter w0 , while the interacting extension
+of δc . For the preferred interacting thawing parameters,       introduces the additional coupling parameter β. The
+their combined effect is a substantial enhancement of           posterior distributions are shown in Fig. 7, and the
+the present-day matter power spectrum.                          marginalized constraints are summarized in Tab. 3.
+10                                                       Wang et al.
+
+                                                                similarly stable. The matter density shows a modest
+                                                                upward shift from 0.3099 ± 0.0047 to 0.320 ± 0.020, ac-
+                                                                companied by a larger uncertainty, but remains consis-
+                                                                tent with the noninteracting value. Thus, in contrast
+                                                                to the interacting thawing model, the introduction of β
+                                                                neither substantially changes the preferred dark-energy
+                                                                evolution nor drives the background parameters into a
+                                                                qualitatively different region.
+                                                                   This stability can be understood from the location
+                                                                of the mirage trajectory in the w0 –wa plane. For the
+                                                                preferred w0 ≃ −0.84, Eq. (17) gives wa ≃ −0.60, plac-
+Figure 7. Posterior distributions of selected parameters for    ing the model close to the region already selected by
+the mirage model and its interacting extension.
+                                                                the unrestricted w0 wa CDM fit. There is therefore lit-
+                                                                tle need for the interaction to compensate for a mis-
+Table 3. Constraints for the mirage model and its interact-     match between the assumed dark-energy trajectory and
+ing extension.                                                  the expansion history preferred by the data. This be-
+         Parameter     Mirage      Interacting mirage           havior contrasts with the thawing trajectory, for which
+         w0        −0.835 ± 0.056     −0.837+0.050
+                                                                introducing the interaction substantially shifts both the
+                                             −0.057
+                                                                dark-energy parameters and the inferred matter abun-
+         β                −          −0.034 ± 0.074
+                                                                dance.
+         H0          67.67 ± 0.37     67.44 ± 0.52
+                                                                   Fig. 8 further illustrates this result. The intrinsic w(z)
+         Ωm0       0.3099 ± 0.0047    0.320 ± 0.020
+                                                                histories of the interacting and noninteracting mirage
+         ∆χ2MAP           −10.50             −10.75             models are nearly indistinguishable because their pre-
+         ∆AIC             −8.50              −6.75              ferred values of w0 are essentially identical. At low red-
+                                                                                              eff
+                                                                shift, the reconstructed wde      also remains close to the
+   For the noninteracting mirage model, we obtain w0 =
+                                                                intrinsic equation of state. Deviations become more
+−0.835 ± 0.056. Through Eq. (17), the posterior mean
+                                                                noticeable toward higher redshift as the interaction-
+corresponds to wa ≃ −0.60. This value aligns well with
+                                                                induced modification of the effective dark-energy density
+the allowed range for wa in the w0 wa CDM model. The
+                                                                accumulates. For the slightly negative posterior mean of
+inferred matter density, Ωm0 = 0.3099 ± 0.0047, and
+                                                                β, this difference reflects energy transfer from dark en-
+Hubble constant, H0 = 67.67 ± 0.37 km s−1 Mpc−1 , are
+                                                                ergy to CDM, although the coupling itself is statistically
+likewise consistent with those obtained in w0 wa CDM.
+                                                                consistent with zero.
+The mirage trajectory therefore passes close to the
+                                                                   The statistical comparison reinforces this interpreta-
+region of the w0 –wa plane preferred by the general
+                                                                tion. Introducing the interaction changes the best-fit
+CPL model, while requiring only one independent dark-
+                                                                statistic only from −10.50 to −10.75. Thus, the ad-
+energy parameter. As illustrated in Fig. 8, the pre-
+                                                                ditional coupling parameter improves the MAP χ2 by
+ferred w(z) evolves from w < −1 at higher redshift to
+                                                                only 0.25. This small gain is insufficient to compensate
+w > −1 at the present epoch and crosses the phantom
+                                                                for the extra degree of freedom: ∆AIC increases from
+divide at late times. Relative to ΛCDM, the mirage
+                                                                −8.50 for the noninteracting mirage model to −6.75 for
+model gives ∆χ2MAP = −10.50 and ∆AIC = −8.50. Its
+                                                                its interacting extension. The data therefore provide
+best-fit likelihood is therefore nearly as good as that
+                                                                no statistical motivation for introducing an interaction
+of w0 wa CDM. Because the mirage model achieves this
+                                                                once the dark-energy evolution is restricted to the mi-
+improvement with only one additional parameter rela-
+                                                                rage trajectory.
+tive to ΛCDM, its AIC is lower than that of the two-
+                                                                   This result provides a particularly clear illustration
+parameter w0 wa CDM model. According to the conven-
+                                                                of the degeneracy between dark-energy dynamics and
+tional AIC criterion, the mirage trajectory therefore re-
+                                                                dark-sector interactions. The general Iw0 wa CDM anal-
+ceives strong support relative to ΛCDM for the data
+                                                                ysis showed that a coupling becomes unnecessary once
+combination considered here.
+                                                                sufficient freedom is allowed in w(z). The mirage model
+   The situation changes very little when the dark-sector
+                                                                demonstrates that the same conclusion can hold even
+interaction is introduced. We find β = −0.034 ± 0.074,
+                                                                within a one-parameter dark-energy model, provided
+which is fully consistent with zero. The dark-energy
+                                                                that its trajectory passes sufficiently close to the re-
+parameter w0 = −0.837+0.050
+                          −0.057 is essentially unchanged       gion of expansion histories favored by the data. Con-
+from its noninteracting value, and the inferred H0 is
+                                  Interacting dark energy after DESI DR2                                             11
+
+                                                             the effect is considerably smaller than in the Iw0 wa CDM
+                                                             case, however, reflecting both the much smaller pre-
+                                                             ferred coupling and the relatively modest changes in the
+                                                             background matter density.
+                                                                Because β = −0.034 ± 0.074 is consistent with zero,
+                                                             the additional suppression displayed by the representa-
+                                                             tive interacting spectrum should not be interpreted as a
+                                                             statistically required departure from the noninteracting
+                                                             prediction. Rather, Figure 9 illustrates the growth mod-
+                                                             ification associated with the parameter set used for the
+                                                             plotted curve. Propagating the full posterior into the
+Figure 8. Evolutions of the dark-energy equation of state
+                                                             predicted matter power spectrum would be required to
+for the mirage model and its interacting extension.
+                                                             determine the statistical significance of this difference.
+                                                                The mirage results therefore provide the cleanest
+                                                             case among the restricted trajectories considered here
+                                                             in which the preferred dark-energy dynamics largely
+                                                             remove the need for an additional interaction. The
+                                                             model reproduces almost the full best-fit improvement of
+                                                             w0 wa CDM with a single dark-energy parameter, while
+                                                             the coupling remains consistent with zero and yields
+                                                             only a marginal additional improvement in the likeli-
+                                                             hood. We next examine GEDE, for which the situation
+                                                             is qualitatively different: the noninteracting model re-
+                                                             mains close to the ΛCDM limit, whereas introducing
+                                                             the interaction substantially changes both the preferred
+                                                             dark-energy evolution and the inferred matter sector.
+
+
+
+Figure 9. Present-day matter power spectra for the mirage
+model and its interacting extension.                                                3.4. GEDE
+                                                               Finally, we consider the GEDE model, which describes
+versely, the interacting thawing results show that a cou-    a recent transition in the dark energy density rather
+pling can become statistically useful when the imposed       than a linear trajectory in the w0 -wa plane (X. Li &
+dark-energy trajectory alone does not reproduce that         A. Shafieloo 2020; W. Yang et al. 2021; K. Lodha et al.
+region as efficiently. The apparent evidence for an inter-   2025; DESI Collaboration 2025b). The equation of
+action is therefore sensitive not simply to the number of    state for GEDE can be expressed as
+dark-energy parameters, but to the particular form of
+the allowed dark-energy evolution.
+  The structure-growth predictions provide a comple-                                                
+                                                                                  δ                a
+mentary comparison. Figure 9 shows the present-day                    w(a) = −1 −    1 − tanh δ ln       ,         (18)
+matter power spectrum for the mirage model and its in-                            3                ae
+teracting extension. The noninteracting mirage model
+produces only a modest suppression relative to ΛCDM,
+remaining within approximately 5% over the scales            where δ is a positive constant that controls the sharp-
+shown. Including the interaction increases the suppres-      ness of the transition, and ae denotes the scale factor at
+sion to approximately 10% for the representative param-      which the dark energy density equals the total matter
+eter set used in the figure.                                 density. The GEDE reduces to the cosmological con-
+  For the slightly negative central value of β, the di-      stant dark energy when δ = 0. In the interacting case,
+rection of this additional suppression is consistent with    this equality point is solved self-consistently in the cou-
+the behavior inferred from Eq. (15): a negative interac-     pled background. The posterior distributions for model
+tion contribution tends to reduce the growth of the CDM      parameters are shown in Fig. 10, and the marginalized
+density contrast on subhorizon scales. The magnitude of      constraints are summarized in Tab. 4.
+12                                                        Wang et al.
+
+
+
+
+Figure 10. Posterior distributions for the GEDE model and        Figure 11. Evolutions of the intrinsic dark-energy equation
+its interacting extension.                                       of state for the GEDE model and its interacting extension.
+                                                                 The vertical dashed line marks ρeff
+                                                                                                 de = 0.
+
+Table 4. Constraints for the GEDE model and its interact-
+ing extension.                                                   parameter space with a matter abundance very different
+                                                                 from that inferred in the corresponding noninteracting
+          Parameter     GEDE        Interacting GEDE             model.
+          δ          0.0309+0.0258
+                            −0.0309     0.677+0.130
+                                             −0.093                 Figure 11 shows the evolution of the intrinsic and ef-
+          β                −            −0.89+0.11
+                                              −0.19              fective dark-energy equations of state. For positive δ,
+          H0           68.54+0.29
+                            −0.34      67.78 ± 0.52              Eq. (18) gives w < −1, with the departure from −1
+          Ωm0       0.3006 ± 0.0036     0.468+0.030
+                                             −0.012              becoming more pronounced toward earlier times. The
+          ∆χ2MAP            0.00              −8.86              large value of δ preferred in the interacting model there-
+          ∆AIC             +2.00              −4.86              fore corresponds to substantially stronger intrinsic dark-
+                                                                 energy evolution than in the noninteracting GEDE case.
+   For the GEDE model, we obtain δ = 0.0309+0.0258  −0.0309 .    At the same time, the negative coupling modifies the
+The posterior therefore extends to the ΛCDM limit,               evolution of both ρc and ρde , so that the reconstructed
+                                                                   eff
+δ = 0, and provides no significant evidence for an emer-         wde    can differ markedly from the intrinsic w(z). This
+gent dark-energy evolution. Correspondingly, the best-           again illustrates that similar background observables
+fit likelihood is essentially identical to that of ΛCDM,         need not imply a unique decomposition into dark matter
+∆χ2MAP = 0.00. Because GEDE introduces one addi-                 and dark energy.
+tional parameter, this gives ∆AIC = +2.00. The non-                 The interaction also leads to a substantial improve-
+interacting GEDE model is therefore not favored over             ment in the fit.       For interacting GEDE, we find
+ΛCDM by the data combination considered here.                    ∆χMAP = −8.86, compared with ∆χ2MAP = 0.00 in the
+                                                                      2
+
+   The inferred background parameters are H0 =                   noninteracting model. Thus, introducing the single in-
+68.54+0.29
+       −0.34 km s
+                 −1
+                    Mpc−1 and Ωm0 = 0.3006 ± 0.0036.             teraction parameter improves the MAP χ2 by 8.86. Af-
+The value of H0 is somewhat higher than in the CPL,              ter accounting for the two additional parameters relative
+thawing, and mirage models considered above, but re-             to ΛCDM, the interacting model gives ∆AIC = −4.86.
+mains well below the local distance-ladder determina-            The interaction therefore changes GEDE from a model
+tion. Since δ is consistent with zero, the preferred non-        that receives no support over ΛCDM according to AIC
+interacting GEDE expansion history remains close to              to one that is moderately favored relative to ΛCDM for
+that of ΛCDM.                                                    the data combination considered here.
+   Introducing a dark-sector interaction changes the re-            This result should be contrasted with those obtained
+sult dramatically. We obtain δ = 0.677+0.130−0.093 and β =       for the other dark-energy trajectories. In the mirage
+−0.89+0.11
+       −0.19 . The interacting model therefore favors both       model, the noninteracting trajectory already closely re-
+substantial dark-energy evolution and a large negative           produces the expansion history preferred by the data,
+coupling. Under our sign convention, β < 0 corresponds           and adding β improves the MAP χ2 by only 0.25. In the
+to energy transfer from dark energy to CDM. The inter-           thawing model, the interaction improves it by approxi-
+action is accompanied by a large shift in the present-day        mately 6.1. For GEDE, the corresponding improvement
+matter density, Ωm0 = 0.468+0.030−0.012 , while the Hubble       is 8.86. The statistical role of the interaction therefore
+constant decreases to H0 = 67.78 ± 0.52 km s−1 Mpc−1 .           depends strongly on the assumed intrinsic dark-energy
+Thus, as in the interacting thawing case, allowing en-           evolution: it is unnecessary for a trajectory already well
+ergy exchange within the dark sector opens a region of           aligned with the preferred expansion history, but can
+                                    Interacting dark energy after DESI DR2                                               13
+
+become important when the noninteracting trajectory
+is more restrictive.
+   The interacting GEDE solution, however, has particu-
+larly striking consequences for structure formation. Fig-
+ure 12 shows the present-day matter power spectrum.
+The noninteracting GEDE prediction remains close to
+that of ΛCDM, as expected from its small preferred
+value of δ. In contrast, the interacting model produces a
+very strong suppression of matter power, with the am-
+plitude reduced by roughly a factor of two relative to
+ΛCDM over much of the range shown.
+   The direction of this effect is consistent with the large
+negative coupling. As discussed in Sec. 3.1, on subhori-
+zon scales the interaction-dependent contribution to the
+                                                                Figure 12. Present-day matter power spectra for the GEDE
+CDM perturbation equation is approximately βH ρρde          .
+                                                          c     model and its interacting extension.
+For β < 0, this term suppresses the growth of the
+CDM density contrast. In the interacting GEDE model,
+the magnitude of the preferred coupling is much larger          Table 5. Statistical impact of introducing the dark-sector
+than in either Iw0 wa CDM or interacting mirage, so the         interaction for the different dynamical-dark-energy models.
+                                                                Here ∆χ2int denotes the change in the minimum χ2 relative to
+corresponding modification of the perturbation evolu-
+                                                                the corresponding noninteracting model, rather than relative
+tion is also much stronger. Together with the substan-          to ΛCDM.
+tial change in the background CDM history, this pro-
+duces the pronounced suppression of Pm (k) shown in                     Dark-energy model     ∆χ2int   Coupling constraint
+Figure 12.                                                              w0 wa                 −0.03       −0.35+0.77
+                                                                                                                 −0.62
+
+   This growth prediction is an important qualification                 Mirage                −0.25      −0.034 ± 0.074
+to the improvement in the CMB+BAO+SNIa fit. The                         Thawing               −6.07        0.53+0.24
+                                                                                                                −0.13
+large present-day matter fraction, Ωm0 ≃ 0.47, and the                  GEDE                  −8.86       −0.89+0.11
+                                                                                                                 −0.19
+strong suppression of matter clustering represent sub-
+stantial departures from the standard cosmological solu-
+                                                                The interaction is not generically preferred once dark-
+tion. Although the data combination analyzed here per-
+                                                                energy dynamics are allowed. Instead, its inferred role
+mits this region and yields an improved likelihood, the
+                                                                depends strongly on the trajectory imposed on w(z).
+model must also be consistent with direct low-redshift
+                                                                The mirage trajectory already follows the region favored
+measurements of structure formation. Galaxy cluster-
+                                                                by the general CPL fit and requires essentially no inter-
+ing, redshift-space distortions, weak gravitational lens-
+                                                                action. The thawing and GEDE trajectories, by con-
+ing, and cluster-abundance measurements should there-
+                                                                trast, acquire substantially improved fits when an in-
+fore provide powerful tests of the interacting GEDE so-
+                                                                teraction is introduced, but they favor couplings of op-
+lution. In particular, the factor-of-two-level modifica-
+                                                                posite signs and consequently predict qualitatively dif-
+tion of the representative matter power spectrum sug-
+                                                                ferent structure-growth histories: enhanced clustering
+gests that structure-growth data could strongly con-
+                                                                for interacting thawing and strongly suppressed cluster-
+strain the parameter region favored by the background-
+                                                                ing for interacting GEDE. These contrasting predictions
+dominated data combination used here.
+                                                                provide a direct means of breaking the background-level
+   As in the previous subsections, the spectrum in Fig-
+                                                                degeneracy between dark-energy dynamics and dark-
+ure 12 should be interpreted according to the parameter
+                                                                sector interactions.
+set used to generate the curve. A posterior-predictive
+                                                                   To summarize the statistical role of the interaction
+treatment of Pm (k) or observables such as f σ8 and weak-
+                                                                across the different dark-energy trajectories, Table 5
+lensing statistics would be required to quantify the range
+                                                                compares the improvement obtained when the coupling
+of growth histories allowed by the full posterior. This is
+                                                                parameter β is added to each corresponding noninter-
+especially important for interacting GEDE because the
+                                                                acting model.
+growth modification is sufficiently large that structure
+                                                                   The contrast is clear. Introducing an interaction pro-
+data may substantially alter the inferred posterior.
+                                                                duces essentially no improvement for w0 wa CDM or the
+   The GEDE results complete a clear pattern across the
+                                                                mirage trajectory, whereas it substantially improves the
+dynamical-dark-energy models considered in this work.
+                                                                fit for the thawing and GEDE trajectories. Moreover,
+14                                                       Wang et al.
+
+the latter two models favor couplings of opposite signs.        coupling, β = 0.53+0.24
+                                                                                    −0.13 , corresponding to energy trans-
+This comparison demonstrates that the inferred statis-          fer from CDM to dark energy in our convention. For
+tical role of the interaction depends strongly on the as-       GEDE, the noninteracting model remains close to the
+sumed intrinsic dark-energy evolution.                          ΛCDM limit and provides essentially no improvement in
+                                                                the best fit, whereas its interacting extension improves
+                   4. CONCLUSIONS                               the MAP χ2 by 8.86 and favors a large negative cou-
+                                                                pling, β = −0.89+0.11
+                                                                                  −0.19 , corresponding to energy transfer
+  In this work, we have reassessed the evidence for in-
+                                                                from dark energy to CDM. The interaction can therefore
+teractions between CDM and dynamical dark energy
+                                                                become statistically important when the assumed nonin-
+in light of DESI DR2. We considered an interaction
+                                                                teracting dark-energy trajectory is more restrictive, but
+of the form Q = βHρde and confronted the resulting
+                                                                both the magnitude and direction of the preferred en-
+models with P-ACT CMB temperature, polarization,
+                                                                ergy transfer depend strongly on that trajectory.
+and lensing data, DESI DR2 BAO measurements, and
+                                                                  These results demonstrate that evidence for a dark-
+DES-Dovekie SNIa. By employing the generalized PPF
+                                                                sector interaction cannot be assessed independently of
+framework, we consistently evolved cosmological pertur-
+                                                                assumptions about dark-energy dynamics. More specif-
+bations across the phantom divide and were therefore
+                                                                ically, our results suggest that when the allowed w(z)
+able to explore interacting dynamical-dark-energy mod-
+                                                                trajectory already follows the region of expansion his-
+els without restricting the equation of state to remain
+                                                                tories preferred by the data, as in w0 wa CDM and the
+entirely in either the phantom or nonphantom regime.
+                                                                mirage model, introducing an interaction yields little ad-
+  We first considered the general Iw0 wa CDM model,
+                                                                ditional improvement. For more restrictive trajectories,
+allowing both CPL dark-energy dynamics and a dark-
+                                                                such as thawing and GEDE, the interaction can com-
+sector interaction. We find that the coupling is consis-
+                                                                pensate for differences in the background evolution and
+tent with zero, β = −0.35+0.77
+                            −0.62 , while the preference for    substantially improve the fit. The resulting coupling
+an evolving dark-energy equation of state persists. Most
+                                                                preference should therefore be interpreted jointly with
+notably, adding the interaction improves the MAP χ2
+                                                                the assumed dark-energy parameterization rather than
+by only 0.03 relative to the noninteracting w0 wa CDM
+                                                                as model-independent evidence for energy exchange in
+model. The AIC correspondingly changes from ∆AIC =
+                                                                the dark sector.
+−6.72 for w0 wa CDM to −4.75 for Iw0 wa CDM. Thus,
+                                                                  The background degeneracy is accompanied by
+once sufficient freedom is allowed in the intrinsic dark-
+                                                                sharply different predictions for structure formation.
+energy evolution, the present data provide no statistical
+                                                                The representative w0 wa CDM and mirage models re-
+motivation for an additional interaction. This result is
+                                                                main relatively close to ΛCDM in their present-day
+consistent with the possibility that part of the apparent
+                                                                matter power spectra, whereas their interacting exten-
+coupling preference found in more restricted interacting
+                                                                sions produce additional suppression. More strikingly,
+models reflects a degeneracy between energy exchange
+                                                                the positive coupling favored in the interacting thawing
+in the dark sector and intrinsic dark-energy dynamics.
+                                                                model substantially enhances matter clustering, while
+  To investigate how this conclusion depends on the
+                                                                the large negative coupling favored in interacting GEDE
+assumed form of w(z), we then considered three one-
+                                                                strongly suppresses it. The corresponding shifts in the
+parameter dynamical-dark-energy trajectories: thawing,
+                                                                inferred matter abundance are also substantial, with
+mirage, and GEDE. The results differ markedly among
+                                                                Ωm0 ≃ 0.16 for interacting thawing and Ωm0 ≃ 0.47 for
+them. The mirage trajectory passes close to the region of
+                                                                interacting GEDE. Thus, models that provide compara-
+the w0 –wa plane preferred by the general CPL fit and
+                                                                bly good fits to CMB, BAO, and SNIa data can predict
+reproduces nearly the same improvement in likelihood
+                                                                radically different late-time matter distributions.
+with only one dark-energy parameter. Introducing an
+                                                                  These extreme growth predictions also provide an im-
+interaction then yields only a marginal additional im-
+                                                                portant qualification to the statistical improvements ob-
+provement, ∆χ2MAP ≃ −0.25, with β = −0.034 ± 0.074
+                                                                tained for the interacting thawing and GEDE models.
+fully consistent with zero. The mirage model therefore
+                                                                The present analysis does not incorporate the full range
+provides a particularly clear example in which an ap-
+                                                                of low-redshift large-scale-structure information, and an
+propriately aligned dark-energy trajectory leaves little
+                                                                improved fit to the data combination considered here
+statistical role for an additional dark-sector interaction.
+                                                                does not by itself establish the viability of these parame-
+  The thawing and GEDE models exhibit qualitatively
+                                                                ter regions. Measurements of redshift-space distortions,
+different behavior. For the thawing trajectory, introduc-
+                                                                galaxy clustering, weak gravitational lensing, and clus-
+ing the interaction improves the MAP χ2 by approx-
+                                                                ter abundance can directly test the predicted growth
+imately 6.1 and shifts the posterior toward a positive
+                                     Interacting dark energy after DESI DR2                                            15
+
+histories and may substantially tighten the interaction       tial couplings of either sign. At the same time, these
+constraints. Future analyses combining DESI full-shape        background-level degeneracies give rise to markedly dif-
+clustering with weak-lensing surveys such as DES, HSC,        ferent predictions for structure growth. Joint analyses of
+KiDS, Rubin, Euclid, and Roman should therefore pro-          expansion-history and large-scale-structure observables
+vide substantially greater power to distinguish intrinsic     will therefore be essential for determining whether the
+dark-energy evolution from interactions within the dark       evolving dark sector indicated by current data is bet-
+sector.                                                       ter described by intrinsic dark-energy dynamics, energy
+   Our conclusions are necessarily conditional on the         exchange between dark matter and dark energy, or a
+phenomenological framework considered here. We have           combination of the two.
+adopted the specific interaction Q = βHρde with the
+                                                               Note added. —While this work was being completed,
+energy-momentum transfer parallel to the CDM four-
+                                                              Ref. (W. Yang et al. 2026) appeared, presenting an inde-
+velocity, together with several particular parameteriza-
+                                                              pendent analysis of interacting dynamical-dark-energy
+tions of the intrinsic dark-energy evolution. Other in-
+                                                              models with DESI DR2. Although the interaction
+teraction forms or momentum-transfer prescriptions can
+                                                              prescription and model assumptions differ from those
+lead to different background and perturbation dynam-
+                                                              adopted here, that study likewise finds that allowing
+ics. It will therefore be important to determine whether
+                                                              additional freedom in dark-energy dynamics can weaken
+the trajectory dependence identified here persists across
+                                                              the inferred evidence for a dark-sector interaction.
+a broader class of interacting models.
+   Overall, our analysis shows that the apparent evi-
+dence for dark-sector interactions in the DESI DR2 era
+is strongly intertwined with assumptions about the dy-                        ACKNOWLEDGMENTS
+namics of dark energy. Allowing sufficiently flexible         This work was supported in part by the NSFC under
+or suitably aligned dark-energy evolution can largely         Grant Nos. 12275080 and 12635002, and the Innova-
+remove the statistical preference for an interaction,         tive Research Group of Hunan Province under Grant
+whereas more restrictive trajectories can favor substan-      No. 2024JJ1006.
+
+
+                                                       REFERENCES
+Akaike, H. 1974, IEEE Trans. Autom. Control, 19, 716,         Caldwell, R. R. 2002, Phys. Lett. B, 545, 23,
+  doi: 10.1109/TAC.1974.1100705                                 doi: 10.1016/S0370-2693(02)02589-3
+Alam, S., et al. 2021, Phys. Rev. D, 103, 083533,             Caldwell, R. R., & Linder, E. V. 2005, Phys. Rev. Lett., 95,
+  doi: 10.1103/PhysRevD.103.083533                              141301, doi: 10.1103/PhysRevLett.95.141301
+Amendola, L. 2000, Phys. Rev. D, 62, 043511,                  Carroll, S. M., Hoffman, M., & Trodden, M. 2003, Phys.
+ doi: 10.1103/PhysRevD.62.043511                                Rev. D, 68, 023509, doi: 10.1103/PhysRevD.68.023509
+Antusch, S., King, S. F., & Wang, X. 2026, Coupled Dark       Carron, J., Mirmelstein, M., & Lewis, A. 2022, J. Cosmol.
+ Energy and Dark Matter for DESI: An Effective Guide to         Astropart. Phys., 09, 039,
+ the Phantom Divide, https://arxiv.org/abs/2604.08449           doi: 10.1088/1475-7516/2022/09/039
+Artola, M., Lazkoz, R., & Salzano, V. 2026, Generalizing      Chakraborty, A., Chanda, P. K., Das, S., & Dutta, K. 2025,
+  the CPL parametrization through dark sector                  J. Cosmol. Astropart. Phys., 11, 047,
+  interaction, https://arxiv.org/abs/2604.25373                doi: 10.1088/1475-7516/2025/11/047
+Avelino, P. P., & da Silva, H. M. R. 2012, Phys. Lett. B,     Chakraborty, A., Ray, T., Das, S., Banerjee, A., &
+  714, 6, doi: 10.1016/j.physletb.2012.06.063                  Ganesan, V. 2026, Astrophys. J., 998, 83,
+Aviles, A., & Cervantes-Cota, J. L. 2011, Phys. Rev. D, 84,    doi: 10.3847/1538-4357/ae2ff8
+ 083515, doi: 10.1103/PhysRevD.84.083515                      Chevallier, M., & Polarski, D. 2001, Int. J. Mod. Phys. D,
+Brout, D., et al. 2022, Astrophys. J., 938, 110,               10, 213, doi: 10.1142/S0218271801000822
+  doi: 10.3847/1538-4357/ac8e04                               Chiba, T. 2009, Phys. Rev. D, 79, 083517,
+Burnham, K. P., & Anderson, D. R. 2002, Model Selection        doi: 10.1103/PhysRevD.79.083517
+  and Multimodel Inference: A Practical                       Clemson, T., Koyama, K., Zhao, G.-B., Maartens, R., &
+  Information-Theoretic Approach, 2nd edn. (New York:           Valiviita, J. 2012, Phys. Rev. D, 85, 043007,
+  Springer), doi: 10.1007/b97636                                doi: 10.1103/PhysRevD.85.043007
+16                                                       Wang et al.
+
+Cline, J. M., Jeon, S., & Moore, G. D. 2004, Phys. Rev. D,      Li, T.-N., Giarè, W., Du, G.-H., et al. 2026b, Robust
+  70, 043543, doi: 10.1103/PhysRevD.70.043543                     Preference for Dark Sector Interactions,
+DES Collaboration. 2024, Astrophys. J. Lett., 973, L14,           https://arxiv.org/abs/2601.07361
+  doi: 10.3847/2041-8213/ad6f9f                                 Li, T.-N., Wu, P.-J., Du, G.-H., et al. 2024, Astrophys. J.,
+DESI Collaboration. 2025a, Phys. Rev. D, 112, 083515,             976, 1, doi: 10.3847/1538-4357/ad87f0
+  doi: 10.1103/tr6y-kpc6                                        Li, X., & Shafieloo, A. 2020, Astrophys. J., 902, 58,
+DESI Collaboration. 2025b, Phys. Rev. D, 112, 083511,             doi: 10.3847/1538-4357/abb3d0
+  doi: 10.1103/w4c6-1r5j                                        Li, Y.-H., Zhang, J.-F., & Zhang, X. 2014a, Phys. Rev. D,
+DESI Collaboration. 2025c, Phys. Rev. D, 112, 083514,             90, 063005, doi: 10.1103/PhysRevD.90.063005
+  doi: 10.1103/2wwn-xjm5                                        Li, Y.-H., Zhang, J.-F., & Zhang, X. 2014b, Phys. Rev. D,
+Dimakis, N., Karagiorgos, A., Zampeli, A., et al. 2016,           90, 123007, doi: 10.1103/PhysRevD.90.123007
+  Phys. Rev. D, 93, 123518,                                     Li, Y.-H., & Zhang, X. 2023, J. Cosmol. Astropart. Phys.,
+  doi: 10.1103/PhysRevD.93.123518                                 09, 046, doi: 10.1088/1475-7516/2023/09/046
+E. M. Barboza, J., & Alcaniz, J. S. 2008, Phys. Lett. B,        Linder, E. V. 2003, Phys. Rev. Lett., 90, 091301,
+  666, 415, doi: 10.1016/j.physletb.2008.08.012                   doi: 10.1103/PhysRevLett.90.091301
+Efstathiou, G. 1999, Mon. Not. R. Astron. Soc., 310, 842,       Linder, E. V. 2007, The Mirage of w=-1,
+  doi: 10.1046/j.1365-8711.1999.02997.x                           https://arxiv.org/abs/0708.0024
+Eisenstein, D. J., et al. 2005, Astrophys. J., 633, 560,
+                                                                Lodha, K., Shafieloo, A., Calderon, R., et al. 2025, Phys.
+  doi: 10.1086/466512
+                                                                  Rev. D, 111, 023532, doi: 10.1103/PhysRevD.111.023532
+Fang, W., Hu, W., & Lewis, A. 2008, Phys. Rev. D, 78,
+                                                                Louis, T., et al. 2025, J. Cosmol. Astropart. Phys., 11, 062,
+  087303, doi: 10.1103/PhysRevD.78.087303
+                                                                  doi: 10.1088/1475-7516/2025/11/062
+Giarè, W., Sabogal, M. A., Nunes, R. C., & Valentino,
+                                                                Madhavacheril, M. S., et al. 2024, Astrophys. J., 962, 113,
+  E. D. 2024a, Phys. Rev. Lett., 133, 251003,
+                                                                 doi: 10.3847/1538-4357/ad06e0
+  doi: 10.1103/PhysRevLett.133.251003
+                                                                Mead, A. J., Brieden, S., Tröster, T., & Heymans, C. 2021,
+Giarè, W., Zhai, Y., Pan, S., et al. 2024b, Phys. Rev. D,
+                                                                 Mon. Not. R. Astron. Soc., 502, 1401,
+  110, 063527, doi: 10.1103/PhysRevD.110.063527
+                                                                 doi: 10.1093/mnras/stab082
+Gómez-Valent, A., Zheng, Z., & Amendola, L. 2026,
+                                                                Neumann, G., Araya, D., & Videla, N. 2026, Phys. Rev. D,
+  Constraints on Coupled Dark Energy in the DESI Era,
+                                                                  doi: 10.1103/4l7f-jqhj
+  https://arxiv.org/abs/2604.12032
+                                                                Pan, S., Paul, S., Saridakis, E. N., & Yang, W. 2026, Phys.
+Guedezounme, S. L., Dinda, B. R., & Maartens, R. 2026, J.
+                                                                  Rev. D, 113, 023501, doi: 10.1103/5y21-k39n
+  Cosmol. Astropart. Phys., 01, 062,
+                                                                Pan, S., Yang, W., & Paliathanasis, A. 2020, Eur. Phys. J.
+  doi: 10.1088/1475-7516/2026/01/062
+                                                                  C, 80, 274, doi: 10.1140/epjc/s10052-020-7832-y
+Jassal, H. K., Bagla, J. S., & Padmanabhan, T. 2005, Mon.
+                                                                Perlmutter, S., et al. 1999, Astrophys. J., 517, 565,
+  Not. R. Astron. Soc., 356, L11,
+  doi: 10.1111/j.1745-3933.2005.08577.x                           doi: 10.1086/307221
+Kunz, M. 2009, Phys. Rev. D, 80, 123001,                        Petri, V., Marra, V., & von Marttens, R. 2026, Phys. Rev.
+  doi: 10.1103/PhysRevD.80.123001                                 D, 113, 023504, doi: 10.1103/3k93-p1n8
+Lewis, A. 2025, J. Cosmol. Astropart. Phys., 08, 025,           Planck Collaboration. 2020a, Astron. Astrophys., 641, A6,
+  doi: 10.1088/1475-7516/2025/08/025                              doi: 10.1051/0004-6361/201833910
+Lewis, A., Challinor, A., & Lasenby, A. 2000, Astrophys. J.,    Planck Collaboration. 2020b, Astron. Astrophys., 641, A5,
+  538, 473, doi: 10.1086/309179                                   doi: 10.1051/0004-6361/201936386
+Li, T.-N., Du, G.-H., Li, Y.-H., et al. 2025, Updated           Popovic, B., Shah, P., Kenworthy, W. D., et al. 2026, Mon.
+  constraints on interacting dark energy: A comprehensive         Not. R. Astron. Soc., 548, stag632,
+  analysis using multiple CMB probes, DESI DR2, and               doi: 10.1093/mnras/stag632
+  supernovae observations,                                      Pourtsidou, A., & Tram, T. 2016, Phys. Rev. D, 94, 043518,
+  https://arxiv.org/abs/2510.11363                                doi: 10.1103/PhysRevD.94.043518
+Li, T.-N., Du, G.-H., Wang, H., et al. 2026a, Dark Energy       Qu, F. J., et al. 2024, Astrophys. J., 962, 112,
+  in the DESI Era: A Brief Review of Evidence,                   doi: 10.3847/1538-4357/acfe06
+  Beyond-ΛCDM Interpretations, and Tensions,                    Ratra, B., & Peebles, P. J. E. 1988, Phys. Rev. D, 37, 3406,
+  https://arxiv.org/abs/2606.21826                                doi: 10.1103/PhysRevD.37.3406
+                                     Interacting dark energy after DESI DR2                                               17
+
+Riess, A. G., Yuan, W., Macri, L. M., et al. 2022,            Wang, B., Abdalla, E., Atrio-Barandela, F., & Pavon, D.
+  Astrophys. J. Lett., 934, L7,                                 2024, Rep. Prog. Phys., 87, 036901,
+  doi: 10.3847/2041-8213/ac5c5b                                 doi: 10.1088/1361-6633/ad2527
+Riess, A. G., et al. 1998, Astron. J., 116, 1009,             Wang, J., Yu, H., & Wu, P. 2025, Eur. Phys. J. C, 85, 853,
+  doi: 10.1086/300499                                           doi: 10.1140/epjc/s10052-025-14593-0
+Scherrer, R. J., & Sen, A. A. 2008, Phys. Rev. D, 77,         Wang, J., Yu, H., & Wu, P. 2026a, Coupled quintessence
+  083515, doi: 10.1103/PhysRevD.77.083515                       with a potential from supergravity exhibits sign-changing
+                                                                interaction, https://arxiv.org/abs/2605.17754
+Shah, R., Mukherjee, P., & Pal, S. 2025a, Mon. Not. R.
+                                                              Wang, J., Yu, H., & Wu, P. 2026b, Phantom-divide crossing
+  Astron. Soc., 542, 2936, doi: 10.1093/mnras/staf1442
+                                                                in exponentially coupled quintessence and the role of
+Shah, R., Mukherjee, P., & Pal, S. 2025b, Mon. Not. R.
+                                                                neutrino-mass freedom, https://arxiv.org/abs/2606.22023
+  Astron. Soc., 536, 2404, doi: 10.1093/mnras/stae2712
+                                                              Wang, J.-Q., Cai, R.-G., Guo, Z.-K., & Wang, S.-J. 2026,
+Silva, E., Sabogal, M. A., Scherer, M., et al. 2025, Phys.
+                                                                Phys. Rev. D, 113, 083534, doi: 10.1103/r6cx-8ghz
+  Rev. D, 111, 123511, doi: 10.1103/qqc6-76z4                 Wetterich, C. 1995, Astron. Astrophys., 301, 321.
+Torrado, J., & Lewis, A. 2021, J. Cosmol. Astropart. Phys.,     https://arxiv.org/abs/hep-th/9408025
+  05, 057, doi: 10.1088/1475-7516/2021/05/057                 Yang, W., Valentino, E. D., Pan, S., Shafieloo, A., & Li, X.
+Valentino, E. D., Melchiorri, A., Mena, O., & Vagnozzi, S.      2021, Phys. Rev. D, 104, 063521,
+  2020, Phys. Dark Univ., 30, 100666,                           doi: 10.1103/PhysRevD.104.063521
+  doi: 10.1016/j.dark.2020.100666                             Yang, W., Zhang, S., Pan, S., Paliathanasis, A., &
+Valiviita, J., Majerotto, E., & Maartens, R. 2008, J.           Saridakis, E. N. 2026, Beyond dynamical dark energy:
+  Cosmol. Astropart. Phys., 07, 020,                            the role of dark sector interactions after DESI DR2,
+  doi: 10.1088/1475-7516/2008/07/020                            https://arxiv.org/abs/2608.21938
+Vikman, A. 2005, Phys. Rev. D, 71, 023515,                    Zhai, Y., Giarè, W., van de Bruck, C., et al. 2023, J.
+  doi: 10.1103/PhysRevD.71.023515                               Cosmol. Astropart. Phys., 07, 032,
+von Marttens, R., Lombriser, L., Kunz, M., et al. 2020,         doi: 10.1088/1475-7516/2023/07/032
+  Phys. Dark Univ., 28, 100490,                               Zhang, X. 2017, Sci. China Phys. Mech. Astron., 60,
+  doi: 10.1016/j.dark.2020.100490                               050431, doi: 10.1007/s11433-017-9013-7
+Wang, B., Abdalla, E., Atrio-Barandela, F., & Pavon, D.       Zhu, Z., Jiang, Q., Liu, Y., Wu, P., & Liang, N. 2026, J.
+                                                                High Energy Astrophys., 51, 100534,
+  2016, Rep. Prog. Phys., 79, 096901,
+                                                                doi: 10.1016/j.jheap.2025.100534
+  doi: 10.1088/0034-4885/79/9/096901
+
