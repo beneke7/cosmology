@@ -1,0 +1,100 @@
+{
+  "status": "analytic_audit_complete_no_galaxy_fit",
+  "scope": "Independent audit of Warden isolated spherical TG BVP, uniform-density threshold, radial stability, units, and sign branches. No observational fit or source reconstruction was run.",
+  "source": {
+    "title": "Pszota and Van, Field Equation of Thermodynamic Gravity and Galactic Rotational Curves",
+    "local_pdf": "context/user_provided/pszota_van_2024.pdf",
+    "sha256": "55cbfbbb0a916ea2ce0b70523334ee301897695860fb4bdb5bfd2278ab47b62e",
+    "locators": ["Eq. 1 p. 2", "Eq. 8 p. 4", "Eqs. 21-24 pp. 4-5", "Eqs. 41-42 p. 8", "Eqs. 61-66 pp. 13-17"]
+  },
+  "assumptions": {
+    "K": "constant in space/time",
+    "source": "prescribed static spherical density; uniform-density test has S=4*pi*G*rho for r<R and zero outside",
+    "gauge": "phi(infinity)=0, therefore u(infinity)=1",
+    "regularity": "finite u and g(0)=0",
+    "matching": "continuous u,u-prime at sharp source edge R; exact vacuum exterior for stationary solution",
+    "diffusion": "D=ell^2/tau>0"
+  },
+  "equations_and_dimensions": {
+    "printed_phi_evolution": "phi_t = D*(laplacian(phi)-K*|grad(phi)|^2-S)",
+    "transformed_evolution": "u_t = D*(laplacian(u)+K*S*u), u=exp(-K*phi)>0",
+    "stationary_spherical_riccati": "g' + 2*g/r + S + K*g^2 = 0, g=-phi'",
+    "log_derivative_map": "u'/u = K*g",
+    "stationary_transformed_uniform_interior": "u''+2*u'/r+q^2*u=0, q^2=K*S0",
+    "isolated_static_robin": "u'(R)=-(u(R)-1)/R",
+    "dimensions_SI": {
+      "phi": "m^2 s^-2",
+      "D": "m^2 s^-1",
+      "K": "s^2 m^-2",
+      "S=4*pi*G*rho": "s^-2",
+      "q=sqrt(K*S)": "m^-1",
+      "g": "m s^-2",
+      "lambda": "s^-1"
+    },
+    "paper_K_conversion": "3.40e-5 s^2 km^-2 = 3.40e-11 s^2 m^-2"
+  },
+  "uniform_sphere_K_positive": {
+    "dimensionless_control": "x=q*R=R*sqrt(4*pi*G*K*rho)",
+    "regular_interior_u": "u=sec(x)*sin(q*r)/(q*r)",
+    "exterior_u": "u=1+B/r",
+    "B_over_R": "tan(x)/x - 1",
+    "critical_condition": "x_crit=pi/2",
+    "critical_density": "rho_crit=pi/(16*G*K*R^2)",
+    "positive_finite_normalized_branch": "0 < x < pi/2",
+    "at_critical": "no finite amplitude matches the affine isolated-gauge boundary; A=sec(x) and B diverge; the local interior Riccati g(R) remains finite at -1/(K*R)",
+    "above_first_critical": "the unique matched interior is negative at the center immediately above pi/2; later branches have nodes; not an admissible positive exponential transform",
+    "newtonian_limit": "B approximately R*x^2/3 = K*G*M_b, M_b=4*pi*rho*R^3/3"
+  },
+  "radial_relaxation": {
+    "finite_source_domain_with_instantaneous_robin": {
+      "homogeneous_perturbation_bc": "w'(R)=-w(R)/R",
+      "radial_mode": "sin(k*r)/(k*r), cos(k*R)=0 for first mode",
+      "leading_growth_rate": "lambda0=(D/R^2)*(x^2-(pi/2)^2)",
+      "classification": "negative below first threshold, zero at threshold, positive above"
+    },
+    "full_space_diffusion_exterior": {
+      "classification": "zero-energy decaying exterior 1/r matching has the same first threshold x=pi/2; subcritical spectrum has a continuum ending at zero, so no isolated finite-domain exponential decay rate",
+      "caveat": "the instantaneous static Robin boundary is not the exact time-dependent exterior Dirichlet-to-Neumann condition"
+    }
+  },
+  "sign_branches": {
+    "K_positive_printed_equation": "oscillatory sine/cot branch; the paper's positive-K coth Eq. 23 is not a solution of its printed Eq. 8 under that sign convention (also found by the campaign audit)",
+    "K_negative": "put y=R*sqrt(abs(K)*S0); u=sech(y)*sinh(sqrt(abs(K)*S0)*r)/(sqrt(abs(K)*S0)*r), B/R=tanh(y)/y-1; positive for all finite y, no pi/2 threshold",
+    "K_zero": "use original Poisson equation; Cole-Hopf variable degenerates and expressions dividing by K are invalid"
+  },
+  "numeric_checks_normalized_R_D_K": [
+    {"x": 0.2, "A_sec_x": 1.0203388449411928, "B_over_R": 0.013550177543362407, "lambda0_R2_over_D": -2.4274011002723395, "positive_branch": true},
+    {"x": 0.5, "A_sec_x": 1.139493927324549, "B_over_R": 0.09260497968758097, "lambda0_R2_over_D": -2.2174011002723395, "positive_branch": true},
+    {"x": 1.0, "A_sec_x": 1.8508157176809255, "B_over_R": 0.5574077246549023, "lambda0_R2_over_D": -1.4674011002723395, "positive_branch": true},
+    {"x": 1.3, "A_sec_x": 3.738334127075442, "B_over_R": 1.7708480368984452, "lambda0_R2_over_D": -0.7774011002723393, "positive_branch": true},
+    {"x": 1.5, "A_sec_x": 14.136832902969903, "B_over_R": 8.400946631447813, "lambda0_R2_over_D": -0.2174011002723395, "positive_branch": true},
+    {"x": 1.5707963267948966, "A_sec_x": null, "B_over_R": null, "lambda0_R2_over_D": 0.0, "positive_branch": false, "reason": "stationary normalization singular"},
+    {"x": 1.7, "A_sec_x": -7.761293996050358, "B_over_R": -5.527413023211271, "lambda0_R2_over_D": 0.4225988997276602, "positive_branch": false, "reason": "negative central u and positive radial growth mode"}
+  ],
+  "independent_residual_checks": {
+    "test_point": "x=1.3, R=D=K=1 in normalized units",
+    "riccati_residual_definition": "g' + 2*g/r + S + K*g^2",
+    "sample_r_over_R": [0.23, 0.61, 0.91],
+    "max_abs_riccati_residual": 2.0435042547006788e-15,
+    "isolated_robin_residual_definition": "R*u'(R)+u(R)-1",
+    "abs_isolated_robin_residual": 4.440892098500626e-16,
+    "exterior_derivative_match_abs_residual": 4.440892098500626e-16
+  },
+  "warden_claim_audit": {
+    "stationary_equation_and_robin": "correct under compact-source and u(infinity)=1 assumptions",
+    "uniform_positive_K_threshold": "correct for a uniform sphere; do not apply via mean density to arbitrary profiles",
+    "leading_relaxation_mode": "finite-domain Robin eigenvalue is correct for instantaneous quasi-static exterior; full-space diffusion has continuum to zero, though same first instability threshold",
+    "NGC_source_geometry": "a SPARC pseudo-spherical inversion is conditional, not a unique physical 3D source; preserve signed gas terms and do not clip negative inferred density",
+    "paper_crossover_mass_note": {
+      "equations": "Eq. 17 implies R_K=K*G*M_aa; Eq. 66 instead inserts M_aa,K=0",
+      "K_s2_km2": 3.4e-5,
+      "G_kpc_km2_s2_per_Msun": 4.30091e-6,
+      "M_aa_K0_Msun": 227500000000.0,
+      "M_aa_fitted_Msun": 927800000000.0,
+      "R_using_Maa_K0_kpc": 33.26753885,
+      "R_using_fitted_Maa_kpc": 135.673066132,
+      "verdict": "Warden correctly flags a mass-definition substitution; do not quote 33.3 kpc as the fitted branch's exact crossover radius"
+    }
+  },
+  "recommendation": "Proceed only with Warden Test 1 as a bounded conditional spherical-surrogate viability check. Declare rho interpolation/taper and signed-density handling before looking at residuals; evaluate the paper K/M-to-light point and bounded profile; use the isolated Robin condition without observed endpoint velocities; check u positivity, principal radial growth eigenvalue, full-vs-quasistatic exterior interpretation, and convergence. This task did not run that fit and does not support a physical NGC 3198 or TG detection claim."
+}

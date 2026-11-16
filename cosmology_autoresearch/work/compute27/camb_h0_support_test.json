@@ -1,0 +1,192 @@
+{
+  "CAMB_version": "2.0.4",
+  "NumPy_version": "2.5.3",
+  "SciPy_version": "1.18.1",
+  "conditional_H0_minimum": {
+    "100theta_star_CAMB": 1.0834512960393827,
+    "H0_km_s_Mpc": 99.16241759854114,
+    "bounds_km_s_Mpc": [
+      95.0,
+      105.0
+    ],
+    "chi2_cholesky": 10.27630435955449,
+    "chi2_dense": 10.276304359554489,
+    "derived_Omega_b0": 0.06172134073774577,
+    "derived_Omega_c0": 0.23487748976176775,
+    "derived_Omega_m0_including_neutrino": 0.29725467026173075,
+    "max_abs_bao_residual": 0.6060702875044335,
+    "max_abs_distance_integral_error_Mpc": 6.821210263296962e-13,
+    "message": "Solution found.",
+    "nfev": 9,
+    "r_drag_Mpc": 102.40643172782599,
+    "success": true
+  },
+  "duration_seconds": 0.0769198490306735,
+  "grid_results": [
+    {
+      "100theta_star_CAMB": 1.0407994095052207,
+      "H0_km_s_Mpc": 80.0,
+      "chi2_cholesky": 1996.9871242005324,
+      "chi2_dense": 1996.9871242005322,
+      "derived_Omega_b0": 0.09483083841745038,
+      "derived_Omega_c0": 0.36087403503004406,
+      "derived_Omega_m0_including_neutrino": 0.45671252872158874,
+      "max_abs_bao_residual": 3.6035012029715574,
+      "max_abs_distance_integral_error_Mpc": 9.094947017729282e-13,
+      "r_drag_Mpc": 102.406431404337
+    },
+    {
+      "100theta_star_CAMB": 1.0635090850715627,
+      "H0_km_s_Mpc": 90.0,
+      "chi2_cholesky": 412.8511275280606,
+      "chi2_dense": 412.8511275280606,
+      "derived_Omega_b0": 0.07492806986070154,
+      "derived_Omega_c0": 0.2851350400237386,
+      "derived_Omega_m0_including_neutrino": 0.36085928195286027,
+      "max_abs_bao_residual": 1.8491583735087538,
+      "max_abs_distance_integral_error_Mpc": 1.3642420526593924e-12,
+      "r_drag_Mpc": 102.40643159757124
+    },
+    {
+      "100theta_star_CAMB": 1.0744884889220543,
+      "H0_km_s_Mpc": 95.0,
+      "chi2_cholesky": 88.68954634673457,
+      "chi2_dense": 88.68954634673457,
+      "derived_Omega_b0": 0.0672484615924302,
+      "derived_Omega_c0": 0.25591067304069615,
+      "derived_Omega_m0_including_neutrino": 0.3238737045781904,
+      "max_abs_bao_residual": 1.1608268932189247,
+      "max_abs_distance_integral_error_Mpc": 1.3642420526593924e-12,
+      "r_drag_Mpc": 102.40643165609538
+    },
+    {
+      "100theta_star_CAMB": 1.0831044883284768,
+      "H0_km_s_Mpc": 99.0,
+      "chi2_cholesky": 10.390419581148825,
+      "chi2_dense": 10.390419581148821,
+      "derived_Omega_b0": 0.06192402467826574,
+      "derived_Omega_c0": 0.23564879340804842,
+      "derived_Omega_m0_including_neutrino": 0.2982308115312895,
+      "max_abs_bao_residual": 0.6274011182528945,
+      "max_abs_distance_integral_error_Mpc": 9.094947017729282e-13,
+      "r_drag_Mpc": 102.40643172789319
+    },
+    {
+      "100theta_star_CAMB": 1.0834435270865528,
+      "H0_km_s_Mpc": 99.158774458752,
+      "chi2_cholesky": 10.276361662148261,
+      "chi2_dense": 10.276361662148265,
+      "derived_Omega_b0": 0.061725876162961116,
+      "derived_Omega_c0": 0.2348947490966566,
+      "derived_Omega_m0_including_neutrino": 0.29727651321443993,
+      "max_abs_bao_residual": 0.6065484704867821,
+      "max_abs_distance_integral_error_Mpc": 9.094947017729282e-13,
+      "r_drag_Mpc": 102.40643172782745
+    },
+    {
+      "100theta_star_CAMB": 1.0852360578305944,
+      "H0_km_s_Mpc": 100.0,
+      "chi2_cholesky": 13.277505465587808,
+      "chi2_dense": 13.277505465587808,
+      "derived_Omega_b0": 0.060691736587168255,
+      "derived_Omega_c0": 0.23095938241922825,
+      "derived_Omega_m0_including_neutrino": 0.29229601838181685,
+      "max_abs_bao_residual": 0.7141894736893235,
+      "max_abs_distance_integral_error_Mpc": 4.547473508864641e-13,
+      "r_drag_Mpc": 102.40643173831678
+    },
+    {
+      "100theta_star_CAMB": 1.0957640719073882,
+      "H0_km_s_Mpc": 105.0,
+      "chi2_cholesky": 148.2779015571931,
+      "chi2_dense": 148.2779015571931,
+      "derived_Omega_b0": 0.05504919418337256,
+      "derived_Omega_c0": 0.2094869681807059,
+      "derived_Omega_m0_including_neutrino": 0.2651211051082239,
+      "max_abs_bao_residual": 1.5210143964824816,
+      "max_abs_distance_integral_error_Mpc": 9.094947017729282e-13,
+      "r_drag_Mpc": 102.40643179764389
+    },
+    {
+      "100theta_star_CAMB": 1.1060838627521268,
+      "H0_km_s_Mpc": 110.0,
+      "chi2_cholesky": 461.16296037653154,
+      "chi2_dense": 461.1629603765315,
+      "derived_Omega_b0": 0.05015845998939524,
+      "derived_Omega_c0": 0.1908755226605192,
+      "derived_Omega_m0_including_neutrino": 0.24156695734034447,
+      "max_abs_bao_residual": 2.2900478789686467,
+      "max_abs_distance_integral_error_Mpc": 9.094947017729282e-13,
+      "r_drag_Mpc": 102.40643185563852
+    },
+    {
+      "100theta_star_CAMB": 1.1358937108487612,
+      "H0_km_s_Mpc": 125.0,
+      "chi2_cholesky": 2210.2502786292175,
+      "chi2_dense": 2210.250278629217,
+      "derived_Omega_b0": 0.038842711415787684,
+      "derived_Omega_c0": 0.14781400474830608,
+      "derived_Omega_m0_including_neutrino": 0.1870694517643628,
+      "max_abs_bao_residual": 4.394122861130313,
+      "max_abs_distance_integral_error_Mpc": 4.547473508864641e-13,
+      "r_drag_Mpc": 102.40643193723582
+    },
+    {
+      "100theta_star_CAMB": 1.1822416814958374,
+      "H0_km_s_Mpc": 150.0,
+      "chi2_cholesky": 6764.424767040262,
+      "chi2_dense": 6764.424767040261,
+      "derived_Omega_b0": 0.02697410514985256,
+      "derived_Omega_c0": 0.10264861440854589,
+      "derived_Omega_m0_including_neutrino": 0.1299093415030297,
+      "max_abs_bao_residual": 7.572557362854745,
+      "max_abs_distance_integral_error_Mpc": 9.094947017729282e-13,
+      "r_drag_Mpc": 102.4064319940584
+    },
+    {
+      "100theta_star_CAMB": 1.2651407851707863,
+      "H0_km_s_Mpc": 200.0,
+      "chi2_cholesky": 17861.06895680544,
+      "chi2_dense": 17861.068956805444,
+      "derived_Omega_b0": 0.015172934146792064,
+      "derived_Omega_c0": 0.057739845604807064,
+      "derived_Omega_m0_including_neutrino": 0.07307400459545421,
+      "max_abs_bao_residual": 12.673887150132092,
+      "max_abs_distance_integral_error_Mpc": 6.821210263296962e-13,
+      "r_drag_Mpc": 102.40643184741657
+    }
+  ],
+  "input_hashes": {
+    "CAMB_wheel_sha256": "9b7e6558b2049757e96496b8a33461d8ff11acd79017cfbd00a573dbc8d1e366",
+    "covariance_sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+    "mean_sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585"
+  },
+  "interpretation": "Fixed omega_b h2 and omega_c h2 at the previous screen's selected candidate; varies H0 directly, avoiding CAMB's theta-to-H0 root upper bracket of 100. This tests whether the reported point is close to an artificial solver support boundary. Not a re-fit over all parameters, not a posterior/prior result.",
+  "parameterization": {
+    "H0_km_s_Mpc_grid": [
+      80.0,
+      90.0,
+      95.0,
+      99.0,
+      99.158774458752,
+      100.0,
+      105.0,
+      110.0,
+      125.0,
+      150.0,
+      200.0
+    ],
+    "N_eff": 3.044,
+    "Tcmb_K": 2.7255,
+    "YHe": "CAMB BBN consistency",
+    "flat": true,
+    "mnu_eV": 0.06,
+    "omega_b_h2_fixed": 0.060691736587168255,
+    "omega_c_h2_fixed": 0.23095938241922825,
+    "w": -1.0
+  },
+  "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "script_sha256": "3158e2b8ec5e9186d567ac0d657bdc3c073757f9338197a93ca23284156388a6",
+  "status": "complete_conditional_solver_support_diagnostic"
+}

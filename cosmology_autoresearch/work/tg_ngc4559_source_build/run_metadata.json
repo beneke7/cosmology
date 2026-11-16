@@ -1,0 +1,136 @@
+{
+  "task": "curve_blind_NGC4559_source_only_build",
+  "status": "source_profiles_complete_no_fit_no_likelihood_no_prediction",
+  "inputs": {
+    "stellar": {
+      "path": "work/tg_holdout_target_audit/NGC4559.stellar.fits",
+      "sha256": "9fe33f187f10db079c360de29c80de727c16a4932e275362ef5b90c272bd9405"
+    },
+    "hi": {
+      "path": "work/tg_holdout_target_audit/NGC4559-HR_coldens.fits",
+      "sha256": "320d2de1e29adbfdc7bd9023d58ed6dec78bf7d8b1ba326ffdc064150e252bba"
+    }
+  },
+  "geometry": {
+    "distance_Mpc_nominal": 8.91,
+    "distance_bracket_Mpc": [
+      8.56,
+      8.91,
+      9.26
+    ],
+    "distance_bracket_definition": "8.91 +/- sqrt(0.19^2 + 0.29^2) Mpc from the pre-fit TRGB metadata summary",
+    "inclinations_deg": [
+      66.0,
+      67.0,
+      68.0
+    ],
+    "PA_deg": [
+      -42.0,
+      -37.0,
+      -32.0
+    ],
+    "PA_convention": "east of north",
+    "center_RA_deg": 188.990005284,
+    "center_Dec_deg": 27.9600007817,
+    "P5_sma_arcsec": 278.1,
+    "P5_ellipticity": 0.579,
+    "P5_q": 0.42100000000000004,
+    "P5_sma_kpc_nominal": 12.01305760824567,
+    "outer_light_support_kpc": 20.8,
+    "tail_fit_range_kpc": [
+      6.0,
+      11.0
+    ],
+    "tail_fit_slope_per_kpc_nominal": -0.40273781354433624,
+    "tail_scenarios": [
+      "truncate_at_P5",
+      "exp_slope_6_11",
+      "half_slope_6_11"
+    ]
+  },
+  "reprojection": {
+    "common_grid": "HALOGAS NCP 4-arcsec HR grid",
+    "stellar_method": "5x5 subpixel sampling and bilinear interpolation of surface brightness",
+    "crop_xy": [
+      408,
+      618,
+      405,
+      621
+    ],
+    "covered_stellar_common_grid_pixels": 42224,
+    "covered_projected_area_kpc2_nominal": 1260.6209793095613,
+    "orphan_SIP_policy": "ignored because P5 CTYPE omits -SIP; use declared TAN CD matrix"
+  },
+  "stellar": {
+    "map_BUNIT": "MJy/sr",
+    "luminosity_units": "Lsun,3.6 (IRAC Vega band)",
+    "conversion": "MJy/sr -> Jy/pixel -> Lnu/Lsun,3.6 using M_sun,3.6=3.24 Vega and zero point 280.9 Jy",
+    "M_L_policy": "kept separate; Mstar = \u03a53.6 * L3.6; no \u03a53.6 value applied",
+    "luminosity_inside_P5_aperture_1e9_Lsun36": 18.78708224,
+    "P5_projected_aperture_area_kpc2": 190.8706216545566,
+    "P5_annular_net_map_fit_slope_per_kpc": -0.40273781354433624,
+    "negative_pixels_policy": "clipped at zero in source luminosity sums; raw FITS retained unchanged",
+    "excluded_components": [
+      "dust map",
+      "molecular gas",
+      "ionized gas"
+    ]
+  },
+  "hi": {
+    "map_BUNIT_header_stale": "JY/BEAM.km/s",
+    "array_interpretation": "stored pixels are N_HI in cm^-2; release HISTORY applies mom0mskzlm*1.823e18*606*1e3/(28.37887*13.10430) to create coldenslm",
+    "conversion_applied_again": false,
+    "helium_factor": 1.36,
+    "positive_detected_pixels": 25216,
+    "pixels_ge_3e19_cm2": 24627,
+    "pixels_ge_1e20_cm2": 22404,
+    "total_positive_map_MHI_1e9_Msun": 5.525996820937409,
+    "total_positive_map_Mgas_with_He_1e9_Msun": 7.515355676474877,
+    "MHI_inside_P5_ellipse_1e9_Msun": 2.89149719564856,
+    "MHI_inside_R20p8kpc_1e9_Msun": 5.235280656435185,
+    "MHI_ge_3e19_1e9_Msun": 5.522810178253067,
+    "MHI_ge_1e20_1e9_Msun": 5.488982634376208,
+    "mask_definition": "finite N_HI > 0 is HALOGAS source mask; thresholds shown as mask sensitivity"
+  },
+  "catalog_crosscheck": {
+    "SPARC_Table1_MHI_1e9_Msun_at_9Mpc_from_prefit_metadata": 5.811,
+    "independent_TRGB_scaled_MHI_1e9_Msun": 5.6953610999999995,
+    "HI_map_to_catalog_ratio": 0.970262767173342,
+    "use": "source-map flux consistency only; no curve rows or velocities opened"
+  },
+  "source_support": {
+    "hi_map_shape": [
+      1024,
+      1024
+    ],
+    "hi_finite_pixels": 1048576,
+    "hi_detected_area_projected_kpc2": 752.8376898036638,
+    "hi_max_deprojected_detected_radius_kpc_nominal": 194.0233898172711,
+    "stellar_valid_reprojected_pixels": 42224,
+    "p5_valid_stellar_pixels": 6400,
+    "stellar_aperture_area_fraction_valid": 1.0,
+    "stellar_map_positive_light_pixel_count": 28676,
+    "pixel_solid_angle_sr": 3.760709173268174e-10
+  },
+  "boundary": {
+    "source_task_boundary": "No TG or alternative-gravity source solve, fit, likelihood, or prediction was run.",
+    "conditional_Kcrit_check": "not run; this source-only task did not solve a field equation"
+  },
+  "official_metadata": {
+    "P5_table": "https://irsa.ipac.caltech.edu/data/SPITZER/S4G/docs/P5_table.txt",
+    "P5_entry": {
+      "excluded": 0,
+      "ICA_iteration": 2,
+      "quality": 1,
+      "stellar_fraction": 0.729626,
+      "sma_arcsec": 278.1,
+      "ellipticity": 0.579,
+      "PA_deg": -37.0
+    },
+    "HALOGAS_release": "https://zenodo.org/records/3715549",
+    "HALOGAS_release_record_version": 2,
+    "HALOGAS_file_md5": "e2c57a3f8a4cca5f76ffeffde0bedbb9",
+    "HALOGAS_size_bytes": 4245120,
+    "local_file_sha256": "320d2de1e29adbfdc7bd9023d58ed6dec78bf7d8b1ba326ffdc064150e252bba"
+  }
+}

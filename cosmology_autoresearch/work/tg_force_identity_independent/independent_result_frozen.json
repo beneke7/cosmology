@@ -1,0 +1,140 @@
+{
+  "assumptions_and_caveats": [
+    "This only checks a necessary first-integral condition after replacing a disk galaxy with the paper's sphericalized source prescription.",
+    "The exact interpolation assumption is piecewise linear Vobs(r) within each adjacent-data panel; it is numerical quadrature, not an asserted continuous observational model.",
+    "No per-point errors are supplied for Vgas, Vdisk, or their geometry conversion, so these component curves are held fixed; only Upsilon's published uncertainty is propagated.",
+    "Velocity errors are treated as independent Gaussian errors in Vobs; distance, inclination, and calibration uncertainties are not included.",
+    "The inner point has errV greater than Vobs, so Gaussian propagation through Vobs^2 and Vobs^4 is strongly nonlinear there; the Monte Carlo summaries are more informative than the first-order GLS metric for the full range.",
+    "The free integration constant is required because the first observed point is r_min=0.32 kpc; no condition is specified inside it. The last observed point is not used as a boundary condition."
+  ],
+  "classification": "spherical-surrogate necessary-condition screen; not a physical NGC 3198 prediction",
+  "derivation": [
+    "Paper Eq. (8): g' = -2g/r - 4 pi G rho - K g^2.",
+    "Define b(r)=Upsilon Vdisk(r)^2 + Vgas(r)*abs(Vgas(r)); the paper's spherical surrogate gives 4 pi G rho = (r b)'/r^2.",
+    "Multiply by r^2 and integrate: r^2 g + r b + K integral[rmin,r] s^2 g(s)^2 ds = C.",
+    "Set g=-Vobs^2/r: r*(b - Vobs^2) + K integral[rmin,r] Vobs^4 ds = C."
+  ],
+  "fixed_stellar_normalization": {
+    "Upsilon": 0.762,
+    "sigma": 0.007,
+    "source": "Pszota & Van 2024 Table 1, NGC 3198 thermodynamic gravity fit",
+    "treatment": "fixed at published central value; its quoted uncertainty is propagated as one shared nuisance in the linearized covariance and the Monte Carlo draws; not refit"
+  },
+  "gas_convention": "SPARC signed gas contribution is Vgas*abs(Vgas), so negative Vgas remains negative in b(r).",
+  "input_data": {
+    "bulge_nonzero_rows": 0,
+    "column_convention": "Rad, Vobs, errV, Vgas, Vdisk, Vbul, SBdisk, SBbul; units from archive header",
+    "radial_range_kpc": [
+      0.32,
+      44.08
+    ],
+    "rows": 43,
+    "source": "exact local Rotmod_LTG.zip member NGC3198_rotmod.dat"
+  },
+  "input_hashes": {
+    "NGC3198_rotmod.dat_member_sha256": "17b774ad11e7dd745a067073b76f1909d4de32fa87616df12b64da3f225cf953",
+    "Rotmod_LTG.zip_sha256": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "pszota_van_2024.pdf_sha256": "55cbfbbb0a916ea2ce0b70523334ee301897695860fb4bdb5bfd2278ab47b62e"
+  },
+  "integration": {
+    "boundary_condition": "free integration constant C fitted on each selected range; no outer observed endpoint imposed as a boundary",
+    "lower_limit_kpc": 0.32,
+    "max_abs_cumulative_integral_difference_kpc_km4_per_s4": 3.814697265625e-06,
+    "max_relative_cumulative_integral_difference": 1.8856008432402653e-16,
+    "primary": "exact panel integral of Vobs^4 under piecewise-linear interpolation between adjacent observed points",
+    "secondary": "independent 8-point Gauss-Legendre quadrature of the same piecewise-linear interpolant"
+  },
+  "monte_carlo": {
+    "full_0p32_to_44p08_kpc": {
+      "K_mean_s2_per_km2": 3.5977425860599834e-05,
+      "K_median_s2_per_km2": 3.597172508977081e-05,
+      "K_q16_s2_per_km2": 3.539750203295336e-05,
+      "K_q84_s2_per_km2": 3.655712662516297e-05,
+      "K_sd_s2_per_km2": 5.867718756238946e-07,
+      "constant_median_kpc_km2_per_s2": -208.21626408942393,
+      "draws": 100000,
+      "fraction_K_positive": 1.0,
+      "residual_rms_median_kpc_km2_per_s2": 16652.151174973085,
+      "residual_rms_q16_kpc_km2_per_s2": 13786.501732036566,
+      "residual_rms_q84_kpc_km2_per_s2": 19922.205631551256,
+      "seed": 20260925
+    },
+    "observed_points_r_ge_5_kpc": {
+      "K_mean_s2_per_km2": 3.621704300166093e-05,
+      "K_median_s2_per_km2": 3.6210639470938164e-05,
+      "K_q16_s2_per_km2": 3.553356219691844e-05,
+      "K_q84_s2_per_km2": 3.689859043402616e-05,
+      "K_sd_s2_per_km2": 6.892873474306159e-07,
+      "constant_median_kpc_km2_per_s2": 3026.407989389496,
+      "draws": 100000,
+      "fraction_K_positive": 1.0,
+      "residual_rms_median_kpc_km2_per_s2": 20022.7155837561,
+      "residual_rms_q16_kpc_km2_per_s2": 16436.508762624708,
+      "residual_rms_q84_kpc_km2_per_s2": 24072.975384851827,
+      "seed": 20260925
+    }
+  },
+  "published_comparison": {
+    "paper_K_s2_per_km2": 3.4e-05,
+    "paper_K_sigma_s2_per_km2": 4e-07,
+    "reference": "Pszota & Van 2024 Table 1: K=(3.40 +/- 0.04) x 10^-5 s^2 km^-2; Upsilon=0.762 +/- 0.007."
+  },
+  "ranges": {
+    "full_0p32_to_44p08_kpc": {
+      "K_s2_per_km2": 3.600442369079671e-05,
+      "N_points": 43,
+      "constant_kpc_km2_per_s2": -341.77231282467255,
+      "linearized_error_covariance_gls": {
+        "K_s2_per_km2": 3.597167658516851e-05,
+        "K_sigma_linearized_s2_per_km2": 2.673680355301944e-07,
+        "chi2": 74.69175240488863,
+        "constant_kpc_km2_per_s2": -452.57266657120584,
+        "covariance_regularizer": 0.0,
+        "dof": 41,
+        "reduced_chi2": 1.8217500586558204
+      },
+      "max_abs_residual_kpc_km2_per_s2": 36732.47697391396,
+      "published_K_difference_sigma": 5.011059226991777,
+      "r_max_kpc": 44.08,
+      "r_min_kpc": 0.32,
+      "r_squared": 0.9975567172615954,
+      "rms_fraction_of_r_source_minus_observed": 0.03850732586743713,
+      "rms_residual_kpc_km2_per_s2": 11625.219770869044
+    },
+    "observed_points_r_ge_5_kpc": {
+      "K_s2_per_km2": 3.622925170023084e-05,
+      "N_points": 28,
+      "constant_kpc_km2_per_s2": 2718.0051292290445,
+      "linearized_error_covariance_gls": {
+        "K_s2_per_km2": 3.577366789605814e-05,
+        "K_sigma_linearized_s2_per_km2": 2.8569337088314546e-07,
+        "chi2": 24.329073013124628,
+        "constant_kpc_km2_per_s2": -1018.044964114754,
+        "covariance_regularizer": 0.0,
+        "dof": 26,
+        "reduced_chi2": 0.9357335774278703
+      },
+      "max_abs_residual_kpc_km2_per_s2": 36690.27573168272,
+      "published_K_difference_sigma": 5.573129250577108,
+      "r_max_kpc": 44.08,
+      "r_min_kpc": 5.15,
+      "r_squared": 0.9966432685627339,
+      "rms_fraction_of_r_source_minus_observed": 0.03710713206528457,
+      "rms_residual_kpc_km2_per_s2": 13880.048187389382
+    }
+  },
+  "residual_metric": {
+    "limitations": "the propagated GLS covariance is linearized; the Monte Carlo distribution addresses nonlinear powers but assumes independent Gaussian input errors and fixed component curves.",
+    "monte_carlo": "100,000 independent Gaussian draws using every row's errV jointly across all cumulative integrals and one shared Gaussian Upsilon draw; each draw refits C and K by unweighted OLS.",
+    "primary_fit": "unweighted least-squares line Y=C-KX, with Y=r*(b-Vobs^2), X=int[rmin,r] Vobs^4 dr; report RMS(Y+KX-C) and its ratio to RMS(Y).",
+    "uncertainty_fit": "single-pass feasible GLS with full first-order covariance from every independent observed-velocity error in both local Y and all shared cumulative X values, plus one shared Upsilon uncertainty; covariance frozen at central OLS K; chi2 uses two fitted coefficients."
+  },
+  "title": "Independent integrated stationary thermodynamic-gravity identity screen: NGC 3198",
+  "units": {
+    "K": "s^2 km^-2",
+    "each_identity_term": "kpc km^2 s^-2",
+    "integral_intermediate": "kpc km^4 s^-4",
+    "r": "kpc",
+    "velocities": "km s^-1"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "status": "contract_complete_source_level_only",
+  "scope": {
+    "task": "Narrow IVS-specific implementation contract for an independent adaptation of pinned IDECAMB onto CAMB 2.0.4",
+    "source_modified": false,
+    "compiled_or_executed": false,
+    "external_installs": false,
+    "root_catalog_edited": false
+  },
+  "finding": {
+    "background_matches": true,
+    "target_background": "Q = Gamma rho_v, dot(rho_v) = Q, dot(rho_c)+3 H rho_c = -Q",
+    "parameter_map": "beta = Gamma/H0, so Q = beta H0 rho_v",
+    "idecamb_background_selector": "QForm=H0rde (selector value 3)",
+    "idecamb_nonmatching_selector": "QForm=Hrde is beta H rho_v and is not the target law",
+    "vector_matches_target_exactly": "not source-verified",
+    "vector_contract": "Q_v^mu = Q u_c^mu is compatible with the target IVS equations, gives no CDM-frame force and delta rho_v=0 on CDM-comoving synchronous slices; the target visible IVS equations cite Ref. [141] but do not explicitly spell out this covariant vector. Treat it as the independent adaptation closure, not an attributed target-source fact.",
+    "idecamb_perturbations_match_target": false,
+    "reason": "For nonzero coupling, IDECAMB's generic CF PPF path retains/evolves effective-DE perturbations, adds their stress to Einstein sources, and includes a clxq feedback in the CDM continuity source. The target IVS contract requires delta rho_v=0 and no DE perturbative stress."
+  },
+  "conventions": {
+    "metric_signature": "(-+++)",
+    "four_velocity": "future-directed u_c^mu, u_c^mu u_{c mu}=-1",
+    "conservation_split": "nabla_nu T_v^(nu mu)=Q_v^mu=-nabla_nu T_c^(nu mu)",
+    "positive_Q": "energy leaves CDM and enters vacuum",
+    "gauge": "scalar synchronous gauge comoving with geodesic CDM; theta_c=0 for the regular CDM-frame solution",
+    "target_perturbation_equations": {
+      "delta_c_prime": "-(theta_c + h_prime/2) + a Gamma (rho_v/rho_c) delta_c",
+      "theta_c_prime": "-Hcal theta_c",
+      "vacuum_perturbation_closure": "delta rho_v = delta p_v = delta q_v = pi_v = 0"
+    },
+    "units": {
+      "Gamma_and_H0": "inverse time in the same solver units",
+      "beta": "dimensionless",
+      "conformal_source_rate": "a Gamma",
+      "dln_a_source": "(Gamma/H)(rho_v/rho_c) = (beta/E)(rho_v/rho_c), E=H/H0",
+      "idecamb_scaled_source": "gQ=8 pi G a^3 Q; grhoc_t=8 pi G a^2 rho_c; therefore gQ/grhoc_t=aQ/rho_c"
+    }
+  },
+  "implementation_contract": [
+    "Retain coupled rho_c(a), rho_v(a), and H(a) in all background, thermodynamics, distances, equality, density outputs, and transfer paths.",
+    "Use physical w_v=-1 with the H0rde interaction semantics and target sign.",
+    "Dispatch a dedicated geodesic-IVS perturbation branch separately from generic PPF and separately from stock constant-Lambda background handling.",
+    "Allocate and evolve no DE PPF/fluid perturbation state for this branch; force all vacuum perturbative stress components to zero in every Einstein source call.",
+    "With theta_c=0, evolve delta_c_prime=-h_prime/2 + a Gamma (rho_v/rho_c) delta_c; in CAMB variables verify -k*z maps to -h_prime/2 and gQ/grhoc_t maps to the positive source coefficient.",
+    "Preserve standard photon, massless-neutrino, and massive-neutrino perturbation hierarchies and their anisotropic stress.",
+    "Keep the vacuum background dynamic; do not set a stock is_cosmological_constant flag if that selects constant rho_v(a)."
+  ],
+  "source_locators": [
+    {
+      "source": "target paper local text/PDF",
+      "path": "context/papers/interacting_de_desi_dr2_2026.pdf",
+      "locator": "Section II.A, Eqs. (4)-(8): signs, w=-1 background and Q=Gamma rho_x; Section II.B, Eqs. (19)-(20): IVS perturbations; Section II.B text immediately before Eqs. (15)-(18) introduces zero anisotropic stress/no DM-rest-frame momentum transfer for w_x != -1 fluids.",
+      "caveat": "Visible IVS text does not explicitly state Q_v^mu or scalar IC configuration; it refers to Ref. [141]."
+    },
+    {
+      "source": "IDECAMB exact archive",
+      "archive_member": "liaocrane-IDECAMB-4f1093d/camb/equations_ppfi.f90",
+      "locators": [
+        "67-84: selector constants; H0rde=3 and uc=1.",
+        "122-142: gQ definition and Hrde/H0rde alternatives; H0rde is beta*sqrt(grhom/3)*a*grhov_t.",
+        "144-175: interaction perturbation coefficients gC and vector-direction coefficients gD; uc gives gD=(0,gQ).",
+        "179-193: CF perturbation/evolveVc dispatch; nonzero-coupling w=-1 still has perturDE=true, and uc leaves evolveVc false.",
+        "243-266: coupled background ODE in a and interpolation table.",
+        "177-197 and 1198-1218: PPF/fluid perturbation state initialization and allocation.",
+        "1971-1982: output Einstein-source sums add PPF effective-DE density/momentum or fluid perturbations.",
+        "2897-2971: derivs PPF branch; exact w=-1 special branch at 2901-2917 includes dgrhoe=-2*k2*Kf(1)*Gamma+gQ*vT/k; general interaction-extended branch at 2934-2968.",
+        "3024-3035: generic CDM continuity and velocity source; line 3026 includes gQ*clxc-gC1*clxq-gC2*clxc-gC3*vq/k.",
+        "582-588: PPF defaults and evolve_vc option."
+      ]
+    },
+    {
+      "source": "official CAMB 2.0.4 exact archive",
+      "archive_member": "cmbant-CAMB-a6de8cc/fortran/equations.f90",
+      "locators": [
+        "4-24: dtauda uses grho_no_de plus DarkEnergy background.",
+        "61-64: supported scalar IC flags including initial_adiabatic.",
+        "1891-2053: scalar initial series and adiabatic/isocurvature selection.",
+        "2335-2362: standard a^-3 CDM background source and total density assembly.",
+        "2417-2423: generic DE PerturbedStressEnergy insertion into dgrho/dgq.",
+        "2441-2443: stock synchronous CDM density source clxcdot=-k*z.",
+        "2383-2405 and 2485-2526: neutrino/photon perturbations and photon shear treatment."
+      ]
+    },
+    {
+      "source": "official CAMB 2.0.4 exact archive",
+      "archive_member": "cmbant-CAMB-a6de8cc/fortran/results.f90",
+      "locators": [
+        "462-498: H0 normalization, present densities and equality initialization.",
+        "975-1005: background species density outputs; standard CDM output at line 998.",
+        "1393-1410: grho_no_de applies standard CDM a scaling."
+      ]
+    },
+    {
+      "source": "reviewed early-IC audit",
+      "path": "work/theory10/early_ic_report.md",
+      "locators": [
+        "Ordinary D>0 branch: A~a^5; leading standard radiation adiabatic seed unchanged; fixed-metric response -A5*h/14=O(a^7).",
+        "D=0, Gamma<0 edge: A->-5 and regular Eq. (19) mode delta_c=-h/7 disagrees with same-slice equal-zeta criterion +h/3.",
+        "delta_v=0 closure differs from strict all-species equal-zeta time-shift condition at O(a^4)."
+      ]
+    }
+  ],
+  "initial_conditions": {
+    "recommended_independent_choice": "CAMB initial_adiabatic for standard species plus the explicit IVS no-vacuum-perturbation closure and theta_c=0.",
+    "target_choice_source_verified": false,
+    "ordinary_early_branch": "For D=lim(a^3 rho_c)>0, h~a^2; delta_gamma=delta_nu=-2h/3; delta_b=delta_c=-h/2; theta_c=0 at leading order. A=(Gamma/H)(rho_v/rho_c)~a^5.",
+    "strict_adiabatic_tension": "For Gamma!=0, beta_v=d ln rho_v/d ln a=Gamma/H=O(a^2); a strict equal-zeta time shift would require delta_v=beta_v*h/6=O(a^4), whereas the target closure imposes delta_v=0. State the closure as an explicit exception, not a derived all-species adiabatic condition.",
+    "edge_branch": "If D=0 and Gamma<0, the displayed Eq. (19) has A->-5 and regular delta_c=-h/7; conventional equal-zeta initial data would demand +h/3. This is an unresolved edge-branch ambiguity; require global rho_c>0 and do not silently choose an IC. At D=0,Gamma=0, delta_c is undefined."
+  },
+  "regression_checks_to_run_later": [
+    "Both signs of beta: background conservation, rho_v>0, rho_c>0, H^2>0 from radiation era to today; compare ODE to independent integral identities.",
+    "Beta=0 exact recovery of stock CAMB background, densities, transfers, and spectra at declared precision.",
+    "Fixed-metric perturbation source equals Eq. (19) for beta=0 and both signs; verify gQ/grhoc_t=a*Gamma*rho_v/rho_c and theta_c=0 is preserved.",
+    "No PPF/vacuum stress reaches dgrho, dgq, or dgpi for the IVS branch; toggling generic PPF cannot alter IVS results.",
+    "Standard photon/neutrino hierarchy and nonzero neutrino shear are retained.",
+    "Check convergence in background/perturbation accuracy; audit equality, r_drag, transfers, lensing, and explicitly defined baryon+CDM or CDM-only growth."
+  ],
+  "independent_algebra_crosscheck": {
+    "method": "Manual symbolic/unit cross-check using target Eqs. (4)-(8),(19)-(20) and IDECAMB source definitions; no archive code executed.",
+    "identity_1": "Gamma=beta*H0 makes Q=Gamma*rho_v identical to beta*H0*rho_v.",
+    "identity_2": "gQ/grhoc_t = (8*pi*G*a^3*Q)/(8*pi*G*a^2*rho_c)=aQ/rho_c=a*Gamma*rho_v/rho_c.",
+    "identity_3": "For T_v=-rho_v*g and Q_v^mu=Q*u_c^mu, the time projection yields dot(rho_v)=Q, CDM receives -Q, and the orthogonal projection gives zero CDM force plus homogeneous rho_v on CDM-orthogonal synchronous slices.",
+    "identity_4": "The IDECAMB uc mapping sets gD1=0 (no CDM-frame force) but does not turn off PPF dgrhoe; its w=-1 branch includes gQ*vT/k, so uc is not by itself the target IVS closure."
+  },
+  "input_hashes_sha256": [
+    {"path":"context/papers/interacting_de_desi_dr2_2026.pdf","sha256":"0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c"},
+    {"path":"context/papers/interacting_de_desi_dr2_2026.txt","sha256":"a99a4afdd858cdce3cbc2c41f0a13098c30c361dc67891331ee7d9d5f824868f"},
+    {"path":"context/papers/idecamb_implementation_2023_v2.txt","sha256":"fcd87ebf21296dc57332bfd9b4852c1d4b92f0d64128ba469d5507945fc96c8b"},
+    {"path":"context/code/idecamb_4f1093d9efe46f28cf7e2acb4d07ae116ad5e075.tar.gz","archive_commit":"4f1093d9efe46f28cf7e2acb4d07ae116ad5e075","sha256":"c167aa0e0eae369a5b94816343ac6bdc8e3bbee32c5cf66fd116ad71450a6e44"},
+    {"path":"context/code/CAMB_2.0.4_a6de8cc59124c8bbe3924f1c546f96cef73dcabb.tar.gz","archive_commit":"a6de8cc59124c8bbe3924f1c546f96cef73dcabb","sha256":"66808001e908982857c312cc84671c66a51312251a7b15e07507d66b4788c0c7"},
+    {"path":"work/perturbation_audit/solver_path.md","sha256":"810ebc06aa9cbf22aeaf9fdb974fce6b9b7c35c41a6b70336a0392ff824e15b3"},
+    {"path":"work/perturbation_audit/solver_path.json","sha256":"63f9393ef785c1dd6d6eaf02aeda541b5fb891fa8f88da1edd5bc4bef63ac5f4"},
+    {"path":"work/theory10/early_ic_report.md","sha256":"a9d2d52514a713c218161567dfe0637fbb06aa9fbf8140752aaaabdeea58dfec"},
+    {"path":"work/theory10/early_ic_asymptotic.json","sha256":"fff0703c5fa8036054b0226f2e9ea78a30c35031d7cea862812ce0c286bee063"},
+    {"path":"work/theory10/early_ic_asymptotic_check.py","sha256":"cad766208f030d67fa15fefef92b306efc1d111a2dd3a293ccd1bc9eb9634516"}
+  ]
+}

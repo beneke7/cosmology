@@ -1,0 +1,116 @@
+{
+  "audit": "arXiv:2609.05660 primary-source artifact trail",
+  "access_window_utc": "2026-09-25 00:33–00:37 UTC",
+  "scope": {
+    "read_only": true,
+    "fits_or_scores_run": false,
+    "broad_data_downloaded": false,
+    "repositories_cloned": false,
+    "outputs_written_only_under": "work/compute14/"
+  },
+  "paper": {
+    "title": "Do DESI-DR2 BAO data imply a coupling of dark matter and dark energy?",
+    "authors": [
+      "Weiqiang Yang",
+      "Sibo Zhang",
+      "Dinorah Barbosa",
+      "Marco Antonio Alvarez",
+      "Supriya Pan",
+      "Leila Graef"
+    ],
+    "arxiv_id": "2609.05660",
+    "visible_arxiv_versions_at_access": [
+      {
+        "version": "v1",
+        "submitted_utc": "2026-09-04 18:45:40 UTC"
+      }
+    ],
+    "accepted_for_prd": "2026-09-03",
+    "doi": "10.1103/6kdf-vzq4",
+    "sources": [
+      "https://arxiv.org/abs/2609.05660",
+      "https://arxiv.org/html/2609.05660",
+      "https://journals.aps.org/prd/accepted/10.1103/6kdf-vzq4"
+    ],
+    "paper_specifications": {
+      "interaction": "Q = Gamma * rho_x",
+      "continuity_convention": "dot(rho_x) + 3 H (1+w_x) rho_x = Q; dot(rho_c) + 3 H rho_c = -Q",
+      "sign": "Gamma > 0 transfers energy CDM -> DE; Gamma < 0 transfers DE -> CDM",
+      "ivs_perturbations": "In synchronous gauge, delta_c' = -(theta_c + h'/2) + Gamma*a*(rho_x/rho_c)*delta_c; theta_c' = -Hcal*theta_c; vacuum DE has no perturbative contribution.",
+      "perturbation_assumptions": [
+        "zero anisotropic stress",
+        "no momentum transfer in the DM rest frame"
+      ],
+      "ivs_gamma_over_h0_range": "uniform [-3, 3]",
+      "method_text": "modified CAMB + Cobaya MCMC; Gelman-Rubin convergence diagnosis; GetDist for chains"
+    },
+    "not_specified_in_public_paper_text": [
+      "modified CAMB repository/fork, patch identifier, release or commit",
+      "Cobaya and GetDist dependency versions",
+      "exact IVS sampling YAML/run configuration and convergence threshold",
+      "version/hash of the DES-Dovekie likelihood implementation",
+      "explicit IVS perturbation initial-condition prescription or initial numerical values"
+    ],
+    "post_v1_check": "arXiv submission history displayed only v1 during this audit. APS listed the accepted paper but exposed no software supplement; its page says any author supplements will be available upon publication of the version of record."
+  },
+  "paper_cited_repository": {
+    "url": "https://github.com/williamgiare/wgcosmo",
+    "role_as_cited": "Reference [157], in the paragraph about the Cobaya interface used for MCEvidence; paper does not identify it as the modified-CAMB source.",
+    "head_branch": "main",
+    "head_commit": "80fa9742f10616bcaf55d5888a15e8f07e74cd25",
+    "head_commit_date_utc": "2026-08-05 22:41:24 UTC",
+    "head_commit_message": "update plots",
+    "api_pushed_at_utc": "2026-08-05 22:41:27 UTC",
+    "api_updated_at_utc": "2026-09-07 03:41:21 UTC",
+    "branches_at_access": [
+      "main"
+    ],
+    "tags_at_access": [],
+    "releases_at_access": [],
+    "recursive_tree_sha": "80fa9742f10616bcaf55d5888a15e8f07e74cd25",
+    "api_sources": [
+      "https://api.github.com/repos/williamgiare/wgcosmo/branches",
+      "https://api.github.com/repos/williamgiare/wgcosmo/tags",
+      "https://api.github.com/repos/williamgiare/wgcosmo/releases",
+      "https://api.github.com/repos/williamgiare/wgcosmo/commits/main",
+      "https://api.github.com/repos/williamgiare/wgcosmo/git/trees/80fa9742f10616bcaf55d5888a15e8f07e74cd25?recursive=1"
+    ],
+    "artifact_assessment": [
+      "No IVS/interacting CAMB patch or fork path was present in the pinned tree; only a generic CAMB introductory notebook was CAMB-named.",
+      "No Dovekie-specific likelihood or IVS Cobaya config/model YAML was present in the pinned tree.",
+      "The generic SN YAML listed sn.desy5, sn.union3, sn.pantheonplus, and sn.pantheonplusshoes; custom SN likelihood paths were PantheonPlus variants.",
+      "The repository README characterizes its contents as a personal/research subset; yamls/README.md says the Cobaya YAMLs are mainly collected for personal organization.",
+      "The MCMC_Evidence/Cobaya_wrapper.py file is an evidence utility and does not identify the paper's cosmology theory patch or likelihood configuration.",
+      "The repository HEAD predates arXiv v1. Although repository metadata updated_at is 2026-09-07, the API exposed no later branch head/commit, tag, or release."
+    ],
+    "pinned_files_checked": [
+      {
+        "path": "README.md",
+        "blob_sha": "25fe910aa1be293abc5f36449c66052a83280e00",
+        "url": "https://github.com/williamgiare/wgcosmo/blob/80fa9742f10616bcaf55d5888a15e8f07e74cd25/README.md"
+      },
+      {
+        "path": "yamls/README.md",
+        "blob_sha": "6a1ec0b7c545d582fade2432afcd6554612fc93d",
+        "url": "https://github.com/williamgiare/wgcosmo/blob/80fa9742f10616bcaf55d5888a15e8f07e74cd25/yamls/README.md"
+      },
+      {
+        "path": "yamls/experiments/SN/SN.yaml",
+        "blob_sha": "35c6f9ad87392afe02bb347b70f2c9fece16528e",
+        "url": "https://github.com/williamgiare/wgcosmo/blob/80fa9742f10616bcaf55d5888a15e8f07e74cd25/yamls/experiments/SN/SN.yaml"
+      },
+      {
+        "path": "yamls/models/wcdm.yaml",
+        "blob_sha": "031cb68ee2c2ef6a6a7fba0ac30c6d36e1ab8660",
+        "url": "https://github.com/williamgiare/wgcosmo/blob/80fa9742f10616bcaf55d5888a15e8f07e74cd25/yamls/models/wcdm.yaml"
+      },
+      {
+        "path": "statistics/MCMC_Evidence/Cobaya_wrapper.py",
+        "blob_sha": "0beaeca72bbd3ebc7cf85e171c4991c2eef3e886",
+        "url": "https://github.com/williamgiare/wgcosmo/blob/80fa9742f10616bcaf55d5888a15e8f07e74cd25/statistics/MCMC_Evidence/Cobaya_wrapper.py"
+      }
+    ]
+  },
+  "conclusion": "Exact implementation-level reproduction artifacts (modified CAMB version, full run config/dependency versions, Dovekie likelihood version, perturbation initial conditions) remain unresolved. No inference is made that unlinked or private code does not exist.",
+  "gate_recommendation": "Do not use the paper as an implementation-level validation target until the missing artifacts are recovered. A separately specified background-only profile may be run only as a distinct analysis, not described as reproducing the paper's full perturbative analysis."
+}

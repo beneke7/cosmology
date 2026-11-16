@@ -1,0 +1,57 @@
+{
+  "task": "Illustrative IVS early-time CDM physicality check",
+  "status": "STOPPED_VALIDATION_FAILURE_NO_RESULT",
+  "accessed_utc": "2026-09-25",
+  "source_contract": {
+    "paper": "arXiv:2609.05660v1",
+    "local_pdf": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "local_pdf_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+    "text_verified": "Table I and Eqs. (3)-(8); uniform IVS Gamma/H0 interval [-3,3]; Q=Gamma*rho_x; paper convention Gamma>0 means forward-time CDM-to-vacuum transfer.",
+    "fiducial": {
+      "Omega_m0": 0.315,
+      "Omega_b0": 0.049,
+      "H0_km_s_Mpc": 67.4,
+      "Tcmb_K": 2.7255,
+      "Neff_massless": 3.044,
+      "zmax": 10000000000,
+      "flat_closure": true
+    },
+    "limitation": "Illustrative fixed background only. The paper samples physical densities and 100 theta_MC, so this is not an exact transformation of its full sampled prior; no posterior inference is permitted."
+  },
+  "execution": {
+    "wrapper": "scripts/run_bounded.py",
+    "wrapper_sha256": "76030f5216b012eba276b665c2ca78e8bfa68063ced40aeceedee9d6176b6157",
+    "cap_seconds": 600,
+    "state_file": "work/compute19/RUN_STATE.json",
+    "state_file_status": "absent; explicit --seconds cap used",
+    "cpu_threads": 1,
+    "attempts": [
+      {
+        "interpreter": "system python3",
+        "command": "python3 scripts/run_bounded.py --state work/compute19/RUN_STATE.json --seconds 600 -- env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 python3 work/compute19/ivs_physicality.py",
+        "status": "FAILED_BEFORE_NUMERICAL_WORK",
+        "error": "ModuleNotFoundError: No module named 'scipy'"
+      },
+      {
+        "interpreter": ".venv/bin/python (Python 3.12.3; SciPy available)",
+        "command": "python3 scripts/run_bounded.py --state work/compute19/RUN_STATE.json --seconds 600 -- env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python work/compute19/ivs_physicality.py",
+        "status": "FAILED_NUMERICAL_ACCEPTANCE_CHECK",
+        "error": "ArithmeticError: independent Simpson identity failed for g=2.5",
+        "configured_simpson_residual_tolerance": 2e-8,
+        "exit_code": 1
+      }
+    ],
+    "script": "work/compute19/ivs_physicality.py",
+    "script_sha256": "3585507174ec98a7314149c908bd1ad2e13edf57ff1f83351c297191efd67bdd",
+    "integrator_attempted": "SciPy solve_ivp DOP853",
+    "result_json_written_by_script": false,
+    "reason_no_result": "The run was stopped at the failed independent integral check; tolerance was not changed and the calculation was not rerun."
+  },
+  "findings": {
+    "validated_threshold": null,
+    "physicality_conclusion": null,
+    "posterior_claim": false,
+    "threshold_is_benchmark_specific_if_revisited": true
+  },
+  "hashes_file": "work/compute19/hashes.sha256"
+}

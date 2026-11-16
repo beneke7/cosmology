@@ -1,0 +1,1355 @@
+{
+  "candidate": {
+    "candidate_theta_inside_table_I_interval": true,
+    "claimed_compute26_chi2": 10.273886272857048,
+    "closure": {
+      "100theta_star_CAMB": 1.096385828203224,
+      "Omega_b0": 0.05601442249844901,
+      "Omega_c0": 0.24101461308874478,
+      "Omega_de0_CAMB": 0.7025894913572053,
+      "Omega_m0_including_massive_nu": 0.29739027224840175,
+      "Omega_nu0": 0.00036123666120797777,
+      "r_drag_Mpc": 75.99672582158088
+    },
+    "implied_100theta_MC": 1.1001239206700848,
+    "independent_chi2_cholesky_whitening": 10.273886272857048,
+    "independent_chi2_dense_solve": 10.273886272857048,
+    "parameters": {
+      "H0_km_s_Mpc": 133.61341628747076,
+      "omega_b_h2": 0.09999999989752482,
+      "omega_c_h2": 0.43027242287187395
+    },
+    "score_abs_delta_to_compute26": 0.0
+  },
+  "declared_search_domain_audited": {
+    "H0_km_s_Mpc": [
+      10.0,
+      1000.0
+    ],
+    "notes": "The compute26 direct-H0 box is used for optimization. Each reported optimum is independently mapped through CAMB's cosmomc_theta setter and checked against the broad paper interval; theta mapping is not approximated with theta_star.",
+    "omega_b_h2": [
+      0.005,
+      0.1
+    ],
+    "omega_c_h2": [
+      0.001,
+      0.99
+    ],
+    "paper_table_I_100theta_MC": [
+      0.5,
+      10.0
+    ]
+  },
+  "edge_point_at_exact_upper_bound": {
+    "chi2": 10.273886272853556,
+    "declared_box_and_theta_valid": true,
+    "implied_100theta_MC": 1.1001239204573459,
+    "parameters": {
+      "H0_km_s_Mpc": 133.61341628747076,
+      "omega_b_h2": 0.1,
+      "omega_c_h2": 0.43027242287187395
+    }
+  },
+  "finding": {
+    "compute26_seed_agreement_tolerance_for_minima": 2e-05,
+    "delta_chi2_vs_compute26_candidate": -5.054623386513413e-11,
+    "fixed_coordinate_inward_deltas_all_positive": true,
+    "global_optimality_claim": "none; finite slices and local bounded profile solves do not establish a global minimum",
+    "interpretation": "The supplied point is beaten literally by a tiny same-edge H0/omega_c polish (far below compute26's declared optimizer agreement tolerance). Both-sided fixed-coordinate finite differences rise away from omega_b h2=0.1, and every reoptimized inward slice is above the polished edge; the suspected inward baryon downhill direction is not supported.",
+    "inward_omega_b_downhill_found_on_tested_slices": false,
+    "literal_lower_point_source": "Powell polish of H0 and omega_c h2 at omega_b h2=0.1; not an inward omega_b move",
+    "literal_valid_lower_point_than_compute26_candidate_found": true,
+    "lowest_inward_slice_candidate": {
+      "H0_km_s_Mpc": 133.6133333942471,
+      "chi2": 10.273886276859699,
+      "closure": {
+        "100theta_star_CAMB": 1.0963858481562345,
+        "Omega_b0": 0.05601443604366542,
+        "Omega_c0": 0.24101464644209386,
+        "Omega_de0_CAMB": 0.7025894439853106,
+        "Omega_m0_including_massive_nu": 0.29739031959518725,
+        "Omega_nu0": 0.0003612371094279253,
+        "r_drag_Mpc": 75.99677103118346
+      },
+      "declared_box_and_theta_valid": true,
+      "implied_100theta_MC": 1.1001239381357304,
+      "omega_b_h2": 0.0999999,
+      "omega_c_h2": 0.4302719485376366,
+      "optimizer_message": "Optimization terminated successfully.",
+      "optimizer_success": true,
+      "start": {
+        "H0_km_s_Mpc": 67.0,
+        "omega_c_h2": 0.12
+      }
+    },
+    "lowest_inward_slice_delta_chi2_vs_polished_edge": 4.053196889231003e-09,
+    "lowest_profile_chi2": 10.273886272806502,
+    "lowest_profile_slice_candidate": {
+      "H0_km_s_Mpc": 133.6134281977956,
+      "chi2": 10.273886272806502,
+      "closure": {
+        "100theta_star_CAMB": 1.096385868227733,
+        "Omega_b0": 0.056014412569579085,
+        "Omega_c0": 0.24101466949393988,
+        "Omega_de0_CAMB": 0.7025894449488892,
+        "Omega_m0_including_massive_nu": 0.29739031866032556,
+        "Omega_nu0": 0.0003612365968065797,
+        "r_drag_Mpc": 75.99671716331348
+      },
+      "declared_box_and_theta_valid": true,
+      "implied_100theta_MC": 1.100123960809128,
+      "omega_b_h2": 0.1,
+      "omega_c_h2": 0.4302726002786518,
+      "optimizer_message": "Optimization terminated successfully.",
+      "optimizer_success": true,
+      "start": {
+        "H0_km_s_Mpc": 133.61341628747076,
+        "omega_c_h2": 0.43027242287187395
+      }
+    },
+    "number_of_profile_slices_lower_than_supplied_candidate": 1,
+    "polished_edge_delta_chi2_vs_supplied_compute26_candidate": -5.054623386513413e-11,
+    "polished_edge_delta_is_below_compute26_tolerance": true
+  },
+  "finite_differences_fixed_H0_and_omega_c_at_box_edge": [
+    {
+      "at_box_edge_chi2": 10.273886272853556,
+      "central_dchi2_domega_b_h2_diagnostic": -0.03395307182074703,
+      "inward_one_sided_dchi2_domega_b_h2": -8.08200299644568,
+      "inward_point": {
+        "chi2": 10.27396709288352,
+        "delta_chi2_vs_edge": 8.082002996445681e-05,
+        "eligible_in_box": true,
+        "omega_b_h2": 0.09999000000000001
+      },
+      "outward_diagnostic": {
+        "chi2": 10.273966413822084,
+        "delta_chi2_vs_edge": 8.014096852804187e-05,
+        "eligible_in_box": false,
+        "omega_b_h2": 0.10001
+      },
+      "outward_one_sided_dchi2_domega_b_h2": 8.014096852804187,
+      "step_omega_b_h2": 1e-05
+    },
+    {
+      "at_box_edge_chi2": 10.273886272853556,
+      "central_dchi2_domega_b_h2_diagnostic": -0.07427701928186536,
+      "inward_one_sided_dchi2_domega_b_h2": -80.53882747704577,
+      "inward_point": {
+        "chi2": 10.28194015560126,
+        "delta_chi2_vs_edge": 0.008053882747704577,
+        "eligible_in_box": true,
+        "omega_b_h2": 0.0999
+      },
+      "outward_diagnostic": {
+        "chi2": 10.281925300197404,
+        "delta_chi2_vs_edge": 0.008039027343848204,
+        "eligible_in_box": false,
+        "omega_b_h2": 0.10010000000000001
+      },
+      "outward_one_sided_dchi2_domega_b_h2": 80.39027343848204,
+      "step_omega_b_h2": 0.0001
+    },
+    {
+      "at_box_edge_chi2": 10.273886272853556,
+      "central_dchi2_domega_b_h2_diagnostic": -0.8482488926873089,
+      "inward_one_sided_dchi2_domega_b_h2": -403.0934831121513,
+      "inward_point": {
+        "chi2": 10.475433014409631,
+        "delta_chi2_vs_edge": 0.20154674155607566,
+        "eligible_in_box": true,
+        "omega_b_h2": 0.0995
+      },
+      "outward_diagnostic": {
+        "chi2": 10.474584765516944,
+        "delta_chi2_vs_edge": 0.20069849266338835,
+        "eligible_in_box": false,
+        "omega_b_h2": 0.1005
+      },
+      "outward_one_sided_dchi2_domega_b_h2": 401.3969853267767,
+      "step_omega_b_h2": 0.0005
+    }
+  ],
+  "fixed_omega_b_profile": [
+    {
+      "all_starts": [
+        {
+          "H0_km_s_Mpc": 133.6134281977956,
+          "chi2": 10.273886272806502,
+          "closure": {
+            "100theta_star_CAMB": 1.096385868227733,
+            "Omega_b0": 0.056014412569579085,
+            "Omega_c0": 0.24101466949393988,
+            "Omega_de0_CAMB": 0.7025894449488892,
+            "Omega_m0_including_massive_nu": 0.29739031866032556,
+            "Omega_nu0": 0.0003612365968065797,
+            "r_drag_Mpc": 75.99671716331348
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.100123960809128,
+          "omega_b_h2": 0.1,
+          "omega_c_h2": 0.4302726002786518,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 133.61341628747076,
+            "omega_c_h2": 0.43027242287187395
+          }
+        },
+        {
+          "H0_km_s_Mpc": 133.6134281977956,
+          "chi2": 10.273886272806502,
+          "closure": {
+            "100theta_star_CAMB": 1.096385868227733,
+            "Omega_b0": 0.056014412569579085,
+            "Omega_c0": 0.24101466949393988,
+            "Omega_de0_CAMB": 0.7025894449488892,
+            "Omega_m0_including_massive_nu": 0.29739031866032556,
+            "Omega_nu0": 0.0003612365968065797,
+            "r_drag_Mpc": 75.99671716331348
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.100123960809128,
+          "omega_b_h2": 0.1,
+          "omega_c_h2": 0.4302726002786518,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 133.61341628747076,
+            "omega_c_h2": 0.43027242287187395
+          }
+        },
+        {
+          "H0_km_s_Mpc": 133.6134281452865,
+          "chi2": 10.273886272806598,
+          "closure": {
+            "100theta_star_CAMB": 1.0963858680224239,
+            "Omega_b0": 0.0560144126136056,
+            "Omega_c0": 0.24101466911427133,
+            "Omega_de0_CAMB": 0.7025894452842315,
+            "Omega_m0_including_massive_nu": 0.29739031832496743,
+            "Omega_nu0": 0.00036123659709050645,
+            "r_drag_Mpc": 75.99671721276869
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.1001239606032691,
+          "omega_b_h2": 0.1,
+          "omega_c_h2": 0.4302725992626586,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 67.0,
+            "omega_c_h2": 0.12
+          }
+        }
+      ],
+      "best_valid_trial": {
+        "H0_km_s_Mpc": 133.6134281977956,
+        "chi2": 10.273886272806502,
+        "closure": {
+          "100theta_star_CAMB": 1.096385868227733,
+          "Omega_b0": 0.056014412569579085,
+          "Omega_c0": 0.24101466949393988,
+          "Omega_de0_CAMB": 0.7025894449488892,
+          "Omega_m0_including_massive_nu": 0.29739031866032556,
+          "Omega_nu0": 0.0003612365968065797,
+          "r_drag_Mpc": 75.99671716331348
+        },
+        "declared_box_and_theta_valid": true,
+        "implied_100theta_MC": 1.100123960809128,
+        "omega_b_h2": 0.1,
+        "omega_c_h2": 0.4302726002786518,
+        "optimizer_message": "Optimization terminated successfully.",
+        "optimizer_success": true,
+        "start": {
+          "H0_km_s_Mpc": 133.61341628747076,
+          "omega_c_h2": 0.43027242287187395
+        }
+      },
+      "objective_evaluations_across_starts": 585,
+      "omega_b_h2_fixed": 0.1,
+      "selected_score_checks": {
+        "chi2_cholesky_whitening": 10.273886272806502,
+        "chi2_dense_solve": 10.273886272806502,
+        "dense_cholesky_abs_delta": 0.0,
+        "predictions_in_released_order": [
+          7.902392309565352,
+          13.256644537180652,
+          22.468833217472408,
+          17.414252248253554,
+          19.999116916928653,
+          21.67901903034621,
+          17.475813835422738,
+          27.745132629225814,
+          14.040699818688244,
+          29.936476115698724,
+          12.871333564525676,
+          8.636404286458124,
+          38.85228667157199
+        ]
+      },
+      "valid_start_scores_span": [
+        10.273886272806502,
+        10.273886272806598
+      ]
+    },
+    {
+      "all_starts": [
+        {
+          "H0_km_s_Mpc": 133.61333151485883,
+          "chi2": 10.273886276861091,
+          "closure": {
+            "100theta_star_CAMB": 1.0963858425037891,
+            "Omega_b0": 0.05601443761944941,
+            "Omega_c0": 0.24101464081395016,
+            "Omega_de0_CAMB": 0.7025894480269389,
+            "Omega_m0_including_massive_nu": 0.2973903155529897,
+            "Omega_nu0": 0.0003612371195901566,
+            "r_drag_Mpc": 75.99677210946943
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.1001239324669208,
+          "omega_b_h2": 0.0999999,
+          "omega_c_h2": 0.4302719263856788,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 133.6134281977956,
+            "omega_c_h2": 0.4302726002786518
+          }
+        },
+        {
+          "H0_km_s_Mpc": 133.61333260761205,
+          "chi2": 10.273886276909472,
+          "closure": {
+            "100theta_star_CAMB": 1.096385853966174,
+            "Omega_b0": 0.056014436703224126,
+            "Omega_c0": 0.24101468246441107,
+            "Omega_de0_CAMB": 0.7025894072989428,
+            "Omega_m0_including_massive_nu": 0.29739035628131666,
+            "Omega_nu0": 0.0003612371136814195,
+            "r_drag_Mpc": 75.99676814744677
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.1001239439551564,
+          "omega_b_h2": 0.0999999,
+          "omega_c_h2": 0.4302720077801945,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 133.61341628747076,
+            "omega_c_h2": 0.43027242287187395
+          }
+        },
+        {
+          "H0_km_s_Mpc": 133.6133333942471,
+          "chi2": 10.273886276859699,
+          "closure": {
+            "100theta_star_CAMB": 1.0963858481562345,
+            "Omega_b0": 0.05601443604366542,
+            "Omega_c0": 0.24101464644209386,
+            "Omega_de0_CAMB": 0.7025894439853106,
+            "Omega_m0_including_massive_nu": 0.29739031959518725,
+            "Omega_nu0": 0.0003612371094279253,
+            "r_drag_Mpc": 75.99677103118346
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.1001239381357304,
+          "omega_b_h2": 0.0999999,
+          "omega_c_h2": 0.4302719485376366,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 67.0,
+            "omega_c_h2": 0.12
+          }
+        }
+      ],
+      "best_valid_trial": {
+        "H0_km_s_Mpc": 133.6133333942471,
+        "chi2": 10.273886276859699,
+        "closure": {
+          "100theta_star_CAMB": 1.0963858481562345,
+          "Omega_b0": 0.05601443604366542,
+          "Omega_c0": 0.24101464644209386,
+          "Omega_de0_CAMB": 0.7025894439853106,
+          "Omega_m0_including_massive_nu": 0.29739031959518725,
+          "Omega_nu0": 0.0003612371094279253,
+          "r_drag_Mpc": 75.99677103118346
+        },
+        "declared_box_and_theta_valid": true,
+        "implied_100theta_MC": 1.1001239381357304,
+        "omega_b_h2": 0.0999999,
+        "omega_c_h2": 0.4302719485376366,
+        "optimizer_message": "Optimization terminated successfully.",
+        "optimizer_success": true,
+        "start": {
+          "H0_km_s_Mpc": 67.0,
+          "omega_c_h2": 0.12
+        }
+      },
+      "objective_evaluations_across_starts": 1839,
+      "omega_b_h2_fixed": 0.0999999,
+      "selected_score_checks": {
+        "chi2_cholesky_whitening": 10.273886276859699,
+        "chi2_dense_solve": 10.273886276859699,
+        "dense_cholesky_abs_delta": 0.0,
+        "predictions_in_released_order": [
+          7.902392313014442,
+          13.256644542107422,
+          22.468833217964217,
+          17.414252252842076,
+          19.999116913298234,
+          21.679019033753793,
+          17.47581382898871,
+          27.74513262970318,
+          14.04069981041769,
+          29.936476114810763,
+          12.871333556082387,
+          8.63640427895303,
+          38.85228666382235
+        ]
+      },
+      "valid_start_scores_span": [
+        10.273886276859699,
+        10.273886276909472
+      ]
+    },
+    {
+      "all_starts": [
+        {
+          "H0_km_s_Mpc": 133.61241816166557,
+          "chi2": 10.273886315271838,
+          "closure": {
+            "100theta_star_CAMB": 1.0963854266302175,
+            "Omega_b0": 0.05601469929626603,
+            "Omega_c0": 0.24101399809029447,
+            "Omega_de0_CAMB": 0.7025898238583755,
+            "Omega_m0_including_massive_nu": 0.2973899394448863,
+            "Omega_nu0": 0.00036124205832577624,
+            "r_drag_Mpc": 75.99731359595506
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.100123492574887,
+          "omega_b_h2": 0.099999,
+          "omega_c_h2": 0.4302648964972299,
+          "optimizer_message": "Maximum number of function evaluations has been exceeded.",
+          "optimizer_success": false,
+          "start": {
+            "H0_km_s_Mpc": 133.6133333942471,
+            "omega_c_h2": 0.4302719485376366
+          }
+        },
+        {
+          "H0_km_s_Mpc": 133.61241536946744,
+          "chi2": 10.273886315533797,
+          "closure": {
+            "100theta_star_CAMB": 1.0963854141557305,
+            "Omega_b0": 0.05601470163742781,
+            "Omega_c0": 0.24101397059423973,
+            "Omega_de0_CAMB": 0.7025898489973244,
+            "Omega_m0_including_massive_nu": 0.2973899143050916,
+            "Omega_nu0": 0.00036124207342406496,
+            "r_drag_Mpc": 75.9973168607631
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.1001234800681972,
+          "omega_b_h2": 0.099999,
+          "omega_c_h2": 0.43026482942737854,
+          "optimizer_message": "Maximum number of function evaluations has been exceeded.",
+          "optimizer_success": false,
+          "start": {
+            "H0_km_s_Mpc": 133.61341628747076,
+            "omega_c_h2": 0.43027242287187395
+          }
+        },
+        {
+          "H0_km_s_Mpc": 133.61247836056202,
+          "chi2": 10.273886313338718,
+          "closure": {
+            "100theta_star_CAMB": 1.0963856606770706,
+            "Omega_b0": 0.05601464882160431,
+            "Omega_c0": 0.24101442708436724,
+            "Omega_de0_CAMB": 0.7025894456827136,
+            "Omega_m0_including_massive_nu": 0.2973903176387833,
+            "Omega_nu0": 0.000361241732811743,
+            "r_drag_Mpc": 75.99725744317591
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.100123727247103,
+          "omega_b_h2": 0.099999,
+          "omega_c_h2": 0.43026605006071267,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 67.0,
+            "omega_c_h2": 0.12
+          }
+        }
+      ],
+      "best_valid_trial": {
+        "H0_km_s_Mpc": 133.61247836056202,
+        "chi2": 10.273886313338718,
+        "closure": {
+          "100theta_star_CAMB": 1.0963856606770706,
+          "Omega_b0": 0.05601464882160431,
+          "Omega_c0": 0.24101442708436724,
+          "Omega_de0_CAMB": 0.7025894456827136,
+          "Omega_m0_including_massive_nu": 0.2973903176387833,
+          "Omega_nu0": 0.000361241732811743,
+          "r_drag_Mpc": 75.99725744317591
+        },
+        "declared_box_and_theta_valid": true,
+        "implied_100theta_MC": 1.100123727247103,
+        "omega_b_h2": 0.099999,
+        "omega_c_h2": 0.43026605006071267,
+        "optimizer_message": "Optimization terminated successfully.",
+        "optimizer_success": true,
+        "start": {
+          "H0_km_s_Mpc": 67.0,
+          "omega_c_h2": 0.12
+        }
+      },
+      "objective_evaluations_across_starts": 3958,
+      "omega_b_h2_fixed": 0.099999,
+      "selected_score_checks": {
+        "chi2_cholesky_whitening": 10.273886313338718,
+        "chi2_dense_solve": 10.27388631333872,
+        "dense_cholesky_abs_delta": 1.7763568394002505e-15,
+        "predictions_in_released_order": [
+          7.902392308084422,
+          13.256644535117161,
+          22.46883321783237,
+          17.414252246400366,
+          19.999116918511056,
+          21.679019028897788,
+          17.475813837230532,
+          27.745132628319105,
+          14.040699819517751,
+          29.936476114879728,
+          12.871333564767001,
+          8.636404283937882,
+          38.852286669719064
+        ]
+      },
+      "valid_start_scores_span": [
+        10.273886313338718,
+        10.273886315533797
+      ]
+    },
+    {
+      "all_starts": [
+        {
+          "H0_km_s_Mpc": 133.60356227220439,
+          "chi2": 10.273886833600248,
+          "closure": {
+            "100theta_star_CAMB": 1.096382232467908,
+            "Omega_b0": 0.05601708335035237,
+            "Omega_c0": 0.24100868023160973,
+            "Omega_de0_CAMB": 0.7025927070887886,
+            "Omega_m0_including_massive_nu": 0.2973870535316122,
+            "Omega_nu0": 0.0003612899496500705,
+            "r_drag_Mpc": 76.0025453309245
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.1001199895771927,
+          "omega_b_h2": 0.09999,
+          "omega_c_h2": 0.43019836976583803,
+          "optimizer_message": "Maximum number of function evaluations has been exceeded.",
+          "optimizer_success": false,
+          "start": {
+            "H0_km_s_Mpc": 133.61247836056202,
+            "omega_c_h2": 0.43026605006071267
+          }
+        },
+        {
+          "H0_km_s_Mpc": 133.60351139661452,
+          "chi2": 10.273886878646792,
+          "closure": {
+            "100theta_star_CAMB": 1.096382007946891,
+            "Omega_b0": 0.05601712601244515,
+            "Omega_c0": 0.24100819394926162,
+            "Omega_de0_CAMB": 0.7025931504184748,
+            "Omega_m0_including_massive_nu": 0.2973866101865119,
+            "Omega_nu0": 0.00036129022480515594,
+            "r_drag_Mpc": 76.00260354305152
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.1001197648105643,
+          "omega_b_h2": 0.09999,
+          "omega_c_h2": 0.43019717412194264,
+          "optimizer_message": "Maximum number of function evaluations has been exceeded.",
+          "optimizer_success": false,
+          "start": {
+            "H0_km_s_Mpc": 133.61341628747076,
+            "omega_c_h2": 0.43027242287187395
+          }
+        },
+        {
+          "H0_km_s_Mpc": 133.6039301282201,
+          "chi2": 10.27388667815691,
+          "closure": {
+            "100theta_star_CAMB": 1.0963838666200776,
+            "Omega_b0": 0.05601677488348757,
+            "Omega_c0": 0.24101224681576716,
+            "Omega_de0_CAMB": 0.7025894510724472,
+            "Omega_m0_including_massive_nu": 0.297390309659405,
+            "Omega_nu0": 0.0003612879601502361,
+            "r_drag_Mpc": 76.00212004008029
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.1001216255242547,
+          "omega_b_h2": 0.09999,
+          "omega_c_h2": 0.43020710509009186,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 67.0,
+            "omega_c_h2": 0.12
+          }
+        }
+      ],
+      "best_valid_trial": {
+        "H0_km_s_Mpc": 133.6039301282201,
+        "chi2": 10.27388667815691,
+        "closure": {
+          "100theta_star_CAMB": 1.0963838666200776,
+          "Omega_b0": 0.05601677488348757,
+          "Omega_c0": 0.24101224681576716,
+          "Omega_de0_CAMB": 0.7025894510724472,
+          "Omega_m0_including_massive_nu": 0.297390309659405,
+          "Omega_nu0": 0.0003612879601502361,
+          "r_drag_Mpc": 76.00212004008029
+        },
+        "declared_box_and_theta_valid": true,
+        "implied_100theta_MC": 1.1001216255242547,
+        "omega_b_h2": 0.09999,
+        "omega_c_h2": 0.43020710509009186,
+        "optimizer_message": "Optimization terminated successfully.",
+        "optimizer_success": true,
+        "start": {
+          "H0_km_s_Mpc": 67.0,
+          "omega_c_h2": 0.12
+        }
+      },
+      "objective_evaluations_across_starts": 3971,
+      "omega_b_h2_fixed": 0.09999,
+      "selected_score_checks": {
+        "chi2_cholesky_whitening": 10.27388667815691,
+        "chi2_dense_solve": 10.273886678156906,
+        "dense_cholesky_abs_delta": 3.552713678800501e-15,
+        "predictions_in_released_order": [
+          7.902392301902469,
+          13.256644527478182,
+          22.468833229942444,
+          17.414252241775674,
+          19.99911693573333,
+          21.679019028067028,
+          17.475813852233074,
+          27.745132631117094,
+          14.040699822402788,
+          29.93647611766969,
+          12.871333561790482,
+          8.636404255957007,
+          38.85228665858989
+        ]
+      },
+      "valid_start_scores_span": [
+        10.27388667815691,
+        10.273886878646792
+      ]
+    },
+    {
+      "all_starts": [
+        {
+          "H0_km_s_Mpc": 133.5177241007391,
+          "chi2": 10.273904275087618,
+          "closure": {
+            "100theta_star_CAMB": 1.0963580512255056,
+            "Omega_b0": 0.05603864768745576,
+            "Omega_c0": 0.24096596930903136,
+            "Omega_de0_CAMB": 0.7026133629482934,
+            "Omega_m0_including_massive_nu": 0.2973663716400611,
+            "Omega_nu0": 0.0003617546435739728,
+            "r_drag_Mpc": 76.05313043916475
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.1000935862487076,
+          "omega_b_h2": 0.0999,
+          "omega_c_h2": 0.42956961538814675,
+          "optimizer_message": "Maximum number of function evaluations has been exceeded.",
+          "optimizer_success": false,
+          "start": {
+            "H0_km_s_Mpc": 133.6039301282201,
+            "omega_c_h2": 0.43020710509009186
+          }
+        },
+        {
+          "H0_km_s_Mpc": 133.51867299050718,
+          "chi2": 10.273906481731228,
+          "closure": {
+            "100theta_star_CAMB": 1.0963608484809235,
+            "Omega_b0": 0.05603785117998204,
+            "Omega_c0": 0.2409685318883621,
+            "Omega_de0_CAMB": 0.7026116023062932,
+            "Omega_m0_including_massive_nu": 0.2973681325701046,
+            "Omega_nu0": 0.000361749501760436,
+            "r_drag_Mpc": 76.05260982723478
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.100096392165798,
+          "omega_b_h2": 0.0999,
+          "omega_c_h2": 0.42958028954983724,
+          "optimizer_message": "Maximum number of function evaluations has been exceeded.",
+          "optimizer_success": false,
+          "start": {
+            "H0_km_s_Mpc": 133.61341628747076,
+            "omega_c_h2": 0.43027242287187395
+          }
+        },
+        {
+          "H0_km_s_Mpc": 133.51846873333727,
+          "chi2": 10.273890329160777,
+          "closure": {
+            "100theta_star_CAMB": 1.09636503767041,
+            "Omega_b0": 0.0560380226340401,
+            "Omega_c0": 0.2409904429070033,
+            "Omega_de0_CAMB": 0.7025895186647774,
+            "Omega_m0_including_massive_nu": 0.29739021614961686,
+            "Omega_nu0": 0.00036175060857339853,
+            "r_drag_Mpc": 76.05076889306261
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.1001005897770706,
+          "omega_b_h2": 0.0999,
+          "omega_c_h2": 0.42961803637563384,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 67.0,
+            "omega_c_h2": 0.12
+          }
+        }
+      ],
+      "best_valid_trial": {
+        "H0_km_s_Mpc": 133.51846873333727,
+        "chi2": 10.273890329160777,
+        "closure": {
+          "100theta_star_CAMB": 1.09636503767041,
+          "Omega_b0": 0.0560380226340401,
+          "Omega_c0": 0.2409904429070033,
+          "Omega_de0_CAMB": 0.7025895186647774,
+          "Omega_m0_including_massive_nu": 0.29739021614961686,
+          "Omega_nu0": 0.00036175060857339853,
+          "r_drag_Mpc": 76.05076889306261
+        },
+        "declared_box_and_theta_valid": true,
+        "implied_100theta_MC": 1.1001005897770706,
+        "omega_b_h2": 0.0999,
+        "omega_c_h2": 0.42961803637563384,
+        "optimizer_message": "Optimization terminated successfully.",
+        "optimizer_success": true,
+        "start": {
+          "H0_km_s_Mpc": 67.0,
+          "omega_c_h2": 0.12
+        }
+      },
+      "objective_evaluations_across_starts": 3966,
+      "omega_b_h2_fixed": 0.0999,
+      "selected_score_checks": {
+        "chi2_cholesky_whitening": 10.273890329160777,
+        "chi2_dense_solve": 10.273890329160777,
+        "dense_cholesky_abs_delta": 0.0,
+        "predictions_in_released_order": [
+          7.902392213068755,
+          13.25664441765921,
+          22.468833403126535,
+          17.41425217758389,
+          19.999117209588704,
+          21.679019028932498,
+          17.4758141345709,
+          27.745132723247355,
+          14.04069999749675,
+          29.93647623346688,
+          12.8713336767049,
+          8.636404093713637,
+          38.852286747077834
+        ]
+      },
+      "valid_start_scores_span": [
+        10.273890329160777,
+        10.273906481731228
+      ]
+    },
+    {
+      "all_starts": [
+        {
+          "H0_km_s_Mpc": 132.67594873919901,
+          "chi2": 10.275117535230988,
+          "closure": {
+            "100theta_star_CAMB": 1.0961681742085885,
+            "Omega_b0": 0.056240709501822854,
+            "Omega_c0": 0.24062541859706477,
+            "Omega_de0_CAMB": 0.7027469889418745,
+            "Omega_m0_including_massive_nu": 0.29723248767899796,
+            "Omega_nu0": 0.00036635958011031836,
+            "r_drag_Mpc": 76.54927018130299
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.0998806322762091,
+          "omega_b_h2": 0.099,
+          "omega_c_h2": 0.42357069553571874,
+          "optimizer_message": "Maximum number of function evaluations has been exceeded.",
+          "optimizer_success": false,
+          "start": {
+            "H0_km_s_Mpc": 133.51846873333727,
+            "omega_c_h2": 0.42961803637563384
+          }
+        },
+        {
+          "H0_km_s_Mpc": 132.67693920618137,
+          "chi2": 10.275401887414203,
+          "closure": {
+            "100theta_star_CAMB": 1.0961667736304097,
+            "Omega_b0": 0.05623986980265229,
+            "Omega_c0": 0.24060795809919275,
+            "Omega_de0_CAMB": 0.7027652949152542,
+            "Omega_m0_including_massive_nu": 0.2972141820120415,
+            "Omega_nu0": 0.0003663541101964735,
+            "r_drag_Mpc": 76.55048176931653
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.0998792325204345,
+          "omega_b_h2": 0.099,
+          "omega_c_h2": 0.4235462837201788,
+          "optimizer_message": "Maximum number of function evaluations has been exceeded.",
+          "optimizer_success": false,
+          "start": {
+            "H0_km_s_Mpc": 133.61341628747076,
+            "omega_c_h2": 0.43027242287187395
+          }
+        },
+        {
+          "H0_km_s_Mpc": 132.66598282239642,
+          "chi2": 10.273927136556967,
+          "closure": {
+            "100theta_star_CAMB": 1.0961763274183889,
+            "Omega_b0": 0.056249159464232285,
+            "Omega_c0": 0.24077371663214067,
+            "Omega_de0_CAMB": 0.7025901828166291,
+            "Omega_m0_including_massive_nu": 0.29738929072068004,
+            "Omega_nu0": 0.00036641462430708765,
+            "r_drag_Mpc": 76.5394764190157
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.0998887736968517,
+          "omega_b_h2": 0.099,
+          "omega_c_h2": 0.42376807357875534,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 67.0,
+            "omega_c_h2": 0.12
+          }
+        }
+      ],
+      "best_valid_trial": {
+        "H0_km_s_Mpc": 132.66598282239642,
+        "chi2": 10.273927136556967,
+        "closure": {
+          "100theta_star_CAMB": 1.0961763274183889,
+          "Omega_b0": 0.056249159464232285,
+          "Omega_c0": 0.24077371663214067,
+          "Omega_de0_CAMB": 0.7025901828166291,
+          "Omega_m0_including_massive_nu": 0.29738929072068004,
+          "Omega_nu0": 0.00036641462430708765,
+          "r_drag_Mpc": 76.5394764190157
+        },
+        "declared_box_and_theta_valid": true,
+        "implied_100theta_MC": 1.0998887736968517,
+        "omega_b_h2": 0.099,
+        "omega_c_h2": 0.42376807357875534,
+        "optimizer_message": "Optimization terminated successfully.",
+        "optimizer_success": true,
+        "start": {
+          "H0_km_s_Mpc": 67.0,
+          "omega_c_h2": 0.12
+        }
+      },
+      "objective_evaluations_across_starts": 3966,
+      "omega_b_h2_fixed": 0.099,
+      "selected_score_checks": {
+        "chi2_cholesky_whitening": 10.273927136556967,
+        "chi2_dense_solve": 10.27392713655697,
+        "dense_cholesky_abs_delta": 3.552713678800501e-15,
+        "predictions_in_released_order": [
+          7.9023913549460145,
+          13.256643358337602,
+          22.46883509280568,
+          17.414251560452115,
+          19.99911985052849,
+          21.679019035216395,
+          17.47581682115614,
+          27.745133582694763,
+          14.04070158375784,
+          29.936477302414026,
+          12.87133465771063,
+          8.636402312881831,
+          38.8522874029266
+        ]
+      },
+      "valid_start_scores_span": [
+        10.273927136556967,
+        10.275401887414203
+      ]
+    },
+    {
+      "all_starts": [
+        {
+          "H0_km_s_Mpc": 129.02239682152714,
+          "chi2": 10.296111205024195,
+          "closure": {
+            "100theta_star_CAMB": 1.0954895756743028,
+            "Omega_b0": 0.057068097483512124,
+            "Omega_c0": 0.2395574195655475,
+            "Omega_de0_CAMB": 0.7029653788867587,
+            "Omega_m0_including_massive_nu": 0.2970129189482548,
+            "Omega_nu0": 0.00038740189919519167,
+            "r_drag_Mpc": 78.75478023481114
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.0990985090537404,
+          "omega_b_h2": 0.095,
+          "omega_c_h2": 0.39878593929475475,
+          "optimizer_message": "Maximum number of function evaluations has been exceeded.",
+          "optimizer_success": false,
+          "start": {
+            "H0_km_s_Mpc": 132.66598282239642,
+            "omega_c_h2": 0.42376807357875534
+          }
+        },
+        {
+          "H0_km_s_Mpc": 129.04405278048515,
+          "chi2": 10.309759609958302,
+          "closure": {
+            "100theta_star_CAMB": 1.0955168714764127,
+            "Omega_b0": 0.0570489449437409,
+            "Omega_c0": 0.23943928545575388,
+            "Omega_de0_CAMB": 0.7031028028351333,
+            "Omega_m0_including_massive_nu": 0.2968755022833117,
+            "Omega_nu0": 0.0003872718838169162,
+            "r_drag_Mpc": 78.75814343296017
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.0991259128318616,
+          "omega_b_h2": 0.095,
+          "omega_c_h2": 0.39872309892371227,
+          "optimizer_message": "Maximum number of function evaluations has been exceeded.",
+          "optimizer_success": false,
+          "start": {
+            "H0_km_s_Mpc": 133.61341628747076,
+            "omega_c_h2": 0.43027242287187395
+          }
+        },
+        {
+          "H0_km_s_Mpc": 128.91941741840628,
+          "chi2": 10.274097673459984,
+          "closure": {
+            "100theta_star_CAMB": 1.095295486627227,
+            "Omega_b0": 0.057159304625316376,
+            "Omega_c0": 0.23983767608579287,
+            "Omega_de0_CAMB": 0.7025932613880815,
+            "Omega_m0_including_massive_nu": 0.29738500176218635,
+            "Omega_nu0": 0.00038802105107712257,
+            "r_drag_Mpc": 78.76390842040354
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.0989038246740386,
+          "omega_b_h2": 0.095,
+          "omega_c_h2": 0.3986154026453783,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 67.0,
+            "omega_c_h2": 0.12
+          }
+        }
+      ],
+      "best_valid_trial": {
+        "H0_km_s_Mpc": 128.91941741840628,
+        "chi2": 10.274097673459984,
+        "closure": {
+          "100theta_star_CAMB": 1.095295486627227,
+          "Omega_b0": 0.057159304625316376,
+          "Omega_c0": 0.23983767608579287,
+          "Omega_de0_CAMB": 0.7025932613880815,
+          "Omega_m0_including_massive_nu": 0.29738500176218635,
+          "Omega_nu0": 0.00038802105107712257,
+          "r_drag_Mpc": 78.76390842040354
+        },
+        "declared_box_and_theta_valid": true,
+        "implied_100theta_MC": 1.0989038246740386,
+        "omega_b_h2": 0.095,
+        "omega_c_h2": 0.3986154026453783,
+        "optimizer_message": "Optimization terminated successfully.",
+        "optimizer_success": true,
+        "start": {
+          "H0_km_s_Mpc": 67.0,
+          "omega_c_h2": 0.12
+        }
+      },
+      "objective_evaluations_across_starts": 3925,
+      "omega_b_h2_fixed": 0.095,
+      "selected_score_checks": {
+        "chi2_cholesky_whitening": 10.274097673459984,
+        "chi2_dense_solve": 10.274097673459988,
+        "dense_cholesky_abs_delta": 3.552713678800501e-15,
+        "predictions_in_released_order": [
+          7.902387366166629,
+          13.256638429970458,
+          22.468842899455503,
+          17.414248677480778,
+          19.999132073716147,
+          21.67901903861774,
+          17.475829263066707,
+          27.745137538302973,
+          14.040708934461424,
+          29.93648222901705,
+          12.871339205758119,
+          8.636394068118252,
+          38.85229041978165
+        ]
+      },
+      "valid_start_scores_span": [
+        10.274097673459984,
+        10.309759609958302
+      ]
+    },
+    {
+      "all_starts": [
+        {
+          "H0_km_s_Mpc": 115.74072274102134,
+          "chi2": 10.555104531101849,
+          "closure": {
+            "100theta_star_CAMB": 1.0918520262157079,
+            "Omega_b0": 0.059719698574924034,
+            "Omega_c0": 0.2356983884573031,
+            "Omega_de0_CAMB": 0.7040735292592684,
+            "Omega_m0_including_massive_nu": 0.29589950198611786,
+            "Omega_nu0": 0.00048141495389073257,
+            "r_drag_Mpc": 87.95508447104028
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.0950352742336307,
+          "omega_b_h2": 0.08,
+          "omega_c_h2": 0.3157395553985887,
+          "optimizer_message": "Maximum number of function evaluations has been exceeded.",
+          "optimizer_success": false,
+          "start": {
+            "H0_km_s_Mpc": 128.91941741840628,
+            "omega_c_h2": 0.3986154026453783
+          }
+        },
+        {
+          "H0_km_s_Mpc": 115.4356985098479,
+          "chi2": 10.274855398005595,
+          "closure": {
+            "100theta_star_CAMB": 1.0912621274446723,
+            "Omega_b0": 0.06003571904446331,
+            "Omega_c0": 0.23684627002409636,
+            "Omega_de0_CAMB": 0.7026069369940482,
+            "Omega_m0_including_massive_nu": 0.29736595153999323,
+            "Omega_nu0": 0.00048396247143355647,
+            "r_drag_Mpc": 87.96457303729284
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.0944437105422282,
+          "omega_b_h2": 0.08,
+          "omega_c_h2": 0.3156071402741886,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 133.61341628747076,
+            "omega_c_h2": 0.43027242287187395
+          }
+        },
+        {
+          "H0_km_s_Mpc": 115.43569843424089,
+          "chi2": 10.274855398005565,
+          "closure": {
+            "100theta_star_CAMB": 1.09126212688829,
+            "Omega_b0": 0.060035719123106596,
+            "Omega_c0": 0.23684626881615958,
+            "Omega_de0_CAMB": 0.7026069381226722,
+            "Omega_m0_including_massive_nu": 0.29736595041133373,
+            "Omega_nu0": 0.0004839624720675191,
+            "r_drag_Mpc": 87.9645731822865
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.0944437099857451,
+          "omega_b_h2": 0.08,
+          "omega_c_h2": 0.31560713825113756,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 67.0,
+            "omega_c_h2": 0.12
+          }
+        }
+      ],
+      "best_valid_trial": {
+        "H0_km_s_Mpc": 115.43569843424089,
+        "chi2": 10.274855398005565,
+        "closure": {
+          "100theta_star_CAMB": 1.09126212688829,
+          "Omega_b0": 0.060035719123106596,
+          "Omega_c0": 0.23684626881615958,
+          "Omega_de0_CAMB": 0.7026069381226722,
+          "Omega_m0_including_massive_nu": 0.29736595041133373,
+          "Omega_nu0": 0.0004839624720675191,
+          "r_drag_Mpc": 87.9645731822865
+        },
+        "declared_box_and_theta_valid": true,
+        "implied_100theta_MC": 1.0944437099857451,
+        "omega_b_h2": 0.08,
+        "omega_c_h2": 0.31560713825113756,
+        "optimizer_message": "Optimization terminated successfully.",
+        "optimizer_success": true,
+        "start": {
+          "H0_km_s_Mpc": 67.0,
+          "omega_c_h2": 0.12
+        }
+      },
+      "objective_evaluations_across_starts": 3330,
+      "omega_b_h2_fixed": 0.08,
+      "selected_score_checks": {
+        "chi2_cholesky_whitening": 10.274855398005565,
+        "chi2_dense_solve": 10.274855398005565,
+        "dense_cholesky_abs_delta": 0.0,
+        "predictions_in_released_order": [
+          7.902369642424102,
+          13.256616531841416,
+          22.468877593533,
+          17.414235870062715,
+          19.99918640304991,
+          21.679019061925175,
+          17.47588457814513,
+          27.74515513894606,
+          14.040741648249332,
+          29.936504153202,
+          12.871359473432204,
+          8.636357516211506,
+          38.85230391952017
+        ]
+      },
+      "valid_start_scores_span": [
+        10.274855398005565,
+        10.555104531101849
+      ]
+    },
+    {
+      "all_starts": [
+        {
+          "H0_km_s_Mpc": 90.55140544228152,
+          "chi2": 10.27724984562792,
+          "closure": {
+            "100theta_star_CAMB": 1.0771059290694511,
+            "Omega_b0": 0.060978903899157264,
+            "Omega_c0": 0.23554043855070106,
+            "Omega_de0_CAMB": 0.7026500925729016,
+            "Omega_m0_including_massive_nu": 0.297305847590626,
+            "Omega_nu0": 0.0007865051407676512,
+            "r_drag_Mpc": 112.13989157747628
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.0790928977212242,
+          "omega_b_h2": 0.05,
+          "omega_c_h2": 0.1931327258195898,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 115.43569843424089,
+            "omega_c_h2": 0.31560713825113756
+          }
+        },
+        {
+          "H0_km_s_Mpc": 90.55140542816542,
+          "chi2": 10.277249845627914,
+          "closure": {
+            "100theta_star_CAMB": 1.0771059289019915,
+            "Omega_b0": 0.06097890391816931,
+            "Omega_c0": 0.23554043827259402,
+            "Omega_de0_CAMB": 0.7026500928317376,
+            "Omega_m0_including_massive_nu": 0.2973058473317762,
+            "Omega_nu0": 0.0007865051410128683,
+            "r_drag_Mpc": 112.13989161618458
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.079092897553792,
+          "omega_b_h2": 0.05,
+          "omega_c_h2": 0.19313272553133926,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 133.61341628747076,
+            "omega_c_h2": 0.43027242287187395
+          }
+        },
+        {
+          "H0_km_s_Mpc": 90.5514054310545,
+          "chi2": 10.277249845627894,
+          "closure": {
+            "100theta_star_CAMB": 1.0771059289306097,
+            "Omega_b0": 0.06097890391427819,
+            "Omega_c0": 0.23554043831474264,
+            "Omega_de0_CAMB": 0.7026500927935332,
+            "Omega_m0_including_massive_nu": 0.2973058473699835,
+            "Omega_nu0": 0.0007865051409626807,
+            "r_drag_Mpc": 112.13989160988868
+          },
+          "declared_box_and_theta_valid": true,
+          "implied_100theta_MC": 1.0790928975824057,
+          "omega_b_h2": 0.05,
+          "omega_c_h2": 0.19313272557822325,
+          "optimizer_message": "Optimization terminated successfully.",
+          "optimizer_success": true,
+          "start": {
+            "H0_km_s_Mpc": 67.0,
+            "omega_c_h2": 0.12
+          }
+        }
+      ],
+      "best_valid_trial": {
+        "H0_km_s_Mpc": 90.5514054310545,
+        "chi2": 10.277249845627894,
+        "closure": {
+          "100theta_star_CAMB": 1.0771059289306097,
+          "Omega_b0": 0.06097890391427819,
+          "Omega_c0": 0.23554043831474264,
+          "Omega_de0_CAMB": 0.7026500927935332,
+          "Omega_m0_including_massive_nu": 0.2973058473699835,
+          "Omega_nu0": 0.0007865051409626807,
+          "r_drag_Mpc": 112.13989160988868
+        },
+        "declared_box_and_theta_valid": true,
+        "implied_100theta_MC": 1.0790928975824057,
+        "omega_b_h2": 0.05,
+        "omega_c_h2": 0.19313272557822325,
+        "optimizer_message": "Optimization terminated successfully.",
+        "optimizer_success": true,
+        "start": {
+          "H0_km_s_Mpc": 67.0,
+          "omega_c_h2": 0.12
+        }
+      },
+      "objective_evaluations_across_starts": 790,
+      "omega_b_h2_fixed": 0.05,
+      "selected_score_checks": {
+        "chi2_cholesky_whitening": 10.277249845627894,
+        "chi2_dense_solve": 10.277249845627894,
+        "dense_cholesky_abs_delta": 0.0,
+        "predictions_in_released_order": [
+          7.902313674731981,
+          13.256547372060668,
+          22.468987035941666,
+          17.414195395850825,
+          19.999357871065317,
+          21.679019090060386,
+          17.47605922216238,
+          27.74521068658098,
+          14.04084505349005,
+          29.93657337462508,
+          12.871423628973815,
+          8.636242451680019,
+          38.852346763407205
+        ]
+      },
+      "valid_start_scores_span": [
+        10.277249845627894,
+        10.27724984562792
+      ]
+    }
+  ],
+  "hashes": {
+    "CAMB_2_0_4_wheel_sha256": "9b7e6558b2049757e96496b8a33461d8ff11acd79017cfbd00a573dbc8d1e366",
+    "compute26_candidate_json_sha256": "0cc35380abc95c1652218e693996cb271639fb115ddaa595c5df62616bf9e18c",
+    "covariance_sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+    "mean_sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "script_sha256": "6085f7b281fae413a4c9a00bac5ece6444e250ba0a6a667e4ac56445bff18fc9"
+  },
+  "input_validation": {
+    "complete_covariance_used": true,
+    "covariance_cholesky_positive_definite": true,
+    "covariance_shape": [
+      13,
+      13
+    ],
+    "covariance_symmetric_abs_max": 0.0,
+    "observable_order": [
+      "DV_over_rs",
+      "DM_over_rs",
+      "DH_over_rs",
+      "DM_over_rs",
+      "DH_over_rs",
+      "DM_over_rs",
+      "DH_over_rs",
+      "DM_over_rs",
+      "DH_over_rs",
+      "DM_over_rs",
+      "DH_over_rs",
+      "DH_over_rs",
+      "DM_over_rs"
+    ],
+    "redshifts": [
+      0.295,
+      0.51,
+      0.51,
+      0.706,
+      0.706,
+      0.934,
+      0.934,
+      1.321,
+      1.321,
+      1.484,
+      1.484,
+      2.33,
+      2.33
+    ],
+    "row_count": 13
+  },
+  "interpretation_scope": "BAO-only flat-LCDM score audit; not a posterior, evidence calculation, or physical cosmological inference",
+  "method": {
+    "camb_setup": {
+      "As": 2.1e-09,
+      "TCMB_K": 2.7255,
+      "YHe": null,
+      "dark_energy": "flat fluid Lambda, w=-1, wa=0",
+      "mnu_eV": 0.06,
+      "neutrino_hierarchy": "degenerate",
+      "nnu": 3.044,
+      "ns": 0.965,
+      "num_massive_neutrinos": 1,
+      "tau": 0.054
+    },
+    "finite_difference_points_above_0p1": "explicitly out-of-box diagnostics only; never eligible as candidate minima",
+    "implementation": "Standalone CAMB/background/data/observable/covariance code; no compute26 or compute28 scorer imported",
+    "optimizer": "Three-start Powell profile optimization in normalized (H0, omega_c h2) box for each fixed omega_b h2 slice; CAMB objective re-evaluated at returned points",
+    "theta_inverse_mapping": "CAMB.set_cosmology(cosmomc_theta=theta100/100, theta_H0_range=(1,2000)) and brentq inverse at reported candidates"
+  },
+  "reproduction_command": "cd cosmology_autoresearch && .venv/bin/python scripts/run_bounded.py --state work/compute30/no_campaign_deadline.json --seconds 560 -- env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python -B work/compute30/boundary_gradient_audit.py",
+  "runtime_seconds": 107.57890132814646,
+  "status": "completed_boundary_gradient_and_fixed_omega_b_profile",
+  "versions": {
+    "CAMB": "2.0.4",
+    "NumPy": "2.5.3",
+    "Python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "SciPy": "1.18.1",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  }
+}

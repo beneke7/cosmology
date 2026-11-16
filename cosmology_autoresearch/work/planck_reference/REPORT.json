@@ -1,0 +1,149 @@
+{
+  "audit_date": "2026-09-25",
+  "status": "literature_and_configuration_audit_only",
+  "scope": {
+    "package_installed": false,
+    "likelihood_evaluated": false,
+    "downloads_by_this_task": [],
+    "download_ceiling_bytes": 5242880
+  },
+  "target": {
+    "model": "flat six-parameter base Lambda-CDM",
+    "release": "Planck PR3 / 2018",
+    "likelihood_label": "TT,TE,EE+lowE",
+    "exact_combo_match": true,
+    "components": ["full Plik high-ell TT+TE+EE", "Commander low-ell TT", "SimAll low-ell EE"],
+    "separate_planck_lensing_reconstruction_included": false,
+    "physically_lensed_cmb_theory_spectra": true,
+    "definition_locator": "Planck VI section 2.2.4; component descriptions section 2.2.3"
+  },
+  "primary_paper": {
+    "citation": "Planck Collaboration, Planck 2018 results. VI. Cosmological parameters, A&A 641, A6 (2020)",
+    "doi": "10.1051/0004-6361/201833910",
+    "arxiv_version": "1807.06209v4",
+    "result_locator": "Table 2, fourth column TT,TE,EE+lowE, 68% intervals; PDF p.15; HTML lines 509-536",
+    "posterior_type": "marginalized 68% intervals",
+    "sampled_parameters": [
+      {"name": "omega_b = Omega_b h^2", "mean": 0.02236, "error_minus": 0.00015, "error_plus": 0.00015, "unit": "dimensionless"},
+      {"name": "omega_c = Omega_c h^2", "mean": 0.1202, "error_minus": 0.0014, "error_plus": 0.0014, "unit": "dimensionless"},
+      {"name": "100 theta_MC", "mean": 1.04090, "error_minus": 0.00031, "error_plus": 0.00031, "unit": "dimensionless"},
+      {"name": "tau", "mean": 0.0544, "error_minus": 0.0081, "error_plus": 0.0070, "unit": "dimensionless"},
+      {"name": "ln(10^10 A_s)", "mean": 3.045, "error_minus": 0.016, "error_plus": 0.016, "unit": "dimensionless; pivot 0.05 Mpc^-1"},
+      {"name": "n_s", "mean": 0.9649, "error_minus": 0.0044, "error_plus": 0.0044, "unit": "dimensionless"}
+    ],
+    "derived_checks": [
+      {"name": "H0", "mean": 67.27, "error_minus": 0.60, "error_plus": 0.60, "unit": "km s^-1 Mpc^-1"},
+      {"name": "Omega_Lambda", "mean": 0.6834, "error_minus": 0.0084, "error_plus": 0.0084},
+      {"name": "Omega_m", "mean": 0.3166, "error_minus": 0.0084, "error_plus": 0.0084, "note": "includes one 0.06 eV neutrino"},
+      {"name": "sigma_8", "mean": 0.8120, "error_minus": 0.0073, "error_plus": 0.0073},
+      {"name": "S_8 = sigma_8 (Omega_m/0.3)^0.5", "mean": 0.834, "error_minus": 0.016, "error_plus": 0.016}
+    ],
+    "equation_disambiguation": "Planck VI Eq. (2), section 2.2.3, tau=0.0506 +/- 0.0086 is lowE-only, not the joint Table 2 posterior.",
+    "nonmatching_result_warning": "Planck VI Table 1 Plik best fit and posterior values use TT,TE,EE+lowE+lensing."
+  },
+  "model_and_priors": {
+    "assumptions": [
+      "Omega_K=0 and w=-1",
+      "adiabatic scalar perturbations with power-law primordial scalar spectrum",
+      "three neutrino species: two massless and one massive at 0.06 eV",
+      "standard N_eff=3.046",
+      "BBN helium using PArthENoPE 1.1; fixed neutron lifetime 880.2 s; mean Y_P about 0.2454"
+    ],
+    "uniform_priors": [
+      {"parameter": "omega_b", "min": 0.005, "max": 0.1, "source": "Planck 2013 XVI Table 1, carried forward by Planck 2018 VI section 2.1"},
+      {"parameter": "omega_c", "min": 0.001, "max": 0.99, "source": "Planck 2013 XVI Table 1, carried forward by Planck 2018 VI section 2.1"},
+      {"parameter": "100 theta_MC", "min": 0.5, "max": 10.0, "source": "Planck 2013 XVI Table 1, carried forward by Planck 2018 VI section 2.1"},
+      {"parameter": "tau", "min": 0.01, "max": 0.8, "source": "Planck 2013 XVI Table 1, carried forward by Planck 2018 VI section 2.1"},
+      {"parameter": "n_s", "min": 0.9, "max": 1.1, "pivot": "0.05 Mpc^-1", "source": "Planck 2013 XVI Table 1, carried forward by Planck 2018 VI section 2.1"},
+      {"parameter": "ln(10^10 A_s)", "min": 1.61, "max": 3.91, "source": "explicit 2018 VI section 2.1 amplitude-prior change"}
+    ],
+    "additional_hard_prior": {"parameter": "H0", "min": 20, "max": 100, "unit": "km s^-1 Mpc^-1", "source": "Planck 2013 XVI section 2; H0 is derived in base LCDM"},
+    "published_software": {"CAMB": "August 2017", "CosmoMC": "July 2018", "posterior_summary": "updated GetDist adaptive-kernel estimates"},
+    "uncertainty_caveat": "Planck VI says unmodelled likelihood systematics may make about 0.5 sigma a more realistic total systematic uncertainty."
+  },
+  "cobaya_v3_6_2_components": [
+    {
+      "key": "planck_2018_highl_plik.TTTEEE",
+      "yaml": "https://raw.githubusercontent.com/CobayaSampler/cobaya/v3.6.2/cobaya/likelihoods/planck_2018_highl_plik/TTTEEE.yaml",
+      "clik_file": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik",
+      "alias": "plikHM_TTTEEE",
+      "product_id": "151902"
+    },
+    {
+      "key": "planck_2018_lowl.TT_clik",
+      "yaml": "https://raw.githubusercontent.com/CobayaSampler/cobaya/v3.6.2/cobaya/likelihoods/planck_2018_lowl/TT_clik.yaml",
+      "clik_file": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik",
+      "alias": "lowl",
+      "product_id": "151902"
+    },
+    {
+      "key": "planck_2018_lowl.EE_clik",
+      "yaml": "https://raw.githubusercontent.com/CobayaSampler/cobaya/v3.6.2/cobaya/likelihoods/planck_2018_lowl/EE_clik.yaml",
+      "clik_file": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik",
+      "alias": "lowE",
+      "product_id": "151902"
+    }
+  ],
+  "nuisance_caveats": {
+    "full_plik_marginalizes_nuisances": true,
+    "calibration_defaults": {
+      "A_planck": "Gaussian N(1, 0.0025)",
+      "calib_100T": "Gaussian N(1.0002, 0.0007)",
+      "calib_217T": "Gaussian N(0.99805, 0.00065)",
+      "polarization": "A_pol=1; calib_100P=1.021, calib_143P=0.966, calib_217P=1.040 fixed"
+    },
+    "foreground_summary": [
+      "CIB index -1.3 and TE/EE dust indices -2.4 fixed",
+      "TT Galactic-dust and TE dust amplitudes have Gaussian priors",
+      "four TT point-source amplitudes uniform [0,400]",
+      "SZ amplitudes uniform [0,10]",
+      "EE dust amplitudes fixed at template central values"
+    ],
+    "sz_coupled_prior": "Gaussian prior on ksz_norm + 1.6*A_sz with mean 9.5, standard deviation 3.0",
+    "likelihood_structure": "hybrid low/high multipole baseline neglects low/high correlations; low-ell TE excluded",
+    "warning": "Component YAMLs do not set the six cosmological priors; declare them in the later Cobaya input."
+  },
+  "initial_point": {
+    "kind": "posterior-centered cosmological initialization",
+    "is_maximum_likelihood": false,
+    "cobaya_camb_names": {
+      "ombh2": 0.02236,
+      "omch2": 0.1202,
+      "theta_MC_100": 1.04090,
+      "tau": 0.0544,
+      "logA": 3.045,
+      "ns": 0.9649
+    },
+    "fixed_values": {"Omega_K": 0.0, "sum_mnu_eV": 0.06, "N_eff": 3.046, "w": -1.0, "helium": "BBN"},
+    "nuisance_action": "Initialize and sample the full pinned Plik nuisance block; published Table 2 does not supply a joint best-fit nuisance vector.",
+    "score_evaluated": false
+  },
+  "chain_products": {
+    "comparison_chain": "COM_CosmoParams_base-plikHM-TTTEEE-lowl-lowE_R3.00.zip",
+    "catalog_size": "62.3 MB",
+    "fetched_or_inspected": false,
+    "allowed_role": "posterior comparison and possible initial values after metadata checks",
+    "not_likelihood_evidence_because": "derived posterior samples and GetDist products are not the raw likelihood; they cannot rescore arbitrary parameters, replace clik components, or be added as an independent observation.",
+    "other_products": "Full-grid archives mix combinations; lensing-only chains represent a different observation."
+  },
+  "local_artifact": {
+    "path": "cosmology_autoresearch/work/planck_stage/COM_Likelihood_Data-baseline_R3.00.tar.gz",
+    "bytes": 60323470,
+    "sha256": "0b73171e3acc671c28184466a45485a2d1c1d93676b832abdfe688c7b04024e6",
+    "status": "already present in shared staging at audit; not fetched, extracted, or modified by this task",
+    "meaning": "official raw likelihood-data archive, not a scored likelihood"
+  },
+  "sources": [
+    "https://doi.org/10.1051/0004-6361/201833910",
+    "https://arxiv.org/html/1807.06209v4",
+    "https://arxiv.org/html/1303.5076",
+    "https://cobaya.readthedocs.io/en/v3.6.2/likelihood_planck.html",
+    "https://esdcdoi.esac.esa.int/doi/html/data/astronomy/planck/Cosmology.html",
+    "https://irsa.ipac.caltech.edu/data/Planck/release_3/ancillary-data/cosmoparams/"
+  ],
+  "limitations": [
+    "No chain archive larger than 5 MiB was fetched; exact no-lensing chain contents were not inspected.",
+    "The initialization is not the exact maximum-likelihood point.",
+    "Cobaya v3.6.2 is a pinned component mapping, not a bit-for-bit recreation of historical CAMB/CosmoMC."
+  ]
+}

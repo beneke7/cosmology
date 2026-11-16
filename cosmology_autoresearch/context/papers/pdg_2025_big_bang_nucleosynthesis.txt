@@ -1,0 +1,820 @@
+1                                  24. Big Bang Nucleosynthesis
+
+
+                              24. Big Bang Nucleosynthesis
+
+Revised August 2025 by B.D. Fields (Astronomy, Illinois U.; Physics, Illinois U.), P. Molaro (INAF-
+OATS Trieste; IFPU) and S. Sarkar (Rudolf Peierls, Oxford U.).
+24.1 Abstract
+   Big-Bang nucleosynthesis (BBN) offers the deepest reliable probe of the early Universe, being
+based on well-understood Standard Model physics [1]. Predictions of the abundances of the light
+elements, D, 3 He, 4 He, and 7 Li, synthesized at the end of the first three minutes, are in good overall
+agreement with the primordial abundances inferred from observational data, thus validating the
+standard hot Big-Bang cosmology (see [2–5] for reviews). This is particularly impressive given that
+these abundances span nine orders of magnitude – from 4 He/H∼ 0.08 down to 7 Li/H∼ 10−10 (ratios
+by number). Thus BBN provides powerful constraints on possible deviations from the standard
+cosmology, and on new physics beyond the Standard Model [6–9].
+24.2 Theory
+    The synthesis of the light elements is sensitive to physical conditions in the early radiation-
+dominated era at a temperature T ∼ 1 MeV, corresponding to an age t ∼ 1 s. At higher
+temperatures, weak interactions were in thermal equilibrium, thus fixing the ratio of the neutron
+and proton number densities to be n/p = e−Q/T , where Q = 1.293 MeV is the neutron-proton
+mass difference. As the temperature dropped, the neutron-proton inter-conversion
+                                                                     √                rate per nucleon,
+Γn↔p ∼ G2F T 5 , fell faster than the Hubble expansion rate, H ∼ g∗ GN T 2 , where g∗ counts the
+number of relativistic particle species determining the energy density in radiation (see ‘Big Bang
+Cosmology’ — Sec. 22 of this Review). This resulted in departure from chemical equilibrium (freeze-
+out) at Tfr ∼ (g∗ GN /G4F )1/6 ≃ 1 MeV. The neutron fraction at this time, n/p = e−Q/Tfr ≃ 1/6,
+is thus sensitive to every known physical interaction, since Q is determined by both strong and
+electromagnetic interactions while Tfr depends on the weak as well as gravitational interactions.
+Moreover, the sensitivity to the Hubble expansion rate affords a probe of, e.g., the number of
+relativistic neutrino species [10]. After freeze-out, the neutrons were free to β-decay, so the neutron
+fraction dropped to n/p ≃ 1/7 by the time nuclear reactions began. A simplified analytic model of
+freeze-out yields the n/p ratio to an accuracy of ∼ 1% [11, 12].
+    The rates of these reactions depend on the density of baryons (strictly speaking, nucleons),
+which is usually expressed normalized to the relic blackbody photon density as η ≡ nb /nγ . As
+we shall see, all the light-element abundances can be explained with η10 ≡ η × 1010 in the range
+6.040 ± 0.118. With nγ fixed by the present CMB temperature 2.7255 K (see ‘Cosmic Microwave
+Background’ — Sec. 29 of this Review), this can be stated as the allowed range for the baryon mass
+density today, ρb = (4.2 ± 0.1) × 10−31 g cm−3 , or as the baryonic fraction of the critical density,
+Ωb = ρb /ρcrit ≃ η10 h−2 /274 = (0.02205 ± 0.00043)h−2 , where h ≡ H0 /100 km s−1 Mpc−1 ≃ 0.7 is
+the present Hubble parameter (see ‘The Cosmological Parameters’ — Sec. 25 of this Review).
+    The nucleosynthesis chain begins with the formation of deuterium in the process p(n, γ)D.
+However, photo-dissociation by the high number density of photons delays production of deuterium
+(and other complex nuclei) until well after T drops below the binding energy of deuterium, ∆D =
+2.23 MeV. The quantity η −1 e−∆D /T , i.e., the number of photons per baryon above the deuterium
+photo-dissociation threshold, falls below unity at T ≃ 0.1 MeV; nuclei can then begin to form
+without being immediately photo-dissociated again. Only 2-body reactions, such as D(p, γ)3 He and
+3 He(D, p)4 He are important because the density by this time has become rather low – comparable
+
+to that of air!
+    Nearly all neutrons end up bound in the most stable light element 4 He. Heavier nuclei do not
+
+              S. Navas et al. (Particle Data Group), Phys. Rev. D 110, 030001 (2024) and 2025 update
+                                             1st December, 2025 11:44am
+2                                24. Big Bang Nucleosynthesis
+
+
+form in any significant quantity both because of the absence of stable nuclei with mass number 5 or
+8 (which impedes nucleosynthesis via n4 He, p4 He or 4 He4 He reactions), and the large Coulomb bar-
+riers for reactions such as 3 He(4 He, γ)7 Li and 3 He(4 He, γ)7 Be. Hence the primordial mass fraction
+of 4 He, Yp ≡ ρ(4 He)/ρb , can be estimated by the simple counting argument
+
+                                               2(n/p)
+                                        Yp =           ≃ 0.25 ,                                 (24.1)
+                                               1 + n/p
+
+where strictly speaking this gives the baryon fraction in 4 He, which is what we will quote throughout.
+This differs slightly from the mass fraction due to small binding energy corrections.
+    There is little sensitivity here to the actual nuclear reaction rates for the production of 4 He.
+Nuclear rates are, however, critically important in determining the other ‘left-over’ abundances: D
+and 3 He at the level of a few times 10−5 by number relative to H, and 7 Li/H at the level of about
+10−10 (when η10 is in the range 1–10). These values can be understood in terms of approximate
+analytic arguments [12, 13].
+    The elemental abundances shown in Fig. 24.1 as a function of η10 were calculated using an
+updated version [14] of the Wagoner code [1]; other versions [15–18] too are publicly available. The
+4 He curve includes small corrections due to radiative processes at zero and finite temperatures [19],
+
+non-equilibrium neutrino heating during e± annihilation [20], and finite nucleon mass effects [21];
+the range primarily reflects the 2σ uncertainty in the neutron lifetime. The spread in the curves
+for D, 3 He, and 7 Li corresponds to the 2σ uncertainties in nuclear cross sections, as estimated by
+Monte Carlo methods [22–25]. The input nuclear data have been carefully reassessed [2, 14, 22–32],
+leading to improved precision for the abundance predictions. In particular, the uncertainty in 7 Li/H
+at interesting values of η has been reduced recently by a factor ∼ 2, a consequence of a similar
+reduction in the error budget [33] for the dominant mass-7 production channel 3 He(4 He, γ)7 Be.
+Polynomial fits to the predicted abundances and the error correlation matrix have been given in
+refs. [24, 34]. The boxes in Fig 24.1 show the observationally inferred primordial abundances with
+their associated uncertainties, as discussed below.
+    The nuclear reaction cross sections important for BBN have all been measured at the relevant
+energies. Recently however there have been substantial advances in the precision of light element
+observations (e.g., D/H) and in the determination of cosmological parameters (e.g., from Planck).
+This motivates corresponding improvement in BBN predictions and thus in the key reaction cross
+sections. Recent measurements of D(p, γ)3 He by the LUNA collaboration have significantly im-
+proved the precision of D/H predictions [35]. Even so, the nuclear uncertainties still leave D/H
+prediction errors larger than those of the observations [14, 31, 32]. The D(D, n)3 He and D(D, p)3 H
+reactions now not only dominate the uncertainty budget, but they can give significantly different
+D/H predictions depending on whether one uses just the empirical determination of the cross sec-
+tions, or also uses theory to guide the functional form. Clearly, more experimental data is needed.
+    An additional experimental parameter important in determining the light element abundances
+is the neutron lifetime, τn , which normalizes (the inverse of) Γn↔p . Its value has been revised
+downwards to τn = 878.4 ± 0.5 s (see N Baryons Listing).
+24.3 Observations: the Light Element Abundances
+    BBN theory predicts the universal abundances of D, 3 He, 4 He, and 7 Li, which are essentially
+fixed by t ∼ 180 s. However, these abundances are inferred from observations made at much
+later epochs, after stellar nucleosynthesis has begun. Stars produce heavier elements such as C,
+N, O, and Fe (collectively referred to as “metals”), and the ejecta from stellar processes can alter
+the light element abundances from their primordial values. To obtain measurements that more
+closely reflect the primordial composition, one must identify astrophysical environments with low
+
+                                         1st December, 2025
+3                               24. Big Bang Nucleosynthesis
+
+
+metallicity, where stellar processing has been minimal.
+    BBN is the only significant source of deuterium, which is entirely destroyed when cycled through
+stars [36]. Thus, any detection of D provides a lower limit to the primordial abundance D/H|p,
+and correspondingly, an upper limit on the baryon-to-photon ratio η10 . The best proxy for the
+primordial D abundance is its measurement in distant, chemically unprocessed environments, where
+stellar processing (astration) is minimal [36, 37]. These measurements have become possible with
+the advent of large-aperture telescopes; yet, despite nearly three decades of observational effort,
+only 12 high-precision determinations are currently available, as listed in Table 24.1 [38–44].
+    High-resolution spectra reveal the presence of deuterium in high-redshift, low-metallicity quasar
+absorption systems through its isotope-shifted Lyman-α absorption lines. However, these features
+are often partially obscured or contaminated by intervening hydrogen in the Lyman-α forest. In
+a few damped Lyman-α (DLA) systems, deuterium absorption has been resolved in higher-order
+transitions of the Lyman series. Recent determinations [39, 41] and re-analyses [42–44] have signif-
+icantly improved the precision of deuterium abundance measurements compared to earlier studies.
+The observed D/H ratio exhibits  R
+                                    no correlation with metallicity, redshift, or the neutral hydro-
+gen column density N (HI) (= los nHI ds) integrated along the line of sight through the absorber.
+The metallicities of these absorption systems range from (0.001 − 0.03)× the Solar value, and the
+level of deuterium astration is estimated to be between 0.1% and 1% [37]. In contrast, within the
+Milky Way, DI/HI measurements show an anti-correlation with metal abundance, suggesting that
+a fraction of interstellar deuterium is depleted onto dust grains [46].
+    However, in the absorbers where deuterium is measured, the dust content is small, as implied by
+Solar proportions of the abundances of refractory and non-refractory elements. Thus, the neutral
+atomic ratio DI/HI ≡ D/H should match the underlying isotope ratio, and be truly representative of
+the primordial value D/H|p. The weighted mean of the 12 most precise and recent measurements
+in Table 24.1 is D/H|p × 106 = (25.08 ± 0.27). It is worth noting that earlier determinations
+by [47–51] are also consistent with this mean value. However, the ones listed in Table 24.1 yield
+χ2 /(N − 1) = 1.160, indicating that some  p uncertainties may be underestimated. We therefore
+increase the uncertainty by a factor S = χ2 /(N − 1) = 1.08, and the recommended value for the
+abundance of primordial deuterium is:
+
+                        D/H|p × 106 = 25.08 (±0.27 × S) = 25.08 (±0.29).                      (24.2)
+
+    The primordial 4 He abundance is best determined through recombination emission lines of
+He and H in the most metal-poor extragalactic HII (ionized) regions, viz. blue compact galaxies,
+generally found at low redshift. There is now a large body of data on 4 He and CNO in these galaxies,
+with over 1000 such systems in the Sloan Digital Sky Survey alone [54]. These data confirm that
+the stellar contribution to the helium abundance is positively correlated with metal production,
+so extrapolation to zero metallicity gives the primordial 4 He abundance Yp . However, HII regions
+are complex systems and several physical parameters enter in the He/H determination, notably
+the electron density and temperature, as well as reddening. Thus, systematic effects dominate the
+uncertainties in the abundance determination [55,56]. A major step forward has been the inclusion
+of the He λ10830 infrared emission line which shows a strong dependence on the electron density
+and is thus useful to break the degeneracy with the temperature, allowing for a more robust helium
+abundance determination. In recent works the underlying 4 He stellar absorption, and/or the newly
+derived values of the HeI-recombination and H-excitation-collisional coefficients are adressed and
+the 4 He abundances have increased significantly. Some recent results are reported in Table 24.2.
+    There is a reassuring convergence towards the value of Yp = 0.245 between detailed analyses
+of specific extragalactic HII regions with other (statistically more significant) analyses of many
+
+                                         1st December, 2025
+4                                     24. Big Bang Nucleosynthesis
+
+
+
+
+                                       baryon density parameter ΩBh2
+                                                10−2
+         He mass fraction   0.27
+
+                            0.26
+
+                            0.25
+
+                            0.24
+
+                            0.23
+        4
+
+
+
+
+                            10−3
+        D/H
+
+
+
+
+                                                                     C
+                                                                     M
+                            10−4                                     B
+        He/H
+
+
+
+
+                            10−5
+        3
+
+
+
+
+                            10−9
+       Li/H
+       7
+
+
+
+
+                    10−10
+                              10−10                                         10−9
+                                      baryon-to-photon ratio η = nb/nγ
+
+
+
+Figure 24.1: The primordial abundances of 4 He, D, 3 He, and 7 Li as predicted by the standard
+model of Big-Bang nucleosynthesis — the bands show the 95% CL range [45]. Boxes indicate the
+observed light element abundances. The narrow vertical band indicates the CMB measure of the
+cosmic baryon density, while the wider band indicates the BBN D+4 He concordance range (both
+at 95% CL).
+
+
+systems. Thus our recommended 4 He abundance is:
+
+                                             Yp = 0.245 ± 0.003.                        (24.3)
+
+                                             1st December, 2025
+5                                  24. Big Bang Nucleosynthesis
+
+
+            Table 24.1: D/H measurements. For systems with multiple measure-
+            ments we used the most recent one which is generally more precise.
+
+    QSO                              zem      zabs      log N ((HI))   [X/H]          (D/H) × 106    Ref
+    SDSS J1419+0829                  3.03     3.049     20.392±0.003   -1.92[O/H]     25.06 ± 0.52   [38]
+    HS 0105+1619                     2.65     2.536     19.426±0.006   -1.77[O/H]     25.76 ± 1.54   [38]
+    QSO B0913+0715                   2.78     2.618     20.312±0.008   -2.40[O/H]     25.29 ± 1.05   [38]
+    SDSS J1358+0349                  2.89     2.853     20.524±0.006   -2.80[O/H]     26.18 ± 0.72   [39]
+    SDSS J1358+6522                  3.17     3.067     20.495±0.008   -2.33[O/H]     25.82 ± 0.71   [38]
+    SDSS J1558−0031                  2.82     2.702     20.75±0.03     -1.55[O/H]     24.04 ± 1.44   [38]
+    PKS 1937−1009                    3.78     3.256     18.09±0.03     -1.87[O/H]     24.49 ± 2.80   [40]
+    QSO J1444+2919                   2.66     2.437     19.983±0.010   -2.04[O/H]     19.68 +3.3
+                                                                                            −2.8     [41]
+    PKS 1937−1009                    3.78     3.572     17.925±0.006   -2.52[O/H]     26.08 ± 1.02   [52]
+    QSO 1009+2956                    2.63     2.504     17.362±0.005   -2.50[Si/H]    24.77 +4.1
+                                                                                            −3.5     [43]
+    QSO 1243+307                     2.55     2.525     19.761±0.026   -2.77[O/H]     23.88 ± 0.82   [44]
+    QSO J1332+0052                   3.51     3.42      19.304±0.004   -1.71[O/H]     23.88 ± 0.77   [53]
+
+    Weighted mean, with S = 1.08                                                      25.08 ± 0.29
+
+
+
+            Table 24.2: Recent primordial 4 He measurements in extragalactic HII
+            regions.
+
+                       Yp (4 He)   ±1σstat     ±1σsys    ±1σtot   # systems    Ref
+                       0.2453      0.0034                                16    [57]
+                       0.2451      0.0019      0.0018    0.0026           1    [58]
+                       0.243       0.005                                 16    [59]
+                       0.2462      0.0022                               120    [60]
+                       0.2436      0.0040                                54    [61]
+                       0.2448      0.0027      0.0018    0.0033           7    [62]
+                       0.2448                            0.0033          17    [63]
+
+
+
+
+The central value is close to the mean/weighted average of the values in Table 24.2, however we
+caution that combining these partially overlapping data sets is not straightforward. The uncertainty
+reflects the combined statistical and systematic errors, with the latter, estimated to be ±0.002 [62],
+being dominant.
+    The best-suited objects for determining the primordial abundance of 7 Li are metal-poor stars
+in the Galactic halo, which exhibit metallicities as low as 10−6 of the Solar value [64]. Observations
+have long shown that 7 Li does not vary significantly among halo dwarfs with metallicities <   ∼ 1/30
+of Solar — the Spite plateau [65–69]. However, more recent observations show an increase in Li de-
+pletion in metal-poor stars [70–72]. The reason for this increased scatter at low metallicity remains
+unknown and prevents a reliable derivation of the primordial 7 Li abundance by extrapolation to
+zero metallicity [71, 72].
+    To estimate the primordial 7 Li abundance, we restrict the analysis to stars with metallicities in
+the range −3.5 < [Fe/H] < −1.5 [69,72], where no scatter beyond the observational uncertainties is
+observed. Lower metallicity stars show a strong contamination of Carbon enriched stars [73]. This
+
+                                             1st December, 2025
+6                                24. Big Bang Nucleosynthesis
+
+
+yields:
+                                  Li/H|p = (1.45 ± 0.25) × 10−10 .                             (24.4)
+Strictly speaking, the inferred primordial 7 Li abundance should be regarded as a lower bound rather
+than a direct measurement. This is because 7 Li in Population II stars may have been partially
+destroyed through mixing of the outer stellar layers with the hotter interior [74]. Such processes
+are constrained by the lack of significant scatter in 7 Li as a function of Tef f , yet a significant
+depletion may still have occurred [75]. Stellar determinations of Li abundances typically sum the
+contributions from both 6 Li and 7 Li isotopes. However, high-precision measurements indicate that
+6 Li / 7 Li < 0.05 , confirming that 7 Li overwhelmingly dominates [76].
+
+     The primordial abundance of 3 He has the poorest observational determination of all of the
+light nuclides. The only data available come from the Solar system and from solar-metallicity
+HII regions in the Galaxy [77]. Therefore, inferring the primordial 3 He abundance is problematic,
+compounded by the fact that stellar nucleosynthesis models for 3 He are in conflict with observations.
+Consequently, we consider it inappropriate to use 3 He (and also D+3 He) as a cosmological probe.
+24.4 Concordance, Dark Matter, and the CMB
+     We now use the observed light element abundances to test the theory. We first consider standard
+BBN, which is based on Standard Model physics alone, so Nν = 3 and the only free parameter is the
+baryon-to-photon ratio η. (The implications of BBN for physics beyond the Standard Model will be
+considered below). Thus, any abundance measurement determines η, and additional measurements
+overconstrain the theory and thereby provide a consistency check.
+     While the η ranges spanned by the boxes in Fig 24.1 do not all overlap, they are all within a
+factor ∼ 2 of each other. In particular, the lithium abundance corresponds to η values that are
+inconsistent with that of the (now very precise) D/H abundance as well as the less-constraining
+4 He abundance. This discrepancy marks the lithium problem. The problem could simply reflect
+
+difficulty in determining the primordial lithium abundance, or could hint at a more fundamental
+omission in the theory. The possibility that lithium reveals new physics is addressed in detail in the
+next section. If however we exclude the lithium constraint because its inferred abundance suffers
+from systematic uncertainties, then D/H and 4 He are in agreement. The concordant η range is
+essentially determined by D/H, and yields [78]
+
+                                    (η10 )SBBN = 6.040 ± 0.118 ,                               (24.5)
+
+where the errors are 1σ. Despite the lithium problem, the overall concordance remains remarkable:
+using only well-established microphysics we can extrapolate back to t ∼ 1 s to predict light element
+abundances spanning nine orders of magnitude, in approximate agreement with observation. This
+is a major success for the standard cosmology, and inspires confidence in extrapolation back to such
+early times.
+    This concordance provides a measure of the baryon content:
+
+                                 (Ωb h2 )SBBN = 0.02205 ± 0.00043 ,                            (24.6)
+
+where again errors are 1σ, a result that plays a key role in our understanding of the matter budget
+of the Universe. First of all Ωb  1, i.e., baryons cannot close the Universe [79]. Furthermore, the
+cosmic density of (optically) luminous matter is Ωlum ≃ 0.0024h−1 [80], so that Ωb  Ωlum : most
+baryons are optically dark, probably in the form of a diffuse intergalactic medium [81]. Finally,
+given that Ωm ∼ 0.3 (see the ‘Dark Matter’ and ‘Cosmological Parameters’ reviews), we infer that
+most matter in the Universe is not only dark, but also takes some non-baryonic (more precisely,
+non-nucleonic) form.
+
+                                         1st December, 2025
+7                                 24. Big Bang Nucleosynthesis
+
+
+   The BBN prediction for the cosmic baryon density can be tested through precision measure-
+ments of CMB temperature fluctuations (see the ‘Cosmic Microwave Background’ review). One can
+determine η from the amplitudes of the acoustic peaks in the CMB angular power spectrum [82],
+making it possible to compare two measures of η using very different physics, at two widely separated
+epochs. In the standard cosmology, there is no change in η between BBN and CMB decoupling,
+thus, a comparison of ηBBN and ηCMB is a key test. Agreement would endorse the standard picture,
+while disagreement could point to new physics during/between the BBN and CMB epochs.
+   The analysis described in the Cosmic Microwave Background review (Sec.29), based on Planck
+TT, TE, EE + lowE data and lensing, yields [83]:
+
+                                   (Ωb h2 )CMB = 0.02237 ± 0.00015;                                 (24.7)
+
+which corresponds to [84]
+                                        (η10 )CMB = 6.12 ± 0.04 .                                   (24.8)
+This result depends weakly on the primordial helium abundance, and the fiducial Planck analysis
+uses BBN theory to fix Yp (η). Without BBN theory, the Planck TT, TE, EE + lowE data plus
+lensing give Ωb h2 = 0.02230 ± 0.00021, corresponding to η10 = 6.104 ± 0.058. As shown in Fig. 24.1,
+this CMB estimate of the baryon density (narrow vertical band) is consistent with the BBN range,
+i.e., in good agreement with the value inferred from high-redshift D/H measurements and local 4 He
+determinations; together these observations span diverse environments from redshifts z ∼ 1000 to
+the present. Combining the CMB and BBN sharpens the baryon measures to η10 = 6.115 ± 0.038
+and Ωb h2 = 0.02233 ± 0.00014 [78].
+     The 4 He abundance is proportional to the n/p ratio when the weak-interaction rate falls behind
+the Hubble expansion rate at Tfr ∼ 1 MeV. The presence of additional neutrino flavors (or of any
+other relativistic species) at this time increases g∗ , hence the expansion rate, leading to a larger value
+of Tfr , n/p, and therefore Yp [10, 85]. In the Standard Model at T = 1 MeV, g∗ = 5.5 + 47 Nν , where
+Nν is the effective number of (nearly) massless neutrino flavors. The helium curves in 24.1 were
+computed taking Nν = 3; small corrections for non-equilibrium neutrino heating [20] are included
+in the thermal evolution and lead to an effective Nν = 3.044 compared to assuming instantaneous
+neutrino freezeout (see ‘Big Bang Cosmology’ — Sec. 22 of this Review). The computed 4 He
+abundance scales as ∆ Yp ≃ 0.013∆Nν [11]. Clearly the central value for Nν from BBN will depend
+on η, which is independently determined (with weaker sensitivity to Nν ) by the adopted D or 7 Li
+abundance. For example, if the best value for the observed primordial 4 He abundance is 0.249,
+then, for η10 ∼ 6, the central value for Nν is very close to 3. A maximum likelihood analysis on η
+and Nν based on 4 He and D abundances nearly identical to those above finds the (correlated) 68%
+CL ranges to be η10 = 6.088 ± 0.054 and [45, 78, 86]
+
+                                          Nν = 2.898 ± 0.141                                        (24.9)
+
+which is consistent with the Standard Model. Identical results are obtained using a simpler method
+to extract such bounds based on χ2 statistics, given a set of input abundances [87]. Very recently,
+the Atacama Cosmology Telescope and South Pole Telescope have each released new cosmological
+parameters arising from their most recent data, reporting Neff = 2.86 ± 0.13 [88] and Neff =
+2.83 ± 0.13 [89], respectively. We look forward to joint analyses of these data with Planck that will
+sharpen the BBN/CMB interplay.
+    The CMB damping tail is sensitive to the primordial 4 He abundance independently of both BBN
+and local 4 He measurements [90]. The Planck analysis using TT, TE, EE+lowE and lensing but not
+the BBN Yp (η) relation gives a 4 He mass fraction 0.239+0.024                                   +0.24
+                                                         −0.025 , and nucleon fraction Yp = 0.240−0.25 ,
+
+
+                                           1st December, 2025
+8                                 24. Big Bang Nucleosynthesis
+
+
+both at 95% CL [83]. This is consistent with the HII region helium abundance determination.
+Moreover, this value is consistent with the Standard (Nν = 3) BBN prediction for Yp with the
+Planck-determined baryon density. This concordance represents a successful CMB-only test of
+BBN.
+    The precision determination of the baryon density using the CMB motivates using this as an
+input to BBN calculations. Within the context of the Standard Model, BBN then becomes a
+zero-parameter theory, and the light element abundances are completely determined to within the
+uncertainties in ηCMB and the BBN theoretical errors. Comparison with the observed abundances
+then can be used to test the astrophysics of post-BBN light element evolution [91]. Alternatively,
+one can consider possible physics beyond the Standard Model (e.g., which might change the ex-
+pansion rate during BBN) and then use all of the abundances to test such models; this is discussed
+in 24.6 below.
+24.5 The Lithium Problem and its Possible Resolution
+   As shown in Fig. 24.1, stellar Li/H measurements are inconsistent with the D/H (and CMB)
+constraints, given the quoted error budgets. For example, the primordial value from [45]
+
+                                     Li/H|p = (4.72 ± 0.7) × 10−10                                (24.10)
+exceeds the prediction of eq. 24.4 by a factor of 3.3, corresponding to a 4.4σ discrepancy. The
+universality of this problem is underscored by the fact that stars accreted into the Milky Way
+billions of years ago from external galaxies exhibit the same Li abundances as native stars [92–94].
+The question then becomes pressing as to whether this mismatch comes from systematic errors in
+the observed abundances, and/or uncertainties in stellar astrophysics or nuclear inputs, or whether
+there might be new physics at work [9]. Nuclear inputs (cross sections) for BBN reactions are con-
+strained by extensive laboratory measurements; to increase 7 Be destruction requires enhancement
+of otherwise subdominant processes that can be attained by missed resonances in a few reactions
+such as 7 Be(d, p)2α if the compound nuclear state properties are particularly favorable [30, 95–97].
+However, experimental searches have now closed off these possibilities [98–100], making a nuclear
+fix increasingly unlikely.
+     Alternatively, lithium may be destroyed in situ within stars over their lifetimes. Depletion
+mechanisms include diffusion, rotational mixing, and pre-main-sequence burning. While these
+effects are real, reducing Li to the required levels generally demands some degree of fine-tuned
+stellar parameters or ad hoc mechanisms [101–104]. Diffusive models, for instance, predict both
+a dispersion in Li abundances and a downturn at the hot end of the Spite plateau. Additional
+turbulence must then be invoked to suppress diffusion and restore the observed uniformity [103].
+     Large surveys provide new insight. The GALAH project, which measured Li abundances for
+over 100,000 field stars, finds that warm stars with −1.0 ≤ [Fe/H] ≤ −0.5 form a plateau consistent
+with BBN predictions. This suggests that more metal-poor stars—now evolved beyond observabil-
+ity—may once have had higher Li abundances as well [105]. Pre-main-sequence depletion has also
+been proposed as a viable mechanism [102, 106].
+     Recent 6 Li measurements have added an important dimension. Because BBN produces neg-
+ligible 6 Li [107], this isotope arises from later cosmic-ray interactions—fusion reactions such as
+4 He + 4 He → 6,7 Li + · · · and spallation on CNO nuclei, e.g. p + 16 O → 6,7 Li, 9 Be, 10,11 B + · · · .
+                                                                   cr
+Thus 6 Li is co-produced with Be and B, both observed in metal-poor stars, implying that 6 Li must
+have been present at their birth. Early reports of 6 Li detections [108–110] suggested limited 7 Li
+depletion, since 6 Li is more fragile. However, recent work places strong upper limits on 6 Li/H in key
+plateau stars [111], removing the 6 Li-based objection for the absence of stellar depletion. Indeed,
+cosmic-ray production models can quantify the expected 6 Li levels, and the observed absence of 6 Li
+
+                                           1st December, 2025
+9                                24. Big Bang Nucleosynthesis
+
+
+today implies significant depletion—enough that 7 Li destruction may also be sufficient to reconcile
+observations with BBN predictions [112]. This strengthens the case for stellar depletion as the
+leading resolution to the lithium problem [101–104, 113]. Future 6 Li detections or limits, together
+with refined models, will be critical for testing this scenario.
+    Finally, interstellar lithium measurements in low-metallicity systems provide a stellar depletion-
+free probe. In the Small Magellanic Cloud, interstellar Li/H has been measured at levels consistent
+with Galactic halo stars [114,115]. Additional such measurements in other metal-poor environments
+would be highly valuable in disentangling primordial and stellar contributions.
+    It remains possible that the lithium problem points to new physics. Nucleosynthesis models in
+which the baryon-to-photon ratio is inhomogeneous can alter abundances for a given ηBBN , but will
+overproduce 7 Li [116]. Entropy generation by some non-standard process could have decreased η
+between the BBN era and CMB decoupling, however the lack of spectral distortions in the CMB
+rules out any significant energy injection up to a redshift z ∼ 107 [117]. The most intriguing
+resolution of the lithium problem thus involves new physics during BBN [7–9]
+    We summarize the general features of such solutions here, and later consider examples in the
+context of specific particle physics models. Many proposed solutions introduce perturbations to
+light-element formation during BBN; while all element abundances may suffer perturbations, the
+interplay of 7 Li and D is often the most important i.e. observations of D often provide the strongest
+constraints on the allowed perturbations to 7 Li. In this connection it is important to note that the
+new, very precise determination of D/H will significantly constrain the ability of such models to
+ameliorate or solve the lithium problem.
+     A well studied class of models invokes the injection of suprathermal hadronic or electromag-
+netic particles due to decays of dark matter particles. The effects are complex and depend on the
+nature of the decaying particles and their branchings and spectra. However, the models that most
+successfully solve the lithium problem generally feature non-thermal nucleons, which dissociate all
+light elements. Dissociation of even a small fraction of 4 He introduces a large abundance of free
+neutrons, which quickly thermalize. The thermal neutrons drive the 7 Be(n, p)7 Li conversion of
+7 Be. The resulting 7 Li has a lower Coulomb barrier relative to 7 Be and is readily destroyed via
+7 Li(p, α)4 He [118, 119]]. But 4 He dissociation also produces D directly as well as via nonthermal
+
+neutron n(p, γ)d reactions. This introduces a tension between Li/H reduction and D/H enhance-
+ment that becomes increasingly restrictive with the increasing precision of deuterium observations.
+Indeed, this now forces particle injection scenarios to make very small 7 Li perturbations — far short
+of the level needed. An exception is a recent model wherein MeV-scale decays by construction avoid
+4 He dissociation and associated D/H overproduction, instead borrowing neutrons by dissociating
+
+only deuterons [120].
+    Another important class of models retains the standard cosmic particle content, but changes
+their interactions via time variations in the fundamental constants [121–127]. Here too, the details
+are model-dependent, but scenarios that solve or alleviate the lithium problem often feature per-
+turbations to the deuteron binding energy. A weaker D binding leads to the D bottleneck being
+overcome later, so that element formation commences at a lower temperature and lower density.
+This leads in turn to slower nuclear rates that freeze out earlier. The net result is a higher final
+D/H, due to less efficient processing into 4 He, but also lower Li, due to suppressed production via
+3 He(α, γ)7 Be.
+
+   The cosmological lithium problem remains an unresolved issue in BBN. Nevertheless, the re-
+markable concordance between the CMB and the D (as well as 4 He) abundance, is a non-trivial
+success, and provides important constraints on the early Universe.
+
+                                         1st December, 2025
+10                               24. Big Bang Nucleosynthesis
+
+
+24.6 Beyond the Standard Model
+    Given the simple physics underlying BBN, it is remarkable that it still provides the most effective
+test for the cosmological viability of ideas concerning physics beyond the Standard Model. Although
+baryogenesis and inflation must have occurred at higher temperatures in the early Universe, we
+do not as yet have ‘standard models’ for these, so BBN still marks the boundary between the
+established and the speculative in Big Bang cosmology. It might appear possible to push the
+boundary back
+            √    to the quark-hadron transition at T ∼ ΛQCD , or electroweak symmetry breaking
+at T ∼ 1/ GF ; however, so far no observable relics of these epochs have been identified, either
+theoretically or observationally. Thus, although the Standard Model provides a precise description
+of physics up to the Fermi scale, cosmology cannot be traced in detail before the BBN era.
+    The CMB power spectrum in the damping tail is independently sensitive to Nν (e.g. [128]).
+The CMB value NνCMB probes the cosmic radiation content at (re)combination, so a discrepancy
+would imply new physics or astrophysics. Indeed, observations by the South Pole Telescope implied
+NνCMB = 3.85 ± 0.62 [129], prompting discussion of dark radiation such as sterile neutrinos [130].
+                                                       +0.36
+However, Planck 2018 results give NνCMB = 2.92+0.37          , 95% CL, when using Planck TT, TE,
+EE+lowE, a result quite consistent with 3 Standard Model neutrinos [83] (and adjusting for the
+CMB’s measurement of Neff = 3.044 due to neutrino heading effects [131–133]). Indeed, the BBN
+and CMB constraints on Nν are independent and of similar precision, so that it is now possible to
+limit any change in this parameter (and/or the baryon-to-photon ratio) between nucleosynthesis
+and recombination [78]. This can, for example, constrain models with late particle decays, or with
+early dark energy.
+    Just as one can use the measured helium abundance to place limits on g∗ [85, 122, 134–136],
+any changes in the strong, weak, electromagnetic, or gravitational coupling constants, arising e.g.,
+from the dynamics of new dimensions, can be similarly constrained [137], as can any speed-up of
+the expansion rate in, e.g., scalar-tensor theories of gravity [138].
+    The limits on Nν can be translated into limits on other types of particles or particle masses
+that would affect the expansion rate of the Universe during nucleosynthesis. For example, consider
+sterile neutrinos with only right-handed interactions of strength GR < GF . Such particles would
+decouple at higher temperature than (left-handed) neutrinos, so their number density (∝ T 3 )
+relative to neutrinos would be reduced by any subsequent entropy release, e.g., due to annihilations
+of massive particles that become non-relativistic between the two decoupling temperatures. Thus,
+(relativistic) particles with less than full strength weak interactions contribute less to the energy
+density than particles that remain in equilibrium up to the time of nucleosynthesis [139]. If we
+impose Nν < 4 as an illustrative constraint, then the three right-handed neutrinos must have a
+temperature 3(TνR /TνL )4 < 1. Since the temperature of the decoupled νR is determined by entropy
+conservation (see ‘Big Bang Cosmology’ — Sec. 22 of this Review), TνR /TνL = [(43/4)/g∗ (Td )]1/3 <
+0.76, where Td is the decoupling temperature of the νR . This requires g∗ (Td ) > 24, so decoupling
+must have occurred at Td > 140 MeV. The decoupling temperature is related to GR through
+(GR /GF )2 ∼ (Td /3 MeV)−3 , where 3 MeV is the decoupling temperature for νL s. This yields a limit
+GR . 10−2 GF . The above argument sets lower limits on the masses of new Z 0 gauge bosons to which
+right-handed neutrinos would be coupled in models of superstrings [140], or extended technicolour
+[141]. Similarly a Dirac magnetic moment for neutrinos, which would allow the right-handed states
+to be produced through scattering and thus increase g∗ , can be significantly constrained [142], as
+can any new interactions for neutrinos that have a similar effect [143–145]. Right-handed states
+can be populated directly by helicity-flip scattering if the neutrino mass is large enough, and this
+property has been used to infer a bound of mντ . 1 MeV (taking Nν < 4) [146]. If there is mixing
+between active and sterile neutrinos then the effect on BBN is more complicated [147, 148].
+    BBN limits on the cosmic expansion rate constrain supersymmetric scenarios in which the
+
+                                         1st December, 2025
+11                               24. Big Bang Nucleosynthesis
+
+
+neutralino or gravitino are very light, so that they contribute to g∗ [149]. A gravitino in the mass
+range ∼ 10−4 − 10 eV will affect the expansion rate of the Universe similarly to a light neutralino
+(which is however now probably ruled out by collider data, especially the decays of the Higgs-like
+boson). The net contribution to Nν then ranges between 0.74 and 1.69, depending on the gravitino
+and slepton masses [150].
+    The limit on the expansion rate during BBN can also be translated into bounds on the mass/life-
+time of non-relativistic particles that decay during BBN. This results in an even faster speed-up
+rate, and typically also changes the entropy [151–153]. If the decays include Standard Model
+particles, the resulting electromagnetic [154] [91, 140, 155] and/or hadronic [156, 157] cascades can
+strongly perturb the light elements, which leads to even stronger constraints. Such arguments have
+been applied to rule out an MeV mass for ντ , which decays during nucleosynthesis [158].
+    Decaying-particle arguments have proved very effective in probing supersymmetry. Light-
+element abundances generally are complementary to accelerator data in constraining SUSY pa-
+rameter space, with BBN reaching to values kinematically inaccessible to the LHC. Much recent
+interest has focused on the case in which the next-to-lightest supersymmetric particle is metastable
+and decays during or after BBN. The constraints on unstable particles discussed above imply strin-
+gent bounds on the allowed abundance of such particles [118]; if the metastable particle is charged
+(e.g., the stau), then it is possible for it to form atom-like electromagnetic bound states with nu-
+clei, and the resulting impact on light elements can be quite complex [8, 95, 159]. Moreover, SUSY
+decays can destroy 7 Li and/or produce 6 Li, leading to a possible supersymmetric solution to the
+lithium problems noted above [160] (see [7] for a review).
+    These arguments impose powerful constraints on supersymmetric inflationary cosmology [91,
+140, 155–157], particularly thermal leptogenesis [161]. These limits can be evaded only if the grav-
+itino is massive enough to decay before BBN, i.e., m3/2 & 50 TeV [162] (which would be un-
+natural), or if it is in fact the lightest supersymmetric particle and thus stable [140, 155, 163, 164].
+Similar constraints apply to moduli – very weakly coupled fields in string theory that obtain an
+electroweak-scale mass from supersymmetry breaking [165].
+    Finally, we mention that BBN places powerful constraints on the possibility that there are
+new large dimensions in nature, perhaps enabling the scale of quantum gravity to be as low as the
+electroweak scale [166]. Thus, Standard Model fields may be localized on a brane, while gravity alone
+propagates in the bulk. It has been further noted that the new dimensions may be non-compact,
+even infinite [167], and the cosmology of such models has attracted considerable attention. The
+expansion rate in the early Universe can be significantly modified, so BBN is able to set interesting
+constraints on such possibilities [168, 169].
+References
+ [1] R. V. Wagoner, W. A. Fowler and F. Hoyle, Astrophys. J. 148, 3 (1967).
+  [2] D. N. Schramm and M. S. Turner, Rev. Mod. Phys. 70, 303 (1998), [arXiv:astro-ph/9706069].
+  [3] G. Steigman, Ann. Rev. Nucl. Part. Sci. 57, 463 (2007), [arXiv:0712.1100].
+  [4] F. Iocco et al., Phys. Rept. 472, 1 (2009), [arXiv:0809.0631].
+  [5] R. H. Cyburt et al., Rev. Mod. Phys. 88, 015004 (2016), [arXiv:1505.01076].
+  [6] S. Sarkar, Rept. on Prog. in Phys. 59, 1493 (1996).
+  [7] K. Jedamzik and M. Pospelov, New J. Phys. 11, 105028 (2009), [arXiv:0906.2087].
+  [8] M. Pospelov and J. Pradler, Ann. Rev. Nucl. Part. Sci. 60, 539 (2010), [arXiv:1011.1054].
+  [9] B. D. Fields, Ann. Rev. Nucl. Part. Sci. 61, 47 (2011), [arXiv:1203.3551].
+ [10] P.J.E. Peebles, Phys. Rev. Lett. 16, 411 (1966).
+
+                                          1st December, 2025
+12                              24. Big Bang Nucleosynthesis
+
+
+ [11] J. Bernstein, L. S. Brown and G. Feinberg, Rev. Mod. Phys. 61, 25 (1989).
+ [12] S. Mukhanov, Int. J. Theor. Phys. 143, 669 (2004).
+ [13] R. Esmailzadeh, G. D. Starkman and S. Dimopoulos, Astrophys. J. 378, 504 (1991).
+ [14] T.-H. Yeh, K. A. Olive and B. D. Fields, JCAP 03, 046 (2021), [arXiv:2011.13874].
+ [15] L. Kawano, Technical report (1992),           URL https://ui.adsabs.harvard.edu/abs/
+      1992STIN...9225163K.
+ [16] A. Arbey et al., Comput. Phys. Commun. 248, 106982 (2020), [arXiv:1806.11095].
+ [17] R. Consiglio et al., Computer Physics Communications 233, 237 (2018), [arXiv:1712.04378].
+ [18] A.-K. Burns, T. M. P. Tait and M. Valli, Eur. Phys. J. C 84, 1, 86 (2024), [arXiv:2307.07061].
+ [19] S. Esposito et al., Nucl. Phys. B568, 421 (2000), [arXiv:astro-ph/9906232].
+ [20] S. Dodelson and M. S. Turner, Phys. Rev. D46, 3372 (1992).
+ [21] D. Seckel (1993), [hep-ph/9305311].
+ [22] R. H. Cyburt, B. D. Fields and K. A. Olive, New Astron. 6, 215 (2001), [arXiv:astro-
+      ph/0102179].
+ [23] M. S. Smith, L. H. Kawano and R. A. Malaney, Astrophys. J. Suppl. 85, 219 (1993).
+ [24] G. Fiorentini et al., Phys. Rev. D58, 063506 (1998), [arXiv:astro-ph/9803177].
+ [25] A. Coc et al., Astrophys. J. 744, 158 (2012), [arXiv:1107.1117].
+ [26] R. H. Cyburt, B. D. Fields and K. A. Olive, JCAP 0811, 012 (2008), [arXiv:0808.2818].
+ [27] K. M. Nollett and S. Burles, Phys. Rev. D61, 123505 (2000), [arXiv:astro-ph/0001440].
+ [28] R. H. Cyburt, Phys. Rev. D70, 023505 (2004), [arXiv:astro-ph/0401091].
+ [29] P. D. Serpico et al., JCAP 0412, 010 (2004), [arXiv:astro-ph/0408076].
+ [30] R. N. Boyd et al., Phys. Rev. D82, 105005 (2010), [arXiv:1008.0848].
+ [31] C. Pitrou et al., Mon. Not. Roy. Astron. Soc. 502, 2, 2474 (2021), [arXiv:2011.11320].
+ [32] O. Pisanti et al., JCAP 04, 020 (2021), [arXiv:2011.11537].
+ [33] R.H. Cyburt and B. Davids, Phys. Rev. C78, 012 (2008).
+ [34] S. Burles, K. M. Nollett and M. S. Turner, Astrophys. J. 552, L1 (2001), [arXiv:astro-
+      ph/0010171].
+ [35] V. Mossa et al., Nature 587, 7833, 210 (2020).
+ [36] R. I. Epstein, J. M. Lattimer and D. N. Schramm, Nature 263, 198 (1976).
+ [37] F. van de Voort et al., Mon. Not. Roy. Astron. Soc. 477, 1, 80 (2018), [arXiv:1704.08254].
+ [38] R. Cooke et al., Astrophys. J. 781, 1, 31 (2014), [arXiv:1308.3240].
+ [39] R. J. Cooke et al., Astrophys. J. 830, 2, 148 (2016), [arXiv:1607.03900].
+ [40] S. Riemer-Sørensen et al., Mon. Not. Roy. Astron. Soc. 447, 3, 2925 (2015), [arXiv:1412.4043].
+ [41] S. A. Balashev et al., Mon. Not. Roy. Astron. Soc. 458, 2, 2188 (2016), [arXiv:1511.01797].
+ [42] S. Riemer-Sørensen et al.,      Mon. Not. Roy. Astron. Soc. 468,            3,   3239 (2017),
+      [arXiv:1703.06656].
+ [43] E. O. Zavarygin et al., Mon. Not. Roy. Astron. Soc. 477, 4, 5536 (2018), [arXiv:1706.09512].
+ [44] R. J. Cooke, M. Pettini and C. C. Steidel, Astrophys. J. 855, 2, 102 (2018),
+      [arXiv:1710.11129].
+ [45] B. D. Fields et al., JCAP 2020, 3, 010 (2020), [arXiv:1912.01132].
+
+                                        1st December, 2025
+13                              24. Big Bang Nucleosynthesis
+
+
+ [46] J. L. Linsky et al., Astrophys. J. 647, 1106 (2006), [arXiv:astro-ph/0608308].
+ [47] M. Pettini and D. V. Bowen, Astrophys. J. 560, 41 (2001), [arXiv:astro-ph/0104474].
+ [48] S. D’Odorico, M. Dessauges-Zavadsky and P. Molaro, Astron. Astrophys. 368, L21 (2001),
+      [arXiv:astro-ph/0102162].
+ [49] M. Fumagalli, J. M. O’Meara and J. X. Prochaska, Science 334, 1245 (2011),
+      [arXiv:1111.2334].
+ [50] P. Noterdaeme et al., Astron. Astrophys. 542, L33 (2012), [arXiv:1205.3777].
+ [51] R. Srianand et al., Mon. Not. Roy. Astron. Soc. 405, 3, 1888 (2010), [arXiv:1002.4620].
+ [52] F. Guarneri et al., Mon. Not. Roy. Astron. Soc. 529, 2, 839 (2024), [arXiv:2402.05586].
+ [53] P. A. Kislitsyn et al., Mon. Not. Roy. Astron. Soc. 528, 3, 4068 (2024), [arXiv:2401.12797].
+ [54] Y. I. Izotov, T. X. Thuan and N. G. Guseva, Mon. Not. Roy. Astron. Soc. 445, 1, 778 (2014),
+      [arXiv:1408.6953].
+ [55] Y. I. Izotov et al., Astrophys. J. 527, 757 (1999), [arXiv:astro-ph/9907228].
+ [56] K. A. Olive and E. D. Skillman, Astrophys. J. 617, 29 (2004), [arXiv:astro-ph/0405588].
+ [57] E. Aver et al., JCAP 2021, 3, 027 (2021), [arXiv:2010.04180].
+ [58] M. Valerdi et al., Astrophys. J. 876, 2, 98 (2019), [arXiv:1904.01594].
+ [59] V. Fernández et al., Mon. Not. Roy. Astron. Soc. 487, 3, 3221 (2019), [arXiv:1905.09215].
+ [60] O. A. Kurichin et al., Mon. Not. Roy. Astron. Soc. 502, 2, 3045 (2021), [arXiv:2101.09127].
+ [61] T. Hsyu et al., Astrophys. J. 896, 1, 77 (2020), [arXiv:2005.12290].
+ [62] M. Valerdi, A. Peimbert and M. Peimbert, Mon. Not. Roy. Astr. Soc. 505, 3, 3624 (2021),
+      [arXiv:2105.12260].
+ [63] E. Aver et al., Mon. Not. Roy. Astr. Soc. 510, 1, 373 (2022), [arXiv:2109.00178].
+ [64] D. S. Aguado et al., Astrophys. J. Lett. 874, 2, L21 (2019), [arXiv:1904.04892].
+ [65] M. Spite and F. Spite, Nature 297, 483 (1982).
+ [66] E. Vangioni-Flam et al., New Astron. 4, 245 (1999), [arXiv:astro-ph/9811327].
+ [67] S. G. Ryan et al., Astrophys. J. 530, L57 (2000), [arXiv:astro-ph/9905211].
+ [68] P. Bonifacio and P. Molaro, Mon. Not. Roy. Astron. Soc. 285, 847 (1997), [arXiv:astro-
+      ph/9611043].
+ [69] A. M. Matas Pinto et al., Astron. Astrophys. 654, A170 (2021), [arXiv:2110.00243].
+ [70] P. Bonifacio et al., Astron. Astrophys. 462, 851 (2007), [arXiv:astro-ph/0610245].
+ [71] W. Aoki et al., Astrophys. J. 698, 1803 (2009), [arXiv:0904.1448].
+ [72] L. Sbordone et al., Astron. Astrophys. 522, A26 (2010), [arXiv:1003.4510].
+ [73] P. Bonifacio et al., Astron. & Astrophys. Rev. 33, 1, 2 (2025), [arXiv:2504.06335].
+ [74] M. H. Pinsonneault et al., Astrophys. J. 574, 398 (2002), [arXiv:astro-ph/0105439].
+ [75] S. Borisov, N. Prantzos and C. Charbonnel, Astron. Astrophys. 691, A142 (2024),
+      [arXiv:2410.01880].
+ [76] R. Cayrel et al., Astron. Astrophys. 473, L37 (2007), [arXiv:0708.3819].
+ [77] D. S. Balser and T. M. Bania, Astrophys. J. 156, 6, 280 (2018), [arXiv:1810.09422].
+ [78] T.-H. Yeh et al., JCAP 10, 046 (2022), [arXiv:2207.13133].
+ [79] H. Reeves et al., Astrophys. J. 179, 909 (1973).
+
+                                        1st December, 2025
+14                              24. Big Bang Nucleosynthesis
+
+
+ [80] M. Fukugita and P. J. E. Peebles, Astrophys. J. 616, 643 (2004), [arXiv:astro-ph/0406095].
+ [81] R. Cen and J. P. Ostriker, Astrophys. J. 514, 1 (1999), [arXiv:astro-ph/9806281].
+ [82] G. Jungman et al., Phys. Rev. D54, 1332 (1996), [arXiv:astro-ph/9512139].
+ [83] Planck Collaboration et al., Astron. & Astrophys. 641, A6 (2020), [arXiv:1807.06209].
+ [84] P. A. R. Ade et al. (Planck), Astron. Astrophys. 594, A13 (2016), [arXiv:1502.01589].
+ [85] G. Steigman, D. N. Schramm and J. E. Gunn, Phys. Lett. B66, 202 (1977), [,159(1977)].
+ [86] B. D. Fields et al., JCAP 2020, 11, E02 (2020).
+ [87] E. Lisi, S. Sarkar and F. L. Villante, Phys. Rev. D59, 123520 (1999), [hep-ph/9901404].
+ [88] E. Calabrese et al., arXiv e-prints arXiv:2503.14454 (2025), [arXiv:2503.14454].
+ [89] F. Ge et al. (SPT-3G), Phys. Rev. D 111, 8, 083534 (2025), [arXiv:2411.06000].
+ [90] R. Trotta and S. H. Hansen, Phys. Rev. D69, 023509 (2004), [arXiv:astro-ph/0306588].
+ [91] R. H. Cyburt, B. D. Fields and K. A. Olive, Phys. Lett. B567, 227 (2003), [arXiv:astro-
+      ph/0302431].
+ [92] P. Molaro, G. Cescutti and X. Fu, Mon. Not. Roy. Astron. Soc. 496, 3, 2902 (2020),
+      [arXiv:2006.00787].
+ [93] J. D. Simpson et al., Mon. Not. Roy. Astron. Soc. (2021).
+ [94] D. S. Aguado et al., Mon. Not. Roy. Astron. Soc. 500, 1, 889 (2021), [arXiv:2007.11003].
+ [95] R. H. Cyburt et al., JCAP 1305, 014 (2013), [arXiv:1303.0574].
+ [96] N. Chakraborty, B. D. Fields and K. A. Olive, Phys. Rev. D83, 063006 (2011),
+      [arXiv:1011.0722].
+ [97] C. Broggini et al., JCAP 1206, 030 (2012), [arXiv:1202.5232].
+ [98] P. D. O’Malley et al., Phys. Rev. C84, 042801 (2011).
+ [99] F. Hammache et al., Phys. Rev. C88, 6, 062802 (2013), [arXiv:1312.0894].
+[100] M. W. Paris et al., Nucl. Data Sheets 120, 184 (2014), [arXiv:1304.3153].
+[101] P. Molaro et al., Memorie della Soc. Astronomica Italiana Supp. 22, 233 (2012).
+[102] X. Fu et al., Mon. Not. Roy. Astron. Soc. 452, 3, 3256 (2015), [arXiv:1506.05993].
+[103] O. Richard, G. Michaud and J. Richer, Astrophys. J. 619, 538 (2005), [arXiv:astro-
+      ph/0409672].
+[104] A. J. Korn et al., Nature 442, 657 (2006), [arXiv:astro-ph/0608201].
+[105] X. Gao et al., Mon. Not. Roy. Astron. Soc. 497, 1, L30 (2020), [arXiv:2006.05173].
+[106] C. T. Nguyen et al., Astron. Astrophys. 696, A136 (2025), [arXiv:2408.05039].
+[107] D. Thomas et al., Astrophys. J. 406, 569 (1993), [arXiv:astro-ph/9206002].
+[108] V. V. Smith, D. L. Lambert and P. E. Nissen, Astrophys. J. 408, 262 (1993).
+[109] L. M. Hobbs and J. A. Thorburn, Astrophys. J. Lett. 428, L25 (1994).
+[110] R. Cayrel et al., Astron. Astrophys. 343, 923 (1999), [arXiv:astro-ph/9901205].
+[111] E. X. Wang et al., Mon. Not. Roy. Astron. Soc. 509, 1, 1521 (2021), [arXiv:2110.03822].
+[112] B. D. Fields and K. A. Olive, JCAP 10, 078 (2022), [arXiv:2204.03167].
+[113] S. Borisov et al., Astron. Astrophys. 690, A245 (2024), [arXiv:2403.15534].
+[114] J. C. Howk et al., Nature 489, 7414, 121 (2012), [arXiv:1207.3081].
+[115] P. Molaro et al., Astron. Astrophys. 690, A38 (2024), [arXiv:2407.10818].
+
+                                        1st December, 2025
+15                              24. Big Bang Nucleosynthesis
+
+
+[116] K. Jedamzik and J. B. Rehm, Phys. Rev. D64, 023510 (2001), [arXiv:astro-ph/0101292].
+[117] D. J. Fixsen et al., Astrophys. J. 473, 576 (1996), [arXiv:astro-ph/9605054].
+[118] M. Kawasaki, K. Kohri and T. Moroi, Phys. Rev. D71, 083502 (2005), [arXiv:astro-
+      ph/0408426].
+[119] K. Jedamzik, Phys. Rev. D70, 063524 (2004), [arXiv:astro-ph/0402344].
+[120] A. Goudelis, M. Pospelov and J. Pradler, Phys. Rev. Lett. 116, 21, 211303 (2016),
+      [arXiv:1510.08858].
+[121] J. D. Barrow, Phys. Rev. D35, 1805 (1987).
+[122] B. A. Campbell and K. A. Olive, Phys. Lett. B345, 429 (1995), [hep-ph/9411272].
+[123] L. Bergstrom, S. Iguri and H. Rubinstein, Phys. Rev. D60, 045005 (1999), [arXiv:astro-
+      ph/9902157].
+[124] V. V. Flambaum and E. V. Shuryak, Phys. Rev. D65, 103503 (2002), [hep-ph/0201303].
+[125] A. Coc et al., Phys. Rev. D76, 023511 (2007), [arXiv:astro-ph/0610733].
+[126] J. C. Berengut et al., Phys. Rev. D87, 8, 085018 (2013), [arXiv:1301.1738].
+[127] C. J. A. P. Martins, Astron. Astrophys. 646, A47 (2021), [arXiv:2012.10505].
+[128] Z. Hou et al., Phys. Rev. D87, 083008 (2013), [arXiv:1104.2333].
+[129] R. Keisler et al., Astrophys. J. 743, 28 (2011), [arXiv:1105.3182].
+[130] J. Hamann et al., Phys. Rev. Lett. 105, 181301 (2010), [arXiv:1006.5276].
+[131] K. Akita and M. Yamaguchi, JCAP 2020, 8, 012 (2020), [arXiv:2005.07047].
+[132] J. Froustey, C. Pitrou and M. C. Volpe, JCAP 2020, 12, 015 (2020), [arXiv:2008.01074].
+[133] J. J. Bennett et al., JCAP 04, 073 (2021), [arXiv:2012.02726].
+[134] F. S. Accetta, L. M. Krauss and P. Romanelli, Phys. Lett. B248, 146 (1990).
+[135] K. M. Nollett and R. E. Lopez, Phys. Rev. D66, 063507 (2002), [arXiv:astro-ph/0204325].
+[136] C. Bambi, M. Giannotti and F. L. Villante, Phys. Rev. D71, 123524 (2005), [arXiv:astro-
+      ph/0503502].
+[137] E. W. Kolb, M. J. Perry and T. P. Walker, Phys. Rev. D33, 869 (1986).
+[138] A. Coc et al., Phys. Rev. D73, 083525 (2006), [arXiv:astro-ph/0601299].
+[139] K. A. Olive, D. N. Schramm and G. Steigman, Nucl. Phys. B180, 497 (1981).
+[140] J. R. Ellis et al., Phys. Lett. 167B, 457 (1986).
+[141] L. M. Krauss, J. Terning and T. Appelquist, Phys. Rev. Lett. 71, 823 (1993), [hep-
+      ph/9305265].
+[142] J. A. Morgan, Phys. Lett. 102B, 247 (1981).
+[143] E. W. Kolb, M. S. Turner and T. P. Walker, Phys. Rev. D34, 2197 (1986).
+[144] J. A. Grifols and E. Masso, Mod. Phys. Lett. A2, 205 (1987).
+[145] K. S. Babu, R. N. Mohapatra and I. Z. Rothstein, Phys. Rev. Lett. 67, 545 (1991).
+[146] A. D. Dolgov, S. H. Hansen and D. V. Semikoz, Nucl. Phys. B524, 621 (1998), [hep-
+      ph/9712284].
+[147] K. Enqvist, K. Kainulainen and M. J. Thomson, Nucl. Phys. B373, 498 (1992).
+[148] A. D. Dolgov, Phys. Rept. 370, 333 (2002), [hep-ph/0202122].
+[149] J. A. Grifols, R. N. Mohapatra and A. Riotto, Phys. Lett. B400, 124 (1997), [hep-
+      ph/9612253].
+
+                                         1st December, 2025
+16                              24. Big Bang Nucleosynthesis
+
+
+[150] H. K. Dreiner et al., Phys. Rev. D85, 065027 (2012), [arXiv:1111.5715].
+[151] K. Sato and M. Kobayashi, Prog. Theor. Phys. 58, 1775 (1977).
+[152] D. A. Dicus et al., Phys. Rev. D17, 1529 (1978).
+[153] R. J. Scherrer and M. S. Turner, Astrophys. J. 331, 19 (1988), [Astrophys. J.331,33(1988)].
+[154] D. Lindley, Mon. Not. Roy. Astron. Soc. 188, 15P (1979).
+[155] J. R. Ellis et al., Nucl. Phys. B373, 399 (1992).
+[156] M. H. Reno and D. Seckel, Phys. Rev. D37, 3441 (1988).
+[157] S. Dimopoulos et al., Nucl. Phys. B311, 699 (1989).
+[158] S. Sarkar and A. M. Cooper-Sarkar, Phys. Lett. 148B, 347 (1984).
+[159] M. Kawasaki, K. Kohri and T. Moroi, Phys. Lett. B649, 436 (2007), [hep-ph/0703122].
+[160] K. Jedamzik et al., JCAP 0607, 007 (2006), [hep-ph/0512044].
+[161] S. Davidson et al., Phys. Rev. 466, 105 (2008).
+[162] S. Weinberg, Phys. Rev. Lett. 48, 1303 (1982).
+[163] R. H. Cyburt et al., Phys. Rev. D67, 103521 (2003), [arXiv:astro-ph/0211258].
+[164] M. Bolz, A. Brandenburg and W. Buchmuller, Nucl. Phys. B606, 518 (2001), [Erratum:
+      Nucl. Phys.B790,336(2008)], [hep-ph/0012052].
+[165] G. D. Coughlan et al., Physics Letters B 131, 1-3, 59 (1983).
+[166] N. Arkani-Hamed, S. Dimopoulos and G. R. Dvali, Phys. Rev. D59, 086004 (1999), [hep-
+      ph/9807344].
+[167] L. Randall and R. Sundrum, Phys. Rev. Lett. 83, 3370 (1999), [hep-ph/9905221].
+[168] J. M. Cline, C. Grojean and G. Servant, Phys. Rev. Lett. 83, 4245 (1999), [hep-ph/9906523].
+[169] P. Binetruy et al., Phys. Lett. B477, 285 (2000), [hep-th/9910219].
+
+
+
+
+                                        1st December, 2025
+

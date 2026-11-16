@@ -1,0 +1,14 @@
+[
+  {
+    "status": "failed_before_model_initialization",
+    "failure": "FileNotFoundError",
+    "detail": "Owned wrapper initially resolved the project root one directory too high and could not find the shared YAML. No likelihood was initialized and no score was produced.",
+    "disposition": "Corrected path resolution; reran."
+  },
+  {
+    "status": "failed_before_scientific_score",
+    "failure": "TypeError",
+    "detail": "The first wrapper attempt to validate prior support passed Cobaya's parameterization dict output to Prior.logps, which requires an ordered numeric vector. Model construction succeeded and all three clipy stored check vectors passed; no point loglikes were computed.",
+    "disposition": "Corrected wrapper to assemble the vector in model.prior.params order; reran successfully."
+  }
+]

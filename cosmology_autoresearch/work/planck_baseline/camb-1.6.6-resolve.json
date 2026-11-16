@@ -1,0 +1,91 @@
+{
+  "version": "1",
+  "pip_version": "24.0",
+  "install": [
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/41/53/9d0b3cf1a2a07a882adac9565074ac6974fb8b031c31da438d407db22c89/camb-1.6.6-py3-none-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "archive_info": {
+          "hash": "sha256=bb8e0c85b3e33d78ca0676c84b0b60b54dfa72d4e520a805166cab0458e81094",
+          "hashes": {
+            "sha256": "bb8e0c85b3e33d78ca0676c84b0b60b54dfa72d4e520a805166cab0458e81094"
+          }
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "camb",
+        "version": "1.6.6",
+        "dynamic": [
+          "license-file",
+          "platform"
+        ],
+        "platform": [
+          "any"
+        ],
+        "summary": "Code for Anisotropies in the Microwave Background",
+        "description": "===================\nCAMB\n===================\n:CAMB: Code for Anisotropies in the Microwave Background\n:Author: Antony Lewis and Anthony Challinor\n:Homepage: https://camb.info/\n\n.. image:: https://img.shields.io/pypi/v/camb.svg?style=flat\n        :target: https://pypi.python.org/pypi/camb/\n.. image:: https://readthedocs.org/projects/camb/badge/?version=latest\n   :target: https://camb.readthedocs.io/en/latest\n\nDescription\n============\n\n\nCAMB is a cosmology code for calculating cosmological observables, including\nCMB, lensing, source count and 21cm angular power spectra, matter power spectra, transfer functions\nand background evolution. The code is in Python, with numerical code implemented in fast modern Fortran.\n\nSee the `CAMB python example notebook <https://camb.readthedocs.io/en/latest/CAMBdemo.html>`_ for a\nquick introduction to how to use the CAMB Python package.\n\nTo install the CAMB on your computer run::\n\n    pip install camb [--user]\n\nThe --user is optional and only required if you don't have write permission to your main python installation.\nBinary wheels are provided for most systems; to compile from source you will need gfortran installed\n(usually installed as part of gcc). gfortran is also required for just-in-time compilation of some functions like custom sources.\n\nThe python module is  \"camb\". see the `CAMB documentation <https://camb.readthedocs.io/en/latest/>`_.\n",
+        "description_content_type": "text/x-rst",
+        "keywords": [
+          "cosmology",
+          "CAMB",
+          "CMB"
+        ],
+        "author": "Antony Lewis",
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Operating System :: OS Independent",
+          "Environment :: Console",
+          "Intended Audience :: Science/Research",
+          "Topic :: Scientific/Engineering :: Astronomy",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14"
+        ],
+        "requires_dist": [
+          "numpy>=1.22",
+          "scipy>=1.0",
+          "sympy>=1.0",
+          "packaging>=24.2",
+          "sphinx>=4.0; extra == \"docs\"",
+          "sphinx_rtd_theme>=1.0; extra == \"docs\"",
+          "sphinxcontrib-jquery; extra == \"docs\"",
+          "sphinx_markdown_builder; extra == \"docs\"",
+          "jupytext; extra == \"docs\"",
+          "ruff>=0.11.0; extra == \"dev\"",
+          "pre-commit>=3.0.0; extra == \"dev\""
+        ],
+        "requires_python": ">=3.10.0",
+        "project_url": [
+          "Homepage, https://camb.info",
+          "Documentation, https://camb.readthedocs.io",
+          "Source, https://github.com/cmbant/camb",
+          "Tracker, https://github.com/cmbant/camb/issues",
+          "Licensing, https://github.com/cmbant/camb/blob/master/LICENCE.txt"
+        ],
+        "provides_extra": [
+          "docs",
+          "dev"
+        ]
+      }
+    }
+  ],
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.12.3",
+    "os_name": "posix",
+    "platform_machine": "x86_64",
+    "platform_release": "7.0.0-28-generic",
+    "platform_system": "Linux",
+    "platform_version": "#28~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Jul  1 15:50:57 UTC 2",
+    "python_full_version": "3.12.3",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.12",
+    "sys_platform": "linux"
+  }
+}

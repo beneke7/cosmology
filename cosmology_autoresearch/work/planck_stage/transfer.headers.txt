@@ -1,0 +1,10 @@
+[final response]
+URL: https://pla.esac.esa.int/pla/aio/product-action?COSMOLOGY.FILE_ID=COM_Likelihood_Data-baseline_R3.00.tar.gz
+HTTP status: 200
+Date: Fri, 25 Sep 2026 06:03:36 GMT
+Server: Apache/2.4.37 (Red Hat Enterprise Linux)
+Content-Disposition: inline; filename="COM_Likelihood_Data-baseline_R3.00.tar.gz"
+Content-Type: application/x-gzip
+Vary: Accept-Encoding
+Connection: close
+Transfer-Encoding: chunked

@@ -1,0 +1,170 @@
+{
+  "task": "Project-local Planck PR3 standard Lambda-CDM likelihood software feasibility",
+  "checked_utc": "2026-09-25",
+  "scope": "Static local artifact and upstream source/documentation audit. No packages installed, no archive members extracted, no imports or likelihoods executed, no fitting, no GPU use.",
+  "worker": {
+    "configured_role_from_project_agents": "GPT-6 Luna Max",
+    "runtime_model_identity_verified": false,
+    "reasoning_effort": "not exposed to delegated worker; unknown"
+  },
+  "verdict": {
+    "static_compatibility_of_recommended_pins": "PASS_WITHIN_DECLARED_PACKAGE_CONSTRAINTS",
+    "full_three_component_runtime_evaluation": "NOT_EXECUTED_UNVERIFIED",
+    "data_presence_in_staged_archive": "CONFIRMED_BY_READ_ONLY_TAR_INVENTORY",
+    "recommended_stack": "Python 3.12.3 + NumPy 2.5.3 + SciPy 1.18.1 + Cobaya 3.6.2 + CAMB 1.6.6 + Cobaya-managed clipy release 0.15 + Astropy 8.0.1",
+    "stop_condition": "After authorized install/extraction, stop before sampling if package resolution, any component initialization, or a documented known-point log-likelihood check fails. Do not silently substitute lite likelihoods, chains/distance priors, original clik, or CAMB 2 with Cobaya 3.6.2."
+  },
+  "recommended_pins": {
+    "python": {
+      "version": "3.12.3",
+      "source": "Existing project environment per work/data7_planck_gate/planck_2018_full_likelihood_gate.json"
+    },
+    "numpy": {
+      "version": "2.5.3",
+      "source": "Existing project environment",
+      "declared_constraints_satisfied": ["SciPy 1.18.1: >=2.0,<2.8", "cobaya 3.6.2: >=1.17", "CAMB 1.6.6: >=1.22", "clipy-like 0.15: >=1.23.5", "Astropy 8.0.1: >=2.0"]
+    },
+    "scipy": {
+      "version": "1.18.1",
+      "source": "Existing project environment",
+      "declared_constraints_satisfied": ["cobaya 3.6.2: >=1.5", "CAMB 1.6.6: >=1.0"],
+      "requires_python": ">=3.12",
+      "requires_dist": ["numpy>=2.0.0,<2.8"],
+      "upstream_release_notes": "Python 3.15 binary wheels also included in 1.18.1"
+    },
+    "cobaya": {
+      "version": "3.6.2",
+      "artifact": "PyPI release",
+      "source_tag_commit": "899f30a49f85de610dac321e91a1af50018e56aa",
+      "requires_python": ">=3.10.0",
+      "requires_dist_relevant": ["numpy>=1.17.0", "scipy>=1.5"],
+      "url": "https://pypi.org/project/cobaya/3.6.2/"
+    },
+    "py_bobyqa": {
+      "version": "1.5.0",
+      "distribution": "Py-BOBYQA",
+      "requires_python": ">=3.8",
+      "requires_dist": ["numpy", "scipy", "pandas"],
+      "implementation": "Pure Python; v1.5.0 wheel uploaded with CPython 3.12 and supports the Cobaya >=1.4 requirement.",
+      "pypi_url": "https://pypi.org/project/Py-BOBYQA/1.5.0/",
+      "wheel_sha256": "457afc04d6f2c9f1814934854dc4e542c5e5982a0f80add4b211fcdb0b5811e3"
+    },
+    "camb": {
+      "version": "1.6.6",
+      "artifact": "Official PyPI universal Python wheel; Linux x86-64 manylinux wheel published",
+      "requires_python": ">=3.10.0",
+      "requires_dist_relevant": ["numpy>=1.22", "scipy>=1.0", "sympy>=1.0", "packaging>=24.2"],
+      "cobaya_3_6_2_minimum": "1.5.0",
+      "compiler_note": "Use the prebuilt wheel; source builds need Fortran. No compiler is required for the wheel route.",
+      "url": "https://pypi.org/project/camb/1.6.6/",
+      "source_metadata_url": "https://github.com/cmbant/CAMB/blob/1.6.6/pyproject.toml"
+    },
+    "clipy": {
+      "version": "0.15",
+      "distribution": "clipy-like",
+      "installation_for_recommended_route": "Cobaya 3.6.2 auto-installer downloads the exact upstream clipy_0.15 release to its local packages path; PyPI clipy-like==0.15 is a separate pin-able artifact if installed manually.",
+      "pypi_wheel_sha256_if_manually_used": "9bf56a1c648cab345e9fcb7f83c9a79cd82f92e4f6fe4392900eec23b96f49d0",
+      "requires_python": ">=3.9",
+      "requires_dist": ["numpy>=1.23.5", "astropy>=2.0"],
+      "implementation": "Pure Python clik-compatible evaluator; Cobaya disables optional JAX path.",
+      "pypi_url": "https://pypi.org/project/clipy-like/0.15/",
+      "upstream_release_url": "https://github.com/benabed/clipy/releases/tag/clipy_0.15"
+    },
+    "astropy": {
+      "version": "8.0.1",
+      "reason": "Exact compatible dependency pin for clipy; Python >=3.11 and NumPy >=2.0.",
+      "url": "https://pypi.org/project/astropy/8.0.1/"
+    }
+  },
+  "not_recommended_pairing": {
+    "cobaya": "3.6.2",
+    "camb": "2.0.4",
+    "reason": "Cobaya 3.6.2 source predates CAMB v2 support. Its wrapper requires >=1.5.0, but upstream commit 497fa9aebc3dbce2174416645300d2ee7e07f6d0 explicitly adds CAMB v2 support, raises minimum to 2.0.0, changes lensing accuracy handling, updates clipy minimum to 0.16, and revises Planck test values/tolerances.",
+    "compatible_source_alternative_if_CAMB_2_is_required": {
+      "cobaya_git_commit": "497fa9aebc3dbce2174416645300d2ee7e07f6d0",
+      "clipy_release": "0.16",
+      "camb": "2.0.4",
+      "status": "source-level matched route; not runtime-tested here and not the stable Cobaya 3.6.2 PyPI release",
+      "commit_url": "https://github.com/CobayaSampler/cobaya/commit/497fa9aebc3dbce2174416645300d2ee7e07f6d0",
+      "camb_release_notes_url": "https://github.com/cmbant/CAMB/releases/tag/v2.0.0"
+    }
+  },
+  "likelihood_components": [
+    {
+      "name": "Plik HM TTTEEE",
+      "cobaya": "planck_2018_highl_plik.TTTEEE",
+      "archive_path": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik",
+      "tree_members": 138,
+      "regular_file_bytes": 57891282,
+      "notes": "Full Plik TT+TE+EE with nuisance parameters and Cobaya component SZ prior; not TTTEEE_lite."
+    },
+    {
+      "name": "Commander low-ell TT",
+      "cobaya": "planck_2018_lowl.TT_clik",
+      "archive_path": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik",
+      "tree_members": 11,
+      "regular_file_bytes": 6509031,
+      "notes": "Exact Commander low-TT component, alias lowl."
+    },
+    {
+      "name": "SimAll low-ell EE",
+      "cobaya": "planck_2018_lowl.EE_clik",
+      "archive_path": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik",
+      "tree_members": 10,
+      "regular_file_bytes": 694285,
+      "notes": "Exact SimAll EE component, alias lowE."
+    }
+  ],
+  "archive": {
+    "path": "work/planck_stage/COM_Likelihood_Data-baseline_R3.00.tar.gz",
+    "bytes": 60323470,
+    "sha256": "0b73171e3acc671c28184466a45485a2d1c1d93676b832abdfe688c7b04024e6",
+    "tar_members": 362,
+    "regular_file_payload_bytes": 92163979,
+    "all_three_target_trees_present": true,
+    "extracted": false,
+    "license": "CC BY-NC 3.0 IGO",
+    "report": "work/planck_stage/REPORT.md",
+    "inspection": "work/planck_stage/inspection.json"
+  },
+  "proposed_commands": [
+    ".venv/bin/python -m pip install 'numpy==2.5.3' 'scipy==1.18.1' 'cobaya==3.6.2' 'camb==1.6.6' 'astropy==8.0.1' 'py-bobyqa==1.5.0'",
+    ".venv/bin/python -m pip check",
+    ".venv/bin/python -m pip freeze --all > work/planck_software_feasibility/resolved-requirements.txt",
+    "mkdir -p work/planck_software_feasibility/packages/data/planck_2018",
+    "tar -xzf work/planck_stage/COM_Likelihood_Data-baseline_R3.00.tar.gz -C work/planck_software_feasibility/packages/data/planck_2018",
+    ".venv/bin/cobaya-install work/planck_software_feasibility/planck_lcdm.yaml --packages-path work/planck_software_feasibility/packages --skip-global",
+    "CLIPY_NOJAX=1 .venv/bin/clipy_print work/planck_software_feasibility/packages/data/planck_2018/baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik",
+    ".venv/bin/cobaya-run work/planck_software_feasibility/planck_lcdm.yaml"
+  ],
+  "required_post_install_checks": [
+    "Verify exact imports/versions for Python, NumPy, SciPy, Cobaya, CAMB, and Astropy.",
+    "Initialize all three likelihood components and confirm expected nuisance parameter lists.",
+    "Evaluate a documented reference point and compare individual and aggregate log likelihoods against a stated upstream/reference tolerance before sampling.",
+    "Record resolved dependency versions and hashes, input YAML, code tag/commit, staged/extracted data hashes, command, log-likelihood values, and run outputs."
+  ],
+  "primary_sources": [
+    {"name": "Cobaya 3.6.2 Planck likelihood docs", "url": "https://github.com/CobayaSampler/cobaya/blob/v3.6.2/docs/likelihood_planck.rst"},
+    {"name": "Cobaya 3.6.2 cosmology installation docs", "url": "https://github.com/CobayaSampler/cobaya/blob/v3.6.2/docs/installation_cosmo.rst"},
+    {"name": "Cobaya 3.6.2 Plik TTTEEE component", "url": "https://github.com/CobayaSampler/cobaya/blob/v3.6.2/cobaya/likelihoods/planck_2018_highl_plik/TTTEEE.yaml"},
+    {"name": "Cobaya 3.6.2 Commander TT component", "url": "https://github.com/CobayaSampler/cobaya/blob/v3.6.2/cobaya/likelihoods/planck_2018_lowl/TT_clik.yaml"},
+    {"name": "Cobaya 3.6.2 SimAll EE component", "url": "https://github.com/CobayaSampler/cobaya/blob/v3.6.2/cobaya/likelihoods/planck_2018_lowl/EE_clik.yaml"},
+    {"name": "Cobaya 3.6.2 CAMB wrapper", "url": "https://github.com/CobayaSampler/cobaya/blob/v3.6.2/cobaya/theories/camb/camb.py"},
+    {"name": "Cobaya 3.6.2 Planck clipy wrapper", "url": "https://github.com/CobayaSampler/cobaya/blob/v3.6.2/cobaya/likelihoods/base_classes/planck_clik.py"},
+    {"name": "Cobaya 3.6.2 PyPI", "url": "https://pypi.org/project/cobaya/3.6.2/"},
+    {"name": "Py-BOBYQA 1.5.0 PyPI", "url": "https://pypi.org/project/Py-BOBYQA/1.5.0/"},
+    {"name": "Py-BOBYQA 1.5.0 source metadata", "url": "https://github.com/numericalalgorithmsgroup/pybobyqa/blob/v1.5.0/pyproject.toml"},
+    {"name": "CAMB 1.6.6 metadata", "url": "https://github.com/cmbant/CAMB/blob/1.6.6/pyproject.toml"},
+    {"name": "CAMB 1.6.6 PyPI", "url": "https://pypi.org/project/camb/1.6.6/"},
+    {"name": "clipy-like 0.15 PyPI", "url": "https://pypi.org/project/clipy-like/0.15/"},
+    {"name": "Astropy 8.0.1 PyPI", "url": "https://pypi.org/project/astropy/8.0.1/"},
+    {"name": "clipy v0.15 source", "url": "https://github.com/benabed/clipy/releases/tag/clipy_0.15"},
+    {"name": "Cobaya CAMB v2 compatibility commit", "url": "https://github.com/CobayaSampler/cobaya/commit/497fa9aebc3dbce2174416645300d2ee7e07f6d0"},
+    {"name": "CAMB 2.0 compatibility notes", "url": "https://github.com/cmbant/CAMB/releases/tag/v2.0.0"},
+    {"name": "SciPy 1.18.1 source metadata", "url": "https://github.com/scipy/scipy/blob/v1.18.1/pyproject.toml"},
+    {"name": "SciPy 1.18.1 release notes", "url": "https://github.com/scipy/scipy/releases/tag/v1.18.1"},
+    {"name": "NumPy 2.5.3 release notes", "url": "https://numpy.org/doc/2.5/release/2.5.3-notes.html"},
+    {"name": "ESA Planck PR3 Cosmology products", "url": "https://esdcdoi.esac.esa.int/doi/html/data/astronomy/planck/Cosmology.html"},
+    {"name": "Planck Legacy Archive likelihood code overview", "url": "https://wiki.cosmos.esa.int/planck-legacy-archive/index.php/CMB_spectrum_%26_Likelihood_Code"}
+  ]
+}

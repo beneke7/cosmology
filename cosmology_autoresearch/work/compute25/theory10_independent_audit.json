@@ -1,0 +1,106 @@
+{
+  "status": "REVISE_LEADING_ALGEBRA_PASSES",
+  "disposition": {
+    "background_signs_and_powers": "PASS",
+    "eq19_conversion_and_gauge": "PASS",
+    "D_zero_negative_gamma_regular_mode": "PASS",
+    "equal_zeta_relation_and_sign": "PASS",
+    "report_precision": "REVISE_REMAINDER_AND_CLOSURE_ATTRIBUTION",
+    "boltzmann_or_full_model_validation": "NOT_PERFORMED"
+  },
+  "source": {
+    "pdf": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "pdf_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+    "text_sha256": "a99a4afdd858cdce3cbc2c41f0a13098c30c361dc67891331ee7d9d5f824868f",
+    "locators": {
+      "background_eqs_4_5": "PDF p. 2",
+      "interaction_eq_8_and_sign_of_Gamma": "PDF p. 3",
+      "IVS_perturbation_eqs_19_20_and_variable_definitions": "PDF p. 4"
+    }
+  },
+  "reviewed_theory10_artifacts": {
+    "report": {
+      "path": "work/theory10/early_ic_report.md",
+      "sha256": "302fa75cca4bf58f2dab8dbdb45f4aa671dd982ab1e0a463c626c2e219df7ef9"
+    },
+    "script": {
+      "path": "work/theory10/early_ic_asymptotic_check.py",
+      "sha256": "6e2726dd45e5e136226321ac5534cec870d71b2a8228c34ffd6b9bfd312dbe34"
+    },
+    "json": {
+      "path": "work/theory10/early_ic_asymptotic.json",
+      "sha256": "78ff37c9f7189fc23e95296083e8c85d588d5508fd69a88defddc0b53a3faa38"
+    }
+  },
+  "independent_derivation": {
+    "background": {
+      "radiation_limit": "E ~ sqrt(Omega_r0) * a^(-2)",
+      "vacuum": "d ln(rho_x)/dn = g/E; rho_x = X_* * [1 + g*a^2/(2*sqrt(Omega_r0)) + O(a^3)]",
+      "comoving_cdm": "q=a^3*rho_c; q_n=-(g/E)*a^3*rho_x; q=D-g*X_* a^5/(5*sqrt(Omega_r0))+...",
+      "D_positive": "rho_c ~ D*a^(-3), A=(g/E)*(rho_x/rho_c) ~ K5*a^5, K5=g*X_*/(sqrt(Omega_r0)*D)",
+      "D_zero_g_negative": "rho_c ~ -g*X_*a^2/(5*sqrt(Omega_r0)) > 0; beta_c -> 2; A -> -5",
+      "D_zero_g_positive": "rho_c has negative leading term; excluded by positive-density condition",
+      "D_zero_g_zero": "rho_c=0; fractional contrast delta_c is undefined"
+    },
+    "perturbations": {
+      "paper_eq19": "delta_c' = -(theta_c+h'/2) + a*Gamma*(rho_x/rho_c)*delta_c",
+      "paper_eq20": "theta_c' = -Hcal*theta_c",
+      "time_conversion": "Hcal=aH; a*Gamma/Hcal=Gamma/H=g/E",
+      "theta_c_zero_n_equation": "delta_c,n = -h_n/2 + A*delta_c",
+      "theta_n_equation": "theta_c,n=-theta_c; theta_c proportional to a^(-1), so theta_c=0 is invariant and the nonzero branch diverges to the past",
+      "ordinary_D_positive": "For leading A5=K5*a^5 and h=C*a^2, delta_c=-h/2-A5*h/14+...; first interaction correction is O(a^7)",
+      "edge_regular": "For A=-5 and h proportional to a^2, homogeneous delta_c is proportional to a^(-5); unique regular leading solution is delta_c=-h/7"
+    },
+    "equal_zeta": {
+      "definition": "zeta_i=-psi-delta_i/beta_i; beta_i=d ln(rho_i)/d ln(a)",
+      "radiation": "beta_gamma=-4; delta_gamma=-2h/3; delta_gamma/beta_gamma=h/6",
+      "edge_cdm": "beta_c=+2; equal zeta requires delta_c=+h/3, distinct from regular Eq. (19) delta_c=-h/7",
+      "regular_mode_residual": "(zeta_c-zeta_gamma)/h=5/21",
+      "equal_zeta_mode_eq19_residual": "(delta_c,n+h-A*delta_c)/h=10/3 at A=-5, delta_c=+h/3"
+    },
+    "vacuum_caveat": "If a nonzero-Gamma all-species local time-shift condition is imposed, beta_x=g/E=O(a^2) and delta_x=beta_x*h/6=O(a^4). This is conditional: the paper says IVS DE has no perturbative contribution but gives no independent delta_x equation or complete transfer-perturbation prescription. At Gamma=0, zeta_x is undefined because beta_x=0."
+  },
+  "corrections": [
+    {
+      "issue": "D-positive perturbation remainder",
+      "finding": "The script's O(A5^2*h) residual applies to the ideal truncated A=A5=K5*a^5, h proportional to a^2 system. With the full background A, its expansion generally has a K6*a^6 term from the O(a) matter correction to radiation in E. The true next response is O(a^8), earlier than A5^2*h=O(a^12); using full A/14 is not correct at that subleading order.",
+      "recommended_correction": "Write delta_c=-h/2-A5*h/14+O(a^8) for the leading radiation/matter hierarchy, and separately state O(A5^2*h) only for the pure-A5 truncated system; alternatively explicitly define A in the formula as A5."
+    },
+    {
+      "issue": "Edge branch attribution",
+      "finding": "The leading mismatch between regular Eq. (19) and CDM-radiation equal-zeta data is correct. The paper does not specify a complete covariant transfer perturbation or independent vacuum perturbation variable.",
+      "recommended_correction": "Attribute the result to the displayed IVS CDM equation plus the imposed equal-zeta criterion; do not state it as a consistency result for a fully specified covariant IVS."
+    },
+    {
+      "issue": "Anisotropic stress scope",
+      "finding": "The zero-anisotropic-stress wording immediately precedes the wx != -1 equations, while the IVS equations are stated separately. The paper does not unambiguously prescribe total-radiation shear closure for IVS.",
+      "recommended_correction": "Say that the source does not specify the total-radiation stress closure for IVS and retain free-streaming neutrino shear absent clarification."
+    }
+  ],
+  "limitations": [
+    "Analytic leading-asymptotic audit only; no numerical integration or independent implementation was necessary for the displayed limits.",
+    "No Boltzmann solver, full Einstein-feedback calculation, stability proof, global edge-branch positivity check, posterior, or fit was run.",
+    "Theory10 radiation normalization uses the asymptotic massless-neutrino relation; the paper states sum(m_nu)=0.06 eV. This is a disclosed early-time approximation, not an exact finite-redshift reproduction."
+  ],
+  "execution": {
+    "review_commands": [
+      "pdftotext -f 2 -l 2 -layout context/papers/interacting_de_desi_dr2_2026.pdf -",
+      "pdftotext -f 3 -l 5 -layout context/papers/interacting_de_desi_dr2_2026.pdf -",
+      "sed -n on work/theory10/early_ic_report.md, work/theory10/early_ic_asymptotic_check.py, work/theory10/early_ic_asymptotic.json",
+      "sha256sum context/papers/interacting_de_desi_dr2_2026.pdf context/papers/interacting_de_desi_dr2_2026.txt work/theory10/early_ic_report.md work/theory10/early_ic_asymptotic_check.py work/theory10/early_ic_asymptotic.json"
+    ],
+    "independent_code_imported_or_run": false,
+    "boltzmann_solver_run": false,
+    "numerical_fit_run": false,
+    "cpu_limit": 1,
+    "time_limit_seconds": 600,
+    "runtime": "Analytic review only; no standalone compute job; remained within cap",
+    "python_version_observed": "3.12.3",
+    "model": "Codex GPT-5",
+    "effort": "Not exposed to worker"
+  },
+  "output_hashes": {
+    "report_sha256": "47791701e7b300bb4b08f6b96db8a2a7fd3fdb417170f3b7fe0c4794eef0f7e0"
+  },
+  "owned_output": "work/compute25/"
+}

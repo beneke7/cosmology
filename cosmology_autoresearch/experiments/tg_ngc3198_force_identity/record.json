@@ -1,0 +1,127 @@
+{
+  "checks": {
+    "K_profile_optimizer_success": true,
+    "all_Rotmod_errV_positive": true,
+    "min_K_nonnegative": true,
+    "profile_chi2_grid_finite": true
+  },
+  "code_sha256": "05231c937649c7cc115fb417e53e4b03d69d45457090cf5edecad48ef22daf49",
+  "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python experiments/tg_ngc3198_force_identity/force_identity.py",
+  "fit": {
+    "K_domain_s2_per_km2": [
+      0.0,
+      0.0002
+    ],
+    "Upsilon_fixed_value_sensitivity": {
+      "mean": {
+        "Upsilon_disk": 0.762,
+        "best_K_s2_per_km2": 3.6271191361826564e-05,
+        "paper_K_profile_chi2_velocity_errors_only": 183.47228894084873,
+        "profile_chi2_best_velocity_errors_only": 79.29786850965849
+      },
+      "mean_minus_1sigma": {
+        "Upsilon_disk": 0.755,
+        "best_K_s2_per_km2": 3.64513191530587e-05,
+        "paper_K_profile_chi2_velocity_errors_only": 206.1840040327218,
+        "profile_chi2_best_velocity_errors_only": 84.94317842118701
+      },
+      "mean_plus_1sigma": {
+        "Upsilon_disk": 0.769,
+        "best_K_s2_per_km2": 3.6091714799652374e-05,
+        "paper_K_profile_chi2_velocity_errors_only": 162.95142330571684,
+        "profile_chi2_best_velocity_errors_only": 74.51203220541727
+      }
+    },
+    "approx_profile_delta_chi2_1_interval": [
+      3.5825132705054306e-05,
+      3.612358902902413e-05
+    ],
+    "best_K_s2_per_km2": 3.5953590969203484e-05,
+    "delta_profile_chi2_paper_minus_best": 54.081473924079575,
+    "dof_best_approx": 41,
+    "dof_paper_K_approx": 42,
+    "effective_covariance_rank": 43,
+    "fixed_diagnostic_radial_windows": {
+      "5_le_r_le_35_kpc": {
+        "approx_dof": 21,
+        "approx_p_value_measurement_errors_only": 0.5738025702543517,
+        "best_K_s2_per_km2": 3.544227588801461e-05,
+        "n_points": 23,
+        "paper_K_profile_chi2": 39.32265952646618,
+        "paper_minus_best_delta_profile_chi2": 20.145906402583798,
+        "profile_chi2_best": 19.176753123882385
+      },
+      "r_ge_5_kpc": {
+        "approx_dof": 26,
+        "approx_p_value_measurement_errors_only": 0.5402807652376451,
+        "best_K_s2_per_km2": 3.5774153640549644e-05,
+        "n_points": 28,
+        "paper_K_profile_chi2": 64.5411201579258,
+        "paper_minus_best_delta_profile_chi2": 39.91625524111829,
+        "profile_chi2_best": 24.624864916807514
+      },
+      "r_le_35_kpc": {
+        "approx_dof": 36,
+        "approx_p_value_measurement_errors_only": 0.0005876657754838837,
+        "best_K_s2_per_km2": 3.56799748772931e-05,
+        "n_points": 38,
+        "paper_K_profile_chi2": 100.89754458083033,
+        "paper_minus_best_delta_profile_chi2": 30.9091528631521,
+        "profile_chi2_best": 69.98839171767823
+      }
+    },
+    "interpretation_caveat": "Approximate chi-square tail uses a Monte Carlo-estimated, parameter-dependent covariance and omits substantial systematics; it is a screening statistic, not a calibrated rejection significance.",
+    "p_value_best_approx": 0.0010242841375513328,
+    "p_value_paper_K_approx": 9.791511838878001e-11,
+    "paper_K_s2_per_km2": 3.4e-05,
+    "plot": "experiments/tg_ngc3198_force_identity/force_identity.png",
+    "profile_chi2_best": 74.64940005571361,
+    "profile_chi2_paper_K": 128.7308739797932,
+    "profile_csv": "experiments/tg_ngc3198_force_identity/k_profile.csv",
+    "profiled_intercept_best_kpc_km2_s2": 493.42736143471166,
+    "profiled_intercept_paper_kpc_km2_s2": 895.5202155561682,
+    "quadrature_sensitivity": {
+      "alternative": "trapezoidal integral of v^4 versus exact segment integral under linear v",
+      "best_K_s2_per_km2_trapezoid": 3.595969431495678e-05,
+      "delta_best_K_relative_to_exact": 6.103345753293921e-09,
+      "profile_chi2_best_trapezoid": 74.28707760711852
+    }
+  },
+  "model": {
+    "K_units": "s^2/km^2",
+    "baryon_v2": "Upsilon_disk*(Vdisk^2+Vbul^2)+Vgas*abs(Vgas)",
+    "gas_convention": "SPARC signed v^2 contribution: Vgas*abs(Vgas)",
+    "identity": "d[r*(v_obs^2-v_bar^2)]/dr = K*v_obs^4",
+    "inner_boundary": "profiled constant of integration because the first datum is at 0.32 kpc; no observed outer endpoint used as boundary",
+    "integral": "Y(r)=C+K*X(r), X=integral(v_obs^4 dr)",
+    "integration": "exact segment integral under piecewise-linear interpolation of Vobs",
+    "upsilon_disk_mean": 0.762,
+    "upsilon_disk_sigma": 0.007
+  },
+  "runtime_seconds": 0.42218975722789764,
+  "scope": "Necessary integrated identity for the printed stationary TG equation; conditional pseudo-spherical SPARC source; not a physical 3D fit or detection.",
+  "source": {
+    "archive": "context/data/Rotmod_LTG.zip",
+    "archive_sha256": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "member": "NGC3198_rotmod.dat",
+    "radial_range_kpc": [
+      0.32,
+      44.08
+    ],
+    "rows": 43
+  },
+  "status": "measurement_error_screen_complete",
+  "uncertainties": {
+    "draws": 12000,
+    "method": "parametric Monte Carlo covariance of shared Y and cumulative X errors",
+    "observed_velocity_errors": "independent Gaussian Rotmod errV; no extra covariance supplied",
+    "omitted": [
+      "gas/disk profile covariance",
+      "distance and inclination systematics",
+      "interpolation-model uncertainty",
+      "non-spherical geometry uncertainty"
+    ],
+    "seed": 20260925,
+    "stellar_mass_to_light": "common Gaussian nuisance Upsilon=0.762 +/- 0.007"
+  }
+}

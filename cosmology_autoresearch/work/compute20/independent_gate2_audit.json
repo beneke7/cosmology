@@ -1,0 +1,542 @@
+{
+  "assessment": "independent derivation and numerical cross-check; not a Boltzmann or likelihood reproduction",
+  "benchmark": {
+    "H0_km_s_Mpc": 67.4,
+    "Neff": 3.044,
+    "Omega_b0": 0.049,
+    "Omega_c0": 0.266,
+    "Omega_gamma0": 5.443748867104649e-05,
+    "Omega_m0_baryons_plus_CDM": 0.315,
+    "Omega_nu0": 3.763343478614165e-05,
+    "Omega_x0": 0.6849079290765427,
+    "T_CMB_K": 2.7255,
+    "delta_initial": 0.1,
+    "fixed_metric": "S=1e-3; h(n)=2*S*(n-N0), so h_prime=2*S*Hcal",
+    "gamma_values": [
+      0.0,
+      0.46666,
+      -0.46666
+    ],
+    "neutrino_assumption": "massless effective neutrinos, as in saved Gate2 benchmark; paper footnote fixes sum m_nu=0.06 eV and is not reproduced",
+    "nonzero_theta_today_over_H0": 1e-06,
+    "redshift_range": [
+      0.0,
+      10000000000.0
+    ]
+  },
+  "cases": [
+    {
+      "compare_saved_gate2": {
+        "absolute_cdm_continuity_max_normalized_residual": {
+          "absolute_difference": 1.1461581671220272e-17,
+          "independent": 1.6092275140415822e-16,
+          "relative_difference": 0.0664885344668095,
+          "saved": 1.723843330753785e-16
+        },
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": {
+          "absolute_difference": 2.0390144778021773e-12,
+          "independent": 2.139098110686222e-12,
+          "relative_difference": 0.9532122288435204,
+          "saved": 1.0008363288404466e-13
+        },
+        "delta_c_max": {
+          "absolute_difference": 0.0,
+          "independent": 0.1,
+          "relative_difference": 0.0,
+          "saved": 0.1
+        },
+        "delta_c_min": {
+          "absolute_difference": 1.7166823518266483e-14,
+          "independent": 0.07697414906996927,
+          "relative_difference": 2.2302063388400556e-13,
+          "saved": 0.0769741490699521
+        },
+        "max_abs_unit_conversion_error_difference": {
+          "absolute_difference": 0.0,
+          "independent": 0.0,
+          "saved": 0.0
+        },
+        "min_E2": {
+          "absolute_difference": 0.0,
+          "independent": 1.0,
+          "relative_difference": 0.0,
+          "saved": 1.0
+        },
+        "min_rho_c": {
+          "absolute_difference": 0.0,
+          "independent": 0.266,
+          "relative_difference": 0.0,
+          "saved": 0.266
+        },
+        "min_rho_x": {
+          "absolute_difference": 0.0,
+          "independent": 0.6849079290765427,
+          "relative_difference": 0.0,
+          "saved": 0.6849079290765427
+        },
+        "theta_a_invariant_max_relative_error": {
+          "absolute_difference": 0.0,
+          "independent": 0.0,
+          "relative_difference": 0.0,
+          "saved": 0.0
+        }
+      },
+      "gamma_over_H0": 0.0,
+      "gamma_zero_analytic_delta_max_relative_error": 1.2636591150827972e-13,
+      "initial_theta_over_H0": 0.0,
+      "range": {
+        "E2_min": 1.0,
+        "absolute_cdm_continuity_max_normalized_residual": 1.6092275140415822e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 2.139098110686222e-12,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.07697414906996927,
+        "rho_c_min": 0.266,
+        "rho_x_min": 0.6849079290765427,
+        "source_coefficient_max": 0.0,
+        "source_coefficient_min": 0.0,
+        "source_term_max": 0.0,
+        "source_term_min": 0.0,
+        "theta_a_invariant_max_relative_error": 0.0,
+        "theta_over_H0_max_abs": 0.0
+      },
+      "theta_test": "theta_zero",
+      "unit_conversion_max_abs_error": 0.0
+    },
+    {
+      "compare_saved_gate2": {
+        "absolute_cdm_continuity_max_normalized_residual": {
+          "absolute_difference": 9.358160722682924e-18,
+          "independent": 1.6286821758520957e-16,
+          "relative_difference": 0.054336396170121835,
+          "saved": 1.722263783078925e-16
+        },
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": {
+          "absolute_difference": 2.292498542502843e-12,
+          "independent": 2.2975393160131042e-12,
+          "relative_difference": 0.9978060120777352,
+          "saved": 5.040773510261259e-15
+        },
+        "delta_c_max": {
+          "absolute_difference": 0.0,
+          "independent": 0.1,
+          "relative_difference": 0.0,
+          "saved": 0.1
+        },
+        "delta_c_min": {
+          "absolute_difference": 6.938893903907228e-17,
+          "independent": 0.07528213688413432,
+          "relative_difference": 9.217185100081288e-16,
+          "saved": 0.07528213688413425
+        },
+        "max_abs_unit_conversion_error_difference": {
+          "absolute_difference": 0.0,
+          "independent": 0.0,
+          "saved": 0.0
+        },
+        "min_E2": {
+          "absolute_difference": 0.0,
+          "independent": 1.0,
+          "relative_difference": 0.0,
+          "saved": 1.0
+        },
+        "min_rho_c": {
+          "absolute_difference": 0.0,
+          "independent": 0.266,
+          "relative_difference": 0.0,
+          "saved": 0.266
+        },
+        "min_rho_x": {
+          "absolute_difference": 0.0,
+          "independent": 0.6849079290765427,
+          "relative_difference": 0.0,
+          "saved": 0.6849079290765427
+        },
+        "theta_a_invariant_max_relative_error": {
+          "absolute_difference": 3.3881317890172014e-15,
+          "independent": 2.1175823681357508e-16,
+          "relative_difference": 0.9411764705882353,
+          "saved": 3.5998900258307764e-15
+        }
+      },
+      "gamma_over_H0": 0.0,
+      "gamma_zero_analytic_delta_max_relative_error": null,
+      "initial_theta_over_H0": 10000.000000999986,
+      "range": {
+        "E2_min": 1.0,
+        "absolute_cdm_continuity_max_normalized_residual": 1.6286821758520957e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 2.2975393160131042e-12,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.07528213688413432,
+        "rho_c_min": 0.266,
+        "rho_x_min": 0.6849079290765427,
+        "source_coefficient_max": 0.0,
+        "source_coefficient_min": 0.0,
+        "source_term_max": 0.0,
+        "source_term_min": 0.0,
+        "theta_a_invariant_max_relative_error": 2.1175823681357508e-16,
+        "theta_over_H0_max_abs": 10000.000000999986
+      },
+      "theta_test": "theta_nonzero_diagnostic",
+      "unit_conversion_max_abs_error": 0.0
+    },
+    {
+      "compare_saved_gate2": {
+        "absolute_cdm_continuity_max_normalized_residual": {
+          "absolute_difference": 4.9260889568621396e-17,
+          "independent": 2.2195838931550143e-16,
+          "relative_difference": 0.22193749792714434,
+          "saved": 1.7269749974688003e-16
+        },
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": {
+          "absolute_difference": 3.1234936955490362e-12,
+          "independent": 3.1909926690158465e-12,
+          "relative_difference": 0.97884702960235,
+          "saved": 6.749897346681029e-14
+        },
+        "delta_c_max": {
+          "absolute_difference": 0.0,
+          "independent": 0.1,
+          "relative_difference": 0.0,
+          "saved": 0.1
+        },
+        "delta_c_min": {
+          "absolute_difference": 1.2170819907453279e-14,
+          "independent": 0.07817544333409145,
+          "relative_difference": 1.5568597232560521e-13,
+          "saved": 0.07817544333407928
+        },
+        "max_abs_unit_conversion_error_difference": {
+          "absolute_difference": 0.0,
+          "independent": 1.1102230246251565e-16,
+          "saved": 1.1102230246251565e-16
+        },
+        "min_E2": {
+          "absolute_difference": 0.0,
+          "independent": 1.0,
+          "relative_difference": 0.0,
+          "saved": 1.0
+        },
+        "min_rho_c": {
+          "absolute_difference": 0.0,
+          "independent": 0.266,
+          "relative_difference": 0.0,
+          "saved": 0.266
+        },
+        "min_rho_x": {
+          "absolute_difference": 1.1324274851176597e-14,
+          "independent": 0.4493882796876523,
+          "relative_difference": 2.5199310625207098e-14,
+          "saved": 0.449388279687641
+        },
+        "theta_a_invariant_max_relative_error": {
+          "absolute_difference": 0.0,
+          "independent": 0.0,
+          "relative_difference": 0.0,
+          "saved": 0.0
+        }
+      },
+      "gamma_over_H0": 0.46666,
+      "gamma_zero_analytic_delta_max_relative_error": null,
+      "initial_theta_over_H0": 0.0,
+      "range": {
+        "E2_min": 1.0,
+        "absolute_cdm_continuity_max_normalized_residual": 2.2195838931550143e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 3.1909926690158465e-12,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.07817544333409145,
+        "rho_c_min": 0.266,
+        "rho_x_min": 0.4493882796876523,
+        "source_coefficient_max": 1.2015756924167649,
+        "source_coefficient_min": 6.380236860429908e-49,
+        "source_term_max": 0.11918706186227825,
+        "source_term_min": 6.380236860429908e-50,
+        "theta_a_invariant_max_relative_error": 0.0,
+        "theta_over_H0_max_abs": 0.0
+      },
+      "theta_test": "theta_zero",
+      "unit_conversion_max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "compare_saved_gate2": {
+        "absolute_cdm_continuity_max_normalized_residual": {
+          "absolute_difference": 4.4773975376410833e-17,
+          "independent": 1.6397926531307618e-16,
+          "relative_difference": 0.21448277990093828,
+          "saved": 2.08753240689487e-16
+        },
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": {
+          "absolute_difference": 3.188530081187032e-12,
+          "independent": 3.1972474258036937e-12,
+          "relative_difference": 0.9972734845147398,
+          "saved": 8.717344616661857e-15
+        },
+        "delta_c_max": {
+          "absolute_difference": 0.0,
+          "independent": 0.1,
+          "relative_difference": 0.0,
+          "saved": 0.1
+        },
+        "delta_c_min": {
+          "absolute_difference": 1.8041124150158794e-16,
+          "independent": 0.07650253179168423,
+          "relative_difference": 2.3582388357139117e-15,
+          "saved": 0.07650253179168405
+        },
+        "max_abs_unit_conversion_error_difference": {
+          "absolute_difference": 0.0,
+          "independent": 1.1102230246251565e-16,
+          "saved": 1.1102230246251565e-16
+        },
+        "min_E2": {
+          "absolute_difference": 0.0,
+          "independent": 1.0,
+          "relative_difference": 0.0,
+          "saved": 1.0
+        },
+        "min_rho_c": {
+          "absolute_difference": 0.0,
+          "independent": 0.266,
+          "relative_difference": 0.0,
+          "saved": 0.266
+        },
+        "min_rho_x": {
+          "absolute_difference": 1.1324274851176597e-14,
+          "independent": 0.4493882796876523,
+          "relative_difference": 2.5199310625207098e-14,
+          "saved": 0.449388279687641
+        },
+        "theta_a_invariant_max_relative_error": {
+          "absolute_difference": 3.3881317890172014e-15,
+          "independent": 2.1175823681357508e-16,
+          "relative_difference": 0.9411764705882353,
+          "saved": 3.5998900258307764e-15
+        }
+      },
+      "gamma_over_H0": 0.46666,
+      "gamma_zero_analytic_delta_max_relative_error": null,
+      "initial_theta_over_H0": 10000.000000999986,
+      "range": {
+        "E2_min": 1.0,
+        "absolute_cdm_continuity_max_normalized_residual": 1.6397926531307618e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 3.1972474258036937e-12,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.07650253179168423,
+        "rho_c_min": 0.266,
+        "rho_x_min": 0.4493882796876523,
+        "source_coefficient_max": 1.2015756924167649,
+        "source_coefficient_min": 6.380236860429908e-49,
+        "source_term_max": 0.11660324114995907,
+        "source_term_min": 6.380236860429908e-50,
+        "theta_a_invariant_max_relative_error": 2.1175823681357508e-16,
+        "theta_over_H0_max_abs": 10000.000000999986
+      },
+      "theta_test": "theta_nonzero_diagnostic",
+      "unit_conversion_max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "compare_saved_gate2": {
+        "absolute_cdm_continuity_max_normalized_residual": {
+          "absolute_difference": 7.731846072481588e-18,
+          "independent": 1.7818933329261846e-16,
+          "relative_difference": 0.04158668796575502,
+          "saved": 1.8592117936510005e-16
+        },
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": {
+          "absolute_difference": 2.457779224961849e-12,
+          "independent": 2.5264218350952465e-12,
+          "relative_difference": 0.9728301073162592,
+          "saved": 6.864261013339727e-14
+        },
+        "delta_c_max": {
+          "absolute_difference": 0.0,
+          "independent": 0.1,
+          "relative_difference": 0.0,
+          "saved": 0.1
+        },
+        "delta_c_min": {
+          "absolute_difference": 7.889522368742519e-15,
+          "independent": 0.048591240849220084,
+          "relative_difference": 1.6236511418228476e-13,
+          "saved": 0.048591240849212194
+        },
+        "max_abs_unit_conversion_error_difference": {
+          "absolute_difference": 0.0,
+          "independent": 1.1102230246251565e-16,
+          "saved": 1.1102230246251565e-16
+        },
+        "min_E2": {
+          "absolute_difference": 0.0,
+          "independent": 1.0,
+          "relative_difference": 0.0,
+          "saved": 1.0
+        },
+        "min_rho_c": {
+          "absolute_difference": 0.0,
+          "independent": 0.266,
+          "relative_difference": 0.0,
+          "saved": 0.266
+        },
+        "min_rho_x": {
+          "absolute_difference": 0.0,
+          "independent": 0.6849079290765427,
+          "relative_difference": 0.0,
+          "saved": 0.6849079290765427
+        },
+        "theta_a_invariant_max_relative_error": {
+          "absolute_difference": 0.0,
+          "independent": 0.0,
+          "relative_difference": 0.0,
+          "saved": 0.0
+        }
+      },
+      "gamma_over_H0": -0.46666,
+      "gamma_zero_analytic_delta_max_relative_error": null,
+      "initial_theta_over_H0": 0.0,
+      "range": {
+        "E2_min": 1.0,
+        "absolute_cdm_continuity_max_normalized_residual": 1.7818933329261846e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 2.5264218350952465e-12,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.048591240849220084,
+        "rho_c_min": 0.266,
+        "rho_x_min": 0.6849079290765427,
+        "source_coefficient_max": -3.201279773247317e-48,
+        "source_coefficient_min": -1.2015756924167649,
+        "source_term_max": -3.201279773247317e-49,
+        "source_term_min": -0.058386053868791414,
+        "theta_a_invariant_max_relative_error": 0.0,
+        "theta_over_H0_max_abs": 0.0
+      },
+      "theta_test": "theta_zero",
+      "unit_conversion_max_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "compare_saved_gate2": {
+        "absolute_cdm_continuity_max_normalized_residual": {
+          "absolute_difference": 2.0286318121329383e-17,
+          "independent": 1.958270816627702e-16,
+          "relative_difference": 0.10359301659953263,
+          "saved": 1.755407635414408e-16
+        },
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": {
+          "absolute_difference": 2.6026179284514673e-12,
+          "independent": 2.6065385833084863e-12,
+          "relative_difference": 0.9984958385492063,
+          "saved": 3.9206548570190755e-15
+        },
+        "delta_c_max": {
+          "absolute_difference": 0.0,
+          "independent": 0.1,
+          "relative_difference": 0.0,
+          "saved": 0.1
+        },
+        "delta_c_min": {
+          "absolute_difference": 5.204170427930421e-16,
+          "independent": 0.047496925002267584,
+          "relative_difference": 1.0956857581163339e-14,
+          "saved": 0.047496925002267064
+        },
+        "max_abs_unit_conversion_error_difference": {
+          "absolute_difference": 0.0,
+          "independent": 1.1102230246251565e-16,
+          "saved": 1.1102230246251565e-16
+        },
+        "min_E2": {
+          "absolute_difference": 0.0,
+          "independent": 1.0,
+          "relative_difference": 0.0,
+          "saved": 1.0
+        },
+        "min_rho_c": {
+          "absolute_difference": 0.0,
+          "independent": 0.266,
+          "relative_difference": 0.0,
+          "saved": 0.266
+        },
+        "min_rho_x": {
+          "absolute_difference": 0.0,
+          "independent": 0.6849079290765427,
+          "relative_difference": 0.0,
+          "saved": 0.6849079290765427
+        },
+        "theta_a_invariant_max_relative_error": {
+          "absolute_difference": 3.1763735522036263e-15,
+          "independent": 2.1175823681357508e-16,
+          "relative_difference": 0.9375,
+          "saved": 3.3881317890172014e-15
+        }
+      },
+      "gamma_over_H0": -0.46666,
+      "gamma_zero_analytic_delta_max_relative_error": null,
+      "initial_theta_over_H0": 10000.000000999986,
+      "range": {
+        "E2_min": 1.0,
+        "absolute_cdm_continuity_max_normalized_residual": 1.958270816627702e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 2.6065385833084863e-12,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.047496925002267584,
+        "rho_c_min": 0.266,
+        "rho_x_min": 0.6849079290765427,
+        "source_coefficient_max": -3.201279773247317e-48,
+        "source_coefficient_min": -1.2015756924167649,
+        "source_term_max": -3.201279773247317e-49,
+        "source_term_min": -0.05707115054726682,
+        "theta_a_invariant_max_relative_error": 2.1175823681357508e-16,
+        "theta_over_H0_max_abs": 10000.000000999986
+      },
+      "theta_test": "theta_nonzero_diagnostic",
+      "unit_conversion_max_abs_error": 1.1102230246251565e-16
+    }
+  ],
+  "comparison_reference": {
+    "code_path": "work/compute18/perturbation_gate2.py",
+    "code_sha256": "55090793914ccecefe9bdcbfcb2bcb9dd8314d3493294975a094316095728a89",
+    "comparison_basis": "six saved case summaries from JSON; implementation inspected, not imported",
+    "json_path": "work/compute18/perturbation_gate2.json",
+    "json_sha256": "c4d1e39f3ee368aed296515ee11d06bb4dad1a1d99e5818fa3d5553154beb58d"
+  },
+  "derivation": {
+    "absolute_cdm_continuity": "rho_c,n=-3*rho_c-(g/E)*rho_x; U=rho_c*delta_c therefore U_n+3U+rho_c*(theta_c/Hcal+S)=0; the Gamma terms cancel.",
+    "conformal_equations": {
+      "delta_c_prime": "-(theta_c+h_prime/2)+a*Gamma*(rho_x/rho_c)*delta_c",
+      "prime": "d/dtau; Hcal=a'/a=aH",
+      "theta_c_prime": "-Hcal*theta_c"
+    },
+    "conversion": "dn/dtau=Hcal; d/dn=(1/Hcal)d/dtau; a*Gamma/Hcal=Gamma/H=(Gamma/H0)/E=g/E",
+    "frame_scope": "paper states synchronous gauge, zero anisotropic stress, and no momentum transfer in the DM rest frame for its perturbation setup; Eq. (20) permits the theta_c=0 solution. This is a fixed-metric diagnostic, not a full gauge-invariant Einstein-fluid evolution.",
+    "ln_a_equations": {
+      "delta_c_n": "-theta_c/Hcal-S+(g/E)*(rho_x/rho_c)*delta_c",
+      "metric_source": "S=h_prime/(2*Hcal)=h_n/2",
+      "theta_over_H0_n": "-(theta_c/H0)"
+    },
+    "theta_zero": "Eq. (20) is homogeneous; theta_c=0 is invariant. In synchronous gauge with geodesic CDM/no momentum transfer in the CDM rest frame this is the CDM-comoving choice."
+  },
+  "execution": {
+    "bounded_command": "taskset -c 0 env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --state work/compute20/no_campaign_deadline.json --seconds 600 -- .venv/bin/python work/compute20/independent_gate2_audit.py",
+    "code_path": "work/compute20/independent_gate2_audit.py",
+    "code_sha256": "4ac12933b867e31dc19d4969095df1712955d5dedb8089983bdc4566fd892341",
+    "elapsed_seconds": 3.3244712306186557,
+    "gpu_used": false,
+    "model_effort": "GPT-6; exact model variant and reasoning-effort tier are not exposed to this worker runtime (inherited default).",
+    "numpy": "2.5.3",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "scipy": "1.18.1"
+  },
+  "integrator": {
+    "atol": 1e-15,
+    "cpu_affinity_ids": [
+      0
+    ],
+    "max_step": 0.01,
+    "method": "SciPy solve_ivp RK45 (different from saved Gate2 DOP853)",
+    "output_grid_points": 2049,
+    "rtol": 1e-13
+  },
+  "source": {
+    "equations": "displayed IVS Eqs. (19)-(20); visually checked",
+    "page": 4,
+    "paper": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "pdf_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c"
+  }
+}

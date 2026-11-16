@@ -1,0 +1,144 @@
+{
+  "as_of": "2026-09-25",
+  "status": "literature-only; bounded primary-source audit; no solver run or fit",
+  "scope": "Availability of exact solver patch/base, complete Cobaya configuration, perturbation closure and initial conditions for arXiv:2609.05660v1 and arXiv:2609.03062v1, plus comparison to the locally pinned IDECAMB patch.",
+  "overall": {
+    "solver_verified": "CAMB for both papers; both texts explicitly say modified CAMB.",
+    "exact_paper_modified_CAMB_patch_or_base_commit": "not found for either paper in the bounded public source trail",
+    "complete_paper_Cobaya_configuration": "not found for either paper",
+    "initial_conditions": "not explicitly reported in either paper's full text",
+    "source_faithful_reproduction": "not currently possible from the public artifacts inspected; equation-based or IDECAMB-adapted work must be labelled independent"
+  },
+  "papers": [
+    {
+      "arxiv_id": "2609.05660",
+      "version": "v1",
+      "title": "Do DESI-DR2 BAO data imply a coupling of dark matter and dark energy?",
+      "authors": ["Weiqiang Yang", "Sibo Zhang", "Dinorah Barbosa", "Marco Antonio Alvarez", "Supriya Pan", "Leila Graef"],
+      "submission_date": "2026-09-04",
+      "primary_urls": {
+        "abstract_version": "https://arxiv.org/abs/2609.05660v1",
+        "pdf": "https://arxiv.org/pdf/2609.05660v1",
+        "aps_accepted_page": "https://journals.aps.org/prd/accepted/10.1103/6kdf-vzq4",
+        "linked_repository": "https://github.com/williamgiare/wgcosmo"
+      },
+      "pdf": {
+        "local_paths": [
+          "work/literature5/arXiv_2609.05660v1.pdf",
+          "context/papers/interacting_de_desi_dr2_2026.pdf"
+        ],
+        "sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+        "bytes": 4524530,
+        "pages": 25,
+        "access": "public arXiv v1 full PDF",
+        "remote_hash_check": "versioned arXiv PDF endpoint streamed to sha256sum; exact local hash match"
+      },
+      "solver": {
+        "identified_solver": "CAMB",
+        "paper_locator": "printed p. 9, Sec. III: modified cosmology code CAMB; refs. [153] and [154] identify CAMB and Cobaya",
+        "author_patch_or_base_commit": "not identified or located",
+        "other_solver_reported": false
+      },
+      "cobaya": {
+        "complete_config_public": false,
+        "available_details": "dataset combinations and sampler/software named on pp. 8-10; uniform prior ranges in Table I, p. 10; Gelman-Rubin convergence named",
+        "paper_linked_repo_role": "wgcosmo cited in ref. [157], printed p. 24; paper uses its Cobaya interface for MCEvidence, p. 10",
+        "repository_snapshot": {
+          "commit": "80fa9742f10616bcaf55d5888a15e8f07e74cd25",
+          "commit_date": "2026-08-05T22:41:24Z",
+          "releases": 0,
+          "tags": 0,
+          "target_specific_IVS_or_PPF_yaml_paths_found": false
+        }
+      },
+      "perturbations": {
+        "partly_specified_in_paper": true,
+        "locator": "printed pp. 4-5, Eqs. (14)-(21); IVS statement and Eqs. (19)-(20) on p. 4",
+        "reported_closure": "synchronous gauge; zero anisotropic stress; no momentum transfer in DM rest frame; w_x=-1 IVS has no DE perturbative contribution",
+        "sound_speed": "IVS equations independent of c_s,x^2; c_s,x^2=1 for non-vacuum statistical analyses, pp. 5-6",
+        "initial_conditions_public": false,
+        "initial_condition_search": "full local text searched for initial/adiabatic; no explicit target IC prescription identified"
+      },
+      "reproduction_classification": "literature-only; implementing Eqs. (19)-(20) in public CAMB is independent, not source-faithful"
+    },
+    {
+      "arxiv_id": "2609.03062",
+      "version": "v1",
+      "title": "Reassessing Evidence for Dark-Sector Interactions with Dynamical Dark Energy and DESI DR2",
+      "authors": ["Jincheng Wang", "Hongwei Yu", "Puxun Wu"],
+      "submission_date": "2026-09-02",
+      "primary_urls": {
+        "abstract_version": "https://arxiv.org/abs/2609.03062v1",
+        "pdf": "https://arxiv.org/pdf/2609.03062v1"
+      },
+      "pdf": {
+        "local_path": "work/literature5/arXiv_2609.03062v1.pdf",
+        "sha256": "0e2b97a2fd988a6657e0c563bbbde7843529dea9c9ab8ac63dff88fefde356e5",
+        "bytes": 1690567,
+        "pages": 17,
+        "access": "public arXiv v1 full PDF",
+        "remote_hash_check": "versioned arXiv PDF endpoint streamed to sha256sum; exact local hash match"
+      },
+      "solver": {
+        "identified_solver": "CAMB",
+        "paper_locator": "printed p. 4, Sec. 3: modified CAMB",
+        "author_patch_or_base_commit": "not identified or located",
+        "other_solver_reported": false
+      },
+      "cobaya": {
+        "complete_config_public": false,
+        "available_details": "Cobaya MCMC stated, but no full configuration, chains, or code URL found in the paper/arXiv source trail"
+      },
+      "perturbations": {
+        "partly_specified_in_paper": true,
+        "locator": "printed pp. 3-4, Eqs. (8)-(10), with generalized interacting PPF description on p. 4",
+        "reported_closure": "Q=beta H rho_de, Q^nu=Q u_c^nu, conventional interacting-fluid equations plus generalized interacting PPF to cross w=-1",
+        "exact_PPF_implementation_public": false,
+        "initial_conditions_public": false,
+        "initial_condition_search": "full local text searched for initial/adiabatic; no explicit IC prescription identified"
+      },
+      "reproduction_classification": "literature-only; any implementation from text and citations is independent"
+    }
+  ],
+  "idecamb_comparison": {
+    "source": "https://github.com/liaocrane/IDECAMB",
+    "commit": "4f1093d9efe46f28cf7e2acb4d07ae116ad5e075",
+    "commit_date": "2023-06-20T11:36:16Z",
+    "local_archive": "context/code/idecamb_4f1093d9efe46f28cf7e2acb4d07ae116ad5e075.tar.gz",
+    "archive_sha256": "c167aa0e0eae369a5b94816343ac6bdc8e3bbee32c5cf66fd116ad71450a6e44",
+    "archive_read_only": true,
+    "baseline": "README says patch files are copied into CosmoMC-planck2018; older CAMB/CosmoMC integration",
+    "background_Q_match": "yes: H0rde implements Q=beta H0 rho_de; map beta=Gamma/H0",
+    "transfer_vector_match": "yes: uc implements Q_mu=Q u_mu,c",
+    "perturbation_closure_match": "no: coupled w=-1,beta!=0 enables perturbations and PPF branch adds interaction-sourced DE density perturbation gQ*vT/k",
+    "target_ivS_paper_closure": "no DE perturbative contribution; Eqs. (19)-(20)",
+    "sample_ini_is_target": false,
+    "sample_ini_difference": "test_ide.ini has QForm_CF=4 (Q=beta H0 rho_c) and w0=-1.05",
+    "disposition": "needs an IVS-specific perturbation adaptation; cannot be used unchanged as source-faithful reproduction; as-is is a different perturbation realization of the same background coupling",
+    "archive_member_evidence": {
+      "camb/equations_ppfi.f90": [
+        "lines 122-140: Q options; H0rde is beta H0 rho_de",
+        "lines 161-175: uc transfer-vector option",
+        "lines 177-193: coupled fluid enables perturbations for nonzero coupling at w=-1",
+        "lines 2901-2917: w_eff approximately -1 PPF branch and dgrhoe source term"
+      ],
+      "modification_manual.f90": "lines 177-197 initialize PPF Gamma and interacting CDM velocity from standard initial vector (comments Gamma=0 and vc=0)",
+      "test_ide.ini": "QForm_CF=4 and w0=-1.05"
+    }
+  },
+  "negative_searches": [
+    "arXiv v1 pages and full PDF texts reviewed; no target CAMB patch/base commit or complete Cobaya config linked",
+    "2609.03062 full text has no GitHub/code URL; 2609.05660 links only wgcosmo in its MCEvidence discussion",
+    "wgcosmo recursive tree at commit 80fa9742f10616bcaf55d5888a15e8f07e74cd25 contains no target-specific IVS/interacting/PPF YAML path or CAMB source patch path; repository release and tag endpoints each returned zero entries",
+    "GitHub exact-title/arXiv-ID searches with CAMB/code terms produced no target-specific source release",
+    "Search queries: `site:github.com \"Do DESI-DR2 BAO data imply a coupling\"`; `site:github.com \"Reassessing Evidence for Dark-Sector Interactions\"`; `site:github.com \"Jincheng Wang\" cosmology CAMB interacting dark energy`; `site:github.com \"2609.03062\"`; `\"2609.05660\" code Zenodo`; `\"2609.03062\" code Zenodo`; `\"2609.05660\" \"CAMB\" GitHub`; `\"2609.03062\" \"CAMB\" GitHub`",
+    "arXiv TeX source link exists; attempted source archive fetch returned HTTP 406 and is not treated as a code availability result",
+    "APS accepted-page inspection showed no current supplement download link; page says any provided supplement appears with version of record"
+  ],
+  "local_pdf_sources": {
+    "target_pdf": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "target_pdf_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+    "comparison_pdf": "work/literature5/arXiv_2609.03062v1.pdf",
+    "comparison_pdf_sha256": "0e2b97a2fd988a6657e0c563bbbde7843529dea9c9ab8ac63dff88fefde356e5"
+  }
+}

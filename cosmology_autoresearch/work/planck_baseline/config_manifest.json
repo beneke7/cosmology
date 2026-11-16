@@ -1,0 +1,107 @@
+{
+  "base_parameters": {
+    "logA": {
+      "prior": {
+        "max": 3.91,
+        "min": 1.61
+      },
+      "reference_center": 3.045,
+      "reference_scale": 0.016
+    },
+    "ns": {
+      "prior": {
+        "max": 1.1,
+        "min": 0.9
+      },
+      "reference_center": 0.9649,
+      "reference_scale": 0.0044
+    },
+    "ombh2": {
+      "prior": {
+        "max": 0.1,
+        "min": 0.005
+      },
+      "reference_center": 0.02236,
+      "reference_scale": 0.00015
+    },
+    "omch2": {
+      "prior": {
+        "max": 0.99,
+        "min": 0.001
+      },
+      "reference_center": 0.1202,
+      "reference_scale": 0.0014
+    },
+    "tau": {
+      "prior": {
+        "max": 0.8,
+        "min": 0.01
+      },
+      "reference_center": 0.0544,
+      "reference_scale": 0.0075
+    },
+    "theta_MC_100": {
+      "prior": {
+        "max": 10.0,
+        "min": 0.5
+      },
+      "reference_center": 1.0409,
+      "reference_scale": 0.00031
+    }
+  },
+  "camb_version": "1.6.6",
+  "clipy_like_version": "0.15",
+  "cobaya_version": "3.6.2",
+  "components": {
+    "planck_2018_highl_plik.TTTEEE": {
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_data/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik",
+      "product_present": true
+    },
+    "planck_2018_lowl.EE_clik": {
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_data/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik",
+      "product_present": true
+    },
+    "planck_2018_lowl.TT_clik": {
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_data/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik",
+      "product_present": true
+    }
+  },
+  "config_path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_baseline/planck2018_nolens_camb1166.yaml",
+  "config_sha256": "c1d38c87d4035dbe7c9c2d323ddc5d1b58694d9ac4bec2f6ef3808ff95bac909",
+  "fixed_model_settings": {
+    "N_eff": 3.046,
+    "Omega_k": 0.0,
+    "helium": {
+      "1e5_DH_at_ombh2_0.02236": 2.4547102209521814,
+      "YHe_at_ombh2_0.02236": 0.24539469752568832,
+      "camb_table": "PArthENoPE_880.2_marcucci.dat",
+      "delta_neff_at_reference": 0.0,
+      "dpgamma3He_rate": "Marcucci et al. 2016 theoretical rate, Planck VI case b",
+      "neutron_lifetime_s": 880.2,
+      "prescription": "PArthENoPE 1.1 BBN consistency interpolation",
+      "standard_neutrino_neff": 3.046,
+      "table_sha256": "994c68f11ecbd33ecf6e631a0432ffc4b80068bfe972ab98fd235420aad67d8e"
+    },
+    "massive_neutrino_species": 1,
+    "mnu_eV": 0.06,
+    "w": -1.0
+  },
+  "nuisance_policy": "Use full Cobaya 3.6.2 component nuisance defaults and SZ combination prior; no nuisance is frozen by this script.",
+  "paper_reference": "Planck Collaboration 2018 VI, Table 2, TT,TE,EE+lowE column",
+  "physical_cmb_lensing": true,
+  "separate_lensing_reconstruction": false,
+  "smoke_evaluation": {
+    "interpretation": "One exact likelihood evaluation at the published Table 2 marginalized cosmological centers with one deterministic draw from the configured nuisance reference/prior measure. This is not the published best fit or a reproduction of marginalized constraints.",
+    "log_likelihood_components": {
+      "planck_2018_highl_plik.TTTEEE": -1981.831938415346,
+      "planck_2018_lowl.EE_clik": -198.0775858760956,
+      "planck_2018_lowl.TT_clik": -11.808515424172015
+    },
+    "log_likelihood_sum": -2191.718039715614,
+    "record_path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_baseline/smoke_result.json",
+    "runtime_seconds": 2.78890120703727,
+    "seed_for_nuisance_reference_draw": 20260925
+  },
+  "source_preset": "Cobaya 3.6.2 planck_2018_camb; edited only for exact TT,TE,EE+lowE data combination and Planck 2018 N_eff/prior contract",
+  "status": "full_likelihood_one_point_smoke_pass_not_fit"
+}

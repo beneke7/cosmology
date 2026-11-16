@@ -1,0 +1,89 @@
+{
+  "task": "final bounded author-artifact sweep for arXiv:2609.05660",
+  "access_window_utc": "2026-09-25 00:40–00:42 UTC",
+  "method_limits": {
+    "read_only": true,
+    "repositories_cloned": false,
+    "paper_source_or_data_downloaded": false,
+    "author_contacted": false,
+    "general_unlinked_github_search": false,
+    "outputs_only_under": "work/compute16/"
+  },
+  "primary_pages": [
+    "https://arxiv.org/abs/2609.05660",
+    "https://arxiv.org/html/2609.05660",
+    "https://arxiv.org/abs/2609.05660v1",
+    "https://journals.aps.org/prd/accepted/10.1103/6kdf-vzq4"
+  ],
+  "arxiv_authors_and_profile_link_routes": [
+    {
+      "author": "Weiqiang Yang",
+      "route": "https://arxiv.org/search/astro-ph?query=Yang%2C+W&searchtype=author",
+      "destination_type": "arXiv author-search page, not an external profile"
+    },
+    {
+      "author": "Sibo Zhang",
+      "route": "https://arxiv.org/search/astro-ph?query=Zhang%2C+S&searchtype=author",
+      "destination_type": "arXiv author-search page, not an external profile"
+    },
+    {
+      "author": "Dinorah Barbosa",
+      "route": "https://arxiv.org/search/astro-ph?query=Barbosa%2C+D&searchtype=author",
+      "destination_type": "arXiv author-search page, not an external profile"
+    },
+    {
+      "author": "Marco Antonio Alvarez",
+      "route": "https://arxiv.org/search/astro-ph?query=Alvarez%2C+M+A&searchtype=author",
+      "destination_type": "arXiv author-search page, not an external profile"
+    },
+    {
+      "author": "Supriya Pan",
+      "route": "https://arxiv.org/search/astro-ph?query=Pan%2C+S&searchtype=author",
+      "destination_type": "arXiv author-search page, not an external profile"
+    },
+    {
+      "author": "Leila Graef",
+      "route": "https://arxiv.org/search/astro-ph?query=Graef%2C+L&searchtype=author",
+      "destination_type": "arXiv author-search page, not an external profile"
+    }
+  ],
+  "profile_repo_findings": {
+    "orcid_profile_links_in_arxiv_html": [],
+    "aps_author_profile_links": [],
+    "sole_article_cited_github_repo": {
+      "name": "williamgiare/wgcosmo",
+      "url": "https://github.com/williamgiare/wgcosmo",
+      "paper_reference": 157,
+      "paper_context": "Cobaya interface bundled in the repository for MCEvidence evidence calculation",
+      "maintainer_is_one_of_six_paper_authors": false,
+      "observed_head_sha": "80fa9742f10616bcaf55d5888a15e8f07e74cd25",
+      "head_ref": "main",
+      "commit_url": "https://github.com/williamgiare/wgcosmo/commit/80fa9742f10616bcaf55d5888a15e8f07e74cd25",
+      "fresh_refs_check_utc": "2026-09-25 00:41 UTC",
+      "fresh_refs_result": "HEAD and refs/heads/main still point to 80fa9742f10616bcaf55d5888a15e8f07e74cd25; no tag refs were returned"
+    }
+  },
+  "supplement_findings": {
+    "arxiv_v1_submission_history": "Only v1 displayed at access time.",
+    "arxiv_html": "Paper page provides PDF, HTML, and TeX-source navigation; no paper-linked supplement or additional author code/data artifact surfaced. TeX source archive was not downloaded.",
+    "aps_status": "Accepted Paper page, accepted 2026-09-03; states supplements, if any, will appear upon publication of the version of record; no attachment is displayed.",
+    "aps_supplement_urls_attempted": [
+      {
+        "url": "https://journals.aps.org/prd/supplemental/10.1103/6kdf-vzq4",
+        "result": "not retrievable by the browsing tool; not treated as evidence of absence"
+      },
+      {
+        "url": "https://journals.aps.org/prd/supplemental/6kdf-vzq4",
+        "result": "not retrievable by the browsing tool; not treated as evidence of absence"
+      }
+    ]
+  },
+  "artifact_targets_checked": {
+    "version_pinned_modified_camb_patch": "not found in primary-page links or linked public repository trail",
+    "ivs_cobaya_configuration": "not found in primary-page links or linked public repository trail",
+    "des_dovekie_likelihood_version": "not found in primary-page links or linked public repository trail",
+    "explicit_ivs_perturbation_initial_conditions": "not found in paper HTML/profile/supplement links"
+  },
+  "search_boundary": "Followed author-name links and code/supplement links surfaced by the official arXiv and APS paper pages, plus refreshed refs of the sole paper-cited GitHub repository. Did not enumerate arbitrary personal GitHub accounts or unlinked institutional pages; cannot exclude private or unlinked artifacts.",
+  "conclusion": "No new public artifact was found that resolves the implementation-version, full Cobaya-config, Dovekie-likelihood, or perturbation-initial-condition gaps in the prior audit."
+}

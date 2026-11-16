@@ -1,0 +1,325 @@
+{
+  "cases": [
+    {
+      "Gamma_km_s_Mpc": 0.0,
+      "Gamma_s_inv": 0.0,
+      "H0_s_inv": 2.1842852410855023e-18,
+      "at_zmax": {
+        "E2": 9.207095499401601e+35,
+        "radiation_plus_neutrino_fraction_of_E2": 0.9999996578725613,
+        "rho_c": 2.6600000007980087e+29,
+        "rho_x": 0.6849079290765427,
+        "z": 10000000000.0
+      },
+      "checks": {
+        "E2_positive_on_full_grid": true,
+        "alternate_form_success": true,
+        "cdm_positive_at_both_range_endpoints": true,
+        "e2_positive_at_both_range_endpoints": true,
+        "flat_closure_today": true,
+        "ode_coarse_success": true,
+        "ode_fine_success": true,
+        "ode_max_step_only_success": true,
+        "ode_tolerance_only_success": true,
+        "rho_c_positive_on_full_grid": true,
+        "rho_x_positive_on_full_grid": true,
+        "unit_conversion_consistent": true,
+        "vacuum_positive_at_both_range_endpoints": true
+      },
+      "dimensionless_unit_ratio_error_after_SI_conversion": 0.0,
+      "fine_direct_vs_dark_total_form_max_relative_difference": {
+        "E2": 1.4383445565624755e-15,
+        "rho_c": 5.0340025930295395e-15,
+        "rho_x": 0.0
+      },
+      "fine_vs_coarse_max_relative_difference": {
+        "E2": 1.0172512226193127e-10,
+        "rho_c": 3.2387537491398484e-10,
+        "rho_x": 0.0
+      },
+      "gamma_over_H0": 0.0,
+      "gamma_zero_analytic_lcdm_max_relative_error": {
+        "E2": 2.0309782790970852e-15,
+        "rho_c": 1.4423036824359708e-14,
+        "rho_x": 0.0
+      },
+      "integral_identities": {
+        "cdm_comoving_identity_max_relative_error": 1.4399509153972687e-14,
+        "dark_sector_conservation_max_relative_error": 7.3386028900853e-15,
+        "quadrature_sample_count": 129
+      },
+      "max_step_only_tightening_vs_coarse_max_relative_difference": {
+        "E2": 1.0172589104076093e-10,
+        "rho_c": 3.2387574557980324e-10,
+        "rho_x": 0.0
+      },
+      "minima_over_0_to_zmax": {
+        "E2": 1.0,
+        "rho_b": 0.049,
+        "rho_c": 0.266,
+        "rho_gamma": 5.443748867104649e-05,
+        "rho_nu": 3.763343478614165e-05,
+        "rho_x": 0.6849079290765427
+      },
+      "source_sign_today": {
+        "cdm_transfer_term_d_rho_c_dn": -0.0,
+        "d_rho_x_dn": 0.0,
+        "expected": "Gamma>0: rho_x gains and CDM loses forward in time; Gamma<0: reverse"
+      },
+      "tolerance_only_tightening_vs_coarse_max_relative_difference": {
+        "E2": 1.0003780745097562e-10,
+        "rho_c": 3.174007697311192e-10,
+        "rho_x": 0.0
+      }
+    },
+    {
+      "Gamma_km_s_Mpc": 31.452884000000005,
+      "Gamma_s_inv": 1.0193185506049607e-18,
+      "H0_s_inv": 2.1842852410855023e-18,
+      "at_zmax": {
+        "E2": 9.2070962649032e+35,
+        "radiation_plus_neutrino_fraction_of_E2": 0.9999995747300249,
+        "rho_c": 3.425501598384875e+29,
+        "rho_x": 0.449388279687641,
+        "z": 10000000000.0
+      },
+      "checks": {
+        "E2_positive_on_full_grid": true,
+        "alternate_form_success": true,
+        "cdm_positive_at_both_range_endpoints": true,
+        "e2_positive_at_both_range_endpoints": true,
+        "flat_closure_today": true,
+        "ode_coarse_success": true,
+        "ode_fine_success": true,
+        "ode_max_step_only_success": true,
+        "ode_tolerance_only_success": true,
+        "rho_c_positive_on_full_grid": true,
+        "rho_x_positive_on_full_grid": true,
+        "unit_conversion_consistent": true,
+        "vacuum_positive_at_both_range_endpoints": true
+      },
+      "dimensionless_unit_ratio_error_after_SI_conversion": 5.551115123125783e-17,
+      "fine_direct_vs_dark_total_form_max_relative_difference": {
+        "E2": 1.791313865704966e-15,
+        "rho_c": 3.09090740442967e-15,
+        "rho_x": 1.4823078880644714e-15
+      },
+      "fine_vs_coarse_max_relative_difference": {
+        "E2": 1.062705321391483e-10,
+        "rho_c": 3.233043851851104e-10,
+        "rho_x": 4.080938712275853e-12
+      },
+      "gamma_over_H0": 0.46666,
+      "integral_identities": {
+        "cdm_comoving_identity_max_relative_error": 1.0533420369196338e-14,
+        "dark_sector_conservation_max_relative_error": 7.262966322458216e-15,
+        "quadrature_sample_count": 129
+      },
+      "max_step_only_tightening_vs_coarse_max_relative_difference": {
+        "E2": 1.0627129015676274e-10,
+        "rho_c": 3.233013629426698e-10,
+        "rho_x": 4.080938712275853e-12
+      },
+      "minima_over_0_to_zmax": {
+        "E2": 1.0,
+        "rho_b": 0.049,
+        "rho_c": 0.266,
+        "rho_gamma": 5.443748867104649e-05,
+        "rho_nu": 3.763343478614165e-05,
+        "rho_x": 0.449388279687641
+      },
+      "source_sign_today": {
+        "cdm_transfer_term_d_rho_c_dn": -0.3196191341828595,
+        "d_rho_x_dn": 0.3196191341828595,
+        "expected": "Gamma>0: rho_x gains and CDM loses forward in time; Gamma<0: reverse"
+      },
+      "tolerance_only_tightening_vs_coarse_max_relative_difference": {
+        "E2": 1.0473032353917264e-10,
+        "rho_c": 3.1672971263005483e-10,
+        "rho_x": 4.047366887399361e-12
+      }
+    },
+    {
+      "Gamma_km_s_Mpc": -31.452884000000005,
+      "Gamma_s_inv": -1.0193185506049607e-18,
+      "H0_s_inv": 2.1842852410855023e-18,
+      "at_zmax": {
+        "E2": 9.20709452217632e+35,
+        "radiation_plus_neutrino_fraction_of_E2": 0.9999997640108164,
+        "rho_c": 1.6827747198746623e+29,
+        "rho_x": 1.1076698478080316,
+        "z": 10000000000.0
+      },
+      "checks": {
+        "E2_positive_on_full_grid": true,
+        "alternate_form_success": true,
+        "cdm_positive_at_both_range_endpoints": true,
+        "e2_positive_at_both_range_endpoints": true,
+        "flat_closure_today": true,
+        "ode_coarse_success": true,
+        "ode_fine_success": true,
+        "ode_max_step_only_success": true,
+        "ode_tolerance_only_success": true,
+        "rho_c_positive_on_full_grid": true,
+        "rho_x_positive_on_full_grid": true,
+        "unit_conversion_consistent": true,
+        "vacuum_positive_at_both_range_endpoints": true
+      },
+      "dimensionless_unit_ratio_error_after_SI_conversion": 5.551115123125783e-17,
+      "fine_direct_vs_dark_total_form_max_relative_difference": {
+        "E2": 2.622365842741116e-15,
+        "rho_c": 4.915942436254057e-15,
+        "rho_x": 4.20968099173434e-15
+      },
+      "fine_vs_coarse_max_relative_difference": {
+        "E2": 9.269127467863066e-11,
+        "rho_c": 3.22899897075217e-10,
+        "rho_x": 3.660048436411866e-12
+      },
+      "gamma_over_H0": -0.46666,
+      "integral_identities": {
+        "cdm_comoving_identity_max_relative_error": 9.731421220395637e-15,
+        "dark_sector_conservation_max_relative_error": 7.27861666611766e-15,
+        "quadrature_sample_count": 129
+      },
+      "max_step_only_tightening_vs_coarse_max_relative_difference": {
+        "E2": 9.26919720476993e-11,
+        "rho_c": 3.2290441987637877e-10,
+        "rho_x": 3.659828837897651e-12
+      },
+      "minima_over_0_to_zmax": {
+        "E2": 1.0,
+        "rho_b": 0.049,
+        "rho_c": 0.266,
+        "rho_gamma": 5.443748867104649e-05,
+        "rho_nu": 3.763343478614165e-05,
+        "rho_x": 0.6849079290765427
+      },
+      "source_sign_today": {
+        "cdm_transfer_term_d_rho_c_dn": 0.3196191341828595,
+        "d_rho_x_dn": -0.3196191341828595,
+        "expected": "Gamma>0: rho_x gains and CDM loses forward in time; Gamma<0: reverse"
+      },
+      "tolerance_only_tightening_vs_coarse_max_relative_difference": {
+        "E2": 9.228633570611107e-11,
+        "rho_c": 3.1639869346237184e-10,
+        "rho_x": 3.621704428970195e-12
+      }
+    }
+  ],
+  "gate": "1: homogeneous background only",
+  "implementation": {
+    "cpu_affinity_count": 1,
+    "cpu_affinity_ids": [
+      0
+    ],
+    "cpu_count_visible": 20,
+    "gpu_used": false,
+    "numpy": "2.5.3",
+    "parallel_workers": 1,
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "scipy": "1.18.1",
+    "script": "work/compute15/background_gate.py",
+    "script_elapsed_seconds": 2.128638547845185,
+    "script_sha256": "c07ede03539d08702f24db69140badd8361c859e76be608fb246ad1867c91d9c"
+  },
+  "integrator": {
+    "N_eval_points": 2049,
+    "coarse": {
+      "atol": 1e-12,
+      "max_step": 0.1,
+      "rtol": 1e-09
+    },
+    "fine": {
+      "atol": 1e-14,
+      "max_step": 0.02,
+      "rtol": 1e-12
+    },
+    "identity_threshold_relative": 2e-09,
+    "lcdm_recovery_threshold_relative": 2e-09,
+    "max_step_convergence_threshold_relative": 2e-07,
+    "max_step_only_tightening": {
+      "atol": 1e-12,
+      "max_step": 0.02,
+      "rtol": 1e-09
+    },
+    "method": "SciPy solve_ivp DOP853; dense-output quadrature via scipy.integrate.quad",
+    "tolerance_only_tightening": {
+      "atol": 1e-14,
+      "max_step": 0.1,
+      "rtol": 1e-12
+    }
+  },
+  "paper_model": {
+    "Gamma_dimension": "Hubble rate; gamma=Gamma/H0 is dimensionless",
+    "checked_identities": [
+      "dark-sector continuity: (rho_c+rho_x)'=-3*rho_c",
+      "CDM comoving density: d(a^3*rho_c)/dn=-gamma*a^3*rho_x/E"
+    ],
+    "conserved_separately": {
+      "baryons": "rho_b'= -3 rho_b",
+      "massless_neutrinos": "rho_nu'= -4 rho_nu",
+      "photons_radiation": "rho_gamma'= -4 rho_gamma"
+    },
+    "equation_of_state": "w_x=-1",
+    "flat_friedmann": "E^2=rho_b+rho_gamma+rho_nu+rho_c+rho_x",
+    "independent_ode_forms": [
+      "(rho_c,rho_x), with rho_c'=-3*rho_c-gamma*rho_x/E and rho_x'=gamma*rho_x/E",
+      "(rho_c+rho_x,rho_x), with (rho_c+rho_x)'=-3*rho_c and rho_x'=gamma*rho_x/E"
+    ],
+    "interaction": "Q=Gamma*rho_x",
+    "n_variable": "ln(a)",
+    "sign_convention": "Gamma>0 transfers CDM energy to vacuum/DE",
+    "unit_conversion_check": "Gamma and H0 converted independently from km/s/Mpc to s^-1 using 1 Mpc=3.0856775814913673e22 m; Gamma_s/H0_s compared with gamma"
+  },
+  "pinned_assumptions": {
+    "G_SI": 6.6743e-11,
+    "H0_km_s_Mpc": 67.4,
+    "Mpc_m": 3.085677581491367e+22,
+    "N_eff": 3.044,
+    "Omega_b0": 0.049,
+    "Omega_c0": 0.266,
+    "Omega_m0_baryons_plus_CDM": 0.315,
+    "T_CMB_K": 2.7255,
+    "a_rad_J_m3_K4": 7.5657e-16,
+    "analytic_LCDM_limit": "same pinned densities, Gamma=0",
+    "c_m_s": 299792458.0,
+    "computed_present_density_parameters": {
+      "omega_b0": 0.049,
+      "omega_c0": 0.266,
+      "omega_gamma0": 5.443748867104649e-05,
+      "omega_nu0": 3.763343478614165e-05,
+      "omega_x0": 0.6849079290765427
+    },
+    "flat_closure": "Omega_x0=1-Omega_b0-Omega_c0-Omega_gamma0-Omega_nu0",
+    "neutrino_approximation": "all effective neutrinos massless; rho_nu/rho_gamma=(7/8)*(4/11)^(4/3)*N_eff; separate conserved component",
+    "normalized_density_units": "today's critical density",
+    "paper_neutrino_mass_context": "primary-paper footnote specifies sum m_nu=0.06 eV; this Gate 1 benchmark approximates all neutrinos as massless and does not claim exact reproduction of that massive-neutrino prescription",
+    "photon_density_method": "rho_gamma=a_rad*T_CMB^4/c^2; Omega_gamma=rho_gamma/rho_critical",
+    "rate_grid_Gamma_over_H0": [
+      0.0,
+      0.46666,
+      -0.46666
+    ],
+    "z_range_including_today": [
+      0.0,
+      10000000000.0
+    ]
+  },
+  "positivity_assessment": {
+    "cdm_continuous_argument": "For gamma!=0, at any rho_c=0 the ODE gives rho_c'=-gamma*rho_x/E, which has the same strict sign at every zero because rho_x/E>0. Thus rho_c cannot cross zero twice; positive rho_c at both endpoints excludes a zero in the interval. For gamma=0, rho_c=Omega_c0*a^-3 exactly.",
+    "e2_continuous_argument": "With positive separately conserved baryons, photons, and neutrinos, and positive rho_x and rho_c, their sum E^2 is positive.",
+    "numerical_sampling": "2049 ln(a) output points on 0<=z<=1e10, fine ODE max_step=0.02",
+    "vacuum_continuous_argument": "rho_x solves a scalar homogeneous equation rho_x'=gamma*rho_x/E with positive present value, so remains positive wherever the finite background solution exists."
+  },
+  "primary_source": {
+    "equations_checked": "Eqs. (3)-(8), PDF pp. 2-3",
+    "pdf": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "pdf_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+    "text_copy": "context/papers/interacting_de_desi_dr2_2026.txt",
+    "text_copy_sha256": "a99a4afdd858cdce3cbc2c41f0a13098c30c361dc67891331ee7d9d5f824868f"
+  },
+  "scope_limit": "A successful homogeneous-background gate does not validate perturbative stability, CMB spectra, sound-horizon consistency, growth, or the paper's full likelihood/evidence claims.",
+  "status": "PASS"
+}

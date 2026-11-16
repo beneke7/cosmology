@@ -1,0 +1,6 @@
+2026-09-25T06:03:35+00:00 start URL=https://pla.esac.esa.int/pla/aio/product-action?COSMOLOGY.FILE_ID=COM_Likelihood_Data-baseline_R3.00.tar.gz
+2026-09-25T06:03:35+00:00 streaming byte cap=21365665738; cookies and account credentials are not configured
+2026-09-25T06:03:36+00:00 HTTP status=200; final_url=https://pla.esac.esa.int/pla/aio/product-action?COSMOLOGY.FILE_ID=COM_Likelihood_Data-baseline_R3.00.tar.gz; redirects=0
+2026-09-25T06:03:36+00:00 Transfer-Encoding=chunked; Content-Length absent
+2026-09-25T06:03:41+00:00 complete bytes=60323470; sha256=0b73171e3acc671c28184466a45485a2d1c1d93676b832abdfe688c7b04024e6; elapsed_seconds=6.028
+2026-09-25T06:03:41+00:00 saved archive=/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_stage/COM_Likelihood_Data-baseline_R3.00.tar.gz

@@ -176,11 +176,11 @@
       "url": "https://arxiv.org/abs/2609.00317",
       "priority": "core",
       "fetch": true,
-      "note": "Candidate follow-up found in indexing; primary text was not accessible during the earlier assessment. Verify title/authors and relevance before relying on it.",
+      "note": "Full text and PDF are cached and read locally. It develops a distinct higher-gradient Newtonian sector; its later analysis sets the reactive coupling K=0, so it does not validate the 2024 nonlinear galaxy equation. Independent algebra/laboratory-bound audit is in progress.",
       "filename": "papers/tg_higher_gradient_2026.pdf",
       "download_url": "https://arxiv.org/pdf/2609.00317",
       "arxiv_id": "2609.00317",
-      "read_status": "not_read_by_overnight_run"
+      "read_status": "full_text_read_independent_equation_audit_in_progress"
     },
     {
       "id": "mochi_class",
@@ -717,6 +717,69 @@
       "filename": "work/data9_primat/repo/primat",
       "repository_commit": "21ff8f39fa18e3937e9fdf386cfa982361bfdfce",
       "note": "Public GPL-3.0-or-later source, checked out at exact v0.3.2 tag; 460 package/data files, 21,580,336 bytes, aggregate tree SHA-256 583f054b68c100b249126618f41620718ed800f9ddde9d9fa9d1c24aaee98413. Source commit/tree provenance and independent point-for-point repeated standard-background run are in work/data9_primat/REPORT.md. Generic upstream code only; not the restricted paper-specific vEDE patch/likelihood."
+    },
+    {
+      "id": "planck_pr3_likelihood_data_r3_00",
+      "kind": "data",
+      "title": "Planck PR3 baseline likelihood data, R3.00",
+      "url": "https://www.cosmos.esa.int/web/planck/pla",
+      "priority": "core",
+      "fetch": false,
+      "filename": "work/planck_stage/COM_Likelihood_Data-baseline_R3.00.tar.gz",
+      "download_url": "https://pla.esac.esa.int/pla/aio/product-action?COSMOLOGY.FILE_ID=COM_Likelihood_Data-baseline_R3.00.tar.gz",
+      "max_bytes": 21365665738,
+      "note": "Downloaded and validated: 60,323,470-byte official archive, SHA-256 0b73171e3acc671c28184466a45485a2d1c1d93676b832abdfe688c7b04024e6. Only the exact products Plik HM TTTEEE + Commander low-TT + SimAll lowE are selected; no separate lensing likelihood. Public archive terms are CC BY-NC 3.0 IGO."
+    },
+    {
+      "id": "planck_pr3_base_plikhm_tttee_lowell_lowe_chains_r3_00",
+      "kind": "posterior_reference",
+      "title": "Planck PR3 base-plikHM TTTEEE+lowE comparison chains, R3.00",
+      "url": "https://irsa.ipac.caltech.edu/data/Planck/release_3/ancillary-data/cosmoparams/",
+      "priority": "core",
+      "fetch": false,
+      "filename": "work/planck_stage/COM_CosmoParams_base-plikHM-TTTEEE-lowl-lowE_R3.00.zip",
+      "download_url": "https://irsa.ipac.caltech.edu/data/Planck/release_3/ancillary-data/cosmoparams/COM_CosmoParams_base-plikHM-TTTEEE-lowl-lowE_R3.00.zip",
+      "max_bytes": 209715200,
+      "note": "Downloaded and ZIP-CRC validated: 65,362,284 bytes, SHA-256 52cf6793f14e250ffc1436ce7f6fe6d92f6a066c433ec9efc66e4178f3d45a1f. Selected only to compare posterior summaries and optionally initialize proposal covariance for the exact TTTEEE+lowE baseline. These are derived posterior samples, not a likelihood or independent data factor; never add them to the clik likelihood. Other chain/full-grid/lensing archives remain excluded. Download is justified in NEXT.md and bounded below the 200 MiB per-file ceiling."
+    },
+    {
+      "id": "eotwash_2020_inverse_square_law",
+      "kind": "paper",
+      "title": "New Test of the Gravitational 1/r^2 Law at Separations down to 52 μm",
+      "url": "https://arxiv.org/abs/2002.11761",
+      "priority": "core",
+      "fetch": true,
+      "note": "Primary Eöt-Wash torsion-balance result cited by the 2026 higher-gradient paper. The 95% single-Yukawa limit is sign-dependent; assess transfer to its linked two-range potential separately.",
+      "filename": "papers/eotwash_2020_inverse_square_law.pdf",
+      "download_url": "https://arxiv.org/pdf/2002.11761",
+      "arxiv_id": "2002.11761",
+      "read_status": "full_text_read_independent_model_mapping_audit_in_progress"
+    },
+    {
+      "id": "lee_2020_eotwash_thesis",
+      "kind": "documentation",
+      "title": "A Fourier-Bessel Test of the Gravitational Inverse-Square Law",
+      "url": "https://digital.lib.washington.edu/researchworks/items/971237d1-100a-41ae-9027-d1bbce8cf315",
+      "priority": "core",
+      "fetch": true,
+      "note": "First-author University of Washington dissertation (2020), official ResearchWorks open full text. Includes sign-specific Yukawa limits in Table 11.4 and analyzed torque means/errors in Appendix A.1; acquired to audit transfer of the published bound to the two-range thermodynamic potential.",
+      "filename": "papers/lee_2020_eotwash_thesis.pdf",
+      "download_url": "https://digital.lib.washington.edu/researchworks/bitstreams/6013936a-da00-42b7-ba0a-4dff0cb05bf8/download",
+      "read_status": "full_text_read_sign_specific_curve_audit_in_progress"
+    },
+    {
+      "id": "short_range_gravity_tests_2026_v2",
+      "kind": "paper",
+      "title": "Short-Range Tests of the Gravitational Inverse-Square Law",
+      "url": "https://arxiv.org/abs/2605.18212v2",
+      "priority": "optional",
+      "fetch": true,
+      "note": "Exact v2 PDF/text retrieved and targeted experimental sections checked 2026-09-25; this is literature context, not an original measurement. It restricts its plotted Yukawa scope to attractive alpha>0, so its curves cannot be directly transferred to the TG single-range alpha=-1 or correlated two-range potential.",
+      "filename": "short_range_tests_2026_v2.pdf",
+      "download_url": "https://arxiv.org/pdf/2605.18212v2",
+      "arxiv_id": "2605.18212v2",
+      "max_bytes": 10000000,
+      "read_status": "exact_v2_pdf_text_local_targeted_experimental_sections_checked_2026-09-25"
     }
   ]
 }

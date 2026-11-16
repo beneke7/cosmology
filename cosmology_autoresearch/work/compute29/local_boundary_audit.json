@@ -1,0 +1,1011 @@
+{
+  "challenge_point": {
+    "compute26_chi2": 10.273886272857048,
+    "compute26_parameters": [
+      133.61341628747076,
+      0.09999999989752482,
+      0.43027242287187395
+    ],
+    "distance_integral_check": {
+      "all_below_1e-6_Mpc": true,
+      "max_abs_D_M_error_Mpc": 9.094947017729282e-13
+    },
+    "finite_difference_at_fixed_H0_omega_c": {
+      "center_chi2": 10.273886272853556,
+      "finite_difference_rows": [
+        {
+          "central_second_difference": 1609061.8184036193,
+          "chi2_center": 10.273886272853556,
+          "chi2_lower_fixed_H0_omega_c": 11.081516084635792,
+          "chi2_upper_fixed_H0_omega_c": 11.075318279474939,
+          "left_secant_dchi2_domega_b": -807.6298117822364,
+          "omega_b_center": 0.1,
+          "omega_b_lower": 0.099,
+          "omega_b_upper": 0.101,
+          "outside_declared_domain_on_right": true,
+          "right_secant_dchi2_domega_b": 801.4320066213827,
+          "step": 0.001
+        },
+        {
+          "central_second_difference": 1609291.009155278,
+          "chi2_center": 10.273886272853556,
+          "chi2_lower_fixed_H0_omega_c": 10.28194015560126,
+          "chi2_upper_fixed_H0_omega_c": 10.281925300197404,
+          "left_secant_dchi2_domega_b": -80.53882747704577,
+          "omega_b_center": 0.1,
+          "omega_b_lower": 0.0999,
+          "omega_b_upper": 0.10010000000000001,
+          "outside_declared_domain_on_right": true,
+          "right_secant_dchi2_domega_b": 80.39027343848204,
+          "step": 0.0001
+        },
+        {
+          "central_second_difference": 1609609.9849249865,
+          "chi2_center": 10.273886272853556,
+          "chi2_lower_fixed_H0_omega_c": 10.27396709288352,
+          "chi2_upper_fixed_H0_omega_c": 10.273966413822084,
+          "left_secant_dchi2_domega_b": -8.08200299644568,
+          "omega_b_center": 0.1,
+          "omega_b_lower": 0.09999000000000001,
+          "omega_b_upper": 0.10001,
+          "outside_declared_domain_on_right": true,
+          "right_secant_dchi2_domega_b": 8.014096852804187,
+          "step": 1e-05
+        }
+      ],
+      "parameters_fixed": {
+        "H0_km_s_Mpc": 133.61341628747076,
+        "omega_c_h2": 0.43027242287187395
+      },
+      "reading": "At a domain upper edge, the in-domain secant should be nonpositive toward the boundary for a boundary minimum; an outside-box upward score change is a diagnostic, not evidence against the in-box minimum."
+    },
+    "independently_recomputed": {
+      "bao": {
+        "DM_Mpc": [
+          616.4485659357578,
+          1007.4615717630065,
+          1007.4615717630065,
+          1323.4261491043485,
+          1323.4261491043485,
+          1647.5344679902792,
+          1647.5344679902792,
+          2108.5392542419404,
+          2108.5392542419404,
+          2275.074190527764,
+          2275.074190527764,
+          2952.6466298669075,
+          2952.6466298669075
+        ],
+        "H_km_s_Mpc": [
+          155.1586609004158,
+          175.5679737698144,
+          175.5679737698144,
+          197.2490835632351,
+          197.2490835632351,
+          225.7295418519559,
+          225.7295418519559,
+          280.9551848050652,
+          280.9551848050652,
+          306.4800847147909,
+          306.4800847147909,
+          456.76501913113736,
+          456.76501913113736
+        ],
+        "abs_difference": 0.0,
+        "chi2_cholesky_full_covariance": 10.273886272857048,
+        "chi2_dense_full_covariance": 10.273886272857048,
+        "predictions": [
+          7.9023922192920875,
+          13.256644426080214,
+          22.468833398128805,
+          17.41425219043494,
+          19.999117265436425,
+          21.679019065350666,
+          17.475814287826793,
+          27.745132852067897,
+          14.040700318159383,
+          29.93647641964213,
+          12.871334058629058,
+          8.63640468831185,
+          38.852287357733
+        ]
+      },
+      "derived": {
+        "100theta_star_CAMB": 1.096385828203224,
+        "r_drag_Mpc": 75.99672582158088,
+        "z_drag": 1158.1678484028878
+      },
+      "parameters": {
+        "H0_km_s_Mpc": 133.61341628747076,
+        "omega_b_h2": 0.09999999989752482,
+        "omega_c_h2": 0.43027242287187395
+      },
+      "physical_closure": {
+        "Omega_de0_CAMB": 0.7025894913572053,
+        "Omega_m0_CAMB": 0.29739027224840175,
+        "positive_flat_Lambda": true
+      }
+    },
+    "theta_mapping": {
+      "100theta_MC": 1.1001239206700977,
+      "H0_abs_error": 2.2737367544323206e-13,
+      "expanded_theta_H0_range": [
+        1.0,
+        2000.0
+      ],
+      "inside_Table_I_0p5_to_10": true,
+      "original_bracket": {
+        "error": "CAMBParamRangeError: No solution for H0 inside of theta_H0_range",
+        "root_found": false
+      },
+      "original_theta_H0_range": [
+        10.0,
+        100.0
+      ],
+      "recovered_H0_km_s_Mpc": 133.61341628747098,
+      "status": "rooted",
+      "successful_theta_samples": 60
+    }
+  },
+  "conventions": {
+    "c_km_s": 299792.458,
+    "covariance": "full covariance; residual^T C^-1 residual independently computed by Cholesky and dense solves",
+    "dtype": "float64",
+    "fixed": {
+      "N_eff": 3.044,
+      "Omega_k": 0.0,
+      "T_CMB_K": 2.7255,
+      "YHe": "CAMB BBN consistency default (YHe=None)",
+      "mnu_eV": 0.06,
+      "neutrino_hierarchy": "degenerate",
+      "num_massive_neutrinos": 1,
+      "w": -1.0,
+      "wa": 0.0
+    },
+    "numerical_threads": 1,
+    "observables": "DM/r_d, DH/r_d=(c/H)/r_d, DV/r_d=(z*DM^2*DH)^(1/3)/r_d",
+    "workers": 1
+  },
+  "execution": {
+    "code_sha256": "5c60e4f619a174e4ceaa323bf2d53bf846663c58cee25d4d6a0896a8225deb1b",
+    "command": "cd cosmology_autoresearch && .venv/bin/python scripts/run_bounded.py --state work/compute29/task_state.json --seconds 1100 -- env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python -B work/compute29/local_boundary_audit.py",
+    "finished_utc": "2026-09-25T03:22:23.830007+00:00",
+    "numpy": "2.5.3",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "runtime_cap_seconds": 1100,
+    "runtime_seconds": 86.19647737313062,
+    "scipy": "1.18.1",
+    "started_utc": "2026-09-25T03:20:58.281687+00:00"
+  },
+  "fixed_baryon_profile": {
+    "best_inside_declared_slices": {
+      "candidate_valid": true,
+      "chi2_profile": 10.273886272853535,
+      "function_evaluations": 1225,
+      "inside_declared_omega_b_bound": true,
+      "iterations": 37,
+      "message": "Optimization terminated successfully.",
+      "nuisance_parameters": {
+        "H0_km_s_Mpc": 133.6134163003111,
+        "omega_c_h2": 0.43027242194168003
+      },
+      "omega_b_h2": 0.1,
+      "physical_closure": {
+        "Omega_de0_CAMB": 0.7025894918780098,
+        "Omega_m0_CAMB": 0.29739027172760113,
+        "positive_flat_Lambda": true
+      },
+      "runtime_seconds": 5.247695927508175,
+      "seed": 20261004,
+      "success": true,
+      "theta_mapping": {
+        "100theta_MC": 1.1001239203667688,
+        "H0_abs_error": 2.2737367544323206e-13,
+        "expanded_theta_H0_range": [
+          1.0,
+          2000.0
+        ],
+        "inside_Table_I_0p5_to_10": true,
+        "original_bracket": {
+          "error": "CAMBParamRangeError: No solution for H0 inside of theta_H0_range",
+          "root_found": false
+        },
+        "original_theta_H0_range": [
+          10.0,
+          100.0
+        ],
+        "recovered_H0_km_s_Mpc": 133.61341630031131,
+        "status": "rooted",
+        "successful_theta_samples": 60
+      }
+    },
+    "chi2_at_omega_b_0p1": 10.273886272853535,
+    "lowest_in_domain_profile_not_at_upper_edge": false,
+    "maxiter": 300,
+    "method": "At fixed omega_b h2, reoptimize (H0, omega_c h2) by broad-box differential evolution; all minima rechecked with CAMB closure and the full covariance.",
+    "population_size": 32,
+    "profile_secant_checks": [
+      {
+        "delta_omega_b": 0.00010000000000000286,
+        "lower_profile_chi2": 10.273890338448437,
+        "omega_b_pair": [
+          0.0999,
+          0.1
+        ],
+        "outside_declared_box": false,
+        "secant_dprofile_chi2_domega_b": -0.04065594902513564,
+        "upper_profile_chi2": 10.273886272853535
+      },
+      {
+        "delta_omega_b": 9.999999999998899e-05,
+        "lower_profile_chi2": 10.273886272853535,
+        "omega_b_pair": [
+          0.1,
+          0.1001
+        ],
+        "outside_declared_box": true,
+        "secant_dprofile_chi2_domega_b": -0.04048757558550611,
+        "upper_profile_chi2": 10.273882224095976
+      },
+      {
+        "delta_omega_b": 0.0010000000000000009,
+        "lower_profile_chi2": 10.273927136619726,
+        "omega_b_pair": [
+          0.099,
+          0.1
+        ],
+        "outside_declared_box": false,
+        "secant_dprofile_chi2_domega_b": -0.04086376619127915,
+        "upper_profile_chi2": 10.273886272853535
+      },
+      {
+        "delta_omega_b": 0.0049999999999999906,
+        "lower_profile_chi2": 10.273886272853535,
+        "omega_b_pair": [
+          0.1,
+          0.105
+        ],
+        "outside_declared_box": true,
+        "secant_dprofile_chi2_domega_b": -0.038889278299336714,
+        "upper_profile_chi2": 10.273691826462038
+      }
+    ],
+    "slices": [
+      {
+        "candidate_valid": true,
+        "chi2_profile": 10.274855399082044,
+        "function_evaluations": 1193,
+        "inside_declared_omega_b_bound": true,
+        "iterations": 36,
+        "message": "Optimization terminated successfully.",
+        "nuisance_parameters": {
+          "H0_km_s_Mpc": 115.43573947005714,
+          "omega_c_h2": 0.31560767668419065
+        },
+        "omega_b_h2": 0.08,
+        "physical_closure": {
+          "Omega_de0_CAMB": 0.7026067454960067,
+          "Omega_m0_CAMB": 0.2973661430572748,
+          "positive_flat_Lambda": true
+        },
+        "runtime_seconds": 4.284104619175196,
+        "seed": 20261000,
+        "success": true,
+        "theta_mapping": {
+          "100theta_MC": 1.0944438968061405,
+          "H0_abs_error": 2.842170943040401e-14,
+          "expanded_theta_H0_range": [
+            1.0,
+            2000.0
+          ],
+          "inside_Table_I_0p5_to_10": true,
+          "original_bracket": {
+            "error": "CAMBParamRangeError: No solution for H0 inside of theta_H0_range",
+            "root_found": false
+          },
+          "original_theta_H0_range": [
+            10.0,
+            100.0
+          ],
+          "recovered_H0_km_s_Mpc": 115.43573947005717,
+          "status": "rooted",
+          "successful_theta_samples": 60
+        }
+      },
+      {
+        "candidate_valid": true,
+        "chi2_profile": 10.274097673460464,
+        "function_evaluations": 1385,
+        "inside_declared_omega_b_bound": true,
+        "iterations": 42,
+        "message": "Optimization terminated successfully.",
+        "nuisance_parameters": {
+          "H0_km_s_Mpc": 128.9194179152385,
+          "omega_c_h2": 0.39861540453325855
+        },
+        "omega_b_h2": 0.095,
+        "physical_closure": {
+          "Omega_de0_CAMB": 0.7025932625444917,
+          "Omega_m0_CAMB": 0.29738500060594386,
+          "positive_flat_Lambda": true
+        },
+        "runtime_seconds": 5.684901847504079,
+        "seed": 20261001,
+        "success": true,
+        "theta_mapping": {
+          "100theta_MC": 1.0989038257596353,
+          "H0_abs_error": 3.126388037344441e-13,
+          "expanded_theta_H0_range": [
+            1.0,
+            2000.0
+          ],
+          "inside_Table_I_0p5_to_10": true,
+          "original_bracket": {
+            "error": "CAMBParamRangeError: No solution for H0 inside of theta_H0_range",
+            "root_found": false
+          },
+          "original_theta_H0_range": [
+            10.0,
+            100.0
+          ],
+          "recovered_H0_km_s_Mpc": 128.91941791523882,
+          "status": "rooted",
+          "successful_theta_samples": 60
+        }
+      },
+      {
+        "candidate_valid": true,
+        "chi2_profile": 10.273927136619726,
+        "function_evaluations": 1321,
+        "inside_declared_omega_b_bound": true,
+        "iterations": 40,
+        "message": "Optimization terminated successfully.",
+        "nuisance_parameters": {
+          "H0_km_s_Mpc": 132.66599660839833,
+          "omega_c_h2": 0.42376826813056634
+        },
+        "omega_b_h2": 0.099,
+        "physical_closure": {
+          "Omega_de0_CAMB": 0.7025901340882481,
+          "Omega_m0_CAMB": 0.2973893394533272,
+          "positive_flat_Lambda": true
+        },
+        "runtime_seconds": 5.5607307786121964,
+        "seed": 20261002,
+        "success": true,
+        "theta_mapping": {
+          "100theta_MC": 1.0998888199172618,
+          "H0_abs_error": 8.242295734817162e-13,
+          "expanded_theta_H0_range": [
+            1.0,
+            2000.0
+          ],
+          "inside_Table_I_0p5_to_10": true,
+          "original_bracket": {
+            "error": "CAMBParamRangeError: No solution for H0 inside of theta_H0_range",
+            "root_found": false
+          },
+          "original_theta_H0_range": [
+            10.0,
+            100.0
+          ],
+          "recovered_H0_km_s_Mpc": 132.66599660839915,
+          "status": "rooted",
+          "successful_theta_samples": 60
+        }
+      },
+      {
+        "candidate_valid": true,
+        "chi2_profile": 10.273890338448437,
+        "function_evaluations": 1417,
+        "inside_declared_omega_b_bound": true,
+        "iterations": 43,
+        "message": "Optimization terminated successfully.",
+        "nuisance_parameters": {
+          "H0_km_s_Mpc": 133.51863774085652,
+          "omega_c_h2": 0.42962048744161424
+        },
+        "omega_b_h2": 0.0999,
+        "physical_closure": {
+          "Omega_de0_CAMB": 0.7025888966866843,
+          "Omega_m0_CAMB": 0.2973908381790131,
+          "positive_flat_Lambda": true
+        },
+        "runtime_seconds": 5.9489101972430944,
+        "seed": 20261003,
+        "success": true,
+        "theta_mapping": {
+          "100theta_MC": 1.1001011554340874,
+          "H0_abs_error": 1.3358203432289883e-12,
+          "expanded_theta_H0_range": [
+            1.0,
+            2000.0
+          ],
+          "inside_Table_I_0p5_to_10": true,
+          "original_bracket": {
+            "error": "CAMBParamRangeError: No solution for H0 inside of theta_H0_range",
+            "root_found": false
+          },
+          "original_theta_H0_range": [
+            10.0,
+            100.0
+          ],
+          "recovered_H0_km_s_Mpc": 133.51863774085518,
+          "status": "rooted",
+          "successful_theta_samples": 60
+        }
+      },
+      {
+        "candidate_valid": true,
+        "chi2_profile": 10.273886272853535,
+        "function_evaluations": 1225,
+        "inside_declared_omega_b_bound": true,
+        "iterations": 37,
+        "message": "Optimization terminated successfully.",
+        "nuisance_parameters": {
+          "H0_km_s_Mpc": 133.6134163003111,
+          "omega_c_h2": 0.43027242194168003
+        },
+        "omega_b_h2": 0.1,
+        "physical_closure": {
+          "Omega_de0_CAMB": 0.7025894918780098,
+          "Omega_m0_CAMB": 0.29739027172760113,
+          "positive_flat_Lambda": true
+        },
+        "runtime_seconds": 5.247695927508175,
+        "seed": 20261004,
+        "success": true,
+        "theta_mapping": {
+          "100theta_MC": 1.1001239203667688,
+          "H0_abs_error": 2.2737367544323206e-13,
+          "expanded_theta_H0_range": [
+            1.0,
+            2000.0
+          ],
+          "inside_Table_I_0p5_to_10": true,
+          "original_bracket": {
+            "error": "CAMBParamRangeError: No solution for H0 inside of theta_H0_range",
+            "root_found": false
+          },
+          "original_theta_H0_range": [
+            10.0,
+            100.0
+          ],
+          "recovered_H0_km_s_Mpc": 133.61341630031131,
+          "status": "rooted",
+          "successful_theta_samples": 60
+        }
+      },
+      {
+        "candidate_valid": true,
+        "chi2_profile": 10.273882224095976,
+        "function_evaluations": 1225,
+        "inside_declared_omega_b_bound": false,
+        "iterations": 37,
+        "message": "Optimization terminated successfully.",
+        "nuisance_parameters": {
+          "H0_km_s_Mpc": 133.708430884965,
+          "omega_c_h2": 0.4309281517383536
+        },
+        "omega_b_h2": 0.1001,
+        "physical_closure": {
+          "Omega_de0_CAMB": 0.7025893113530438,
+          "Omega_m0_CAMB": 0.2973904810027279,
+          "positive_flat_Lambda": true
+        },
+        "runtime_seconds": 5.242179517634213,
+        "seed": 20261005,
+        "success": true,
+        "theta_mapping": {
+          "100theta_MC": 1.1001472999916992,
+          "H0_abs_error": 2.8421709430404007e-13,
+          "expanded_theta_H0_range": [
+            1.0,
+            2000.0
+          ],
+          "inside_Table_I_0p5_to_10": true,
+          "original_bracket": {
+            "error": "CAMBParamRangeError: No solution for H0 inside of theta_H0_range",
+            "root_found": false
+          },
+          "original_theta_H0_range": [
+            10.0,
+            100.0
+          ],
+          "recovered_H0_km_s_Mpc": 133.7084308849647,
+          "status": "rooted",
+          "successful_theta_samples": 60
+        }
+      },
+      {
+        "candidate_valid": true,
+        "chi2_profile": 10.273691826462038,
+        "function_evaluations": 1321,
+        "inside_declared_omega_b_bound": false,
+        "iterations": 40,
+        "message": "Optimization terminated successfully.",
+        "nuisance_parameters": {
+          "H0_km_s_Mpc": 138.41813686722506,
+          "omega_c_h2": 0.46415161010093137
+        },
+        "omega_b_h2": 0.105,
+        "physical_closure": {
+          "Omega_de0_CAMB": 0.7025860596446034,
+          "Omega_m0_CAMB": 0.29739508445509993,
+          "positive_flat_Lambda": true
+        },
+        "runtime_seconds": 5.604943794198334,
+        "seed": 20261006,
+        "success": true,
+        "theta_mapping": {
+          "100theta_MC": 1.101239240747308,
+          "H0_abs_error": 1.2107648217352107e-11,
+          "expanded_theta_H0_range": [
+            1.0,
+            2000.0
+          ],
+          "inside_Table_I_0p5_to_10": true,
+          "original_bracket": {
+            "error": "CAMBParamRangeError: No solution for H0 inside of theta_H0_range",
+            "root_found": false
+          },
+          "original_theta_H0_range": [
+            10.0,
+            100.0
+          ],
+          "recovered_H0_km_s_Mpc": 138.41813686721295,
+          "status": "rooted",
+          "successful_theta_samples": 60
+        }
+      },
+      {
+        "candidate_valid": true,
+        "chi2_profile": 10.273193939864258,
+        "function_evaluations": 1225,
+        "inside_declared_omega_b_bound": false,
+        "iterations": 37,
+        "message": "Optimization terminated successfully.",
+        "nuisance_parameters": {
+          "H0_km_s_Mpc": 153.56600439946615,
+          "omega_c_h2": 0.5807169581595948
+        },
+        "omega_b_h2": 0.12,
+        "physical_closure": {
+          "Omega_de0_CAMB": 0.7025771406780085,
+          "Omega_m0_CAMB": 0.297407539874498,
+          "positive_flat_Lambda": true
+        },
+        "runtime_seconds": 5.312608699314296,
+        "seed": 20261007,
+        "success": true,
+        "theta_mapping": {
+          "100theta_MC": 1.1040801806585283,
+          "H0_abs_error": 2.653735009516822e-10,
+          "expanded_theta_H0_range": [
+            1.0,
+            2000.0
+          ],
+          "inside_Table_I_0p5_to_10": true,
+          "original_bracket": {
+            "error": "CAMBParamRangeError: No solution for H0 inside of theta_H0_range",
+            "root_found": false
+          },
+          "original_theta_H0_range": [
+            10.0,
+            100.0
+          ],
+          "recovered_H0_km_s_Mpc": 153.56600439920078,
+          "status": "rooted",
+          "successful_theta_samples": 60
+        }
+      }
+    ]
+  },
+  "full_box_search": {
+    "best_valid_candidate": {
+      "candidate_valid": true,
+      "chi2": 10.273886272853535,
+      "function_evaluations": 4260,
+      "iterations": 117,
+      "max_population_energy": 10.273886591408,
+      "message": "Optimization terminated successfully.",
+      "parameters": [
+        133.6134163003111,
+        0.1,
+        0.43027242194168003
+      ],
+      "runtime_seconds": 15.884072965942323,
+      "seed": 20260929,
+      "success": true
+    },
+    "lower_valid_candidate_than_compute26_found": false,
+    "lower_valid_candidates": [],
+    "maxiter": 350,
+    "method": "Independent SciPy differential_evolution reimplementation over (H0, omega_b h2, omega_c h2), three seeds, broad physical initialization, explicit positive-flat-Lambda checks",
+    "population_size": 36,
+    "runs": [
+      {
+        "candidate_valid": true,
+        "chi2": 10.273886272853535,
+        "function_evaluations": 4260,
+        "iterations": 117,
+        "max_population_energy": 10.273886591408,
+        "message": "Optimization terminated successfully.",
+        "parameters": [
+          133.6134163003111,
+          0.1,
+          0.43027242194168003
+        ],
+        "runtime_seconds": 15.884072965942323,
+        "seed": 20260929,
+        "success": true
+      },
+      {
+        "candidate_valid": true,
+        "chi2": 10.273886272853535,
+        "function_evaluations": 3468,
+        "iterations": 95,
+        "max_population_energy": 10.273886672742723,
+        "message": "Optimization terminated successfully.",
+        "parameters": [
+          133.6134163003111,
+          0.1,
+          0.43027242194168003
+        ],
+        "runtime_seconds": 12.814358201809227,
+        "seed": 20260930,
+        "success": true
+      },
+      {
+        "candidate_valid": true,
+        "chi2": 10.273886272853535,
+        "function_evaluations": 3720,
+        "iterations": 102,
+        "max_population_energy": 10.273886428079175,
+        "message": "Optimization terminated successfully.",
+        "parameters": [
+          133.6134163003111,
+          0.1,
+          0.43027242194168003
+        ],
+        "runtime_seconds": 13.67646980471909,
+        "seed": 20260931,
+        "success": true
+      }
+    ],
+    "seeds": [
+      20260929,
+      20260930,
+      20260931
+    ]
+  },
+  "interpretation": {
+    "candidate_disposition": "Exploratory boundary point; no claim of an interior best fit or posterior.",
+    "fixed_coordinate_boundary_read": "The prior outward point having a higher score is consistent with a minimum at the upper edge if the in-domain score falls toward the edge. The fixed-coordinate finite differences and reoptimized slices test this condition.",
+    "profile_scope": "The profile audit tests the declared direct-H0 finite box and selected omega_b slices. It does not establish exact globality for every continuous point in the box beyond the independent full-box multi-start search."
+  },
+  "invalid_points": {
+    "counts_by_reason": {
+      "CAMBError": 15,
+      "ValueError": 95
+    },
+    "first_examples_capped_at_30": [
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.002049914856933",
+        "parameters": [
+          87.68279712184051,
+          0.09656191947635549,
+          0.6731965027456726
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.491671905683441",
+        "parameters": [
+          59.57199758888015,
+          0.07753909265932299,
+          0.45118394929501543
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=4.078355119677532",
+        "parameters": [
+          34.350847567750066,
+          0.034300122967938086,
+          0.4462930222266039
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.957386276479423",
+        "parameters": [
+          46.3518393959593,
+          0.09959048250509707,
+          0.3203076924628766
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.210522496851367",
+        "parameters": [
+          66.60907181164146,
+          0.08846565414593172,
+          0.4479702483936772
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=12.59444877132131",
+        "parameters": [
+          21.268882498607752,
+          0.02463894302841398,
+          0.544445396290552
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.131531919078496",
+        "parameters": [
+          92.54514070341588,
+          0.09024885425011644,
+          0.8782184209214967
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.223614947700663",
+        "parameters": [
+          88.66523438874196,
+          0.06260981674283296,
+          0.8986930858999853
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.042318807775907",
+        "parameters": [
+          75.93714818354619,
+          0.05179169354001463,
+          0.5486113854264567
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+        "parameters": [
+          665.0631081934407,
+          0.028860341884476188,
+          0.9514372421677681
+        ],
+        "reason": "CAMBError"
+      },
+      {
+        "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+        "parameters": [
+          692.501088446299,
+          0.019928179872916188,
+          0.042186690354468204
+        ],
+        "reason": "CAMBError"
+      },
+      {
+        "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+        "parameters": [
+          227.5729668808732,
+          0.057612019559592074,
+          0.21682291190745773
+        ],
+        "reason": "CAMBError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=4.239544668829575",
+        "parameters": [
+          34.59238376751932,
+          0.06069,
+          0.4459830124344614
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=2.947118302464319",
+        "parameters": [
+          39.58179684066397,
+          0.09606493231954297,
+          0.36502068651531105
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.027684014430327",
+        "parameters": [
+          64.73701588186282,
+          0.09570404319685918,
+          0.33434122158824375
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.54974900711726",
+        "parameters": [
+          56.92771393070245,
+          0.09876526638854027,
+          0.4028270084240435
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.038615131705667",
+        "parameters": [
+          97.0998528319663,
+          0.07752500954045159,
+          0.9010760521134953
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.072693933715409",
+        "parameters": [
+          73.1454087000609,
+          0.021307465256503746,
+          0.5519657945606088
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.150922408427287",
+        "parameters": [
+          81.37763891146301,
+          0.09659731440285746,
+          0.6649354478124436
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=11.25517458063271",
+        "parameters": [
+          21.012211173527987,
+          0.018119041244898618,
+          0.4781666695521428
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.522048028846729",
+        "parameters": [
+          64.73701588186282,
+          0.08859084184151225,
+          0.5486365095911889
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=3.048896758654046",
+        "parameters": [
+          52.00372216058537,
+          0.08358456462147434,
+          0.7403102479940238
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=22.80493010574373",
+        "parameters": [
+          11.847214683245681,
+          0.05602762251606576,
+          0.26340948565718053
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.667777479078692",
+        "parameters": [
+          31.582399488840508,
+          0.03668096915704935,
+          0.12902625547013352
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.212449373870887",
+        "parameters": [
+          83.70049990428072,
+          0.07772787899576383,
+          0.7710418133209713
+        ],
+        "reason": "ValueError"
+      },
+      {
+        "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+        "parameters": [
+          395.94750282741853,
+          0.08,
+          0.14185005890321
+        ],
+        "reason": "CAMBError"
+      },
+      {
+        "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+        "parameters": [
+          322.3035460558908,
+          0.08,
+          0.034956598375154024
+        ],
+        "reason": "CAMBError"
+      },
+      {
+        "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+        "parameters": [
+          269.3538383917489,
+          0.08,
+          0.3959925454798068
+        ],
+        "reason": "CAMBError"
+      },
+      {
+        "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+        "parameters": [
+          761.9872639112493,
+          0.08,
+          0.15397465424790407
+        ],
+        "reason": "CAMBError"
+      },
+      {
+        "detail": "flat positive-\u039b closure failed: CAMB Omega_m=1.13729581257643",
+        "parameters": [
+          65.45178379865035,
+          0.08,
+          0.4065653483149467
+        ],
+        "reason": "ValueError"
+      }
+    ],
+    "penalty": 1e+70
+  },
+  "plot_path": "work/compute29/local_boundary_audit.png",
+  "schema_version": 1,
+  "scope": {
+    "declared_box": {
+      "H0_km_s_Mpc": [
+        10.0,
+        1000.0
+      ],
+      "omega_b_h2": [
+        0.005,
+        0.1
+      ],
+      "omega_c_h2": [
+        0.001,
+        0.99
+      ]
+    },
+    "likelihood": "DESI DR2 13-row Gaussian BAO vector with full 13x13 covariance only",
+    "model": "flat standard LambdaCDM background using CAMB 2.0.4; direct H0, physical-density profile",
+    "not_included": [
+      "Planck likelihood",
+      "ACT likelihood",
+      "posterior sampling",
+      "evidence",
+      "supernovae",
+      "interaction model"
+    ],
+    "outside_box_rule": "omega_b h2 > 0.1 rows are exploratory diagnostics only and never included as in-domain candidates."
+  },
+  "sources": {
+    "CAMB_repository_commit": "a6de8cc59124c8bbe3924f1c546f96cef73dcabb",
+    "CAMB_version": "2.0.4",
+    "CAMB_wheel_path": "context/code/camb-2.0.4-py3-none-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "CAMB_wheel_sha256": "9b7e6558b2049757e96496b8a33461d8ff11acd79017cfbd00a573dbc8d1e366",
+    "DESI_covariance_path": "context/data/desi_dr2_cov.txt",
+    "DESI_covariance_sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+    "DESI_mean_path": "context/data/desi_dr2_mean.txt",
+    "DESI_mean_sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "DESI_official_upstream": "CobayaSampler/bao_data commit bb0c1c9009dc76d1391300e169e8df38fd1096db, desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_{mean,cov}.txt",
+    "target_paper_path": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "target_paper_prior_locator": "arXiv:2609.05660 v1, p. 10 Table I: omega_b h2 [0.005,0.1], omega_c h2 [0.001,0.99], 100theta_MC [0.5,10]",
+    "target_paper_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c"
+  },
+  "status": "boundary_minimum_supported_on_tested_box"
+}

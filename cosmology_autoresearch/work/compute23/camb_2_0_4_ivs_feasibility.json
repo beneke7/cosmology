@@ -1,0 +1,111 @@
+{
+  "task": "CAMB 2.0.4 IVS source-feasibility audit",
+  "checked_utc": "2026-09-25T01:49:11Z",
+  "status": "PATH_ESTABLISHED_LOCAL_EXECUTION_BLOCKED",
+  "scope": "Static read-only manifest, archive, source, official-docs, and primary-paper audit. No install, source compilation, CAMB execution, fit, score, or IDECAMB execution.",
+  "camb_snapshot": {
+    "upstream": "https://github.com/cmbant/CAMB",
+    "tag": "2.0.4",
+    "commit": "a6de8cc59124c8bbe3924f1c546f96cef73dcabb",
+    "version_confirmed_in": "fortran/config.f90",
+    "local_manifest_entry": "camb_source_2_0_4",
+    "manifest_path": "context/manifest.lock.json",
+    "manifest_sha256": "7dfe09299bb4d87b835cc5a2ca997d377b5fe027cf2eb7263d7326c50f16b4d4",
+    "local_archive": "context/code/CAMB_2.0.4_a6de8cc59124c8bbe3924f1c546f96cef73dcabb.tar.gz",
+    "archive_bytes": 15959613,
+    "archive_sha256": "66808001e908982857c312cc84671c66a51312251a7b15e07507d66b4788c0c7",
+    "manifest_retrieved_at": "2026-09-25T01:44:22Z",
+    "pypi_source_distribution_sha256": "2f1f5f3b3964a3746693dc88a54218dca4ea049a04726f8177664c11d2d2616e",
+    "pypi_provenance_commit": "a6de8cc59124c8bbe3924f1c546f96cef73dcabb"
+  },
+  "local_prerequisites": {
+    "camb_python_package_in_venv": false,
+    "fortran_compiler_on_path": false,
+    "checked_compilers": ["gfortran", "ifort", "flang", "flang-new"],
+    "forutils_submodule_declared": true,
+    "forutils_submodule_url": "https://github.com/cmbant/forutils",
+    "forutils_directory_in_source_tar": "empty; submodule contents absent",
+    "forutils_gitlink_sha_in_local_manifest": null,
+    "fortran_makefile_main_requires_libforutils_submake": true,
+    "source_build_status": "blocked_until_recursive_submodule_and_compiler_are_available"
+  },
+  "baseline": {
+    "stock_lcdm_requires_source_patch": false,
+    "available_route": "Official camb==2.0.4 precompiled PyPI wheel or complete pinned source build",
+    "official_docs_state_binary_install_has_precompiled_code_and_needs_no_fortran_compiler": true,
+    "executed_in_this_audit": false,
+    "current_workspace_runnable": false
+  },
+  "target_ivs_model": {
+    "paper": "arXiv:2609.05660v1",
+    "local_pdf": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "local_pdf_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+    "law": "Q=Gamma*rho_v; w_v=-1",
+    "background_equations": ["dot(rho_v)=Gamma*rho_v", "dot(rho_c)+3H*rho_c=-Gamma*rho_v"],
+    "paper_sign": "Gamma>0 transfers energy from CDM to vacuum in forward time",
+    "paper_perturbation_closure": "IVS vacuum has no perturbative contribution; implement delta_rho_v=0",
+    "synchronous_cdm_equations": ["delta_c'=-(theta_c+h'/2)+a*Gamma*(rho_v/rho_c)*delta_c", "theta_c'=-Hcal*theta_c"],
+    "paper_equations": [8, 19, 20],
+    "source_reference": "https://arxiv.org/abs/2609.05660v1"
+  },
+  "camb_source_assessment": {
+    "dark_energy_interface": "A model marked cosmological_constant gets constant grhov*a^2; non-constant models can provide dynamic density/w through the background interface. Base stress-energy perturbation callback returns zero density perturbation and heat flux; default perturbation-equation count is zero.",
+    "fluid_w_minus_one": "DarkEnergyFluid identifies w=-1, wa=0 as cosmological constant; changing its parameters alone cannot produce interacting-vacuum evolution.",
+    "uncoupled_cdm_assumptions": [
+      "results.f90 grho_no_de contains (grhoc+grhob)*a",
+      "results.f90 background species output contains grhoc*a",
+      "equations.f90 uses grhoc_t=State%grhoc/a",
+      "equations.f90 native synchronous CDM density equation is clxcdot=-k*z"
+    ],
+    "minimum_changes": [
+      "Implement and store a coupled rho_c(a), rho_v(a) history consistent with Friedmann closure and both continuity equations.",
+      "Route all background expansion, perturbation-source density weights, background density outputs, and residual rho_c proportional to a^-3 consumers through the coupled rho_c(a).",
+      "Add the conformal-time CDM density source +a*Gamma*(rho_v/rho_c)*delta_c in CAMB units; retain geodesic/CDM-comoving velocity behavior and verify its initialization.",
+      "Represent the evolving vacuum as non-cosmological-constant in the background dispatcher while explicitly returning zero vacuum perturbative stress-energy and no vacuum perturbation variables.",
+      "Demonstrate Gamma=0 recovery of the pinned stock CAMB LCDM baseline and validate early-time regular-mode/stability behavior before any CMB inference."
+    ],
+    "implementation_equivalence_to_paper": false
+  },
+  "next_command_recommendation": "For stock LambdaCDM only, use an isolated environment with official camb==2.0.4 wheel and record environment/hash. For edited source, perform a recursive checkout at a6de8cc59124c8bbe3924f1c546f96cef73dcabb, record HEAD and submodule status, provision a supported Fortran compiler, then implement and test the coupled background/perturbation hooks.",
+  "limitations": [
+    "No CAMB baseline was executed; only a feasible stock-wheel/source route is identified.",
+    "No modified CAMB source, test, likelihood, or inference was run.",
+    "The local source archive omits forutils contents and does not record its gitlink SHA in the manifest; exact dependency pin remains to be recovered from a recursive checkout.",
+    "A separate source-paper audit found no explicit author perturbation initial-condition prescription; a future independent CMB solver must declare and test it.",
+    "This does not reproduce the authors' modified CAMB, Cobaya configuration, likelihood, or chain results."
+  ],
+  "references": [
+    {
+      "title": "CAMB pinned 2.0.4 source commit",
+      "url": "https://github.com/cmbant/CAMB/tree/a6de8cc59124c8bbe3924f1c546f96cef73dcabb"
+    },
+    {
+      "title": "CAMB pinned DarkEnergyInterface.f90",
+      "url": "https://github.com/cmbant/CAMB/blob/a6de8cc59124c8bbe3924f1c546f96cef73dcabb/fortran/DarkEnergyInterface.f90"
+    },
+    {
+      "title": "CAMB pinned DarkEnergyFluid.f90",
+      "url": "https://github.com/cmbant/CAMB/blob/a6de8cc59124c8bbe3924f1c546f96cef73dcabb/fortran/DarkEnergyFluid.f90"
+    },
+    {
+      "title": "CAMB pinned equations.f90",
+      "url": "https://github.com/cmbant/CAMB/blob/a6de8cc59124c8bbe3924f1c546f96cef73dcabb/fortran/equations.f90"
+    },
+    {
+      "title": "CAMB pinned results.f90",
+      "url": "https://github.com/cmbant/CAMB/blob/a6de8cc59124c8bbe3924f1c546f96cef73dcabb/fortran/results.f90"
+    },
+    {
+      "title": "Official CAMB documentation",
+      "url": "https://camb.readthedocs.io/en/latest/"
+    },
+    {
+      "title": "Official CAMB PyPI artifact provenance",
+      "url": "https://pypi.org/project/camb/"
+    },
+    {
+      "title": "Primary interacting-vacuum paper arXiv v1",
+      "url": "https://arxiv.org/abs/2609.05660v1"
+    }
+  ]
+}

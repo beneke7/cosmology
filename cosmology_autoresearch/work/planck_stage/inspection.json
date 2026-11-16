@@ -1,0 +1,1038 @@
+{
+  "archive": {
+    "bytes": 60323470,
+    "format_check": "valid gzip stream containing a readable tar archive",
+    "gzip_decompressed_tar_stream_bytes": 92425728,
+    "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_stage/COM_Likelihood_Data-baseline_R3.00.tar.gz",
+    "sha256": "0b73171e3acc671c28184466a45485a2d1c1d93676b832abdfe688c7b04024e6"
+  },
+  "failures_and_limits": {
+    "failures": [],
+    "limits": [
+      "The endpoint used chunked transfer encoding and did not send Content-Length; the downloader enforced the byte cap while streaming.",
+      "This task only staged and inspected the archive. No members were extracted, no packages were installed, and no likelihood was evaluated."
+    ]
+  },
+  "inspected_at_utc": "2026-09-25T06:10:46+00:00",
+  "license": "CC BY-NC 3.0 IGO",
+  "selected_cache_cap": {
+    "archive_bytes": 60323470,
+    "archive_transfer_limit_bytes": 21365665738,
+    "existing_manifest_bytes": 109170742,
+    "existing_plus_archive_bytes": 169494212,
+    "existing_plus_archive_plus_extracted_regular_files_bytes": 261658191,
+    "existing_plus_extracted_regular_files_bytes_if_archive_removed": 201334721,
+    "extraction_performed": false,
+    "limit_bytes": 21474836480,
+    "remaining_after_archive_bytes": 21305342268,
+    "staged_archive_and_full_regular_file_extraction_within_total_cap": true
+  },
+  "tar_inventory": {
+    "all_declared_member_size_bytes": 92163979,
+    "member_count": 362,
+    "member_counts": {
+      "directories": 68,
+      "other": 0,
+      "regular_files": 294,
+      "symlinks": 0
+    },
+    "member_listing_path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_stage/tar_members.jsonl",
+    "regular_file_aggregate_bytes": 92163979,
+    "target_likelihoods": {
+      "commander_low_tt": {
+        "archive_root": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik",
+        "member_count": 11,
+        "members": [
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik/_mdb",
+            "size_bytes": 0,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik/clik",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik/clik/_mdb",
+            "size_bytes": 50,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik/clik/check_param",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik/clik/lkl_0",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik/clik/lmax",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik/clik/lkl_0/_external",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik/clik/lkl_0/_mdb",
+            "size_bytes": 181,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik/clik/lkl_0/has_cl",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik/clik/lkl_0/_external/sigma.fits",
+            "size_bytes": 6491520,
+            "type": "regular_file"
+          }
+        ],
+        "regular_file_aggregate_bytes": 6509031
+      },
+      "plik_hm_tttee": {
+        "archive_root": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik",
+        "member_count": 138,
+        "members": [
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/_mdb",
+            "size_bytes": 0,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/_mdb",
+            "size_bytes": 50,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/check_param",
+            "size_bytes": 66240,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lmax",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/_mdb",
+            "size_bytes": 145,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/bin_lmax",
+            "size_bytes": 8640,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/bin_lmin",
+            "size_bytes": 8640,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/bin_ws",
+            "size_bytes": 63360,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_1",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_10",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_11",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_12",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_13",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_14",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_15",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_2",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_3",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_4",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_5",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_6",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_7",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_8",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_9",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/criterion_gauss_mask",
+            "size_bytes": 66240,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/criterion_gauss_mat",
+            "size_bytes": 41921280,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/criterion_gauss_ordering",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/dnames",
+            "size_bytes": 1536,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/has_cl",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/Rq_hat",
+            "size_bytes": 66240,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/wq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_9/_mdb",
+            "size_bytes": 132,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_9/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_9/color",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_9/defaults",
+            "size_bytes": 9728,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_9/dfreq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_9/rename_from",
+            "size_bytes": 9216,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_9/rename_to",
+            "size_bytes": 9216,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_9/template",
+            "size_bytes": 3461760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_9/values",
+            "size_bytes": 9728,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_8/_mdb",
+            "size_bytes": 137,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_8/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_8/color",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_8/defaults",
+            "size_bytes": 1536,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_8/dfreq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_8/keys",
+            "size_bytes": 1792,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_8/rename_from",
+            "size_bytes": 2560,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_8/rename_to",
+            "size_bytes": 2560,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_8/values",
+            "size_bytes": 1536,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_7/_mdb",
+            "size_bytes": 137,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_7/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_7/color",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_7/defaults",
+            "size_bytes": 1536,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_7/dfreq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_7/keys",
+            "size_bytes": 1792,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_7/rename_from",
+            "size_bytes": 2560,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_7/rename_to",
+            "size_bytes": 2560,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_7/values",
+            "size_bytes": 1536,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_6/_mdb",
+            "size_bytes": 115,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_6/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_6/defaults",
+            "size_bytes": 1536,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_6/dfreq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_6/keys",
+            "size_bytes": 1024,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_6/rename_from",
+            "size_bytes": 1536,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_6/rename_to",
+            "size_bytes": 1536,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_6/template",
+            "size_bytes": 3461760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_6/values",
+            "size_bytes": 1536,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_5/_mdb",
+            "size_bytes": 94,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_5/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_5/color",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_5/defaults",
+            "size_bytes": 512,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_5/dfreq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_5/keys",
+            "size_bytes": 256,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_5/template",
+            "size_bytes": 43200,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_5/values",
+            "size_bytes": 512,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_4/_mdb",
+            "size_bytes": 101,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_4/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_4/color",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_4/defaults",
+            "size_bytes": 512,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_4/dfreq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_4/keys",
+            "size_bytes": 1024,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_4/values",
+            "size_bytes": 512,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_3/_mdb",
+            "size_bytes": 92,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_3/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_3/color",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_3/defaults",
+            "size_bytes": 1024,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_3/dfreq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_3/keys",
+            "size_bytes": 256,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_3/template",
+            "size_bytes": 83520,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_3/values",
+            "size_bytes": 1024,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_2/_mdb",
+            "size_bytes": 100,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_2/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_2/color",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_2/defaults",
+            "size_bytes": 512,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_2/dfreq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_2/keys",
+            "size_bytes": 768,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_2/template",
+            "size_bytes": 83520,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_2/values",
+            "size_bytes": 512,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_15/_mdb",
+            "size_bytes": 47,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_14/_mdb",
+            "size_bytes": 47,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_13/_mdb",
+            "size_bytes": 46,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_13/im",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_12/_mdb",
+            "size_bytes": 26,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_12/im",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_12/names",
+            "size_bytes": 1280,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_12/other",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_12/w",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_11/_mdb",
+            "size_bytes": 119,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_11/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_11/defaults",
+            "size_bytes": 9216,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_11/dfreq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_11/keys",
+            "size_bytes": 2560,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_11/rename_from",
+            "size_bytes": 9216,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_11/rename_to",
+            "size_bytes": 9216,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_11/template",
+            "size_bytes": 3461760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_11/values",
+            "size_bytes": 9216,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_10/_mdb",
+            "size_bytes": 121,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_10/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_10/defaults",
+            "size_bytes": 768,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_10/dfreq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_10/keys",
+            "size_bytes": 768,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_10/rename_from",
+            "size_bytes": 768,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_10/rename_to",
+            "size_bytes": 768,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_10/template",
+            "size_bytes": 3461760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_10/values",
+            "size_bytes": 768,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_1/_mdb",
+            "size_bytes": 109,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_1/A_cmb",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_1/color",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_1/defaults",
+            "size_bytes": 512,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_1/dfreq",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_1/keys",
+            "size_bytes": 512,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_1/rename_from",
+            "size_bytes": 1280,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_1/rename_to",
+            "size_bytes": 1280,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_1/template",
+            "size_bytes": 1284480,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik/clik/lkl_0/component_1/values",
+            "size_bytes": 512,
+            "type": "regular_file"
+          }
+        ],
+        "regular_file_aggregate_bytes": 57891282
+      },
+      "simall_low_ee": {
+        "archive_root": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik",
+        "member_count": 10,
+        "members": [
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik/_mdb",
+            "size_bytes": 0,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik/clik",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik/clik/_mdb",
+            "size_bytes": 50,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik/clik/check_param",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik/clik/lkl_0",
+            "size_bytes": 0,
+            "type": "directory"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik/clik/lmax",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik/clik/lkl_0/_mdb",
+            "size_bytes": 155,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik/clik/lkl_0/has_cl",
+            "size_bytes": 5760,
+            "type": "regular_file"
+          },
+          {
+            "linkname": null,
+            "name": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik/clik/lkl_0/probEE",
+            "size_bytes": 676800,
+            "type": "regular_file"
+          }
+        ],
+        "regular_file_aggregate_bytes": 694285
+      }
+    }
+  },
+  "task": "official Planck PR3 baseline archive transfer and metadata inspection",
+  "transfer": {
+    "command": "timeout 7200s python3 -u cosmology_autoresearch/work/planck_stage/download_capped.py",
+    "command_working_directory": "/home/v/proj/bene/cosmology",
+    "content_disposition": "inline; filename=\"COM_Likelihood_Data-baseline_R3.00.tar.gz\"",
+    "content_length_bytes": null,
+    "content_type": "application/x-gzip",
+    "download_duration_seconds": 6.028,
+    "final_url": "https://pla.esac.esa.int/pla/aio/product-action?COSMOLOGY.FILE_ID=COM_Likelihood_Data-baseline_R3.00.tar.gz",
+    "http_status": 200,
+    "redirect_and_response_headers_path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_stage/transfer.headers.txt",
+    "redirect_count": 0,
+    "requested_url": "https://pla.esac.esa.int/pla/aio/product-action?COSMOLOGY.FILE_ID=COM_Likelihood_Data-baseline_R3.00.tar.gz",
+    "sha256": "0b73171e3acc671c28184466a45485a2d1c1d93676b832abdfe688c7b04024e6",
+    "tool": "Python 3 standard-library urllib.request, streamed in 1 MiB blocks with a 21,365,665,738-byte hard cap; no cookie jar or account credentials configured",
+    "transfer_encoding": "chunked",
+    "transfer_log_path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_stage/transfer.log",
+    "transferred_bytes": 60323470
+  }
+}

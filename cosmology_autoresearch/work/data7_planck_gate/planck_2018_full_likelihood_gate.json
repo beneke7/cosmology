@@ -1,0 +1,195 @@
+{
+  "task": "Planck 2018 full-likelihood access, installation, and run feasibility gate",
+  "checked_utc": "2026-09-25T03:13:17Z",
+  "scope": "Read-only source, package-metadata, local-environment, and HTTP HEAD audit. No likelihood archive was downloaded; no package was installed; no likelihood or model was run.",
+  "verdict": {
+    "official_full_likelihood_access": "PUBLIC_UNAUTHENTICATED_ENDPOINT_RESPONDS_200",
+    "standard_camb_lcdm_full_likelihood_validation": "FEASIBLE_IN_PRINCIPLE_AFTER_PROJECT_LOCAL_INSTALL_AND_DATA_STAGING; NOT_READY_IN_CURRENT_ENVIRONMENT",
+    "independent_ivs_source_execution": "LOCALLY_BLOCKED_BY_MISSING_FORTRAN_COMPILER_AND_CAMB_FORUTILS_SUBMODULE",
+    "faithful_reproduction_of_paper": "BLOCKED_BY_MISSING_MODIFIED_CAMB_PROVENANCE_FULL_COBAYA_CONFIG_AND_PERTURBATION_INITIAL_CONDITIONS"
+  },
+  "paper": {
+    "identifier": "arXiv:2609.05660v1",
+    "local_pdf": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "local_pdf_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+    "stated_planck_combination": "plikTTTEEE+lowl+lowE",
+    "stated_description": "Planck 2018 temperature and E-mode polarization at low and high multipoles",
+    "paper_nuisance_configuration": "Not specified; Table I states cosmological-model parameter priors but no Planck nuisance block or explicit Planck nuisance-prior selection.",
+    "paper_exact_data_release_and_cobaya_component_names": "Not specified",
+    "paper_modified_camb_version_patch_config_and_initial_conditions": "Not found in the checked paper/source materials; see work/literature3/ivs_author_artifact_probe.md"
+  },
+  "exact_cobaya_3_6_2_mapping": [
+    {
+      "paper_term": "plikTTTEEE",
+      "cobaya_component": "planck_2018_highl_plik.TTTEEE",
+      "cobaya_alias": "plikHM_TTTEEE",
+      "file": "baseline/plc_3.0/hi_l/plik/plik_rd12_HM_v22b_TTTEEE.clik",
+      "interpretation": "Full Plik HM high-ell joint TT+TE+EE; includes nuisance parameters; not TTTEEE_lite."
+    },
+    {
+      "paper_term": "lowl",
+      "cobaya_component": "planck_2018_lowl.TT_clik",
+      "cobaya_alias": "lowl",
+      "file": "baseline/plc_3.0/low_l/commander/commander_dx12_v3_2_29.clik",
+      "interpretation": "Commander low-ell TT."
+    },
+    {
+      "paper_term": "lowE",
+      "cobaya_component": "planck_2018_lowl.EE_clik",
+      "cobaya_alias": "lowE",
+      "file": "baseline/plc_3.0/low_l/simall/simall_100x143_offlike5_EE_Aplanck_B.clik",
+      "interpretation": "SimAll low-ell EE."
+    }
+  ],
+  "combination_notes": {
+    "data_archive": "COM_Likelihood_Data-baseline_R3.00.tar.gz",
+    "original_planck_code_archive": "COM_Likelihood_Code-v3.0_R3.01.tar.gz",
+    "original_clik_code_required_by_current_cobaya_clip_y_route": false,
+    "separate_lensing_component_named_in_paper_combination": false,
+    "nuisance_marginalized_lite_product_substitution_valid": false,
+    "distance_prior_or_chain_substitution_valid": false,
+    "paper_combination_is_identifiable": true,
+    "paper_full_nuisance_run_contract_is_identifiable": false
+  },
+  "access_and_data": {
+    "official_archive": "ESA Planck Legacy Archive",
+    "archive_public_products_statement": "The PLA describes its public products as all public products originating from Planck.",
+    "unauthenticated_head_test": {
+      "data_endpoint": "https://pla.esac.esa.int/pla/aio/product-action?COSMOLOGY.FILE_ID=COM_Likelihood_Data-baseline_R3.00.tar.gz",
+      "status": 200,
+      "content_disposition": "COM_Likelihood_Data-baseline_R3.00.tar.gz",
+      "transfer_encoding": "chunked",
+      "content_length": null,
+      "cookie_or_account_used": false
+    },
+    "account_requirement": "No Planck-collaboration account requirement found; direct official product endpoint responded without authentication. Browser basket/email-link workflow may request a contact email.",
+    "official_esa_archive_rights": "CC BY-NC 3.0 IGO",
+    "full_likelihood_archive_compressed_bytes": null,
+    "full_likelihood_archive_sha256": null,
+    "archive_size_reason_unknown": "ESA metadata does not expose byte size and official product HEAD response uses chunked transfer without Content-Length; archive intentionally not downloaded.",
+    "local_planck_data_present": false,
+    "available_disk_bytes_approx": 306000000000,
+    "official_cobaya_install_docs_storage_note": "Cosmology installs may require several GB; exact Planck likelihood extraction size not established in this audit.",
+    "lambda_non_substitute_products": [
+      {
+        "name": "CosmoParams_base-plikHM-TTTEEE-lowl-lowE_R3.00",
+        "size_bytes_approx": 63000000,
+        "type": "precomputed LCDM parameter chains, not raw likelihood data"
+      },
+      {
+        "name": "Cosmological Parameters: Full Grid",
+        "size_bytes_approx": 11000000000,
+        "type": "precomputed cosmological-model likelihood grid product, not the full runnable Planck likelihood package"
+      }
+    ]
+  },
+  "software_artifacts": {
+    "cobaya": {
+      "version": "3.6.2",
+      "pypi_wheel_bytes": 494975,
+      "pypi_wheel_sha256": "5e81da5900442c1a20a0ffa9c1ff212983106a7473b29555cecc2af3e4214da0",
+      "requires_python": ">=3.10.0",
+      "key_runtime_dependencies": [
+        "numpy>=1.17.0",
+        "scipy>=1.5",
+        "pandas>=1.0.1",
+        "PyYAML>=5.1",
+        "requests>=2.18",
+        "py-bobyqa>=1.4",
+        "GetDist>=1.3.1",
+        "rapidfuzz",
+        "packaging>=24.2",
+        "tqdm",
+        "portalocker>=2.3.0",
+        "dill>=0.3.3",
+        "typing_extensions"
+      ],
+      "license": "LGPL-3.0-or-later with Cobaya stated additional conditions; documentation GFDL"
+    },
+    "clipy_like": {
+      "pypi_version": "0.15",
+      "pypi_wheel_bytes": 41355,
+      "pypi_wheel_sha256": "9bf56a1c648cab345e9fcb7f83c9a79cd82f92e4f6fe4392900eec23b96f49d0",
+      "requires_python": ">=3.9",
+      "dependencies": ["numpy>=1.23.5", "astropy>=2.0"],
+      "optional_dependency": "JAX",
+      "official_repository_version_observed": "v0.16 (July 2026); distinct from PyPI 0.15; pin release/source explicitly",
+      "license": "MIT"
+    },
+    "camb": {
+      "version": "2.0.4",
+      "pypi_wheel_filename": "camb-2.0.4-py3-none-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "pypi_wheel_bytes": 2393435,
+      "pypi_wheel_sha256": "9b7e6558b2049757e96496b8a33461d8ff11acd79017cfbd00a573dbc8d1e366",
+      "requires_python": ">=3.10.0",
+      "wheel_matches_local_platform": true,
+      "standard_wheel_requires_fortran_compiler": false,
+      "license": "LGPL-3.0-or-later with CAMB stated additional conditions and notice-retention requirement",
+      "local_source_snapshot": {
+        "path": "context/code/CAMB_2.0.4_a6de8cc59124c8bbe3924f1c546f96cef73dcabb.tar.gz",
+        "bytes": 15959613,
+        "sha256": "66808001e908982857c312cc84671c66a51312251a7b15e07507d66b4788c0c7",
+        "commit": "a6de8cc59124c8bbe3924f1c546f96cef73dcabb",
+        "forutils_submodule_contents": "absent",
+        "forutils_gitlink_sha_pinned_in_local_manifest": false,
+        "source_ivs_build_ready": false
+      }
+    }
+  },
+  "local_environment": {
+    "python": "3.12.3",
+    "platform": "Linux x86_64, glibc 2.39",
+    "installed": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "cobaya": false,
+      "camb": false,
+      "clipy_like": false,
+      "astropy": false,
+      "pandas": false,
+      "PyYAML": false,
+      "requests": false,
+      "py_bobyqa": false,
+      "GetDist": false,
+      "rapidfuzz": false,
+      "tqdm": false,
+      "portalocker": false,
+      "dill": false
+    },
+    "fortran_compilers_on_path": [],
+    "gcc_gpp_cmake_present": true,
+    "planck_data_or_clik_directory_present": false,
+    "available_disk_bytes_approx": 306000000000,
+    "local_camb_wheel_present_but_not_installed": true
+  },
+  "next_gate": {
+    "standard_lcdm": [
+      "Create a project-local hash-locked Python environment; target Cobaya 3.6.2, CAMB 2.0.4, and an explicitly chosen clipy-like artifact.",
+      "Create a baseline YAML explicitly using standard CAMB, planck_2018_highl_plik.TTTEEE, planck_2018_lowl.TT_clik, and planck_2018_lowl.EE_clik with declared LCDM priors and nuisance defaults.",
+      "Use a project-local packages path with cobaya-install; record exact downloaded and extracted hashes, package versions, command, sampler settings, and outputs.",
+      "Validate a standard LCDM full-likelihood run before attempting IVS; do not add lensing or replace the likelihood with chains or distance priors."
+    ],
+    "independent_ivs": [
+      "Obtain recursive CAMB checkout at a6de8cc59124c8bbe3924f1c546f96cef73dcabb and record the exact forutils gitlink.",
+      "Provision a supported Fortran compiler through project-local setup; the official binary wheel is not a modifiable IVS source route.",
+      "Implement and regression-test coupled background and perturbation equations independently; retain Gamma=0 recovery.",
+      "Resolve absent paper perturbation initial-condition and run-config information; characterize any new source as independent implementation, not exact author reproduction."
+    ],
+    "not_performed_in_this_gate": ["download", "package installation", "compilation", "likelihood evaluation", "parameter fitting", "inference"]
+  },
+  "official_references": [
+    "https://cobaya.readthedocs.io/en/latest/likelihood_planck.html",
+    "https://cobaya.readthedocs.io/en/latest/installation_cosmo.html",
+    "https://github.com/CobayaSampler/cobaya/blob/v3.6.2/cobaya/likelihoods/planck_2018_highl_plik/TTTEEE.yaml",
+    "https://github.com/CobayaSampler/cobaya/blob/v3.6.2/cobaya/likelihoods/planck_2018_lowl/TT_clik.yaml",
+    "https://github.com/CobayaSampler/cobaya/blob/v3.6.2/cobaya/likelihoods/planck_2018_lowl/EE_clik.yaml",
+    "https://www.cosmos.esa.int/web/planck/pla",
+    "https://esdcdoi.esac.esa.int/doi/html/data/astronomy/planck/Cosmology.html",
+    "https://wiki.cosmos.esa.int/planck-legacy-archive/index.php/CMB_spectrum_%26_Likelihood_Code",
+    "https://irsa.ipac.caltech.edu/data/Planck/release_3/ancillary-data/",
+    "https://pypi.org/project/cobaya/3.6.2/",
+    "https://pypi.org/project/clipy-like/0.15/",
+    "https://github.com/CobayaSampler/clipy",
+    "https://pypi.org/project/camb/2.0.4/"
+  ]
+}

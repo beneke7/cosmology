@@ -1,0 +1,766 @@
+                                               MNRAS 000, 1–12 (2023)                                                 Preprint 24 January 2024               Compiled using MNRAS LATEX style file v3.0
+
+
+
+
+                                               A New Precise Determination of the Primordial Abundance of Deuterium:
+                                               Measurement in the metal-poor sub-DLA system at 𝑧 = 3.42 towards
+                                               quasar J 1332+0052★
+                                               P.A. Kislitsyn1 †, S.A. Balashev1 , M.T. Murphy2 , C. Ledoux3 , P. Noterdaeme4,5 and A.V. Ivanchik1
+                                               1 Ioffe Institute, Polyteknicheskaya 26, 194021 Saint-Petersburg, Russia
+                                               2 Centre for Astrophysics and Supercomputing, Swinburne University of Technology, Hawthorn, VIC 3122, Australia
+                                               3 European Southern Observatory, Alonso de Córdova 3107, Vitacura, Casilla 19001, Santiago, Chile
+arXiv:2401.12797v1 [astro-ph.CO] 23 Jan 2024
+
+
+
+
+                                               4 Franco-Chilean Laboratory for Astronomy, IRL 3386, CNRS and U. de Chile, Casilla 36-D, Santiago, Chile
+                                               5 Institut d’Astrophysique de Paris, CNRS-SU, UMR 7095, 98bis bd Arago, 75014 Paris, France
+
+
+
+
+                                               Accepted 2024 January 18. Received 2024 January 18; in original form 2023 September 30
+
+
+
+                                               ABSTRACT
+
+                                                 The theory of Big Bang nucleosynthesis, coupled with an estimate of the primordial deuterium abundance (D/H)pr , offers
+                                               insights into the baryon density of the Universe. Independently, the baryon density can be constrained during a different
+                                               cosmological era through the analysis of cosmic microwave background (CMB) anisotropy. The comparison of these estimates
+                                               serves as a rigorous test for the self-consistency of the Standard Cosmological Model and stands as a potent tool in the quest for
+                                               new physics beyond the Standard Model of Particle Physics. For a meaningful comparison, a clear understanding of the various
+                                               systematic errors affecting deuterium measurements is crucial. Given the limited number of D/H measurements, each new
+                                               estimate carries significant weight. This study presents the detection of D i absorption lines in a metal-poor sub-Damped Lyman-
+                                               𝛼 system ([O/H] = −1.71 ± 0.02, log 𝑁 (H i) = 19.304 ± 0.004) at 𝑧 abs = 3.42 towards the quasar SDSS J133254.51+005250.6.
+                                               Through simultaneous fitting of H i and D i Lyman-series lines, as well as low-ionization metal lines, observed at high spectral
+                                               resolution and high signal-to-noise using VLT/UVES and Keck/HIRES, we derive log(D i/H i) = −4.622 ± 0.014, accounting
+                                               for statistical and systematic uncertainties of 0.008 dex and 0.012 dex, respectively. Thanks to negligible ionization corrections
+                                               and minimal deuterium astration at low metallicity, this D/H ratio provides a robust measurement of the primordial deuterium
+                                               abundance, consistent and competitive with previous works. Incorporating all prior measurements, the best estimate of the
+                                               primordial deuterium abundance is constrained as: (D/H)pr = (2.533 ± 0.024) × 10−5 . This represents a 5% improvement in
+                                               precision over previous studies and reveals a moderate tension with the expectation from the Standard Model (≈2.2𝜎). This
+                                               discrepancy underscores the importance of further measurements in the pursuit of new physics.
+                                               Key words: primordial nucleosynthesis - cosmological parameters - quasars: absorption lines – ISM: clouds.
+
+
+
+                                               1 INTRODUCTION                                                                   could provide better constraints on the effective number of neutrino
+                                                                                                                                species (Kurichin et al. 2021b). This draws a lot of attention to the de-
+                                               Primordial nucleosynthesis is one of the pillars of the Big Bang
+                                                                                                                                termination of the primordial helium abundances and its estimations
+                                               cosmology that provides the earliest robust observational constraint
+                                                                                                                                are steadily improving (e.g., Izotov et al. 2014; Fernández et al. 2018;
+                                               on the Standard Cosmological Model. The theory of primordial nu-
+                                                                                                                                Hsyu et al. 2020; Aver et al. 2021; Kurichin et al. 2021a; Valerdi et al.
+                                               cleosynthesis predicts the values of the relative abundances of light
+                                                                                                                                2021; Matsumoto et al. 2022). Despite growing observational con-
+                                               nuclei such as H, D, 3 He, 4 He, and 7 Li. According to the Standard
+                                                                                                                                straints on helium, deuterium plays a key role in the modern era of
+                                               Model, these abundances depend only on the baryon-to-photon ratio,
+                                                                                                                                precise cosmology since it has the strongest sensitivity on Ωb among
+                                               𝜂b ≡ 𝑛𝑛𝛾b (where 𝑛b , 𝑛 𝛾 – the number densities of baryons and pho-
+                                                                                                                                the other elements and its abundance can be accurately constrained
+                                               tons, respectively), that is linearly dependent on the baryon density,           using absorption-line measurements along quasar sightlines.
+                                               Ωb . However, some of these nuclei are sensitive to effects beyond the
+                                               Standard Model. As an example, the primordial helium abundance                      With the advent of high-resolution spectrographs on the largest
+                                                                                                                                optical telescopes, for more than two decades D/H measurements
+                                               ★ Based on archival data collected at the European Southern Observatory          were derived from the analysis of hydrogen and deuterium absorp-
+                                               under programme 0101.A-0061(A) and W.M. Keck Observatory under pro-              tion lines in quasar spectra (Tytler et al. 1996; Noterdaeme et al.
+                                               grammes U152Hr, U088Hb, and U088Hr.                                              2012; Cooke et al. 2014, 2018). The first results on D/H possessed
+                                               † E-mail: pavel.kislitsyn@gmail.com                                              a high dispersion, the reasons of which could be explained by sys-
+
+                                               © 2023 The Authors
+2      Kislitsyn P. et al.
+tematic effects in the analysis or could have physical origins. This        Table 1. VLT/UVES observations of J 1332+0052
+has motivated the search for criteria that minimize the systematics
+and provide the most precise D/H measurements (Cooke et al. 2014).               UT date     exp. time       setupa          airmass                 IQb
+The main criteria are a simple velocity structure for the absorber, low                         [s]           [nm]                                   [′′ ]
+deuterium astration and depletion on the dust (Cooke et al. 2018),
+                                                                                09-04-2018   2 × 3000       437+760             1.27               0.83
+which are all satisfied in case of very low metallicities. Therefore,
+                                                                                13-04-2018   4 × 3000       437+760          1.12/1.16           0.55/0.6
+only a few D/H estimations are considered to date to provide robust             18-05-2018   2 × 3000       390+564             2.02               1.24
+results (Cooke et al. 2018). Each new estimate is of utmost impor-              12-06-2018   4 × 3000       390+564          1.23/1.44          0.98/1.05
+tance, for various combinations of parameters (e.g., metallicity, HI            13-06-2018   6 × 3000       437+760       1.19/1.36/1.70     0.78/1.08/1.22
+column density, simplicity of the velocity structure, redshift), that al-       15-06-2018   4 × 3000       437+760          1.11/1.14          1.09/1.17
+low to disentangling the influence of the aforementioned systematic             09-07-2018   2 × 3000       390+564             1.70               1.23
+effects on the measurement of D/H. Such measurements are espe-
+cially important at the high-metallicity end, which can potentially         a central wavelengths of the blue-arm (left) and red-arm (right) spectra.
+                                                                            b image quality at 𝜆 = 650 nm measured by the telescope Shack-Hartmann
+increase the number of suitable targets, especially in the advent of
+next-generation spectrographs such as CUBES (Evans et al. 2022).            wavefront sensor.
+   In this paper, we present the detection and analysis of
+D i lines in the sub-DLA system at 𝑧 abs = 3.42 towards                     Table 2. Keck/HIRES observations of J 1332+0052
+SDSS J133254.51+005250.6. This provides a new robust determi-
+nation of the D/H ratio at high redshift.                                        UT date        exp. time     wavelength range          airmass         decker
+                                                                                                   [s]             [nm]
+
+                                                                                07-04-2006    2 × 3600                424-869           1.08/1.06            C1
+                                                                                12-04-2015    4 × 3600                392-686          1.06 - 1.20           C1
+2 OBSERVATIONS AND DATA REDUCTION                                               14-05-2015   3288 + 2678              424-869           1.15/1.07            C1
+2.1 VLT/UVES observations
+SDSS J133254.51+005250.6 (hereafter J 1332+0052), a 𝑧 em = 3.51,
+                                                                            spectra extracted using the makee1 package, including corrections
+𝑉 = 18.7 quasar (a.k.a. Q 1330+0108; Véron-Cetty & Véron 2010)
+                                                                            for the blaze function using flat-field exposures and wavelength cal-
+was observed in service mode between April and July 2018 using
+                                                                            ibration from ThAr lamp exposures. The extracted spectra from all
+the Very Large Telescope (VLT) Unit-2, Kueyen, equipped with the
+                                                                            echelle orders, and all exposures, were combined into a nearly con-
+Ultraviolet and Visual Echelle Spectrograph (UVES; Dekker et al.
+                                                                            tinuous 1-dimensional spectrum using the uves_popler software
+2000). Twelve exposures of 3000 s each were taken in Dichroic mode
+                                                                            (Murphy 2016; Murphy et al. 2018). All spectra were redispersed
+over seven different nights. This resulted in 24 individual spectra cov-
+                                                                            onto the same wavelength grid with 2.2 km s −1 pixels and combined
+ering most of the optical range. Information about instrumental se-
+                                                                            using an inverse-variance-weighted mean. An initial continuum was
+tups and observing conditions is given in Table 1. Entrance 1′′ -wide
+                                                                            automatically fitted to the regions redwards of the Lyman-𝛼 emis-
+slits and 2 × 2 pixel binning were used throughout. The observa-
+                                                                            sion line, whilst a manually-fitted polynomial was used for the bluer
+tions were carried out in dark time (no moon) under clear skies and
+                                                                            regions affected by the Lyman-𝛼 forest. The combined HIRES spec-
+excellent seeing conditions (see table 1). For each exposure, we pro-
+                                                                            trum has a S/N ratio per pixel of ≈ 20 in the quasar continuum around
+cessed science and calibration data using the UVES pipeline v6.1 on
+                                                                            the most important D i lines.
+the EsoReflex platform v2.11 (Freudling et al. 2013). Intermediate
+data products were inspected carefully and data-reduction parame-
+ters were optimised step by step. The nominal resolving power of the
+individual spectra is 50,000 in the Blue (48,800 in the Red) but can
+                                                                            3 ANALYSIS
+be slightly larger than that when the seeing conditions are better than
+1′′ FWHM. The actual resolving power of the combined spectrum               3.1 A method
+used in the analysis is determined in Sect. 3.2. Individual exposures
+in each blue/red setup were co-added optimally and the overlapping          To determine the properties of the sub-DLA system, we used joint
+regions of the resulting spectra were stitched together to create the       multi-component Voigt-profile fitting2 of hydrogen, deuterium, and
+final data product. The final UVES spectrum has a fairly high S/N           low-ionisation metal absorption lines. Within this approach, each
+ratio per pixel, peaking at ≈ 30 in the quasar continuum around the         considered absorption line is described by a collection of compo-
+most important D i lines.                                                   nents, that are defined by the redshift, Doppler parameter, and column
+                                                                            density of each species. We used the same number of components
+                                                                            for each line (except for Fe ii where only the two main components
+                                                                            are detected), with redshifts tied between lines. We also assumed that
+2.2 Keck/HIRES observations                                                 the Doppler parameters of each species within one component are
+In addition to the UVES spectra, we used archival spectra from the          tied based on the assumption of micro-turbulence, where the velocity
+W.M. Keck Observatory using the High-Resolution Echelle Spec-               distribution of each species is described by a Gaussian function with
+trometer (HIRES; Vogt et al. 1994). The journal of observations is          Doppler parameter
+given in Table 2. The nominal resolving power of the individual
+exposures is 47,700.
+   To reduce the data (eight separate exposures) and combine the            1 See http://www.astro.caltech.edu/~tb/makee .
+extracted spectra, we used the approach described in Robert et al.          2 We used the python package spectro (https://github.com/balashev/
+(2018). To summarise it briefly, the data were reduced and the quasar       spectro).
+
+MNRAS 000, 1–12 (2023)
+                                       A New Precise Determination of the Primordial Abundance of Deuterium.                                      3
+                                                                             quite significant structure and this is also discussed in Sect. 3.3. We
+         √︂                                                                  also note that the estimated resolving powers of UVES and HIRES
+                          2𝑘 𝐵𝑇
+𝑏 sp =        𝑏 2turb +         ,                                     (1)    spectra are 𝑅UVES = 50800 ± 1400, 𝑅HIRES = 49200 ± 1500. These
+                           𝑀s
+                                                                             values are in excellent agreement with the nominal values for these
+    where 𝑘 𝐵 is the Boltzmann constant, 𝑀s is the atomic mass of            spectrographs, and the posterior distribution function indicates no
+species 𝑠, 𝑇 is the kinetic temperature, and 𝑏 turb is the turbulent         correlation between the D/H value and resolution.
+broadening parameter. Consequently, the latter two parameters were              The total H i column density is log 𝑁 = 19.304 ± 0.004, indicat-
+fitted independently in each velocity component.                             ing that this system belongs to the class of sub-DLAs, where one
+    To make the column-density determinations trustworthy, we care-          may expect substantial ionisation corrections. However, thanks to
+fully inspected each portion of the spectra to which the fitting proce-      almost the same ionisation potentials of Hydrogen and Deuterium
+dure was applied. We simultaneously fitted a ny unrelated absorption         these ionisation corrections are not suitable for the problem of the
+which might have an impact on the fit. We also paid special attention        D/H determination. It has been also shown that the D/H ionisation
+to including all available D i and H i lines to avoid unconscious bias       correction is typically an order of magnitude smaller than current un-
+leading to include/exclude lines which may seem to be more/less              certainties of D/H determinations even for sub-DLA systems (Cooke
+suitable.                                                                    & Pettini 2015).
+    For the metal lines and Lyman-series lines, we first reconstructed          Since Oxygen has an ionisation potential close to the ionisation
+a local continuum by spline interpolation from regions without ev-           potential of Hydrogen too, our constraint on the O i column density
+ident absorption. While for the metal lines, outside Ly𝛼 forest, we          could be used to derive the metallicity of the system: [O/H] =
+found that continuum can be well constrained, for some of Ly-series          −1.71±0.02. Other metal column densities, such as C ii, Si ii, Al iiand
+lines it is not the case, and assumed continuum may impact on the            Fe ii have values which are consistent with the Oxygen metallicity
+derived H i and D i column densities (see, e.g., Balashev et al. 2016).      with small depletion factors (dust content), which is expected at low
+Therefore we fitted the continuum for several selected Lyman-series          metallicities.
+lines simultaneously with line profiles to exclude a bias related to a          From the simultaneous fit of the UVES and HIRES spectra, we
+manual continuum placement. To do this we used Chebyshev polyno-             find log(𝑁 (D i)/𝑁 (H i)) = −4.623 ± 0.008. The quoted error is the
+mials of order five, three and one in the regions near Ly𝛼, Ly𝛽, other       formal statistical uncertainty from the Bayesian analysis.
+Lyman-series lines, respectively. In addition, we fitted the effective
+resolutions of the final UVES and HIRES spectra as independent
+parameters.                                                                  3.3 Systematic uncertainty
+    We constrained the probability density distribution of the fit pa-       The results derived in the previous section only reported a statisti-
+rameters within the Bayesian framework, using the Monte Carlo                cal uncertainty since they were obtained using the specific model
+Markov Chain technique with Affine invariant sampler (Goodman                assumptions described in Sect. 3.1. To understand the impact of the
+& Weare 2010). We assumed flat priors on 𝑏 turb , 𝑇kin , 𝑧, log 𝑁, the       chosen model assumptions and estimate systematic uncertainties, we
+continuum Chebyshev coefficients, 𝐶𝑖 , and resolutions of the spec-          subsequently changed each model assumption and performed inde-
+tra 𝑅UVES , 𝑅HIRES , with enough width to guarantee independence             pendent fits. The results are summarized in Fig. 6 where we plot
+of the posteriors on it. We also assumed a same D/H value for all            the D/H ratios derived through each modification and compare them
+components, i.e. we used a single parameter for the whole subDLA.            with our base model.
+To report the resulting fit parameters and their uncertainties, we used         Using blue symbols in Fig. 6, we show models where we excluded
+the maximum posterior probability estimates and highest posterior            a region near each H i line. These determinations are quite consistent
+density 68.3% credible intervals, respectively.                              and only the model without a region near H i 973Å line is a little bit
+                                                                             outstanding. Using olive symbols in Fig. 6, we present the model,
+                                                                             where we changed the assumption on the metallicity through the
+3.2 Fit description and results
+                                                                             components of the sub-DLA system. We used different elements as a
+We used a four-component model to fit H i, D i, and low-ionisation           metallicity tracer, as well as fitted the spectrum with a model without
+metal lines. While the absorption profile is dominated by two main           this assumption, and we found no significant changes in the D/H ratio
+components, with a velocity separation smaller than 10 km s −1 , we          in comparison with the base model. By purple colour in Fig. 6, we
+added two weak components within a ≈ 40 km s −1 span, barely seen            plot the models where we use only a wing of H i Ly𝛼 line. These
+in the strong C ii 1334 and Si ii 1260 transition lines. The line profiles   models indicate typical systematic uncertainty concerned with the
+of H i Ly𝛼, low-ionisation metal species, and the higher-order Lyman         measurement of N(H i).
+series of H i and D i are presented in Figs. 1, 2, 3, and 4. The values         We also fitted VLT/UVES and Keck/HIRES spectra independently
+of the fitting parameters are given in Table 3. In the figures, we           and the results are shown in Fig. 6 by orange error bars. Posterior
+demonstrate the portions of UVES and HIRES spectra near the sub-             distributions of the main parameters are presented in Fig. 7. These
+DLA absorption system with the best-fit model and the confidence             𝑁 (D i)/𝑁 (H i) determinations differs by ≈1.7𝜎, which is quite un-
+intervals for all components inside the sub-DLA system. The first            expected. As could be seen in Fig. 7, determinations of the total
+thing that could catch the eye is a high signal-to-noise ratio which         log 𝑁 (H i) and [O/H] (as well as other nuisance parameters not
+we consider the main source of the small statistical error of our D/H        shown in the figure) are more consistent between two fits, so the
+determination. Another point is that despite individual components           main source of the discrepancy is likely the difference in log 𝑁 (D i).
+having noticeable uncertainties shown by the width of colourful lines,          We additionally test how the order of the polynomial used for
+the total fit shown in red is very well constrained. To make the analysis    continuum fitting influences the estimated log 𝑁(H i). To do this,
+more robust we examined the residuals of the fit which we also show          we fit only the region near Ly𝛼 with different polynomial order for
+in these Figures. In general, the residuals comfortably lie in the range     the continuum and only a single component for the Ly𝛼 absorption
+inside 2𝜎 with rare outliers in good agreement with the statistical          feature. The results are presented in Fig. 8. Orders of 3 and 4 are too
+predictions. There are, however, some regions where one could see a          low to fit the spectrum in the region while the higher orders fit the
+
+                                                                                                                           MNRAS 000, 1–12 (2023)
+4      Kislitsyn P. et al.
+
+                           Comp.                    #1              #2              #3             #4            log 𝑁tot         [X/H] total
+
+                          Δv, km/s              −17.4+1.1
+                                                     −0.8
+                                                                     0           8.7+0.2
+                                                                                    −0.2
+                                                                                                21.3+0.4
+                                                                                                    −0.4
+                         𝑏turb , km/s           11.7+1.9
+                                                     −1.2
+                                                                 2.8+0.1
+                                                                    −0.1
+                                                                                  1.0+0.5
+                                                                                     −0.5
+                                                                                                 4.2+0.8
+                                                                                                    −1.1
+                            𝑇, K               12600+1900
+                                                     −2300
+                                                                10100+200
+                                                                      −200
+                                                                                15100+900
+                                                                                      −700
+                                                                                               22200+1200
+                                                                                                    −900
+                         log 𝑁 (C ii)          12.83+0.05
+                                                     −0.04
+                                                                13.86+0.02
+                                                                     −0.02
+                                                                                13.18+0.03
+                                                                                      −0.03
+                                                                                               12.75+0.04
+                                                                                                    −0.03
+                                                                                                              14.003+0.01
+                                                                                                                    −0.011
+                                                                                                                                −1.728+0.01
+                                                                                                                                      −0.013
+                         log 𝑁 (Si ii)         11.59+0.06
+                                                     −0.05
+                                                                13.05+0.01
+                                                                     −0.01
+                                                                                12.33+0.03
+                                                                                      −0.03
+                                                                                               11.74+0.03
+                                                                                                    −0.03
+                                                                                                              13.157+0.009
+                                                                                                                    −0.008
+                                                                                                                                −1.656+0.009
+                                                                                                                                      −0.01
+                         log 𝑁 (Al ii)          11.1+0.09
+                                                    −0.11
+                                                                11.66+0.03
+                                                                     −0.02
+                                                                                11.29+0.04
+                                                                                      −0.05
+                                                                                               11.06+0.08
+                                                                                                    −0.08
+                                                                                                              11.949+0.017
+                                                                                                                    −0.017
+                                                                                                                                −1.806+0.019
+                                                                                                                                      −0.016
+                         log 𝑁 (Fe ii)                          12.65+0.05
+                                                                     −0.04
+                                                                                10.65+0.5
+                                                                                      −0.59
+                                                                                                              12.664+0.044
+                                                                                                                    −0.047
+                                                                                                                                −2.140+0.043
+                                                                                                                                      −0.048
+                         log 𝑁 (O i)           11.77+0.49
+                                                    −0.57
+                                                                14.25+0.02
+                                                                     −0.02
+                                                                                 13.2+0.05
+                                                                                     −0.06
+                                                                                               12.13+0.13
+                                                                                                     −0.14
+                                                                                                               14.29+0.02
+                                                                                                                    −0.02
+                                                                                                                                −1.705+0.021
+                                                                                                                                      −0.022
+                         log 𝑁 (H i)           16.68+0.06
+                                                    −0.05
+                                                                19.25+0.01
+                                                                     −0.01
+                                                                                18.39+0.05
+                                                                                      −0.09
+                                                                                                16.8+0.09
+                                                                                                    −0.07
+                                                                                                              19.304+0.004
+                                                                                                                    −0.004
+
+                   log( 𝑁 (D i)/𝑁 (H i) )     −4.623+0.008
+                                                    −0.008
+
+                       [O/H] individual        −1.61+0.49
+                                                    −0.58
+                                                                −1.69+0.03
+                                                                     −0.03
+                                                                               −1.86+0.06
+                                                                                    −0.07
+                                                                                               −1.39+0.16
+                                                                                                    −0.15
+
+Table 3. Overall fit results for the absorption-line system at 𝑧 = 3.4210863(15) towards J 1332+0052. These results correspond to the base model (see sec. 3.1).
+We used values from Asplund et al. (2009) for solar abundances: 12 + log(C/H) = 8.43, 12 + log(Si/H) = 7.51, 12 + log(Al/H) = 6.45, 12 + log(Fe/H) = 7.50,
+12 + log(O/H) = 8.69
+
+
+
+
+Figure 1. Fit to the H i Ly-𝛼 line at 𝑧abs = 3.42 towards J 1332+0052. The black error bars show the pixels of the observed spectra used in the fit. Other pixels
+are displayed in grey. The total model profile is shown by red lines, while the other coloured lines indicate the contribution of individual components. The filled
+regions between lines correspond to 0.68 credible intervals drawn from the posterior parameter distribution estimated during MCMC fitting. Fit residuals are
+displayed above the profiles.
+
+
+data quite well and do not show the significant scatter in the estimated            features in such a portion of the spectrum like near the D i 𝜆973
+log 𝑁(H i). Therefore, we choose five as a compromise between the                   line. For all these cases, comparison with the same regions in the
+unacceptably simple model and the overfitting.                                      HIRES spectrum mainly shows that there is no demonstration of any
+   We then combined all posterior distribution functions (estimated                 additional absorption in the HIRES spectrum and thus we suppose
+by MCMC chains) of D/H ratios for these models into one and defined                 that such a noise is an artefact of the procedure of the UVES spectrum
+the uncertainty of the 𝑁 (D i)/𝑁 (H i) determination of 0.014 dex                   reduction and hence we did not fit all these tiny features as real
+directly from the final posterior distribution (see Fig. 6). It consists            absorption systems. However, given a noticeable deviation of the
+of both statistical and systematic uncertainty.                                     D/H value obtained with the model where we exclude D i 973 line,
+   Another potential source of systematic uncertainty is the fact that              from the the majority of other models (see Fig. 6), we also fitted all
+there are some regions in the UVES spectrum where noise does                        D i lines but 973 Å for UVES and HIRES spectra independently to
+not seem to be Gaussian. One could recognise additional absorption                  test how fluctuations near H i 973 line in the UVES spectrum may
+
+MNRAS 000, 1–12 (2023)
+                                         A New Precise Determination of the Primordial Abundance of Deuterium.                                                 5
+
+
+
+
+Figure 2. Fits to the metal absorption lines at 𝑧 = 3.42 towards J 1332+0052 in   Figure 3. Fits to the metal absorption lines at 𝑧 = 3.42 towards J 1332+0052 in
+the UVES spectrum. The graphical conventions of Fig. 1 are used. Transition       the HIRES spectum. The graphical conventions of Fig. 1 are used. Transition
+lines are labelled in each panel.                                                 lines are labelled in each panel.
+
+
+
+affect to the estimated D i/H i value. Using both spectra we estimated            Upon analysing the results in the figure, it becomes apparent that a
+log(D i/H i)= −4.647 ± 0.012, while for UVES and HIRES spectra                    majority of the D/H values tend towards the "UVES" value or suggest
+only we got log(D i/H i)= −4.647±0.017 and log(D i/H i)= −4.665±                  that the D i 973 line plays a decisive role, contributing to a higher
+0.022, respectively. It allows us to suppose that the fluctuations near           D/H value. It is crucial to note that, in all cases except "UVES" and
+H i 973 line is not related to the relatively low D i/H i value for fit           "HIRES", we fitted both spectra. Our base model involves fitting
+without D i 973, since the D i/H i value from the fit of the HIRES                all D i lines in both spectra, without favouring any particular metal
+spectrum alone is even lower than from the fit of the UVES one.                   element and considering both wings of the H i Ly𝛼 line. Secondly,
+   As a concluding remark on Fig. 6, we would like to highlight two               any further analysis is against the "blind" methodology, as explained
+key points. Firstly, all the presented D/H values are demonstrated as             in Sect. 4.2. There is no evident reason to favour one spectrum over
+alternatives to the base model, and we maintain neutrality among                  another, deem one D i line superior to others, or assert the superiority
+these alternatives; there is no preference for any specific option.               of a specific wing of the H i Ly𝛼 line. Therefore, we amalgamate all
+
+                                                                                                                                     MNRAS 000, 1–12 (2023)
+6      Kislitsyn P. et al.
+
+
+
+
+Figure 4. Fits to the H i and D i Lyman-series lines at 𝑧abs = 3.42 towards J 1332+0052. The left panels show the UVES spectrum while the right panels show
+the HIRES spectrum. The graphical elements are the same as in Fig. 1. Transition lines are labelled in each panel.
+
+
+the results to present the final posterior distribution of the D/H value        were overlapped with D i lines. Obtained result is 𝑁 (D i)/𝑁 (H i) =
+and its associated error.                                                       −4.685 ± 0.014 (only statistical uncertainty). In principle, there is
+                                                                                always such opportunity for any considered D/H measurement, there-
+   We also checked another fit model where an additional H i com-               fore, while we did not include this uncertainty in our final results, we
+ponent was added with the velocity offset of −81.5 km s −1 relative             need to bear in mind that the result may be biased. Thus the value of
+to the major component so H i lines of this additional component
+
+MNRAS 000, 1–12 (2023)
+                                     A New Precise Determination of the Primordial Abundance of Deuterium.                                           7
+
+
+
+
+                    Figure 5. Fits to the H i and D i Lyman-series lines at 𝑧abs = 3.42 towards J 1332+0052 (continuation of Fig. 4).
+
+
+Δ = −0.06 could be perceived as a bias that might take place in the            UVES spectrum. In each figure, we present all the lines for each
+case of D i lines that are blended with an unmodelled H i component.           additional H i component that are available for fitting and were used
+                                                                               during the fit. Looking at, e.g., Figs. A4 and A7, one can notice
+    Lastly, we discussed the uncertainty, related to the profiles of           that all features near the D i 𝜆931 line are well constrained by clear
+interloping absorption systems, which may partially blend the total            absorption by other lines of those absorption systems. The same is
+fit near sub-DLA D i lines. In Appendix A, we show a set of figures            relevant for the D i 𝜆950 line. With such a reliable constraint on the
+which represent the fit to spectral regions around D i lines in the
+
+                                                                                                                                 MNRAS 000, 1–12 (2023)
+8      Kislitsyn P. et al.
+
+
+
+
+Figure 6. D i/H i estimates using different model assumptions or spectra (left panel) and joint estimate (right panel). Different keywords along the x-axis denote
+a modification of the base model (labelled as "base" and described in Sect. 3.2) as follows: "UVES" and "HIRES": only UVES or HIRES is fitted; "blue-Ly𝛼"
+and "red-Ly𝛼": only the bluer or the redder wing of the H i Ly𝛼 line is fitted; "met-AlII", "met-CII", "met-SiII" and "met-OI": 𝑁 (H i) is tied to either 𝑁 (Al ii),
+𝑁 (C ii), 𝑁 (Si ii), or 𝑁 (O i) along the components; "wo-𝜆": the region near the D i "𝜆" (in Å) line is excluded from the fit.
+
+
+blending absorption features, we suppose that there is little bias of                pecially important in view of the next generation of ground-based
+the usage of the partially blended D i lines, as we did in this work.                telescopes (e.g., ELT, TMT, and GMT) which will be able to observe
+                                                                                     fainter targets (see also the appendix in Cooke et al. 2016).
+                                                                                        One may also be interested in how metallicity varies from one
+                                                                                     component to another in the sub-DLA system since it can be used to
+4 DISCUSSION                                                                         explore variations in metallicity and study the dust content (see, e.g.,
+                                                                                     Ramburuth-Hurt et al. 2023). In the last row of the table 3 we show
+The system presented here allowed us to robustly determine the D/H
+                                                                                     the [O/H] for individual components derived using the base model.
+ratio thanks to clear damping wings in Ly-𝛼, especially in the re-
+                                                                                     Oxygen is the best-suited element for metallicity determination, since
+gions where the flux immediately recovers from zero (DLA core),
+                                                                                     its ionisation potential is very close to the hydrogen one (and so
+which is necessary to accurately constrain the total H i column den-
+                                                                                     the ionisation correction is negligible) and there are several strong
+sity in gas-rich (sub-DLA and DLA) systems. Several D i lines are
+                                                                                     transitions with appropriate wavelengths. [O/H] determinations for
+also detected, providing strong constraints on the D i column density.
+                                                                                     individual components differ from the overall oxygen metallicity by
+Finally, this particular sub-DLA system exhibits a quite simple ve-
+                                                                                     no more than 0.3 dex. This is slightly smaller than the metallicity
+locity structure. With such a precise measurement, one can discuss
+                                                                                     variations proposed by De Cia et al. (2021) and is consistent with
+the possible astration of deuterium, which is easily destroyed in stars.
+                                                                                     other estimates of the metallicity variations (Esteban et al. 2022).
+Chemical evolution models predict little deviation of D/H from the
+primordial abundance in predominantly unprocessed gas, i.e., at low
+metallicity (e.g., Dvorkin et al. 2016). Weinberg (2017) predicted an                4.1 Cosmological implementation
+astration smaller than 2% at [O/H] ≈ −1.0 while similar results were
+presented by van de Voort et al. (2018). The latter authors found a                  The main advantage of the D/H measurements is their direct con-
+mean deviation of D/H from the primordial value in simulations that                  nection to the primordial deuterium abundance which can be used
+is smaller than 2% up to [O/H] ≈ −0.6. The system studied here of-                   to infer the cosmological baryon density. Using all available D/H
+fers a new opportunity to observationally test this at a slightly higher             determinations from the literature, which are summarised in table 4,
+metallicity ([O/H] ≈ −1.7) than previously possible, confirming the                  one can derive the average value (weighted mean):
+lack of detectable dependence of D/H on metallicity, as also noticed
+                                                                                     (D/H)all = (2.533 ± 0.024) × 10 −5 .
+by Cooke et al. (2016). In short, we showed that astration remains
+                                                                                                                                                                (2)
+negligible compared to measurement uncertainties for metallicities
+of up to at least [O/H] ≈ −1.7. Naturally, larger statistics are needed                 This is our conservative estimate in the sense that it incorporates
+to observe tiny deviations from the primordial abundance at the level                all previous determinations. We also show the comparison of the new
+predicted by the models.                                                             D/H measurement with the previous ones in Fig. 9. In this figure,
+   Another point worth mentioning is that this new D/H measurement                   we show D/H versus [O/H] for all known determinations and we
+was performed in a sub-DLA system with outstanding properties                        used blue colour for measurements which meet the selection criteria
+compared to previously studied systems. Indeed, this sub-DLA has                     proposed by Cooke et al. (2014), red colour for our new determination
+the highest redshift amongst systems in the precision sample, has the                and grey colour for all other determinations. The new measurement
+lowest H i column density, and has one of the highest metallicities.                 is consistent with other precision measurements and has a similar
+These peculiarities make this measurement rather unique and relax                    uncertainty. Fig. 9 also shows that there is no obvious correlation
+the conditions allowing for a robust D/H determination. This is es-                  between metallicity and D/H ratio.
+
+MNRAS 000, 1–12 (2023)
+                                      A New Precise Determination of the Primordial Abundance of Deuterium.                                             9
+
+
+
+
+      Figure 7. Corner plots showing the posterior distributions of the main parameters in the fitting chains applied to the UVES and HIRES spectra.
+
+
+   Up to now, there is no robust verification that the spread of the            respectively) with the theoretically-predicted value of the primordial
+D/H determinations is not physical. However, more high-quality ob-              deuterium abundance computed using the PRIMAT code and based
+servations can clarify estimates as shown by Cooke et al. (2014).               on the cosmological parameters derived from CMB+BAO (Planck
+Moreover, these authors offered a set of criteria to select the most            Collaboration et al. 2020) presented by Pitrou et al. (2021):
+suitable cases for D/H determinations where some systematic effects
+are negligible. Based on the nine systems which agree with these
+criteria (see table 4), one can obtain a weighted mean of presumably            (D/H)th = (2.439 ± 0.037) × 10 −5                                      (4)
+best-suited measurements:
+                                                                                assuming 𝜏𝑛 = 879, 4(6)𝑠 and 100ℎ2 Ω𝑏 = 2.242(±0.014). An im-
+                                                                                portant and significant achievement in the D(p, 𝛾) 3 He rate determi-
+(D/H)best = (2.501 ± 0.028) × 10 −5 .                                 (3)
+                                                                                nation was reached in the last years by the Laboratory for Under-
+   Even if measurements that meet the selection criteria of the pre-            ground Nuclear Astrophysics (LUNA) staff (Mossa et al. 2020). This
+cision sample are presumed to be the most suitable for D/H deter-               reaction was the main source of uncertainty in predicting the theo-
+mination, we suggest that it is important to use all available data             retical primordial D/H ratio. Pitrou et al. (2021) used the new rate
+and measurements made by different researchers, and using different             of this reaction for the computations and the new rate enhanced the
+techniques, until this presumption is demonstrated conclusively.                tension.
+   Both values (eq. 2, 3) are in moderate tension (≈ 2.2𝜎, ≈ 1.4𝜎                  This growing discrepancy which was also mentioned by Cooke
+
+                                                                                                                                 MNRAS 000, 1–12 (2023)
+10        Kislitsyn P. et al.
+
+                           QSO               [O/H]             log(D/H)                 reference             meet the selection criteria?
+
+                     HS 0105+1619        -1.771 ± 0.021     -4.589 ± 0.026         Cooke et al. (2014)                     ✓
+                       Q0913+072         -2.416 ± 0.011     -4.597 ± 0.018         Cooke et al. (2014)                     ✓
+                   SDSS J1358+6522       -2.335 ± 0.022     -4.588 ± 0.012         Cooke et al. (2014)                     ✓
+                   SDSS J1419+0829       -1.922 ± 0.010     -4.601 ± 0.009         Cooke et al. (2014)                     ✓
+                    SDSS J1558-0031      -1.650 ± 0.040     -4.619 ± 0.026         Cooke et al. (2014)                     ✓
+                       Q1243+307         -2.769 ± 0.028     -4.622 ± 0.015         Cooke et al. (2018)                     ✓
+                   SDSS J1358+0349       -2.804 ± 0.015     -4.582 ± 0.012         Cooke et al. (2016)                     ✓
+                       J1444+2919        -2.042 ± 0.005     -4.706 ± 0.067       Balashev et al. (2016)                    ✓
+                        CTQ 247          -1.990 ± 0.100     -4.560 ± 0.100      Noterdaeme et al. (2012)                   ×
+                   PKS 1937-1009 (1)     -1.870 ± 0.200     -4.610 ± 0.050    Riemer-Sørensen et al. (2015)                ×
+                       J1337+3152        -2.640 ± 0.170     -4.930 ± 0.150        Srianand et al. (2010)                   ×
+                       J1134+5742            <-1.9          -4.690 ± 0.130       Fumagalli et al. (2011)                   ×
+                       Q2206-199        -2.070 ± 0.050a     -4.786 ± 0.100      Pettini & Bowen (2001)                     ×
+                       Q0347-3819        -0.820 ± 0.060     -4.426 ± 0.028       Levshakov et al. (2002)                   ×
+                   PKS 1937-1009 (2)     -2.250 ± 0.250     -4.581 ± 0.008    Riemer-Sørensen et al. (2017)                ×
+                      Q1009+2956         -2.500 ± 0.200     -4.606 ± 0.066       Zavarygin et al. (2018)                   ×
+                       J1332+0052        -1.725 ± 0.019     -4.622 ± 0.014              this paper                         ✓
+a presented in Pettini et al. (2008)
+
+
+Table 4. Current sample of D/H determinations. In the last column we show either a measurement meets or not the selection criteria of the precision sample
+proposed by Cooke et al. (2014).
+
+
+                                                                                a few so any new measurement is extremely valuable. The detection
+                                                                                of a clear H i Ly𝛼 line and several optically thin D i lines lead us to
+                                                                                make the analysis to the end, regardless of the obtained D/H value.
+                                                                                   While not performing a complete blind analysis (as done by Cooke
+                                                                                et al. 2014), where the value of D/H is kept unknown until all deci-
+                                                                                sions about the modelling are accepted based on the visual matching
+                                                                                of the data by the fit and 𝜒2 values, we did not favour any D/H
+                                                                                value during the fitting process. In fact, Fig. 6 presents only a small
+                                                                                scatter in the D/H determinations between our different models. Any
+                                                                                prior based on values by, e.g., Cooke et al. (2018) could be anywhere
+                                                                                within a ∼ 0.1 dex range around log(D/H) = −4.61, and all our mod-
+                                                                                els are comfortably within this range. We would have no reason to
+                                                                                subconsciously prefer some value within that range. In other words, a
+                                                                                confirmation bias would rather take place for a choice between, e.g.,
+                                                                                a value of −4.6 and −4.4, i.e. with a deviation much more substantial
+Figure 8. Dependence of the total measured log 𝑁 (H i) on the order of the      than observed here. The best way to avoid subjectivity remains to
+polynomial used for continuum fitting. The orange dots and error bars show      perform a D/H determination in each system where it is possible to
+the estimated log 𝑁 (H i) using a one-component model for Ly𝛼 absorption        do and confront analysis obtained by different groups and methods.
+(left ordinate axis). The blue dots show the reduced 𝜒 2 of the fits (right
+ordinate axis).
+
+
+                                                                                5 CONCLUSIONS
+et al. (2018) and Pitrou et al. (2021) could be a manifestation of new
+physics beyond the Standard Cosmological Model.                                 To date, there are only 17 determinations of the D/H ratio in metal-
+                                                                                poor DLA/sub-DLA systems at high redshift. Nine of them agree
+                                                                                with the criteria defined by Cooke et al. (2014) to qualify as robust
+4.2 Avoiding confirmation bias                                                  measurements. In this way, each new determination is crucial, as well
+                                                                                as any reanalysis of known systems based on new high-quality data.
+Given the number of previous works on the primordial D/H ratio                     Our main conclusions are:
+measurements as well as BBN+CMB value, one could expect that a
+new determination should be consistent with others. This could in                 (i) Based on high-quality spectra we obtained a new measurement
+principle influence the decisions made through the analysis of new              of the deuterium abundance in the metal-poor sub-DLA system at
+D/H systems.                                                                    𝑧 = 3.42 towards quasar J 1332+0052: D/H = (2.388±0.078)×10 −5 .
+   First of all, it is worth reminding that D/H measurements are only             (ii) This new measurement is consistent with previous determi-
+
+MNRAS 000, 1–12 (2023)
+                                    A New Precise Determination of the Primordial Abundance of Deuterium.                                              11
+
+
+
+
+Figure 9. Current D/H measurements. The systems matching the criteria defined by Cooke et al. (2014) are shown in blue while other determinations are
+displayed in grey. Our new measurement is shown in red. The weighted mean D/H value based on all measurements is represented by the horizontal line. The
+weighted mean values based on either all measurements or only the systems matching the above criteria are displayed at the bottom right.
+
+
+nations of the same precision level and meets the selection criteria          financial support of the W. M. Keck Foundation. The authors wish to
+proposed by Cooke et al. (2014).                                              recognize and acknowledge the very significant cultural role and rev-
+   (iii) Based on all available D/H measurements we estimated a new           erence that the summit of Maunakea has always had within the Native
+primordial deuterium abundance D/Hpr = (2.533 ± 0.024) × 10 −5 .              Hawaiian community. We are most fortunate to have the opportunity
+Based on nine measurements which meet the criteria of a precise one           to conduct observations from this mountain. This research has made
+we find D/Hpr = (2.501 ± 0.028) × 10 −5 .                                     use of the Keck Observatory Archive (KOA), which is operated by
+   (iv) We used a new method for accounting the systematic effects            the W. M. Keck Observatory and the NASA Exoplanet Science In-
+based on multiple times fitting, when we do an independent fitting            stitute (NExScI), under contract with the National Aeronautics and
+for each model we consider it appropriate for describing the data.            Space Administration.
+The main advantage of this method is that we do not choose which
+model is better or worse which might be subconsciously biased by
+our human nature and combine all the results from any possible                DATA AVAILABILITY
+model instead. Despite it being very time-consuming, it is possibly
+the single ability to realise how different aspects could affect the          The pipeline-reduced spectra underlying this article are readily avail-
+results of the analysis.                                                      able from the ESO science portal (http://archive.eso.org/
+   (v) A new determination of the D/Hpr based on all measurements             scienceportal/home) and partially from the Keck observatory
+is still marginally inconsistent (≈2.2𝜎) with the theoretical value           archive (https://koa.ipac.caltech.edu). Re-reduced spectra
+predicted by Pitrou et al. (2021) based on the cosmological param-            can be shared upon request to the corresponding author.
+eters derived from CMB+BAO (Planck Collaboration et al. 2020).
+The reasons for this remain unsettled and could potentially be an
+indication of new physics.                                                    REFERENCES
+   (vi) There is still no obvious correlation between D/H and [O/H]           Asplund M., Grevesse N., Sauval A. J., Scott P., 2009, Annual Review of
+or N(H i).                                                                        Astronomy and Astrophysics, 47, 481
+                                                                              Aver E., Berg D. A., Hirschauer A. S., Olive K. A., Pogge R. W., Rogers N.
+                                                                                  S. J., Salzer J. J., Skillman E. D., 2021, Monthly Notices of the Royal
+ACKNOWLEDGEMENTS                                                                  Astronomical Society, 510, 373
+                                                                              Balashev S. A., Zavarygin E. O., Ivanchik A. V., Telikova K. N., Varshalovich
+We thank the anonymous referee for the careful review and useful                  D. A., 2016, Monthly Notices of the Royal Astronomical Society, 458,
+suggestions. The authors are grateful to the VLT and Keck observa-                2188
+tory staff for acquiring the analysed data and to Ryan Cooke for his in-      Cooke R., Pettini M., 2015, Monthly Notices of the Royal Astronomical
+valuable input on this particular system. All performance-expensive               Society, 455, 1512
+calculations were performed on the cluster at Ioffe Institute. This           Cooke R. J., Pettini M., Jorgenson R. A., Murphy M. T., Steidel C. C., 2014,
+                                                                                  The Astrophysical Journal, 781, 31
+work was supported by RSF grant 23-12-00166.
+                                                                              Cooke R. J., Pettini M., Nollett K. M., Jorgenson R., 2016, The Astrophysical
+   Some of the data presented herein were obtained at Keck Observa-               Journal, 830, 148
+tory, which is a private 501(c)3 non-profit organization operated as a        Cooke R. J., Pettini M., Steidel C. C., 2018, The Astrophysical Journal, 855,
+scientific partnership among the California Institute of Technology,              102
+the University of California, and the National Aeronautics and Space          De Cia A., Jenkins E. B., Fox A. J., Ledoux C., Ramburuth-Hurt T., Konstan-
+Administration. The Observatory was made possible by the generous                 topoulou C., Petitjean P., Krogager J.-K., 2021, Nature, 597, 206
+
+                                                                                                                               MNRAS 000, 1–12 (2023)
+12       Kislitsyn P. et al.
+Dekker H., D’Odorico S., Kaufer A., Delabre B., Kotzlowski H., 2000, in Iye         Table A1. Unrelated absorption systems
+     M., Moorwood A. F. M., eds, Optical and IR Telescope Instrumentation
+     and Detectors. SPIE, pp 534 – 545, doi:10.1117/12.395512, https:
+     //doi.org/10.1117/12.395512                                                                line in sub-DLA system     Blending system Figure
+Dvorkin I., Vangioni E., Silk J., Petitjean P., Olive K. A., 2016, Monthly
+     Notices of the Royal Astronomical Society: Letters, 458, L104–L108                                 𝜆1026                         A2
+Esteban C., Méndez-Delgado J. E., García-Rojas J., Arellano-Córdova K. Z.,                               𝜆973                         A3
+     2022, The Astrophysical Journal, 931, 92
+                                                                                                         𝜆950                         A4
+Evans C., et al., 2022, Experimental Astronomy,
+Fernández V., Terlevich E., Díaz A. I., Terlevich R., Rosales-Ortega F. F.,                              𝜆938                      A5, A6
+     2018, Monthly Notices of the Royal Astronomical Society, 478, 5301                                  𝜆931                         A7
+Freudling W., Romaniello M., Bramich D. M., Ballester P., Forchi V., García-
+                                                                                                         𝜆926                         A8
+     Dabló C. E., Moehler S., Neeser M. J., 2013, A&A, 559, A96
+Fumagalli M., O’Meara J. M., Prochaska J. X., 2011, Science, 334, 1245                                   𝜆923                         A9
+Goodman J., Weare J., 2010, Communications in Applied Mathematics and
+     Computational Science, 5, 65
+Hsyu T., Cooke R. J., Prochaska J. X., Bolte M., 2020, The Astrophysical            APPENDIX A: INTERLOPING SYSTEMS
+     Journal, 896, 77
+                                                                                    In this section, we present the modelling of unrelated absorption-line
+Izotov Y. I., Thuan T. X., Guseva N. G., 2014, Monthly Notices of the Royal
+                                                                                    systems. In figure A1 we present strongest D i absorption lines of
+     Astronomical Society, 445, 778
+                                                                                    the sub-DLA system and interloping absorption features near them
+Kurichin O. A., Kislitsyn P. A., Ivanchik A. V., 2021a, Astronomy Letters,
+     47, 674                                                                        in the UVES spectrum. Each following figure shows a portion of
+Kurichin O. A., Kislitsyn P. A., Klimenko V. V., Balashev S. A., Ivanchik           the UVES spectrum with the fit in more details. In particular, these
+     A. V., 2021b, Monthly Notices of the Royal Astronomical Society, 502,          figures show additional absorption lines which allow one to better
+     3045                                                                           constrain parameters of a system. The interloping systems are shown
+Levshakov S. A., Dessauges-Zavadsky M., D’Odorico S., Molaro P., 2002,              in grey. The other colours are those used in the main figures to
+     The Astrophysical Journal, 565, 696                                            either depict the total model profile (red) or individual sub-DLA
+Matsumoto A., et al., 2022, The Astrophysical Journal, 941, 167                     components (i.e., orange, green, blue, and violet for components #1,
+Mossa V., et al., 2020, Nature, 587, 210                                            #2, #3, and #4, respectively). D i lines usually appear in green.
+Murphy M. T., 2016, UVES_popler: POst-PipeLine Echelle Reduction soft-
+     ware.                                                                          This paper has been typeset from a TEX/LATEX file prepared by the author.
+Murphy M. T., Kacprzak G. G., Savorgnan G. A. D., Carswell R. F., 2018,
+     Monthly Notices of the Royal Astronomical Society, 482, 3458
+Noterdaeme P., López S., Dumont V., Ledoux C., Molaro P., Petitjean P.,
+     2012, A&A, 542, L33
+Pettini M., Bowen D. V., 2001, The Astrophysical Journal, 560, 41
+Pettini M., Zych B. J., Steidel C. C., Chaffee F. H., 2008, Monthly Notices of
+     the Royal Astronomical Society, 385, 2011
+Pitrou C., Coc A., Uzan J.-P., Vangioni E., 2021, Monthly Notices of the
+     Royal Astronomical Society, 502, 2474
+Planck Collaboration et al., 2020, A&A, 641, A6
+Ramburuth-Hurt T., et al., 2023, A&A, 672, A68
+Riemer-Sørensen S., et al., 2015, Monthly Notices of the Royal Astronomical
+     Society, 447, 2925
+Riemer-Sørensen S., Kotuš S., Webb J. K., Ali K., Dumont V., Murphy M. T.,
+     Carswell R. F., 2017, Monthly Notices of the Royal Astronomical Society,
+     468, 3239
+Robert P. F., Murphy M. T., O’Meara J. M., Crighton N. H. M., Fumagalli M.,
+     2018, Monthly Notices of the Royal Astronomical Society, 483, 2736
+Srianand R., Gupta N., Petitjean P., Noterdaeme P., Ledoux C., 2010, Monthly
+     Notices of the Royal Astronomical Society, 405, 1888
+Tytler D., Fan X.-M., Burles S., 1996, Nature, 381, 207
+Valerdi M., Peimbert A., Peimbert M., 2021, Monthly Notices of the Royal
+     Astronomical Society, 505, 3624
+Véron-Cetty M. P., Véron P., 2010, A&A, 518, A10
+Vogt S. S., et al., 1994, in Crawford D. L., Craine E. R., eds, Society of Photo-
+     Optical Instrumentation Engineers (SPIE) Conference Series Vol. 2198,
+     Instrumentation in Astronomy VIII. p. 362, doi:10.1117/12.176725
+Weinberg D. H., 2017, The Astrophysical Journal, 851, 25
+Zavarygin E. O., Webb J. K., Dumont V., Riemer-Sørensen S., 2018, Monthly
+     Notices of the Royal Astronomical Society, 477, 5536
+van de Voort F., Quataert E., Faucher-Giguère C.-A., Kereš D., Hopkins P. F.,
+     Chan T. K., Feldmann R., Hafen Z., 2018, Monthly Notices of the Royal
+     Astronomical Society, 477, 80
+
+
+
+MNRAS 000, 1–12 (2023)
+                                      A New Precise Determination of the Primordial Abundance of Deuterium.                                                13
+
+
+
+
+                                    Figure A1. Portion of UVES spectrum with a focus on unrelated absorption features.
+
+
+
+
+Figure A2. Absorption system interloping with D i 𝜆1026. The system is located at redshift 𝑧 = 2.729383. Other systems which affect total fit near the H i line
+are also shown.
+
+
+
+
+Figure A3. Absorption system interloping with D i 𝜆973. The system is lo-
+cated at redshift 𝑧 = 2.534616. Another system nearby is also shown.
+
+
+
+
+                                                                                                                                    MNRAS 000, 1–12 (2023)
+14       Kislitsyn P. et al.
+
+
+
+
+       Figure A4. Absorption systems interloping with D i 𝜆950. The velocity offset is counted relative to the system located at redshift 𝑧 = 3.475422.
+
+
+
+
+Figure A5. The first absorption system interloping with D i 𝜆938. The velocity
+offset is counted relative to the system located at redshift 𝑧 = 2.409310.
+
+
+
+
+                                                                                  Figure A6. The second absorption system interloping with D i 𝜆938. The ve-
+                                                                                  locity offset is counted relative to the system located at redshift 𝑧 = 3.261862.
+
+
+
+
+MNRAS 000, 1–12 (2023)
+                                     A New Precise Determination of the Primordial Abundance of Deuterium.                                           15
+
+
+
+
+Figure A7. Absorption system interloping with D i 𝜆931. The velocity offset
+is counted relative to the system located at redshift 𝑧 = 3.331398.
+
+
+
+
+                                                                              Figure A9. Absorption system interloping with D i 𝜆923. The velocity offset
+                                                                              is counted relative to the system located at redshift 𝑧 = 3.351185.
+
+
+
+
+Figure A8. Absorption system interloping with D i 𝜆926. The velocity offset
+is counted relative to the system located at redshift 𝑧 = 2.991426.
+
+
+
+
+                                                                                                                              MNRAS 000, 1–12 (2023)
+

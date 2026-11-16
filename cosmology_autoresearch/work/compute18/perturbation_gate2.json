@@ -1,0 +1,425 @@
+{
+  "cases": [
+    {
+      "Gamma_km_s_Mpc": 0.0,
+      "Gamma_s_inv": 0.0,
+      "checks": {
+        "aGamma_over_Hcal_equals_Gamma_over_H": true,
+        "absolute_cdm_continuity_residual_small": true,
+        "all_pinned_background_densities_positive": true,
+        "delta_stays_positive_for_declared_test": true,
+        "independent_absolute_continuity_ode_agrees": true,
+        "integrating_factor_quadrature_agrees": true,
+        "ode_success": true,
+        "quadrature_grid_converges": true,
+        "source_sign_matches_Gamma": true,
+        "theta_zero_invariant_or_theta_a_constant": true
+      },
+      "gamma_over_H0": 0.0,
+      "gamma_zero_analytic_delta_max_relative_error": 9.681655650422481e-14,
+      "initial_conditions": {
+        "delta_c_initial": 0.1,
+        "metric_h_of_n": "h(n)=2*S*(n-N_MIN)",
+        "metric_hprime_over_2Hcal": 0.001,
+        "n_initial": -23.025850930040455,
+        "theta_c_over_H0_initial": 0.0
+      },
+      "quadrature_comparison": {
+        "high_vs_low_quadrature_delta_max_relative_difference": 5.407166597203882e-15,
+        "ode_delta_vs_high_grid_max_relative_error": 4.686895433974111e-14,
+        "simpson_grid_nodes_low_high": [
+          8193,
+          16385
+        ]
+      },
+      "range_diagnostics": {
+        "absolute_cdm_continuity_max_normalized_residual": 1.723843330753785e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 1.0008363288404466e-13,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.0769741490699521,
+        "min_E2": 1.0,
+        "min_rho_c": 0.266,
+        "min_rho_x": 0.6849079290765427,
+        "source_coefficient_max": 0.0,
+        "source_coefficient_min": 0.0,
+        "source_term_max": 0.0,
+        "source_term_min": 0.0,
+        "theta_a_invariant_max_relative_error": 0.0
+      },
+      "theta_test": "theta_zero",
+      "unit_conversion": {
+        "H0_s_inv": 2.1842852410855023e-18,
+        "Hcal_equals_a_H0_E": true,
+        "max_abs_difference_aGamma_over_Hcal_vs_g_over_E": 0.0
+      }
+    },
+    {
+      "Gamma_km_s_Mpc": 0.0,
+      "Gamma_s_inv": 0.0,
+      "checks": {
+        "aGamma_over_Hcal_equals_Gamma_over_H": true,
+        "absolute_cdm_continuity_residual_small": true,
+        "all_pinned_background_densities_positive": true,
+        "delta_stays_positive_for_declared_test": true,
+        "independent_absolute_continuity_ode_agrees": true,
+        "integrating_factor_quadrature_agrees": true,
+        "ode_success": true,
+        "quadrature_grid_converges": true,
+        "source_sign_matches_Gamma": true,
+        "theta_zero_invariant_or_theta_a_constant": true
+      },
+      "gamma_over_H0": 0.0,
+      "gamma_zero_analytic_delta_max_relative_error": null,
+      "initial_conditions": {
+        "delta_c_initial": 0.1,
+        "metric_h_of_n": "h(n)=2*S*(n-N_MIN)",
+        "metric_hprime_over_2Hcal": 0.001,
+        "n_initial": -23.025850930040455,
+        "theta_c_over_H0_initial": 10000.000000999986
+      },
+      "quadrature_comparison": {
+        "high_vs_low_quadrature_delta_max_relative_difference": 1.783309872209638e-15,
+        "ode_delta_vs_high_grid_max_relative_error": 2.1581532991967155e-15,
+        "simpson_grid_nodes_low_high": [
+          8193,
+          16385
+        ]
+      },
+      "range_diagnostics": {
+        "absolute_cdm_continuity_max_normalized_residual": 1.722263783078925e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 5.040773510261259e-15,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.07528213688413425,
+        "min_E2": 1.0,
+        "min_rho_c": 0.266,
+        "min_rho_x": 0.6849079290765427,
+        "source_coefficient_max": 0.0,
+        "source_coefficient_min": 0.0,
+        "source_term_max": 0.0,
+        "source_term_min": 0.0,
+        "theta_a_invariant_max_relative_error": 3.5998900258307764e-15
+      },
+      "theta_test": "theta_nonzero_diagnostic",
+      "unit_conversion": {
+        "H0_s_inv": 2.1842852410855023e-18,
+        "Hcal_equals_a_H0_E": true,
+        "max_abs_difference_aGamma_over_Hcal_vs_g_over_E": 0.0
+      }
+    },
+    {
+      "Gamma_km_s_Mpc": 31.452884000000005,
+      "Gamma_s_inv": 1.0193185506049605e-18,
+      "checks": {
+        "aGamma_over_Hcal_equals_Gamma_over_H": true,
+        "absolute_cdm_continuity_residual_small": true,
+        "all_pinned_background_densities_positive": true,
+        "delta_stays_positive_for_declared_test": true,
+        "independent_absolute_continuity_ode_agrees": true,
+        "integrating_factor_quadrature_agrees": true,
+        "ode_success": true,
+        "quadrature_grid_converges": true,
+        "source_sign_matches_Gamma": true,
+        "theta_zero_invariant_or_theta_a_constant": true
+      },
+      "gamma_over_H0": 0.46666,
+      "gamma_zero_analytic_delta_max_relative_error": null,
+      "initial_conditions": {
+        "delta_c_initial": 0.1,
+        "metric_h_of_n": "h(n)=2*S*(n-N_MIN)",
+        "metric_hprime_over_2Hcal": 0.001,
+        "n_initial": -23.025850930040455,
+        "theta_c_over_H0_initial": 0.0
+      },
+      "quadrature_comparison": {
+        "high_vs_low_quadrature_delta_max_relative_difference": 9.714435642012215e-11,
+        "ode_delta_vs_high_grid_max_relative_error": 6.513132844429308e-12,
+        "simpson_grid_nodes_low_high": [
+          8193,
+          16385
+        ]
+      },
+      "range_diagnostics": {
+        "absolute_cdm_continuity_max_normalized_residual": 1.7269749974688003e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 6.749897346681029e-14,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.07817544333407928,
+        "min_E2": 1.0,
+        "min_rho_c": 0.266,
+        "min_rho_x": 0.449388279687641,
+        "source_coefficient_max": 1.2015756924167649,
+        "source_coefficient_min": 6.380236860442288e-49,
+        "source_term_max": 0.11918706186226863,
+        "source_term_min": 6.380236860442289e-50,
+        "theta_a_invariant_max_relative_error": 0.0
+      },
+      "theta_test": "theta_zero",
+      "unit_conversion": {
+        "H0_s_inv": 2.1842852410855023e-18,
+        "Hcal_equals_a_H0_E": true,
+        "max_abs_difference_aGamma_over_Hcal_vs_g_over_E": 1.1102230246251565e-16
+      }
+    },
+    {
+      "Gamma_km_s_Mpc": 31.452884000000005,
+      "Gamma_s_inv": 1.0193185506049605e-18,
+      "checks": {
+        "aGamma_over_Hcal_equals_Gamma_over_H": true,
+        "absolute_cdm_continuity_residual_small": true,
+        "all_pinned_background_densities_positive": true,
+        "delta_stays_positive_for_declared_test": true,
+        "independent_absolute_continuity_ode_agrees": true,
+        "integrating_factor_quadrature_agrees": true,
+        "ode_success": true,
+        "quadrature_grid_converges": true,
+        "source_sign_matches_Gamma": true,
+        "theta_zero_invariant_or_theta_a_constant": true
+      },
+      "gamma_over_H0": 0.46666,
+      "gamma_zero_analytic_delta_max_relative_error": null,
+      "initial_conditions": {
+        "delta_c_initial": 0.1,
+        "metric_h_of_n": "h(n)=2*S*(n-N_MIN)",
+        "metric_hprime_over_2Hcal": 0.001,
+        "n_initial": -23.025850930040455,
+        "theta_c_over_H0_initial": 10000.000000999986
+      },
+      "quadrature_comparison": {
+        "high_vs_low_quadrature_delta_max_relative_difference": 9.713613314474285e-11,
+        "ode_delta_vs_high_grid_max_relative_error": 6.475122508343775e-12,
+        "simpson_grid_nodes_low_high": [
+          8193,
+          16385
+        ]
+      },
+      "range_diagnostics": {
+        "absolute_cdm_continuity_max_normalized_residual": 2.08753240689487e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 8.717344616661857e-15,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.07650253179168405,
+        "min_E2": 1.0,
+        "min_rho_c": 0.266,
+        "min_rho_x": 0.449388279687641,
+        "source_coefficient_max": 1.2015756924167649,
+        "source_coefficient_min": 6.380236860442288e-49,
+        "source_term_max": 0.11660324114996765,
+        "source_term_min": 6.380236860442289e-50,
+        "theta_a_invariant_max_relative_error": 3.5998900258307764e-15
+      },
+      "theta_test": "theta_nonzero_diagnostic",
+      "unit_conversion": {
+        "H0_s_inv": 2.1842852410855023e-18,
+        "Hcal_equals_a_H0_E": true,
+        "max_abs_difference_aGamma_over_Hcal_vs_g_over_E": 1.1102230246251565e-16
+      }
+    },
+    {
+      "Gamma_km_s_Mpc": -31.452884000000005,
+      "Gamma_s_inv": -1.0193185506049605e-18,
+      "checks": {
+        "aGamma_over_Hcal_equals_Gamma_over_H": true,
+        "absolute_cdm_continuity_residual_small": true,
+        "all_pinned_background_densities_positive": true,
+        "delta_stays_positive_for_declared_test": true,
+        "independent_absolute_continuity_ode_agrees": true,
+        "integrating_factor_quadrature_agrees": true,
+        "ode_success": true,
+        "quadrature_grid_converges": true,
+        "source_sign_matches_Gamma": true,
+        "theta_zero_invariant_or_theta_a_constant": true
+      },
+      "gamma_over_H0": -0.46666,
+      "gamma_zero_analytic_delta_max_relative_error": null,
+      "initial_conditions": {
+        "delta_c_initial": 0.1,
+        "metric_h_of_n": "h(n)=2*S*(n-N_MIN)",
+        "metric_hprime_over_2Hcal": 0.001,
+        "n_initial": -23.025850930040455,
+        "theta_c_over_H0_initial": 0.0
+      },
+      "quadrature_comparison": {
+        "high_vs_low_quadrature_delta_max_relative_difference": 3.451650989345666e-12,
+        "ode_delta_vs_high_grid_max_relative_error": 2.7360735160353825e-13,
+        "simpson_grid_nodes_low_high": [
+          8193,
+          16385
+        ]
+      },
+      "range_diagnostics": {
+        "absolute_cdm_continuity_max_normalized_residual": 1.8592117936510005e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 6.864261013339727e-14,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.048591240849212194,
+        "min_E2": 1.0,
+        "min_rho_c": 0.266,
+        "min_rho_x": 0.6849079290765427,
+        "source_coefficient_max": -3.2012797732538103e-48,
+        "source_coefficient_min": -1.2015756924167649,
+        "source_term_max": -3.2012797732538106e-49,
+        "source_term_min": -0.058386053868781936,
+        "theta_a_invariant_max_relative_error": 0.0
+      },
+      "theta_test": "theta_zero",
+      "unit_conversion": {
+        "H0_s_inv": 2.1842852410855023e-18,
+        "Hcal_equals_a_H0_E": true,
+        "max_abs_difference_aGamma_over_Hcal_vs_g_over_E": 1.1102230246251565e-16
+      }
+    },
+    {
+      "Gamma_km_s_Mpc": -31.452884000000005,
+      "Gamma_s_inv": -1.0193185506049605e-18,
+      "checks": {
+        "aGamma_over_Hcal_equals_Gamma_over_H": true,
+        "absolute_cdm_continuity_residual_small": true,
+        "all_pinned_background_densities_positive": true,
+        "delta_stays_positive_for_declared_test": true,
+        "independent_absolute_continuity_ode_agrees": true,
+        "integrating_factor_quadrature_agrees": true,
+        "ode_success": true,
+        "quadrature_grid_converges": true,
+        "source_sign_matches_Gamma": true,
+        "theta_zero_invariant_or_theta_a_constant": true
+      },
+      "gamma_over_H0": -0.46666,
+      "gamma_zero_analytic_delta_max_relative_error": null,
+      "initial_conditions": {
+        "delta_c_initial": 0.1,
+        "metric_h_of_n": "h(n)=2*S*(n-N_MIN)",
+        "metric_hprime_over_2Hcal": 0.001,
+        "n_initial": -23.025850930040455,
+        "theta_c_over_H0_initial": 10000.000000999986
+      },
+      "quadrature_comparison": {
+        "high_vs_low_quadrature_delta_max_relative_difference": 3.4584225269056767e-12,
+        "ode_delta_vs_high_grid_max_relative_error": 2.303861920732106e-13,
+        "simpson_grid_nodes_low_high": [
+          8193,
+          16385
+        ]
+      },
+      "range_diagnostics": {
+        "absolute_cdm_continuity_max_normalized_residual": 1.755407635414408e-16,
+        "absolute_continuity_independent_ode_vs_rho_c_delta_max_relative_error": 3.9206548570190755e-15,
+        "delta_c_max": 0.1,
+        "delta_c_min": 0.047496925002267064,
+        "min_E2": 1.0,
+        "min_rho_c": 0.266,
+        "min_rho_x": 0.6849079290765427,
+        "source_coefficient_max": -3.2012797732538103e-48,
+        "source_coefficient_min": -1.2015756924167649,
+        "source_term_max": -3.2012797732538106e-49,
+        "source_term_min": -0.0570711505472662,
+        "theta_a_invariant_max_relative_error": 3.3881317890172014e-15
+      },
+      "theta_test": "theta_nonzero_diagnostic",
+      "unit_conversion": {
+        "H0_s_inv": 2.1842852410855023e-18,
+        "Hcal_equals_a_H0_E": true,
+        "max_abs_difference_aGamma_over_Hcal_vs_g_over_E": 1.1102230246251565e-16
+      }
+    }
+  ],
+  "fixed_metric_and_frame": {
+    "absolute_cdm_perturbation_identity": "U=rho_c*delta_c obeys U,n+3U+rho_c*(theta_c/Hcal+S)=0; interaction terms cancel",
+    "closure": "geodesic CDM/no momentum transfer in CDM rest frame as in solver_path.md",
+    "conformal_conversion": "a*Gamma/Hcal=(Gamma/H0)/E=gamma/E because Hcal=a*H0*E",
+    "delta_equation_in_ln_a": "delta_c,n=-theta_c/Hcal-S+(gamma/E)*(rho_x/rho_c)*delta_c",
+    "gauge": "synchronous; physical solution uses CDM-comoving theta_c=0",
+    "independent_delta_method": "integrating factor with I(n)=integral A dn and delta=exp(I)*(delta_i+integral exp(-I)F dn), evaluated with composite Simpson quadrature on 8193 and 16385 nodes",
+    "initial_delta_c": 0.1,
+    "metric_source_choice": "S=hprime/(2*Hcal)=constant=1e-3; h(n)=2*S*(n-N_MIN), with hprime=dh/dtau",
+    "nonzero_theta_initial_over_H0": 10000.000000999986,
+    "nonzero_theta_today_over_H0": 1e-06,
+    "theta_diagnostic": "A separate nonzero-theta run checks Eq. 20 and theta*a constancy; this is a diagnostic only and not the CDM-comoving physical run.",
+    "theta_equation_in_ln_a": "(theta_c/H0),n=-(theta_c/H0)"
+  },
+  "gate": "2: fixed-metric two-component perturbation audit",
+  "implementation": {
+    "bounded_command": "taskset -c 0 env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --state work/compute18/no_campaign_deadline.json --seconds 600 -- .venv/bin/python work/compute18/perturbation_gate2.py",
+    "cpu_affinity_count": 1,
+    "cpu_affinity_ids": [
+      0
+    ],
+    "cpu_count_visible": 20,
+    "elapsed_seconds_inside_script": 4.1570852575823665,
+    "explicit_runner_seconds": 600,
+    "gpu_used": false,
+    "numpy": "2.5.3",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "scipy": "1.18.1",
+    "script": "work/compute18/perturbation_gate2.py",
+    "script_sha256": "55090793914ccecefe9bdcbfcb2bcb9dd8314d3493294975a094316095728a89",
+    "state_path_was_missing": true,
+    "workers": 1
+  },
+  "integrator": {
+    "N_eval_points": 2049,
+    "method": "SciPy solve_ivp DOP853",
+    "ode": {
+      "atol": 1e-14,
+      "max_step": 0.02,
+      "rtol": 1e-12
+    },
+    "quadrature_grid_sizes": [
+      8193,
+      16385
+    ]
+  },
+  "pinned_background": {
+    "H0_km_s_Mpc": 67.4,
+    "H0_s_inv": 2.1842852410855023e-18,
+    "N_eff": 3.044,
+    "Omega_b0": 0.049,
+    "Omega_c0": 0.266,
+    "Omega_gamma0": 5.443748867104649e-05,
+    "Omega_m0_baryons_plus_CDM": 0.315,
+    "Omega_nu0": 3.763343478614165e-05,
+    "Omega_x0": 0.6849079290765427,
+    "Q": "Gamma*rho_x",
+    "T_CMB_K": 2.7255,
+    "background_equations": {
+      "E2": "sum of baryon, photon, neutrino, CDM, vacuum densities",
+      "rho_b": "rho_b,n=-3*rho_b",
+      "rho_c": "rho_c,n=-3*rho_c-gamma*rho_x/E",
+      "rho_gamma": "rho_gamma,n=-4*rho_gamma",
+      "rho_nu": "rho_nu,n=-4*rho_nu",
+      "rho_x": "rho_x,n=gamma*rho_x/E"
+    },
+    "background_n_variable": "n=ln(a)",
+    "densities_normalized_to": "today's critical density",
+    "flat_closure": "Omega_x0=1-Omega_b0-Omega_c0-Omega_gamma0-Omega_nu0",
+    "gamma_over_H0_values": [
+      0.0,
+      0.46666,
+      -0.46666
+    ],
+    "independent_reimplementation": true,
+    "neutrino_approximation": "separately conserved massless effective neutrinos; the source paper's sum m_nu=0.06 eV is not reproduced",
+    "redshift_range": [
+      0.0,
+      10000000000.0
+    ],
+    "sign_convention": "Gamma>0 transfers CDM energy to vacuum",
+    "w_x": -1
+  },
+  "primary_source": {
+    "equation_contract": {
+      "delta_c_prime_conformal": "-(theta_c+hprime/2)+a*Gamma*(rho_x/rho_c)*delta_c",
+      "paper_prime_variable": "conformal time tau",
+      "theta_c_prime_conformal": "-Hcal*theta_c"
+    },
+    "equations_checked": "Eqs. (19)-(20), PDF p. 4",
+    "pdf": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "pdf_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c",
+    "text_copy": "context/papers/interacting_de_desi_dr2_2026.txt",
+    "text_copy_sha256": "a99a4afdd858cdce3cbc2c41f0a13098c30c361dc67891331ee7d9d5f824868f"
+  },
+  "scope_limit": "This fixed-metric two-component check omits Einstein metric feedback, photon/baryon/neutrino perturbation hierarchies, initial-condition generation, CMB spectra, and any stability classification or full-model reproduction.",
+  "solver_path": {
+    "declared_gate2_scope": "fixed-metric two-component perturbation test; no CAMB sampler or likelihood",
+    "path": "work/perturbation_audit/solver_path.md",
+    "sha256": "810ebc06aa9cbf22aeaf9fdb974fce6b9b7c35c41a6b70336a0392ff824e15b3"
+  },
+  "status": "PASS"
+}

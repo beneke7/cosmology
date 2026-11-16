@@ -1,0 +1,277 @@
+{
+  "assessment": "independent background cross-check; not a likelihood reproduction",
+  "cases": [
+    {
+      "Gamma_km_s_Mpc": 0.0,
+      "compute15_comparison": {
+        "available": true,
+        "differences_at_zmax": {
+          "E2": {
+            "absolute": 4.046398861443579e+30,
+            "relative": 4.3948507739356005e-06
+          },
+          "rho_c": {
+            "absolute": 0.0,
+            "relative": 0.0
+          },
+          "rho_x": {
+            "absolute": 4.046397661383594e-10,
+            "relative": 5.90794395801393e-10
+          }
+        },
+        "reference_script_sha256": "c07ede03539d08702f24db69140badd8361c859e76be608fb246ad1867c91d9c"
+      },
+      "convergence_relative_to_fine": {
+        "coarse": {
+          "E2": 1.0172507446646027e-10,
+          "rho_c": 3.2387537491398484e-10,
+          "rho_x": 0.0
+        },
+        "max_step_only": {
+          "E2": 1.9554956657636354e-15,
+          "rho_c": 4.088940430903827e-15,
+          "rho_x": 0.0
+        },
+        "tolerance_only": {
+          "E2": 3.0626498504745666e-12,
+          "rho_c": 9.681197280031111e-12,
+          "rho_x": 0.0
+        }
+      },
+      "fine_values_at_reference_z": {
+        "E2": 9.207135963390216e+35,
+        "radiation_fraction_of_E2": 0.9999996578740651,
+        "rho_c": 2.6600000007980087e+29,
+        "rho_x": 0.684907928671903,
+        "z": 10000000000.0
+      },
+      "gamma_over_H0": 0.0,
+      "integral_identities": {
+        "cdm_comoving_transfer_max_abs": 3.83026943495679e-15,
+        "cdm_comoving_transfer_max_rel": 1.4399509153972687e-14,
+        "dark_sector_continuity_max_abs": 439804651110400.0,
+        "dark_sector_continuity_max_rel": 6.974301337198548e-15,
+        "samples": 65
+      },
+      "lcdm_analytic_recovery": {
+        "E2_max_relative": 1.9163525087962105e-15,
+        "rho_c_max_relative": 1.4423036824359708e-14,
+        "rho_x_max_relative": 0.0
+      },
+      "minima_on_2049_point_grid": {
+        "E2": 1.0,
+        "rho_c": 0.266,
+        "rho_x": 0.684907928671903
+      },
+      "positivity_claim": "sampled only on the 2049-point output grid",
+      "source_sign_today": {
+        "d_rho_x_dln_a": 0.0,
+        "interaction_part_d_rho_c_dln_a": -0.0,
+        "interpretation": "Gamma>0 transfers CDM to vacuum forward in time"
+      }
+    },
+    {
+      "Gamma_km_s_Mpc": 31.452884000000005,
+      "compute15_comparison": {
+        "available": true,
+        "differences_at_zmax": {
+          "E2": {
+            "absolute": 4.046398861296005e+30,
+            "relative": 4.3948504083777595e-06
+          },
+          "rho_c": {
+            "absolute": 6.229611221434656e+19,
+            "relative": 1.8185982526973334e-10
+          },
+          "rho_x": {
+            "absolute": 8.664069461872259e-12,
+            "relative": 1.9279696096868494e-11
+          }
+        },
+        "reference_script_sha256": "c07ede03539d08702f24db69140badd8361c859e76be608fb246ad1867c91d9c"
+      },
+      "convergence_relative_to_fine": {
+        "coarse": {
+          "E2": 1.0626872242064768e-10,
+          "rho_c": 3.2330510482544044e-10,
+          "rho_x": 4.0809387141806386e-12
+        },
+        "max_step_only": {
+          "E2": 1.5127824095546476e-15,
+          "rho_c": 5.593175858506016e-15,
+          "rho_x": 1.9764165194610645e-15
+        },
+        "tolerance_only": {
+          "E2": 3.1675464532232104e-12,
+          "rho_c": 9.612663914969102e-12,
+          "rho_x": 1.2375502511363343e-13
+        }
+      },
+      "fine_values_at_reference_z": {
+        "E2": 9.207136728891813e+35,
+        "radiation_fraction_of_E2": 0.9999995747318942,
+        "rho_c": 3.425501597761914e+29,
+        "rho_x": 0.44938827967897693,
+        "z": 10000000000.0
+      },
+      "gamma_over_H0": 0.46666,
+      "integral_identities": {
+        "cdm_comoving_transfer_max_abs": 4.315992008230296e-15,
+        "cdm_comoving_transfer_max_rel": 1.2599591290060827e-14,
+        "dark_sector_continuity_max_abs": 510173395288064.0,
+        "dark_sector_continuity_max_rel": 7.165035705971979e-15,
+        "samples": 65
+      },
+      "lcdm_analytic_recovery": null,
+      "minima_on_2049_point_grid": {
+        "E2": 1.0,
+        "rho_c": 0.266,
+        "rho_x": 0.44938827967897693
+      },
+      "positivity_claim": "sampled only on the 2049-point output grid",
+      "source_sign_today": {
+        "d_rho_x_dln_a": 0.31961913399403025,
+        "interaction_part_d_rho_c_dln_a": -0.31961913399403025,
+        "interpretation": "Gamma>0 transfers CDM to vacuum forward in time"
+      }
+    },
+    {
+      "Gamma_km_s_Mpc": -31.452884000000005,
+      "compute15_comparison": {
+        "available": true,
+        "differences_at_zmax": {
+          "E2": {
+            "absolute": 4.046398861591153e+30,
+            "relative": 4.394851240555784e-06
+          },
+          "rho_c": {
+            "absolute": 1.0275624016041057e+20,
+            "relative": 6.106357487074532e-10
+          },
+          "rho_x": {
+            "absolute": 2.0600845473950358e-09,
+            "relative": 1.8598362603006104e-09
+          }
+        },
+        "reference_script_sha256": "c07ede03539d08702f24db69140badd8361c859e76be608fb246ad1867c91d9c"
+      },
+      "convergence_relative_to_fine": {
+        "coarse": {
+          "E2": 9.269054486088282e-11,
+          "rho_c": 3.229032889789133e-10,
+          "rho_x": 3.660048439953055e-12
+        },
+        "max_step_only": {
+          "E2": 1.9321206260194144e-15,
+          "rho_c": 4.747433857639276e-15,
+          "rho_x": 3.006915000667912e-15
+        },
+        "tolerance_only": {
+          "E2": 2.821369744356361e-12,
+          "rho_c": 9.780254097363976e-12,
+          "rho_x": 1.1923534053307917e-13
+        }
+      },
+      "fine_values_at_reference_z": {
+        "E2": 9.207134986164936e+35,
+        "radiation_fraction_of_E2": 0.9999997640118534,
+        "rho_c": 1.6827747209022247e+29,
+        "rho_x": 1.107669845747947,
+        "z": 10000000000.0
+      },
+      "gamma_over_H0": -0.46666,
+      "integral_identities": {
+        "cdm_comoving_transfer_max_abs": 2.0816681711721685e-15,
+        "cdm_comoving_transfer_max_rel": 7.825820192376573e-15,
+        "dark_sector_continuity_max_abs": 281474976710656.0,
+        "dark_sector_continuity_max_rel": 7.027481945903198e-15,
+        "samples": 65
+      },
+      "lcdm_analytic_recovery": null,
+      "minima_on_2049_point_grid": {
+        "E2": 1.0,
+        "rho_c": 0.266,
+        "rho_x": 0.684907928671903
+      },
+      "positivity_claim": "sampled only on the 2049-point output grid",
+      "source_sign_today": {
+        "d_rho_x_dln_a": -0.31961913399403025,
+        "interaction_part_d_rho_c_dln_a": 0.31961913399403025,
+        "interpretation": "Gamma>0 transfers CDM to vacuum forward in time"
+      }
+    }
+  ],
+  "execution": {
+    "code_path": "work/compute17/independent_background.py",
+    "code_sha256": "51741fe15312ede9960cdee3902313387468816944fdb824e8c3e9c50d2cbff0",
+    "cpu_affinity_ids": [
+      0
+    ],
+    "elapsed_seconds": 0.9030367340892553,
+    "gpu_used": false,
+    "numpy": "2.5.3",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "run_command": ".venv/bin/python work/compute17/independent_background.py",
+    "scipy": "1.18.1"
+  },
+  "integrator": {
+    "coarse": {
+      "atol": 1e-12,
+      "max_step": 0.1,
+      "rtol": 1e-09
+    },
+    "fine": {
+      "atol": 1e-14,
+      "max_step": 0.02,
+      "rtol": 1e-12
+    },
+    "max_step_only": {
+      "atol": 1e-12,
+      "max_step": 0.02,
+      "rtol": 1e-09
+    },
+    "method": "SciPy solve_ivp DOP853; dense output; independent s=ln(1+z) coordinate",
+    "output_points": 2049,
+    "quadrature": "adaptive scipy.integrate.quad on dense interpolant at 65 points",
+    "tolerance_only": {
+      "atol": 1e-14,
+      "max_step": 0.1,
+      "rtol": 1e-12
+    }
+  },
+  "parameters": {
+    "H0_km_s_Mpc": 67.4,
+    "Neff": 3.044,
+    "Omega_b0": 0.049,
+    "Omega_c0": 0.266,
+    "Omega_m0_baryon_plus_CDM": 0.315,
+    "Tcmb_K": 2.7255,
+    "flat_closure_sum": 1.0,
+    "gamma_over_H0": [
+      0.0,
+      0.46666,
+      -0.46666
+    ],
+    "neutrino_approximation": "massless; rho_nu proportional to a^-4",
+    "z_max": 10000000000.0
+  },
+  "radiation_normalization_independent_SI": {
+    "H0_per_s": 2.1842852410855023e-18,
+    "blackbody_radiation_constant_J_m3_K4": 7.565733250280007e-16,
+    "critical_energy_density_J_m3": 7.668947767821907e-10,
+    "nu_to_gamma_ratio": 0.6913146749577674,
+    "omega_gamma0": 5.443772791681902e-05,
+    "omega_nu0": 3.763360018025512e-05,
+    "omega_r0": 9.207132809707413e-05,
+    "omega_x0_from_flatness": 0.684907928671903,
+    "photon_energy_density_J_m3": 4.1748009199298555e-14,
+    "units": "Gamma has H units; gamma=Gamma/H0 is dimensionless; all densities are energy densities divided by present critical energy density"
+  },
+  "source": {
+    "equations": "flat Friedmann Eq. (3), continuity Eqs. (4)-(5), Q=Gamma*rho_x Eq. (8), vacuum w_x=-1",
+    "page_2_3_neutrino_note": "paper footnote fixes sum m_nu=0.06 eV; current benchmark uses massless neutrinos, so this is not the exact paper neutrino background",
+    "paper": "context/papers/interacting_de_desi_dr2_2026.pdf",
+    "pdf_sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c"
+  }
+}

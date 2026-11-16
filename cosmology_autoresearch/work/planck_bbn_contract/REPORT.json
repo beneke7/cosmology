@@ -1,0 +1,194 @@
+{
+  "audit_date": "2026-09-25",
+  "status": [
+    "reproduced_local_interpolation",
+    "independently_checked_interpolation",
+    "literature_and_code_audited"
+  ],
+  "conclusion": {
+    "summary": "CAMB 1.6.6 contains a PArthENoPE Marcucci-rate interpolation table that reproduces Planck VI's published helium benchmark at the quoted precision. The installed CAMB default is PRIMAT_Yp_DH_ErrorMC_2021.dat, not PArthENoPE.",
+    "recommended_planck_bbn_table": "PArthENoPE_880.2_marcucci.dat",
+    "required_camb_extra_args": {
+      "bbn_predictor": "PArthENoPE_880.2_marcucci.dat",
+      "nnu": 3.046,
+      "standard_neutrino_neff": 3.046
+    },
+    "historical_executable_equivalence": "not established: CAMB's table says PArthENoPE May 2017, but does not explicitly identify executable version 1.1; Planck's original grid hash is not published in the sources inspected",
+    "likelihood_status": "not evaluated"
+  },
+  "planck_contract": {
+    "paper": "Planck Collaboration 2018 results VI, arXiv:1807.06209v4",
+    "primary_source_url": "https://arxiv.org/html/1807.06209v4",
+    "sections": ["2.1", "7.6.1"],
+    "other_locators": ["Fig. 38", "Eqs. (70a), (72)"],
+    "helium_recipe": "PArthENoPE 1.1 grid interpolation when Y_P is not independently sampled",
+    "neutron_lifetime_s": 880.2,
+    "neutron_lifetime_uncertainty_in_baseline": "neglected / fixed",
+    "standard_N_eff": 3.046,
+    "reference_omega_b_h2": 0.02236,
+    "cmb_temperature_K": 2.7255,
+    "standard_pArthENoPE_rate_branch": "case (b), theoretical d(p,gamma)3He rate of Marcucci et al. 2016",
+    "mass_fraction_Y_P_approx": 0.2454,
+    "nucleon_number_fraction_Y_P_BBN_approx": 0.2467,
+    "published_Y_P_BBN_eq_70a": 0.24672,
+    "published_10pow5_D_over_H_case_a": 2.587,
+    "published_10pow5_D_over_H_case_b": 2.455,
+    "published_sigma_Y_P_BBN_from_sigma_tau_n_1s": 0.0003,
+    "definition_warning": "Y_P is helium mass fraction; Y_P_BBN = 4*n_He/n_b is nucleon-number fraction. They are not interchangeable."
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "camb": "1.6.6",
+    "cobaya": "3.6.2"
+  },
+  "reproduction": {
+    "command_from_project_root": "source cosmology_autoresearch/.venv/bin/activate && python cosmology_autoresearch/work/planck_bbn_contract/reproduce_bbn_check.py",
+    "script_path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_bbn_contract/reproduce_bbn_check.py",
+    "script_sha256": "d61d33227f571bb60ba4b01373748755b29dbe4dbe095bb010345306f00ccfeb",
+    "methods": [
+      "CAMB BBN_table_interpolator bicubic spline",
+      "separately coded SciPy RegularGridInterpolator bilinear interpolation over tabulated columns",
+      "direct camb.set_params calls with explicit bbn_predictor and standard_neutrino_neff"
+    ],
+    "inputs": {
+      "omega_b_h2": 0.02236,
+      "nnu": 3.046,
+      "standard_neutrino_neff": 3.046,
+      "delta_N_eff_table_coordinate": 0.0,
+      "TCMB_K": 2.7255,
+      "H0_initialization_km_s_Mpc": 67.27,
+      "omega_c_h2_initialization": 0.1202,
+      "mnu_eV_initialization": 0.06
+    },
+    "checked_table_grid": {
+      "omega_b_h2": [0.00499, 0.03993],
+      "delta_N_eff": [-3.0, 7.0],
+      "omega_b_grid_points": 48,
+      "delta_N_eff_grid_points": 11,
+      "reference_point_is_inside_grid": true
+    },
+    "result_scope": "table interpolation and CAMB parameter mapping only; no BBN network, CMB spectrum, Planck likelihood, or posterior was run"
+  },
+  "results_at_reference_point": {
+    "PArthENoPE_880.2_marcucci.dat": {
+      "Y_P_BBN_spline": 0.24672467799359563,
+      "Y_P_mass_fraction_table": 0.24539469440818099,
+      "Y_He_mass_fraction_from_CAMB_number_to_mass_conversion": 0.24539469752568832,
+      "D_over_H": 0.000024547102209521815,
+      "10pow5_D_over_H": 2.4547102209521815,
+      "independent_bilinear_Y_P_BBN": 0.246722,
+      "bilinear_minus_spline_Y_P_BBN": -0.0000026779935956289247,
+      "difference_from_planck_rounded_Eq70a": 0.000004677993595631306,
+      "agreement": "reproduces Planck Y_P_BBN=0.24672 and mass fraction Y_P approximately 0.2454"
+    },
+    "PArthENoPE_880.2_standard.dat": {
+      "Y_P_BBN_spline": 0.2467214162091703,
+      "Y_P_mass_fraction_table": 0.2453914326237555,
+      "Y_He_mass_fraction_from_CAMB_number_to_mass_conversion": 0.24539144759618253,
+      "D_over_H": 0.000025874535011485028,
+      "10pow5_D_over_H": 2.5874535011485028,
+      "independent_bilinear_Y_P_BBN": 0.24672,
+      "interpretation": "D/H matches Planck case (a) experimental Adelberger branch, not the standard case (b) Marcucci branch"
+    },
+    "PRIMAT_Yp_DH_ErrorMC_2021.dat": {
+      "Y_P_BBN_spline": 0.24718285868828643,
+      "Y_P_mass_fraction_table": 0.2458559045206226,
+      "Y_He_mass_fraction_from_CAMB_number_to_mass_conversion": 0.2458512144751801,
+      "D_over_H": 0.000024500541621005054,
+      "10pow5_D_over_H": 2.4500541621005054,
+      "interpretation": "actual installed CAMB 1.6.6 default; not Planck's PArthENoPE baseline"
+    },
+    "default_standard_neutrino_reference_effect": {
+      "camb_default_standard_neutrino_neff": 3.044,
+      "nnu_if_config_sets_3_046": 3.046,
+      "implicit_delta_N_eff": 0.002,
+      "marcucci_Y_He_if_default_reference_used": 0.24542146900747083,
+      "marcucci_Y_He_if_planck_reference_3_046_used": 0.24539469752568832,
+      "Y_He_shift": 0.000026771481782507395,
+      "omega_nu_h2_default_reference": 0.000644866570625114,
+      "omega_nu_h2_planck_reference": 0.0006451843171541952
+    },
+    "marcucci_vs_installed_primat_Y_He_shift": 0.00045651694949197915
+  },
+  "local_artifacts": [
+    {
+      "role": "exact Planck paper PDF, arXiv v4",
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_bbn_contract/1807.06209v4.pdf",
+      "bytes": 9317371,
+      "sha256": "8e172730faf07c9f4ff3fdcc7043f76ed67df6f76066d47df30d693025b6ce77",
+      "source_url": "https://arxiv.org/pdf/1807.06209v4"
+    },
+    {
+      "role": "CAMB BBN implementation",
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/.venv/lib/python3.12/site-packages/camb/bbn.py",
+      "sha256": "879304e01c5df30eb38707e29ffc7cf7c6595f452a36382abcfbfca5189b78ec",
+      "upstream_url": "https://raw.githubusercontent.com/cmbant/CAMB/1.6.6/camb/bbn.py"
+    },
+    {
+      "role": "CAMB cosmology parameter mapping",
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/.venv/lib/python3.12/site-packages/camb/model.py",
+      "sha256": "5fafd2b1086369960f15ebc6f3dee37bf56ab707979e5de7d8c8e038a1a58fb8",
+      "upstream_url": "https://raw.githubusercontent.com/cmbant/CAMB/1.6.6/camb/model.py"
+    },
+    {
+      "role": "CAMB cosmological constants",
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/.venv/lib/python3.12/site-packages/camb/constants.py",
+      "sha256": "43e40ba181fc88a033e851f0ee86a345777b9bb2437bb09e84261d8acd28090d"
+    },
+    {
+      "role": "Planck-standard Marcucci-rate table",
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/.venv/lib/python3.12/site-packages/camb/PArthENoPE_880.2_marcucci.dat",
+      "bytes": 55506,
+      "sha256": "994c68f11ecbd33ecf6e631a0432ffc4b80068bfe972ab98fd235420aad67d8e",
+      "upstream_url": "https://raw.githubusercontent.com/cmbant/CAMB/1.6.6/camb/PArthENoPE_880.2_marcucci.dat"
+    },
+    {
+      "role": "alternate PArthENoPE table",
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/.venv/lib/python3.12/site-packages/camb/PArthENoPE_880.2_standard.dat",
+      "bytes": 55506,
+      "sha256": "99e82051a70b8a73eed112959a5bf42bc1ea9e0e08860d65ae75fe97ce09b187",
+      "upstream_url": "https://raw.githubusercontent.com/cmbant/CAMB/1.6.6/camb/PArthENoPE_880.2_standard.dat"
+    },
+    {
+      "role": "installed CAMB default PRIMAT table",
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/.venv/lib/python3.12/site-packages/camb/PRIMAT_Yp_DH_ErrorMC_2021.dat",
+      "bytes": 106729,
+      "sha256": "ea5adce061720b937d8abda3a04a384aedaab3168dbf17414ff600cc91a7160c",
+      "upstream_url": "https://raw.githubusercontent.com/cmbant/CAMB/1.6.6/camb/PRIMAT_Yp_DH_ErrorMC_2021.dat"
+    },
+    {
+      "role": "Cobaya CAMB extra_args forwarding code",
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/.venv/lib/python3.12/site-packages/cobaya/theories/camb/camb.py",
+      "sha256": "ed8a9ea708caa437e72732adb1cb32182330f55b4c3c9fb1e18e36e604424214"
+    },
+    {
+      "role": "reproduction script",
+      "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_bbn_contract/reproduce_bbn_check.py",
+      "sha256": "d61d33227f571bb60ba4b01373748755b29dbe4dbe095bb010345306f00ccfeb"
+    }
+  ],
+  "source_urls": [
+    "https://arxiv.org/html/1807.06209v4",
+    "https://arxiv.org/pdf/1807.06209v4",
+    "https://doi.org/10.1051/0004-6361/201833910",
+    "https://doi.org/10.1051/0004-6361/201833910e",
+    "https://raw.githubusercontent.com/cmbant/CAMB/1.6.6/camb/bbn.py",
+    "https://raw.githubusercontent.com/cmbant/CAMB/1.6.6/camb/model.py",
+    "https://raw.githubusercontent.com/cmbant/CAMB/1.6.6/camb/PArthENoPE_880.2_marcucci.dat",
+    "https://raw.githubusercontent.com/cmbant/CAMB/1.6.6/camb/PArthENoPE_880.2_standard.dat",
+    "https://parthenope.na.infn.it/"
+  ],
+  "limitations": [
+    "No PArthENoPE executable or network was run; the audit interpolates bundled table files.",
+    "CAMB's table metadata does not explicitly state executable version 1.1; exact historical-version equivalence is not established.",
+    "The Planck paper does not provide a checksum for the original interpolation grid.",
+    "The independent check is a separately implemented bilinear interpolation of rounded table values, not a second BBN code.",
+    "No CMB spectrum, Planck likelihood, or posterior was run."
+  ],
+  "corrigendum": {
+    "doi": "https://doi.org/10.1051/0004-6361/201833910e",
+    "scope": "corrects 95th-percentile bounds on early-time optical depth in Eqs. 87a and 87b; no BBN baseline correction identified"
+  }
+}

@@ -1,0 +1,1300 @@
+                                                             A data-driven prediction for the primordial deuterium abundance
+
+                                                                         Timothy Launders,1, ∗ Cara Giovanetti,2, 3, † and Hongwan Liu1, ‡
+                                                                           1
+                                                                             Physics Department, Boston University, Boston, MA 02215, USA
+                                                                   2
+                                                                    Theory Group, Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA
+                                                            3
+                                                              Leinweber Institute for Theoretical Physics, University of California, Berkeley, CA 94720, USA
+                                                                                                  (Dated: April 21, 2026)
+                                                               We predict the primordial deuterium abundance using a novel, fully data-driven approach,
+                                                            where we use Gaussian process regression to fit experimental nuclear reaction data for
+                                                            d(d,n)3 He, d(d,p)t, and d(p,γ)3 He, three reactions to which the primordial deuterium abundance
+                                                            is most sensitive. Using the Planck determination of the baryon density, we predict 105 × D/H =
+                                                            2.442±0.040 in standard Big Bang Nucleosynthesis, 1.70σ below the Cooke et al. measurement. Our
+                                                            result is consistent with predictions relying on first principles calculations of the deuterium burning
+arXiv:2604.16600v1 [astro-ph.CO] 17 Apr 2026
+
+
+
+
+                                                            cross sections. With the inferred baryon density from a combined fit to Planck, ACT DR6, and
+                                                            SPT-3G D1, this discrepancy worsens to 1.98σ. We validate our approach and confirm that Gaus-
+                                                            sian processes make unbiased D/H predictions with appropriately-sized uncertainties. We repeat our
+                                                            validation tests for low-degree polynomial fits, a technique used in previous analyses, and find that
+                                                            they systematically over-predict D/H. Our results highlight the need for improved measurements of
+                                                            the d(d,n)3 He and d(d,p)t S-factors at energies between 0.1 and 0.6 MeV.
+
+
+                                                  Following the Big Bang, the universe existed in a hot,         integrating the rate of change of light nuclei abundances
+                                               dense state filled with Standard Model particles in ther-         due to nuclear reactions as a function of time. These
+                                               mal equilibrium. As the universe expanded, the baryons            reactions (e.g. d(d,p)t) are characterized by the S-factor,
+                                               reached a temperature of ∼ 109 K, at which point nu-              which describes how nuclear interactions scale with en-
+                                               clear processes fused protons and neutrons together to            ergy E:
+                                               form heavier nuclei, including deuterium, helium-4, and
+                                               lithium-7. These reactions quickly shut off once the                                   S(E) = σ(E)Ee2πη .                   (2)
+                                               baryon temperatures drops below ∼ 108 K, ending this
+                                               process of Big Bang Nucleosynthesis (BBN). The relative                                                            p
+                                                                                                                 Above, σ(E) is the cross section, η = αZ0 Z1 µ12 c2 /2E
+                                               abundances of nuclei produced are highly sensitive to the
+                                                                                                                 is the Sommerfeld parameter, µ12 is the reduced mass of
+                                               physics of the primordial universe during this period.
+                                                                                                                 the two-body system, and Z0 and Z1 are the charges of
+                                                  When combined with theoretical predictions, mea-
+                                                                                                                 the two nuclei [7]. α is the fine structure constant, and c is
+                                               surements of two abundances—primordial helium-4 and
+                                                                                                                 the speed of light. Thermal averages of S-factors over the
+                                               deuterium—make BBN a powerful test of cosmology.
+                                                                                                                 equilibrium distribution of nuclei give reaction rates. To
+                                               The recent sub-percent-level observational uncertainty of
+                                                                                                                 compute these rates, one must therefore perform a fit to
+                                               the helium-4 abundance [1] cements BBN’s status as a
+                                                                                                                 S-factor data. Uncertainties in S-factor data, propagated
+                                               precision tool in cosmology, enabling leading constraints
+                                                                                                                 to uncertainties in reaction rates, are responsible for the
+                                               on the number of early-universe relativistic species [2]
+                                                                                                                 largest uncertainties in theoretical predictions for D/H.
+                                               and surpassing the precision of similar constraints from
+                                               the Cosmic Microwave Background (CMB) [3–5]. Mea-                    Repeating this procedure for all nuclear reactions ac-
+                                               surements of the primordial deuterium abundance rela-             tive during BBN defines a reaction network. Two
+                                               tive to hydrogen D/H have also reached the percent level          widely-used reaction networks are those found in the
+                                               with the result of Cooke et al. [6]:                              PArthENoPE [8] and PRIMAT [9] BBN codes. The
+                                                                                                                 PArthENoPE network uses low-degree polynomials to fit
+                                                              105 × D/H = 2.527 ± 0.030,                 (1)     S-factor data [10, 11], whereas the PRIMAT network
+                                                                                                                 shifts first-principles S-factor calculations by an over-
+                                               providing competitive constraints on the baryon density,          all scaling to fit experimental data [12, 13]. In both
+                                               ωb .                                                              approaches, uncertainties in D/H are parametrized by
+                                                  Prediction uncertainties for the helium-4 abundance            rescaling each relevant rate by a single parameter. Using
+                                               are currently a factor of 6.5 smaller than measurement            the public BBN code LINX [14] and marginalizing over
+                                               uncertainty [1], and so the main focus of BBN theory              the Planck 2018 TT,TE,EE+lowE+lensing ΛCDM CMB
+                                               should be on D/H, where measurement and theory uncer-             value for the baryon density [3],
+                                               tainties are of the same order. Calculating D/H involves
+                                                                                                                                    ωb = 0.02237 ± 0.00015,                (3)
+
+                                               ∗ tlaunder@bu.edu; ORCID: 0009-0006-7718-4671                     the prediction with the PArthENoPE network is
+                                               † cgiovanetti@lbl.gov; ORCID: 0000-0003-1611-3379
+                                               ‡ hongwan@bu.edu; ORCID: 0000-0003-2486-0681
+                                                                                                                                 105 × D/H = 2.512 ± 0.042,                (4)
+                                                                                                                                   2
+
+in agreement with the Cooke et al. measurement at 0.3σ.1               of n energies E, where there are experimental data, and
+Repeating the same calculation for the PRIMAT network                  m energies E ∗ where we predict the S-factor. The ex-
+predicts                                                               perimentally observed S(E) update this prior, yielding
+                                                                       a posterior that is the conditional distribution of S(E ∗ )
+                 105 × D/H = 2.444 ± 0.037,                     (5)    given S(E). The posterior is another Gaussian that can
+a 1.7σ disagreement with Cooke et al.                                  be derived analytically, yielding a principled and conve-
+  In this paper, we propose and rigorously test a new                  nient way to draw samples consistent with the data.
+method to predict D/H using Gaussian processes (GPs).                     The partitioned prior distribution is
+GPs can be understood as probability distributions of                                                                   
+functions consistent with data [15]. Samples drawn from                    S              µ(E)      k(E, E) + Σ k(E, E ∗ )
+                                                                                ∼N                ,                               .
+GPs are not restricted to a particular functional form,                    S∗            µ(E ∗ )     k(E ∗ , E) k(E ∗ , E ∗ )
+enabling a flexible parametrization of reaction rates that                                                                        (7)
+are consistent with the experimental S-factor data.                    The covariance matrix for experimental data Σ contains
+  We estimate the uncertainty of our D/H prediction by                 total uncertainties on the diagonal and correlated nor-
+sampling from the GPs. Through sampling, we explore                    malization uncertainties within each experiment as off-
+the space of possible reaction rates more fully than the               diagonal elements. We add Σ to the kernel in the top-left
+traditional mean rate rescaling. Additionally, we opti-                block to capture all reported experimental uncertainties
+mize the GPs with a leave-dataset-out procedure that                   within the GP.
+weighs each nuclear reaction dataset equally and miti-                   µ is the prior mean, set to zero for our fiducial analysis.
+gates overfitting to any individual experiment.                        This is a standard choice in the literature, though our
+  To test the robustness of our predictions, we perform a              D/H prediction has little sensitivity to setting the prior
+Monte Carlo (MC) analysis with mock data. We find that                 mean to theoretical calculations (see Methods).
+our GP method make unbiased predictions at current                       The kernel function k(Ei , Ej ) encodes correlations be-
+experimental uncertainties, and contain the true value                 tween S-factor values at different energies. Different ker-
+within 1σ (2σ) for 66%–69% (95%–96%) of realizations,                  nels enforce different assumptions regarding the S-factor;
+demonstrating accurate coverage. Having validated the                  our choice is discussed in detail in Methods, but we ob-
+GP method, we obtain                                                   serve little sensitivity in our result to a variety of ker-
+                                                                       nels. The kernel includes hyperparameters, such as the
+                105 × D/H = 2.442 ± 0.040 ,                     (6)    characteristic length scale of correlations, selected using a
+marginalizing over the Planck posterior for ωb . Finally,              form of cross-validation where each dataset receives equal
+we repeat our MC analysis for the low-degree polynomial                weight during optimization (see Methods).
+method, finding that it generally over-predicts D/H.                     Introducing shorthand K11 for the n × n upper-left
+                                                                       block of the full covariance, K22 for the m×m lower-right
+                                                                       block, and so forth, the posterior distribution of S ∗ con-
+                        I.   RESULTS                                   ditioned on S is given by N (µS ∗ |S , ΣS ∗ |S ), where [15]:
+
+                                                                                                        −1
+              A.    BBN Prediction Pipeline                                     µS ∗ |S = µ(E∗ ) + K21 K11 (S − µ(E)),
+                                                                                                            −1
+                                                                                                                                 (8)
+                                                                                       ΣS ∗ |S = K22 − K21 K11 K12 .
+   We perform GP regression on experimental data for
+the nuclear reactions d(d,n)3 He, d(d,p)t, and d(p,γ)3 He in              The top panel of Figure 1 shows the S-factor poste-
+this work. These reactions have the greatest influence on              rior for d(d,p)t. The posterior is consistent with each ex-
+D/H (see e.g. Refs. [14, 16, 17]).                                     periment despite some scatter between them—our cross-
+   To illustrate our pipeline from experimental data to                validation approach avoids overfitting to data with very
+reaction rate samples, we demonstrate GP regression on                 small uncertainties, which is important when combining
+d(d,p)t S-factor data, which we take from Refs. [18–21].               disparate datasets. Thus, the relatively small uncertain-
+Each data point i in dataset k has statistical noise σik               ties of Refs. [19] (dark blue) and [21] (light blue) do not
+and correlated normalization uncertainty ϵk from system-               dominate the posterior. At high energies, where there are
+atics. Details on the GP fit to the other two rates, choice            only data from Ref. [21], the posterior does not compress
+of datasets and associated uncertainties are discussed in              to match their uncertainties; these data are correlated
+Methods.                                                               and the GP has established a wider posterior where they
+   GP regression starts by assuming a joint multivariate               overlap with others.
+Gaussian prior distribution on the S-factor S at a vector
+                                                                          S-factor samples appear jagged, a consequence of the
+                                                                       particular kernel chosen for this analysis. The kernel
+                                                                       must allow for some small-scale fluctuations samples to
+1 The   uncertainty is Eq. (4) is smaller than that reported in        be consistent with and capture variations in the data.
+  Ref. [11] due to differences in error propagation. In this result,   This does not negatively impact D/H predictions since
+  reaction rate uncertainties are marginalized.                        samples are integrated during thermal averaging to get
+                                                                                                                               3
+
+                                                                rate [11]. We do not agree as closely with the PRIMAT
+                                                                rate for d(d,n)3 He (see Methods).
+                                                                   After performing GP regression on d(d,p)t, d(d,n)3 He,
+                                                                and d(p,γ)3 He data, we are equipped to calculate D/H.
+                                                                We use the the recent measurement of Ref. [22] for
+                                                                p(n,γ)d, and Ref. [23] for the neutron lifetime. We
+                                                                use the rates from PRIMAT for the remaining 9 reac-
+                                                                tions required to predict the primordial deuterium abun-
+                                                                dance; switching to the PArthENoPE network instead
+                                                                for the other reactions reduces the predicted deuterium
+                                                                abundance by ≲ 0.17%, which is negligible compared to
+                                                                the current experimental uncertainties. Rate uncertain-
+                                                                ties are propagated in the same manner as described in
+                                                                Ref. [14].
+
+
+                                                                           B.   Monte Carlo Validation Tests
+
+                                                                   To validate our procedure, we conduct Monte Carlo
+                                                                experiments with mock S-factor data at the same ener-
+                                                                gies as the real data. We select a function Strue (E) to
+                                                                generate mock data and repeat the pipeline described
+                                                                above. An effective procedure should reproduce Strue (E)
+                                                                and make unbiased D/H predictions with robust uncer-
+                                                                tainties after many data realizations.
+                                                                   We draw mock data corresponding to the five datasets
+                                                                of Refs. [18–21]. The k th mock dataset is assigned a per-
+                                                                cent normalization uncertainty ϵk equal to the reported
+                                                                value of the corresponding real experiment. The ith data
+                                                                point of the k th dataset has some percent statistical noise
+                                                                σik also matching the reported value. At each energy E
+                                                                measured by experiment k, data are drawn from
+FIG. 1. Gaussian process regression on d(d,p)t S-factor data.                Sik (E) = αk [Strue (E)(1 + βik )] ,           (10)
+Samples drawn from the GP posterior are shown in grey. Top:
+GP S-factor mean, 1σ, and 2σ envelopes plotted along with       where αk ∼ N (1, ϵk ) and βik ∼ N (0, σik ). Correlated
+data used for regression [18–21] shown in red. Three sample     systematic uncertainty scales the mock data after adding
+draws are overlayed (grey). Bottom: GP 1σ reaction rate
+                                                                statistical noise.
+envelope (red) and five S-factor samples thermally averaged
+with Eq. (9) in the relevant BBN temperature range (grey).
+                                                                  We assume two different generating functions for both
+The 1σ rate envelopes derived from PArthENoPE [8] (blue)        d(d,n)3 He and d(d,p)t:2 1 ) the theory calculations of
+and PRIMAT [9] (green) are shown for comparison. All rates      Ref. [24] and 2 ) the means for GP fits to real data,
+are normalized to the GP mean rate.                             smoothed and offset slightly in energy such that the fea-
+                                                                tures of these functions are independent of mock data
+                                                                energies. While probably an unrealistic model for the
+the reaction rate R(T ):                                        true S-factor, the second choice tests performance for
+                               r                                a more complicated generating function that produces
+                                8     NA                        mock data resembling the scatter of the real data.
+          R(T ) = NA ⟨σv⟩ =
+                              πµ12 (kB T )3/2                     For both generating functions for d(d,n)3 He and
+                  Z ∞                                    (9)
+                                                                d(d,p)t, 1,000 mock realizations of the data are generated
+                ×     dE e−2πη S(E)e−E/kB T ,                   using Eq. (10). For each mock realization, we perform a
+                     0
+                                                                GP regression, after which 1,000 samples are drawn from
+where kB is the Boltzmann constant and NA is Avo-               each GP, thermally-averaged, and passed into LINX. All
+gadro’s number. This is the quantity that enters directly       other inputs are fixed. We obtain the mean D/Hpred and
+into the BBN prediction. Compared with traditional
+mean rate rescaling, our samples—shown normalized to
+the posterior mean in the bottom panel of Figure 1—
+more completely span functional forms that are consis-          2 For the MC test, we do not consider d(p,γ)3 He individually, as
+
+tent with the data. Our rate is comparable to the PRI-            the predicted R(T ) from all reaction networks—including the
+MAT rate [9] but quite different from the PArthENoPE              GP—agree well with one another (see Methods).
+                                                                                                                             4
+
+
+
+
+FIG. 2. Statistics for 1,000 Monte Carlo realizations of mock d(d,p)t and d(d,n)3 He data fit with both Gaussian process
+regression (red) and low-degree polynomials (blue). Polynomial coefficients are optimized with Eq. (13). We use the Arai et al.
+theory calculation [24] and the smoothed GP mean inferred from real data, smoothed and offset in energy, to generate the mock
+data. Top: Reconstruction of the theory (left) and smoothed GP (right) generating functions through many data realizations,
+normalized to the generating functions. The uncertainty envelopes denote the standard deviation of best-fit S-factors. GPs
+recover the generating function well for the simpler theory and well enough for the more complicated smoothed GP case to
+make robust D/H predictions, outperforming polynomials throughout the BBN energy range. Bottom: D/H predictions are
+shown as the difference between the predicted and true values, normalized by the predicted 1σ uncertainty. The bias, defined
+in Eq. (11), and the percentage of realizations yielding a predicted D/H within 1 and 2σ of the true value are displayed for
+each combination of generating function, fit procedure, and reaction. Additionally, we use the empirical results to approximate
+the full D/H distributions and quantify how similar these distributions are to N (0, 1) with two values: the KL divergence [25]
+and the KS statistic [26].
+
+
+standard deviation σpred of the D/H distribution, as well        the predicted and true D/H values, normalized to the
+as D/H from the thermal average of Strue (E), D/Htrue .          predicted uncertainty:
+In this and all subsequent analyses, we check that our
+                                                                                          D/Hpred − D/Htrue
+                                                                                                           
+results are converged for our chosen sample size.
+                                                                          Bias = Emocks                       .  (11)
+                                                                                                σpred
+  To quantify the performance of our method, we define
+the bias as the expectation value of the difference between      We approximate the expectation value with the average
+                                                                                                                               5
+
+
+
+
+                                                                   FIG. 4. Deuterium abundance posteriors for four different
+                                                                   CMB inferences of ωb : Planck 2018 [3], ACT DR6 [28],
+                                                                   SPT-3G [5], and a combined inference from all three (Joint
+                                                                   SPA) [5]. Inferences including large-scale structure data are
+                                                                   not considered. A Gaussian fit is overlayed on each. The mea-
+                                                                   sured D/H from Cooke et al. [6] is shown as shaded bands (1σ
+FIG. 3. D/H predictions for 1,000 Monte Carlo realizations of      and 2σ uncertainties). ACT prefers the highest ωb , giving the
+mock d(d,p)t, d(d,n)3 He, and d(p,γ)3 He data fit with Gaus-       most discrepant D/H prediction.
+sian processes. All three mock reactions are sampled simulta-
+neously. We consider generating functions (top) drawn from
+theory (Refs. [24, 27]) and (bottom) smoothed versions of the
+                                                                   ment with the true value, coming in at ≲ 0.5σ greater
+GP mean for real data. D/H predictions are shown as the dif-
+ference between the predicted and true values, normalized by
+                                                                   than the true value for each scenario. The true D/H is
+the predicted 1σ uncertainty. The bias, defined in Eq. (11),       contained within the 1σ error bar for 66%–69% of real-
+and the percentage of realizations yielding a predicted D/H        izations, and within the 2σ error bar for ∼ 95% of real-
+within 1σ and 2σ of the true value are displayed for both gen-     izations, supporting the robustness of the uncertainties
+erating functions. Additionally, we use the empirical results      reported in this work.
+to approximate the full D/H distributions and quantify how            Matching our analysis with real data more closely, we
+similar these distributions are to N (0, 1) with two values: the   extend the Monte Carlo validation to include realizations
+KL divergence [25] and the KS statistic [26].                      of d(p,γ)3 He and sample all three reactions simultane-
+                                                                   ously. Statistics of the D/H posteriors are shown in Fig-
+                                                                   ure 3. D/H posteriors show similar bias and coverage
+for 1,000 data realizations.                                       as in Figure 2, demonstrating that the robustness of the
+   The top panels of Figure 2 show the statistics of the GP        GPs extends to all three important reactions.
+posterior means for both d(d,p)t generating functions.
+The performance of GPs is shown in red; blue results are
+discussed below. GPs are able to learn the smooth theory                             C.   Analysis Results
+curve well at all energies up to ∼ 0.3 MeV. GPs exhibit
+less success for the smoothed GP curve, but perform well             Having validated the GP method, we compute D/H
+enough to make robust D/H predictions. We do not use               with the real data. To provide a point of comparison with
+any data beyond this energy in our analyses of real data           other reaction networks, we first fix ωb to the Planck cen-
+or in mock tests, so the GP must extrapolate. This is at           tral value. Then, we sample from each of the three GPs
+the tail end of the relevant energy range for these reac-          (and overall scalings for the other rates) 60,000 times.
+tions (determined in this work to be 0.014-0.6 MeV, see            The mean and standard deviation of the subsequent D/H
+Methods for details), so GPs still make robust D/H pre-            distribution give our D/H prediction. We obtain
+dictions; we confirm the reliability of this extrapolation
+in Methods. However, a new experiment measuring the                               105 × D/H = 2.442 ± 0.029,                (12)
+d(d,n)3 He and d(d,p)t S-factors up to 0.6 MeV, with sim-
+ilar uncertainties to Ref. [21], would no longer require the       2.04σ below the Cooke et al. measurement. In full cosmo-
+GP to extrapolate and reduce our prediction uncertain-             logical parameter estimation, our results and the Cooke
+ties.                                                              et al. measurement would prefer a lower value of ωb than
+   Statistics of the D/H posteriors are shown in the bot-          the Planck central value. However, we leave detailed cos-
+tom panels of Figure 2. On average, the mean is in agree-          mological parameter estimation to future work, as care
+                                                                                                                                 6
+
+  CMB
+                   100ωb         105 ×D/H
+                                              Agreement with     methodologies distinct from those introduced in this
+Experiment                                     Cooke et al.      work, and can also be used to predict D/H. Additional
+ Planck [3]    2.337 ± 0.015 2.442 ± 0.040          1.70σ        choices of reaction network that sometimes appear in
+  ACT [4]      2.259 ± 0.017 2.403 ± 0.042          2.40σ        the literature include the PRyMordial/YOF reaction net-
+   SPT [5]     2.221 ± 0.020 2.471 ± 0.047          1.00σ        work of Ref. [29]; this network is similar to that of
+Joint SPA [5] 2.2398 ± 0.0095 2.437 ± 0.034         1.98σ        Ref. [30] and uses S-factors taken from the NACREII
+                                                                 database [32].
+TABLE I. Different CMB inferences of ωb —Planck 2018                However, we emphasize that ours is the only network
+TT,TE,EE+lowE+lensing [3], ACT DR6 [28], SPT-3G D1 [5],          that has been explicitly validated to produce robust D/H
+and the combination of Planck, ACT, and SPT (SPA) in             predictions and uncertainties. Table II shows the D/H
+Ref. [5]—with corresponding D/H predictions using the GP         predictions from these networks. We find agreement with
+pipeline. Uncertainties include those from nuclear reaction
+                                                                 the PRIMAT prediction, and mild disagreement with the
+rates, neutron lifetime, and ωb .
+                                                                 PArthENoPE prediction. We agree with the PRyMor-
+                                                                 dial/YOF network, though this is largely a byproduct
+                                              Agreement with     of the large uncertainty associated with this network;
+   Reaction Network            105 ×D/H
+                                               Cooke et al.
+                                                                 our determination achieves higher precision and has been
+       This work           2.442 ± 0.040           1.70σ         demonstrated to provide the correct coverage.
+         PRIMAT             2.444 ± 0.037          1.74σ            As our prediction and the PArthENoPE prediction
+      PArthENoPE            2.512 ± 0.042          0.29σ         have similar error bars, we aim to understand the cause
+    PRyMordial/YOF          2.520 ± 0.104          0.06σ         of the disagreement in these two networks. We re-
+Cooke et al. (measurement) 2.527 ± 0.030             —           peat our Monte Carlo validation procedure for S-factor
+                                                                 fits with low-degree polynomials to mimic the proce-
+TABLE II. Comparison of D/H predictions for this work            dure used to obtain the PArthENoPE network. We as-
+and for the base nuclear reaction networks of PRIMAT,
+                                                                 sume the same generating functions as above and perform
+PArthENoPE, and PRyMordial/YOF [29, 30] for Planck
+ωb . The PRyMordial/YOF network uses Ref. [31] for               degree-2 (4) polynomial fits to mock d(d,p)t (d(d,n)3 He)
+d(p,γ)3 He and Ref. [32] for d(d,n)3 He and d(d,p)t. The Cooke   data, matching polynomial degree to those used in the
+et al. [6] measurement is also shown. LINX is used for all       PArthENoPE network. We also include mock data rep-
+predictions, and uncertainties include those from nuclear re-    resenting Refs. [33–36], as these datasets are used to con-
+action rates, neutron lifetime, and ωb .                         struct the PArthENoPE network.
+                                                                    We consider fits minimizing a χ2 expression adapted
+                                                                 from Ref. [37]:
+is required to include the non-parametric functions ob-
+tained from the GP in a Bayesian inference framework                          Nk
+                                                                           X X  (Sth (Eik , al ) − ωk Sik )2       (ωk − 1)2
+                                                                                                                              
+involving all cosmological parameters.                               2
+                                                                   χ =                                            +            ,
+   We examine the consistency of the Cooke et al. re-                              i=1
+                                                                                                 ωk2 σik
+                                                                                                      2                 ϵ2k
+                                                                          k∈sets
+sult with CMB data with our new method for predicting                                                                          (13)
+D/H. For Planck [3], ACT DR6 [28], SPT-3G D1 [5], and
+a combination of all three (Joint SPA) [5], we assume            where Nk is the number of data points in dataset k, Sth is
+Gaussian distributions for the ωb posteriors, displayed in       the S-factor
+                                                                         P fit at Eik with polynomial coefficients al (i.e.
+Table I, and sample to marginalize over ωb . We increase         Sth = l al E l ), and Sik is the measured value at Eik .
+to 100,000 samples and obtain D/H predictions 1.70σ,             {ωk } are fit parameters modeling systematic errors. The
+2.40σ, 1.00σ, and 1.98σ below the Cooke et al. measure-          final term in Eq. (13) is a penalty term that effectively
+ment respectively. D/H posteriors are shown in Table I           serves as a Gaussian prior on {ωk } centered at 1 with
+and Figure 4. Since ACT prefers the highest value for            width of the reported systematic uncertainty:
+ωb , it predicts the greatest discrepancy. SPT predicts
+the closest agreement with the lowest ωb and largest un-                   χ2 = ln p(Sik |al , ωk ) + ln p(ωk ) + const.      (14)
+certainty.
+                                                                 Minimization gives the maximum a posteriori (MAP)
+                                                                 estimate for the fit parameters, assuming uniform pri-
+                   II.   DISCUSSION                              ors on {al }. Eq. (13) differs from the form used in
+                                                                 the PArthENoPE network [10, 38], which includes Nk
+  We have demonstrated that our method to predict                penalty terms per 3 . Then, minimization no longer gives
+D/H can reproduce the appropriate D/H distribution               the MAP estimate and may bias toward smaller values of
+in mock tests and obtained fiducial results including
+marginalization over CMB determinations of ωb .
+  Ours is not the only literature prediction for the
+                                                                 3 We thank Ofelia Pisanti for informing us of a typo in Eq. (8) in
+primordial deuterium abundance. As discussed above,
+the PRIMAT and PArthENoPE reaction networks use                    Ref. [11].
+                                                                                                                            7
+
+|1−ωk |, leading to poorer performance than the MAP es-         ology that we present here provides a robust prediction
+timate in Eq. (13) (see Supplementary Information). Un-         for the primordial deuterium abundance, which is criti-
+certainties in polynomial fits are propagated to reaction       cal for BBN analyses or BBN combinations with baryon
+rate uncertainties in the same manner as Refs. [10, 11]         acoustic oscillation (BAO) data, galaxy full shape anal-
+(see Supplementary Information).                                yses, and the CMB. When combined with measurements
+   Figure 2 also displays the Monte Carlo results for the       of primordial deuterium, our procedure can be used to
+polynomial fits (blue). Polynomials do not match the            infer the baryon density of the universe at percent-level
+success of GPs for generating function recovery and D/H         precision; this analysis will be performed in future work.
+predictions; D/H prediction bias increases from 0.32 −          These efforts are complementary to the CMB inference
+0.50 with GPs to 0.71 − 1.33 for polynomials. In the top-       of the baryon density, and consistency between these two
+left panel of Figure 2, d(d,p)t S-factor predictions from       epochs is a critical pillar of the ΛCDM paradigm. This
+degree-2 polynomials consistently predict high values for       work enables such consistency checks—and probes of ex-
+E < 0.1 MeV and low values for E > 0.1 MeV, even for            tensions to ΛCDM—by providing a reliable means to pre-
+the relatively simple Strue based on the theory calculation     dict the primordial deuterium abundance.
+of Ref. [24].
+   A fully unbiased fitting procedure with robust uncer-
+tainties would give a set of (D/Hpred − D/Htrue )/σpred                        ACKNOWLEDGMENTS
+converging to N (0, 1) for infinite samples. Approximat-
+ing the full distributions with empirical results, we quan-        We thank Frank Golf, David W. Hogg, Mariangela
+tify how similar these distributions are to N (0, 1) with       Lisanti, Pankaj Mehta, Siddharth Mishra-Sharma, Jo
+the KL divergence [25] and the KS statistic [26] (see Sup-      Moscoso, Ofelia Pisanti, Joshua Ruderman, and Ben
+plementary Information). Both show that the GP pre-             Safdi for helpful discussions. We thank Ofelia Pisanti
+dictions are more similar to the expected distribution,         for her kind assistance in helping us understand the
+with KL divergences a factor of ∼ 5 (10) and KS statis-         PArthENoPE fitting procedure. We thank attendees of
+tics a factor of ∼ 2 (3) smaller with GPs for the theory        the CERN theory group cosmology seminar for provoca-
+(smoothed GP) generating function. These tests favor            tive questions about this work. We thank David W.
+GPs, suggesting that increased model complexity rela-           Hogg for comments on a draft version of this manuscript.
+tive to low-degree polynomials is necessary to conduct          T.L. and H.L. are supported by the U.S. Department of
+these fits.                                                     Energy under grant DE-SC0026297. In addition, T.L.
+   In the era of precision cosmology, models are increas-       and H.L. are supported by the Cecile K. Dalton Career
+ingly confronted by experimental data with uncertainties        Development Professorship, endowed by Boston Univer-
+at the percent-level, and errors of just a few percent can      sity trustee Nathaniel Dalton and Amy Gottleib Dalton.
+be the difference between a successful model and a re-          C.G. is supported by the Office of High Energy Physics of
+jected hypothesis. A trustworthy determination of all           the U.S. Department of Energy under contract DE-AC02-
+cosmological parameters and measured quantities is crit-        05CH11231. This work makes use of matplotlib [39],
+ical for the success of the field. The validated method-        JAX [40], NumPy [41], SciPy [42], and MINUIT [43].
+
+
+
+
+ [1] E. Aver et al., “The LBT YP Project IV: A New                   Astrophys. J. 855, 102 (2018), arXiv:1710.11129 [astro-
+     Value of the Primordial Helium Abundance”, (2026),              ph.CO].
+     arXiv:2601.22238 [astro-ph.CO].                             [7] C. Iliadis, Nuclear Physics of Stars, 2nd ed. (Wiley-VCH,
+ [2] T.-H. Yeh et al., “The LBT YP Project V: Cosmological           Weinheim, 2015).
+     Implications of a New Determination of Primordial 4 He”,    [8] S. Gariazzo, P. de Salas, O. Pisanti, and R. Consiglio,
+     (2026), arXiv:2601.22239 [astro-ph.CO].                         “PArthENoPE revolutions”, Computer Physics Commu-
+ [3] N. Aghanim et al. (Planck Collaboration), “Planck 2018          nications 271, 108205 (2022), arXiv:2103.05027 [astro-
+     results. VI. Cosmological parameters”, A&A 641, A6              ph.IM].
+     (2020), arXiv:1807.06209 [astro-ph.CO].                     [9] C. Pitrou, A. Coc, J. Uzan, and E. Vangioni, “Preci-
+ [4] E. Calabrese et al., “The Atacama Cosmology Tele-               sion big bang nucleosynthesis with improved helium-4
+     scope: DR6 constraints on extended cosmological mod-            predictions”, Phys. Rep. 754, 1 (2018), arXiv:1801.08023
+     els”, JCAP 2025 (11), 063, arXiv:2503.14454 [astro-             [astro-ph.CO].
+     ph.CO].                                                    [10] P. D. Serpico, S. Esposito, F. Iocco, G. Mangano,
+ [5] E. Camphuis et al. (SPT-3G), “SPT-3G D1: CMB                    G. Miele, and O. Pisanti, “Nuclear reaction network for
+     temperature and polarization power spectra and cos-             primordial nucleosynthesis: a detailed analysis of rates,
+     mology from 2019 and 2020 observations of the SPT-              uncertainties and light nuclei yields”, JCAP 2004 (12),
+     3G main field”, Phys. Rev. D 113, 083504 (2026),                010, arXiv:0408076 [astro-ph].
+     arXiv:2506.20707 [astro-ph.CO].                            [11] O. Pisanti, G. Mangano, G. Miele, and P. Mazzela, “Pri-
+ [6] R. J. Cooke, M. Pettini, and C. C. Steidel, “One percent        mordial deuterium after LUNA: concordances and error
+     determination of the primordial deuterium abundance”,           budget”, JCAP 2021 (04), 020, arXiv:2011.11537 [astro-
+                                                                                                                               8
+
+     ph.CO].                                                          arXiv:2307.07061 [hep-ph].
+[12] Á. Iñesta Gómez, C. Iliadis, and A. Coc, “Bayesian       [30] T.-H. Yeh, K. A. Olive, and B. D. Fields, “The impact
+     Estimation of Thermonuclear Reaction Rates for Deu-              of new d(p,γ)3 He rates on Big Bang Nucleosynthesis”,
+     terium+Deuterium Reactions”, Astrophys. J. 849, 134              JCAP 03, 046, arXiv:2011.13874 [astro-ph.CO].
+     (2017), arXiv:1710.01647 [astro-ph.IM].                     [31] V. Mossa et al., “The baryon density of the Universe from
+[13] J. Moscoso, R. S. de Souza, A. Coc, and C. Il-                   an improved rate of deuterium burning”, Nature 587, 210
+     iadis, “Bayesian Estimation of the D(p,γ)3 He Thermonu-          (2020).
+     clear Reaction Rate”, Astrophys. J. 923, 49 (2021),         [32] Y. Xu, K. Takahashi, S. Goriely, M. Arnould, M. Ohta,
+     arXiv:2109.00049 [astro-ph.CO].                                  and H. Utsunomiya, “NACRE II: an update of the
+[14] C. Giovanetti, M. Lisanti, H. Liu, S. Mishra-Sharma,             NACRE compilation of charged-particle-induced ther-
+     and J. T. Ruderman, “Fast, differentiable, and exten-            monuclear reaction rates for nuclei with mass number
+     sible big bang nucleosynthesis package”, Phys. Rev. D            A < 16”, Nucl. Phys. A 918, 61 (2013), arXiv:1310.7099
+     112, 063531 (2025), arXiv:2408.14538 [astro-ph.CO].              [nucl-th].
+[15] C. E. Rasmussen and C. K. I. Williams, Gaussian Pro-        [33] K. G. McNeill and G. M. Keyser, “The Relative Proba-
+     cesses for Machine Learning (MIT Press, Cambridge,               bilities and Absolute Cross Sections of the D — D Reac-
+     MA, 2006).                                                       tions”, Phys. Rev. 81, 602 (1951).
+[16] R. H. Cyburt, “Primordial nucleosynthesis for the new       [34] R. L. Schulte, M. Cosack, A. W. Obst, and J. L. Weil,
+     cosmology: Determining uncertainties and examining               “2 H+ reactions from 1.96 to 6.20 MeV”, Nucl. Phys. A
+     concordance”, Phys. Rev. D 70, 023505 (2004).                    192, 609 (1972).
+[17] A. Coc and E. Vangioni, “Big-Bang nucleosynthesis with      [35] First Research Group, Chin. J. Nucl. High Energy Phys.
+     updated nuclear data”, J. Phys.: Conf. Ser. 202, 012001          9, 723 (1985).
+     (2010).                                                     [36] A. Tumino et al., “New determination of the 2 H(d,p)3 H
+[18] A. Krauss, H. W. Becker, H. P. Trautvetter, and C. Rolfs,        and 2 H(d,n)3 He reaction rates at astrophysical energies”,
+     “Low-energy fusion cross sections of D+D and D+3 He              Astrophys. J. 785, 96 (2014).
+     reactions”, Nucl. Phys. A 465, 150 (1987).                  [37] G. D’Agostini, “On the use of the covariance matrix to
+[19] R. E. Brown and N. Jarmie, “Differential cross sections          fit correlated data”, NIM-A 346, 306 (1994).
+     at low energies for 2 H(d,p)3 H and 2 H(d,n)3 He”, Phys.    [38] O. Pisanti, private communication.
+     Rev. C 41, 1391 (1990).                                     [39] J. D. Hunter, “Matplotlib: A 2D graphics environment”,
+[20] U. Greife, F. Gorris, M. Junker, C. Rolfs, and D. Zahnow,        Computing in Science & Engineering 9, 90 (2007).
+     “Oppenheimer-Phillips effect and electron screening in      [40] J. Bradbury, R. Frostig, P. Hawkins, M. J. Johnson,
+     d+d fusion reactions”, Z. Phys. A 351, 107 (1995).               C. Leary, D. Maclaurina, G. Necula, A. Paszke, J. Van-
+[21] D. S. Leonard, H. J. Karwowski, C. R. Brune, B. M.               derPlas, S. Wanderman-Milne, and Q. Zhang, “JAX:
+     Fisher, and E. J. Ludwig, “Precision measurements of             composable transformations of Python+NumPY pro-
+     2
+       H(d,p)3 He and 2 H(d,n)3 He total cross sections at Big        grams”, (2018).
+     Bang nucleosynthesis energies”, Phys. Rev. C 73, 045801     [41] C. R. Harris et al., “Array programming with NumPy”,
+     (2006).                                                          Nature 585, 357 (2020), arXiv:2006.10256 [cs.MS].
+[22] Y. Chen et al., “High-Precision Measurement of D(γ,n)p      [42] P. Virtanen et al., “SciPy 1.0: Fundamental Algorithms
+     Photodisintegration Reaction and Implications for Big-           for Scientific Computing in Python”, Nature Methods
+     Bang Nucleosynthesis”, Phys. Rev. Lett. 136, 052701              17, 261 (2020), arXiv:1907.10121 [cs.MS].
+     (2026), arXiv:2509.11743 [nucl-ex].                         [43] F. James, “MINUIT Function Minimization and Error
+[23] A. Czarnecki, W. J. Marciano, and A. Sirlin, “Neutron            Analysis: Reference Manual Version 94.1”, Tech. Rep.
+     Lifetime and Axial Coupling Connection”, Phys. Rev.              CERN Program Library D506 (CERN, Geneva, 1994).
+     Lett. 120, 202002 (2018), arXiv:1802.01804 [hep-ph].        [44] L. Ma, H. J. Karwowski, C. R. Brune, Z. Ayer, T. C.
+[24] K. Arai, S. Aoyama, Y. Suzuki, P. Descouvemont, and              Black, J. C. Blackmon, and E. J. Ludwig, “Measure-
+     D. Baye, “Tensor Force Manifestations in Ab Initio Study         ments of 1 H(d,γ)3 He and 2 H(p,γ)3 He at very low ener-
+     of the 2 H(d,γ)4 He, 2 H(d,p)3 H, and 2 H(d,n)3 He Reac-         gies”, Phys. Rev. C 55, 588 (1997).
+     tions”, Phys. Rev. Lett 107, 132502 (2011).                 [45] G. J. Schmid et al., “The 2 H(⃗                    ⃗ 3 He
+                                                                                                       p,γ)3 He and 1 H(d,γ)
+[25] S. Kullback and R. A. Leibler, “On Information and Suf-          reactions below 80 keV”, Phys. Rev. C 56, 2565 (1997).
+     ficiency”, Ann. Math. Stat. 22, 79 (1951).                  [46] C. Casella et al., “First measurement of the d(p,γ)3 He
+[26] A. N. Kolmogorov, “Sulla determinazione empirica di              cross section down to the solar Gamow peak”, Nucl.
+     una legge di distribuzione”, Giornale dell’Istituto Ital-        Phys. A 706, 203 (2002).
+     iano degli Attuari 4, 83 (1933).                            [47] I. Tišma, M. Lipoglavšek, M. Mihovilovič, S. Markelj,
+[27] L. E. Marcucci, G. Mangano, A. Kievsky, and M. Viviani,          M. Vencelj, and J. Vesić, “Experimental cross section and
+     “Implication of the Proton-Deuteron Radiative Capture            angular distribution of the 2 H(p,γ)3 He reaction at Big-
+     for Big Bang Nucleosynthesis”, Phys. Rev. Lett 116,              Bang nucleosynthesis energies”, Eur. Phys. J. A 55, 137.
+     102501 (2016), arXiv:1510.07877 [nucl-th].                  [48] S. Turkat et al., “Measurement of the 2 H(p,γ)3 He S fac-
+[28] T. Louis et al., “The Atacama Cosmology Telescope:               tor at 265-1094 keV”, Phys. Rev. C 103, 045805 (2021),
+     DR6 power spectra, likelihoods, and ΛCDM parame-                 arXiv:2104.06914 [nucl-ex].
+     ters”, JCAP 2025 (11), 062, arXiv:2503.14452 [astro-        [49] C. Dessert, J. W. Foster, Y. Park, and B. R. Safdi, “Was
+     ph.CO].                                                          There a 3.5 keV Line?”, Astrophys. J. 964, 185 (2024),
+[29] A.-K. Burns, T. M. Tait, and M. Valli, “PRyMor-                  arXiv:2309.03254 [astro-ph.CO].
+     dial: The First Three Minutes, Within and Beyond            [50] E. Bulbul, M. Markevitch, A. Foster, R. K. Smith,
+     the Standard Model”, Eur. Phys. J. C 84, 86 (2024),              M. Loewenstein, and S. W. Randal, “Detection of An
+                                                                                                                              9
+
+     Unidentified Emission Line in the Stacked X-ray spec-            Stat. 39, 2626 (2011), arXiv:1103.2692 [math.ST].
+     trum of Galaxy Clusters”, Astrophys. J. 789, 13 (2014),     [70] Y. Yang, A. Bhattacharya, and D. Pati, “Frequentist cov-
+     arXiv:1402.2301 [astro-ph.CO].                                   erage and sup-norm convergence rate in Gaussian process
+[51] A. Boyarsky, O. Ruchayskiy, D. Iakubovskyi, and                  regression”, (2017), arXiv:1708.04753 [math.ST].
+     J. Franse, “Unidentified Line in X-Ray Spectra of the       [71] M. Stone, “Cross-validatory Choice and Assessment of
+     Andromeda Galaxy and Perseus Galaxy Cluster”, Phys.              Statistical Predictions”, Journal of the Royal Statistical
+     Rev. Lett. 113, 251301 (2014), arXiv:1402.4119 [astro-           Society: Series B (Methodological) 36, 111 (1974).
+     ph.CO].                                                     [72] D. P. Kingma and J. Ba, “Adam: A Method for Stochas-
+[52] N. Cappelluti, E. Bulbul, A. Foster, P. Natarajan, M. C.         tic Optimization”, (2014), arXiv:1412.6980 [cs.LG].
+     Urry, M. W. Bautz, F. Civano, E. Miller, and R. K.
+     Smith, “Searching for the 3.5 keV Line in the Deep Fields
+     with Chandra: the 10 Ms observations”, Astrophys. J.                             III.   METHODS
+     854, 179 (2018), arXiv:1701.07932 [astro-ph.CO].
+[53] G. Gamow, “Zur Quantentheorie des Atomkernes”, Z.
+     Physik 51, 204 (1928).                                         Theoretical predictions for the primordial deuterium
+[54] First Research Group, Data file EXFOR S0025.001,            abundance relative to hydrogen D/H require fits to nu-
+     IAEA Nuclear Data Section (1985).                           clear reaction S-factor data, the most important reactions
+[55] L. Ma, H. J. Karwowski, C. R. Brune, Z. Ayer, T. C.         being d(d,p)t, d(d,n)3 He, and d(p,γ)3 He. We use Gaus-
+     Black, J. C. Blackmon, and E. J. Ludwig, Data file EX-      sian processes to construct probability distributions for
+     FOR C0539.001, IAEA Nuclear Data Section (1999).            these three S-factors consistent with experimental data.
+[56] J. B. Warren, K. L. Erdman, L. P. Robertson, D. A.          To do this, we model the S-factors for a vector of energies
+     Axen, and J. R. Macdonald, “Photodisintegration of He3      where we want to predict at as a multivariate Gaussian,
+     near the Threshold”, Phys. Rev. 132, 1691 (1963).
+                                                                 then update this prior (Eq. (7)) with the experimentally
+[57] G. M. Griffiths, E. A. Larson, and L. P. Robertson, “The
+     capture of protons by deuterons”, Can. J. Phys. 40, 402
+                                                                 observed S-factor values. The posterior is also a multi-
+     (1962).                                                     variate Gaussian (Eq. (8)), from which we draw S-factor
+[58] G. M. Griffiths, M. Lal, and C. D. Scarfe, “The Reaction    samples.
+     D(p,γ)He3 Below 50 keV”, Can. J. Phys. 41, 724 (1963).         As with any fitting procedure, there are choices we
+[59] K. N. Geller and E. G. Muirhead, “The 2 H(p,γ)3 He re-      must make when constructing these posteriors, such as
+     action at the breakup threshold”, Nucl. Phys. A , 397       which experimental data to include and how to incor-
+     (1967).                                                     porate both statistical noise and systematic normaliza-
+[60] G. M. Bailey, G. M. Griffiths, M. A. Olivo, and R. L.       tion uncertainties reported by these experiments. Addi-
+     Helmer, “Gamma-ray yields from the reaction D(p,γ)3 He      tionally, we must make principled decisions regarding the
+     at low energies”, Can. J. Phys. 48, 3059 (1970).            kernel, the function that defines correlation between the
+[61] G. J. Schmid et al., Data file EXFOR C0405.001, IAEA
+                                                                 S-factor at different energies.
+     Nuclear Data Section (1999).
+[62] B. Acharya et al., “Solar fusion III: New data and theory      In this Section, we discuss these details. We begin with
+     for hydrogen-burning stars”, Rev. Mod. Phys. 97, 035002     the fits to d(d,n)3 He and d(p,γ)3 He data used in our
+     (2025), arXiv:2405.06470 [astro-ph.SR].                     fiducial analysis (d(d,p)t is discussed in the main text)
+[63] A. Coc, P. Petitjean, J. Uzan, E. Vangioni, P. Descouve-    in Section III A. We then discuss 1) the relevant energy
+     mont, C. Iliadis, and R. Longland, “New reaction rates      range for these reactions (Section III B); 2) how it in-
+     for improved primordial D/H calculation and the cosmic      forms the datasets we choose to include (and exclude)
+     evolution of deuterium”, Phys. Rev. D 92, 123526 (2015),    in our analysis (Section III C), and 3) how correlated
+     arXiv:1511.03843 [astro-ph.CO].                             data are included in the GPs (Section III D). We then
+[64] A. Shafieloo, A. Kim, and E. V. Linder, “Gaussian           motivate our kernel choice, highlighting the properties
+     process cosmography”, Phys. Rev. D , 123530 (2012),
+                                                                 we require from the kernel (Section III E). We conclude
+     arXiv:1204.2272 [astro-ph.CO].
+[65] B. S. Haridasu, V. V. Luković, M. Moresco, and N. Vit-
+                                                                 by considering alternative choices to those made in the
+     torio, “An improved model-independent assessment of         fiducial analysis and calculate their impact on D/H pre-
+     the late-time cosmic expansion”, JCAP 2018 (10), 015,       dictions(Section III G). The following discussion draws
+     arXiv:1805.03595 [astro-ph.CO].                             from Ref. [15], and we refer the reader to this text for a
+[66] Ruchika, P. Mukherjee, and A. Favale, “Revisiting Gaus-     comprehensive overview of GPs.
+     sian process reconstruction for cosmological inference:
+     the generalised GP (Gen GP) framework”, (2025),
+     arXiv:2510.03742 [astro-ph.CO].                                            A.    Fits to S-Factor Data
+[67] R. de Souza, A. Sousa-Neto, J. E. González, and
+     J. Alcaniz, “A model-independent assessment of the
+                                                                    For d(d,n)3 He and d(d,p)t, we assume the S-factor data
+     late-time dark energy density evolution”,         (2025),
+     arXiv:2511.13666 [astro-ph.CO].                             follow Gaussian distributions defined by the reported
+[68] R. B. Gramacy and H. K. H. Lee, “Cases for the nugget       central values and uncertainties. We perform GP regres-
+     in modeling computer experiments”, Stat. Comput. 22,        sion on data from Refs. [18–21] using a zero prior mean
+     713 (2012), arXiv:1007.4580 [stat.CO].                      for our fiducial result.
+[69] B. T. Knapik, A. van der Vaart, and J. H. van Zanten,          The top panel of Figure 5 shows the GP fit to
+     “Bayesian inverse problems with Gaussian priors”, Ann.      d(d,n)3 He S-factor data. Many features of the GP pos-
+                                                                                                                           10
+
+
+
+
+                                                                FIG. 6. Gaussian process regression on d(p,γ)3 He S-factor
+                                                                data. Top: GP S-factor mean, 1σ, and 2σ envelopes (red)
+                                                                plotted along with data used for regression [31, 44–48]. Three
+                                                                sample draws are overlayed (grey). Bottom: The GP 1σ re-
+                                                                action rate envelope (red) and five samples thermally aver-
+                                                                aged with Eq. (9) in the relevant BBN temperature range
+                                                                (grey). The 1σ rate envelopes used in PRIMAT [9] (green)
+                                                                and PArthENoPE [8] (blue) are shown for comparison. All
+                                                                curves are normalized to the GP mean rate.
+
+
+
+                                                                terior for d(d,n)3 He are qualitatively similar to the GP
+                                                                posterior for d(d,p)t (Figure 1). As for d(d,p)t, the poste-
+                                                                rior is consistent with scatter between experiments and
+                                                                not dominated by the small uncertainties of Refs. [19]
+                                                                (dark blue) and [21] (light blue).
+FIG. 5. Gaussian process regression on d(d,n)3 He S-factor         Both the mean and function samples appear jagged
+data. Top: GP S-factor mean, 1σ, and 2σ envelopes plot-         from the small-ν Matérn kernel component we add to the
+ted along with data used for regression [18–21] (red). Three    kernel (see Section III E below). These small-scale fluctu-
+sample draws are overlayed (grey). Middle: The GP 1σ            ations are smoothed from the thermal average, giving the
+reaction rate envelope and five samples thermally averaged      smooth rate samples shown in the middle panel of Fig-
+with Eq. (9) in the relevant BBN temperature range (red).       ure 5. While the agreement with the PRIMAT network
+The 1σ rate envelopes used in PRIMAT [9] (green) and            is not as good as for the d(d,p)t rates, our d(d,n)3 He rate
+PArthENoPE [8] (blue) are shown for comparison. All curves      is nevertheless more similar to the rate in the PRIMAT
+are normalized to the GP mean rate. Bottom: The GP mean
+                                                                network than the PArthENoPE network. Our rate un-
+S-factor with a prior mean of the calculation of Ref. [24]
+(black) and experimental data (colored points, same as top      certainties are larger than both.
+panel), normalized to the fiducial GP mean, with the fiducial
+1σ envelope shown in red. The GP mean lies the same dis-
+tance away from each highly correlated data points of BR90
+and KR87M.
+                                                                                                                       11
+
+   The d(p,γ)3 He S-factor more naturally lies on a log-      line—detected at high significance by e.g. Refs. [50–52] in
+arithmic scale, and any fit to these data must climb          a variety of datasets—disappears when the energy win-
+nearly two orders of magnitude in less than 2 ln(E/MeV).      dow for the fit to the line is narrowed. Another exam-
+Therefore, we perform GP regression assuming the              ple of an analysis that demonstrates the importance of
+d(p,γ)3 He S-factor data follow lognormal distributions,      dataset choice is the recent analysis of metal-poor HII
+i.e. ln S follows a normal distribution.                      regions in Ref. [1], which chose to intentionally narrow
+   For d(p,γ)3 He, we perform GP regression on data from      their dataset by excluding the HeI λ5016 and HeI λ7281
+Refs. [31, 44–48], again with a zero prior mean for our       emission lines, in order to avoid contamination by sus-
+fiducial result. Figure 6 shows the GP fit to d(p,γ)3 He S-   pected systematics. A similar choice about what data to
+factor data and corresponding reaction rates. There is        include must be made for our analysis.
+less energy overlap and disagreement between different           BBN is mostly complete within a narrow window of
+experiments for this reaction. This enables the high-         temperatures between 108 –109 K (or, in natural units,
+precision data collected by the LUNA collaboration [31]       10−2 –10−1 MeV). The integrand in Eq. (9) for the rate
+(light blue) to dominate the fit between 0.07 − 0.3 MeV.      R(T ) involves a Boltzmann suppression e−E/kB T , which
+Samples are again somewhat jagged from the small-ν            diminishes the role of energies E ≫ kB T . Meanwhile,
+Matérn kernel component, although this is less obvious       S(E) is smaller for energies E ≪ kB T than at energies
+from the more narrow GP posterior. The data of Turkat         E ∼ kB T , reducing the contribution of smaller energies
+et al. [48] (pink and gray) have large total uncertainties    over a narrow integration range. Therefore, obtaining a
+and correlations. Since there is some overlap between         good fit to S(E) is only important in a finite range of en-
+these and the highest-energy LUNA point, the GP is            ergies to estimate the integral in Eq. (9). Because the GP
+confident that they are likely higher than the underly-       regression assumes constant hyperparameters across the
+ing S-factor, and the posterior mean remains below these      entire energy range of interest, it is beneficial to choose
+datasets up to 0.6 MeV.                                       as narrow of an energy range as possible, since extending
+   As shown in the bottom panel, the GP result is simi-       the energy range of our fits places greater strain on this
+lar to the rates in both the PRIMAT and PArthENoPE            assumption. For example, the d(d,n)3 He and d(d,p)t data
+networks throughout the BBN temperature range. The            of Ref. [34] at energies ≳ 1 MeV likely lie well outside of
+agreement between all three is driven by the precision of     the range of relevant energies given the relevant temper-
+LUNA data.                                                    atures. Including these data forces the GP to attempt to
+   To demonstrate that experimental uncertainties—            accommodate a wider range of energies, and may intro-
+especially correlations between data points—are handled       duce new systematics, especially given that the reported
+properly in the GP framework, we show the experimen-          uncertainties are much smaller than a percent. Ref. [21]
+tal data normalized to the GP mean for d(d,n)3 He in the      raises similar concerns and opts to multiply their uncer-
+bottom panel of Figure 5. In energy regions measured          tainties by a factor of 5.
+by multiple experiments, we expect that the GP mean              On the other hand, at low energies, the S-factor data
+lies closest to data with the smallest uncertainties. Four    (particularly for d(d,p)t and to a lesser degree d(d,n)3 He)
+datasets measure the S-factor at low energies, between        become increasingly impacted by electron screening ef-
+0.014 and 0.06 MeV. In this energy range, the GP mean         fects [20, 36]. It is therefore extremely important to
+is closest to data with the smallest uncertainties, in this   determine the energy range—both a low-energy and
+case the Brown et al. data (dark blue). Additionally,         high-energy cut-off—over which d(d,n)3 He, d(d,p)t, and
+perfectly correlated data, where systematic normaliza-        d(p,γ)3 He are relevant for BBN. In doing so, we also iden-
+tion uncertainties dominate over statistical uncertainty,     tify concrete energy ranges for future S-factor measure-
+should always be the same distance away from the GP           ments to target in order to best reduce predicted D/H
+mean. The data of Brown et al. (dark blue) and high-          uncertainties.
+energy data of Krauss et al. (green) have negligible sta-        The history of identifying this energy range is older
+tistical uncertainties, and the GP mean always lies the       than BBN theory itself, starting from the Gamow win-
+same distance away from these data as desired.                dow ([53]; see, e.g. Ref. [7]). However, there is no
+                                                              consensus regarding what the energy range should be.
+                                                              Ref. [21] claims that one must include data up to roughly
+          B.   Relevant BBN Energy Range                      2.75 MeV for the integral in Eq. (9) to converge beyond
+                                                              T = 2 GK. On the other hand, Ref. [11] evaluates
+   When performing a fit to data y over an independent        the change in the primordial deuterium abundance when
+variable x where the physically important values of y are     varying the S-factor throughout these energies and claim
+confined to a narrow range of x values, an important          that the most important energy range for D/H extends
+analysis choice has to be made about whether to include       to 0.24 MeV (though they still integrate over a wider
+data well outside of the physically important range. This     range of energies). Crucially, no study takes into account
+choice can have a significant impact on the final conclu-     the current experimental precision of D/H observations
+sion of a study, and more data is not obviously better.       quantitatively. The observational uncertainty provides a
+For example, Ref. [49] found that evidence for the 3.5 keV    natural scale to evaluate the importance of D/H theoret-
+                                                                                                                           12
+
+                                                                 D/H using the GP means for d(d,n)3 He, d(d,p)t, and
+                                                                 d(p,γ)3 He, changing the upper or lower bounds of the
+                                                                 integral for each reaction together. This is equivalent to
+                                                                 setting the S-factor to zero above Eupper or below Elower .
+                                                                 Figure 7 shows the predicted D/H as a function of Eupper
+                                                                 (Elower ) from 0.1 − 3 MeV (1 − 60 keV).
+                                                                    Let D/Hfull denote the predicted value with
+                                                                 R(T ; 0, ∞), approximated as R(T ; 1.0 keV, 3.0 MeV).
+                                                                 From this procedure, we choose Eupper (Elower ) such that
+                                                                 increasing (decreasing) the integral cutoff yields a D/H
+                                                                 value differing from D/Hfull by no more than 0.1σ of
+                                                                 Ref. [6]. We find Elower = 14 keV and Eupper = 0.6 MeV.
+                                                                 Elower is approximately at the electron screening thresh-
+                                                                 old, reported to be ∼ 15 keV for d(d,p)t [20, 36] (the
+                                                                 reaction most heavily impacted), so we can safely
+                                                                 exclude data below this energy and ignore electron
+                                                                 screening effects.
+
+
+                                                                                  C.    Dataset Selection
+
+                                                                    Choosing which datasets to include in any S-factor fit
+                                                                 is important—for the reactions analyzed in this work, no
+                                                                 one experiment spans the whole relevant energy range,
+                                                                 so multiple datasets must be combined. However, some
+                                                                 datasets may not be well-suited for our analysis. In this
+                                                                 work, the following principles are generally used to select
+                                                                 datasets for our fiducial analysis:
+                                                                    • Old (over half a century) datasets overlapping with
+                                                                      newer experiments, but with larger uncertainties
+                                                                      than newer experiments, are excluded.
+
+FIG. 7. Predicted D/H as a function of lower and upper              • Data outside of the relevant energy range is ex-
+bounds (red) for the thermal average integral in Eq. (9).             cluded (see discussion in Section III B).
+The horizontal axis denotes the value of the lower and
+upper energy bounds tested.        The GP means for the             • Datasets with unknown correlations with other ex-
+d(d,p)t, d(d,n)3 He, and d(p,γ)3 He S-factors are separately          periments are excluded.
+truncated from below (top) and from above (bottom). The
+observational 1σ and 2σ uncertainties from Ref. [6] are shown       • If none of the above conditions apply to a dataset,
+in grey, centered at the deuterium prediction for the un-             it is included.
+bounded case.
+                                                                    • If only total errors are reported, the percent error of
+                                                                      the data point with the smallest error is conserva-
+ical error incurred by neglecting S(E) outside of a given             tively assumed to be the systematic normalization
+energy window.                                                        error.
+   To settle this question, we compute this energy range
+by calculating the change in D/H when shifting the                  All datasets we consider for our analysis are shown
+bounds of integration for the thermal average and com-           in Table III, in which we discuss our assumptions for
+pare the magnitude of this change to the experimental            the statistical and systematic uncertainties of each. For
+precision of Ref. [6], i.e. for each reaction, we define         d(d,p)t and d(d,n)3 He, we use data between 14 keV and
+                                                                 0.6 MeV from the five independent datasets of Refs. [18–
+                               r
+                                    8      NA                    21]. The two datasets of Ref. [18] are collected in different
+  R(T ; Elower , Eupper ) =                                      locations and are uncorrelated. Ref. [21] report the co-
+                                   πµ12 (kB T )3/2
+                     Z Eupper                                    variance matrix for the Legendre polynomial fit that gives
+                                                                 the total cross section, in which all data points are corre-
+                 ×              dE e−2πη S(E)e−E/kB T ,   (15)
+                      Elower
+                                                                 lated to some degree. We incorporate these correlations
+                                                                 in the GP, which no other analysis has done thus far.
+where the fiducial R(T ) = R(T ; 0, ∞). To estimate              Including reported correlations between d(d,n)3 He and
+these energy cutoffs Elower and Eupper , we compute              d(d,p)t data is left to future work.
+                                                                                                                                13
+
+                                                                                 Statistical       Systematic       Fiducial
+               Dataset               Abbreviation          Reaction(s)
+                                                                                   Noise           Uncertainty      Analysis?
+
+      Krauss 1987 Bochum [18]            KR87B          d(d,p)t, d(d,n)3 He       Table 2              0.064           Yes
+      Krauss 1987 Münster [18]          KR87M          d(d,p)t, d(d,n)3 He       Table 2             0.0812           Yes
+           Brown 1990 [19]                BR90          d(d,p)t, d(d,n)3 He       Table II             0.013           Yes
+            Greife 1995 [20]              GR95          d(d,p)t, d(d,n)3 He       Table 2a             0.033           Yes
+          Leonard 2006 [21]               Leo06         d(d,p)t, d(d,n)3 He       Table III            0.01b           Yes
+   Greife 1995 Close Geometry [20]         —                  d(d,p)t             Table 3a               —             No
+          McNeill 1951 [33]c             MN51           d(d,p)t, d(d,n)3 He       Table II            0.111d           No
+           Schulte 1972 [34]              SC72          d(d,p)t, d(d,n)3 He       Table 3e           Table 3           No
+   First Research Group 1985 [35]         RG58          d(d,p)t, d(d,n)3 He          [54]              [54]f           No
+           Tumino 2014 [36]               TU14          d(d,p)t, d(d,n)3 He      Main texta           0.0316           No
+             Ma 1997 [44]                MA97               d(p,γ)3 He               [55]               0.09           Yes
+           Schmid 1997 [45]               SC97              d(p,γ)3 He           Figure 13g             0.09           Yes
+           Casella 2002 [46]              CA02              d(p,γ)3 He            Table 1         0.036 – 0.053h       Yes
+           Tišma 2019 [47]               TI19              d(p,γ)3 He              [13]i               0.10           Yes
+            Mossa 2020 [31]              MO20               d(p,γ)3 He            Table 1            Table 1           Yes
+    Turkat 2021 Target No. 3 [48]        TU21 3             d(p,γ)3 He            Table II             0.08j           Yes
+    Turkat 2021 Target No. 4 [48]        TU21 4             d(p,γ)3 He            Table II              0.05           Yes
+          Warren 1963 [56]k                —                d(p,γ)3 He           Table IIa           Table II          No
+          Griffiths 1962 [57]l             —                d(p,γ)3 He            Table Ia               —             No
+          Griffiths 1963 [58]              —                d(p,γ)3 He            Figure 6               —             No
+            Geller 1967 [59]               —                d(p,γ)3 He                —                  —             No
+           Bailey 1970 [60]                —                d(p,γ)3 He            Figure 1               —             No
+
+TABLE III. Reported S-factor experimental uncertainties used in our analysis, entering as Σ in Eq. (8) and σik , ϵ in Eq. (10)
+to generate mock data for our Monte Carlo analysis. a: Statistical noise is isolated by subtracting the reported systematics
+out from the total reported errors. b: The 1% overall systematic uncertainty is summed in quadrature with the reported fit
+covariance in Table V. c: Refs. [33–36] are only used for Monte Carlo validation tests on polynomials. d: Originally authors
+summed error sources linearly, we sum them in quadrature. e: We scale the small reported errors by a factor of 5 and use the
+smallest as the overall systematic error percentage. f : We use the largest reported systematic uncertainties for both reactions
+as constant for mock data generation. g: Statistical noise isolated by subtracting the reported systematics from the error bars
+presented in Figure 13. S-factor data from Ref. [61]. h: The lowest- and highest-energy data points are assigned 5.3% and
+3.6% systematic uncertainties respectively. Systematics for the intermediate points are determined from a linear interpolation.
+We use a constant 4.5% for all points during mock data generation. i: Thanks to Ref. [13], who provide these data from
+correspondence with the authors. j: Targets 3 and 4 collectively share an overall 12% systematic uncertainty in addition to
+those shown here, which is incorporated into our analysis. k: Ref. [56] is only included in a supplemental analysis. l: Refs. [57–
+60] are not included in any analysis and are presented here for completeness.
+
+
+   For d(d,p)t, we again restrict to data between 14 keV                 plots displayed. Additionally, the full text is not
+and 0.6 MeV. For our fiducial result, we use the six in-                 available in English and so it is difficult to verify
+dependent datasets of Refs. [31, 44–48] in line with those               their procedure.
+used for Solar Fusion III [62]. Turkat et al. present two
+datasets that share an overall normalization [48]; this                • The Trojan Horse data of Tumino et al. [36] must
+correlation is fully included in the GP.                                 be normalized to existing data. This inherently
+   We exclude the following experiments from our analy-                  produces correlations between these data and the
+sis:                                                                     other experiments, which is important to include
+                                                                         in these fits. This normalization procedure is not
+    • The additional low-energy dataset of Ref. [20]                     described in enough detail to include in the GP;
+      (Greife 1995 Close Geometry) is collected to mea-                  with more details of the normalization, these data
+      sure electron screening and is below Elower .                      could be used in the GP. Additionally, Ref. [63] flag
+                                                                         this dataset, claiming that the ratio between the
+    • The data of McNeill et al. [33] has large uncertain-
+                                                                         d(d,n)3 He and d(d,p)t S-factors is well-constrained
+      ties and overlaps with more recent experiments.
+                                                                         by theory. While other experiments match this pre-
+    • The data of Schulte et al. [34] is above Eupper , and              diction reasonably well, the data of Tumino et al.
+      their sub-percent reported uncertainties may intro-                do not. This result is independent of the normal-
+      duce new systematics in the GP.                                    ization to existing data.
+    • Despite our best efforts, we were not able to recover            • The data of Griffiths et al. (1963) [58] and Bailey
+      data of Ref. [35] (First Research Group) from the                  et al. [60] overlap with more recent data and have
+                                                                                                                         14
+
+      much larger uncertainties.                               distribution. The mean and variance of the data distri-
+                                                               bution in log space µdata and σdata are
+   • The data of Griffiths et al. (1962) [57] is over half
+     a century old and overlaps with more recent data.                         µdata = ln(Scentral /MeV),
+                                                                                                                       (18)
+                                                                                                      
+                                                                                                Var[S]
+   • Warren et al. [56] and Geller et al. [59] measure                          2
+                                                                               σdata = ln 1 +            .
+     energies above Eupper .                                                                     E[S]2
+                                                               For σdata ≤ 0.1, the lognormal and Gaussian distribu-
+                                                               tions are very similar. This is the case for nearly all data
+             D.    Correlated Data in GPs                      considered, supporting our choice of the lognormal dis-
+                                                               tribution for d(p,γ)3 He.
+   In the partitioned GP prior we place on the S-factors,         From Eq. (18), it follows that the iith component of Σ
+we add the covariance matrix of experimental data Σ            in the ln S case is
+to the kernel in the top-left block (see Eq. (7)). For                                   
+                                                                                               σ2
+                                                                                                         
+                                                                                                       2
+d(d,n)3 He, and d(d,p)t, we assume that S-factor data                           Σii = ln 1 + ik  2 + ϵ k ,             (19)
+follow a multivariate normal distribution. Σ is block-                                         Sik
+diagonal, as only data within the same experiment are          and the ij th component is
+correlated. For some experiment k, consider two data
+                                                                                    Σij = ln 1 + ϵ2k .
+                                                                                                    
+points i and j with statistical noise σik and σjk respec-                                                              (20)
+tively. The majority of experiments report a single per-
+cent normalization uncertainty ϵk , so these points have
+                                                                                  E.   Kernel Choice
+normalization uncertainty ϵk Sik and ϵk Sjk . Summing the
+statistical and normalization uncertainties in quadrature,
+the iith component of Σ is                                        To model S-factors as Gaussian processes, we must de-
+                                                               fine a kernel function to set correlations between S-factor
+                           2
+                    Σii = σik + ϵ2k Sik
+                                     2
+                                        .              (16)    values at different energies; the kernel enters into Eqs. (7)
+                                                               and (8). In setting these correlations, the kernel dictates
+The off-diagonal entry Σij only includes the normaliza-        the properties functions drawn from the GP will have.
+tion uncertainties of these points:                            Thus, any kernel choice makes implicit assumptions re-
+                                                               garding the set of functions used to fit S-factors, but these
+                     Σij = ϵ2k Sik Sjk .               (17)
+                                                               are more general and flexible than selecting a particular
+Ref. [21] provides a full covariance matrix for their data,    functional form.
+which is used in place of Eq. (17). Including Gaussian            The kernel is a function of two energies and includes
+statistical uncertainty as a diagonal Σ is a standard pro-     hyperparameters θ that must be chosen in a principled
+cedure [15]; our inclusion of correlations with off-diagonal   manner. These encode how strongly or weakly correlated
+elements is similar to other examples in the literature        the drawn S-factor values are as a function of some dis-
+(for some examples in astrophysics and cosmology, see          tance measure between different energy values. Through-
+[64–67]). We showed qualitatively that the GP captures         out this work, we define the distance d between two en-
+these correlations desired in the discussion of GP regres-     ergies Ei and Ej as
+sion on d(d,n)3 He data in Section III A, and confirmed                                                           Ei
+quantitatively the robustness of this procedure through          d(Ei , Ej ) = |ln(Ei /MeV) − ln(Ej /MeV)| = ln       .
+                                                                                                                  Ej
+our Monte Carlo tests.
+                                                                                                                     (21)
+   As we discussed in Section III A, the d(p,γ)3 He S-factor
+                                                               We use log energies to fit data spanning nearly two orders
+values span nearly two orders of magnitude over an en-
+                                                               of magnitude in E. Perhaps the most common kernel
+ergy range of less than 2 ln(E/MeV). Therefore, we per-
+                                                               choice is the squared exponential:
+form GP regression assuming the d(p,γ)3 He S-factor data
+                                                                                                      d2
+follow lognormal distributions, i.e. ln S follows a normal                       kSE (d; σ, ℓ) = σe− 2ℓ2 ,             (22)
+distribution.
+   Since we model ln S as a Gaussian process for               where σ is a hyperparameter controlling the amplitude of
+d(p,γ)3 He, we must be more careful when translating           correlations and ℓ is a hyperparameter representing the
+experimental data to ln S. As with d(d,n)3 He and              characteristic length scale of correlations. The squared
+d(d,p)t, we take the reported central value Scentral and       exponential is an appropriate kernel choice when the S-
+squared percent uncertainty to be the median and               factor is expected to be smooth with correlations that
+Var[S]/E[S]2 of the S-factor distributions. For normally-      only depend on energy differences. The Matérn class of
+distributed S-factors, these directly correspond to the        kernels relaxes the smoothness assumption while still in-
+mean and variance. For ln S, the reported central value is     cluding a characteristic length scale in a similar manner:
+the peak of the distribution. Then, we interpret reported                                  √     !ν        √     !
+experimental data similarly for all three reactions, the                             21−ν    2νd             2νd
+                                                                  kM,ν (d; σ, ℓ) = σ                Kν             , (23)
+only difference being whether S or ln S follows a normal                             Γ(ν)    ℓ               ℓ
+                                                                                                                            15
+
+where Kν is the modified Bessel function of the second            draw samples. A common approach, adopted in this
+kind [15]. ν is a positive parameter that controls the            work, is to define and optimize a likelihood from the
+smoothness of functions drawn from the GP. Decreasing             experimental data. For many applications, optimizing
+ν gives less smooth functions, while the ν → ∞ limit              the marginal likelihood to observe the data given θ is
+converges to the squared exponential kernel.                      a well-motivated choice. However, some S-factor data
+   One might expect the squared exponential (or high-ν            we consider are in mild disagreement with others. Opti-
+Matérn) kernel to be sufficient to model these S-factors;        mizing the marginal likelihood yields posteriors that can
+since d(d,p)t, d(d,n)3 He, and d(p,γ)3 He contain no known        overfit to experiments with very small uncertainties, and
+resonances in the BBN energy range [32], the S-factors            we want to mitigate weighting individual datasets over
+are expected to be globally smooth. However, datasets             others in this analysis.
+are internally correlated, and different experiments dis-            We achieve this with cross-validation [71], in which a
+agree by ≳ 1σ at some energies. Therefore, if only a              subset of the training data is left out from the rest of the
+smooth kernel is used, the data will require an extremely         set and the probability of observing those points given
+small length scale ℓ, causing S-factor samples to fluctuate       the remaining data is maximized (for further discussion of
+rapidly, exceeding 1 MeV b and even going negative.               cross-validation with GPs, see Ref. [15]). In Leave-One-
+   To allow GPs to fit small-scale fluctuations necessary         Out (LOO) cross-validation, another common choice for
+for agreement between disparate datasets while preserv-           GP hyperparameter selection, data points are left out one
+ing large-scale correlations, we adopt a kernel that is a         at a time. LOO-CV leads to extreme overfitting during
+combination of both a small-ν Matérn kernel and the              optimization, as the kernels we consider have the flexibil-
+squared exponential as our fiducial choice:                       ity (with very small correlation lengths) to perfectly fit
+                                                                  every data point.
+    k(d; θ) = kSE (d; σ0 , ℓ0 ) + kM,ν=1/4 (d; σ1 , ℓ1 )   (24)      In this work, we select kernel hyperparameters by max-
+with hyperparameters θ = {σ0 , ℓ0 , σ1 , ℓ1 }. Eq. (24) has       imizing a Leave-Dataset-Out (LDO) pseudo-likelihood.
+two pieces: the squared exponential is a “global compo-           For a set of hyperparameters θ, we leave each dataset k
+nent” characterizing the shape of the S-factors through-          out one at a time. We compute the probability to ob-
+out the entire BBN energy range, while the Matérn-1/4            serve the left-out dataset given the GP conditioned on
+is a “local component” that allows small-scale fluctua-           the remaining datasets, which come from Eq. (8). We
+tions to account for scatter within the real data. We set         use the sum of the log predictive probabilities to evalu-
+ν = 1/4 to add small-scale correlations without intro-            ate performance and update hyperparameters:
+ducing extra statistical noise at each point. In choosing                                  X
+Eq. (24), we assume that correlations depend only on dif-                       LLDO =          ln p(S k |S −k , θ),      (25)
+                                                                                          k∈sets
+ferences between energies and that hyperparameters are
+constant throughout the entire BBN energy range.                  where S k and S −k denote the S-factor measurements of
+   The fiducial kernel choice leads to S-factor sample            dataset k and all other datasets respectively. The log
+draws that exhibit small-scale fluctuations as a function         probability to observe dataset k given the multivariate
+of energy (see the top panels of Figures 1, 5, and 6).            Gaussian conditioned on the other datasets is
+While individual samples likely do not resemble the true
+S-factor (which should be globally smooth), such sam-                   −2 ln p(S k |S −k , θ) = (S k − µS k |S −k )T ×
+ples are acceptable or even advantageous for two rea-
+sons. First, undersmoothed GP kernels—such as a delta-                                   Σ−1
+                                                                                          S k |S −k (S k − µS k |S −k )+   (26)
+function term (the ν → 0 limit of the Matérn kernel)                                       ln det ΣS k |S −k + const,
+added to a squared exponential—have been shown to
+yield posteriors with better coverage, avoiding the under-        where µS k |S −k and ΣS k |S −k are the conditional mean
+estimation of uncertainties that can arise from smoothed          and covariance from Eq. (8). Eqs. (25) and (26) form
+kernels [68–70]. This choice therefore may play a role            a more general version of Leave-One-Out (LOO) cross-
+in achieving the reliable coverage that we see in our MC          validation, expanded to include multiple left-out points.
+study of the GP method (see Section I B). Second, our               Each dataset receives one contribution to Eq. (25),
+GP draws for the S-factor are first thermally averaged to         weighting them evenly during optimization and mitigat-
+obtain the reaction rate R(T ), the quantity that actually        ing the risk of overfitting to datasets with small uncer-
+enters BBN calculations. Our R(T ) draws are in fact              tainties. Additionally, there are energy regions in which
+smooth as a function of T (see e.g. the bottom panel of           the GPs must interpolate or extrapolate. Since Eq. (26)
+Figure 1).                                                        directly evaluates the performance of GPs conditioned
+                                                                  on S −k at energies not represented in S −k , it penalizes
+                                                                  models that generalize poorly.
+          F.   Hyperparameter Optimization                          As these kernels have four hyperparameters, we use
+                                                                  gradient descent for optimization. To avoid conver-
+  After selecting a kernel, hyperparameters θ must be             gence to local minima in hyperparameter space, we use
+chosen in a principled manner before using Eq. (8) to             Adam [72], a gradient descent algorithm incorporating
+                                                                                                                           16
+
+momentum when updating hyperparameters. We con-
+sider only fixed choices for the kernel hyperparameters
+set by these optimizations. Code for our analysis will be
+released with the full cosmological analysis to follow.
+
+
+                  G.   Further Checks
+
+   We perform the following checks to test the sensitiv-
+ity of our D/H prediction to the various choices made
+throughout our analysis:
+
+   • Different hyperparameter optimization.
+
+   • Pushing Eupper to 2 MeV for d(p,γ)3 He.
+
+   • Using the theory calculations of Refs. [24] and [27]
+     as the GP prior means.
+
+   • Different kernel choices from Eq. (24).
+
+   • Checking the impact of extrapolation beyond
+     0.3 MeV.
+                                                               FIG. 8.       D/H predictions from GP regression on
+Throughout this section, the reader should keep in mind
+                                                               d(d,p)t, d(d,n)3 He, and d(p,γ)3 He data for different kernel
+that our fiducial prediction uncertainty for D/H is 1.6%.      choices. Kernels are labeled global +local. All other inputs
+   Different hyperparameter optimization.—LDO                  are the same as our fiducial analysis presented in Results, in-
+cross-validation differs from another common hyperpa-          cluding marginalization over the Planck baryon density.
+rameter optimization method, in which the marginal like-
+lihood of observing the known data given a particular
+choice of hyperparameters is maximized. Equivalently,
+                                                               d(d,n)3 He, d(d,p)t, and d(p,γ)3 He data with their results
+one minimizes the negative log likelihood:
+                                                               as the GP prior means (µ in Eq. (8)). The bottom panel
+                         −1
+    −2 ln p (S|θ) = S T K11 S + ln |K11 | + const.     (27)    of Figure 5 shows how this impacts the d(d,n)3 He GP
+                                                               mean. Where there are many data points, both the fidu-
+Using Eq. (27) neither weights individual experiments          cial GP mean and the theory prior GP mean agree well
+evenly nor evaluates predictive power in regions with-         within 1σ. Large changes are only present in the extrapo-
+out data. Repeating our analysis with Eq. (27) pre-            lation region—the theory prior pushes the extrapolation
+dicts a D/H only ∼ 0.3% greater than the fiducial re-          to higher values since the theory calculation predicts a
+sult with slightly smaller uncertainties. Uncertainties de-    slightly higher S-factor that measured by experiment.
+crease since datasets are not evenly weighted during opti-     D/H lowers by 0.37%, and the prediction uncertainty
+mization. That these differences are small relative to the     slightly decreases as this extra information makes the GP
+prediction uncertainty (1.6%) demonstrates the robust-         more confident during extrapolation.
+ness of our result to the choice of optimization procedure.       Different kernel choices.—To investigate the sen-
+We still prefer LDO cross-validation for our fiducial re-      sitivity of our result to different choices, we addition-
+sult, as it is the more principled approach.                   ally consider Matérn-7/2 and Matérn-2 for the global
+   Increasing Eupper for d(p,γ)3 He.—Increasing                component and Matérn-1/2 and Matérn-3/4 for the lo-
+Eupper for d(d,n)3 He and d(d,p)t would only add the data      cal component. Figure 8 shows the D/H prediction
+of Refs. [34] and [36] to our analysis, which we exclude for   for these different kernels: three global and three lo-
+other reasons (see the discussion above). On the other         cal components give nine variations in total. Sampling
+hand, increasing Eupper to 2 MeV for d(p,γ)3 He adds a         d(d,p)t, d(d,n)3 He, and d(p,γ)3 He GPs and marginaliz-
+new dataset (Ref. [56]) and additional data points from        ing over the other reactions, the Planck baryon density,
+Ref. [48]. Including these data in our d(p,γ)3 He GP in-       and the neutron lifetime give the uncertainties shown in
+creases the predicted D/H by 0.25% without changing the        Figure 8. The D/H prediction has little sensitivity to the
+predicted uncertainty. Again, this shift is small relative     particular kernel choice relative to the size of these un-
+to the prediction uncertainty, showing that our result is      certainties, changing the central values by at most 0.12%.
+robust to different Eupper .                                      While all of these kernels work for this analysis, we
+   Different prior means.—The theory calculations of           must still make a choice for the fiducial analysis. We
+Refs. [24] and [27] give some prior information for these      choose the squared exponential for the global component
+S-factors, so we repeat our analysis for GP regression on      such that all non-differentiability comes from the small-ν
+                                                                                                                          17
+
+                                                                 Ref. [24] as in our fiducial MC analysis. Now, the GP
+                                                                 does not need to extrapolate for any region in the relevant
+                                                                 BBN energy range. In Figure 9, we show the resulting
+                                                                 D/H predictions for d(d,p)t and d(d,n)3 He for the theory
+                                                                 data generating functions. D/H predictions do not sig-
+                                                                 nificantly change for d(d,p)t, and there is moderate bias
+                                                                 reduction from 0.40 to 0.27 for d(d,n)3 He with this extra
+                                                                 mock dataset. This result suggests that extrapolation to
+                                                                 high energies likely does not significantly bias our result.
+                                                                 However, the S-factor may behave differently than the
+                                                                 theory prediction of Ref. [24] above 0.3 MeV; additional
+                                                                 data measuring the d(d,n)3 He and d(d,p)t S-factors up
+                                                                 to 0.6 MeV would certainly improve our analysis. This
+                                                                 additional mock dataset does not eliminate bias in our
+                                                                 procedure, indicating that the bias is not a result of our
+                                                                 extrapolation; see Supplementary Information for further
+                                                                 discussion.
+
+
+
+
+FIG. 9. D/H predictions for 1,000 Monte Carlo realizations of
+mock d(d,p)t and d(d,n)3 He data fit with Gaussian processes.
+We use the Arai et al. theory calculation [24] to generate the
+mock data. We add an additional mock dataset (purple),
+with data extending to 0.6 MeV that matches the precision of
+Ref. [21]. We show the fiducial Monte Carlo analysis without
+this added dataset (red) for comparison.
+
+
+
+Matérn local component. For the local component, we
+choose Matérn-1/4 from consideration of the properties
+of the Matérn kernel. For fixed correlation length ℓ, cor-
+relations between the S-factor at different energies decay
+more quickly as ν is lowered. In the ν → 0 limit, k(d) goes
+to 0 unless d = 0, and the Matérn kernel becomes noise
+added equally to each point. We directly know experi-
+mental uncertainties, so we avoid adding extra statistical
+noise equally to each data point. Therefore, we cannot
+make ν arbitrarily small.
+   ν cannot be too large either; setting ν ≫ 1 does not
+produce the required small-scale fluctuations. Even for
+ν ≥ 0.5, correlations decay slowly enough that fluctua-
+tions span energy ranges larger than fluctuations between
+data. The local component should only account for fluc-
+tuations in the data, and we want to mitigate artifacts
+arising from increasing the range of these small-scale fluc-
+tuations. The intermediate ν = 1/4 provides the desired
+behavior, but we emphasize that our analysis is robust
+to other choices.
+   Checking extrapolation.—To check the impact of
+extrapolation at energies greater than 0.3 MeV on our
+D/H predictions, we repeat the Monte Carlo analysis
+from Section I B with GP regression. We add a new mock
+dataset at eight equally-spaced energies between 0.25 and
+0.6 MeV matching the reported uncertainties of Ref. [21]
+and generate mock data using the theory calculation of
+                                                                                                                      18
+
+                                        SUPPLEMENTARY INFORMATION
+
+                                                A.     Comparing Distributions
+
+  We compare the performance of GPs with polynomials to make accurate D/H predictions from fits to mock S-factor
+data in the main body. For each mock data realization, we calculate the predicted D/Hpred ± σpred and compare these
+to the D/H for the underlying function that generated the data D/Htrue . We do this for 1,000 mocks, and approximate
+(D/Hpred − D/Htrue )/σpred distributions as the resulting empirical sample set (see Figure 2).
+  A fully unbiased fitting procedure with robust uncertainties would produce a set of (D/Hpred − D/Htrue )/σpred
+converging to N (0, 1) for infinite mock realizations. We introduce two quantities to assess the similarity of the
+empirical distributions to N (0, 1): the Kullback–Leibler (KL) divergence [25] and the Kolmogorov–Smirnov (KS)
+statistic [26]. We use the quantities as measures of proximity to N (0, 1), enabling a quantitative comparison between
+GPs and polynomials across the scenarios shown in Figure 2. Both are non-negative, vanishing only when the compared
+distributions are identical. However, they compare different features of the distributions.
+  The KL divergence from a reference distribution Q to a distribution P is defined as
+                                                             X         Pi
+                                              DKL (P ∥Q) =       Pi ln    .                                        (28)
+                                                              i
+                                                                       Qi
+
+Here, the sum runs over histogram bins in Figure 2. P is the empirical distribution and Q is N (0, 1). DKL quantifies
+how distinguishable the empirical distribution is from N (0, 1), with larger values indicating greater disagreement. We
+find little sensitivity of DKL values to bin width for ≥ 10 bins.
+   The KS statistic is defined as
+                                                     DKS = sup |F (x) − G(x)| ,                                     (29)
+                                                             x
+
+where F (x) is the empirical cumulative distribution function (CDF) and G(x) is the N (0, 1) CDF. The supremum
+is taken over all x, so DKS isolates the point at which the two CDFs differ the most. The CDFs F (x) and G(x)
+run from 0 to 1, so DKS ∈ [0, 1). Again, larger values indicate greater disagreement, and DKS is zero only when the
+two distributions are the same. DKS is therefore most sensitive to localized deviations, such as an excess or lack of
+probability in a particular region.
+   Since DKL is an integrated quantity weighted by the empirical distribution, it is more sensitive to broad, systematic
+differences. On the other hand, DKS highlights the largest local deviation regardless of how the rest of the distribution
+compares. Together, they provide a more comprehensive picture of distributional agreement.
+   In all scenarios considered in Figure 2, both the KL divergence and KS statistic are consistently smaller for GPs
+than for polynomials, with KL divergences a factor of ∼ 5 (10) and KS statistics a factor of ∼ 2 (3) smaller for the
+theory (smoothed GP) generating function. Since DKS is bounded between 0 and 1, improvement by an O(1) factor
+is significant. Thus, we quantitatively confirm that GPs produce D/H predictions whose distributions are closer to
+the expected N (0, 1) behavior of an unbiased procedure with well-calibrated uncertainties.
+
+
+                                  B.    Polynomial Regression on Correlated Data
+
+  In the main body, we argue that, while polynomial S-factor fitting systematically over-predicts D/H, Eq. (13) should
+be used to fit correlated data from multiple experiments. For the rates in the PArthENoPE network, the following
+expression is used instead [10, 38]:
+                                          Nk 
+                                               (Sth (Eik , al ) − ωk Sik )2   (ωk − 1)2
+                                     X X                                                
+                                 2
+                                χ =                                         +             .                       (30)
+                                          i=1
+                                                         ωk2 σik
+                                                               2                  ϵ2k
+                                       k∈sets
+
+With multiple ωk penalty terms per dataset, this expression no longer corresponds with maximum a posteriori pa-
+rameter selection but is still valid as a penalized likelihood. Here, we argue that Eq. (30) yields estimators for {ω̂k }
+that do not match the expected distribution when Nk is large.
+  Consider a simpler case, where a single experiment performs N correlated measurements {xi } of a single parameter
+xth , each with the same statistical variance σ 2 and percent systematic uncertainty ϵ. Using the expression in Eq. (30),
+the log likelihood is
+                                                 N
+                                                 X (xi − xth /ω)2         N (ω − 1)2
+                                           L=                         +                                             (31)
+                                                     i=1
+                                                              σ2              ϵ2
+                                                                                                                            19
+
+
+
+
+FIG. 10. Values of {ωk } for 1,000 realizations of mock d(d,n)3 He data generated by the theory curve of Ref. [24]. For the
+orange points, Eq. (30) is used to fit the mock data. For a dataset k with Nk points, this penalized likelihood contains Nk
+penalty terms per dataset. For the purple points, Eq. (13) (yielding the maximum a posteriori estimate) is used to fit the mock
+data. Grey points show the reported normalization uncertainties for each experiment, which are used to generate mock data.
+
+
+up to a constant, with ω being a nuisance parameter. We can calculate the best-fit estimators x̂th and ω̂ for xth and
+ω respectively analytically. Beginning with x̂th ,
+
+                              ∂L             X 2
+                                           =      (xi − x̂th /ω̂)(−1/ω̂) = 0                  =⇒     x̂th = ω̂µ,          (32)
+                             ∂xth x̂th ,ω̂   i
+                                               σ2
+            P
+where µ =     i xi /N is the experimental mean; x̂th is successfully unbiased. Repeating this procedure for ω:
+                                                                                   
+                                ∂L            X 2                           x̂th            2N
+                                            =      (xi − x̂th /ω̂)                      +       (ω̂ − 1) = 0.
+                                ∂ω x̂th ,ω̂   i
+                                                σ2                           ω̂ 2            ϵ2
+      P
+Since i (xi − x̂th /ω̂) = 0 from Eq. (32), we obtain ω̂ = 1, which again is expected. Building a confidence inter-
+val around this estimate gives the error for ω. Performing a Taylor expansion of L at the minimum, where it is
+approximately quadratic, one obtains
+                                                                        !
+                                                            2
+                                                        1 ∂   L
+                                              σω−2 ≈ E
+                                                        2 ∂ω 2 x̂th ,ω̂
+
+Taking the derivative, it follows that
+                                                             −1                                 −1
+                                                N 2      N                       N        N
+                                    σω2 =          ⟨µ ⟩ + 2         =       1+      ⟨µ⟩2 + 2             .                (33)
+                                                σ2       ϵ                       σ2       ϵ
+
+Consider the case where the penalty term for ω is relatively large. Then, one would expect that the uncertainty in
+the penalty term to be comparable to the normalization uncertainty: σω2 ≈ ϵ2 . However, we actually recover
+
+                                                              σω2 ≈ ϵ2 /N.                                                (34)
+
+In the large N limit, the uncertainties on the scaling ω become suppressed by 1/N . Therefore, in the multiple dataset
+case, we might expect datasets with many data points to underestimate systematic uncertainties for those datasets.
+For example, the d(d,n)3 He and d(d,p)t dataset of Tumino et al. (TU14) [36] contains 75 data points, and the dataset
+of the First Research Group (RG85) [35] contains 50 data points, much larger than the 6 data points of Leonard et
+al. (Leo06) [21].
+                                                                                                                             20
+
+
+
+
+FIG. 11. D/H prediction statistics for 1,000 Monte Carlo realizations of mock d(d,p)t and d(d,n)3 He data fit with both Gaussian
+process regression (red) and low-degree polynomials (brown), similar to Figure 2 but for polynomial coefficients optimized using
+Eq. (30). The Arai et al. theory calculation [24] and the GP mean from real data, smoothed and offset in energy, are used to
+generate the mock data. D/H predictions are shown as the difference between the predicted and true values, normalized by
+the predicted 1σ uncertainty.
+
+
+   We repeat the Monte Carlo analysis for polynomials with mock data described in the main body using Eq. (30),
+thus replicating the PArthENoPE network more closely. In addition to the generating function reconstruction and
+D/H predictions, we track the values of {ωk } for each mock dataset and each realization to check whether ωk are
+pushed closer to 1 for datasets with many points.
+   Figure 10 shows the distributions of {ωk } obtained for degree-4 polynomial fits to mock d(d,n)3 He data generated
+by the theory curve of Ref. [24], along with the reported experimental normalization uncertainties used to generate
+the mock data in gray. {ωk } from fits using a single penalty term (Eq. (13)) are shown in purple, while orange points
+are from fits with Nk penalty terms per dataset (Eq. (30)). The ωk terms account for normalization uncertainties;
+their distributions from many realizations of the data should therefore be comparable to N (1, ϵk ), where ϵk is the
+reported normalization uncertainty of experiment k. For mock datasets with ≲ 10 data points, there is not much
+difference between their ωk distributions. This is the small-N limit of Eq. (34). The ωk distributions for the mock
+datasets corresponding with RG85 [35] and TU14 [36] roughly match the reported normalization uncertainties (∼ 4%
+and ∼ 3% respectively) when a single prior term is used per dataset (the MAP estimate from Eq. (13)). These two
+distributions become considerably narrower when multiple penalty terms are used (Eq. (30)) used, which was expected
+from the analytic result above.
+   Figure 11 shows the reconstructed generating functions for d(d,p)t and the D/H predictions for polynomials fit
+to both the theory and smoothed GP generating functions for d(d,n)3 He and d(d,p)t (see Results) using Eq. (30).
+This method consistently performs poorer at D/H recovery than GPs and also the penalized likelihood with a single
+penalty term per dataset (the MAP estimate). For example, d(d,p)t data generated by the simple theory curve
+over-predicting D/H by ∼ 3σ on average with only 14.8% of realizations within 2σ of the true value. Additionally,
+both the KL divergence and KS statistic indicate that these distributions differ even more from the desired N (0, 1)
+corresponding with an unbiased, robust fitting procedure.
+
+
+                                    C.   Monte Carlo Tests with Uncorrelated Data
+
+  Through our Monte Carlo validation tests, we find that fitting mock d(d,p)t, d(d,n)3 He, and d(p,γ)3 He S-factor data
+with GP regression predicts D/H biased ∼ 0.3 − 0.5σ above the true value on average. This bias is important to note;
+however, it is small compared to the size of the predicted uncertainties, and the 1σ and 2σ predicted uncertainties
+                                                                                                                           21
+
+
+
+
+                                                                 FIG. 13. Functions used to generate mock d(d,p)t (purple)
+                                                                 and d(d,n)3 He (orange) data for the Monte Carlo valida-
+                                                                 tion tests. Functions used to generate mock d(d,p)t data
+FIG. 12. D/H predictions for 1,000 Monte Carlo realizations      are shown in purple, and those used to generate mock
+of mock d(d,p)t and d(d,n)3 He data fit with Gaussian pro-       d(d,n)3 He data are shown in orange. The theory calcula-
+cesses. We use the Arai et al. theory calculation [24] to gen-   tions of Ref. [24] appear as dotted curves, and the smoothed
+erate the mock data. We remove systematic uncertainties          GP means from fits to the real data are the solid curves.
+from the data generation process and GP regression (purple)
+and compare with the fiducial Monte Carlo analysis (red).
+
+
+
+include ∼ 68% and ∼ 95% of realizations respectively. In Section III G, we showed that in our MC analysis, adding
+mock data to cover the entire relevant BBN energy range (i.e. up to 0.6 MeV) does not remove this bias, despite the
+GPs no longer needing to extrapolate.
+   Our handling of correlated experimental S-factor data, described in Section III D, could be the underlying cause
+for this persistent positive bias in D/H predictions. Ref. [37] found that fitting to correlated data by minimizing a χ2
+with nonzero off-diagonal entries in the covariance matrix yields estimators that are biased towards lower values. We
+do not minimize a χ2 for GPs, but we do include a covariance matrix with correlations during regression (see Eq. (7)).
+A similar effect could produce this slight bias in our analysis; the S-factor reconstructions for GPs are, on average,
+slightly lower than the generating function, which is clearly observed in the top-left panel of Figure 2. This slightly
+lower d(d,p)t and d(d,n)3 He S-factors that we recover in our MC study leads to less deuterium burning during BBN
+and higher D/H, biasing our result toward closer agreement with the Cooke et al. measurement assuming Planck ωb .
+   To further investigate the cause of this bias, we repeat the d(d,n)3 He and d(d,p)t Monte Carlo validation tests for
+GPs but remove any correlations between data points by setting ϵ = 0 in Eq. (10). Since only statistical noise is
+included for these tests, we remove mock data corresponding with the Münster dataset of Ref. [18] for d(d,n)3 He, and
+both datasets of Ref. [18] for d(d,p)t, as these data have no reported statistical uncertainties (cited as < 1%). Mock
+data still cover the same energy range with this choice. We use the theory calculation of Ref. [24] to generate mock
+data realizations.
+   D/H predictions (purple) from the Monte Carlo validation tests, only including statistical uncertainties in data
+generation and GP regression, are shown in Figure 12. GP regression on both d(d,p)t and d(d,n)3 He mock data now
+yields unbiased D/H predictions; the magnitude of the bias for both cases is now ≤ 0.02. Predicted uncertainties
+remain robust.
+   Again, we approximate the (D/Hpred − D/Htrue )/σpred distributions with the empirical sets shown in Figure 12 and
+calculate the KL divergence and KS statistic (see above). We use these quantities to assess the similarity between
+these distributions and N (0, 1)—the expected distribution for (D/Hpred − D/Htrue )/σpred with an unbiased, robust
+fitting procedure. Both are lower than when correlations are included, with the KL divergence between the empirical
+distribution dropping from 0.14 (0.10) to 0.02 (0.02) for d(d,p)t (d(d,n)3 He). Similarly, the KS statistic decreases from
+0.21 (0.16) to 0.03 (0.03) for d(d,p)t (d(d,n)3 He).
+   We therefore find that removing correlations from the mock data and GPs leads to unbiased D/H predictions with
+                                                                                                                         22
+
+well-calibrated uncertainties. We conclude that the small bias in our fiducial Monte Carlo results may be a consequence
+of our handling of correlations. However, our implementation otherwise handles correlated data as desired, discussed
+in conjunction with Figure 5 in Section III A, with perfectly correlated data always lying the same distance away from
+the GP mean. We remind the reader that even with the present method, however, that our MC analysis shows that
+the bias is small, with the reported error bars providing excellent coverage. Further refinement of our method may
+reduce our bias, but we leave this to future work.
+
+
+                                         D.   Additional Monte Carlo Details
+
+  Figure 13 displays the functions used to generate mock data in our Monte Carlo analyses throughout this work. The
+dotted curves are the theory calculations of Ref. [24]. The solid curves are the smoothed GP means from regression
+on real data; these are offset in energy to remove correlations between small-scale features and the energies of the
+data. The generating functions for d(d,p)t are shown in purple, with those for d(d,n)3 He in orange.
+  To propagate uncertainties from polynomial fits through to reaction rate uncertainties, we adopt the same procedure
+as Refs. [10, 11]:
+                        p Z ∞                      Z ∞             X ∂Sth (E ′ , a) ∂Sth (E, a)
+             ∆R2 (T ) = χ2ν       dE ′ K(E ′ , T )     dE K(E, T )                                 cov(ai , aj ), (35)
+                               0                    0              i,j
+                                                                        ∂ai        â  ∂aj      â
+
+
+where K(E, T ) contains the terms aside from S(E) in Eq. (9), the sums run over all polynomial coefficients, and
+cov(ai , aj ) is the covariance between the two polynomial coefficients ai and aj from fitting. The reaction rate uncer-
+tainty is inflated by χ2ν (per degree of freedom) as in Refs. [10, 11]. We only consider d(d,p)t and d(d,n)3 He individually
+                                                                                                                  p
+in the Monte Carlo tests for polynomial fitting; uncertainties in D/H are given by inputting the mean R(T )+ ∆R2 (T )
+into LINX.
+

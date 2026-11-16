@@ -1,0 +1,105 @@
+{
+  "inputs": {
+    "complete_sampled_point": {
+      "A_cib_217": 65.91482774121674,
+      "A_planck": 0.998966933730337,
+      "A_sz": 7.374830126546885,
+      "calib_100T": 1.000972766335978,
+      "calib_217T": 0.9971637395510995,
+      "gal545_A_100": 9.018570552701675,
+      "gal545_A_143": 7.309030462495494,
+      "gal545_A_143_217": 18.0515643774168,
+      "gal545_A_217": 61.04881575013771,
+      "galf_TE_A_100": 1.4384462386135555e-05,
+      "galf_TE_A_100_143": 0.10954977918374847,
+      "galf_TE_A_100_217": 0.3809564669620862,
+      "galf_TE_A_143": 0.08890073528026206,
+      "galf_TE_A_143_217": 0.8274120709258792,
+      "galf_TE_A_217": 2.074256606187932,
+      "ksz_norm": 1.0038088590782823,
+      "logA": 3.045,
+      "ns": 0.9649,
+      "ombh2": 0.02236,
+      "omch2": 0.1202,
+      "ps_A_100_100": 260.0309138156983,
+      "ps_A_143_143": 32.11960646769047,
+      "ps_A_143_217": 63.481313810237474,
+      "ps_A_217_217": 88.3581610716597,
+      "tau": 0.0544,
+      "theta_MC_100": 1.0409,
+      "xi_sz_cib": 0.08902430020214491
+    },
+    "likelihood_product_tree_sha256": {
+      "planck_2018_highl_plik.TTTEEE": "c985e27425d48af5da1d1abe9a7292732a07b0338271fa5c08613c2d5e5c5114",
+      "planck_2018_lowl.EE_clik": "1429dd93a5f56df425ee6e5364d630dd1e8fe848fb8bf7d76e97b079e1fc7128",
+      "planck_2018_lowl.TT_clik": "e78fb8066c2dbf2ced3a102973706b843f21c79882a67957f916c94df9a0c318"
+    },
+    "published_cosmological_centres": {
+      "logA": 3.045,
+      "ns": 0.9649,
+      "ombh2": 0.02236,
+      "omch2": 0.1202,
+      "tau": 0.0544,
+      "theta_MC_100": 1.0409
+    }
+  },
+  "interpretation": "One exact likelihood evaluation at the published Table 2 marginalized cosmological centers with one deterministic draw from the configured nuisance reference/prior measure. This is not the published best fit or a reproduction of marginalized constraints.",
+  "log_likelihood_components": {
+    "planck_2018_highl_plik.TTTEEE": -1981.831938415346,
+    "planck_2018_lowl.EE_clik": -198.0775858760956,
+    "planck_2018_lowl.TT_clik": -11.808515424172015
+  },
+  "log_likelihood_sum": -2191.718039715614,
+  "log_prior_components": {
+    "0": -28.333819946554264,
+    "SZ": -2.623848439487015
+  },
+  "log_prior_sum": -30.95766838604128,
+  "model": {
+    "camb": "1.6.6",
+    "clipy_like": "0.15",
+    "cobaya": "3.6.2",
+    "config_path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_baseline/planck2018_nolens_camb1166.yaml",
+    "config_sha256": "c1d38c87d4035dbe7c9c2d323ddc5d1b58694d9ac4bec2f6ef3808ff95bac909",
+    "sampled_parameter_count": 27,
+    "sampled_parameter_names": [
+      "logA",
+      "ns",
+      "theta_MC_100",
+      "ombh2",
+      "omch2",
+      "tau",
+      "A_planck",
+      "calib_100T",
+      "calib_217T",
+      "A_cib_217",
+      "xi_sz_cib",
+      "A_sz",
+      "ksz_norm",
+      "gal545_A_100",
+      "gal545_A_143",
+      "gal545_A_143_217",
+      "gal545_A_217",
+      "ps_A_100_100",
+      "ps_A_143_143",
+      "ps_A_143_217",
+      "ps_A_217_217",
+      "galf_TE_A_100",
+      "galf_TE_A_100_143",
+      "galf_TE_A_100_217",
+      "galf_TE_A_143",
+      "galf_TE_A_143_217",
+      "galf_TE_A_217"
+    ]
+  },
+  "runtime_seconds": 2.78890120703727,
+  "seed_for_nuisance_reference_draw": 20260925,
+  "status": "full_likelihood_one_point_smoke_pass_not_fit",
+  "thread_environment": {
+    "CLIPY_NOJAX": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  }
+}

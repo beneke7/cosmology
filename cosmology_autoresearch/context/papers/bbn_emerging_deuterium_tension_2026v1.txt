@@ -1,0 +1,1119 @@
+                                                     What could an emerging Big Bang Nucleosynthesis discrepancy be hinting at?
+
+                                                                                                     Vivian Poulin ID ∗
+                                                                                   Laboratoire Univers & Particules de Montpellier (LUPM),
+                                                                                       CNRS & Université de Montpellier (UMR-5299),
+                                                                                 Place Eugène Bataillon, F-34095 Montpellier Cedex 05, France
+
+                                                                                                     Julien Froustey ID †
+                                                                            Institut de Fı́sica Corpuscular (IFIC), CSIC-Universitat de València,
+                                                                    Parc Cientı́fic UV, C/ Catedrático José Beltrán 2, E-46980 Paterna (València), Spain
+
+                                                                                                      Cyril Pitrou ID ‡
+                                                                                    Institut d’Astrophysique de Paris, Sorbonne Université,
+                                                                                   CNRS UMR 7095, 98 bis bd Arago, 75014 Paris, France
+
+                                                                                                    Tristan L. Smith ID §
+                                                       Department of Physics and Astronomy, Swarthmore College, 500 College Ave., Swarthmore, PA 19081, USA
+                                                                                              (Dated: July 24, 2026)
+                                                                 The latest measurement of the primordial deuterium abundance is in ∼ 2σ tension with several
+                                                              state-of-the-art predictions of standard big bang nucleosynthesis (BBN), when using the baryon
+arXiv:2607.20635v1 [astro-ph.CO] 22 Jul 2026
+
+
+
+
+                                                              density inferred from the ΛCDM model fit to cosmic microwave background (CMB) data. This
+                                                              tension increases to ∼ 3σ for models attempting to solve the Hubble tension, such as early dark
+                                                              energy (EDE), which generally predict a larger baryon density than in ΛCDM. We test whether
+                                                              this discrepancy could be pointing to a non-standard expansion history during BBN. We compute
+                                                              light-element abundances with PRIMAT and compare ΛCDM, a ∆Neff extension, and a very early
+                                                              dark energy (vEDE) component. For vEDE, we sample ∆H/H, the fractional increase of the
+                                                              expansion rate while deuterium burning is freezing out and helium-4 fusion is mostly over. The
+                                                              Bayesian analysis using BBN plus the CMB baryon-density constraint in the EDE cosmology gives
+                                                              ∆H/H = 0.087+0.036
+                                                                               −0.037 during the deuterium burning epoch (i.e., at a temperature TD ≃ 0.03 MeV),
+                                                              and no residual tension. The vEDE component preserves the observed deuterium abundance at the
+                                                              larger CMB baryon density while only mildly affecting helium-4. By contrast, extra radiation raises
+                                                              the helium-4 abundance too efficiently and does not reconcile the baryon density determinations.
+                                                              Together with inflation, dark energy, and EDE, our results hint at the presence of another light
+                                                              scalar-field in cosmology.
+
+
+                                                                  I.   INTRODUCTION                               ΛCDM. Whether this discrepancy ultimately survives
+                                                                                                                  improved nuclear input and abundance measurements re-
+                                                  Big Bang Nucleosynthesis (BBN) is a precision probe             mains to be seen, but it is already useful to ask what it
+                                               of the expansion history at temperatures well above those          would be telling us if it persisted or grew.
+                                               directly tested by the cosmic microwave background                    BBN is sensitive to the baryon density ωb ≡ Ωb h2
+                                               (CMB). At present, however, modern BBN calculations                through the baryon-to-photon ratio η (see, e.g., [9] for the
+                                               do not give identical predictions for the primordial deu-          relation between these quantities). The baryon density
+                                               terium abundance (D/H), even though they agree well                controls in particular the efficiency of deuterium burning,
+                                               on the helium-4 prediction [1–7]. The difference between           with D/H ∝ ωb−1.65 around the ΛCDM solution. The
+                                               BBN codes mainly traces back to the selection and treat-           primordial deuterium abundance is measured at percent
+                                               ment of the deuterium-burning nuclear rates, which re-             precision using metal-poor absorption systems. Using the
+                                               quire converting sparse low-energy data into thermonu-             Cooke et al. measurement [10]
+                                               clear rates, and different defensible choices shift the pre-                        105 D/H = 2.527 ± 0.030,               (1)
+                                               dicted residual D/H [8]. In particular, the most up-to-
+                                               date implementation of the BBN code PRIMAT, together               In standard BBN in the PRIMAT setup, this D/H mea-
+                                               with its adopted nuclear reaction rates, leads to a mild           surement alone gives approximately
+                                               discrepancy with the CMB baryon density inferred in
+                                                                                                                                   ωbBBN ≃ 0.0219 ± 0.00022               (2)
+                                                                                                                  where the error bar include both observational and
+                                                                                                                  PRIMAT nuclear rates uncertainty.1 This lies roughly 2.1σ
+                                               ∗ vivian.poulin@umontpellier.fr
+                                               † julien.froustey@ific.uv.es
+                                               ‡ cyril.pitrou@iap.fr
+                                               § tsmith2@swarthmore.edu                                           1 More   recent measurements and compilations recommend the
+                                                                                                                              2
+
+below the ΛCDM CMB value ωb = 0.022398 ± 0.000095                   larger CMB-inferred value of H0 . Yet this is accompa-
+inferred from the Planck NPIPE [14], ACT [15], and                  nied by a higher baryon density inferred from the CMB
+SPT [16] CMB data combination, hereafter SPA [16].                  power spectrum: the latest EDE analysis combining up-
+Even within ΛCDM, the inclusion of DESI BAO data                    to-date CMB, BAO, and SH0ES-calibrated Pantheon+
+pulls the CMB-inferred baryon density upward; for ex-               SN1a data yields [34, 35]
+ample the corresponding CMB+DESI value is ωb =
+0.022478 ± 0.000091 [16], increasing the tension to 2.4σ.                            ωb = 0.02272 ± 0.00014 ,               (4)
+   If this discrepancy persists, modified expansion during
+                                                                    which is roughly 3.1σ above the PRIMAT D/H-only value
+BBN is a natural phenomenological possibility to explore.
+                                                                    in Eq. (2). More generally, a positive H0 –ωb correlation
+Once the deuterium bottleneck opens, nuclear reactions
+                                                                    is expected in pre-recombination solutions to the Hub-
+have only a finite time to process deuterium into heavier
+                                                                    ble tension [36]. This behavior is found in the recent
+nuclei. Increasing the expansion rate shortens this in-
+                                                                    “H0 World Cup” analyses [34, 35] (see Figs. 21 & 22
+terval and raises the surviving D/H abundance [17–19].
+                                                                    in [35])—a comprehensive benchmarking of models pro-
+Consequently, the same value of D/H is obtained with a
+                                                                    posed to resolve the Hubble tension–across the successful
+larger ωb , thus removing the tension. The key question is
+                                                                    early-universe models, whether they alter recombination
+not only whether such a change can accommodate D/H,
+but whether it can do so without spoiling the success of            physics itself or the pre-recombination expansion history,
+helium-4. The helium-4 abundance is well measured, and              as in EDE. Therefore, if EDE or a related early-time so-
+its theoretical prediction is comparatively robust across           lution ultimately proves correct, the higher CMB baryon
+modern BBN codes because it is controlled mainly by the             density would exacerbate the BBN discrepancy and make
+neutron-to-proton ratio at weak freeze-out rather than by           the case for additional BBN-era physics even sharper [36].
+the late nuclear rates.                                                The “ωb tension” is not identical in all modern
+   The recent Large Binocular Telescope (LBT) determi-              BBN calculations: the standard D/H prediction of
+nation of the helium-4 abundance [20]                               PArthENoPE [2, 4], or that of Ref. [3], is in closer agree-
+                                                                    ment with Eq. (1). The difference mainly comes from
+                   Yp = 0.2458 ± 0.0013 ,                    (3)    the deuterium-burning nuclear rates. While D(p, γ)3 He
+                                                                    has been precisely measured [37], the D(D, n)3 He and
+provides the complementary weak-freeze-out probe used               D(D, p)3 H rates remain less certain, and different justi-
+in this work [21]. Measurements on extremely metal-poor             fied conversions of the data into nuclear rates lead to dif-
+galaxies by the EMPRESS collaboration have resulted in              ferent predictions in PRIMAT and PArthENoPE [8]. Other
+a lower value for Yp [22, 23]. In this work, we retain              codes, such as PRyMordial [6], allow the user to choose
+the most recent determination (3), noting that a lower              between rate sets. A recent independent approach us-
+Yp could be accommodated, for instance, by a nonzero                ing LINX [38] and Gaussian-process nuclear-rate fits also
+electron neutrino chemical potential [24–26]. This helium           hints at a mild baryon-density tension, with results close
+constraint is precisely why a constant radiation excess,            to the PRIMAT ones [7]. Note, however, that even the
+parameterized by ∆Neff , is already tightly constrained             PArthENoPE determination of ωb is in small tension with
+by BBN: the same extra radiation that raises D/H also               early-universe solutions that prefer a high CMB baryon
+changes weak freeze-out and therefore Yp [1, 27–29]. It             density [34, 35].
+is therefore natural to ask whether a transient expansion              In this work, we use a new Python implementation of
+episode can instead increase H during the deuterium-                PRIMAT to ask whether the emerging BBN–CMB baryon-
+burning epoch while leaving weak freeze-out and helium-             density discrepancy could be a sign of a non-standard
+4 production largely unaffected.                                    expansion history during BBN, and which kind of mod-
+   Early dark energy (EDE) provides a concrete set-                 ification is required. We compare ΛCDM, a constant
+ting in which to test this idea. EDE has emerged as                 radiation contribution parameterized by ∆Neff , and a
+a promising framework to address the Hubble tension                 model involving an additional transient very early dark
+between direct measurements of the Hubble constant                  energy (vEDE) contribution during BBN. Related stud-
+and the value inferred from the CMB assuming ΛCDM                   ies have constrained specific transitions during BBN and
+[30–33]. By increasing the pre-recombination expansion              model-independent modifications of the expansion his-
+rate, EDE reduces the sound horizon and allows for a                tory [39, 40].
+                                                                       From this perspective, vEDE is not introduced only as
+                                                                    a fix for a specific cosmological model, but as one pos-
+                                                                    sible explanation of what a persistent BBN discrepancy
+  slightly lower value 105 D/H = 2.508 ± 0.030 [11–13]. In the      could be hinting at. Cosmology already entertains sev-
+  same PRIMAT setup, this lower D/H value would shift the in-       eral epochs in which scalar fields may dominate or signif-
+  ferred baryon density upward to ωb ≃ 0.0220, reducing the ten-
+                                                                    icantly affect the expansion history, including inflation,
+  sion to about 1.6σ with the ΛCDM CMB value quoted below, or
+  about 2.0σ with the higher CMB+DESI ΛCDM value. We retain         late-time dark energy, and perhaps EDE. It is therefore
+  Eq. (1) in the main analysis because it has been widely used in   natural to ask whether another transient episode during
+  recent BBN comparisons, and present the lower-D/H results in      BBN could account for the discrepancy. For this rea-
+  Appendix A.                                                       son, our main combined BBN+CMB analyses use the
+                                                                                                                              3
+
+high baryon density inferred in the EDE cosmology as                        B.        Very early dark energy
+a representative target: it makes the BBN discrepancy
+sharper and connects the possible BBN-era episode to the                        1.     Energy density evolution
+broader sequence of scalar-field epochs. We also repeat
+the analysis using the lower ΛCDM CMB baryon-density             We adopt a phenomenological vEDE density evolu-
+constraint in Appendix B.                                     tion motivated by axion-like models with a potential
+   Our main result below is that an increase in expansion     V (ϕ) ∝ [1 − cos(ϕ/f )]n [30, 46–48]. In these models,
+rate can resolve this emerging tension, and the timing of     the field is initially frozen and becomes dynamical at the
+the expansion-rate enhancement is essential: a transient      critical redshift zc , after which its time-averaged equation
+vEDE component within the deuterium-burning epoch             of state is
+can preserve deuterium at large ωb without producing
+                                                                                               n−1
+the helium shift associated with constant extra radiation.                              wn =          .                 (6)
+This results in an upper limit to the time at which the                                        n+1
+vEDE field becomes dynamical, or equivalently, an upper       In the post-e± -annihilation regime, where T ∝ a−1 , the
+limit on the effective mass of the field.                     vEDE energy density evolves as
+   The cosmological consequences of such very early tran-
+sient components are not limited to the homogeneous                                  2ρvEDE (Tc )
+                                                                  ρvEDE (T ) =                     ,      α = 3(1 + wn ),    (7)
+expansion history. Ref. [41] studied for the first time                              1 + (Tc /T )α
+scalar-field vEDE models that become dynamical after          where Tc = T0 (1 + zc ) and T0 = 2.7255 K [49]. We
+BBN and before matter-radiation equality, showing that        fix n = 3, for which wn = 1/2 and α = 9/2, so that
+they can leave distinctive signatures in the small-scale      the field dilutes faster than radiation after becoming dy-
+matter power spectrum while producing relatively small        namical. This choice is made by analogy with the stan-
+changes in the primary CMB when the transition occurs         dard EDE parameterization used in CMB analyses of the
+sufficiently early. In particular, if the vEDE component      Hubble tension, where n = 3 is a common benchmark
+temporarily dominates the energy density, modes enter-        that gives a rapidly-diluting post-transition component
+ing the horizon near the transition can develop a bump        [30, 50]. The results are not driven by this specific value:
+in power, whereas modes on neighboring scales are sup-        we have checked that using a much larger n, for which
+pressed. Our analysis is complementary: rather than           wn → 1 and the post-transition evolution approaches
+using late-time structure to search for these small-scale     kination, does not qualitatively alter the BBN reconcili-
+signatures, we ask whether a vEDE contribution during         ation. We therefore expect the conclusions to be stable
+BBN can reconcile the light-element and CMB baryon-           for any post-transition evolution that dilutes faster than
+density determinations.                                       radiation. They would be affected only if the additional
+   The rest of the paper is structured as follows. We in-     component diluted more slowly than, or at the same rate
+troduce the models and motivate our vEDE parameter-           as, radiation, since in that case the expansion-rate en-
+ization in Sec. II. The PRIMAT calculation, datasets, and     hancement would persist outside the deuterium-burning
+statistical analysis are described in Sec. III. We present    window and would no longer be equivalent to the tran-
+the PL and MCMC results in Sec. IV, before discussing         sient vEDE histories studied here.
+their implications and concluding in Sec. V.                     The fractional vEDE contribution at the critical red-
+                                                              shift zc is
+                                                                                                   ρvEDE (Tc )
+                      II.   MODELS                                       fvEDE (zc ) =                                .      (8)
+                                                                                             ρstd (Tc ) + ρvEDE (Tc )
+
+                 A.    ΛCDM and ∆Neff                         The total Hubble rate entering the nuclear evolution is
+                                                                        2                8πG
+                                                                       Htot (T ) =           [ρstd (T ) + ρvEDE (T )] .      (9)
+   Our baseline BBN calculation assumes the ΛCDM                                          3
+expansion history and the Standard Model prediction
+  SM
+Neff  = 3.044 [42–45]. We compare it to an extension
+                                                                           2.    vEDE amplitude during BBN
+in which
+
+                  Neff = 3.044 + ∆Neff .               (5)       The conventional parameters (fvEDE , zc ) are well
+                                                              suited to CMB analyses, but not to the BBN problem
+A positive ∆Neff raises the radiation density throughout      considered here. BBN is sensitive to the expansion rate
+BBN. At fixed ωb , the resulting faster expansion leaves      over a finite temperature range, rather than to the vEDE
+more deuterium unburned, but also increases the neutron       fraction at the critical redshift. We therefore trade fvEDE
+abundance at the onset of nucleosynthesis, and hence Yp .     for
+We allow ∆Neff to take either sign in the analysis in order                                            Htot (TD )
+                                                                         δD ≡ ∆H/H(TD ) =                         − 1,      (10)
+to map the full likelihood around its best fit.                                                        Hstd (TD )
+                                                                                                                                                                                  4
+
+where TD is a pivot temperature for which deuterium,                                                                            Redshift z
+but not helium-4, is sensitive to the expansion rate (see                                                           109                                  108
+                                                                                                             100
+below). δD directly fixes the vEDE density at the pivot:
+
+
+
+
+                                                                                                                                                    TD = 0.0293 MeV
+         ρvEDE (TD ) = (1 + δD )2 − 1 ρstd (TD ).
+                                     
+                                                     (11)                                                   10 2
+
+
+
+
+                                                                                   Mass abundance Xi AiYi
+Combining Eqs. (7) and (11) gives                                                                           10 4
+
+                                                                                                            10 6
+                                                α 
+                 1         2
+                                                 Tc
+ ρvEDE (Tc ) =     (1 + δD ) − 1 ρstd (TD ) 1 +           .
+                 2                                TD                                                                                    late D/H
+                                                       (12)                                                 10 8                       freeze-out
+
+For a given (δD , zc ), the fractional contribution at zc ,                                                                                                           n     3He
+fvEDE (zc ), is then a derived parameter, obtained by com-                                                  10 10                                                     p     4He
+                                                                                                                                                                      D     7Li
+bining Eqs. (12) and (8).                                                                                                                                             3H    7Be
+
+  The reason for sampling δD rather than fvEDE is that                                                      10 12
+BBN is sensitive to the vEDE density near TD , whereas
+                                                                                                              1.0
+
+
+
+
+                                                                                          c)
+fvEDE is defined at the transition temperature Tc . When-
+
+
+
+
+                                                                                     H/H]Tc
+                                                                           RX(Tc) [ lnX(T
+                                                                             (normalized)
+ever Tc lies far from the BBN-sensitive window, on ei-                                                                                                                      4He
+ther side, the same expansion-rate change at TD maps                                                                                                                        D/H
+                                                                                                              0.5
+through Eq. (12) onto a peak vEDE fraction that grows
+rapidly and can approach unity.2 A flat prior on fvEDE
+                                                                                                              0.0
+would therefore spend most of its volume on this poorly                                                                   10 1                                             10 2
+constrained extrapolation, whereas δD directly labels the                                                                  Temperature T [MeV]
+expansion-rate change to which the abundances respond.
+We adopt
+                                                                           FIG. 1. Top: Standard evolution of light element abundances
+              TD = 3.4 × 108 K = 0.0293 MeV ,                     (13)     obtained with PRIMAT, using a small network of nuclear re-
+                                                                           actions. Yi ≡ ni /nB is the ratio of the density of i and
+which corresponds to zD ≃ 1.25×108 . This choice should                    the total baryon density, and Ai is the mass number, so the
+be understood as a parameterization pivot, not a new                       plotted mass abundance is Xi ≡ Ai Yi ; the upper axis gives
+fundamental scale. Its physical motivation is illustrated                  the corresponding redshift. Bottom: normalized sensitivity of
+                                                                           the final abundances to a localized change in the expansion
+in Fig. 1. The deuterium bottleneck is released earlier,
+                                                                           rate, RX (Tc ) ≡ ∆ ln X(Tc )/[∆H/H]Tc , where X is a final
+at T ≃ 0.06–0.08 MeV: deuterium first becomes resistant                    light-element abundance (D/H or Yp ), Tc is the temperature
+to photodissociation, rises rapidly, and opens the path to                 at which a fixed-amplitude expansion boost is centered, and
+helium synthesis (note that in this phase, the deuterium                   [∆H/H]Tc is the realized fractional expansion-rate boost ac-
+density tracks in nuclear statistical equilibrium value).                  tually produced at Tc (open circles: the individual scanned
+The residual deuterium abundance is fixed by reactions                     solves, each a full nonlinear PRIMAT run differenced against
+such as D(p, γ)3 He and the two D + D channels, which                      a no-boost baseline). The shaded band highlights the late
+continue to destroy deuterium until their rates fall below                 deuterium-burning region around TD , where changing the ex-
+the Hubble rate at T of a few 10−2 MeV. In a representa-                   pansion rate alters the residual D/H abundance after the bulk
+tive standard BBN calculation, D/H = 2.88×10−5 at TD ,                     of helium-4 synthesis is complete. Increasing H in this win-
+                                                                           dow leaves more residual deuterium while acting well after
+compared with its asymptotic value 2.44 × 10−5 ; about
+                                                                           weak freeze-out and the main helium-4 production epoch.
+15% of the deuterium present at the pivot is therefore
+still destroyed afterward.
+   This residual burning is precisely what the pivot is
+                                                                           RX (Tc ) ≡ ∆ ln X(Tc )/[∆H/H]Tc of the final abundances
+designed to capture: ∆H/H(TD ) probes the expansion
+                                                                           to a localized change in the expansion rate, where Tc is
+rate while the final D/H is still being set, but well af-
+                                                                           the (fixed-amplitude) boost’s temperature, not the evolv-
+ter neutron–proton weak freeze-out at T ∼ 0.8 MeV and
+                                                                           ing photon temperature of a single history: each point is
+the production of most 4 He (around T ∼ 0.07 MeV, dis-
+                                                                           a full nonlinear PRIMAT solve with the boost centered at
+cussed above). It is therefore considerably more specific
+                                                                           Tc , differenced (in log) against a single no-boost base-
+to deuterium than an expansion-rate enhancement main-
+                                                                           line. At TD the D/H response is still appreciable, while
+tained throughout BBN. We make this quantitative in
+                                                                           the Yp response is already negligible. This is the desired
+the lower panel of Fig. 1, which shows the sensitivity
+                                                                           regime: δD changes the amount of residual deuterium de-
+                                                                           struction without significantly changing helium-4. Mov-
+                                                                           ing the pivot to 8 × 108 K ≃ 0.069 MeV would instead
+2 From    Eq. (12), at fixed δD we have ρEDE (Tc )/ρstd (Tc ) ∝            place it at the bottleneck release, where it overlaps the
+  (TD /Tc )4 [1 + (Tc /TD )α ], using that ρstd (T ) ∝ T 4 in the radia-   rapid assembly of 4 He, whereas 2.3 × 108 K ≃ 0.020 MeV
+  tion era. Since α = 9/2, for Tc ≪ TD or Tc ≫ TD the ratio goes           is already close to the final deuterium plateau. In prac-
+  to infinity, such that fvEDE → 1 [see Eq. (8)].                          tice, we have tested several pivot temperatures across this
+                                                                                                                           5
+
+window, and the value in Eq. (13) lies safely inside the          tribution to the total −2 ln LBBN is
+deuterium sensitivity window of Fig. 1.
+                                                                   −2 ln LBBN (θ) ≡ χ2BBN (θ)
+                                                                                    X X − Xobs 2
+                                                                                        "                             #
+                                                                                                                2
+                                                                                                                     
+                                                                                  =            2       + ln 2π σtot,X ,
+                                                                                              σtot,X
+                                                                                      X
+                III.    ANALYSIS SETUP
+                                                                                                                        (14)
+
+                   A.   BBN calculation                           where the sum runs over X = Yp and 105 D/H, with
+                                                                                         2            2         2
+                                                                  the total variance σtot,X  (θ) = σobs,X   + σth,X (θ) and
+                                                                  observational central values and errors (Yp , σobs ) =
+   We compute Yp and D/H with the latest PRIMAT code,             (0.2458, 0.0013) and (105 D/H, σobs ) = (2.527, 0.030)
+rewritten in Python (version 0.3.2),3 which includes the          from Eqs. (3) and (1). Here σth,X (θ) is the tabulated
+same thermodynamic, weak-rate, and nuclear-network                PRIMAT Monte Carlo abundance uncertainty from the nu-
+calculation elements described in [1, 43]. The Bayesian           clear rates and neutron lifetime, added in quadrature
+MCMC and profile-likelihood analyses are driven                   to the observational error. Because σth depends on θ,
+through the primat tools interface,4 which evaluates              the Gaussian normalization term ln(2πσtot   2
+                                                                                                                ) cannot be
+the abundance likelihood given below in Eq. (14) at each          dropped: it penalizes regions of inflated theoretical error
+sampled or profiled point. The only modification we               and is required for the likelihood to be properly normal-
+make to PRIMAT itself is to add the vEDE contribution             ized, reducing to the usual observational χ2 (up to an ad-
+to the total expansion rate [Eq. (9)], normalized through         ditive constant) only when σth is independent of θ. The
+the fixed value δD ≡ ∆H/H(TD ) = Htot /Hstd (TD ) − 1             same LBBN is minimized in the profile-likelihood anal-
+[Eq. (10)] at the pivot temperature TD ; the conven-              ysis and sampled in the Bayesian analysis. For brevity
+tional fraction fvEDE (zc ) is then obtained as a derived         we write χ2BBN ≡ −2 ln LBBN ; the profile-likelihood and
+quantity. We use the “small” network, which contains              QDMAP statistics defined below are differences of this
+eight light nuclides and the twelve key thermonuclear             quantity, in which the additive normalization constants
+reactions n(p, γ)D, D(p, γ)3 He, D(D, n)3 He, D(D, p)3 H,         cancel. We do not include 3 He or 7 Li in the likelihood,
+3
+  H(p, γ)4 He, 3 H(D, n)4 He, 3 H(4 He, γ)7 Li, 3 He(n, p)3 H,    the former lacking precision measurements (although re-
+3
+  He(D, p)4 He, 3 He(4 He, γ)7 Be, 7 Be(n, p)7 Li, and            cent progress was achieved in [52]), and the latter being
+7
+  Li(p,4 He)4 He, in addition to the weak neutron–proton          related to the well-known “lithium problem,” whose sta-
+rates. This network includes the reactions that control           tus is at present unclear [13].
+the Yp and D/H predictions while allowing PRIMAT to                  When combining BBN with CMB information, we use
+be evaluated directly in the MCMC and PL analyses.                a one-dimensional Gaussian likelihood for the baryon
+The larger network is only relevant for lithium and               density,
+is considerably slower, so we use the small network
+                                                                                                                2
+for computational efficiency. The central weak-rate
+                                                                                                   
+                                                                                       2             ωb − µEDE
+normalization uses a neutron lifetime τn = 878.4 s [51].          −2 ln LCMB (ωb ) ≡ χCMB (ωb ) =                  + const.,
+                                                                                                        σEDE
+We include the tabulated PRIMAT Monte Carlo abun-                                                                        (15)
+dance uncertainties from nuclear rates and the neutron            with
+lifetime, added in quadrature to the observational errors.
+We then profile (or, in the Bayesian case, marginalize)                      (µEDE , σEDE ) = (0.02272, 0.00014).       (16)
+this effective abundance likelihood over the cosmological
+                                                                  This Gaussian is a fit to the marginalized ωb poste-
+model parameters, without explicitly profiling the
+                                                                  rior from an EDE analysis of the same SPA CMB data
+individual nuclear-rate nuisance parameters.
+                                                                  set [34, 35]. We use the same EDE-derived baryon-
+                                                                  density likelihood for ΛCDM, ∆Neff , and vEDE when
+                                                                  combining BBN and CMB information. This choice is
+                                                                  deliberate: the EDE fit provides a representative high-ωb
+              B.   Datasets and likelihoods                       target from early-time Hubble-tension solutions, making
+                                                                  the BBN consistency problem sharper and connecting the
+  We model the abundance measurements in Eqs. (1)                 possible BBN-era vEDE episode to the broader sequence
+and (3) as independent Gaussian likelihoods. Their con-           of scalar-field epochs discussed above. This is not meant
+                                                                  to assign the EDE CMB likelihood to the other BBN
+                                                                  models as a self-contained cosmology; rather, we ask
+                                                                  which BBN expansion histories can accommodate that
+                                                                  target. In Appendix B we repeat the comparison using
+3 PRIMAT is available at https://github.com/CyrilPitrou/primat    the lower ΛCDM CMB baryon-density constraint from
+4 primat tools is available at https://github.com/CyrilPitrou/    the same SPA data set.
+  primat_tools; it wraps PRIMAT in a Cobaya likelihood and pro-      We approximate the joint analysis by simply sum-
+  vides the fixed-ωb profile-likelihood driver.                   ming χ2CMB+BBN ≡ χ2BBN + χ2CMB with a shared ωb .
+                                                                                                                      6
+
+Because the vEDE component considered here has di-           while for the radiation extension we use
+luted away long before recombination, we do not expect
+it to strongly affect the primary CMB spectra through          0.0205 < ωb < 0.0240 ,      −0.5 < ∆Neff < 0.6 . (19)
+the usual recombination-era EDE mechanism. However,
+Ref. [41] shows that very early transient components can     For each extension we perform dedicated BBN-only and
+still leave signatures in the matter transfer function on    BBN+CMB analyses.
+scales that are inside the horizon while the vEDE den-          We complement the Bayesian analysis with a frequen-
+sity is dynamically important. Our compressed CMB            tist PL analysis of the BBN data. At each of ∼ 20
+treatment therefore isolates the baryon-density compar-      fixed ωb values in the range defined above, we minimize
+ison and does not attempt to model these small-scale         Eq. (14) over {δD , log10 zc } for vEDE and over {∆Neff }
+matter-power signatures. Our Gaussian approximation          for the radiation extension. MCMC points provide the
+isolates the comparison of the baryon-density determi-       initial positions for Minuit, a numerical minimization
+nations, but does not replace a joint BBN+CMB anal-          and error-analysis package [55], followed by a bounded
+ysis. More precisely, our use of the EDE-derived CMB         numerical minimization. This procedure determines the
+constraint on ωb should be viewed as a proxy for a full      best fit at each fixed ωb .
+analysis containing both an EDE component relevant              For each model, we define the BBN-only PL as
+near recombination and a distinct vEDE component rel-                                              
+evant during BBN. The CMB information fixes the EDE-                                           b b ) − χ2
+                                                                ∆χ2BBN,PL (ωb ) ≡ χ2BBN ωb , θ(ω        BBN,min , (20)
+correlated target value of ωb , while the BBN likelihood
+constrains vEDE. A joint EDE+vEDE fit to the complete        where θ(ω
+                                                                    b b ) denotes the model-specific parameters that
+CMB and abundance likelihoods is beyond the scope of         minimize χ2BBN at fixed ωb (for ΛCDM the likelihood is
+this work.                                                   simply evaluated at a given ωb , while we vary {∆Neff }
+   To quantify the consistency between the BBN and           for the radiation extension and {δD , log10 zc } for vEDE).
+CMB determinations of ωb , we use the difference in best-
+fit χ2 at the maximum a-posteriori (MAP) [53],
+                                                                                 IV.    RESULTS
+∆χ2DMAP = χ2MAP,BBN+CMB − χ2MAP,BBN − χ2MAP,CMB ,
+          q
+ QDMAP ≡ ∆χ2DMAP .                           (17)               Results of the different analyses are presented in Ta-
+                                                             ble I. We provide posterior means, best fits and cred-
+For the compressed Gaussian CMB likelihood used here,        ible intervals at 68% for cosmological parameters and
+χ2MAP,CMB = 0 by construction. For one effective de-         BBN yields, as well as the tension metric QDMAP and
+gree of freedom, QDMAP is the corresponding tension          the model-selection statistic ∆AIC.
+in units of standard deviations. Since the target is the
+consequence of an early-time Hubble-tension solution—
+namely the elevated CMB baryon density—we evaluate                        A.   BBN profile likelihoods
+both QDMAP and ∆AIC for all three BBN models against
+the common EDE CMB constraint from Eq. (16). Note               We show the BBN-only PL of ωb in Fig. 2. The BBN-
+that QDMAP is a dataset-compatibility (goodness-of-fit)      only profile best fits and 68% confidence intervals, ob-
+metric, not a model-selection criterion: it carries no ex-   tained from a smooth fit/interpolation of the tabulated
+plicit penalty for the number of extra parameters. We        fixed-ωb profile points around the minimum and defined
+perform model selection by computing the Akaike in-          by ∆χ2BBN,PL ≤ 1, are
+formation criterion, AIC = χ2min + 2k, where k is the
+number of parameters in a model, evaluated on the com-        ΛCDM :        ωb = 0.021882+0.000247
+                                                                                         −0.000186    (68% CL) . (21)
+bined BBN+CMB fit. We report the difference between
+ΛCDM and the extended models, ∆AIC ≡ ∆χ2 + 2∆k,              For the two extensions we find
+where ∆k = 1 for ∆Neff and ∆k = 2 for vEDE.
+                                                               ∆Neff :      ωb = 0.021727+0.000345
+                                                                                         −0.000197    (68% CL),
+                                                               vEDE :       ωb = 0.021882+0.001464
+                                                                                         −0.000186    (68% CL).    (22)
+                C.   Statistical analysis
+                                                                Allowing ∆Neff broadens slightly the BBN confidence
+  To obtain constraints on ωb , ∆Neff and {δD , zc }, we     interval towards larger ωb . However, the PL rises rapidly
+perform a Bayesian MCMC analysis with Cobaya [54],           across the CMB-preferred region. The vEDE result is
+running four chains in parallel. We consider the chains      qualitatively different: its PL remains nearly flat across
+to be converged when they fulfill the Gelman–Rubin cri-      the EDE CMB constraint, showing that the vEDE en-
+terion R − 1 < 0.01. For vEDE, we adopt uniform priors       ables compatible high-ωb and high-D/H values.
+                                                                Within ΛCDM, the joint BBN+CMB best fit is ωb =
+     0.0205 < ωb < 0.0240 ,      0 < δD < 0.20 ,             0.02249 and ∆χ2DMAP ≃ 9.8, corresponding to QDMAP =
+                                                     (18)
+          7 < log10 zc < 10 ,                                3.1σ. Allowing ∆Neff does not improve the consistency,
+                                                                                                                              7
+
+ Parameter                                             BBN                                          BBN+CMB ωb
+                                                           ΛCDM
+ 100 ωb                                       2.1925+0.0212
+                                                     −0.0211 (2.1882)                            2.2479+0.0118
+                                                                                                       −0.0113 (2.2488)
+ Yp                                        0.246781+0.000093
+                                                    −0.000093 (0.246759)                      0.247022+0.000051
+                                                                                                      −0.000049 (0.247024)
+ 105 D/H                                      2.5272+0.0397
+                                                     −0.0399 (2.5346)                            2.4256+0.0201
+                                                                                                       −0.0210 (2.4237)
+ QDMAP                                                   –                                                3.1σ
+ ∆AIC                                                    –                                                  0
+                                                            ∆Neff
+ 100 ωb                                       2.1817+0.0255
+                                                     −0.0265 (2.1727)                            2.2518+0.0118
+                                                                                                        −0.0118 (2.2523)
+ ∆Neff                                        −0.064+0.094
+                                                     −0.093 (−0.083)                               0.076+0.076
+                                                                                                        −0.079 (0.078)
+ Yp                                        0.245863+0.001323
+                                                    −0.001325 (0.245570)                      0.248048+0.001034
+                                                                                                       −0.001059 (0.248071)
+ 105 D/H                                      2.5255+0.0412
+                                                     −0.0404 (2.5354)                            2.4434+0.0285
+                                                                                                        −0.0273 (2.4428)
+ QDMAP                                                   –                                                3.1σ
+ ∆AIC                                                    –                                               ≃ +1.2
+                                                            vEDE
+ 100 ωb                                       2.2650+0.0535
+                                                     −0.0531 (2.1882)                            2.2708+0.0141
+                                                                                                        −0.0137 (2.2713)
+ δD = ∆H/H(TD )                                 0.082+0.071
+                                                     −0.065 (0.000)                                0.087+0.036
+                                                                                                        −0.037 (0.079)
+ Yp                                        0.247208+0.000257
+                                                    −0.000302 (0.246758)                      0.247218+0.000063
+                                                                                                       −0.000111 (0.247156)
+ 105 D/H                                      2.5308+0.0388
+                                                     −0.0395 (2.5346)                            2.5292+0.0374
+                                                                                                        −0.0391 (2.5272)
+ QDMAP                                                   –                                                0.7σ
+ ∆AIC                                                    –                                               ≃ −5.3
+
+TABLE I. Posterior means and equal-tailed 68% Bayesian credible intervals, with best-fit values given in parentheses. The
+BBN+CMB columns use the CMB-derived value of the baryon-density in the EDE model as a Gaussian likelihood for all three
+models. We also report the tension metric QDMAP defined in Eq. (17) and ∆AIC, referenced to ΛCDM.
+
+
+
+          12                                                     strongly preferred over ΛCDM, confirming that its res-
+                                   Neff                          olution of the tension is not simply an artefact of the
+          10                      vEDE                           additional parameters.
+                                   CDM                              These values correspond to the baseline deuterium
+                                                                 measurement in Eq. (1). Since the PRIMAT predic-
+           8                                                     tion at the CMB-preferred baryon density lies below
+BBN, PL
+
+
+
+
+                                                                 the observed D/H, adopting the more recent central
+           6                                                     value 105 D/H = 2.508 [13] weakens the discrepancy:
+2
+
+
+
+
+                                                                 re-evaluating the stored profiles gives approximately
+           4                                                     QDMAP = 2.7σ, 2.8σ, and 0.7σ for ΛCDM, ∆Neff , and
+                                                                 vEDE, respectively, leaving the vEDE result essentially
+           2                                                     unchanged. The dedicated Bayesian analyses with this
+                                                                 deuterium determination are reported in Appendix A.
+           0
+               0.0210 0.0215 0.0220 0.0225 0.0230 0.0235
+                              b = bh 2                                B.   Impact on the light-element abundances
+
+FIG. 2. BBN-only PL of ωb , as defined in Eq. (20), within         To understand these differences, we show in Fig. 3 the
+ΛCDM (dashed black), ∆Neff (solid green), and vEDE (solid        abundances at the best fit of each fixed-ωb PL. At the
+blue), normalized to the best fit of each model. The vertical    central value of the common EDE CMB baryon-density
+band shows the common EDE CMB constraint from Eq. (16).          constraint, the baseline calculation predicts Yp ≃ 0.24712
+It is shown only as a reference; the CMB likelihood is not       and 105 D/H ≃ 2.383. Instead, at the ∆Neff BBN+CMB
+included in the PL.
+                                                                 profile best fit, the abundances are
+
+                                                                   Yp = 0.24807+0.00033
+                                                                               −0.00036 ,    105 D/H = 2.443+0.015
+                                                                                                            −0.015 . (23)
+yielding QDMAP = 3.1σ. By contrast, vEDE gives
+QDMAP = 0.7σ, showing that the BBN and CMB de-                   Relative to ΛCDM, the positive ∆Neff shift does move
+terminations of ωb are statistically consistent. We find         D/H toward the observed value 2.527. This improvement
+∆AIC ≃ +1.2 for the one-parameter ∆Neff extension and            is too small to compensate for the simultaneous increase
+∆AIC ≃ −5.3 for the two-parameter vEDE model. The                in Yp induced by the enhanced expansion rate during the
+radiation extension does not reconcile the two ωb deter-         neutron–proton weak freeze-out, so the combined abun-
+minations, remaining in ≃ 3σ tension, whereas vEDE is            dance fit is worse.
+                                                                                                                           8
+
+                                                                  The posterior therefore compromises between the CMB
+     0.250             Neff                                       baryon density and the two abundance measurements,
+                      vEDE                                        consistent with the rapid degradation of the BBN-only
+                       CDM
+     0.248                                                        PL across the CMB-preferred region.
+                                                                    The marginalized vEDE posterior distributions are
+Yp
+
+
+                                                                  shown in the right panel of Fig. 4. The BBN-only vEDE
+     0.246                                                        posterior is broad, since a range of expansion histories
+                                                                  produces the required change in deuterium. Combining
+     0.244                                                        BBN with the EDE CMB determination of ωb , we find
+                                                                  the posterior means and equal-tailed 68% credible inter-
+                                                                  vals
+
+           2.7                                                                     ωb = 0.022708+0.000141
+                                                                                                −0.000137 ,
+                                                                                                                        (27)
+                                                                                   δD = 0.087+0.036
+                                                                                             −0.037 ,
+           2.6
+  105D/H
+
+
+
+
+                                                                  while log10 zc < 8.3 (95% C.L.). The correspond-
+           2.5                                                    ing predicted abundances are Yp = 0.24722+0.00006
+                                                                                                                −0.00011 and
+                                                                     5             +0.037
+           2.4                                                    10 D/H = 2.529−0.039 . This latter value is now in per-
+                                                                  fect agreement with (1).
+           2.3                                                       The CMB constraint selects the positive correlation
+                                                                  between ωb and δD : a larger baryon density requires
+                 0.0210 0.0215 0.0220 0.0225 0.0230 0.0235        a larger expansion-rate enhancement to preserve deu-
+                                  b = bh 2                        terium. By contrast, the posterior remains broad in
+                                                                  zc . Through Eq. (12), this broad range of critical red-
+                                                                  shifts corresponds to very different values of fvEDE (zc )
+FIG. 3. PRIMAT abundance predictions at the best fit of each      but similar expansion histories during deuterium freeze-
+fixed-ωb PL in Fig. 2, for ΛCDM (dashed black), ∆Neff (solid
+                                                                  out. In Appendix C, we further discuss the posterior of
+green), and vEDE (solid blue). The horizontal grey bands
+show the 68% abundance constraints (1) and (3). The vertical      the derived quantity fvEDE (zc ), which suffers from prior-
+grey band shows the ΛCDM CMB-SPA determination of ωb ,            volume effects, contrary to the physically-sound sampled
+while the vertical blue band shows the common EDE CMB             parameter δD .
+determination of ωb (16).
+
+                                                                        V.    SUMMARY AND CONCLUSIONS
+  vEDE instead localizes the expansion-rate enhance-
+ment around the deuterium-burning epoch. The pre-                    In this paper, we have investigated whether a non-
+diction at the vEDE BBN+CMB profile best fit for the              standard expansion history during BBN can reconcile
+abundances is                                                     the measured light-element abundances with their pre-
+                                                                  dicted values at the high baryon density selected by EDE
+ Yp = 0.24716+0.00007
+             −0.00007 ,            105 D/H = 2.527+0.001
+                                                  −0.001 . (24)   CMB fits. We use EDE as a representative example
+                                                                  of the baryon-density shift induced by early-time reso-
+   The faster expansion during deuterium freeze-out com-          lutions of the Hubble tension [36], and ask what addi-
+pensates for the more efficient deuterium burning at              tional BBN-era physics would then be required. We have
+larger ωb . Since the vEDE contribution is transient, the         compared ΛCDM, a ∆Neff extension, and vEDE (a tran-
+corresponding change in Yp remains small.                         sient very early dark energy component) using a common
+                                                                  PRIMAT abundance likelihood. We have performed both
+                                                                  a Bayesian MCMC analysis and a frequentist PL analysis
+                     C.    Bayesian posteriors                    of the BBN data.
+                                                                     Within ΛCDM, the BBN-only PL favors ωb = 0.02188,
+  The corresponding marginalized distributions within             with 0.02170 < ωb < 0.02213 at 68% CL. Its consis-
+the ∆Neff extension are shown in the left panel of Fig. 4.        tency with the CMB determination is QDMAP = 3.1σ.
+Combining BBN with the EDE CMB determination of                   Allowing constant extra radiation does not improve the
+ωb shifts ∆Neff to positive values, with                          agreement: the faster expansion raises Yp too efficiently
+                                                                  while D/H remains below its measured value, giving
+                          ∆Neff = 0.076+0.076
+                                       −0.079              (25)   QDMAP = 3.1σ.
+                                                                     The result changes qualitatively within vEDE. The
+and predicted abundances                                          BBN-only PL remains nearly flat across the CMB-
+                                                                  preferred range of ωb , reducing the discrepancy to
+ Yp = 0.24805+0.00103
+             −0.00106 ,            105 D/H = 2.443+0.028
+                                                  −0.027 . (26)   QDMAP = 0.7σ. The reason is the timing of the
+                                                                                                                                                                                                  9
+
+                                                                            BBN                                                                                                 BBN
+                                                                            BBN+CMB        b                                                                                    BBN+CMB       b
+
+
+
+
+                                                                                                         0.15
+
+
+
+
+                                                                                               H/H(TD)
+          0.4                                                                                            0.10
+          0.2                                                                                            0.05
+Neff
+
+
+
+
+          0.0
+          0.2
+          0.4                                                                                                9
+
+
+
+
+                                                                                                   log10zc
+     0.250                                                                                                   8
+
+
+     0.246
+Yp
+
+
+
+
+                                                                                                    0.250
+
+                                                                                                    0.246
+
+
+
+
+                                                                                               Yp
+     0.242
+
+          2.6                                                                                       0.242
+                                                                                                          2.6
+ 105D/H
+
+
+
+
+          2.5
+
+
+
+
+                                                                                                105D/H
+                                                                                                          2.5
+          2.4                                                                                             2.4
+                0.021 0.022 0.023   0.3 0.0 0.3   0.242 0.246 0.250   2.4    2.5     2.6                         0.0210.0220.023   0.04 0.10 0.16   8    9    0.242 0.246 0.250 2.4 2.5 2.6
+                          b             Neff              Yp                105D/H                                        b           H/H(TD)       log10zc          Yp          105D/H
+
+FIG. 4. Left: Marginalized posterior distributions within the ∆Neff model from BBN (red) and BBN combined with the EDE
+CMB ωb constraint (blue). The dark and light contours contain 68% and 95% of the posterior probability, respectively. Grey
+bands show the 1σ abundance measurements and the EDE CMB constraint on ωb . Right: Same as the left panel but for the
+vEDE model. The dark and light contours contain 68% and 95% of the posterior probability, respectively. Grey bands show the
+1σ abundance measurements and the EDE CMB constraint on ωb . The dash-dotted purple line on the zc panels corresponds
+to zD [see after Eq. (13)].
+
+
+expansion-rate enhancement. After the so-called “deu-                                          with 68% Bayesian credible intervals; relative to ΛCDM
+terium bottleneck,” a larger expansion rate around a                                           evaluated at the same EDE CMB baryon density, vEDE
+few 10−2 MeV shortens the remaining deuterium-burning                                          is preferred with ∆AIC ≃ −5.3, i.e., there is a hint of
+phase. vEDE can therefore preserve D/H at larger ωb                                            non-standard expansion at BBN. This is further illus-
+while producing only a mild change in helium-4. By con-                                        trated in Fig. 5, where we show the full posterior of the
+trast, ∆Neff speeds up the expansion throughout BBN:                                           fractional expansion-rate enhancement ∆H/H. Overlaid
+the increased H leads to a weak freeze-out at higher tem-                                      are the deuterium and helium-4 sensitivity windows of
+perature, and leaves less time for neutron decay, thus                                         Fig. 1 (normalized to unit peak): the posterior enhance-
+resulting in a higher Yp , while the shortened deuterium-                                      ment is pinned down by the data around TD , where D/H
+burning phase simultaneously raises D/H. The virtue of a                                       and Yp actually respond. For comparison, a constant
+transient vEDE is that it accelerates the expansion only                                       radiation increase modeled as ∆Neff is not favored over
+at low temperatures, around deuterium burning, and not                                         ΛCDM with ∆AIC ≃ +1.2.
+throughout: it likewise shortens the deuterium-burning
+phase (raising D/H) but leaves weak freeze-out and the                                            Our analysis makes several simplifying assumptions.
+bulk of 4 He synthesis essentially untouched, so Yp barely                                     We propagate the PRIMAT nuclear-rate and neutron-
+moves.                                                                                         lifetime uncertainties through the tabulated Monte Carlo
+                                                                                               abundance errors, rather than sampling each reaction-
+   Importantly, BBN does not directly constrain the                                            rate nuisance parameter explicitly. We also compress the
+vEDE fraction at the critical redshift, fvEDE (zc ). At                                        CMB information into the EDE-derived Gaussian con-
+fixed ∆H/H(TD ), the value of fvEDE (zc ) can approach                                         straint on ωb . A full joint CMB+BBN analysis may re-
+unity for critical redshifts on either side of the BBN-                                        veal correlations with the remaining cosmological param-
+sensitive window. Sampling a flat prior on fvEDE would                                         eters, due to effects of the vEDE components on the small
+therefore introduce large prior-volume effects unrelated                                       scale matter power spectrum [41] and the very slightly
+to the expansion rate probed by the abundances. We in-                                         larger Yp . Our results show that the BBN–CMB baryon-
+stead use ∆H/H(TD ) at TD = 3.4 × 108 K, which lies on                                         density tension is sensitive not only to the amount of
+the late deuterium-burning tail. Combining BBN with                                            additional energy, but also to when it contributes to the
+the EDE CMB baryon-density constraint gives                                                    expansion rate. A transient contribution near deuterium
+                                                                                               freeze-out provides a concrete way of reconciling the large
+                          ∆H/H(TD ) = 0.087+0.036
+                                           −0.037 ,                                  (28)      baryon density predicted by early-time resolutions of the
+                                                                                                                                                10
+
+                                           redshift z                                    supported by funding from the European Research Coun-
+              109                         108                            107
+              3                                                                          cil (ERC) under the European Union’s HORIZON-ERC-
+                      median
+              2       68% 95%                                                            2022 (grant agreement no. 101076865). V.P. acknowl-
+              1       D/H sensitivity                                                    edges the European Union’s Horizon Europe research
+log10( H/H)
+
+
+                      Yp sensitivity
+              0                                                                          and innovation programme under the Marie Sklodowska-
+              1                                                                          Curie Staff Exchange grant agreement no. 101086085
+              2                                                                          – ASYMMETRY. The authors acknowledge the use of
+              3                   TD                                                     Anthropic’s Claude AI and OpenAI Codex as research-
+              4                                                                          assistance tools for code development, plotting, data
+                        10 1                          10 2                        10 3   analysis, and text editing. The scientific ideas, analysis
+                                   photon temperature T [MeV]                            choices, interpretation of the results, manuscript writing
+                                                                                         are the responsibility of the authors. The code, data,
+                0.0                             0.2          0.4   0.6     0.8   1.0     and notebooks needed to reproduce the figures will be
+                                        posterior density
+                                                                                         made public upon acceptance of the paper for publication
+                                                                                         at https://zenodo.org/records/21494819. We also ac-
+ FIG. 5. Posterior distribution of the fractional expansion-                             knowledge the use of the Python packages NumPy, SciPy,
+ rate enhancement ∆H/H as a function of photon tempera-
+                                                                                         Matplotlib, GetDist, and Cobaya.
+ ture (bottom axis) and redshift (top axis), for the combined
+ BBN+CMB analysis with 105 D/H = 2.527 ± 0.030. The blue
+ shading is the marginalized posterior density of log10 ∆H/H
+ at each epoch (normalized to unit peak in each column); the                              Appendix A: Results with the updated deuterium
+ solid black line is the median and the dashed lines the 68%                                                abundance
+ and 95% credible bands. The dotted line marks ∆H/H = 1%
+ and the dot-dashed line the pivot TD . Overlaid in red and                                 The baseline analysis presented in the main text uses
+ green are the deuterium and helium-4 sensitivity windows                                the Cooke et al. determination in Eq. (1), both because it
+ RX of Fig. 1, arbitrary normalized for visual purpose. Data                             permits a direct comparison with Ref. [36] and because
+ are constraining only around TD , where D/H and Yp actually                             it has been widely used in recent BBN analyses. Here
+ respond. The large low-redshift amplitude is the assumed
+                                                                                         we repeat the Bayesian analysis using the more recent
+ transient shape extrapolated into a region to which BBN is
+ insensitive.                                                                            recommended abundance [11–13]
+
+                                                                                                        105 D/H = 2.508 ± 0.030 .             (A1)
+ Hubble tension with the primordial light-element abun-                                  We leave the helium-4 likelihood, the PRIMAT theoretical
+ dances. Such scenarios necessarily involve several extra                                uncertainties, all parameter priors, and the EDE-derived
+ fields compared to the baseline ΛCDM model. However,                                    CMB baryon-density constraint unchanged.
+ one can instead interpret this as different cosmological                                   The dedicated-chain results are reported in Table II.
+ epochs opening distinct temporal windows on a multi-                                    The lower observed deuterium abundance shifts the
+ field dark sector like the axiverse scenario [46, 47, 56]: the                          BBN-only baryon-density posterior upward, as expected
+ CMB can probe an EDE component active near recom-                                       from D/H ∝ ωb−1.65 . For the radiation extension, the
+ bination, whereas primordial abundances probe a much                                    BBN+CMB posterior becomes
+ earlier vEDE component around deuterium freeze-out.
+ Inflation [57] and late-time dark energy [46] may also                                   ωb = 0.022543+0.000128
+                                                                                                       −0.000133 ,       ∆Neff = 0.056+0.075
+                                                                                                                                      −0.079 . (A2)
+ be caused by such axiverse-type fields. In this sense,
+ vEDE need not be viewed merely as an additional iso-                                    For vEDE we instead find
+ lated field, but as a new BBN window on an axiverse-like
+ spectrum of fields. The present work does not directly fit                                                 ωb = 0.022716+0.000137
+                                                                                                                         −0.000137 ,
+ or resolve the Hubble tension; it uses the EDE-motivated                                                   δD = 0.073+0.035
+                                                                                                                      −0.036 ,
+ CMB baryon density as the target of the consistency test.
+                                                                                                       log10 zc < 8.4.                        (A3)
+ The natural extension is a joint multi-field analysis span-
+ ning BBN, the CMB, and late-time distance-ladder data.                                  Relative to the baseline result in Eq. (27), the preferred
+                                                                                         local expansion-rate enhancement is therefore slightly
+                                                                                         smaller, while the transition-redshift posterior remains
+                               ACKNOWLEDGMENTS                                           bounded from above. The effect of the deuterium de-
+                                                                                         termination on the joint BBN+CMB posteriors is shown
+   We thank Adam Riess for suggesting the idea that                                      directly in Fig. 6.
+ motivated this work and for valuable feedback on the                                       The updated deuterium abundance therefore weak-
+ manuscript. We thank Bryce Cyr and Lloyd Knox                                           ens the BBN–CMB discrepancy in ΛCDM and in the
+ for useful discussions. J.F. acknowledges support from                                  constant-radiation extension, but does not alter the qual-
+ the Severo Ochoa Excellence Grant CEX2023-001292-S                                      itative model comparison. Constant ∆Neff still increases
+ funded by MICIU/AEI/10.13039/501100011033. V.P. is                                      the helium-4 production while failing to restore the
+                                                                                                                                   11
+
+ Parameter                                             BBN                                               BBN+CMB ωb
+                                                           ΛCDM
+ 100 ωb                                       2.2017+0.0221
+                                                     −0.0217 (2.2017)                                 2.2519+0.0113
+                                                                                                            −0.0123 (2.2517)
+ Yp                                        0.246821+0.000097
+                                                    −0.000095 (0.246821)                           0.247039+0.000049
+                                                                                                           −0.000053 (0.247039)
+ 105 D/H                                      2.5100+0.0405
+                                                     −0.0413 (2.5094)                                 2.4185+0.0218
+                                                                                                            −0.0200 (2.4187)
+ QDMAP                                                   –                                                   ≃ 2.7σ
+ ∆AIC                                                    –                                                      0
+                                                            ∆Neff
+ 100 ωb                                       2.1906+0.0262
+                                                     −0.0260 (2.1902)                                 2.2543+0.0128
+                                                                                                             −0.0133 (2.2544)
+ ∆Neff                                        −0.070+0.093
+                                                     −0.091 (−0.071)                                    0.056+0.075
+                                                                                                             −0.079 (0.059)
+ Yp                                        0.245824+0.001317
+                                                    −0.001309 (0.245814)                           0.247787+0.001018
+                                                                                                            −0.001069 (0.247841)
+ 105 D/H                                      2.5068+0.0385
+                                                     −0.0416 (2.5068)                                 2.4324+0.0281
+                                                                                                             −0.0285 (2.4333)
+ QDMAP                                                   –                                                    ≃ 2.8σ
+ ∆AIC                                                    –                                                    ≃ +1.8
+                                                            vEDE
+ 100 ωb                                       2.2751+0.0528
+                                                     −0.0519 (2.2005)                                 2.2716+0.0137
+                                                                                                             −0.0137 (2.2718)
+ δD = ∆H/H(TD )                                 0.081+0.070
+                                                     −0.064 (0.000)                                     0.073+0.035
+                                                                                                             −0.036 (0.065)
+ Yp                                        0.247252+0.000251
+                                                    −0.000289 (0.246817)                           0.247224+0.000061
+                                                                                                            −0.000120 (0.247156)
+ 105 D/H                                      2.5104+0.0395
+                                                     −0.0397 (2.5128)                                 2.5094+0.0384
+                                                                                                             −0.0379 (2.5063)
+ QDMAP                                                   –                                                    ≃ 0.7σ
+ ∆AIC                                                    –                                                    ≃ −3.0
+
+
+TABLE II. Same as in Table I, but using the updated deuterium abundance in Eq. (A1). The BBN+CMB columns use the
+CMB-derived value of the baryon-density in the EDE model as a Gaussian likelihood for all three models.
+
+
+                        105D/H = 2.527 ± 0.030          105D/H = 2.508 ± 0.030              vEDE             Neff
+
+          2.65
+          2.60
+          2.55
+105 D/H
+
+
+
+
+          2.50
+          2.45
+          2.40
+                 2.25     2.30      0.00 0.05 0.10 0.15 0.20 7                8         9              0.2      0.0        0.2   0.4
+                   100 b                         H/H(TD)                      log10zc                               Neff
+FIG. 6. Joint BBN+CMB posterior distributions of D/H against the parameters that control the two extensions, comparing
+the baseline deuterium determination 105 D/H = 2.527 ± 0.030 (red) with the updated value 2.508 ± 0.030 (blue). Contours
+enclose 68% and 95% of the posterior. In the common 100ωb panel, filled contours denote vEDE and dashed contours denote
+the ∆Neff extension; the remaining panels show the corresponding model-specific parameters. Horizontal dashed lines and
+lightly shaded bands indicate the central values and 1σ ranges of the two deuterium determinations.
+
+
+observed deuterium abundance at the CMB-preferred                          Appendix B: Results with ΛCDM CMB
+baryon density. vEDE continues to accommodate the                                  baryon-density priors
+CMB value of ωb by increasing the expansion rate specif-
+ically during the residual deuterium-burning epoch, with
+                                                                    The main analysis uses the baryon density inferred in
+only a small change in Yp . We obtain ∆AIC ≃ +1.8 for
+                                                                 the EDE cosmology as the CMB target for all three BBN
+the one-parameter ∆Neff extension and ∆AIC ≃ −3.0
+                                                                 models. This choice is deliberate: we are asking how
+for the two-parameter vEDE model. vEDE remains
+                                                                 much non-standard BBN-era expansion would be needed
+positively selected—it removes the tension (QDMAP ≃
+                                                                 if the high baryon density characteristic of an early-time
+0.7σ) and its two extra parameters are justified by the
+                                                                 resolution of the Hubble tension were realized. It is nev-
+improved fit against the EDE CMB baryon density—
+                                                                 ertheless useful to repeat the compatibility estimate with
+whereas the radiation extension is not.
+                                                                 the lower baryon densities inferred in ΛCDM-only fits.
+                                                                                                                                   12
+
+                                         EDE   b prior       CDM-SPA   b prior        vEDE             Neff
+
+
+          2.6
+105 D/H
+
+
+
+
+          2.5
+
+          2.4
+                2.20    2.25      2.30         0.00 0.05 0.10 0.15 0.20 7        8          9     10          0.2   0.0     0.2   0.4
+                         100 b                           H/H(TD)                  log10zc                            Neff
+FIG. 7. Joint BBN+CMB posterior distributions of D/H against the parameters that control the two extensions, using the
+baseline deuterium determination and comparing the main EDE ωb prior (red) with the ΛCDM-SPA ωb prior (blue). Contours
+enclose 68% and 95% of the posterior. In the common 100ωb panel, filled contours denote vEDE and dashed contours denote
+the ∆Neff extension; the remaining panels show the corresponding model-specific parameters. The horizontal dashed line and
+grey bands show the central value and 1σ and 2σ ranges of the baseline deuterium determination. On the third panel, the
+dash-dotted purple line corresponds to zD [see after Eq. (13)].
+
+
+We consider both the SPA-only value and the value ob-                  in Fig. 7. The lower ΛCDM-SPA baryon-density prior
+tained after including DESI BAO data [16],                             shifts the vEDE posterior toward a smaller expansion-
+                                                                       rate enhancement than in the main EDE-prior analysis.
+                       (100 ωb )ΛCDM
+                                SPA  = 2.2398 ± 0.0095,        (B1)
+                                                                       For the vEDE run with the ΛCDM-SPA prior, we find
+                   (100 ωb )ΛCDM
+                            SPA+DESI = 2.2478 ± 0.0091.        (B2)
+                                                                                     δD = ∆H/H(TD ) = 0.050+0.020
+                                                                                                           −0.039                 (B3)
+We keep the baseline deuterium abundance, 105 D/H =
+2.527 ± 0.030, and use the same BBN profile likelihoods.               at 68% credibility. This should be compared with
+   Results are reported in Table III. As expected, lowering            Eq. (27): a modest transient enhancement is sufficient
+the CMB baryon-density target reduces the baseline dis-                for the lower ΛCDM-SPA target, while the larger EDE
+crepancy relative to the main EDE-target analysis. With                baryon density requires a larger ∆H/H(TD ).
+the SPA-only ΛCDM prior, the ΛCDM consistency met-
+ric is QDMAP ≃ 2.1σ, and vEDE removes the discrep-
+ancy (QDMAP ≃ 0.5σ) but is nearly neutral in AIC once                       Appendix C: vEDE posterior in the fvEDE (zc )
+its two extra parameters are counted. Including DESI                                    parameterization
+BAO shifts the ΛCDM CMB baryon density upward,
+increasing the baseline tension to QDMAP ≃ 2.4σ and                       As noted in Sec. IV, the sampled amplitude δD =
+giving a mild AIC preference for vEDE, ∆AIC ≃ −1.5.                    ∆H/H(TD ) and the fractional vEDE density fvEDE (zc )
+The ∆Neff extension does not improve the compatibility                 are two normalizations of the same component, related
+for either prior. Thus, even within ΛCDM, the DESI-                    through Eq. (12). In this appendix we make explicit how
+induced upward shift moves the comparison toward the                   the vEDE posterior looks when expressed in terms of
+high-ωb case emphasized in the main text, while the sta-               fvEDE (zc ) and RvEDE (zc ) rather than the adopted am-
+tistical motivation is strongest for the EDE CMB target.               plitude δD , using the baseline analysis with 105 D/H =
+                                                                       2.527 ± 0.030.
+TABLE III. Profile-based consistency with the ΛCDM CMB                    The result is shown in Fig. 8. As anticipated, the
+baryon-density priors in Eqs. (B1) and (B2), using the base-           fractional density fvEDE (zc ) is essentially unconstrained,
+line deuterium abundance. For each CMB prior, the AIC                  spreading over almost its entire prior range, while the
+difference is referenced to ΛCDM with the same prior.                  critical redshift is bounded only from above: the com-
+                                                                       bined BBN+CMB analysis yields the one-sided limits
+                                SPA                    SPA+DESI
+                                                                       log10 zc < 8.3 (95%), with the marginal posterior flat
+ Model                 QDMAP          ∆AIC         QDMAP     ∆AIC
+                                                                       toward lower redshifts down to the prior boundary. Phys-
+ ΛCDM                   2.06σ           0           2.41σ       0
+                                                                       ically, a broad family of critical redshifts and fractional
+ ∆Neff                  2.12σ         +1.8          2.41σ     +1.5
+                                                                       amplitudes reproduces the same expansion-rate enhance-
+ vEDE                   0.50σ         +0.02         0.55σ     −1.5
+                                                                       ment near deuterium freeze-out and hence the same light-
+                                                                       element abundances; only transitions substantially ear-
+    The corresponding posterior distributions are shown                lier than the deuterium-burning epoch, whose contribu-
+                                                                                                                                                          13
+
+                                                        BBN                                    a prior-volume effect of the nonlinear map between the
+                                                        BBN+CMB       b
+                                                                                               sampled pair (δD , log10 zc ) and the derived fvEDE (zc ); the
+                                                                                               posterior in the sampled parameters is smooth and uni-
+                                                                                               modal. At fixed amplitude δD , Eqs. (8) and (12) give
+                                                                                               an fvEDE (zc ) that is minimized when the transition co-
+                    3                                                                          incides with the pivot, zc ∼ zD , and rises toward unity as
+  log10RvEDE(zc)
+
+
+
+
+                    2                                                                          zc moves away from zD in either direction. For zc ≫ zD
+                    1                                                                          the component must have been large at the transition
+                    0                                                                          to survive its post-transition dilution [∝ (1 + z)3(1+wn ) ,
+                    1
+                                                                                               faster than radiation] and still supply the required δD
+                   9.5                                                                         at TD ; for zc ≪ zD the frozen plateau density fixed
+                   9.0                                                                         by δD is compared to a radiation density that has since
+ log10zc
+
+
+
+
+                   8.5                                                                         dropped as (1 + z)4 , so its fractional contribution at zc
+                   8.0
+                   7.5
+                                                                                               again approaches one. The pile-up at fvEDE ≃ 1 there-
+                                                                                               fore collects the large prior volume of critical redshifts far
+                                                                                               from zD across the wide flat range log10 zc ∈ [7, 10], while
+            0.15
+                                                                                               the pile-up at fvEDE ≃ 0 is simply the no-vEDE region
+H/H(TD)
+
+
+
+
+            0.10                                                                               δD → 0, which the BBN-only likelihood does not exclude.
+            0.05                                                                               Intermediate values fvEDE (zc ) ∼ 0.5 require δD > 0 and
+                         0.2 0.4 0.6 0.8      0     2             8       9   0.05 0.10 0.15
+                                                                                               zc ∼ zD simultaneously, a thin slice of the prior that is
+                            fvEDE(zc)      log10RvEDE(zc)         log10zc        H/H(TD)       correspondingly depleted. This is precisely the ambiguity
+                                                                                               that motivates sampling δD rather than fvEDE .
+FIG.       8.               Marginalized          posteriors     of                              It is useful to translate the vEDE amplitude into the
+{fvEDE (zc ), log10 RvEDE (zc ), log10 zc , δD } in the vEDE                                   variable
+model, for the baseline deuterium abundance 105 D/H =
+2.527 ± 0.030. Red contours show the BBN-only analysis and
+blue contours the combined BBN+CMB ωb analysis; dark                                                                   ρvEDE (zc )           fvEDE (zc )
+and light shadings contain 68% and 95% of the posterior                                          RvEDE (zc ) ≡                           =                 .
+probability. Here RvEDE (zc ) ≡ ρϕ (zc )/[ρtot (zc ) − ρϕ (zc )] =
+                                                                                                                ρtot (zc ) − ρvEDE (zc )   1 − fvEDE (zc )
+fvEDE (zc )/[1 − fvEDE (zc )]. While the expansion-rate am-                                                                                              (C1)
+plitude δD is well constrained once the CMB ωb prior is                                        This is the ratio used in Ref. [41] to characterize very-
+included, the fractional density fvEDE (zc ) remains essentially                               early scalar-field episodes. Since RvEDE is unbounded
+unconstrained across its prior range and the critical redshift                                 above, large values correspond to histories in which the
+is bounded only from above (log10 zc < 8.3 at 95%).                                            scalar field temporarily dominates the energy density
+                                                                                               near zc . The BBN likelihood constrains primarily the lo-
+                                                                                               cal expansion-rate enhancement during deuterium burn-
+tion is diluted away before D/H freezes out, are dis-                                          ing, ∆H/H(TD ), rather than RvEDE (zc ) itself. Con-
+favoured, which produces the upper limit on zc . By con-                                       sequently, sizeable values of RvEDE (zc ) remain allowed
+trast, the derived amplitude δD is well localized in the                                       whenever the scalar-field episode is arranged so that the
+combined BBN+CMB analysis, consistent with Eq. (27).                                           expansion rate around TD gives the required deuterium
+This confirms that δD , and not fvEDE (zc ) or zc , is                                         abundance while leaving helium production nearly un-
+the physically meaningful vEDE amplitude at the BBN                                            changed. In this sense, BBN provides a complementary
+epoch, and justifies its use as the sampled amplitude pa-                                      constraint to probes of the post-BBN evolution: it con-
+rameter in the main analysis.                                                                  strains the scalar field through its effect on the expan-
+   The apparent bimodality of the fvEDE (zc ) posterior,                                       sion rate during nucleosynthesis, while allowing the peak
+with support piling up near fvEDE ≃ 0 and fvEDE ≃ 1, is                                        scalar fraction at zc to be much larger.
+
+
+
+
+     [1] C. Pitrou, A. Coc, J.-P. Uzan, and E. Vangioni, Phys.                                      Mon. Not. Roy. Astron. Soc. 502, 2474 (2021),
+         Rept. 754, 1 (2018), arXiv:1801.08023 [astro-ph.CO].                                       arXiv:2011.11320 [astro-ph.CO].
+     [2] S. Gariazzo, P. F. de Salas, O. Pisanti, and R. Con-                                   [6] A.-K. Burns, T. M. P. Tait, and M. Valli, Eur. Phys. J.
+         siglio, Comput. Phys. Commun. 271, 108205 (2022),                                          C 84, 86 (2024), arXiv:2307.07061 [hep-ph].
+         arXiv:2103.05027 [astro-ph.IM].                                                        [7] T. Launders, C. Giovanetti, and H. Liu, arXiv:2604.16600
+     [3] T.-H. Yeh, K. A. Olive, and B. D. Fields, JCAP 03, 046,                                    [astro-ph.CO] (2026).
+         arXiv:2011.13874 [astro-ph.CO].                                                        [8] C. Pitrou, A. Coc, J.-P. Uzan, and E. Vangioni, Na-
+     [4] O. Pisanti, G. Mangano, G. Miele, and P. Mazzella,                                         ture Rev. Phys. 3, 231 (2021), arXiv:2104.11148 [astro-
+         JCAP 04, 020, arXiv:2011.11537 [astro-ph.CO].                                              ph.CO].
+     [5] C. Pitrou, A. Coc, J.-P. Uzan, and E. Vangioni,                                        [9] G. Steigman, JCAP 10, 016, arXiv:astro-ph/0606206.
+                                                                                                                                 14
+
+[10] R. J. Cooke, M. Pettini, and C. C. Steidel, Astrophys. J.         ph.CO].
+     855, 102 (2018), arXiv:1710.11129 [astro-ph.CO].             [34] N. Schöneberg, V. Poulin, A. G. Ferrari, F. Finelli, J. Les-
+[11] P. A. Kislitsyn, S. A. Balashev, M. T. Murphy,                    gourgues, L. Morelli, M. R. Mosbech, R. K. Sharma, and
+     C. Ledoux, P. Noterdaeme, and A. V. Ivanchik,                     T. Simon, arXiv:2607.13282 [astro-ph.CO] (2026).
+     Mon. Not. Roy. Astron. Soc. 528, 4068 (2024),                [35] N. Schöneberg, V. Poulin, A. G. Ferrari, F. Finelli, J. Les-
+     arXiv:2401.12797 [astro-ph.CO].                                   gourgues, L. Morelli, M. R. Mosbech, R. K. Sharma, and
+[12] N. Schöneberg, JCAP 06, 006, arXiv:2401.15054 [astro-            T. Simon, arXiv:2607.13283 [astro-ph.CO] (2026).
+     ph.CO].                                                      [36] C. Giovanetti, arXiv:2604.05095 [astro-ph.CO] (2026).
+[13] F. Takahashi et al. (Particle Data Group), Int. J. Mod.      [37] V. Mossa et al., Nature 587, 210 (2020).
+     Phys. A 41, 2630011 (2026).                                  [38] C. Giovanetti, M. Lisanti, H. Liu, S. Mishra-Sharma,
+[14] E. Rosenberg, S. Gratton, and G. Efstathiou, Mon. Not.            and J. T. Ruderman, Phys. Rev. D 112, 063531 (2025),
+     Roy. Astron. Soc. 517, 4620 (2022), arXiv:2205.10869              arXiv:2408.14538 [astro-ph.CO].
+     [astro-ph.CO].                                               [39] D. McKeen and A. Omar, Phys. Rev. D 110, 103514
+[15] T. Louis et al. (Atacama Cosmology Telescope), JCAP               (2024), arXiv:2407.03508 [hep-ph].
+     11, 062, arXiv:2503.14452 [astro-ph.CO].                     [40] C. Cook and J. Meyers, Phys. Rev. D 113, 043519 (2026),
+[16] E. Camphuis et al. (SPT-3G), Phys. Rev. D 113, 083504             arXiv:2512.11163 [astro-ph.CO].
+     (2026), arXiv:2506.20707 [astro-ph.CO].                      [41] A. C. Sobotka, A. L. Erickcek, and T. L. Smith, Phys.
+[17] J. Froustey and C. Pitrou, Phys. Rev. D 101, 043524               Rev. D 111, 123522 (2025), arXiv:2409.06778 [astro-
+     (2020), arXiv:1912.09378 [astro-ph.CO].                           ph.CO].
+[18] J. Yang, D. N. Schramm, G. Steigman, and R. T. Rood,         [42] K. Akita and M. Yamaguchi, JCAP 08, 012,
+     Astrophys. J. 227, 697 (1979).                                    arXiv:2005.07047 [hep-ph].
+[19] J. Yang, M. S. Turner, G. Steigman, D. N. Schramm, and       [43] J. Froustey, C. Pitrou, and M. C. Volpe, JCAP 12, 015,
+     K. A. Olive, Astrophys. J. 281, 493 (1984).                       arXiv:2008.01074 [hep-ph].
+[20] E. Aver, E. D. Skillman, R. W. Pogge, N. S. J. Rogers,       [44] J. J. Bennett, G. Buldgen, P. F. De Salas, M. Drewes,
+     M. K. Weller, K. A. Olive, D. A. Berg, J. J. Salzer, J. H.        S. Gariazzo, S. Pastor, and Y. Y. Y. Wong, JCAP 04,
+     Miller, and J. E. Méndez-Delgado, arXiv:2601.22238               073, arXiv:2012.02726 [hep-ph].
+     [astro-ph.CO] (2026).                                        [45] M. Drewes, Y. Georis, M. Klasen, L. P. Wiggering, and
+[21] T.-H. Yeh, K. A. Olive, B. D. Fields, E. Aver, R. W.              Y. Y. Y. Wong, JCAP 06, 032, arXiv:2402.18481 [hep-
+     Pogge, N. S. J. Rogers, E. D. Skillman, and M. K. Weller,         ph].
+     arXiv:2601.22239 [astro-ph.CO] (2026).                       [46] M. Kamionkowski, J. Pradler, and D. G. E. Walker, Phys.
+[22] A. Matsumoto et al., Astrophys. J. 941, 167 (2022),               Rev. Lett. 113, 251302 (2014), arXiv:1409.0549 [hep-ph].
+     arXiv:2203.09617 [astro-ph.CO].                              [47] T. Karwal and M. Kamionkowski, Phys. Rev. D 94,
+[23] H. Yanagisawa et al., Astrophys. J. 1004, 55 (2026),              103523 (2016), arXiv:1608.01309 [astro-ph.CO].
+     arXiv:2506.24050 [astro-ph.GA].                              [48] V. Poulin, T. L. Smith, D. Grin, T. Karwal, and
+[24] A.-K. Burns, T. M. P. Tait, and M. Valli, Phys. Rev.              M. Kamionkowski, Phys. Rev. D 98, 083525 (2018),
+     Lett. 130, 131001 (2023), arXiv:2206.00693 [hep-ph].              arXiv:1806.10608 [astro-ph.CO].
+[25] M. Escudero, A. Ibarra, and V. Maura, Phys. Rev. D           [49] D. J. Fixsen, Astrophys. J. 707, 916 (2009),
+     107, 035024 (2023), arXiv:2208.03201 [hep-ph].                    arXiv:0911.1955 [astro-ph.CO].
+[26] J. Froustey and C. Pitrou, Phys. Rev. D 110, 103551          [50] V. Poulin, T. L. Smith, and T. Karwal, Phys. Dark Univ.
+     (2024), arXiv:2405.06509 [hep-ph].                                42, 101348 (2023), arXiv:2302.09032 [astro-ph.CO].
+[27] G. Steigman, Ann. Rev. Nucl. Part. Sci. 57, 463 (2007),      [51] S. Navas et al. (Particle Data Group), Phys. Rev. D 110,
+     arXiv:0712.1100 [astro-ph].                                       030001 (2024).
+[28] R. H. Cyburt, B. D. Fields, K. A. Olive, and T.-H. Yeh,      [52] R. J. Cooke, J. W. Johnson, P. Noterdaeme, M. Pettini,
+     Rev. Mod. Phys. 88, 015004 (2016), arXiv:1505.01076               L. Welsh, A. Wong, and C. Peroux, Astrophys. J. 1003,
+     [astro-ph.CO].                                                    225 (2026), arXiv:2605.00122 [astro-ph.CO].
+[29] B. D. Fields, K. A. Olive, T.-H. Yeh, and C. Young,          [53] M. Raveri and W. Hu, Phys. Rev. D 99, 043506 (2019),
+     JCAP 03, 010, [Erratum: JCAP 11, E02 (2020)],                     arXiv:1806.04649 [astro-ph.CO].
+     arXiv:1912.01132 [astro-ph.CO].                              [54] J. Torrado and A. Lewis, JCAP 05, 057,
+[30] V. Poulin,       T. L. Smith,         T. Karwal, and              arXiv:2005.05290 [astro-ph.IM].
+     M. Kamionkowski, Phys. Rev. Lett. 122, 221301                [55] F. James and M. Roos, Comput. Phys. Commun. 10, 343
+     (2019), arXiv:1811.04083 [astro-ph.CO].                           (1975).
+[31] N. Schöneberg, G. Franco Abellán, A. Pérez Sánchez,      [56] A. Arvanitaki, S. Dimopoulos, S. Dubovsky, N. Kaloper,
+     S. J. Witte, V. Poulin, and J. Lesgourgues, Phys. Rept.           and J. March-Russell, Phys. Rev. D 81, 123530 (2010),
+     984, 1 (2022), arXiv:2107.10291 [astro-ph.CO].                    arXiv:0905.4720 [hep-th].
+[32] M. Kamionkowski and A. G. Riess, Ann. Rev. Nucl. Part.       [57] D. J. E. Marsh, D. Grin, R. Hlozek, and P. G. Ferreira,
+     Sci. 73, 153 (2023), arXiv:2211.04492 [astro-ph.CO].              Phys. Rev. D 87, 121701 (2013), arXiv:1303.3008 [astro-
+[33] V. Poulin, T. L. Smith, R. Calderón, and T. Simon, Phys.         ph.CO].
+     Rev. D 113, 063519 (2026), arXiv:2505.08051 [astro-
+

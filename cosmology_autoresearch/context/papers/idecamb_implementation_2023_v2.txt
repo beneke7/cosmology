@@ -1,0 +1,1238 @@
+                                               Prepared for submission to JCAP
+
+
+
+
+                                               IDECAMB: an implementation of
+                                               interacting dark energy cosmology in
+                                               CAMB
+arXiv:2306.01593v2 [astro-ph.CO] 13 Sep 2023
+
+
+
+
+                                               Yun-He Lia and Xin Zhanga,b,c,d,1
+                                               a Department of Physics, College of Sciences, Northeastern University, Shenyang 110819,
+
+                                                China
+                                               b Key Laboratory of Cosmology and Astrophysics (Liaoning), Northeastern University, Shenyang
+
+                                                110819, China
+                                               c Key Laboratory of Data Analytics and Optimization for Smart Industry (Ministry of Ed-
+
+                                                ucation), Northeastern University, Shenyang 110819, China
+                                               d National Frontiers Science Center for Industrial Intelligence and Systems Optimization,
+
+                                                Northeastern University, Shenyang 110819, China
+                                                E-mail: liyunhe@mail.neu.edu.cn, zhangxin@mail.neu.edu.cn
+
+                                               Abstract. Interacting dark energy (IDE) scenario is a natural and important extension to the
+                                               standard ΛCDM cosmology. We develop a full numerical routine, called IDECAMB, as a patch
+                                               to the public Einstein-Boltzmann solver CAMB, to solve the background and perturbation
+                                               equations of the IDE models. The IDECAMB solver provides a unified interface for the widely
+                                               studied IDE models by employing a parametrization model with five free functions. By
+                                               configuring these five functions, one can easily map the coupled quintessence (CQ) and
+                                               coupled fluid (CF) models into the parametrization. We handle the perturbation evolutions of
+                                               the CF models with the parametrized post-Friedmann (PPF) approach to avoid the possible
+                                               large-scale instability. Compared with the previous established PPF approach whose form
+                                               depends on a specific IDE model, the PPF approach in this work are model-independent,
+                                               making it easy to use. We constrain a specific CQ model with the IDECAMB package. The
+                                               fitting results are consistent with those obtained by Planck Collaboration, which confirms
+                                               the validity of the package.
+
+
+
+
+                                                 1
+                                                     Corresponding author.
+Contents
+
+1 Introduction                                                                              1
+
+2 General equations                                                                         3
+
+3 Models and parametrization                                                                4
+  3.1 Coupled quintessence models                                                           4
+  3.2 Coupled fluid models                                                                  5
+  3.3 Parametrization model                                                                 6
+
+4 Perturbation evolutions of the dark sectors                                               6
+  4.1 The standard linear perturbation theory                                               7
+  4.2 The PPF approach                                                                      8
+
+5 Equations for numerical calculations                                                     10
+  5.1 The background evolutions                                                            10
+  5.2 Perturbations in the synchronous gauge                                               10
+
+6 Constraints on a specific model                                                          11
+
+7 Conclusion                                                                               14
+
+A Coupled quintessence                                                                     15
+
+B Equation for Γ without ∆de and Θde                                                       15
+
+
+1   Introduction
+
+The late-time Universe is dominated by dark sectors, namely, dark matter and dark energy,
+which is supported by recent observations [1–3]. Dark matter provides the force for the struc-
+ture formation, while dark energy accounts for the cosmic acceleration [4, 5]. The primary
+candidate of dark energy is the cosmological constant Λ with the equation of state (EoS)
+equal to −1. The corresponding Λ cold dark matter (ΛCDM) model can fit the cosmological
+data with the least parameters, and is commonly viewed as the standard cosmological model.
+However, the so-called fine-tuning and coincidence problems [6–14] always suffer this model
+on the theoretical level. Besides, it is also reported recently that some discrepancies exist
+in the model between some measurements [15–21]. This situation prompts cosmologists to
+consider some complex models, such as the dynamical dark energy with an EoS not exactly
+equal to −1, or the modified gravity (MG) theory trying to explain the cosmic acceleration
+outside the framework of General Relativity (see ref. [22] for a recent review).
+     In standard cosmology, dark energy and dark matter are generally assumed to be non-
+interacting. This means that they do not exert any influence on each other, except through
+gravitational interaction. However, from the view of particle physics, interactions are ubiq-
+uitous in the world. Thus, unless forbidden by a fundamental symmetry, a direct interaction
+
+
+
+
+                                            –1–
+between the dark sectors is a natural way to extend the ΛCDM cosmology. In such an inter-
+acting dark energy (IDE) scenario, the conservation laws for the energy-momentum tensor
+(Tµν ) of dark energy (de) and cold dark matter (c) are modified,
+
+                                  ∇ν T νµ,de = −∇ν T νµ,c = Qµ ,                             (1.1)
+
+where Qµ denotes the energy-momentum transfer vector. A specific Qµ carries the informa-
+tion of three important interaction quantities: the energy transfer rate Q, the energy transfer
+perturbation δQ and the momentum transfer rate f . Due to them, the background and per-
+turbation evolutions of the dark sectors are modified, which not only provides a possible
+mechanism to alleviate the coincidence problem [23–26], but also introduces new features to
+the structure formation [27–29].
+      Plenty of IDE models has been proposed [23, 30–50], among which two types of the
+IDE models are widely studied. One is the so-called coupled quintessence (CQ) model, in
+which dark energy is a quintessence field ϕ. The coupling between the quintessence field and
+the dark matter field is defined by a Lagrangian, giving Qµ ∝ ∂µ ϕ. The corresponding Q,
+δQ and f can be obtained with a few assumptions in the CQ model. On the other hand, if
+dark energy is described by some fluid model, there is no a fundamental theory pointing out
+how Qµ can be constructed. In practice, one often assumes it to be proportional to the four
+velocity (uµ ) of the dark fluid, namely, Qµ ∝ uµ,I for I = c or de. The energy transfer rate
+Q in such model is also constructed, phenomenologically, such as letting Q ∝ ρc , Q ∝ ρde or
+proportional to some linear or nonlinear combinations of the energy densities (ρ) of the dark
+sectors. For convenience, we call them the coupled fluid (CF) models.
+      In this study, our primary focus is on the interacting dark energy (IDE) scenario. Our
+main objective is to develop a convenient and efficient method for testing IDE models with
+observations. It is well-known that testing cosmological models with observations is an
+important mission in cosmology. To do this, we need to solve the full dynamic equations of
+the models and then confront their predictions with the observational data. The public CAMB
+and CosmoMC packages [51, 52] provide us the powerful tools to do this, but only natively
+support a few non-interacting dark energy models. To adapt for an IDE model, one needs to
+carefully modify the background and the perturbation systems of the CAMB solver. For the
+various IDE models if we implement this one by one, it is however cumbersome. Perhaps,
+a more efficient way is trying to establish a unified solver for the IDE theory by using a
+parametrization technology. Then one can test the IDE theory in a model-independent way,
+or constrain a specific model by simply mapping it into the parametrization. The widely used
+MGCAMB [53, 54] and EFTCAMB [55, 56] packages are the successful examples of this strategy
+implemented for the MG theory.
+      However, before doing this for IDE models, one should particularly note the large-scale
+instability problem [50] widespread in the CF models (Qµ ∝ uµ,I for I = c or de). The
+cosmological perturbations will blow up on super-horizon scales if the EoS of dark energy
+and the coupling constant take some specific values (for more details, see refs. [50, 57, 58]). To
+avoid this instability, one has to carefully set the priors for the parameters in the observational
+constraints, which is not only inconvenient but also unable to reflect the actual preference
+of the data sets [59]. It can be concluded that the power of a unified solver for IDE models
+will be greatly reduced, if this problem is not well handled. Fortunately, we have a solution
+to this issue. In ref. [60], we introduce the parametrized post-Friedmann (PPF) approach
+[61, 62] into the calculations of the dark energy perturbation in the IDE scenario, for the
+
+
+
+
+                                              –2–
+first times. We find that the large-scale instability can be successfully avoided, and the full
+parameter space of the CF models can be explored with the extended PPF approach.
+      So now, we have the opportunity to develop a fully functional solver for IDE models,
+which is exactly what we aim to accomplish in this work. We will employ a parametrization
+model to establish a unified interface for the two types of the IDE models. Due to the
+fact that the CF model cannot be defined by a fundamental theory, as mentioned above, it
+is also hard to construct a parametrization form of Qµ from a unified Lagrangian. As an
+alternative we follow ref. [63] and directly parametrize the two perturbation quantities δQ
+and f , which can be written as the linear combinations of the perturbations of the dark
+sectors. We will rewrite the form of the PPF approach for the parametrized IDE model.
+The PPF approach established in previous works [59, 60] depends on a specific IDE model,
+making it hard to use for other researchers. In this paper, with the parametrized IDE model,
+we can establish a model-independent form of the PPF approach, so one can use it without
+concern for the details of the PPF approach. Finally, we develop a full numerical routine to
+solve the background and perturbation equations of the IDE models. We shall call the code
+IDECAMB1 , which can be used as a patch to the CAMB and CosmoMC packages to test the IDE
+theory.
+      Our paper is organized as follows. In section 2, we give the general equations in the
+IDE theory. In section 3, we briefly review the CQ and the CF models, and then construct
+a parametrized IDE model for them. The standard linear perturbation theory as well as the
+PPF approach for the perturbation evolutions of this parametrized IDE model are given in
+section 4. The background and the perturbation equations used in the numerical calculations
+are shown in section 5. In section 6 we show an example of the observational constraint on
+a specific IDE model. The conclusions of this paper are given in section 7. Some necessary
+calculations are shown in appendixes A and B.
+
+2       General equations
+We start from the standard linear perturbation theory. Using the eigenfunctions of the
+Laplace operator, Y , and its covariant derivatives, Yi = −k −1 ∇i Y , and Yij = (k −2 ∇i ∇j +
+γij /3)Y with −k 2 the eigenvalue of the Laplace operator and γij the spatial metric, the
+Friedmann-Robertson-Walker (FRW) metric with scalar perturbations can be expressed in
+general as [64, 65]
+
+                              g00 = −a2 (1 + 2AY ),         g0i = −a2 BYi ,
+                                   gij = a2 (γij + 2HL Y γij + 2HT Yij ),                 (2.1)
+
+where a is the scale factor of the Universe, and the four functions, A, B, HL , and HT , denote
+the amplitudes of four types of metric perturbations. Similarly, the energy-momentum tensor
+can also be expressed as
+
+                             T 00 = −(ρ + δρY ),        T i0 = −(ρ + p)vY i ,
+                                  T ij = (p + δpY )δ i j + pΠY ij ,                       (2.2)
+
+where p denotes the pressure, and the four functions, δρ, v, δp, and Π represent the en-
+ergy density perturbation, velocity, isotropic pressure perturbation, and anisotropic stress,
+respectively.
+    1
+        Downloaded from https://github.com/liaocrane/IDECAMB/.
+
+
+
+
+                                                   –3–
+      The energy-momentum transfer vector Qµ in eq. (1.1) can be split in general as [64],
+                                                                  
+                   Qµ = a − Q(1 + AY ) − δQY, [f + Q(v − B)]Yi .                       (2.3)
+
+Then, eq. (1.1) in the background level reduces to
+
+                                    ρ′de + 3H(1 + w)ρde = aQ,                               (2.4)
+                                          ρ′c + 3Hρc = −aQ,                                 (2.5)
+
+where w = pde /ρde is the EoS of dark energy, H = a′ /a is the conformal Hubble parame-
+ter, and a prime denotes the derivative with respect to the conformal time. In the linear
+perturbation level, eq. (1.1) gives
+
+                  δρ′I + 3H(δρI + δpI ) + (ρI + pI )(kvI + 3HL′ ) = a(δQI + AQI ),          (2.6)
+                                               2
+      [(ρI + pI )θI ]′ + 4H(ρI + pI )θI − δpI + cK pI ΠI − (ρI + pI )A = a(QI θ + fk,I ),   (2.7)
+                                               3
+where cK = 1 − 3K/k 2 with K the spatial curvature, and for convenience we define
+                                             fI             vI − B
+                                    fk,I =      ,    θI =          .                        (2.8)
+                                             k                 k
+Note that in our notation, Qde = −Qc = Q, δQde = −δQc = δQ, and fde = −fc = f ,
+indicating that the directions of the energy and momentum transfer are from cold dark
+matter to dark energy for a positive Q, δQ, and f .
+
+3     Models and parametrization
+
+The coupling of the dark sectors is completely described by the three quantities: Q, δQ and
+fk . In this section, we first show the specific forms of these three quantities for some typical
+CQ and CF models. Next, we delve into the construction of parameterization forms for δQ
+and fk , aiming to capture the essential characteristics of the two types of models.
+
+3.1    Coupled quintessence models
+The CQ models are defined by the following Lagrangian,
+                               1
+                          L = − ∂ µ ϕ∂µ ϕ − U (ϕ) − m(ϕ)ψ̄ψ + Lkin,ψ ,                      (3.1)
+                               2
+where dark energy is a quintessence field ϕ with a potential U (ϕ), and the mass m of the
+matter field ψ depends on the value of ϕ due to their interaction. Considering a non-universal
+coupling, namely, the case of ϕ only interacting with cold dark matter field, then we can
+obtain the energy-momentum transfer vector as
+                                              ∂ ln m(ϕ)
+                                      Qµ =              ρc ∂µ ϕ.                            (3.2)
+                                                  ∂ϕ
+Obviously, once a specific m(ϕ) is given, the interaction forms in the background and per-
+turbation levels can be derived. In practice, an exponential coupling is widely studied in the
+literature [66–71], namely                         √
+                                       m(ϕ) ∝ e−β κϕ ,                                   (3.3)
+
+
+
+
+                                                    –4–
+with κ = 8πG and β the coupling constant. Substituting this coupling into eq. (3.2), we get
+the energy-momentum transfer vector,
+                                               √
+                                      Qµ = −βρc κ∂µ ϕ.                                   (3.4)
+
+      Comparing eq. (3.4) with eq. (2.3), one can get the background energy transfer,
+                                                     √
+                                                         κϕ′
+                                        Q = βρc              ,                           (3.5)
+                                                         a
+
+the energy transfer perturbation,
+                                              δϕ′       δρc   
+                                    δQ = Q         ′
+                                                     +       −A ,                        (3.6)
+                                               ϕ         ρc
+
+and the momentum transfer potential,
+
+                                                            δϕ
+                                      fk = −Qθ + Q             .                         (3.7)
+                                                            ϕ′
+
+3.2     Coupled fluid models
+
+For the CF models, there is no fundamental theory to point out how Qµ can be constructed.
+In practice, one often assumes it to be proportional to the four velocity of the dark fluid,
+namely
+                                         Qµ = Quµ,I ,                                    (3.8)
+
+where                                                    
+                             uµ,I = a − 1 − AY, (vI − B)Yi ,                             (3.9)
+
+with I = c or de. In such a construction, the energy momentum transfer is vanished in
+the rest frame of I fluid. The energy transfer rate Q in the CF model is also constructed,
+phenomenologically, such as letting Q = βHρde or Q = βHρc , where the Hubble parameter
+H = H/a is introduced to equalize the dimensions. One can also let Q = βH0 ρde or Q =
+βH0 ρc to obtain an H-independent model [50], where H0 is the Hubble constant.
+     Comparing with eq. (2.3), one can find that the momentum transfer potential in the
+CF model is
+                                        f = Q(vI − v).                                  (3.10)
+
+The energy transfer perturbation δQ can be obtained by directly perturbing Q in the linear
+order. For example, we have
+                                          δρ     δρc 
+                                             de
+                                  δQ = Q        +       ,                           (3.11)
+                                           ρde    ρc
+for the non-linear model Q = βHρde ρc /(ρde + ρc ) (originated from the generalized Chaplygin
+gas model [39–41]). Here we do not consider the perturbation of the Hubble parameter,
+but note that δH is indispensable if one tries to get the gauge invariant equations in an
+H-dependent model [72].
+
+
+
+
+                                               –5–
+3.3    Parametrization model
+As mentioned above, we cannot construct a parametrization form of Qµ from a unified
+Lagrangian. As an alternative, we directly parametrize δQ and fk . It is not hard to find that
+δQ and fk in the CF models are generally linear combinations of δde , δc , θde and θc , where
+δI = δρI /ρI . In fact, in the CQ models, δQ and fk can also be written as the functions of
+these four quantities. Treating quintessence as a dark energy fluid, we can get the relations
+between the field perturbations δϕ and δϕ′ , and the fluid perturbations θde and δρde . See
+this process in appendix A. Then, using eqs. (A.7) and (A.9), we can rewrite eqs. (3.6) and
+(3.7) as,
+                                    Q                   √
+                            δQ =        δde + Qδc − aβρc κUϕ θde ,                          (3.12)
+                                   1+w
+                                      fk = −Qθ + Qθde ,                                     (3.13)
+
+where Uϕ denotes the derivative of U with respect to ϕ.
+    Thus, we can use five functions C1 , C2 , C3 , D1 , and D2 to parametrize the energy and
+momentum transfer perturbations as
+
+                                   δQ = C1 δde + C2 δc + C3 θde ,                           (3.14)
+                                   fk = −Qθ + D1 θde + D2 θc .                              (3.15)
+
+For a CF model, C3 is generally zero and the remaining four functions can parametrize the
+common CF models.  P2 Forijexample, considering
+                                         P2        a general CF P2model   with Qµ = β ij Hρi uµ,j ,
+one can get Q = j=1 β Hρi , C1 = i=1 β Hρ1 , C2 = i=1 β Hρ2 , D1 = β i1 Hρi and
+                                                1i                     2i
+
+D2 = β i2 Hρi , where ρi = (ρde , ρc ), uµ,i = (uµ,de , uµ,c ) and each element of β ij can be a
+free parameter or a free function of a. Note that the repeated Latin letters here represent
+summation as usual. This model reduces to a simple linear CF model if β ij has only one
+non-zero element. Moreover, if choosing β 11 = −β 12 and β 21 = −β 22 , we have Q, C1 , C2 = 0
+and hence δQ = 0, corresponding to a pure momentum transfer model introduced in ref. [73].
+Besides the CF model and the CQ model, our parametrization can also describe the so-called
+Type 1 model proposed in ref. [42] in which dark energy is described by a k-essence field
+[74, 75]. In table 1, we present the examples of some typical IDE models mapping into the
+parametrization model. Replacing H with H0 in the table, one can get the corresponding H-
+independent models. Our parametrization provides a unified interface for the widely studied
+IDE models with the least free functions. One can also find a more general parametrization
+in ref. [63].
+
+4     Perturbation evolutions of the dark sectors
+
+In this section, we handle the perturbation evolutions of the dark sectors for the parametrized
+IDE model, as constructed above. For cold dark matter, the dynamic systems described by
+eqs. (2.6) and (2.7) can be completed by the conditions, δpc = 0 and Πc = 0. Substituting
+eqs. (3.14) and (3.15) into eqs. (2.6) and (2.7), we have
+                                         a
+               δc′ + k 2 θc + kB + 3HL′ =   (Qδc − QA − C1 δde − C2 δc − C3 θde ),           (4.1)
+                                         ρc
+                                             a
+                           θc′ + Hθc − A = (Qθc − D1 θde − D2 θc ).                          (4.2)
+                                            ρc
+
+
+
+
+                                               –6–
+      Model                Q                        C1               C2           C3        D1         D2
+                           βHρde                     Q               ···          ···       ···         Q
+      Qµ = Quµ,c           βHρc                     ···               Q           ···       ···         Q
+                           βH ρρdede+ρ
+                                    ρc
+                                      c
+                                                     Q                Q           ···       ···         Q
+                           βHρde                     Q               ···          ···        Q         ···
+      Qµ = Quµ,de          βHρc                     ···               Q           ···        Q         ···
+                           βH ρρdede+ρ
+                                    ρc
+                                      c
+                                                     Q                Q           ···        Q         ···
+                            2                 2                2
+      Qµ = β ij Hρi uµ,j      β ij Hρi              β 1i Hρ1         β 2i Hρ2             β i1 Hρi   β i2 Hρi
+                           P                  P                P
+                                                                                  ···
+                           j=1                i=1              i=1
+               √                 √
+                                     κϕ′             Q                           a2 Uϕ
+      Qµ = −βρc κ∂µ ϕ      βρc       a              1+w               Q           −ϕ′ Q      Q         ···
+
+Table 1. Some typical IDE models mapping into the parametrization model. Replacing H with
+H0 , one can get the corresponding H-independent models. The Qµ = β ij Hρi uµ,j model represents a
+general linear CF model, where ρi = (ρde , ρc ), uµ,i = (uµ,de , uµ,c ) and each element of β ij can be a
+free parameter or function of a.
+
+
+For dark energy, besides Πde = 0, we still need another condition to complete the dynamic
+systems. In the following, we provide two methods to calculate the perturbations of dark
+energy, namely the standard linear perturbation theory as well as the PPF approach.
+
+4.1     The standard linear perturbation theory
+In the standard linear perturbation theory, the dynamic systems of dark energy are completed
+by adding the information of δpde , whose value can be calculated in terms of a rest-frame
+                           δpde
+sound speed cs with c2s = δρ de
+                                |rf . Here the subscript “rf” denotes the dark energy rest frame
+(vde = 0 and B = 0). Making a gauge transformation from the dark energy rest frame gauge
+to a general gauge, one can get
+
+                                      δpde = c2s δρde − ρ′de (c2s − c2a )θde ,                               (4.3)
+                p′
+where c2a = ρde
+             ′  and ca is the adiabatic sound speed of dark energy. If dark energy is an
+                 de
+adiabatic fluid, c2s = c2a , the pressure perturbation of dark energy only has the adiabatic
+mode, namely δpde = c2a δρde . However, one can find that c2s = w < 0 (for the constant
+w case), which will lead to a nonphysical result for dark energy collapsing [76]. Thus, in
+practice, dark energy is generally taken as a non-adiabatic fluid with a positive c2s .
+      Substituting eq. (4.3) into eqs. (2.6) and (2.7), we have
+
+    ′
+                                                                          h               aQ i
+   δde + 3H(c2s − w)δde + (1 + w)(k 2 θde + kB + 3HL′ ) + 3H(c2s − c2a ) 3H(1 + w) −          θde
+                                                                                          ρde
+          a
+       =     (QA − Qδde + C1 δde + C2 δc + C3 θde ),                                           (4.4)
+         ρde
+    ′                         c2s                  a
+       + H(1 − 3c2s )θde −                                 D1 θde + D2 θc − Q(1 + c2s )θde .
+                                                                                         
+  θde                             δde − A =                                                    (4.5)
+                            1+w              ρde (1 + w)
+These two equations can be used for the perturbation calculations of the CQ models, if the
+values of w, c2s and c2a are obtained for quintessence dark energy. In fact, treating quintessence
+field as a fluid and using eqs. (A.7)–(A.9), we can directly obtain
+
+                                           δpde = δρde − 2ϕ′ Uϕ θde .                                        (4.6)
+
+
+
+
+                                                       –7–
+Comparing eq. (4.6) with eq. (4.3), one can immediately find that c2s = 1 for quintessence
+field. Using eqs. (A.5) and (A.6) in combination with eq. (2.4), we can also get
+
+                                                     ϕ′2
+                                       w = −1 +            ,                               (4.7)
+                                                    a2 ρde
+and
+                                                   2a2 ϕ′ Uϕ
+                                    c2a = 1 −                .                             (4.8)
+                                                a Q − 3Hϕ′2
+                                                 3
+
+Thus, once the background evolutions for a CQ model are obtained, one can get the dark
+energy perturbations by directly solving eqs. (4.4) and (4.5) instead of evolving the field
+equations for δϕ and δϕ′ .
+     On the other hand, if we directly use eqs. (4.4) and (4.5) to calculate the perturbations
+of dark energy in a CF model, some problems will occur. From eqs. (2.4) and (4.3), one
+can find that the energy transfer rate Q will enter the non-adiabatic part of δpde . For some
+values of w and β, the non-adiabatic mode will grow fast on the large scales, leading to
+rapid growth of the curvature perturbation at the early times [50]. This is the well-known
+large scale instability in the CF models. In fact, even for the non-interacting dark energy
+the calculation of δpde in eq. (4.3) can also bring instability when w crosses the phantom
+divide w = −1 [77–80]. Thus, we do not use eqs. (4.4) and (4.5) to handle the dark energy
+perturbations in the CF models. As an alternative, we calculate them by the following PPF
+approach.
+
+4.2   The PPF approach
+The PPF approach is originally designed for testing the MG theory [81], while it is found
+to be effective to eliminate the instability when w crosses the phantom divide w = −1 in a
+non-interacting dark energy model [61, 62]. Inspired by this, we introduce the PPF approach
+into the calculations of the perturbations in the IDE scenario in ref. [60]. We find that the
+large-scale instability problem can be successfully resolved with the extended PPF approach.
+In the following, we first briefly review the construction of the PPF approach, and then show
+how it is applied to the parametrized IDE model.
+     The PPF approach is established in the comoving gauge, defined by B = vT and HT = 0,
+where vT denotes the velocity of total matters except dark energy. For convenience, we use
+the new symbols, ζ ≡ HL , ξ ≡ A, ρ∆ ≡ δρ, ∆p ≡ δp, V ≡ v, Θ ≡ θ, and ∆Q ≡ δQ, to denote
+the corresponding quantities of the comoving gauge except for the two gauge independent
+quantities Π and fk . The PPF approach gives an approximate value of Vde on the large
+scales, and compromise the perturbation evolutions on the large scales and small scales using
+an empirical formula. In this process, the dynamic systems of dark energy perturbations can
+be completed without the information of δpde .
+     To be specific, on the large scales (kH = k/H ≪ 1), we can establish a relationship
+between Vde − VT and VT . Since (Vde − VT )/VT = O(kH      2 ) at k ≪ 1, this relationship can
+                                                                   H
+be exactly parametrized by a function fζ (see refs. [60, 62]). However, in practice, it suffices
+for most purposes to simply let fζ = 0 [59, 62]. Thus we directly let Vde = VT in this paper.
+With this condition, the Einstein equation for ζ reduces to
+                                                       K
+                                     lim ζ ′ = Hξ −      VT .                              (4.9)
+                                    kH ≪1              k
+
+
+
+
+                                                –8–
+On the small scales, the Poisson equation gives ζ + VT /kH = κa2 ∆T ρT /(2k 2 cK ). The PPF
+approach introduces a dynamical quantity Γ to compromise the perturbations on the large
+and small scales, and thus on all scales we have
+
+                                       VT       κa2
+                                  ζ+      + Γ = 2 ∆T ρT .                               (4.10)
+                                       kH      2k cK
+If the equation of motion for Γ is obtained, the dynamic system is completed. Obviously,
+on the small scales, Γ → 0 at kH ≫ 1. On the other hand, the derivative of eq. (4.10) in
+combination with eq. (4.9) and the Einstein equations gives the equation of motion for Γ on
+the large scales,
+                                     lim Γ′ = S − HΓ,                                (4.11)
+                                       kH ≪1
+
+where
+                    κa2 h                   3Ha               a          i
+               S=        ρ de (1 + w)kV T −     (QΘ + fk ) −    (∆Q + ξQ)  ,            (4.12)
+                    2k 2                     cK              cK
+and ξ can be obtained from eq. (2.7) using ΘT = 0,
+
+                                   ∆pT − 32 cK pT ΠT − a(QΘ + fk )
+                            ξ=−                                    .                    (4.13)
+                                               ρT + pT
+
+Then, with a transition scale parameter cΓ (cΓ = 0.4cs in practice), we can take the equation
+of motion for Γ on all scales to be [61, 62]
+
+                             (1 + c2Γ kH
+                                       2
+                                         )[Γ′ + HΓ + c2Γ kH
+                                                          2
+                                                            HΓ] = S.                    (4.14)
+
+Once the equation of motion for Γ is solved, the dark energy perturbations can be obtained
+by
+
+                        κa2 ρde ∆de = −2k 2 cK Γ − 3κa2 ρde (1 + w)HΘde ,               (4.15)
+                              2                               ′
+                           κa ρde (1 + w)Θde F = −2(S − Γ − HΓ),                        (4.16)
+
+with F = 1 + 3κa2 (ρT + pT )/(2k 2 cK ).
+     Now we can apply the PPF approach to the parametrized IDE model. However, if we
+directly substitute eqs. (3.14) and (3.15) into eqs. (4.12) and (4.13), the equation of motion
+for Γ cannot be solved, since the values of ∆de and Θde are still unknown at this moment. So
+before solving eq. (4.14), we should first strip ∆de and Θde from eqs. (4.12) and (4.13). The
+detailed process of this part is shown in appendix B. From eqs. (B.5) and (4.11), we have
+
+                                                    aC1
+                                         S = S0 +       Γ,                              (4.17)
+                                                    ρde
+
+where
+                        κa2 h                    a                            i
+                 S0 =         ρde (1 + w)kV T −    (3HD 2 Θc + C 2 ∆ c + Qξ0 )  ,       (4.18)
+                        2k 2                    cK
+with
+                                       ∆pT − 32 cK pT ΠT − aD2 Θc
+                              ξ0 = −                              .                     (4.19)
+                                                 ρ T + pT
+Now the equation of motion for Γ is independent of ∆de and Θde , and can be solved.
+
+
+
+
+                                               –9–
+5     Equations for numerical calculations
+5.1    The background evolutions
+We solve the background evolutions of dark sectors in the CF models with the following two
+differential equations,
+                             d(ρde a4 )                        a4 Q
+                                        = (1 − 3w)ρde a3 +          ,                   (5.1)
+                                da                              H
+                                   d(ρc a4 )            a4 Q
+                                             = ρ c a3 −      .                          (5.2)
+                                      da                 H
+Here we evolve ρde a4 and ρc a4 instead of ρde and ρc for numerical stability. The conformal
+Hubble expansion rate is given by the Friedmann equation,
+                                      h κa2                 i1
+                                                             2
+                                 H=         (ρde + ρc + ...) ,                          (5.3)
+                                         3
+where “...” represents the rest of the energy densities of the Universe. For a specific CF
+model with w = w(a; H, ρde , ρc ) and Q = Q(a; H, ρde , ρc ), above equations can be exactly
+solved using initial conditions at a = 1. Obviously, this solver is not only suitable for a
+model with simple form of w or Q, but also for some complex nonlinear models, such as the
+holographic dark energy (HDE) model [82] with
+                                                r
+                                          1   2 κa2 ρde
+                                 whde = − −                 ,                          (5.4)
+                                          3 3c      3H2
+where c is a free parameter in the HDE model.
+    For the CQ models, we directly evolve the field equations (A.10),
+                                 d(a2 ϕ′ )     a3    a4 Q
+                                           = − Uϕ +       ,                             (5.5)
+                                   da          H     Hϕ′
+                                          dϕ    1 ′
+                                             =    ϕ.                                    (5.6)
+                                          da   Ha
+Given a specific CQ model with U = U (ϕ) and Q = Q(a; ϕ, ϕ′ , ρc ), above equations can be
+solved by choosing proper initial conditions at early radiation-dominated epoch. Note that
+ρc is given by
+                                               Z ϕ √        
+                                       −3
+                             ρc = ρc0 a exp −         β κdϕ ,                         (5.7)
+                                                      ϕ0
+                                           √
+and if β is a constant, ρc = ρc0 a−3 exp[−β κ(ϕ − ϕ0 )], where ϕ0 is the present-day value of
+ϕ.
+
+5.2    Perturbations in the synchronous gauge
+The numerical codes for the perturbation equations are written in the synchronous gauge
+which is defined by A = B = 0, η = −HT /3 − HL , and h = 6HL . For cold dark matter, we
+have
+                                 h′   a                            vde 
+                    δc′ + kvc +     =     Qδc − C1 δde − C2 δc − C3       ,        (5.8)
+                                  2   ρc                             k
+                                         a
+                            vc′ + Hvc = (Qvc − D1 vde − D2 vc ).                   (5.9)
+                                         ρc
+
+
+
+
+                                             – 10 –
+     For the perturbations of dark energy in the synchronous gauge, we also give the standard
+linear theory and the PPF approach. Substituting A = B = 0 and h = 6HL into eqs. (4.4)
+and (4.5), the standard linear theory gives
+
+       ′
+                                             h′                   h             aQ i vde
+      δde + 3H(c2s − w)δde + (1 + w) kvde +         + 3H(c2s − c2a ) 3H(1 + w) −
+                                               2                                  ρde k
+             a                                 vde 
+          =       − Qδde + C1 δde + C2 δc + C3        ,                                      (5.10)
+            ρde                                  k
+       ′                       c2s               a
+          + H(1 − 3c2s )vde −                            D1 vde + D2 vc − Q(1 + c2s )vde .
+                                                                                       
+      vde                          kδde =                                                    (5.11)
+                              1+w          ρde (1 + w)
+These equations can be utilized in the perturbation calculations of the CQ models. For the
+CF models, to avoid the possible large-scale instability, we use the following PPF equations
+in the synchronous gauge.
+     The connections between the comoving gauge and the synchronous gauge are [61]
+
+                                       ρI ∆I = δI ρI − ρ′I vT /k,                            (5.12)
+                                        ∆pI = δpI − p′I vT /k,                               (5.13)
+                                         VI − VT = vI − vT ,                                 (5.14)
+                                          ζ = −η − vT /kH .                                  (5.15)
+
+Another useful transformation relation is
+
+                                            VT = vT + σ,                                     (5.16)
+
+where
+                    σ    κa2 n δρT    vT h               aQ io
+                       = 2         +       3(ρT + pT ) +       + η − Γ.                      (5.17)
+                   kH    2k    cK    cK kH               H
+Using above relations, we can obtain
+
+        κa2 n                     3aD2               aQ       aC2 h           aQ  vT io
+ S0 =        kρ de (1+w)(v T +σ)−       (v c −v T )−    ξ 0 −       δc +   3H+           , (5.18)
+        2k 2                      kH cK              cK       cK               ρc k
+and
+                               kδpT − p′T vT − 32 kcK pT ΠT − aD2 (vc − vT )
+                        ξ0 =                                                 .               (5.19)
+                                              −k(ρT + pT )
+Then the Γ equation of eq. (4.14) can be solved in the synchronous gauge. The corresponding
+dark energy perturbations are given by
+
+                                              vde aQ vT       2k 2 cK
+                           δde = −3H(1 + w)      +          − 2 Γ,                           (5.20)
+                                               k    ρde k     κa ρde
+                                              2k(S − Γ′ − HΓ)
+                                   vde = vT −                  .                             (5.21)
+                                              κa2 ρde (1 + w)F
+
+6     Constraints on a specific model
+
+The background and perturbation equations shown in section 5 have been embedded in
+the public CAMB code [51]. We dub the modified code IDECAMB. In this section, to show the
+reliability of the IDECAMB, we use it in combination with the CosmoMC package [52] to constrain
+
+
+
+
+                                                – 11 –
+                              TT+lowP        TT,TE,EE+lowP         TT,TE,EE+lowE
+       Parameter            +BSH (2015)        +BSH (2015)        +BAO+SNIa (2018)
+       α                    < 0.62 (95%)       < 0.57 (95%)          < 0.49 (95%)
+                                   +0.020
+       β                      0.036−0.016        0.037+0.018
+                                                      −0.014           0.036+0.018
+                                                                            −0.013
+                                   +0.87
+       H0 (km/s/Mpc)          67.78−0.77        67.82 ± 0.79          68.03 ± 0.72
+       Ωm                  0.3045 ± 0.0090    0.3048 ± 0.0089       0.3038 ± 0.0084
+       σ8                   0.836 ± 0.020      0.840 ± 0.017           0.821+0.012
+                                                                            −0.015
+
+Table 2. Marginalized mean values and 68% C.L. intervals or the 95% C.L. upper limits for the
+parameters of the CQ model.
+
+
+a specific IDE model. Actually, the IDECAMB code for the CF models has been widely tested
+in our recent works [83–95]. Thus, here we show an example of constraint on a CQ model
+with the energy transfer Q given by eq. (3.5). For the potential of the quintessence, we choose
+an inverse power-law form [66],                √
+                                      U = U0 ( κϕ)−α ,                                     (6.1)
+with U0 and α being two constants. This model has been widely constrained in the literatures
+[66–71]. In particular, Planck Collaboration obtains rich results on the free parameters α and
+β by using their 2015 release of the cosmic microwave background (CMB) in combination
+with other data sets [71]. Note that U0 and ϕ0 (in eq. (5.7)) are not the free parameters, and
+their values must satisfy the requirement of getting correct present-day energy densities of
+dark energy and cold dark matter. We can use an iteration to get the true values of them in
+the numerical codes.
+      To make a direct comparison with the Planck 2015 results [71], we follow their data usage
+but only choose one typical data combination: TT+lowP+BSH (2015). Here TT+lowP rep-
+resents the CMB high-ℓ TT spectrum in combination with the low-ℓ temperature-polarization
+data from Planck 2015 [96], and BSH is the combination of the baryon acoustic oscillations
+(BAO) measurements from SDSS [97], BOSS [98], and 6dFGS [99], the type-Ia supernovae
+(SNIa) data from the Joint Light-curve Analysis sample [100], and the Hubble constant (H0 )
+measurement H0 = (70.6 ± 3.3) km s−1 Mpc−1 [101]. The free parameters are the same as
+those in ref. [71], except that we take H0 as a free parameter instead of the commonly used
+θMC , because θMC is dependent on a standard non-interacting background evolution. We set
+priors [0, 1.4] for α and [0, 0.15] for β, and keep the priors of other parameters the same as
+those used by Planck Collaboration [96]. Since there is no large-scale instability in the CQ
+models, we directly use eqs. (5.10) and (5.11) to calculate the dark energy perturbations.
+The corresponding forms of the five functions C1 , C2 , C3 , D1 , and D2 for the CQ model are
+give in table 1.
+      The fit results are shown in table 2 and figure 1. Using TT+lowP+BSH (2015) data
+combination, we get β = 0.036+0.020                                                       +0.018
+                                   −0.016 at 1σ level, similar with the result β = 0.037−0.015
+in ref. [71]. For the result of α, Planck Collaboration obtains a non-zero value with α =
+0.29+0.077
+     −0.260 at 1σ level, while we only get an upper limit with α < 0.62 at 2σ level. This
+difference deserves our further tests. By carefully checking our theory and codes, as well
+as the public information about the Planck’s settings, we conclude that it mainly results
+from the different priors set for α. As shown in ref. [71], they have to let α ≥ 0.03 for the
+numerical stability in the iteration for U0 and ϕ0 , while in our iterative routine, there is no
+such scruple. We have tested that a similar result can be obtained in our program if setting
+α ≥ 0.03 by hand.
+
+
+
+
+                                             – 12 –
+                                                               TT+lowP+BSH (2015)
+                                                               TT,TE,EE+lowP+BSH (2015)
+                                                               TT,TE,EE+lowE+BAO+SN (2018)
+
+
+
+
+         0.32
+     m
+
+
+
+
+         0.30
+
+         0.28
+
+         0.90
+
+
+         0.85
+     8
+
+
+
+
+         0.80
+
+
+
+          70
+
+
+          68
+     H0
+
+
+
+
+          66
+
+
+
+         0.08
+
+         0.06
+
+         0.04
+
+         0.02
+
+                0.2 0.4 0.6 0.8 1.0   0.28   0.30       0.32      0.80    0.85    0.90       66    68   70   0.02 0.04 0.06 0.08
+                                                    m                     8                       H0
+
+Figure 1. The one-dimensional and two-dimensional posterior distributions for the parameters
+of the CQ model with the TT+lowP+BSH (2015), the TT,TE,EE+lowP+BSH (2015) and the
+TT,TE,EE+lowE+BAO+SNIa (2018) data combinations.
+
+
+      To further show the agreement with the Planck’s results, we also do a test by adding
+the Planck 2015 high-ℓ polarization (TE,EE) information into analysis. The 1σ errors or the
+2σ upper limits of the parameters are slightly shrunk, as shown in table 2 and figure 1. The
+TT,TE,EE+lowP+BSH (2015) data sets give α < 0.57 at 2σ level, and β = 0.037+0.018    −0.014 at
+                                                                            +0.016
+1σ level, which are in concordance with α < 0.58 at 2σ level, and β = 0.036−0.013 at 1σ level
+in ref. [71]. Given the fact, we believe that our program can repeat the previous results and
+the validity of the IDECAMB package is confirmed.
+      Having verified the reliability of the program, now we shall improve the constraints
+by using the latest observational data. The CMB data are updated to the Planck 2018
+data release including the TT, TE, EE spectra at ℓ ≥ 30, the low-ℓ temperature Commander
+likelihood, and the low-ℓ SimAll EE likelihood [1]. For the BAO measurements, we keep the
+SDSS and the 6dFGS data but replace above BOSS data with the latest data release 12 [2].
+For the SNIa data, we use the Pantheon sample, comprised of 1048 data points [3]. The
+
+
+
+
+                                                                 – 13 –
+recent local H0 measurement, such as the result of H0 = (74.03±1.42) km s−1 Mpc−1 [102],
+is not included in the analysis, since it is in tension with the Planck data to a certain extent.
+The fit results of using this TT,TE,EE+lowE+BAO+SNIa (2018) data combination are also
+shown in table 2 and figure 1. With the new data, the 95% C.L. upper limit of α is further
+reduced to 0.49, while there is no significant change for the value of β compared with the
+result by the TT,TE,EE+lowP+BSH (2015) data combination. The marginalized posterior
+distribution β = 0.036+0.018
+                         −0.013 (68% C.L.) indicates that a non-zero coupling is preferred by
+the data at about 2σ. However, the goodness of fit does not point towards a deviation from
+the ΛCDM model at 2σ. In fact, due to the degeneracy between α and β, the contours in
+figure 1 are almost compatible with ΛCDM (α = 0 and β = 0) at 1σ. These results, from the
+aspect of interacting dark energy, enrich the discussions of the Planck 2018 paper [1] about
+the extensions to the base-ΛCDM model.
+
+
+7   Conclusion
+
+The IDE scenario represents a natural and significant extension to the standard ΛCDM
+cosmology. With numerous IDE models being proposed, there is a pressing need for efficient
+and rapid methods to test these models using observational data. In this paper, we establish
+a unified solver for the IDE theory by using a parametrization technology. Due to the fact
+that the IDE models cannot be defined by a unified Lagrangian, we directly parametrize
+the energy transfer perturbation δQ and the momentum transfer rate fk . With five free
+functions C1 , C2 , C3 , D1 and D2 , the parametrization forms of δQ and fk are written as
+the linear combinations of the perturbations of the dark sectors. The widely studied CQ
+(Qµ ∝ ∂µ ϕ) and CF (Qµ ∝ uµ,I for I = c or de) models can be easily mapped into this
+parametrization. Based on this parametrization, we develop a full numerical routine, called
+IDECAMB, to solve the background and perturbation equations of the IDE models. Using the
+IDECAMB solver as a patch to the public CAMB and CosmoMC packages, one can conveniently test
+the IDE models with observations. As an example, we constrain a specific CQ model with
+            √                    √
+Qµ = −βρc κ∂µ ϕ and U = U0 ( κϕ)−α . The fit results are consistent with those obtained
+by Planck Collaboration with the TT,TE,EE+lowP+BSH (2015) data sets. Using the latest
+TT,TE,EE+lowE+BAO+SNIa (2018) data combination, we get α < 0.49 at 2σ level, and
+β = 0.037+0.018
+          −0.014 at 1σ level. These results confirm the validity of the IDECAMB package.
+      A unique virtue of our IDECAMB solver is that the well-known large-scale instability
+problem existing in the CF models is well handled, which benefits from the idea of calculating
+the perturbations of dark energy using the PPF approach instead of the standard linear
+perturbation theory. Although this idea was first proposed in our previous work, the form of
+the PPF approach established in that work depends on a specific IDE model, making it hard
+to modify and use for other researchers. In this paper, with the help of the parametrized
+IDE model, we establish a model-independent form of PPF approach, and hence people can
+use the IDECAMB solver to solve their own models without concern for the details of the PPF
+approach. The shortage of the IDECAMB solver is that it currently only supports the CQ
+model with an exponential coupling and an inverse power-law potential of the quintessence.
+The CQ models with other types of the couplings or potentials are not tested in this work.
+Moreover, in addition to the widely studied CQ and CF models, there are other types of
+the IDE models in the literature (see e.g. ref. [42]). These models are also deserved to be
+included in the IDECAMB system. We leave these in future works.
+
+
+
+
+                                             – 14 –
+A      Coupled quintessence
+
+The energy-momentum tensor of the quintessence is defined by
+
+                                            1
+                            Tµν = ∂µ ϕ∂ν ϕ − ∂λ ϕ∂ λ ϕgµν − U (ϕ)gµν .                           (A.1)
+                                            2
+Using eqs. (2.1) and ϕ = ϕ̄ + δϕY (we will omit the bar in the following discussion), above
+equation can be expressed as
+
+                               ϕ′2
+                                         ′                     
+                       0                    ϕ      ′     ′
+                                                           
+                     T 0 =− 2 −U −              δϕ − Aϕ + δϕUϕ Y,                     (A.2)
+                              2a            a2
+                              ϕ′
+                     T i0 = − 2 (kδϕ + Bϕ′ )Y i ,                                     (A.3)
+                              a
+                            ϕ′2         ϕ′
+                                                             
+                     T ij = 2 − U +           δϕ′ − Aϕ′ − δϕUϕ Y δ ij .
+                                                       
+                                          2
+                                                                                      (A.4)
+                            2a          a
+
+If we treat the quintessence as a fluid with the energy-momentum tensor given by eqs. (2.2),
+then above equations give
+
+                                                ϕ′2
+                                           ρde =    + U,                                         (A.5)
+                                                2a2
+                                                ϕ′2
+                                           pde = 2 − U,                                          (A.6)
+                                                2a
+in the background level, and
+
+                                         ϕ′     ′      ′
+                                                         
+                                  δρde =      δϕ  − Aϕ     + δϕUϕ ,                              (A.7)
+                                         a2
+                                         ϕ′
+                                  δpde = 2 δϕ′ − Aϕ′ − δϕUϕ ,
+                                                         
+                                                                                                 (A.8)
+                                         a
+                                        vde − B     δϕ
+                                  θde =           = ′ , Πde = 0,                                 (A.9)
+                                            k       ϕ
+
+in the perturbation level.
+     The conservation law, ∇ν T νµ = Qµ , gives the background field equation
+
+                                                            a3 Q
+                                     ϕ′′ + 2Hϕ′ + a2 Uϕ =        .                             (A.10)
+                                                             ϕ′
+
+B      Equation for Γ without ∆de and Θde
+
+Substituting eqs. (3.14) and (3.15) into eqs. (4.12) and (4.13), we have
+
+       κa2 h                  3Ha                        a                                    i
+ S=         ρde (1 + w)kV T −     (D 1 Θde + D 2 Θc ) −    (C 1 ∆ de + C 2 ∆ c + C 3 Θde + ξQ)  , (B.1)
+       2k 2                    cK                       cK
+
+and,
+                                 ∆pT − 32 cK pT ΠT − a(D1 Θde + D2 Θc )
+                          ξ=−                                           .                        (B.2)
+                                                 ρT + pT
+
+
+
+                                                – 15 –
+Above equation can be rewritten as,
+                                                  aD1
+                                     ξ = ξ0 +           Θde ,                               (B.3)
+                                                ρT + pT
+
+with ξ0 given by eq. (4.19). Substituting eq. (B.3) into eq. (B.1), we have
+
+                           κa3                κa3                  aQD1 
+               S = S0 −           C 1 ∆ de −         C 3 + 3HD 1 +         Θde ,            (B.4)
+                          2k 2 cK            2k 2 cK               ρT + pT
+
+where S0 is given by eq. (4.18). Using the expressions of ∆de and Θde in eqs. (4.15) and
+(4.16), we have
+                                     aC1
+                           S = S0 +      Γ + S1 (Γ′ + HΓ − S),                     (B.5)
+                                     ρde
+where
+                            3HaC1        a(C3 + 3HD1 )(ρT + pT ) + a2 QD1
+                   S1 =                −                                   .
+                          k 2 cK F ρde      k 2 cK F ρde (1 + w)(ρT + pT )
+
+Acknowledgments
+
+We acknowledge the use of CosmoMC. This work was supported by the National SKA Program
+of China (Grants Nos. 2022SKA0110200 and 2022SKA0110203) and the National Natural
+Science Foundation of China (Grants Nos. 11975072, 11835009, and 11805031).
+
+References
+  [1] Planck collaboration, Planck 2018 results. VI. Cosmological parameters, Astron. Astrophys.
+      641 (2020) A6 [1807.06209].
+  [2] BOSS collaboration, The clustering of galaxies in the completed SDSS-III Baryon Oscillation
+      Spectroscopic Survey: cosmological analysis of the DR12 galaxy sample, Mon. Not. Roy.
+      Astron. Soc. 470 (2017) 2617 [1607.03155].
+  [3] Pan-STARRS1 collaboration, The Complete Light-curve Sample of Spectroscopically
+      Confirmed SNe Ia from Pan-STARRS1 and Cosmological Constraints from the Combined
+      Pantheon Sample, Astrophys. J. 859 (2018) 101 [1710.00845].
+  [4] Supernova Search Team collaboration, Observational evidence from supernovae for an
+      accelerating universe and a cosmological constant, Astron. J. 116 (1998) 1009
+      [astro-ph/9805201].
+  [5] Supernova Cosmology Project collaboration, Measurements of Ω and Λ from 42 high
+      redshift supernovae, Astrophys. J. 517 (1999) 565 [astro-ph/9812133].
+  [6] S. Weinberg, The Cosmological Constant Problem, Rev. Mod. Phys. 61 (1989) 1.
+  [7] V. Sahni and A.A. Starobinsky, The Case for a positive cosmological Lambda term, Int. J.
+      Mod. Phys. D 9 (2000) 373 [astro-ph/9904398].
+  [8] P.J.E. Peebles and B. Ratra, The Cosmological Constant and Dark Energy, Rev. Mod. Phys.
+      75 (2003) 559 [astro-ph/0207347].
+  [9] R. Bean, S.M. Carroll and M. Trodden, Insights into dark energy: interplay between theory
+      and observation, astro-ph/0510059.
+ [10] E.J. Copeland, M. Sami and S. Tsujikawa, Dynamics of dark energy, Int. J. Mod. Phys. D 15
+      (2006) 1753 [hep-th/0603057].
+
+
+
+
+                                             – 16 –
+[11] V. Sahni and A. Starobinsky, Reconstructing Dark Energy, Int. J. Mod. Phys. D 15 (2006)
+     2105 [astro-ph/0610026].
+[12] M. Kamionkowski, Dark Matter and Dark Energy, 6, 2007 [0706.2986].
+[13] J. Frieman, M. Turner and D. Huterer, Dark Energy and the Accelerating Universe, Ann. Rev.
+     Astron. Astrophys. 46 (2008) 385 [0803.0982].
+[14] M. Li, X.-D. Li, S. Wang and Y. Wang, Dark Energy, Commun. Theor. Phys. 56 (2011) 525
+     [1103.5870].
+[15] E. Di Valentino, O. Mena, S. Pan, L. Visinelli, W. Yang, A. Melchiorri et al., In the realm of
+     the Hubble tension—a review of solutions, Class. Quant. Grav. 38 (2021) 153001
+     [2103.01183].
+[16] L. Verde, T. Treu and A.G. Riess, Tensions between the Early and the Late Universe, Nature
+     Astron. 3 (2019) 891 [1907.10625].
+[17] E. Di Valentino, Crack in the cosmological paradigm, Nature Astron. 1 (2017) 569
+     [1709.04046].
+[18] E. Di Valentino et al., Snowmass2021 - Letter of interest cosmology intertwined II: The hubble
+     constant tension, Astropart. Phys. 131 (2021) 102605 [2008.11284].
+[19] W.L. Freedman, Cosmology at a Crossroads, Nature Astron. 1 (2017) 0121 [1706.02739].
+[20] A.G. Riess, The Expansion of the Universe is Faster than Expected, Nature Rev. Phys. 2
+     (2019) 10 [2001.03624].
+[21] C. Heymans et al., KiDS-1000 Cosmology: Multi-probe weak gravitational lensing and
+     spectroscopic galaxy clustering constraints, Astron. Astrophys. 646 (2021) A140 [2007.15632].
+[22] D.H. Weinberg, M.J. Mortonson, D.J. Eisenstein, C. Hirata, A.G. Riess and E. Rozo,
+     Observational Probes of Cosmic Acceleration, Phys. Rept. 530 (2013) 87 [1201.2434].
+[23] L. Amendola, Coupled quintessence, Phys. Rev. D 62 (2000) 043511 [astro-ph/9908023].
+[24] D. Comelli, M. Pietroni and A. Riotto, Dark energy and dark matter, Phys. Lett. B 571
+     (2003) 115 [hep-ph/0302080].
+[25] X. Zhang, Coupled quintessence in a power-law case and the cosmic coincidence problem,
+     Mod. Phys. Lett. A 20 (2005) 2575 [astro-ph/0503072].
+[26] R.-G. Cai and A. Wang, Cosmology with interaction between phantom dark energy and dark
+     matter and the coincidence problem, JCAP 03 (2005) 002 [hep-th/0411025].
+[27] L. Amendola and D. Tocchini-Valentini, Baryon bias and structure formation in an
+     accelerating universe, Phys. Rev. D 66 (2002) 043528 [astro-ph/0111535].
+[28] O. Bertolami, F. Gil Pedro and M. Le Delliou, Dark Energy-Dark Matter Interaction and the
+     Violation of the Equivalence Principle from the Abell Cluster A586, Phys. Lett. B 654 (2007)
+     165 [astro-ph/0703462].
+[29] K. Koyama, R. Maartens and Y.-S. Song, Velocities as a probe of dark sector interactions,
+     JCAP 10 (2009) 017 [0907.2126].
+[30] J.-H. He and B. Wang, Effects of the interaction between dark energy and dark matter on
+     cosmological parameters, JCAP 06 (2008) 010 [0801.4233].
+[31] J.-H. He, B. Wang and Y.P. Jing, Effects of dark sectors’ mutual interaction on the growth of
+     structures, JCAP 07 (2009) 030 [0902.0660].
+[32] J.-H. He, B. Wang and P. Zhang, The Imprint of the interaction between dark sectors in large
+     scale cosmic microwave background anisotropies, Phys. Rev. D 80 (2009) 063530 [0906.0677].
+
+
+
+
+                                             – 17 –
+[33] J.-H. He, B. Wang and E. Abdalla, Testing the interaction between dark energy and dark
+     matter via latest observations, Phys. Rev. D 83 (2011) 063515 [1012.3904].
+[34] C.G. Boehmer, G. Caldera-Cabral, R. Lazkoz and R. Maartens, Dynamics of dark energy with
+     a coupling to dark matter, Phys. Rev. D 78 (2008) 023505 [0801.1565].
+[35] Z.-K. Guo, N. Ohta and S. Tsujikawa, Probing the Coupling between Dark Components of the
+     Universe, Phys. Rev. D 76 (2007) 023508 [astro-ph/0702015].
+[36] J.-Q. Xia, Constraint on coupled dark energy models from observations, Phys. Rev. D 80
+     (2009) 103514 [0911.4820].
+[37] H. Wei, Cosmological Constraints on the Sign-Changeable Interactions, Commun. Theor.
+     Phys. 56 (2011) 972 [1010.1074].
+[38] Y.-H. Li and X. Zhang, Running coupling: Does the coupling between dark energy and dark
+     matter change sign during the cosmological evolution?, Eur. Phys. J. C 71 (2011) 1700
+     [1103.3185].
+[39] X. Zhang, F.-Q. Wu and J. Zhang, A New generalized Chaplygin gas as a scheme for
+     unification of dark energy and dark matter, JCAP 01 (2006) 003 [astro-ph/0411221].
+[40] Y.-H. Li and X. Zhang, Large-scale stable interacting dark energy model: Cosmological
+     perturbations and observational constraints, Phys. Rev. D 89 (2014) 083009 [1312.6328].
+[41] Y. Wang, D. Wands, L. Xu, J. De-Santiago and A. Hojjati, Cosmological constraints on a
+     decomposed Chaplygin gas, Phys. Rev. D 87 (2013) 083503 [1301.5315].
+[42] A. Pourtsidou, C. Skordis and E.J. Copeland, Models of dark matter coupled to dark energy,
+     Phys. Rev. D 88 (2013) 083505 [1307.0458].
+[43] W. Yang, S. Pan and D.F. Mota, Novel approach toward the large-scale stable interacting
+     dark-energy models and their astronomical bounds, Phys. Rev. D 96 (2017) 123508
+     [1709.00006].
+[44] W. Yang, S. Pan, E. Di Valentino, R.C. Nunes, S. Vagnozzi and D.F. Mota, Tale of stable
+     interacting dark energy, observational signatures, and the H0 tension, JCAP 09 (2018) 019
+     [1805.08252].
+[45] R. Kase and S. Tsujikawa, General formulation of cosmological perturbations in scalar-tensor
+     dark energy coupled to dark matter, JCAP 11 (2020) 032 [2005.13809].
+[46] M.S. Linton, R. Crittenden and A. Pourtsidou, Momentum transfer models of interacting dark
+     energy, JCAP 08 (2022) 075 [2107.03235].
+[47] V. Faraoni, J.B. Dent and E.N. Saridakis, Covariantizing the interaction between dark energy
+     and dark matter, Phys. Rev. D 90 (2014) 063510 [1405.7288].
+[48] Z. Zhang, S. Li, X.-D. Li, X. Zhang and M. Li, Revisit of the Interaction between Holographic
+     Dark Energy and Dark Matter, JCAP 06 (2012) 009 [1204.6135].
+[49] J. Zhang, L. Zhao and X. Zhang, Revisiting the interacting model of new agegraphic dark
+     energy, Sci. China Phys. Mech. Astron. 57 (2014) 387 [1306.1289].
+[50] J. Valiviita, E. Majerotto and R. Maartens, Instability in interacting dark energy and dark
+     matter fluids, JCAP 07 (2008) 020 [0804.0232].
+[51] A. Lewis, A. Challinor and A. Lasenby, Efficient computation of CMB anisotropies in closed
+     FRW models, Astrophys. J. 538 (2000) 473 [astro-ph/9911177].
+[52] A. Lewis and S. Bridle, Cosmological parameters from CMB and other data: A Monte Carlo
+     approach, Phys. Rev. D 66 (2002) 103511 [astro-ph/0205436].
+[53] G.-B. Zhao, L. Pogosian, A. Silvestri and J. Zylberberg, Searching for modified growth
+     patterns with tomographic surveys, Phys. Rev. D 79 (2009) 083513 [0809.3791].
+
+
+
+
+                                             – 18 –
+[54] A. Hojjati, L. Pogosian and G.-B. Zhao, Testing gravity with CAMB and CosmoMC, JCAP
+     08 (2011) 005 [1106.4543].
+[55] B. Hu, M. Raveri, N. Frusciante and A. Silvestri, Effective Field Theory of Cosmic
+     Acceleration: an implementation in CAMB, Phys. Rev. D 89 (2014) 103530 [1312.5742].
+[56] B. Hu, M. Raveri, A. Silvestri and N. Frusciante, Exploring massive neutrinos in dark
+     cosmologies with EF T CAM B/ EFTCosmoMC, Phys. Rev. D 91 (2015) 063524 [1410.5807].
+[57] J.-H. He, B. Wang and E. Abdalla, Stability of the curvature perturbation in dark sectors’
+     mutual interacting models, Phys. Lett. B 671 (2009) 139 [0807.3471].
+[58] T. Clemson, K. Koyama, G.-B. Zhao, R. Maartens and J. Valiviita, Interacting Dark Energy –
+     constraints and degeneracies, Phys. Rev. D 85 (2012) 043007 [1109.6234].
+[59] Y.-H. Li, J.-F. Zhang and X. Zhang, Exploring the full parameter space for an interacting
+     dark energy model with recent observations including redshift-space distortions: Application of
+     the parametrized post-Friedmann approach, Phys. Rev. D 90 (2014) 123007 [1409.7205].
+[60] Y.-H. Li, J.-F. Zhang and X. Zhang, Parametrized Post-Friedmann Framework for Interacting
+     Dark Energy, Phys. Rev. D 90 (2014) 063005 [1404.5220].
+[61] W. Hu, Parametrized Post-Friedmann Signatures of Acceleration in the CMB, Phys. Rev. D
+     77 (2008) 103524 [0801.2433].
+[62] W. Fang, W. Hu and A. Lewis, Crossing the Phantom Divide with Parameterized
+     Post-Friedmann Dark Energy, Phys. Rev. D 78 (2008) 087303 [0808.3125].
+[63] C. Skordis, A. Pourtsidou and E.J. Copeland, Parametrized post-Friedmannian framework for
+     interacting dark energy theories, Phys. Rev. D 91 (2015) 083537 [1502.07297].
+[64] H. Kodama and M. Sasaki, Cosmological Perturbation Theory, Prog. Theor. Phys. Suppl. 78
+     (1984) 1.
+[65] J.M. Bardeen, Gauge Invariant Cosmological Perturbations, Phys. Rev. D 22 (1980) 1882.
+[66] V. Pettorino and C. Baccigalupi, Coupled and Extended Quintessence: theoretical differences
+     and structure formation, Phys. Rev. D 77 (2008) 103003 [0802.1086].
+[67] V. Pettorino, Testing modified gravity with Planck: the case of coupled dark energy, Phys.
+     Rev. D 88 (2013) 063519 [1305.7457].
+[68] L. Amendola, C. Quercellini, D. Tocchini-Valentini and A. Pasqui, Constraints on the
+     interaction and selfinteraction of dark energy from cosmic microwave background, Astrophys.
+     J. Lett. 583 (2003) L53 [astro-ph/0205097].
+[69] V. Pettorino, L. Amendola, C. Baccigalupi and C. Quercellini, Constraints on coupled dark
+     energy using CMB data from WMAP and SPT, Phys. Rev. D 86 (2012) 103507 [1207.3293].
+[70] L. Amendola, V. Pettorino, C. Quercellini and A. Vollmer, Testing coupled dark energy with
+     next-generation large-scale observations, Phys. Rev. D 85 (2012) 103008 [1111.1404].
+[71] Planck collaboration, Planck 2015 results. XIV. Dark energy and modified gravity, Astron.
+     Astrophys. 594 (2016) A14 [1502.01590].
+[72] M.B. Gavela, L. Lopez Honorez, O. Mena and S. Rigolin, Dark Coupling and Gauge
+     Invariance, JCAP 11 (2010) 044 [1005.0295].
+[73] F. Simpson, Scattering of dark matter and dark energy, Phys. Rev. D 82 (2010) 083505
+     [1007.1034].
+[74] C. Armendariz-Picon, V.F. Mukhanov and P.J. Steinhardt, A Dynamical solution to the
+     problem of a small cosmological constant and late time cosmic acceleration, Phys. Rev. Lett.
+     85 (2000) 4438 [astro-ph/0004134].
+
+
+
+
+                                              – 19 –
+[75] C. Armendariz-Picon, V.F. Mukhanov and P.J. Steinhardt, Essentials of k essence, Phys. Rev.
+     D 63 (2001) 103510 [astro-ph/0006373].
+[76] C. Gordon and W. Hu, A Low CMB quadrupole from dark energy isocurvature perturbations,
+     Phys. Rev. D 70 (2004) 083003 [astro-ph/0406496].
+[77] A. Vikman, Can dark energy evolve to the phantom?, Phys. Rev. D 71 (2005) 023515
+     [astro-ph/0407107].
+[78] W. Hu, Crossing the phantom divide: Dark energy internal degrees of freedom, Phys. Rev. D
+     71 (2005) 047301 [astro-ph/0410680].
+[79] R.R. Caldwell and M. Doran, Dark-energy evolution across the cosmological-constant
+     boundary, Phys. Rev. D 72 (2005) 043527 [astro-ph/0501104].
+[80] G.-B. Zhao, J.-Q. Xia, M. Li, B. Feng and X. Zhang, Perturbations of the quintom models of
+     dark energy and the effects on observations, Phys. Rev. D 72 (2005) 123515
+     [astro-ph/0507482].
+[81] W. Hu and I. Sawicki, A Parameterized Post-Friedmann Framework for Modified Gravity,
+     Phys. Rev. D 76 (2007) 104043 [0708.1190].
+[82] M. Li, A Model of holographic dark energy, Phys. Lett. B 603 (2004) 1 [hep-th/0403127].
+[83] R.-Y. Guo, Y.-H. Li, J.-F. Zhang and X. Zhang, Weighing neutrinos in the scenario of
+     vacuum energy interacting with cold dark matter: application of the parameterized
+     post-Friedmann approach, JCAP 05 (2017) 040 [1702.04189].
+[84] J.-J. Guo, J.-F. Zhang, Y.-H. Li, D.-Z. He and X. Zhang, Probing the sign-changeable
+     interaction between dark energy and dark matter with current observations, Sci. China Phys.
+     Mech. Astron. 61 (2018) 030011 [1710.03068].
+[85] H.-L. Li, J.-F. Zhang, L. Feng and X. Zhang, Reexploration of interacting holographic dark
+     energy model: Cases of interaction term excluding the Hubble parameter, Eur. Phys. J. C 77
+     (2017) 907 [1711.06159].
+[86] L. Feng, J.-F. Zhang and X. Zhang, Search for sterile neutrinos in a universe of vacuum
+     energy interacting with cold dark matter, Phys. Dark Univ. 23 (2019) 100261 [1712.03148].
+[87] R.-Y. Guo, J.-F. Zhang and X. Zhang, Exploring neutrino mass and mass hierarchy in the
+     scenario of vacuum energy interacting with cold dark matte, Chin. Phys. C 42 (2018) 095103
+     [1803.06910].
+[88] L. Feng, Y.-H. Li, F. Yu, J.-F. Zhang and X. Zhang, Exploring interacting holographic dark
+     energy in a perturbed universe with parameterized post-Friedmann approach, Eur. Phys. J. C
+     78 (2018) 865 [1807.03022].
+[89] H.-L. Li, L. Feng, J.-F. Zhang and X. Zhang, Models of vacuum energy interacting with cold
+     dark matter: Constraints and comparison, Sci. China Phys. Mech. Astron. 62 (2019) 120411
+     [1812.00319].
+[90] L. Feng, H.-L. Li, J.-F. Zhang and X. Zhang, Exploring neutrino mass and mass hierarchy in
+     interacting dark energy models, Sci. China Phys. Mech. Astron. 63 (2020) 220401
+     [1903.08848].
+[91] L. Feng, D.-Z. He, H.-L. Li, J.-F. Zhang and X. Zhang, Constraints on active and sterile
+     neutrinos in an interacting dark energy cosmology, Sci. China Phys. Mech. Astron. 63 (2020)
+     290404 [1910.03872].
+[92] H.-L. Li, J.-F. Zhang and X. Zhang, Constraints on neutrino mass in the scenario of vacuum
+     energy interacting with cold dark matter after Planck 2018, Commun. Theor. Phys. 72 (2020)
+     125401 [2005.12041].
+
+
+
+
+                                            – 20 –
+ [93] M. Zhang, B. Wang, P.-J. Wu, J.-Z. Qi, Y. Xu, J.-F. Zhang et al., Prospects for Constraining
+      Interacting Dark Energy Models with 21 cm Intensity Mapping Experiments, Astrophys. J.
+      918 (2021) 56 [2102.03979].
+ [94] L.-F. Wang, J.-H. Zhang, D.-Z. He, J.-F. Zhang and X. Zhang, Constraints on interacting
+      dark energy models from time-delay cosmography with seven lensed quasars, Mon. Not. Roy.
+      Astron. Soc. 514 (2022) 1433 [2102.09331].
+ [95] Z.-W. Zhao, L.-F. Wang, J.-G. Zhang, J.-F. Zhang and X. Zhang, Probing the interaction
+      between dark energy and dark matter with future fast radio burst observations, JCAP 04
+      (2023) 022 [2210.07162].
+ [96] Planck collaboration, Planck 2015 results. XIII. Cosmological parameters, Astron.
+      Astrophys. 594 (2016) A13 [1502.01589].
+ [97] A.J. Ross, L. Samushia, C. Howlett, W.J. Percival, A. Burden and M. Manera, The clustering
+      of the SDSS DR7 main Galaxy sample – I. A 4 per cent distance measure at z = 0.15, Mon.
+      Not. Roy. Astron. Soc. 449 (2015) 835 [1409.3242].
+ [98] BOSS collaboration, The clustering of galaxies in the SDSS-III Baryon Oscillation
+      Spectroscopic Survey: baryon acoustic oscillations in the Data Releases 10 and 11 Galaxy
+      samples, Mon. Not. Roy. Astron. Soc. 441 (2014) 24 [1312.4877].
+ [99] F. Beutler, C. Blake, M. Colless, D.H. Jones, L. Staveley-Smith, L. Campbell et al., The 6dF
+      Galaxy Survey: Baryon Acoustic Oscillations and the Local Hubble Constant, Mon. Not. Roy.
+      Astron. Soc. 416 (2011) 3017 [1106.3366].
+[100] SDSS collaboration, Improved cosmological constraints from a joint analysis of the SDSS-II
+      and SNLS supernova samples, Astron. Astrophys. 568 (2014) A22 [1401.4064].
+[101] G. Efstathiou, H0 Revisited, Mon. Not. Roy. Astron. Soc. 440 (2014) 1138 [1311.3461].
+[102] A.G. Riess, S. Casertano, W. Yuan, L.M. Macri and D. Scolnic, Large Magellanic Cloud
+      Cepheid Standards Provide a 1% Foundation for the Determination of the Hubble Constant
+      and Stronger Evidence for Physics beyond ΛCDM, Astrophys. J. 876 (2019) 85 [1903.07603].
+
+
+
+
+                                             – 21 –
+

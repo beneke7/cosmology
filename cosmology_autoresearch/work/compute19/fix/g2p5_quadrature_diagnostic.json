@@ -1,0 +1,89 @@
+{
+  "adaptive_quad": {
+    "absolute_integral_difference_vs_ODE_state_I": 8.326672684688674e-17,
+    "absolute_q_residual_vs_ode_endpoint": 3.3306690738754696e-16,
+    "function_evaluations": 231,
+    "integral": 0.11291496559134644,
+    "q_from_integral": 0.5482874139783661,
+    "reported_error_estimate": 1.2310679676664675e-15
+  },
+  "diagnostic_runtime_seconds": 0.12497497070580721,
+  "equation_unit_identity": {
+    "backward_u": "dx/du=-g*x/E; dm/du=3*m+g*x/E, with q=m*exp(-3u)",
+    "comoving_identity": "dq/du=g*x/E*exp(-3u); q=q0+g*integral(x/E*exp(-3u)du)",
+    "same_integrand_used_by_ode_and_adaptive_quad": true
+  },
+  "model": {
+    "H0_km_s_Mpc": 67.4,
+    "Neff_massless": 3.044,
+    "Omega_b0": 0.049,
+    "Omega_c0": 0.266,
+    "Omega_gamma0": 5.435021880971039e-05,
+    "Omega_m0": 0.315,
+    "Omega_nu0": 3.7573103850318476e-05,
+    "Omega_rad0": 9.192332266002887e-05,
+    "Omega_x0": 0.68490807667734,
+    "Tcmb_K": 2.7255,
+    "g": 2.5,
+    "u_max": 23.025850930040455,
+    "zmax": 10000000000.0
+  },
+  "ode": {
+    "ODE_identity_dense_4097_sample_max_abs_residual": 4.440892098500626e-16,
+    "ODE_identity_endpoint_abs_residual": 1.1102230246251565e-16,
+    "atol": 2e-14,
+    "dense_endpoint_state_x_q_I": [
+      0.09110789063782941,
+      0.5482874139783658,
+      0.11291496559134635
+    ],
+    "max_step_u": 0.02,
+    "method": "SciPy solve_ivp DOP853",
+    "nfev": 17282,
+    "rtol": 3e-12,
+    "success": true
+  },
+  "sha256": {
+    "diagnostic_script": "696052912b38c9aa5ce041f46f9caaa89144bdb9559ba38b9235aaaf8277e8eb",
+    "local_paper_pdf": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c"
+  },
+  "simpson_convergence": [
+    {
+      "absolute_q_residual": 2.3772067647698236e-08,
+      "du": 0.011243091274433816,
+      "integral": 0.11291497510017334,
+      "intervals": 2048,
+      "nodes": 2049,
+      "q_from_simpson": 0.5482874377504334,
+      "q_residual_vs_ode_I": 2.3772067536675934e-08
+    },
+    {
+      "absolute_q_residual": 1.4856749164238181e-09,
+      "du": 0.005621545637216908,
+      "integral": 0.11291496618561628,
+      "intervals": 4096,
+      "nodes": 4097,
+      "q_from_simpson": 0.5482874154640407,
+      "q_residual_vs_ode_I": 1.4856748054015156e-09
+    },
+    {
+      "absolute_q_residual": 9.285372470912989e-11,
+      "du": 0.002810772818608454,
+      "integral": 0.11291496562848781,
+      "intervals": 8192,
+      "nodes": 8193,
+      "q_from_simpson": 0.5482874140712195,
+      "q_residual_vs_ode_I": 9.285361368682743e-11
+    },
+    {
+      "absolute_q_residual": 5.803579838925543e-12,
+      "du": 0.001405386409304227,
+      "integral": 0.11291496559366776,
+      "intervals": 16384,
+      "nodes": 16385,
+      "q_from_simpson": 0.5482874139841694,
+      "q_residual_vs_ode_I": 5.803468816623081e-12
+    }
+  ],
+  "task": "diagnose g=2.5 quadrature residual only; no threshold/domain inference"
+}

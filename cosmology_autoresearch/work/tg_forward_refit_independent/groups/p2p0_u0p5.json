@@ -1,0 +1,282 @@
+{
+  "status": "complete",
+  "p_inner": 2.0,
+  "Upsilon": 0.5,
+  "K_domain_s2_km2": [
+    0.0,
+    0.01
+  ],
+  "Upsilon_domain": [
+    0.2,
+    1.0
+  ],
+  "threshold_scan_K": [
+    1e-11,
+    6.579332246575682e-11,
+    4.3287612810830617e-10,
+    2.848035868435805e-09,
+    1.8738174228603867e-08,
+    1.232846739442066e-07,
+    8.111308307896872e-07,
+    5.336699231206313e-06,
+    3.511191734215135e-05,
+    0.00023101297000831627,
+    0.0015199110829529332,
+    0.01
+  ],
+  "profile_fractions": [
+    0.0,
+    0.001,
+    0.01,
+    0.03,
+    0.06,
+    0.1,
+    0.18,
+    0.28,
+    0.4,
+    0.55,
+    0.7,
+    0.82,
+    0.92,
+    0.97,
+    0.99,
+    0.995,
+    0.999
+  ],
+  "profile": [
+    {
+      "fraction": 0.0,
+      "K_s2_km2": 0.0,
+      "valid": true,
+      "chi2": 32639.29916063721,
+      "normalization": 1.0,
+      "min_w": 1.0,
+      "u_at_R": 1.0,
+      "R_kpc": 104.08,
+      "rhs_calls": 11214
+    },
+    {
+      "fraction": 0.001,
+      "K_s2_km2": 5.630570978496639e-08,
+      "valid": true,
+      "chi2": 32623.044335502735,
+      "normalization": 0.9983015692806919,
+      "min_w": 0.9983918993633486,
+      "u_at_R": 1.0000904837630595,
+      "R_kpc": 104.08,
+      "rhs_calls": 11088
+    },
+    {
+      "fraction": 0.01,
+      "K_s2_km2": 5.630570978496639e-07,
+      "valid": true,
+      "chi2": 32475.976017686207,
+      "normalization": 0.9830958526619566,
+      "min_w": 0.9839918862287381,
+      "u_at_R": 1.0009114406945725,
+      "R_kpc": 104.08,
+      "rhs_calls": 11073
+    },
+    {
+      "fraction": 0.03,
+      "K_s2_km2": 1.6891712935489915e-06,
+      "valid": true,
+      "chi2": 32145.552644163996,
+      "normalization": 0.9498180536905299,
+      "min_w": 0.9524581785335687,
+      "u_at_R": 1.0027796111400291,
+      "R_kpc": 104.08,
+      "rhs_calls": 11103
+    },
+    {
+      "fraction": 0.06,
+      "K_s2_km2": 3.378342587097983e-06,
+      "valid": true,
+      "chi2": 31640.368835865782,
+      "normalization": 0.9012078325719621,
+      "min_w": 0.9063465728519571,
+      "u_at_R": 1.0057020590526045,
+      "R_kpc": 104.08,
+      "rhs_calls": 11151
+    },
+    {
+      "fraction": 0.1,
+      "K_s2_km2": 5.6305709784966395e-06,
+      "valid": true,
+      "chi2": 30948.189579998674,
+      "normalization": 0.8387784657333658,
+      "min_w": 0.8470359379783993,
+      "u_at_R": 1.0098446402505263,
+      "R_kpc": 104.08,
+      "rhs_calls": 10881
+    },
+    {
+      "fraction": 0.18,
+      "K_s2_km2": 1.0135027761293949e-05,
+      "valid": true,
+      "chi2": 29494.98817102723,
+      "normalization": 0.7217897081072541,
+      "min_w": 0.7355920330099341,
+      "u_at_R": 1.019122363131048,
+      "R_kpc": 104.08,
+      "rhs_calls": 10803
+    },
+    {
+      "fraction": 0.28,
+      "K_s2_km2": 1.576559873979059e-05,
+      "valid": true,
+      "chi2": 27533.70491669516,
+      "normalization": 0.5895021324349199,
+      "min_w": 0.6090337913380397,
+      "u_at_R": 1.0331324652252654,
+      "R_kpc": 104.08,
+      "rhs_calls": 10689
+    },
+    {
+      "fraction": 0.4,
+      "K_s2_km2": 2.2522283913986558e-05,
+      "valid": true,
+      "chi2": 24930.15885421283,
+      "normalization": 0.449679404653476,
+      "min_w": 0.4745059471375599,
+      "u_at_R": 1.0552094274880464,
+      "R_kpc": 104.08,
+      "rhs_calls": 10770
+    },
+    {
+      "fraction": 0.55,
+      "K_s2_km2": 3.0968140381731514e-05,
+      "valid": true,
+      "chi2": 21199.786485484834,
+      "normalization": 0.30121011799516884,
+      "min_w": 0.330548637662216,
+      "u_at_R": 1.0974021718205287,
+      "R_kpc": 104.08,
+      "rhs_calls": 11058
+    },
+    {
+      "fraction": 0.7,
+      "K_s2_km2": 3.941399684947647e-05,
+      "valid": true,
+      "chi2": 16788.28914785839,
+      "normalization": 0.1788034002164487,
+      "min_w": 0.21067682032776502,
+      "u_at_R": 1.1782595860746063,
+      "R_kpc": 104.08,
+      "rhs_calls": 10611
+    },
+    {
+      "fraction": 0.82,
+      "K_s2_km2": 4.6170682023672435e-05,
+      "valid": true,
+      "chi2": 12647.029096458089,
+      "normalization": 0.09753935501408828,
+      "min_w": 0.1302534211574643,
+      "u_at_R": 1.3353935048950334,
+      "R_kpc": 104.08,
+      "rhs_calls": 10443
+    },
+    {
+      "fraction": 0.92,
+      "K_s2_km2": 5.180125300216908e-05,
+      "valid": true,
+      "chi2": 8787.224779782966,
+      "normalization": 0.03997735318960394,
+      "min_w": 0.0727128492762692,
+      "u_at_R": 1.8188510112564953,
+      "R_kpc": 104.08,
+      "rhs_calls": 10797
+    },
+    {
+      "fraction": 0.97,
+      "K_s2_km2": 5.46165384914174e-05,
+      "valid": true,
+      "chi2": 6824.122324634386,
+      "normalization": 0.01438842720415634,
+      "min_w": 0.04693231687900412,
+      "u_at_R": 3.2618100792452793,
+      "R_kpc": 104.08,
+      "rhs_calls": 10809
+    },
+    {
+      "fraction": 0.99,
+      "K_s2_km2": 5.5742652687116724e-05,
+      "valid": true,
+      "chi2": 6078.9621220771705,
+      "normalization": 0.004718648636785727,
+      "min_w": 0.03715131730351062,
+      "u_at_R": 7.873295971623254,
+      "R_kpc": 104.08,
+      "rhs_calls": 10716
+    },
+    {
+      "fraction": 0.995,
+      "K_s2_km2": 5.602418123604155e-05,
+      "valid": true,
+      "chi2": 5900.3633754262155,
+      "normalization": 0.0023519068859587655,
+      "min_w": 0.0347535362514213,
+      "u_at_R": 14.776748373375277,
+      "R_kpc": 104.08,
+      "rhs_calls": 10311
+    },
+    {
+      "fraction": 0.999,
+      "K_s2_km2": 5.624940407518142e-05,
+      "valid": true,
+      "chi2": 5760.216288322798,
+      "normalization": 0.00047064292290199816,
+      "min_w": 0.03284698931363694,
+      "u_at_R": 69.79174171174493,
+      "R_kpc": 104.08,
+      "rhs_calls": 10410
+    }
+  ],
+  "threshold": {
+    "status": "first_connected_branch_threshold_bracketed",
+    "K_just_below_s2_km2": 5.630570978496639e-05,
+    "first_invalid_K_s2_km2": 5.630611443500774e-05,
+    "tight_bracket_K_s2_km2": [
+      5.630570978496639e-05,
+      5.630611443500774e-05
+    ],
+    "initial_12_node_scan_reason": "u_positivity_threshold",
+    "tight_upper_failure_reason": "normalization_threshold",
+    "tight_bisection_steps": 6,
+    "tight_lower_valid": true,
+    "tight_upper_invalid": true,
+    "tight_bracket_confirmed": true,
+    "profile_threshold_before_refinement_K": 5.6285885494906154e-05,
+    "threshold_kind": "normalization_threshold",
+    "scan_and_profile_solver_version": "v2-regular-source-isolated-robin-u-and-speed-events"
+  },
+  "source_taper_kpc": 5.0,
+  "score": "direct sum of squared velocity residuals over all 43 Rotmod points",
+  "boundary": "regular center; source tapered; Robin match at R=rd+12L; never uses observed endpoint velocity",
+  "worker_cpu_seconds": 4.146896879,
+  "worker_cpu_seconds_current": 0.0,
+  "worker_cpu_seconds_prior": 4.146896879,
+  "worker_cpu_seconds_total": 4.146896879,
+  "best_group_point": {
+    "fraction": 0.999,
+    "K_s2_km2": 5.624940407518142e-05,
+    "valid": true,
+    "chi2": 5760.216288322798,
+    "normalization": 0.00047064292290199816,
+    "min_w": 0.03284698931363694,
+    "u_at_R": 69.79174171174493,
+    "R_kpc": 104.08,
+    "rhs_calls": 10410
+  },
+  "verification": {
+    "status": "complete",
+    "solver_version": "v2-regular-source-isolated-robin-u-and-speed-events",
+    "profile_rows": 17,
+    "profile_re_evaluation_max_abs_delta_chi2": 13.067136355480216,
+    "threshold_tight_bracket_confirmed": true,
+    "threshold_tight_lower_valid": true,
+    "threshold_tight_upper_invalid": true,
+    "worker_cpu_seconds_current": 6.585035744
+  },
+  "profile_solver_version": "v2-regular-source-isolated-robin-u-and-speed-events"
+}

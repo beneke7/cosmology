@@ -1,0 +1,118 @@
+{
+  "task": "TG whole-galaxy out-of-sample data/theory feasibility",
+  "status": "split_reproducible_3d_prediction_blocked_on_current_inputs",
+  "evidence_labels": {
+    "reproduced": [
+      "official SPARC Table 1 contains 175 rows with Q counts 99/64/12",
+      "Q in {1,2} and inclination >= 30 degrees selects 153 objects, matching the SPARC master paper's final science sample",
+      "all 153 selected names have entries in the staged 175-profile Rotmod_LTG.zip",
+      "SPARC .dens decomposition entries contain radial surface luminosity densities, not 3D density maps"
+    ],
+    "literature_read": [
+      "SPARC master paper's stellar and gas geometry prescriptions, HI-profile availability caveat, and quality-selection rule",
+      "TG NGC 3198 solver boundary conditions and spherical component-velocity-to-density construction as printed in the supplied paper"
+    ],
+    "not_attempted": [
+      "TG galaxy fit",
+      "spherical inversion of SPARC components",
+      "3D TG PDE solve",
+      "out-of-sample scores"
+    ]
+  },
+  "sample": {
+    "catalog": "SPARC 175 late-type galaxies",
+    "selection_rule": "Q in {1,2}; inclination >= 30 deg; no Vflat cut",
+    "n_catalog": 175,
+    "quality_counts_catalog": {"Q1_high": 99, "Q2_medium": 64, "Q3_low": 12},
+    "n_selected": 153,
+    "quality_counts_selected": {"Q1_high": 93, "Q2_medium": 60},
+    "n_training": 122,
+    "n_holdout": 31,
+    "split": {
+      "algorithm": "Sort eligible galaxy IDs by ascending SHA-256 of UTF-8 string 'tg-sparc-v1|<Galaxy>'; first 31 are held out.",
+      "depends_on_observed_velocity_values": false,
+      "heldout_galaxies": [
+        "NGC4157", "NGC3198", "NGC5371", "NGC5585", "NGC3877", "D564-8", "UGC11914", "UGC00191", "UGC11820", "UGC09992", "NGC6195", "UGC02487", "UGC05986", "NGC0891", "UGC04499", "NGC2915", "UGC06399", "UGC00891", "UGC05764", "UGC07399", "UGC05721", "UGC05005", "UGC02953", "NGC2841", "NGC4013", "UGC08550", "UGC07323", "UGC07603", "UGC07524", "F568-3", "KK98-251"
+      ]
+    },
+    "primary_hypothesis_if_resumed": "One shared positive K, estimated on training galaxies only; freeze all predictions and nuisances before scoring held-out rotation curves."
+  },
+  "available_inputs": {
+    "rotmod_zip": {
+      "path": "context/data/Rotmod_LTG.zip",
+      "profiles": 175,
+      "columns_example": ["Rad_kpc", "Vobs", "errV", "Vgas", "Vdisk", "Vbul", "SBdisk", "SBbul"],
+      "sha256": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588"
+    },
+    "sfb_zip": {
+      "path": "context/data/sfb_LTG.zip",
+      "profiles": 219,
+      "content": "on-sky 3.6-micron radial profiles; no inclination/extinction correction",
+      "sha256": "2ca5c5e16517d2096dde47247f2b78837e33fed2e323ea77b0412cf6de66eb27"
+    },
+    "official_table1": {
+      "path": "work/data6/SPARC_Lelli2016c.mrt",
+      "bytes": 28259,
+      "url": "https://astroweb.case.edu/SPARC/SPARC_Lelli2016c.mrt",
+      "sha256": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243"
+    },
+    "stellar_decomposition_zip": {
+      "path": "work/data6/BulgeDiskDec_LTG.zip",
+      "bytes": 140366,
+      "profiles": 177,
+      "example_columns": ["Rad_kpc", "SBdisk_Lsun_pc2", "SBbulge_Lsun_pc2"],
+      "sha256": "0733de0d357cbd45c673fd4321a3b339e160abf68530684c09d28e413855fb6d"
+    },
+    "bulge_luminosity_table": {
+      "path": "work/data6/Bulges.mrt",
+      "bytes": 2721,
+      "sha256": "5af4fb0706df8cd097eded2ca7749fe3fb3240314afed333f84ab8c00b662a84"
+    },
+    "tg_preprint_pdf": {
+      "path": "context/papers/tg_preprint.pdf",
+      "sha256": "73befc859339a2aa4603e0e26b1f5fc1ddcf62ef0c98a8ef88c9e6718e8726af"
+    },
+    "sparc_master_pdf": {
+      "path": "context/papers/sparc_master.pdf",
+      "sha256": "d089215877213661e40965543ee7e05736619082ad16d95e65ec059029588c63"
+    }
+  },
+  "source_model": {
+    "stellar_surface_data_sufficiency": "Radial surface photometry plus distances, inclination, a declared stellar M/L, and a fixed vertical profile can define an assumed 3D stellar density. SPARC's master-paper recipe is an exponential vertical disk with z_d=0.196 R_d^0.633 and spherical bulges.",
+    "stellar_nonuniqueness": [
+      "radial profiles do not determine a unique 3D geometry or vertical structure",
+      "bar/lens/asymmetric structure and bulge flattening are simplified",
+      "outer extrapolations and photometric sky uncertainties matter",
+      "the published bulge-disk profiles are uncorrected and bulge light is linearly extrapolated at large radii"
+    ],
+    "gas_surface_data_sufficiency": "A deprojected HI surface-density profile/map, distance, orientation/warp treatment, gas outer taper, and an explicit gas vertical/flaring model could define an assumed 3D gas source; multiply HI by the declared helium factor (SPARC uses 1.33).",
+    "gas_inputs_missing": [
+      "no HI surface-density profile/map is included in the staged SPARC basic downloads",
+      "Table 1 has total HI mass and an HI radius, not a radial density profile",
+      "Rotmod Vgas is a Newtonian component force curve, not a density map and not a unique substitute for one",
+      "gas thickness/flaring and molecular gas are not specified per galaxy"
+    ],
+    "source_recovery": "Acquire versioned HI surface-density profiles for the selected galaxies from the original SPARC source references; this is per-source recovery, not one complete small file on the official SPARC basic-data page. Do not substitute spherical inversion of Vgas."
+  },
+  "boundary_contract": {
+    "natural_isolated_choice": "Regular at the center and phi -> 0 at infinity; for u=exp(-K phi), u -> 1. In a vacuum exterior, nabla^2 u=0.",
+    "finite_domain_implementation_needed": "Match the outer numerical solution to a decaying harmonic/multipole exterior and vary box radius and baryon taper until predicted velocities converge.",
+    "paper_boundary_leakage": "The supplied TG paper sets derivative boundaries at its first and last observed rotation-curve radii from observed velocities (Eqs. 41-42); the outer radius is defined as the furthest velocity point. This cannot be used for held-out galaxies.",
+    "status": "The physical isolated boundary can be declared without held-out data, but the current TG work has no 3D solver or validated exterior matching implementation; environmental/external-matter treatment is also unspecified."
+  },
+  "blocking_inputs_and_work": [
+    "Per-target HI surface-density profiles/maps and uncertainties, with enough outer-radius information to define a mass taper.",
+    "A frozen 3D geometry for stars, HI, helium, and any included molecular gas, with nuisance ranges and extrapolation rules fixed before held-out scoring.",
+    "A 3D elliptic TG solver implementing the isolated exterior match and box/taper convergence checks; never impose held-out Vobs as a boundary condition.",
+    "Fit universal K and any allowed training-only nuisance parameters on the 122-galaxy training set, then predict all radii of the 31 held-out galaxies without refitting."
+  ],
+  "download_policy": "Only small official Table 1, stellar-decomposition ZIP, and bulge-luminosity table were fetched. No large survey products, HI cubes, or whole images were acquired.",
+  "regeneration_command": "awk 'NF==19 && $18 ~ /^[12]$/ && $6+0>=30 {print $1}' work/data6/SPARC_Lelli2016c.mrt | while IFS= read -r galaxy; do digest=$(printf 'tg-sparc-v1|%s' \"$galaxy\" | sha256sum); printf '%s %s\\n' \"${digest%% *}\" \"$galaxy\"; done | sort -k1,1 | awk 'NR<=31 {print $2}'",
+  "sources": [
+    "https://astroweb.case.edu/SPARC/",
+    "https://astroweb.case.edu/SPARC/SPARC_Lelli2016c.mrt",
+    "https://astroweb.case.edu/ssm/papers/AJv152n157.pdf",
+    "context/papers/tg_preprint.pdf",
+    "runs/tg_audit.json"
+  ]
+}

@@ -1,4 +1,73 @@
-# Next experiment: calibrated CMB baseline and independent IVS solver pilot
+# Next experiment: physical thermodynamic-gravity pilot
+
+## September 25 user steering: prioritize physical tests
+
+The user's current priority is thermodynamic gravity, physical detections, and
+matched alternative theories. The branch contains two distinct models and
+must not blend their parameters or evidence: (1) the 2024 nonlinear constant-K
+galaxy model, tested conditionally on NGC 3198; and (2) the August 2026
+linear higher-gradient Newtonian model with short-range Yukawa scales.
+The PDFs are local at [`2024 galaxy paper`](context/user_provided/pszota_van_2024.pdf)
+and [`2026 higher-gradient paper`](context/papers/tg_higher_gradient_2026.pdf).
+
+Current physical evidence includes the audited **K=0** source/force baseline,
+the nonzero-K axisymmetric stationary solve, its independent PDE/eigenmode
+audit, and same-resolved-source NFW/MOND controls. The positive branch closes
+at a fine-grid `Kcrit=5.3714e-5 (km/s)^-2` for `Υ*=0.762`; the principal-mode
+limit has `χ²diag=3585.9`, 17.2 km/s RMS on the 43 SPARC points. This limit is
+not a finite-normalization solution. The nearest tested finite solution at
+`0.998 Kcrit` has `u_max≈987` and `χ²diag=3641.8`. These remain descriptive
+diagonal scores, not covariant model selection.
+
+The best matched-source controls are substantially closer to the curve:
+Newtonian+NFW profiles `Υ*, M200, c200` and gets `χ²diag=58.5` (7.68 km/s RMS);
+isolated simple-MOND with fixed `a0` and profiled `Υ*` gets `1032.2` (10.59
+km/s RMS). TG's branch-edge envelope at `Υ*=0.762` gets `3585.9`, but is a
+singular limit, not a realization. Signed gas acceleration is preserved; all
+43 radii/velocity errors were matched exactly. There is no released radial
+covariance, and the resolved profile is a parametric axisymmetrization rather
+than a unique 3D source. Distance/inclination variation and vertical-profile
+alternatives remain open, so this is a conditional negative for this NGC 3198
+source/boundary family—not a TG-wide falsification or a physical detection.
+
+Source facts remain important: THINGS and HALOGAS main-disk H I masses agree to
+about 1.7%; S4G P5 gives `1.6318e10 Msun` inside its official analysis ellipse
+at M/L=0.6. Only complete stellar rings through 13.75 kpc are measured; the
+outer source is explicitly extrapolated. The independent Freeman-disk and
+spectral checks pass at approximately `2e-4`; the independent fine-grid solver
+agrees on the selected curve to `0.00067 km/s` RMS and on Kcrit to `1.5e-5`
+fractionally. THINGS-vs-HALOGAS gas and ±25% stellar-tail changes shift the
+branch-edge curve by only about 0.1–0.3 km/s RMS, while the stated stellar M/L
+range changes it materially. The map-derived vs SPARC Rotmod stellar-force RMS
+discrepancy of 18.39 km/s remains a source-definition caveat. See
+[`source audit`](work/tg_axisymmetric_pilot/SOURCE_AUDIT.md),
+[`branch-edge summary`](work/tg_axisymmetric_pilot/axisymmetric_branch_edge_summary.json),
+[`independent principal-mode audit`](work/tg_axisymmetric_independent_review/PRINCIPAL_MODE_REPORT.md),
+[`matched alternatives`](work/tg_alternatives_contract/map_matched/REPORT.md),
+[`K=0 result`](work/tg_axisymmetric_pilot/newtonian_k0_baseline.json), and
+[`independent S4G review`](work/tg_s4g_independent/REPORT.md).
+
+**Next: propagate shared distance/inclination and vertical-source uncertainty,
+then prioritize a whole-galaxy holdout rather than refitting NGC 3198.** A
+predictive TG relation needs a predeclared shared-K/scaling law and a clean
+external galaxy test. Separately, the 2026 higher-gradient paper's physical
+short-range prediction still needs a model-specific two-range fit to published
+torsion data; no direct detection is present in the reviewed literature.
+NGC 3198 alone is not a new-field detection or a relativistic/cosmological
+completion.
+
+The 2026 short-range paper is separately under audit. The 2026 review
+`arXiv:2605.18212v2` has been acquired locally; its plotted Yukawa limits
+restrict to attractive alpha>0 and do not directly test the TG model's
+alpha=-1 one-range or correlated two-range sector. The UW/HUST primary curves
+remain the current relevant published results located, with no new
+model-specific two-range contour. Preserve the sign-specific UW 25–28 μm
+published-contour crossing as a read-off, not a new calibrated limit. See
+[`short-range literature update`](work/tg_short_range_literature/REPORT.md)
+and [`lab audit`](work/tg_lab_bound_independent/REPORT.md).
+
+The CMB/IVS lane remains useful but is lower priority for this user-directed
+branch; prior results and safeguards are retained below for continuity.
 
 ## September 25 BBN-calibration update
 
@@ -28,7 +97,7 @@ A source-level IDECAMB/CAMB contract is now complete: `H0rde` matches the target
 
 The independent flat-ΛCDM × DESI DR2 BAO profile finds a constrained boundary minimum at \((H_0,\omega_bh^2,\omega_ch^2)\simeq(133.61,0.1,0.43027)\) with \(\chi^2=10.2738863\). Three direct-H0 seeds agree, but the solution pins the broad \(\omega_bh^2\) upper bound; nuisance-reoptimized profiles continue lower outside it. Compute30 independently reproduced the score and found the best of nine reoptimized in-box slices at the boundary; the nearest inward slice is higher by \(4.05\times10^{-9}\). A same-edge polish changes the score by only \(5.05\times10^{-11}\), well below the declared optimizer tolerance. Thus the tested profile supports a local constrained boundary minimum, not global optimality. This is an identifiability/domain diagnostic, not a physical baseline or H0 constraint: it lacks CMB/BBN likelihood information. See [compute29 profile](work/compute29/boundary_audit_report.md) and [compute30 independent review](work/compute30/REPORT.md).
 
-Planck 2018 full likelihood is publicly mapped to Plik HM TTTEEE + Commander low-TT + SimAll lowE, with no lensing component. The exact archive size is undisclosed; an official range probe transferred no bytes. No data or packages have been staged. The user's explicit response about expanding beyond the initial 200 MiB bootstrap allowance remains unrecorded; the BRIEF.md allows a justified selected research cache up to 20 GiB, and the scientific rationale is now explicit: this is the next calibrated baseline needed to resolve the BAO-only physical-density boundary. If collection proceeds, fetch only the named official products with a hard cache cap and full hashes/license attribution. Standard CAMB + Planck ΛCDM validation remains the highest-information next baseline. The data/config contract is [here](work/data7_planck_gate/planck_2018_full_likelihood_gate.md).
+Planck 2018 full likelihood is publicly mapped to Plik HM TTTEEE + Commander low-TT + SimAll lowE, with no lensing component. The exact archive size is undisclosed; an official range probe transferred no bytes. No data or packages have been staged. The BRIEF.md permits expanding the selected research cache to 20 GiB after recording the rationale; this exact public archive is necessary for the next calibrated baseline and to resolve the BAO-only physical-density boundary. I am proceeding with a hard total-cache cap of 20 GiB, staging only the official baseline archive and later selecting only the named likelihood products; preserve CC BY-NC attribution and full hashes. Standard CAMB + Planck ΛCDM validation remains the highest-information next baseline. The data/config contract is [here](work/data7_planck_gate/planck_2018_full_likelihood_gate.md).
 
 ## Recommended next test
 

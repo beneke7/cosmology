@@ -1,0 +1,14 @@
+{
+  "attempt": 1,
+  "bounded_command": "taskset -c 0 env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/run_bounded.py --state work/compute18/no_campaign_deadline.json --seconds 600 -- .venv/bin/python work/compute18/perturbation_gate2.py",
+  "runner_seconds_cap": 600,
+  "state_path": "work/compute18/no_campaign_deadline.json",
+  "state_path_existed": false,
+  "exit_code": 1,
+  "outcome": "FAILED before any Gate 2 physical result was written",
+  "exception": "ValueError: Values in t_eval are not properly sorted.",
+  "traceback_location": "solve_perturbations -> scipy.integrate.solve_ivp",
+  "root_cause": "The perturbation solver advanced forward from n_min to 0 but was given a descending evaluation grid N_EVAL[::-1].",
+  "classification": "Implementation grid-ordering defect; not a source, frame, sign, unit, or positivity failure.",
+  "correction_preserved_in_script": "Use ascending N_EVAL for both forward perturbation and absolute-continuity integrations. The completed result is a separate second bounded invocation recorded in perturbation_gate2.json."
+}

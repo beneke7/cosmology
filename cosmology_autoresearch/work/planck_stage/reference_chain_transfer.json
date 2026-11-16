@@ -1,0 +1,23 @@
+{
+  "bytes": 65362284,
+  "content_type": "application/zip",
+  "final_url": "https://irsa.ipac.caltech.edu/data/Planck/release_3/ancillary-data/cosmoparams/COM_CosmoParams_base-plikHM-TTTEEE-lowl-lowE_R3.00.zip",
+  "headers": {
+    "Accept-Ranges": "bytes",
+    "Connection": "close",
+    "Content-Length": "65362284",
+    "Content-Type": "application/zip",
+    "Date": "Fri, 25 Sep 2026 07:25:38 GMT",
+    "Last-Modified": "Tue, 09 Jul 2019 08:11:06 GMT",
+    "Server": "nginx"
+  },
+  "http_status": 200,
+  "max_bytes": 209715200,
+  "path": "/home/v/proj/bene/cosmology/cosmology_autoresearch/work/planck_stage/COM_CosmoParams_base-plikHM-TTTEEE-lowl-lowE_R3.00.zip",
+  "role": "official posterior comparison / proposal covariance only; not likelihood evidence",
+  "runtime_seconds": 23.595242047682405,
+  "sha256": "52cf6793f14e250ffc1436ce7f6fe6d92f6a066c433ec9efc66e4178f3d45a1f",
+  "url": "https://irsa.ipac.caltech.edu/data/Planck/release_3/ancillary-data/cosmoparams/COM_CosmoParams_base-plikHM-TTTEEE-lowl-lowE_R3.00.zip",
+  "zip_crc_test": "pass",
+  "zip_members": 169
+}

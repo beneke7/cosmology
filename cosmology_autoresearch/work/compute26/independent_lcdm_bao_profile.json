@@ -1,0 +1,1063 @@
+{
+  "candidate_acceptance": {
+    "accepted": false,
+    "all_pairwise_checks_among_successful_valid_seeds": [
+      {
+        "absolute_chi2_difference": 2.872031501510719e-10,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 9.069361422969707e-08,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260925,
+          20260926
+        ]
+      },
+      {
+        "absolute_chi2_difference": 2.2529178522745497e-10,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 2.645102735876964e-07,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260925,
+          20260927
+        ]
+      },
+      {
+        "absolute_chi2_difference": 4.616218518549431e-11,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 2.5898407107221756e-07,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260925,
+          20260928
+        ]
+      },
+      {
+        "absolute_chi2_difference": 6.191136492361693e-11,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 1.7381665935799933e-07,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260926,
+          20260927
+        ]
+      },
+      {
+        "absolute_chi2_difference": 3.333653353365662e-10,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 1.682904568425205e-07,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260926,
+          20260928
+        ]
+      },
+      {
+        "absolute_chi2_difference": 2.714539704129493e-10,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 7.549964717739873e-08,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260927,
+          20260928
+        ]
+      }
+    ],
+    "failed_seeds": [],
+    "interpretation": "The best valid seeds agree, but the selected point is on a declared parameter boundary; it is retained only as an exploratory boundary profile and is not accepted as an interior minimum.",
+    "matching_seed_pairs": [
+      {
+        "absolute_chi2_difference": 2.872031501510719e-10,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 9.069361422969707e-08,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260925,
+          20260926
+        ]
+      },
+      {
+        "absolute_chi2_difference": 2.2529178522745497e-10,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 2.645102735876964e-07,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260925,
+          20260927
+        ]
+      },
+      {
+        "absolute_chi2_difference": 4.616218518549431e-11,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 2.5898407107221756e-07,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260925,
+          20260928
+        ]
+      },
+      {
+        "absolute_chi2_difference": 6.191136492361693e-11,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 1.7381665935799933e-07,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260926,
+          20260927
+        ]
+      },
+      {
+        "absolute_chi2_difference": 3.333653353365662e-10,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 1.682904568425205e-07,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260926,
+          20260928
+        ]
+      },
+      {
+        "absolute_chi2_difference": 2.714539704129493e-10,
+        "chi2_tolerance": 2e-05,
+        "same_minimum_within_declared_tolerance": true,
+        "scaled_parameter_Linf_distance": 7.549964717739873e-08,
+        "scaled_parameter_tolerance": 0.002,
+        "seed_pair": [
+          20260927,
+          20260928
+        ]
+      }
+    ],
+    "rule": "At least two distinct valid DE seeds must report convergence to an interior point agreeing within the declared scaled-coordinate and chi2 tolerances; all numerical checks must pass.",
+    "success_criteria": {
+      "all_seed_candidate_scores_are_valid_finite_chi2": true,
+      "at_least_two_converged_seeds_same_minimum_within_tolerances": true,
+      "at_least_two_valid_DE_converged_seeds": true,
+      "candidate_interior_by_1_percent_margin": false,
+      "dense_and_Cholesky_scores_agree": true,
+      "independent_distance_integrals_pass_1e-6_Mpc": true,
+      "minimum_pairwise_chi2_tolerance": 2e-05,
+      "minimum_pairwise_coordinate_tolerance_scaled_Linf": 0.002
+    },
+    "successful_valid_seed_count": 4
+  },
+  "execution": {
+    "CAMB": "2.0.4",
+    "code_sha256": "030754a10c885ec1eb197b4f4e94501fcb5fd3e17890a79e8e3b46ca34fa519b",
+    "command": "cd cosmology_autoresearch && .venv/bin/python scripts/run_bounded.py --state work/compute26/task_state.json --seconds 540 -- env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1 .venv/bin/python -B work/compute26/independent_lcdm_bao_profile.py",
+    "finished_utc": "2026-09-25T02:56:12.672402+00:00",
+    "numpy": "2.5.3",
+    "pinned_CAMB_path": "work/compute24/site",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "runtime_cap_seconds": 540,
+    "runtime_seconds": 91.66070100851357,
+    "scipy": "1.18.1",
+    "started_utc": "2026-09-25T02:54:41.060785+00:00",
+    "worker_pool_size": 1
+  },
+  "fiducial": {
+    "bao": {
+      "DM_comoving_Mpc_at_rows": [
+        1222.8509376025395,
+        1992.8364360736082,
+        1992.8364360736082,
+        2612.040773841098,
+        2612.040773841098,
+        3244.7433408486604,
+        3244.7433408486604,
+        4141.12075247872,
+        4141.12075247872,
+        4464.089490732739,
+        4464.089490732739,
+        5774.817651529347,
+        5774.817651529347
+      ],
+      "H_km_s_Mpc_at_rows": [
+        78.57124234247556,
+        89.40187462155427,
+        89.40187462155427,
+        100.85327887902992,
+        100.85327887902992,
+        115.8385162346027,
+        115.8385162346027,
+        144.7816166057957,
+        144.7816166057957,
+        158.12653637130455,
+        158.12653637130455,
+        236.49779615868908,
+        236.49779615868908
+      ],
+      "chi2_difference_abs": 0.0,
+      "chi2_full_covariance_cholesky": 39.48976201080755,
+      "chi2_full_covariance_dense_solve": 39.48976201080755,
+      "cholesky_whitened_residuals": [
+        1.9259190462373958,
+        -0.22135448475831568,
+        2.339136068619896,
+        2.2781598708225492,
+        3.4473621745684735,
+        3.010430802670208,
+        0.8801454313199507,
+        1.7154051767552234,
+        0.27599898663103367,
+        -0.2072794596495134,
+        0.047093232753111516,
+        -0.1212944047775989,
+        0.5193161700175662
+      ],
+      "predictions_in_input_order": [
+        8.088223351273086,
+        13.550315597115885,
+        22.800891758198535,
+        17.76060302661706,
+        20.21196027420326,
+        22.062671830090682,
+        17.5972770757675,
+        28.157600948129208,
+        14.079428825389254,
+        30.35363081396544,
+        12.89121050144,
+        8.619287364768121,
+        39.26594289303126
+      ],
+      "residuals_in_input_order": [
+        0.14654696127308675,
+        -0.0372687428841143,
+        0.9379448981985341,
+        0.4099120866170587,
+        0.7566110942032616,
+        0.4870322700906833,
+        -0.04421756423250045,
+        0.556744828129208,
+        -0.09659272461074586,
+        -0.15826981603455792,
+        0.07421086143999922,
+        -0.01225831007817213,
+        0.27696893107247433
+      ]
+    },
+    "derived": {
+      "100theta_star_CAMB": 1.0402144655901207,
+      "Omega_b0": 0.049814751227215806,
+      "Omega_c0": 0.26686473871722755,
+      "Omega_de0_CAMB": 0.6818059937538382,
+      "Omega_m0_including_massive_nu": 0.31811366413878045,
+      "Omega_nu0": 0.0014341741943370697,
+      "r_drag_Mpc": 147.06937427330277,
+      "z_drag": 1060.0014960873666
+    },
+    "parameters": {
+      "H0_km_s_Mpc": 67.0571399255,
+      "omega_b_h2": 0.0224,
+      "omega_c_h2": 0.12
+    }
+  },
+  "independent_checks": {
+    "baryon_upper_edge_stress": {
+      "chi2_0p0001_above_upper_edge": 10.281925300197404,
+      "chi2_at_upper_edge": 10.273886272853556,
+      "purpose": "One-dimensional diagnostic with H0 and omega_c h2 held at the selected box minimum; points above 0.1 are outside the declared Table-I box and are not candidate fits.",
+      "rows": [
+        {
+          "Omega_m0": 0.2749845032834627,
+          "chi2_fixed_H0_and_omega_c": 1543.4333264606848,
+          "inside_declared_Table_I_range": true,
+          "omega_b_h2": 0.06,
+          "r_drag_Mpc": 86.7602485419482
+        },
+        {
+          "Omega_m0": 0.28618738779463265,
+          "chi2_fixed_H0_and_omega_c": 359.18139150936923,
+          "inside_declared_Table_I_range": true,
+          "omega_b_h2": 0.08,
+          "r_drag_Mpc": 80.84348487220254
+        },
+        {
+          "Omega_m0": 0.29178883005021766,
+          "chi2_fixed_H0_and_omega_c": 93.92857580002104,
+          "inside_declared_Table_I_range": true,
+          "omega_b_h2": 0.09,
+          "r_drag_Mpc": 78.30953807476955
+        },
+        {
+          "Omega_m0": 0.29458955117801017,
+          "chi2_fixed_H0_and_omega_c": 30.778028286545805,
+          "inside_declared_Table_I_range": true,
+          "omega_b_h2": 0.095,
+          "r_drag_Mpc": 77.12778793842796
+        },
+        {
+          "Omega_m0": 0.2968301280802441,
+          "chi2_fixed_H0_and_omega_c": 11.081516084635792,
+          "inside_declared_Table_I_range": true,
+          "omega_b_h2": 0.099,
+          "r_drag_Mpc": 76.21906854605668
+        },
+        {
+          "Omega_m0": 0.2973902723058026,
+          "chi2_fixed_H0_and_omega_c": 10.273886272853556,
+          "inside_declared_Table_I_range": true,
+          "omega_b_h2": 0.1,
+          "r_drag_Mpc": 75.99672579888957
+        },
+        {
+          "Omega_m0": 0.2974462867283585,
+          "chi2_fixed_H0_and_omega_c": 10.281925300197404,
+          "inside_declared_Table_I_range": false,
+          "omega_b_h2": 0.1001,
+          "r_drag_Mpc": 75.97459500206342
+        },
+        {
+          "Omega_m0": 0.2985105607569196,
+          "chi2_fixed_H0_and_omega_c": 13.46708782694061,
+          "inside_declared_Table_I_range": false,
+          "omega_b_h2": 0.102,
+          "r_drag_Mpc": 75.5576789920081
+        },
+        {
+          "Omega_m0": 0.3001909934335951,
+          "chi2_fixed_H0_and_omega_c": 30.01606237225618,
+          "inside_declared_Table_I_range": false,
+          "omega_b_h2": 0.105,
+          "r_drag_Mpc": 74.91255525568779
+        },
+        {
+          "Omega_m0": 0.3029917145613876,
+          "chi2_fixed_H0_and_omega_c": 87.83054691015167,
+          "inside_declared_Table_I_range": false,
+          "omega_b_h2": 0.11,
+          "r_drag_Mpc": 73.87180032520143
+        },
+        {
+          "Omega_m0": 0.30859315681697264,
+          "chi2_fixed_H0_and_omega_c": 309.9540434022534,
+          "inside_declared_Table_I_range": false,
+          "omega_b_h2": 0.12,
+          "r_drag_Mpc": 71.908558227526
+        },
+        {
+          "Omega_m0": 0.3253974835837276,
+          "chi2_fixed_H0_and_omega_c": 1715.8780938172392,
+          "inside_declared_Table_I_range": false,
+          "omega_b_h2": 0.15,
+          "r_drag_Mpc": 66.79649094537955
+        },
+        {
+          "Omega_m0": 0.3534046948616525,
+          "chi2_fixed_H0_and_omega_c": 5993.634692323037,
+          "inside_declared_Table_I_range": false,
+          "omega_b_h2": 0.2,
+          "r_drag_Mpc": 60.12245580171049
+        }
+      ]
+    },
+    "c_over_h_integral": {
+      "abs_CAMB_minus_integral_Mpc_in_input_order": [
+        1.1368683772161603e-13,
+        3.410605131648481e-13,
+        3.410605131648481e-13,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.547473508864641e-13,
+        4.547473508864641e-13,
+        4.547473508864641e-13,
+        4.547473508864641e-13,
+        9.094947017729282e-13,
+        9.094947017729282e-13
+      ],
+      "all_rows_within_1e-6_Mpc": true,
+      "c_km_s": 299792.458,
+      "dense_vs_cholesky_abs_score_difference": 0.0,
+      "integral_D_M_Mpc_in_input_order": [
+        616.4485659357579,
+        1007.4615717630069,
+        1007.4615717630069,
+        1323.4261491043485,
+        1323.4261491043485,
+        1647.5344679902792,
+        1647.5344679902792,
+        2108.539254241941,
+        2108.539254241941,
+        2275.0741905277646,
+        2275.0741905277646,
+        2952.6466298669084,
+        2952.6466298669084
+      ],
+      "maximum_absolute_error_Mpc": 9.094947017729282e-13,
+      "method": "SciPy adaptive Gauss-Kronrod quadrature of c/H(z) independently at all 13 redshifts"
+    },
+    "full_covariance_dense_vs_cholesky": {
+      "absolute_difference": 0.0,
+      "cholesky_score": 10.273886272857048,
+      "dense_score": 10.273886272857048,
+      "pass_tolerance": 1e-10
+    }
+  },
+  "optimization": {
+    "bounds": {
+      "H0_km_s_Mpc": [
+        10.0,
+        1000.0
+      ],
+      "omega_b_h2": [
+        0.005,
+        0.1
+      ],
+      "omega_c_h2": [
+        0.001,
+        0.99
+      ]
+    },
+    "bounds_basis": "Omega_b h2 and Omega_c h2 use the target paper's very broad Table-I limits; H0 in [10,1000] km/s/Mpc is an explicit broad search coordinate after removing the fragile nested theta root.",
+    "candidate_boundary_diagnostic": {
+      "candidate_is_at_least_1_percent_from_every_parameter_edge": false,
+      "minimum_normalized_edge_margin": 1.0786861170368405e-09,
+      "parameter_bounds": {
+        "H0_km_s_Mpc": {
+          "absolute_distance_to_lower": 123.61341628747076,
+          "absolute_distance_to_upper": 866.3865837125293,
+          "lower_bound": 10.0,
+          "normalized_nearest_edge_margin": 0.12486203665401087,
+          "upper_bound": 1000.0,
+          "value": 133.61341628747076
+        },
+        "omega_b_h2": {
+          "absolute_distance_to_lower": 0.09499999989752482,
+          "absolute_distance_to_upper": 1.0247518111849985e-10,
+          "lower_bound": 0.005,
+          "normalized_nearest_edge_margin": 1.0786861170368405e-09,
+          "upper_bound": 0.1,
+          "value": 0.09999999989752482
+        },
+        "omega_c_h2": {
+          "absolute_distance_to_lower": 0.42927242287187395,
+          "absolute_distance_to_upper": 0.559727577128126,
+          "lower_bound": 0.001,
+          "normalized_nearest_edge_margin": 0.43404693920310816,
+          "upper_bound": 0.99,
+          "value": 0.43027242287187395
+        }
+      }
+    },
+    "differential_evolution": {
+      "atol": 1e-10,
+      "float_dtype": "IEEE-754 binary64 / NumPy float64",
+      "initial_population_size": 48,
+      "maxiter": 600,
+      "polish": true,
+      "strategy": "best1bin",
+      "thread_pools": 1,
+      "tol": 1e-09,
+      "updating": "immediate",
+      "workers": 1
+    },
+    "failed_seeds": [],
+    "finite_box_is_not_a_posterior_prior": true,
+    "invalid_objective_points": {
+      "counts_by_reason": {
+        "CAMBError": 27,
+        "ValueError": 158
+      },
+      "first_examples_capped_at_24": [
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=1.210809718740211",
+          "parameters": [
+            74.18127398922593,
+            0.07085431173647488,
+            0.5947925965794223
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+          "parameters": [
+            843.6779448748116,
+            0.06573383253489683,
+            0.17925740019558972
+          ],
+          "reason": "CAMBError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=1.402508419996482",
+          "parameters": [
+            83.99981326709315,
+            0.005915899714573271,
+            0.9830447422372488
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+          "parameters": [
+            674.1472694832871,
+            0.07924815467576171,
+            0.016648295195112406
+          ],
+          "reason": "CAMBError"
+        },
+        {
+          "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+          "parameters": [
+            234.00000140071364,
+            0.022048685960539757,
+            0.011771719762497801
+          ],
+          "reason": "CAMBError"
+        },
+        {
+          "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+          "parameters": [
+            489.70019486920063,
+            0.03583382838146597,
+            0.3527927738271583
+          ],
+          "reason": "CAMBError"
+        },
+        {
+          "detail": "Error in Fortran called from calc_background:\nThermoData Init: failed to find end of recombination",
+          "parameters": [
+            724.5229001196956,
+            0.03103736141520251,
+            0.18032980927353393
+          ],
+          "reason": "CAMBError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=1.068233927263579",
+          "parameters": [
+            58.70766296187878,
+            0.0964455808148924,
+            0.2710859238787689
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=4.080162345417234",
+          "parameters": [
+            20.77181684843049,
+            0.022399999999999996,
+            0.15300120239129317
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=3.766596224066607",
+          "parameters": [
+            39.70339233327746,
+            0.09674750804073248,
+            0.49635851494205835
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=2.05324471056217",
+          "parameters": [
+            52.830846545985935,
+            0.05975171395715133,
+            0.5126841783829392
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=2.91759572893992",
+          "parameters": [
+            58.617753664419524,
+            0.07419915681144036,
+            0.9276538114501168
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=1.400671151864504",
+          "parameters": [
+            83.42852432919341,
+            0.05697182689251733,
+            0.9172950308620252
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=3.479041710278377",
+          "parameters": [
+            52.44157082999237,
+            0.07084866988095323,
+            0.8852840759174674
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=4.561564750945962",
+          "parameters": [
+            29.099337767217833,
+            0.05892835934506243,
+            0.3266870249953132
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=1.345768222650022",
+          "parameters": [
+            52.830846545985935,
+            0.033820376907816745,
+            0.34115186985356705
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=1.280574775314735",
+          "parameters": [
+            52.830846545985935,
+            0.09303233772701888,
+            0.26374377672661825
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=4.43481632809485",
+          "parameters": [
+            20.02433266582642,
+            0.0183477395174734,
+            0.15883192042174854
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=2.197623948998141",
+          "parameters": [
+            46.48076824016982,
+            0.029699186906098643,
+            0.44444417653539936
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=3.139280436595785",
+          "parameters": [
+            52.47784232062014,
+            0.018980758889650146,
+            0.8449082949199458
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=1.961963984533801",
+          "parameters": [
+            72.7064641791739,
+            0.058894764493783475,
+            0.9775996104676846
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=1.712146752122498",
+          "parameters": [
+            66.59505239884038,
+            0.062453566738132585,
+            0.696221668885523
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=1.262277361744083",
+          "parameters": [
+            84.34553774678159,
+            0.04268611248187743,
+            0.8546745289048918
+          ],
+          "reason": "ValueError"
+        },
+        {
+          "detail": "non-positive flat-Lambda density implied by CAMB Omega_m=1.199055929960896",
+          "parameters": [
+            72.04745199951532,
+            0.024283945322510273,
+            0.597481344844559
+          ],
+          "reason": "ValueError"
+        }
+      ],
+      "score_sentinel": 1e+80
+    },
+    "same_minimum_tolerances": {
+      "chi2": 2e-05,
+      "scaled_parameter_Linf": 0.002
+    },
+    "seed_results": [
+      {
+        "accepted_as_converged_seed": true,
+        "checked_candidate_valid": true,
+        "chi2": 10.27388627290321,
+        "differential_evolution_message": "Optimization terminated successfully.",
+        "differential_evolution_success": true,
+        "nfev": 7596,
+        "nit": 157,
+        "optimizer_parameters": [
+          133.61343294446718,
+          0.09999999796815665,
+          0.43027267900712024
+        ],
+        "optimizer_reported_chi2": 10.27388627290321,
+        "polished_parameters": [
+          133.61343294446718,
+          0.09999999796815665,
+          0.43027267900712024
+        ],
+        "population_energy_max": 10.273886322498345,
+        "population_energy_median": 10.273886275225152,
+        "population_energy_min": 10.27388627290321,
+        "runtime_seconds": 26.977151192724705,
+        "seed": 20260925
+      },
+      {
+        "accepted_as_converged_seed": true,
+        "checked_candidate_valid": true,
+        "chi2": 10.273886273190413,
+        "differential_evolution_message": "Optimization terminated successfully.",
+        "differential_evolution_success": true,
+        "nfev": 7308,
+        "nit": 151,
+        "optimizer_parameters": [
+          133.61342314005998,
+          0.09999999065014326,
+          0.43027258931113577
+        ],
+        "optimizer_reported_chi2": 10.273886273190413,
+        "polished_parameters": [
+          133.61342314005998,
+          0.09999999065014326,
+          0.43027258931113577
+        ],
+        "population_energy_max": 10.27388632459167,
+        "population_energy_median": 10.273886278747076,
+        "population_energy_min": 10.273886273190413,
+        "runtime_seconds": 25.992989047430456,
+        "seed": 20260926
+      },
+      {
+        "accepted_as_converged_seed": true,
+        "checked_candidate_valid": true,
+        "chi2": 10.273886273128502,
+        "differential_evolution_message": "Optimization terminated successfully.",
+        "differential_evolution_success": true,
+        "nfev": 6972,
+        "nit": 144,
+        "optimizer_parameters": [
+          133.61341230990118,
+          0.09999999272505834,
+          0.43027241740645966
+        ],
+        "optimizer_reported_chi2": 10.273886273128502,
+        "polished_parameters": [
+          133.61341230990118,
+          0.09999999272505834,
+          0.43027241740645966
+        ],
+        "population_energy_max": 10.273886313801148,
+        "population_energy_median": 10.273886282577406,
+        "population_energy_min": 10.273886273128502,
+        "runtime_seconds": 18.19625923410058,
+        "seed": 20260927
+      },
+      {
+        "accepted_as_converged_seed": true,
+        "checked_candidate_valid": true,
+        "chi2": 10.273886272857048,
+        "differential_evolution_message": "Optimization terminated successfully.",
+        "differential_evolution_success": true,
+        "nfev": 7356,
+        "nit": 152,
+        "optimizer_parameters": [
+          133.61341628747076,
+          0.09999999989752482,
+          0.43027242287187395
+        ],
+        "optimizer_reported_chi2": 10.273886272857048,
+        "polished_parameters": [
+          133.61341628747076,
+          0.09999999989752482,
+          0.43027242287187395
+        ],
+        "population_energy_max": 10.273886280717498,
+        "population_energy_median": 10.273886273477114,
+        "population_energy_min": 10.273886272857048,
+        "runtime_seconds": 19.33392753917724,
+        "seed": 20260928
+      }
+    ],
+    "seeds": [
+      20260925,
+      20260926,
+      20260927,
+      20260928
+    ],
+    "theta_mc_root_diagnostic": {
+      "expanded_range_theta_samples_with_root": 60,
+      "implied_theta_mapping": {
+        "H0_recovered_km_s_Mpc": 133.61341628747098,
+        "H0_recovery_abs_error_km_s_Mpc": 2.2737367544323206e-13,
+        "distance_to_original_high_edge_km_s_Mpc": -33.613416287470756,
+        "distance_to_original_low_edge_km_s_Mpc": 123.61341628747076,
+        "expanded_root_range_edge_distances_km_s_Mpc": [
+          132.61341628747076,
+          1866.3865837125293
+        ],
+        "implied_100theta_MC": 1.1001239206700977,
+        "implied_100theta_MC_inside_paper_Table_I_range_0p5_to_10": true,
+        "original_range_H0_if_rooted": null,
+        "original_range_status": "original [10,100] bracket fails: CAMBParamRangeError: No solution for H0 inside of theta_H0_range",
+        "original_theta_solver_range_km_s_Mpc": [
+          10.0,
+          100.0
+        ],
+        "status": "rooted back to same theta_MC input via CAMB set_cosmology",
+        "theta_solver_H0_range_km_s_Mpc": [
+          1.0,
+          2000.0
+        ]
+      },
+      "interpretation": "The independent search varies H0 directly. This inverse check establishes the CAMB cosmomc_theta mapping and shows whether the old root bracket clips the fitted physical point.",
+      "original_range_theta_samples_with_root": 10
+    }
+  },
+  "plot": "work/compute26/independent_lcdm_bao_profile.png",
+  "schema_version": 1,
+  "scope": {
+    "H0_domain_note": "H0 is varied directly to avoid CAMB theta_MC root-range failures in the broad search. The candidate's implied 100theta_MC is recovered after fitting. H0 is a computational profile coordinate, not a prior on H0.",
+    "fixed_physics": {
+      "As": 2.1e-09,
+      "N_eff": 3.044,
+      "Omega_k": 0.0,
+      "T_CMB_K": 2.7255,
+      "YHe": "CAMB BBN consistency default (YHe=None)",
+      "mnu_eV": 0.06,
+      "neutrino_hierarchy": "degenerate",
+      "ns": 0.965,
+      "num_massive_neutrinos": 1,
+      "tau_reio": 0.054,
+      "w": -1.0,
+      "wa": 0.0
+    },
+    "free_parameters": [
+      "H0_km_s_Mpc",
+      "omega_b_h2",
+      "omega_c_h2"
+    ],
+    "model": "flat standard \u039bCDM / general relativity with CAMB 2.0.4 background",
+    "not_included": [
+      "Planck likelihood",
+      "ACT likelihood",
+      "supernova likelihood",
+      "dark-sector interaction",
+      "posterior or evidence",
+      "cross-survey likelihood"
+    ],
+    "observational_likelihood": "DESI DR2 released 13-row Gaussian BAO mean and full 13x13 covariance only",
+    "result_interpretation": "An optimizer profile in an explicit finite box; not a posterior and not a full Planck/ACT or target-paper likelihood reproduction."
+  },
+  "selected_candidate": {
+    "bao": {
+      "DM_comoving_Mpc_at_rows": [
+        616.4485659357578,
+        1007.4615717630065,
+        1007.4615717630065,
+        1323.4261491043485,
+        1323.4261491043485,
+        1647.5344679902792,
+        1647.5344679902792,
+        2108.5392542419404,
+        2108.5392542419404,
+        2275.074190527764,
+        2275.074190527764,
+        2952.6466298669075,
+        2952.6466298669075
+      ],
+      "H_km_s_Mpc_at_rows": [
+        155.1586609004158,
+        175.5679737698144,
+        175.5679737698144,
+        197.2490835632351,
+        197.2490835632351,
+        225.7295418519559,
+        225.7295418519559,
+        280.9551848050652,
+        280.9551848050652,
+        306.4800847147909,
+        306.4800847147909,
+        456.76501913113736,
+        456.76501913113736
+      ],
+      "chi2_difference_abs": 0.0,
+      "chi2_full_covariance_cholesky": 10.273886272857048,
+      "chi2_full_covariance_dense_solve": 10.273886272857048,
+      "cholesky_whitened_residuals": [
+        -0.516272271528183,
+        -1.9655890825043154,
+        0.5885940724415027,
+        0.3532530384142064,
+        1.9250653484469005,
+        0.6390066251965376,
+        -0.6421755550023862,
+        0.4445358817363995,
+        -0.4639503224019386,
+        -0.7536093892102838,
+        -0.3070600995867715,
+        0.048079314550916595,
+        -0.26190816548431745
+      ],
+      "predictions_in_input_order": [
+        7.9023922192920875,
+        13.256644426080214,
+        22.468833398128805,
+        17.41425219043494,
+        19.999117265436425,
+        21.679019065350666,
+        17.475814287826793,
+        27.745132852067897,
+        14.040700318159383,
+        29.93647641964213,
+        12.871334058629058,
+        8.63640468831185,
+        38.852287357733
+      ],
+      "residuals_in_input_order": [
+        -0.039284170707912125,
+        -0.33093991391978506,
+        0.6058865381288037,
+        0.06356125043494032,
+        0.543768085436426,
+        0.10337950535066653,
+        -0.16568035217320798,
+        0.14427673206789748,
+        -0.13532123184061717,
+        -0.5754242103578697,
+        0.054334418629057524,
+        0.0048590134655572825,
+        -0.13668660422578682
+      ]
+    },
+    "derived": {
+      "100theta_star_CAMB": 1.096385828203224,
+      "Omega_b0": 0.05601442249844901,
+      "Omega_c0": 0.24101461308874478,
+      "Omega_de0_CAMB": 0.7025894913572053,
+      "Omega_m0_including_massive_nu": 0.29739027224840175,
+      "Omega_nu0": 0.00036123666120797777,
+      "r_drag_Mpc": 75.99672582158088,
+      "z_drag": 1158.1678484028878
+    },
+    "parameters": {
+      "H0_km_s_Mpc": 133.61341628747076,
+      "omega_b_h2": 0.09999999989752482,
+      "omega_c_h2": 0.43027242287187395
+    }
+  },
+  "sources": {
+    "CAMB_source_archive": {
+      "path": "context/code/CAMB_2.0.4_a6de8cc59124c8bbe3924f1c546f96cef73dcabb.tar.gz",
+      "sha256": "66808001e908982857c312cc84671c66a51312251a7b15e07507d66b4788c0c7"
+    },
+    "CAMB_wheel": {
+      "path": "context/code/camb-2.0.4-py3-none-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "repository_commit": "a6de8cc59124c8bbe3924f1c546f96cef73dcabb",
+      "sha256": "9b7e6558b2049757e96496b8a33461d8ff11acd79017cfbd00a573dbc8d1e366",
+      "version": "2.0.4"
+    },
+    "DESI_DR2_covariance": {
+      "official_upstream": "CobayaSampler/bao_data commit bb0c1c9009dc76d1391300e169e8df38fd1096db, desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "path": "context/data/desi_dr2_cov.txt",
+      "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+    },
+    "DESI_DR2_mean": {
+      "official_upstream": "CobayaSampler/bao_data commit bb0c1c9009dc76d1391300e169e8df38fd1096db, desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "path": "context/data/desi_dr2_mean.txt",
+      "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585"
+    },
+    "input_row_order": [
+      {
+        "mean": 7.94167639,
+        "observable": "DV_over_rs",
+        "z": 0.295
+      },
+      {
+        "mean": 13.58758434,
+        "observable": "DM_over_rs",
+        "z": 0.51
+      },
+      {
+        "mean": 21.86294686,
+        "observable": "DH_over_rs",
+        "z": 0.51
+      },
+      {
+        "mean": 17.35069094,
+        "observable": "DM_over_rs",
+        "z": 0.706
+      },
+      {
+        "mean": 19.45534918,
+        "observable": "DH_over_rs",
+        "z": 0.706
+      },
+      {
+        "mean": 21.57563956,
+        "observable": "DM_over_rs",
+        "z": 0.934
+      },
+      {
+        "mean": 17.64149464,
+        "observable": "DH_over_rs",
+        "z": 0.934
+      },
+      {
+        "mean": 27.60085612,
+        "observable": "DM_over_rs",
+        "z": 1.321
+      },
+      {
+        "mean": 14.17602155,
+        "observable": "DH_over_rs",
+        "z": 1.321
+      },
+      {
+        "mean": 30.51190063,
+        "observable": "DM_over_rs",
+        "z": 1.484
+      },
+      {
+        "mean": 12.81699964,
+        "observable": "DH_over_rs",
+        "z": 1.484
+      },
+      {
+        "mean": 8.631545674846294,
+        "observable": "DH_over_rs",
+        "z": 2.33
+      },
+      {
+        "mean": 38.988973961958784,
+        "observable": "DM_over_rs",
+        "z": 2.33
+      }
+    ],
+    "target_paper_prior_source": {
+      "locator": "Yang et al., arXiv:2609.05660 v1, p. 10, Table I: omega_b h^2=[0.005,0.1], omega_c h^2=[0.001,0.99], 100theta_MC=[0.5,10].",
+      "path": "context/papers/interacting_de_desi_dr2_2026.pdf",
+      "sha256": "0ca9dfa076a493eda6b4ab8fd7e5535ed410aa4d2e74f70442d835dd8d262a0c"
+    }
+  },
+  "status": "incomplete_boundary_pinned_profile"
+}
